@@ -1,0 +1,60 @@
+name: pangeo
+channels:
+  - conda-forge
+dependencies:
+  - python=3.6
+  - pip
+  # core pydata
+  - numpy
+  - scipy
+  - pandas
+  - xarray
+  - dask
+  - distributed
+  - bottleneck
+  - numba
+  - scikit-learn
+  - scikit-image
+  - statsmodels
+  - keras
+  - metpy
+  # serialization
+  - h5py
+  - h5netcdf
+  - netcdf4
+  - rasterio
+  # visualization
+  - matplotlib=2
+  - seaborn
+  - bokeh
+  - cartopy
+  - holoviews
+  # notebooks and things
+  - jupyter
+  - jupyterlab
+  - jupyter_dashboards
+  - ipywidgets
+  - notebook
+  # testing
+  - pytest
+  # misc
+  - psutil
+  - datashader
+  - nomkl
+  - lz4
+  - tornado
+  - fastparquet
+  - s3fs
+  - zict
+  - python-blosc
+  - cytoolz
+  - toolz
+  - dask-searchcv
+  - gcsfs
+  - nodejs
+  - pip:
+    - coveralls
+    - pytest-cov
+    - pydap
+    - git+https://github.com/dask/dask-glm.git
+    - graphviz
