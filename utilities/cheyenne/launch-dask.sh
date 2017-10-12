@@ -1,5 +1,4 @@
 #!/bin/bash
-# set -x
 set -e
 
 echo "Launching dask schduler"
@@ -25,11 +24,8 @@ while true; do
     sleep 1
 done
 
-sleep 10 # give the scheduler a bit of time to get started
-
+notebook==${2:/glade/p/work/$USER}
+echo "Setting up Jupyter Lab, Notebook dir: ${notebook}"
 source activate pangeo
-
-echo "Setting up Jupyter Lab"
 ./setup-jlab.py --log_level=DEBUG --jlab_port=8877 --dash_port=8878 \
-    --notebook_dir /glade/p/work/jhamman/pangeo/src/pangeo/notebooks/ \
-    --scheduler_file $WORKDIR/scheduler.json
+    --notebook_dir $notebook --scheduler_file $WORKDIR/scheduler.json

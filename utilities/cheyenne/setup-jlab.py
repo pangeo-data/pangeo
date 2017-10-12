@@ -2,6 +2,7 @@
 from __future__ import absolute_import
 from __future__ import print_function
 
+import os
 import sys
 import socket
 import subprocess
@@ -51,7 +52,7 @@ def cli(scheduler_file, jlab_port, dash_port, notebook_dir,
     logger = get_logger(log_level)
 
     logger.info('getting client with scheduler file: %s' % scheduler_file)
-    client = Client(scheduler_file=scheduler_file)
+    client = Client(scheduler_file=scheduler_file, timeout=30)
     logger.debug('Client: %s' % client)
 
     logger.debug('Getting hostname where scheduler is running')
@@ -63,9 +64,10 @@ def cli(scheduler_file, jlab_port, dash_port, notebook_dir,
                             notebook_dir=notebook_dir)
     logger.debug('Done.')
 
+    user = os.environ['USER']
     print('Running the following command from your local hostname:')
     print(f'ssh -N -L {jlab_port}:{host}:{jlab_port} '
-          f'-L {dash_port}:{host}:8787 {hostname}')
+          f'-L {dash_port}:{host}:8787 {user} {hostname}')
     print('Then open the following URLs:')
     print(f'\tJupyter lab: http://localhost:{jlab_port}')
     print(f'\tDask dashboard: http://localhost:{dash_port}', flush=True)
