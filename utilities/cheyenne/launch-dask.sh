@@ -21,10 +21,11 @@ while true; do
     if [[ ${status} =~ " R " ]]; then
         break
     fi
-    sleep 1
+    sleep 1 
 done
 
-notebook==${2:/glade/p/work/$USER}
+default=/glade/p/work/$USER
+notebook=${2:-$default}
 echo "Setting up Jupyter Lab, Notebook dir: ${notebook}"
 source activate pangeo
 ./setup-jlab.py --log_level=DEBUG --jlab_port=8877 --dash_port=8878 \
