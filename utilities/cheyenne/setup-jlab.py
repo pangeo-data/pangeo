@@ -67,7 +67,7 @@ def cli(scheduler_file, jlab_port, dash_port, notebook_dir,
     user = os.environ['USER']
     print('Running the following command from your local hostname:')
     print(f'ssh -N -L {jlab_port}:{host}:{jlab_port} '
-          f'-L {dash_port}:{host}:8787 {user} {hostname}')
+          f'-L {dash_port}:{host}:8787 {user}@{hostname}')
     print('Then open the following URLs:')
     print(f'\tJupyter lab: http://localhost:{jlab_port}')
     print(f'\tDask dashboard: http://localhost:{dash_port}', flush=True)
