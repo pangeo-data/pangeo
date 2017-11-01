@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-echo "Launching dask schduler"
+echo "Launching dask scheduler"
 s=`qsub launch-dask-scheduler.sh`
 sjob=${s%.*}
 echo ${s}
