@@ -28,5 +28,6 @@ default=/glade/p/work/$USER
 notebook=${2:-$default}
 echo "Setting up Jupyter Lab, Notebook dir: ${notebook}"
 source activate pangeo
+WORKDIR=${3:-/glade/scratch/$USER}
 ./setup-jlab.py --log_level=DEBUG --jlab_port=8877 --dash_port=8878 \
     --notebook_dir $notebook --scheduler_file $WORKDIR/scheduler.json
