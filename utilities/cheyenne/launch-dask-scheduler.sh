@@ -19,7 +19,7 @@ source activate pangeo
 SCHEDULER=/glade/scratch/$USER/scheduler.json
 rm -f $SCHEDULER
 mpirun --np 9 dask-mpi --nthreads 4 \
-    --memory-limit 12e9 --nanny \
+    --memory-limit 12e9 \
     --interface ib0 \
     --local-directory /glade/scratch/$USER \
     --scheduler-file=$SCHEDULER
