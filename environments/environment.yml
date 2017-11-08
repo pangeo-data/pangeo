@@ -53,6 +53,7 @@ dependencies:
   - dask-searchcv
   - gcsfs
   - nodejs
+  - mpi4py
   - pip:
     - coveralls
     - pytest-cov
