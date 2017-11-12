@@ -18,4 +18,4 @@ env:
 script:
   - set -e
   - cd docs && make html
-  - doctr deploy . --built-docs docs/_build
+  - doctr deploy . --built-docs docs/_build/html
