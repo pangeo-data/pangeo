@@ -8,3 +8,4 @@ Physical Oceanography
    :maxdepth: 2
 
    ocean_cm2.6_eddy_statistics
+   newmann_ensemble_meteorology
