@@ -1,0 +1,15 @@
+language: python
+python: 3.6
+install: pip install -r environments/sphinx_requirements.txt
+
+# This gives doctr the key we've generated
+sudo: false
+env:
+  global:
+    secure: ""
+
+# This is the script to build the docs on travis, then deploy
+script:
+  - set -e
+  - cd docs && make html
+  - doctr deploy . --built-docs docs/_build
