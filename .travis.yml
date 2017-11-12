@@ -1,8 +1,11 @@
 language: python
 python: 3.6
-install: pip install -r environments/sphinx_requirements.txt
+install: pip install -r docs/requirements.txt
 
 # This gives doctr the key we've generated
+# secure key still needs to be generated
+# https://github.com/drdoctr/doctr
+# doctr is not working for me for reasons I don't understand
 sudo: false
 env:
   global:
