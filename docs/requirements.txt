@@ -5,4 +5,4 @@ jupyter
 ipython
 nbconvert
 nbsphinx
-doctr
+doctr>=1.6.3
