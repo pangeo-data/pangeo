@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Getting Started with Dask on Cheyenne &#8212; Pangeo 0.0.1 documentation</title>
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Pangeo Use Cases" href="../use_cases/index.html" />
+    <link rel="prev" title="Pangeo Setup Guides" href="index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          Pangeo</a>
+        <span class="navbar-text navbar-version pull-left"><b>0.0.1</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="http://pangeo-data.github.io">Blog</a></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../about.html">About Pangeo</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Pangeo Setup Guides</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Getting Started with Dask on Cheyenne</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../use_cases/index.html">Pangeo Use Cases</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../use_cases/ocean_cm2.6_eddy_statistics.html">Use Case: CM2.6 Eddy Statistics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../use_cases/newmann_ensemble_meteorology.html">Analysis of Gridded Ensemble Precipitation and Temperature Estimates over the Contiguous United States</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Getting Started with Dask on Cheyenne</a><ul>
+<li><a class="reference internal" href="#installing-a-software-environment">Installing a software environment</a></li>
+<li><a class="reference internal" href="#configure-jupyter">Configure Jupyter</a></li>
+<li><a class="reference internal" href="#launch-dask-with-a-script">Launch Dask with a script</a></li>
+<li><a class="reference internal" href="#launch-and-connect-to-jupyter">Launch and connect to Jupyter</a></li>
+<li><a class="reference internal" href="#open-a-notebook-and-perform-a-simple-computation">Open a notebook and perform a simple computation</a></li>
+<li><a class="reference internal" href="#dynamic-deployment">Dynamic Deployment</a><ul>
+<li><a class="reference internal" href="#main-script">Main script</a></li>
+<li><a class="reference internal" href="#add-one-worker-script">Add one worker script</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="index.html" title="Previous Chapter: Pangeo Setup Guides"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Pangeo Setup Guides</span>
+    </a>
+  </li>
+  <li>
+    <a href="../use_cases/index.html" title="Next Chapter: Pangeo Use Cases"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Pangeo Use Cases &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="../_sources/setup_guides/cheyenne.rst.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 content">
+      
+  <div class="section" id="getting-started-with-dask-on-cheyenne">
+<h1>Getting Started with Dask on Cheyenne<a class="headerlink" href="#getting-started-with-dask-on-cheyenne" title="Permalink to this headline">¶</a></h1>
+<p>This documents how to set up an environment to run XArray on Cheyenne.
+In particular it covers the following:</p>
+<ol class="arabic simple">
+<li>Install conda and creating an environment</li>
+<li>Configure Jupyter</li>
+<li>Launch Dask with a job scheduler</li>
+<li>Launch a Jupyter server for your job</li>
+<li>Connect to Jupyter and the Dask dashboard from your personal computer</li>
+</ol>
+<p>This document assumes that you already have an account on Cheyenne, and
+are comfortable using the command line. There is a
+<a class="reference external" href="https://www.youtube.com/watch?v=7i5m78DSr34&amp;feature=youtu.be">screencast</a>
+of this page.</p>
+<p>You should log into Cheyenne now.</p>
+<div class="section" id="installing-a-software-environment">
+<h2>Installing a software environment<a class="headerlink" href="#installing-a-software-environment" title="Permalink to this headline">¶</a></h2>
+<p>After you have logged into Cheyenne, download and install Miniconda:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">wget</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">repo</span><span class="o">.</span><span class="n">continuum</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">miniconda</span><span class="o">/</span><span class="n">Miniconda3</span><span class="o">-</span><span class="n">latest</span><span class="o">-</span><span class="n">Linux</span><span class="o">-</span><span class="n">x86_64</span><span class="o">.</span><span class="n">sh</span>
+<span class="n">chmod</span> <span class="o">+</span><span class="n">x</span> <span class="n">Miniconda3</span><span class="o">-</span><span class="n">latest</span><span class="o">-</span><span class="n">Linux</span><span class="o">-</span><span class="n">x86_64</span><span class="o">.</span><span class="n">sh</span>
+<span class="o">./</span><span class="n">Miniconda3</span><span class="o">-</span><span class="n">latest</span><span class="o">-</span><span class="n">Linux</span><span class="o">-</span><span class="n">x86_64</span><span class="o">.</span><span class="n">sh</span>
+</pre></div>
+</div>
+<p>This contains a self-contained Python environment that we can manipulate
+safely without requiring the involvement of IT. It also allows you to
+create isolated software environments so that we can experiment in the
+future safely.</p>
+<p>Create a new conda environment for our pangeo work:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">create</span> <span class="o">-</span><span class="n">n</span> <span class="n">pangeo</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> \
+    <span class="n">python</span><span class="o">=</span><span class="mf">3.6</span> <span class="n">dask</span> <span class="n">distributed</span> <span class="n">xarray</span> <span class="n">jupyterlab</span> <span class="n">mpi4py</span>
+</pre></div>
+</div>
+<p>Activate this environment</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="n">activate</span> <span class="n">pangeo</span>
+</pre></div>
+</div>
+<p>Your prompt should now look like this:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">pangeo</span><span class="p">)</span> <span class="n">mrocklin</span><span class="nd">@cheyenne5</span><span class="p">:</span><span class="o">~&gt;</span>
+</pre></div>
+</div>
+<p>And if you ask where your Python command lives, it should direct you to
+somewhere in your home directory:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">pangeo</span><span class="p">)</span> <span class="n">mrocklin</span><span class="nd">@cheyenne5</span><span class="p">:</span><span class="o">~&gt;</span> <span class="n">which</span> <span class="n">python</span>
+<span class="o">/</span><span class="n">glade</span><span class="o">/</span><span class="n">u</span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">mrocklin</span><span class="o">/</span><span class="n">miniconda3</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">pangeo</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">python</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="configure-jupyter">
+<h2>Configure Jupyter<a class="headerlink" href="#configure-jupyter" title="Permalink to this headline">¶</a></h2>
+<p>(If you don’t plan to use Jupyter notebooks then you can safely skip
+this section.)</p>
+<p>Jupyter notebook servers include a password for security. We’re going to
+setup a password for ourselves. First we generate the Jupyter config
+file</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">jupyter</span> <span class="n">notebook</span> <span class="o">--</span><span class="n">generate</span><span class="o">-</span><span class="n">config</span>
+</pre></div>
+</div>
+<p>This created a file in <code class="docutils literal"><span class="pre">~/.jupyter/jupyter_notebook_config.py</span></code>. If you
+open that file and search for “password”, you’ll see a line like the
+following:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#c.NotebookApp.password = u&#39;&#39;</span>
+</pre></div>
+</div>
+<p>The instructions in the comments of the config file tell you to generate
+a hashed password by entering the following commands:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ ipython
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="kn">from</span> <span class="nn">notebook.auth</span> <span class="kn">import</span> <span class="n">passwd</span><span class="p">;</span> <span class="n">passwd</span><span class="p">()</span>
+<span class="n">Enter</span> <span class="n">password</span><span class="p">:</span>
+</pre></div>
+</div>
+<p>You can enter a password of your choice, and it will return to you a
+hashed password that encodes the same information, but is safe to
+include in a publicly accessible config file. I entered “password” (do
+not do this) and go the following output:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">Out</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="s1">&#39;sha1:69a76df803b9:99ca27341563cd85ba4e78684128e1f4ad2d8d0d&#39;</span>
+</pre></div>
+</div>
+<p>Copy that string into your <code class="docutils literal"><span class="pre">jupyter_notebook_config.py</span></code> config file</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">c</span><span class="o">.</span><span class="n">NotebookApp</span><span class="o">.</span><span class="n">password</span> <span class="o">=</span> <span class="sa">u</span><span class="s1">&#39;sha1:69a76df803b9:99ca27341563cd85ba4e78684128e1f4ad2d8d0d&#39;</span>
+</pre></div>
+</div>
+<p>Great. We’re done with that.</p>
+</div>
+<div class="section" id="launch-dask-with-a-script">
+<h2>Launch Dask with a script<a class="headerlink" href="#launch-dask-with-a-script" title="Permalink to this headline">¶</a></h2>
+<p>Copy and paste the following text into a file, dask.sh:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="c1">#PBS -N sample</span>
+<span class="c1">#PBS -q economy</span>
+<span class="c1">#PBS -A UCLB0022</span>
+<span class="c1">#PBS -l select=2:ncpus=72:mpiprocs=6:ompthreads=6</span>
+<span class="c1">#PBS -l walltime=01:00:00</span>
+<span class="c1">#PBS -j oe</span>
+<span class="c1">#PBS -m abe</span>
+
+<span class="c1"># Qsub template for UCAR CHEYENNE</span>
+<span class="c1"># Scheduler: PBS</span>
+
+<span class="c1"># This writes a scheduler.json file into your home directory</span>
+<span class="c1"># You can then connect with the following Python code</span>
+<span class="c1"># &gt;&gt;&gt; from dask.distributed import Client</span>
+<span class="c1"># &gt;&gt;&gt; client = Client(scheduler_file=&#39;~/scheduler.json&#39;)</span>
+
+rm -f scheduler.json
+mpirun --np <span class="m">12</span> dask-mpi --nthreads <span class="m">6</span> --memory-limit 24e9 --interface ib0
+</pre></div>
+</div>
+<p>This script asks for two nodes with 36 cores each. It breaks up each
+node into 6 MPI processes, each of which gets 6 cores and 24GB of RAM
+each. You can tweak the numbers above if you like, but you’ll have to
+match some constraints in the PBS directives on the top and the
+<code class="docutils literal"><span class="pre">mpirun</span></code> keywords on the bottom.</p>
+<p>Submit this script to run on the cluster with <code class="docutils literal"><span class="pre">qsub</span></code></p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">qsub</span> <span class="n">dask</span><span class="o">.</span><span class="n">sh</span>
+</pre></div>
+</div>
+<p>And track its progress with <code class="docutils literal"><span class="pre">qstat</span></code></p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ qstat -u $USER
+
+chadmin1:
+                                                            Req&#39;d  Req&#39;d   Elap
+Job ID          Username Queue    Jobname    SessID NDS TSK Memory Time  S Time
+--------------- -------- -------- ---------- ------ --- --- ------ ----- - -----
+1681778.chadmin mrocklin regular  sample      27872   2 144    --  00:20 R 00:01
+</pre></div>
+</div>
+<p>When this job runs it places a <code class="docutils literal"><span class="pre">scheduler.json</span></code> file in your home
+directory. This contains the necessaary information to connect to this
+cluster from anywhere in the network. We’ll do that now briefly from the
+login node. In the next section we’ll set up a Jupyter notebook server
+on your allocation.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ ipython
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">dask.distributed</span> <span class="kn">import</span> <span class="n">Client</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="n">scheduler_file</span><span class="o">=</span><span class="s1">&#39;scheduler.json&#39;</span><span class="p">)</span>
+<span class="n">client</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">Out</span><span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="o">&lt;</span><span class="n">Client</span><span class="p">:</span> <span class="n">scheduler</span><span class="o">=</span><span class="s1">&#39;tcp://10.148.0.92:8786&#39;</span> <span class="n">processes</span><span class="o">=</span><span class="mi">11</span> <span class="n">cores</span><span class="o">=</span><span class="mi">66</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="launch-and-connect-to-jupyter">
+<h2>Launch and connect to Jupyter<a class="headerlink" href="#launch-and-connect-to-jupyter" title="Permalink to this headline">¶</a></h2>
+<p>From your same session on the login node, run the following code:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">dask.distributed</span> <span class="kn">import</span> <span class="n">Client</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="n">scheduler_file</span><span class="o">=</span><span class="s1">&#39;scheduler.json&#39;</span><span class="p">)</span>
+
+<span class="kn">import</span> <span class="nn">socket</span>
+<span class="n">host</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">run_on_scheduler</span><span class="p">(</span><span class="n">socket</span><span class="o">.</span><span class="n">gethostname</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">start_jlab</span><span class="p">(</span><span class="n">dask_scheduler</span><span class="p">):</span>
+    <span class="kn">import</span> <span class="nn">subprocess</span>
+    <span class="n">proc</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">Popen</span><span class="p">([</span><span class="s1">&#39;jupyter&#39;</span><span class="p">,</span> <span class="s1">&#39;lab&#39;</span><span class="p">,</span> <span class="s1">&#39;--ip&#39;</span><span class="p">,</span> <span class="n">host</span><span class="p">,</span> <span class="s1">&#39;--no-browser&#39;</span><span class="p">])</span>
+    <span class="n">dask_scheduler</span><span class="o">.</span><span class="n">jlab_proc</span> <span class="o">=</span> <span class="n">proc</span>
+
+<span class="n">client</span><span class="o">.</span><span class="n">run_on_scheduler</span><span class="p">(</span><span class="n">start_jlab</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;ssh -N -L 8787:</span><span class="si">%s</span><span class="s2">:8787 -L 8888:</span><span class="si">%s</span><span class="s2">:8888 cheyenne.ucar.edu&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="n">host</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>This should print out a statement like the following:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">ssh</span> <span class="o">-</span><span class="n">N</span> <span class="o">-</span><span class="n">L</span> <span class="mi">8787</span><span class="p">:</span><span class="n">r13i2n1</span><span class="p">:</span><span class="mi">8787</span> <span class="o">-</span><span class="n">L</span> <span class="mi">8888</span><span class="p">:</span><span class="n">r13i2n1</span><span class="p">:</span><span class="mi">8888</span> <span class="o">-</span><span class="n">l</span> <span class="n">mrocklin</span> <span class="n">cheyenne</span><span class="o">.</span><span class="n">ucar</span><span class="o">.</span><span class="n">edu</span>
+</pre></div>
+</div>
+<p>You can run this command from your personal computer (not the terminal
+logged into Cheyenne) to set up SSH-tunnels that will allow you to log
+into web servers running on your allocation. Afterwards, you should be
+able to open the following links in your web browser on your computer:</p>
+<ul class="simple">
+<li>Jupyter Lab: <a class="reference external" href="http://localhost:8888">http://localhost:8888</a></li>
+<li>Dask dashboard: <a class="reference external" href="http://localhost:8787/status">http://localhost:8787/status</a></li>
+</ul>
+<p>The SSH tunnels will route these into the correct machine in your
+cluster allocation.</p>
+</div>
+<div class="section" id="open-a-notebook-and-perform-a-simple-computation">
+<h2>Open a notebook and perform a simple computation<a class="headerlink" href="#open-a-notebook-and-perform-a-simple-computation" title="Permalink to this headline">¶</a></h2>
+<p>From the <a class="reference external" href="http://localhost:8888">Jupyter Lab webpage</a> you can create
+and manage work in notebooks. You can download a <a class="reference external" href="https://gist.github.com/mrocklin/99e1c9b72eaebe6df5d146ac427261d1#file-cheyenne_xarray_dask_example-ipynb">basic starter
+notebook</a>
+that loads some data, connects to the cluster, and then does some basic
+analysis to your home directory using <code class="docutils literal"><span class="pre">wget</span></code></p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">wget</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">gist</span><span class="o">.</span><span class="n">githubusercontent</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">mrocklin</span><span class="o">/</span><span class="mf">99e1</span><span class="n">c9b72eaebe6df5d146ac427261d1</span><span class="o">/</span><span class="n">raw</span><span class="o">/</span><span class="mi">9387</span><span class="n">d577bffdf690b5527e9835354ee659089e23</span><span class="o">/</span><span class="n">cheyenne_xarray_dask_example</span><span class="o">.</span><span class="n">ipynb</span>
+</pre></div>
+</div>
+<p>From the <a class="reference external" href="http://localhost:8787">Dask dashboard</a> you can track the
+cluster’s progress as you do your work.</p>
+</div>
+<div class="section" id="dynamic-deployment">
+<h2>Dynamic Deployment<a class="headerlink" href="#dynamic-deployment" title="Permalink to this headline">¶</a></h2>
+<p>The job scheduler that manages the cluster is not intended for
+interactive work like what we do with Jupyter notebooks. When we ask for
+a modestly large deployment (like five machines) it may wait for hours
+to find an appropriate time slot to deploy our job. This can be
+inconvenient because our human schedules may not match up well with the
+cluster’s job scheduler.</p>
+<p>However we seem to be able to get much faster response from the job
+scheduler if we launch many single-machine jobs. This allows us to get
+larger allocations faster (often immediately).</p>
+<p>We can do this by making our deployment process a little bit more
+complex by splitting it into two jobs:</p>
+<ol class="arabic simple">
+<li>One job that launches a scheduler and a few workers on one machine</li>
+<li>Another job that only launches workers on one machine</li>
+</ol>
+<p>Write these two scripts to your home directory:</p>
+<div class="section" id="main-script">
+<h3>Main script<a class="headerlink" href="#main-script" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default"><div class="highlight"><pre><span></span>#!/bin/bash
+#PBS -N dask
+#PBS -q economy
+#PBS -A UCLB0022
+#PBS -l select=1:ncpus=36:mpiprocs=6:ompthreads=6
+#PBS -l walltime=00:30:00
+#PBS -j oe
+#PBS -m abe
+
+# Writes ~/scheduler.json file in home directory
+# Connect with
+# &gt;&gt;&gt; from dask.distributed import Client
+# &gt;&gt;&gt; client = Client(scheduler_file=&#39;~/scheduler.json&#39;)
+
+rm -f scheduler.json
+mpirun --np 6 dask-mpi --nthreads 6 --memory-limit 22e9 --interface ib0 --local-directory /glade/scratch/$USER
+</pre></div>
+</div>
+</div>
+<div class="section" id="add-one-worker-script">
+<h3>Add one worker script<a class="headerlink" href="#add-one-worker-script" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default"><div class="highlight"><pre><span></span>#!/bin/bash
+#PBS -N dask-workers
+#PBS -q economy
+#PBS -A UCLB0022
+#PBS -l select=1:ncpus=36:mpiprocs=6:ompthreads=6
+#PBS -l walltime=00:30:00
+#PBS -j oe
+#PBS -m abe
+
+mpirun --np 6 dask-mpi --nthreads 6 --memory-limit 22e9 --interface ib0 --no-scheduler --local-directory /glade/scratch/$USER
+</pre></div>
+</div>
+<p>And then run the main one once</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">qsub</span> <span class="n">main</span><span class="o">.</span><span class="n">sh</span>
+</pre></div>
+</div>
+<p>And the second one a few times</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">qsub</span> <span class="n">add</span><span class="o">-</span><span class="n">one</span><span class="o">-</span><span class="n">worker</span><span class="o">.</span><span class="n">sh</span>
+<span class="n">qsub</span> <span class="n">add</span><span class="o">-</span><span class="n">one</span><span class="o">-</span><span class="n">worker</span><span class="o">.</span><span class="n">sh</span>
+<span class="n">qsub</span> <span class="n">add</span><span class="o">-</span><span class="n">one</span><span class="o">-</span><span class="n">worker</span><span class="o">.</span><span class="n">sh</span>
+<span class="n">qsub</span> <span class="n">add</span><span class="o">-</span><span class="n">one</span><span class="o">-</span><span class="n">worker</span><span class="o">.</span><span class="n">sh</span>
+</pre></div>
+</div>
+<p>You can run this more times during your session to increase your
+allocation dynamically. You can also kill these jobs independently to
+contract your allocation dynamically and save compute time.</p>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, Pangeo Team.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
