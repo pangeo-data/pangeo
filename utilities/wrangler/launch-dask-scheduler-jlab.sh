@@ -25,7 +25,7 @@ LDIR=/gpfs/flash/users/$USER
 # launch jupyterlab
 export JUPYTER_RUNTIME_DIR=$WORK
 jupyter lab --ip '*' --no-browser --port 8888 \
-            --notebook-dir $WORK &
+            --notebook-dir $HOME &
 
 SCHEDULER=$HOME/scheduler.json
 rm -f $SCHEDULER
