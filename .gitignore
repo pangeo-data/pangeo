@@ -107,3 +107,6 @@ venv.bak/
 dask-scheduler.o*
 dask-worker.o*
 scheduler.json
+
+# log files
+*.out
