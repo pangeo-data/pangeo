@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Getting Started with Dask on Geyser and Caldera &#8212; Pangeo 0.0.1 documentation</title>
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Pangeo Use Cases" href="../use_cases/index.html" />
+    <link rel="prev" title="Getting Started with Dask on Cheyenne" href="cheyenne.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          Pangeo</a>
+        <span class="navbar-text navbar-version pull-left"><b>0.0.1</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="http://pangeo-data.github.io">Blog</a></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../about.html">About Pangeo</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Pangeo Setup Guides</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="cheyenne.html">Getting Started with Dask on Cheyenne</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Getting Started with Dask on Geyser and Caldera</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../use_cases/index.html">Pangeo Use Cases</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../use_cases/ocean_cm2.6_eddy_statistics.html">Use Case: CM2.6 Eddy Statistics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../use_cases/newmann_ensemble_meteorology.html">Analysis of Gridded Ensemble Precipitation and Temperature Estimates over the Contiguous United States</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Getting Started with Dask on Geyser and Caldera</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="cheyenne.html" title="Previous Chapter: Getting Started with Dask on Cheyenne"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Getting Start...</span>
+    </a>
+  </li>
+  <li>
+    <a href="../use_cases/index.html" title="Next Chapter: Pangeo Use Cases"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Pangeo Use Cases &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="../_sources/setup_guides/geyser_and_caldera.rst.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 content">
+      
+  <div class="section" id="getting-started-with-dask-on-geyser-and-caldera">
+<h1>Getting Started with Dask on Geyser and Caldera<a class="headerlink" href="#getting-started-with-dask-on-geyser-and-caldera" title="Permalink to this headline">¶</a></h1>
+<p>This setup guide provides instructions for setting up a “local cluster” on
+Geyser or Caldera. This creates a “cluster” of a scheduler and workers running
+on a single Geyser or Caldera node. Because these nodes have a large number of
+cores and a large amount of memory, this can be a simple alternative to the full
+distributed cluster that can be run on Cheyenne.</p>
+<p>Begin by following the first two steps from the
+<a class="reference external" href="setup_guides/cheyenne.html">Getting Started with Dask on Cheyenne</a> page:</p>
+<ol class="arabic simple">
+<li>Install conda and creating an environment</li>
+<li>Configure Jupyter</li>
+</ol>
+<p>Once you have Conda and Jupyter configured. Load a few python modules and start
+a Jupyter session on Geyser or Caldara using the <code class="docutils literal"><span class="pre">execgy</span></code> or <code class="docutils literal"><span class="pre">`execca</span></code>
+utilities, respectively.</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>module load python all-python-libs
+<span class="nb">export</span> <span class="nv">DAV_CORES</span><span class="o">=</span><span class="m">8</span>  <span class="c1"># request 8 cores</span>
+execgy start-notebook  <span class="c1"># run the start-notebook command on geyser</span>
+</pre></div>
+</div>
+<p>after a brief minute, you should see something like:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Requesting</span> <span class="mi">8</span> <span class="n">core</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="n">to</span> <span class="n">geyser</span> <span class="n">queue</span><span class="p">,</span>
+<span class="n">to</span> <span class="n">submit</span> <span class="n">start</span><span class="o">-</span><span class="n">notebook</span> <span class="n">the</span> <span class="n">usage</span> <span class="ow">is</span> <span class="n">to</span> <span class="n">be</span> <span class="n">charged</span> <span class="n">into</span> <span class="n">UCLB0022</span>
+<span class="n">running</span>
+
+<span class="n">bsub</span> <span class="o">-</span><span class="n">Is</span> <span class="o">-</span><span class="n">q</span> <span class="n">geyser</span> <span class="o">-</span><span class="n">n8</span> <span class="o">-</span><span class="n">PUCLB0022</span> <span class="o">-</span><span class="n">W24</span><span class="p">:</span><span class="mi">00</span> <span class="s2">&quot;start-notebook&quot;</span>
+
+<span class="n">please</span> <span class="n">wait</span><span class="o">..</span>
+
+<span class="n">Job</span> <span class="o">&lt;</span><span class="mi">552080</span><span class="o">&gt;</span> <span class="ow">is</span> <span class="n">submitted</span> <span class="n">to</span> <span class="n">queue</span> <span class="o">&lt;</span><span class="n">geyser</span><span class="o">&gt;.</span>
+<span class="o">&lt;&lt;</span><span class="n">Waiting</span> <span class="k">for</span> <span class="n">dispatch</span> <span class="o">...&gt;&gt;</span>
+<span class="n">Logging</span> <span class="n">this</span> <span class="n">session</span> <span class="ow">in</span> <span class="o">/</span><span class="n">glade</span><span class="o">/</span><span class="n">scratch</span><span class="o">/</span><span class="n">username</span><span class="o">/.</span><span class="n">jupyter</span><span class="o">-</span><span class="n">notebook</span><span class="o">/</span><span class="n">log</span><span class="o">.</span><span class="mi">20171128</span><span class="n">T001004</span>
+
+
+<span class="n">Run</span> <span class="n">the</span> <span class="n">following</span> <span class="n">command</span> <span class="n">on</span> <span class="n">your</span> <span class="n">desktop</span> <span class="ow">or</span> <span class="n">laptop</span><span class="p">:</span>
+<span class="n">ssh</span> <span class="o">-</span><span class="n">N</span> <span class="o">-</span><span class="n">l</span> <span class="n">username</span> <span class="o">-</span><span class="n">L</span> <span class="mi">8888</span><span class="p">:</span><span class="n">geyser08</span><span class="o">-</span><span class="n">ib</span><span class="p">:</span><span class="mi">8888</span> <span class="n">yellowstone</span><span class="o">.</span><span class="n">ucar</span><span class="o">.</span><span class="n">edu</span>
+
+<span class="n">Log</span> <span class="ow">in</span> <span class="k">with</span> <span class="n">your</span> <span class="n">token</span> <span class="p">(</span><span class="n">there</span> <span class="n">will</span> <span class="n">be</span> <span class="n">no</span> <span class="n">prompt</span><span class="p">)</span><span class="o">.</span> <span class="n">Then</span>
+<span class="nb">open</span> <span class="n">a</span> <span class="n">browser</span> <span class="ow">and</span> <span class="n">go</span> <span class="n">to</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mf">8888.</span>
+</pre></div>
+</div>
+<p>From your local machine, run the ssh command and open the url to the notebook
+server (<a class="reference external" href="http://localhost:8888">http://localhost:8888</a>).</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Geyser and Caldra are shared systems. If you are going to use multiple cores,
+it is a best practice to request multiple cores on the system via the
+<code class="docutils literal"><span class="pre">DAV_CORES</span></code> environment variable.</p>
+</div>
+<p>Finally, from within the notebook you’ll be using, use the following snippit to
+start a <code class="docutils literal"><span class="pre">LocalCluster</span></code> and and connect dask to it.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">distributed</span> <span class="kn">import</span> <span class="n">LocalCluster</span><span class="p">,</span> <span class="n">Client</span>
+
+<span class="n">cluster</span> <span class="o">=</span> <span class="n">LocalCluster</span><span class="p">(</span><span class="n">processes</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">n_workers</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">threads_per_worker</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="n">cluster</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, Pangeo Team.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

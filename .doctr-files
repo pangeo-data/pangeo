@@ -6,6 +6,7 @@
 ./_sources/about.rst.txt
 ./_sources/index.rst.txt
 ./_sources/setup_guides/cheyenne.rst.txt
+./_sources/setup_guides/geyser_and_caldera.rst.txt
 ./_sources/setup_guides/index.rst.txt
 ./_sources/use_cases/index.rst.txt
 ./_sources/use_cases/newmann_ensemble_meteorology.ipynb.txt
@@ -102,6 +103,7 @@
 ./search.html
 ./searchindex.js
 ./setup_guides/cheyenne.html
+./setup_guides/geyser_and_caldera.html
 ./setup_guides/index.html
 ./use_cases/index.html
 ./use_cases/newmann_ensemble_meteorology.html
