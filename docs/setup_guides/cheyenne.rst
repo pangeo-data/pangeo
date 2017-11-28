@@ -120,7 +120,7 @@ Launch Dask with a script
    script ``launch-dask.sh``. It and its supporting utilities can be found in the
    `pangeo Github reposository <https://github.com/pangeo-data/pangeo/tree/master/utilities/cheyenne>`__.
 
-   The ussage of this script is quite simple:
+   The usage of this script is quite simple:
 
    .. code:: bash
 
