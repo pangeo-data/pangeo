@@ -114,6 +114,39 @@ Great. We're done with that.
 Launch Dask with a script
 -------------------------
 
+.. note::
+
+   The following scripts and proceedures have been packed into a convenient wrapper
+   script ``launch-dask.sh``. It and its supporting utilities can be found in the
+   `pangeo Github reposository <https://github.com/pangeo-data/pangeo/tree/master/utilities/cheyenne>`__.
+
+   The ussage of this script is quite simple:
+
+   .. code:: bash
+
+       ./launch-dask.sh ${N_WORK_NODES}
+
+   where ``N_WORK_NODES`` is the number of nodes you want to add to the cluster
+   beyond the one that is automatically added for the scheduler. Once this command
+   has been run, and after a moment for the jobs to work their way through the queue,
+   it will print something like:
+
+   .. code:: bash
+
+       Run the following command from your local machine:
+       ssh -N -L 8877:r7i3n13:8877 -L 8878:r7i3n13:8787 username@cheyenne.ucar.edu
+       Then open the following URLs:
+           Jupyter lab: http://localhost:8877
+           Dask dashboard: http://localhost:8878
+
+   It may be ncessessary to modify the included scripts to use different PBS
+   project number, conda environment, or notebook directory.
+
+*The remainder of this section is left here for completeness but for most users,
+the ``launch-dask.sh`` script should be enough to get started.*
+
+------------
+
 Copy and paste the following text into a file, dask.sh:
 
 .. code:: bash

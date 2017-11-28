@@ -65,7 +65,7 @@ def cli(scheduler_file, jlab_port, dash_port, notebook_dir,
     logger.debug('Done.')
 
     user = os.environ['USER']
-    print('Running the following command from your local hostname:')
+    print('Run the following command from your local machine:')
     print(f'ssh -N -L {jlab_port}:{host}:{jlab_port} '
           f'-L {dash_port}:{host}:8787 {user}@{hostname}')
     print('Then open the following URLs:')

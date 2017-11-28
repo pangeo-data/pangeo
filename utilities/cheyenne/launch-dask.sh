@@ -21,7 +21,7 @@ while true; do
     if [[ ${status} =~ " R " ]]; then
         break
     fi
-    sleep 1 
+    sleep 1
 done
 
 if [[ -z $WORKDIR ]]; then
