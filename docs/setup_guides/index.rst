@@ -7,4 +7,4 @@ For Advanced Users:
    :maxdepth: 2
 
    cheyenne
-   
+   geyser_and_caldera
