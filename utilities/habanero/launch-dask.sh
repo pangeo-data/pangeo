@@ -1,7 +1,8 @@
 #!/bin/bash
 set -e
 
-SFLAGS="--account=edu --reservation=edu_15"
+#SFLAGS="--account=edu --reservation=edu_15"
+SFLAGS="--account=ocp"
 
 echo "Launching dask scheduler"
 s=`sbatch $SFLAGS launch-dask-scheduler.sh | cut -d " " -f 4`
@@ -9,7 +10,7 @@ sjob=${s%.*}
 echo ${s}
 
 echo "Launching dask workers (${workers})"
-sbatch $SFLAGS --array=0-4 launch-dask-worker.sh
+sbatch $SFLAGS --array=0-6 launch-dask-worker.sh
 
 squeue --job ${sjob}
 

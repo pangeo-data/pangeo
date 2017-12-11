@@ -24,6 +24,15 @@ def start_jlab(dask_scheduler, host=None, port='8888', notebook_dir=''):
     proc = subprocess.Popen(cmd, env=my_env)
     dask_scheduler.jlab_proc = proc
 
+def start_notebook(dask_scheduler, host=None, port='8888', notebook_dir=''):
+    cmd = ['jupyter', 'notebook', '--ip', host,
+           '--no-browser', '--port', port,
+           '--notebook-dir', notebook_dir]
+    print(cmd)
+    my_env = os.environ.copy()
+    my_env["XDG_RUNTIME_DIR"] = ""
+    proc = subprocess.Popen(cmd, env=my_env)
+    dask_scheduler.notebook_proc = proc
 
 def get_logger(log_level):
     ch = logging.StreamHandler(sys.stdout)
@@ -46,7 +55,7 @@ def get_logger(log_level):
               help='port to forward dask dashboard to')
 @click.option('--notebook_dir', default='', show_default=True,
               help='The directory to use for notebooks and kernels.')
-@click.option('--hostname', default='cheyenne.ucar.edu', show_default=True,
+@click.option('--hostname', default='habanero.rcs.columbia.edu', show_default=True,
               help='public facing hostname')
 @click.option('--log_level', default='INFO', show_default=True,
               help='logging level, useful for debugging')
