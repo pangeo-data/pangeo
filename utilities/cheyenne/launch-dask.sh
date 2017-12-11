@@ -2,14 +2,14 @@
 set -e
 
 echo "Launching dask scheduler"
-s=`qsub launch-dask-scheduler.sh`
+s=`qsub -A $PROJECT launch-dask-scheduler.sh`
 sjob=${s%.*}
 echo ${s}
 
 workers=${1:-4}
 echo "Launching dask workers (${workers})"
 for i in $(seq 1 ${workers}); do
-    qsub launch-dask-worker.sh
+    qsub -A $PROJECT launch-dask-worker.sh
 done
 
 qstat ${sjob}
