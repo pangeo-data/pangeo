@@ -66,7 +66,7 @@ def get_logger(log_level):
 
 
 def setup_jlab(scheduler_file, jlab_port, dash_port, notebook_dir,
-        hostname, log_level):
+        hostname):
 
     logger.info('getting client with scheduler file: %s' % scheduler_file)
     client = Client(scheduler_file=scheduler_file, timeout=30)
@@ -101,24 +101,26 @@ def _main_func(args, description):
         jobids.append(launch_job("launch-dask-worker.sh", project, walltime))
 
     for jobid in jobids:
-        proc = subprocess.Popen("qstat {} ".
-                                format(jobid),
-                                stdout=subprocess.PIPE,stderr=subprocess.PIPE,
-                                shell=True)
+        wait = True
+        while wait:
+            proc = subprocess.Popen("qstat {} ".
+                                    format(jobid),
+                                    stdout=subprocess.PIPE,stderr=subprocess.PIPE,
+                                    shell=True)
 
-        output, errput = proc.communicate()
-        output = output.decode('utf-8')
-        stat = proc.wait()
-        if ' R ' in output:
-            logger.info(" jobid {} started".format(jobid))
-            break
-        if ' Q ' in output:
-            logger.info(" jobid {} in queue".format(jobid))
-            time.sleep(5)
+            output, errput = proc.communicate()
+            output = output.decode('utf-8')
+            stat = proc.wait()
+            if ' R ' in output:
+                logger.info(" jobid {} started".format(jobid))
+                wait = False
+            if ' Q ' in output:
+                logger.info(" jobid {} in queue".format(jobid))
+                time.sleep(5)
 
     setup_jlab(jlab_port=8877, dash_port=8878, notebook_dir=notebookdir,
                hostname="cheyenne.ucar.edu",
-               scheduler_file=os.path.join(workdir,"scheduler.json"), log_level="DEBUG")
+               scheduler_file=os.path.join(workdir,"scheduler.json"))
 
 
 if __name__ == "__main__":
