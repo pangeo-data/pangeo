@@ -1,5 +1,8 @@
 #!/usr/bin/env python
-import os, sys, argparse, subprocess, re, time, logging
+from __future__ import absolute_import
+from __future__ import print_function
+
+import os, sys, argparse, subprocess, re, time, logging, socket
 from dask.distributed import Client
 logger = logging.getLogger(__name__)
 
@@ -10,7 +13,7 @@ def parse_command_line(args, description):
                         help="Specify a project id for the case (optional)."
                         "Used for accounting when on a batch system."
                         "The default is user-specified environment variable PROJECT")
-    parser.add_argument("--workers", default=0,
+    parser.add_argument("--workers", default=0, type=int,
                         help="Number of client nodes to launch")
     parser.add_argument("--walltime", default="01:00:00",
                         help="Set the wallclock limit for all nodes. ")
@@ -48,7 +51,7 @@ def start_jlab(dask_scheduler, host=None, port='8888', notebook_dir=''):
     cmd = ['jupyter', 'lab', '--ip', host,
            '--no-browser', '--port', port,
            '--notebook-dir', notebook_dir]
-    print(cmd)
+#    logger.debug("cmd={}".format(cmd))
     proc = subprocess.Popen(cmd)
     dask_scheduler.jlab_proc = proc
 
@@ -97,7 +100,7 @@ def _main_func(args, description):
     jobids = []
     jobids.append( launch_job("launch-dask-scheduler.sh", project, walltime))
 
-    for i in range(1,workers):
+    for i in range(workers):
         jobids.append(launch_job("launch-dask-worker.sh", project, walltime))
 
     for jobid in jobids:
@@ -113,12 +116,13 @@ def _main_func(args, description):
             stat = proc.wait()
             if ' R ' in output:
                 logger.info(" jobid {} started".format(jobid))
+                time.sleep(5) # make sure scheduler file is written
                 wait = False
             if ' Q ' in output:
                 logger.info(" jobid {} in queue".format(jobid))
                 time.sleep(5)
 
-    setup_jlab(jlab_port=8877, dash_port=8878, notebook_dir=notebookdir,
+    setup_jlab(jlab_port='8877', dash_port='8878', notebook_dir=notebookdir,
                hostname="cheyenne.ucar.edu",
                scheduler_file=os.path.join(workdir,"scheduler.json"))
 
