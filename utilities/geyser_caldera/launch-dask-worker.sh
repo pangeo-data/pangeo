@@ -9,11 +9,14 @@
 #SBATCH -e dask-worker.err.%J
 #SBATCH -o dask-worker.out.%J
 
-
 # Setup Environment
 source /glade/u/apps/opt/slurm_init/init.sh
 module purge
 source /glade/u/home/jhamman/anaconda/bin/activate pangeo
+
+export LANG="en_US.utf8"
+export LANGUAGE="en_US.utf8"
+export LC_ALL="en_US.utf8"
 
 export TMPDIR=/glade/scratch/$USER/temp
 mkdir -p $TMPDIR

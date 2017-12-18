@@ -31,9 +31,10 @@ squeue -u ${USER} -j ${sjob}
 
 # block until the scheduler job starts
 while true; do
-    status=`squeue -h -u ${USER} -j ${sjob}`
+    squeue -h -u ${USER} -j ${sjob} -t RUNNING
+    status=`squeue -h -u ${USER} -j ${sjob} -t RUNNING`
     echo ${status}
-    if [[ ${status} =~ " R " ]]; then
+    if [[ ! -z ${status} ]]; then
         break
     fi
     sleep 1
