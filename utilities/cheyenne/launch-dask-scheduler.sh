@@ -1,8 +1,6 @@
 #!/bin/bash
 #PBS -N dask-scheduler
-#PBS -q economy
 #PBS -l select=1:ncpus=36:mpiprocs=9:ompthreads=4:mem=109GB
-#PBS -l walltime=11:59:00
 #PBS -j oe
 #PBS -m abe
 
