@@ -1,3 +1,4 @@
+import os
 from time import time, sleep
 
 import pytest
@@ -49,6 +50,7 @@ def test_adaptive(loop):
                 assert time() < start + 10
 
 
+@pytest.mark.skipif('PBS_ACCOUNT' in os.environ, reason='PBS_ACCOUNT defined')
 def test_errors(loop):
     with pytest.raises(ValueError) as info:
         PBSCluster()
