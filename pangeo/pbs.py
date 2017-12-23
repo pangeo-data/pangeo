@@ -13,17 +13,20 @@ template = """
 #PBS -N %(name)s
 #PBS -q %(queue)s
 #PBS -A %(project)s
-#PBS -l select=1:ncpus=%(threads_per_worker)d:mpiprocs=1:ompthreads=1
+#PBS -l %(resouce_spec)s
 #PBS -l walltime=%(walltime)s
 #PBS -j oe
 #PBS -m abe
 
-%(base_path)s/dask-worker %(scheduler)s --nthreads %(threads_per_worker)d --memory-limit %(memory)s --name $PBS_JOBNAME-$PBS_JOBID-$PBS_TASKNUM %(extra)s
+%(base_path)s/dask-worker %(scheduler)s \
+    --nprocs %(workers_per_node)d \
+    --nthreads %(threads_per_worker)d \
+    --memory-limit %(memory)s \
+     %(extra)s
 """
 
 
 logger = logging.getLogger(__name__)
-
 
 dirname = os.path.dirname(sys.executable)
 
@@ -48,24 +51,64 @@ class PBSCluster(object):
     """
     def __init__(self,
                  name='dask',
-                 q='regular',
-                 project='UCLB0022',  # is there an environment variable I can use?
-                 threads_per_worker=6,
-                 memory='7GB',
+                 queue='regular',
+                 project=None,
+                 resouce_spec='select=1:ncpus=36:mem=109GB',
+                 workers_per_node=9,
+                 threads_per_worker=4,
+                 memory='7e9',
                  walltime='00:30:00',
                  interface=None,
                  extra='',
-                 scheduler_file=os.path.expanduser('~/scheduler.json'),
                  **kwargs):
+        """ Initialize a PBS Cluster
+
+        Parameters
+        ----------
+        name : str
+            Name of worker jobs. Passed to `$PBS -N` option.
+        queue : str
+            Destination queue for each worker job. Passed to `#PBS -q` option.
+        project : str
+            Accounting string associated with each worker job. Passed to
+            `#PBS -A` option.
+        resource_spec : str
+            Request resources and specify job placement. Passed to `#PBS -l`
+            option.
+        workers_per_node : int
+            Number of worker processes per job.
+        threads_per_worker : int
+            Number of threads per worker.
+        memory : str
+            Bytes of memory that the worker can use. This can be an integer
+            (bytes), float (fraction of total system memory), 'auto', or zero
+            for no memory management.
+        walltime : str
+            Walltime for each worker job.
+        interface : str
+            Network interface like 'eth0' or 'ib0'.
+        extra : str
+            Additional arguments to pass to `dask-worker`
+        kwargs : dict
+            Additional keyword arguments to pass to `LocalCluster`
+        """
+
         if interface:
             host = get_ip_interface(interface)
-            extra += '--interface ' + interface
+            extra += ' --interface  %s ' % interface
         else:
             host = socket.gethostname()
+        if project is None:
+            project = os.getenv('PBS_ACCOUNT', None)
+        if project is None:
+            raise ValueError('Unable to determine PBS Account Name')
+
         self.cluster = LocalCluster(n_workers=0, ip=host, **kwargs)
         self.config = {'name': name,
-                       'queue': q,
+                       'queue': queue,
                        'project': project,
+                       'resouce_spec': resouce_spec,
+                       'workers_per_node': workers_per_node,
                        'threads_per_worker': threads_per_worker,
                        'walltime': walltime,
                        'scheduler': self.cluster.scheduler.address,
@@ -73,6 +116,8 @@ class PBSCluster(object):
                        'memory': memory.replace(' ', ''),
                        'extra': extra}
         self.jobs = set()
+
+        logger.debug("Job script: \n %s" % self.job_script())
 
     def job_script(self):
         return template % self.config
@@ -88,10 +133,10 @@ class PBSCluster(object):
 
     def start_workers(self, n=1):
         """ Start workers and point them to our local scheduler """
-        with self.job_script() as fn:
+        with self.job_file() as fn:
             outs = self._calls([['qsub', fn]] * n)
             jobs = [out.decode().split('.')[0] for out in outs]
-        self.jobs.update(jobs)
+            self.jobs.update(jobs)
         return jobs
 
     @property

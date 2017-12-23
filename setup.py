@@ -7,7 +7,7 @@ import toolz
 setup(name='pangeo',
       version='0.0.1',
       description='',
-      url=''
+      url='',
       license='BSD',
       packages=['pangeo'],
       long_description=(open('README.md').read() if exists('README.md') else ''),

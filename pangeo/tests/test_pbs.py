@@ -7,7 +7,7 @@ from pangeo import PBSCluster
 
 
 def test_basic(loop):
-    with PBSCluster(walltime='00:02:00', threads_per_worker=2, memory='2 GB',
+    with PBSCluster(walltime='00:02:00', threads_per_worker=2, memory='7e9',
                     interface='ib0', loop=loop) as cluster:
         with Client(cluster) as client:
             workers = cluster.start_workers(2)
@@ -17,7 +17,7 @@ def test_basic(loop):
 
             info = client.scheduler_info()
             w = list(info['workers'].values())[0]
-            assert w['memory_limit'] == 2e9
+            assert w['memory_limit'] == 7e9
             assert w['ncores'] == 2
 
             cluster.stop_workers(workers)
