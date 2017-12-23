@@ -49,7 +49,7 @@ class PBSCluster(object):
     def __init__(self,
                  name='dask',
                  q='regular',
-                 project='UCLB0022',  # is there an environment variable I can use?
+                 project=None,
                  threads_per_worker=6,
                  memory='7GB',
                  walltime='00:30:00',
@@ -62,6 +62,10 @@ class PBSCluster(object):
             extra += '--interface ' + interface
         else:
             host = socket.gethostname()
+        project = project or os.environ.get('PBS_ACCOUNT')
+        if not project:
+            raise ValueError("Must specify a project like `project='UCLB1234' "
+                             "or set PBS_ACCOUNT environment variable"))
         self.cluster = LocalCluster(n_workers=0, ip=host, **kwargs)
         self.config = {'name': name,
                        'queue': q,
