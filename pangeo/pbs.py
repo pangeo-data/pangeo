@@ -4,26 +4,29 @@ import os
 import socket
 import subprocess
 import sys
+import toolz
 
 from distributed import LocalCluster
-from distributed.utils import tmpfile, get_ip_interface
+from distributed.utils import (tmpfile, get_ip_interface, format_bytes,
+        parse_bytes, ignoring)
 
 template = """
 #!/bin/bash
+
 #PBS -N %(name)s
 #PBS -q %(queue)s
 #PBS -A %(project)s
-#PBS -l %(resouce_spec)s
+#PBS -l select=1:ncpus=%(threads_per_worker)d:mem=%(memory)s
 #PBS -l walltime=%(walltime)s
 #PBS -j oe
 #PBS -m abe
 
 %(base_path)s/dask-worker %(scheduler)s \
-    --nprocs %(workers_per_node)d \
     --nthreads %(threads_per_worker)d \
     --memory-limit %(memory)s \
+    --name %(name)s-%(n)d \
      %(extra)s
-"""
+""".lstrip()
 
 
 logger = logging.getLogger(__name__)
@@ -53,10 +56,8 @@ class PBSCluster(object):
                  name='dask',
                  queue='regular',
                  project=None,
-                 resouce_spec='select=1:ncpus=36:mem=109GB',
-                 workers_per_node=9,
                  threads_per_worker=4,
-                 memory='7e9',
+                 memory='7GB',
                  walltime='00:30:00',
                  interface=None,
                  extra='',
@@ -72,17 +73,11 @@ class PBSCluster(object):
         project : str
             Accounting string associated with each worker job. Passed to
             `#PBS -A` option.
-        resource_spec : str
-            Request resources and specify job placement. Passed to `#PBS -l`
-            option.
-        workers_per_node : int
-            Number of worker processes per job.
         threads_per_worker : int
             Number of threads per worker.
         memory : str
-            Bytes of memory that the worker can use. This can be an integer
-            (bytes), float (fraction of total system memory), 'auto', or zero
-            for no memory management.
+            Bytes of memory that the worker can use. This should be a string
+            like "7GB" that can be interpretted both by PBS and Dask.
         walltime : str
             Walltime for each worker job.
         interface : str
@@ -92,7 +87,6 @@ class PBSCluster(object):
         kwargs : dict
             Additional keyword arguments to pass to `LocalCluster`
         """
-
         if interface:
             host = get_ip_interface(interface)
             extra += ' --interface  %s ' % interface
@@ -104,23 +98,24 @@ class PBSCluster(object):
             raise ValueError("Must specify a project like `project='UCLB1234' "
                              "or set PBS_ACCOUNT environment variable")
         self.cluster = LocalCluster(n_workers=0, ip=host, **kwargs)
+        memory = memory.replace(' ', '')
         self.config = {'name': name,
                        'queue': queue,
                        'project': project,
-                       'resouce_spec': resouce_spec,
-                       'workers_per_node': workers_per_node,
                        'threads_per_worker': threads_per_worker,
                        'walltime': walltime,
                        'scheduler': self.cluster.scheduler.address,
                        'base_path': dirname,
-                       'memory': memory.replace(' ', ''),
+                       'memory': memory,
                        'extra': extra}
-        self.jobs = set()
+        self.jobs = dict()
+        self.n = 0
 
         logger.debug("Job script: \n %s" % self.job_script())
 
     def job_script(self):
-        return template % self.config
+        self.n += 1
+        return template % toolz.merge(self.config, {'n': self.n})
 
     @contextmanager
     def job_file(self):
@@ -133,11 +128,15 @@ class PBSCluster(object):
 
     def start_workers(self, n=1):
         """ Start workers and point them to our local scheduler """
-        with self.job_file() as fn:
-            outs = self._calls([['qsub', fn]] * n)
-            jobs = [out.decode().split('.')[0] for out in outs]
-            self.jobs.update(jobs)
-        return jobs
+        outs = []
+        workers = []
+        for _ in range(n):
+            with self.job_file() as fn:
+                out = self._call(['qsub', fn])
+                job = out.decode().split('.')[0]
+                self.jobs[self.n] = job
+                workers.append(self.n)
+        return workers
 
     @property
     def scheduler_address(self):
@@ -184,21 +183,24 @@ class PBSCluster(object):
         """ Singular version of _calls """
         return self._calls([cmd])[0]
 
-    def stop_workers(self, jobs):
-        if not jobs:
+    def stop_workers(self, workers):
+        if not workers:
             return
+        workers = list(map(int, workers))
+        jobs = [self.jobs[w] for w in workers]
         self._call(['qdel'] + list(jobs))
-        self.jobs -= set(jobs)
+        for w in workers:
+            with ignoring(KeyError):
+                del self.jobs[w]
 
     def scale_up(self, n, **kwargs):
         return self.start_workers(n - len(self.jobs))
 
     def scale_down(self, workers):
-        pass
-        # needs https://github.com/dask/distributed/pull/1659
-        # names = [self.cluster.scheduler.worker_info[w]['name'] for w in workers]
-        # job_ids = {name.split('-')[-2] for name in names}
-        # self.stop_workers(job_ids)
+        if isinstance(workers, dict): # https://github.com/dask/distributed/pull/1659
+            names = {v['name'] for v in workers.values()}
+            job_ids = {name.split('-')[-1] for name in names}
+            self.stop_workers(job_ids)
 
     def __enter__(self):
         return self

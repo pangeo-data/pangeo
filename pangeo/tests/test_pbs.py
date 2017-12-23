@@ -10,12 +10,12 @@ from pangeo import PBSCluster
 
 
 def test_basic(loop):
-    with PBSCluster(walltime='00:02:00', threads_per_worker=2, memory='7e9',
+    with PBSCluster(walltime='00:02:00', threads_per_worker=2, memory='7GB',
                     interface='ib0', loop=loop) as cluster:
         with Client(cluster) as client:
             workers = cluster.start_workers(2)
             future = client.submit(lambda x: x + 1, 10)
-            assert future.result() == 11
+            assert future.result(60) == 11
             assert cluster.jobs
 
             info = client.scheduler_info()
@@ -38,7 +38,7 @@ def test_adaptive(loop):
         adapt = Adaptive(cluster.cluster.scheduler, cluster, startup_cost=5)
         with Client(cluster) as client:
             future = client.submit(lambda x: x + 1, 10)
-            assert future.result() == 11
+            assert future.result(60) == 11
 
             assert cluster.jobs
 
@@ -46,6 +46,11 @@ def test_adaptive(loop):
 
             start = time()
             while len(client.scheduler_info()['workers']) > 0:
+                sleep(0.100)
+                assert time() < start + 10
+
+            start = time()
+            while cluster.jobs:
                 sleep(0.100)
                 assert time() < start + 10
 
