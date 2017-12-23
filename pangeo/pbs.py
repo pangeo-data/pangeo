@@ -98,11 +98,11 @@ class PBSCluster(object):
             extra += ' --interface  %s ' % interface
         else:
             host = socket.gethostname()
-        if project is None:
-            project = os.getenv('PBS_ACCOUNT', None)
-        if project is None:
-            raise ValueError('Unable to determine PBS Account Name')
 
+        project = project or os.environ.get('PBS_ACCOUNT')
+        if not project:
+            raise ValueError("Must specify a project like `project='UCLB1234' "
+                             "or set PBS_ACCOUNT environment variable")
         self.cluster = LocalCluster(n_workers=0, ip=host, **kwargs)
         self.config = {'name': name,
                        'queue': queue,

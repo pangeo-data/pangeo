@@ -1,5 +1,7 @@
 from time import time, sleep
 
+import pytest
+
 from dask.distributed import Client
 from distributed.deploy.adaptive import Adaptive
 from distributed.utils_test import loop
@@ -45,3 +47,10 @@ def test_adaptive(loop):
             while len(client.scheduler_info()['workers']) > 0:
                 sleep(0.100)
                 assert time() < start + 10
+
+
+def test_errors(loop):
+    with pytest.raises(ValueError) as info:
+        PBSCluster()
+
+    assert 'project=' in str(info.value)
