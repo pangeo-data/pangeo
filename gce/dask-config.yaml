@@ -1,0 +1,10 @@
+worker:
+  pipPackages: gcsfs xarray
+  limits:
+    cpu: 6
+    memory: 7.5GiB
+  replicas: 2
+
+jupyter:
+  pipPackages: gcsfs xarray
+  replicas: 0
