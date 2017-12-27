@@ -1,22 +1,18 @@
 worker:
+  image: "daskdev/pangeo-worker"
   pipPackages: >-
       gcsfs
       git+https://github.com/pydata/xarray.git@master
       git+https://github.com/alimanfoo/zarr.git@master
-  condaPackages: >-
-      scipy
-      netcdf4
   limits:
     cpu: 2
     memory: 7.5GiB
-  replicas: 6
+  replicas: 3
 
 jupyter:
+  image: "daskdev/pangeo-notebook"
   pipPackages: >-
       gcsfs
       git+https://github.com/pydata/xarray.git@master
       git+https://github.com/alimanfoo/zarr.git@master
-  condaPackages: >-
-      scipy
-      netcdf4
   replicas: 0
