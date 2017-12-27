@@ -1,10 +1,22 @@
 worker:
-  pipPackages: gcsfs xarray
+  pipPackages: >-
+      gcsfs
+      git+https://github.com/pydata/xarray.git@master
+      git+https://github.com/alimanfoo/zarr.git@master
+  condaPackages: >-
+      scipy
+      netcdf4
   limits:
-    cpu: 6
+    cpu: 2
     memory: 7.5GiB
-  replicas: 2
+  replicas: 6
 
 jupyter:
-  pipPackages: gcsfs xarray
+  pipPackages: >-
+      gcsfs
+      git+https://github.com/pydata/xarray.git@master
+      git+https://github.com/alimanfoo/zarr.git@master
+  condaPackages: >-
+      scipy
+      netcdf4
   replicas: 0

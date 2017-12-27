@@ -6,8 +6,16 @@ singleuser:
     name: daskdev/dask-notebook
     tag: latest
   extraEnv:
-    EXTRA_PIP_PACKAGES: gcsfs xarray
+    EXTRA_PIP_PACKAGES: gcsfs git+https://github.com/pydata/xarray.git@master git+https://github.com/alimanfoo/zarr.git@master
+    EXTRA_CONDA_PACKAGES: scipy netcdf4
     DASK_SCHEDULER_ADDRESS: dask-scheduler:8786
+  pipPackages: >-
+      gcsfs
+      https://github.com/pydata/xarray.git@master
+      https://github.com/alimanfoo/zarr.git@master
+  condaPackages: >-
+      scipy
+      netcdf4
 
 # proxy:
 #   https:
