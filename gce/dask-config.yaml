@@ -7,7 +7,7 @@ worker:
   limits:
     cpu: 2
     memory: 7.5GiB
-  replicas: 3
+  replicas: 5
 
 jupyter:
   image: "daskdev/pangeo-notebook"
