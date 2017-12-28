@@ -50,8 +50,7 @@ class PBSCluster(object):
     This also works with adaptive clusters.  This automatically launches and
     kill workers based on load.
 
-    >>> from distributed.deploy import Adaptive
-    >>> adapt = Adaptive(cluster.cluster.scheduler, cluster)
+    >>> cluster.adapt()
     """
     def __init__(self,
                  name='dask',
@@ -113,13 +112,14 @@ class PBSCluster(object):
                        'threads_per_worker': threads_per_worker,
                        'processes': processes,
                        'walltime': walltime,
-                       'scheduler': self.cluster.scheduler.address,
+                       'scheduler': self.scheduler.address,
                        'resource_spec': resource_spec,
                        'base_path': dirname,
                        'memory': memory,
                        'extra': extra}
         self.jobs = dict()
         self.n = 0
+        self._adaptive = None
 
         logger.debug("Job script: \n %s" % self.job_script())
 
@@ -147,6 +147,10 @@ class PBSCluster(object):
                 self.jobs[self.n] = job
                 workers.append(self.n)
         return workers
+
+    @property
+    def scheduler(self):
+        return self.cluster.scheduler
 
     @property
     def scheduler_address(self):
@@ -218,3 +222,15 @@ class PBSCluster(object):
     def __exit__(self, type, value, traceback):
         self.stop_workers(self.jobs)
         self.cluster.__exit__(type, value, traceback)
+
+    def adapt(self):
+        """ Start up an Adaptive deployment if not already started
+
+        This makes the cluster request resources in accordance to current
+        demand on the scheduler """
+        from distributed.deploy import Adaptive
+        if self._adaptive:
+            return
+        else:
+            self._adaptive = Adaptive(self.scheduler, self, startup_cost=5,
+                                      key=lambda ws: ws.host)

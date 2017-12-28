@@ -35,8 +35,7 @@ def test_basic(loop):
 
 def test_adaptive(loop):
     with PBSCluster(walltime='00:02:00', loop=loop) as cluster:
-        adapt = Adaptive(cluster.cluster.scheduler, cluster, startup_cost=5,
-                         key=lambda ws: ws.host)
+        cluster.adapt()
         with Client(cluster) as client:
             future = client.submit(lambda x: x + 1, 10)
             assert future.result(60) == 11
