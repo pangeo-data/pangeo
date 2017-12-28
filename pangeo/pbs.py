@@ -16,13 +16,14 @@ template = """
 #PBS -N %(name)s
 #PBS -q %(queue)s
 #PBS -A %(project)s
-#PBS -l select=1:ncpus=%(threads_per_worker)d:mem=%(memory)s
+#PBS -l %(resource_spec)s
 #PBS -l walltime=%(walltime)s
 #PBS -j oe
 #PBS -m abe
 
 %(base_path)s/dask-worker %(scheduler)s \
     --nthreads %(threads_per_worker)d \
+    --nprocs %(processes)s \
     --memory-limit %(memory)s \
     --name %(name)s-%(n)d \
      %(extra)s
@@ -56,7 +57,9 @@ class PBSCluster(object):
                  name='dask',
                  queue='regular',
                  project=None,
+                 resource_spec='select=1:ncpus=36:mem=109GB',
                  threads_per_worker=4,
+                 processes=9,
                  memory='7GB',
                  walltime='00:30:00',
                  interface=None,
@@ -74,10 +77,15 @@ class PBSCluster(object):
             Accounting string associated with each worker job. Passed to
             `#PBS -A` option.
         threads_per_worker : int
-            Number of threads per worker.
+            Number of threads per process.
+        processes : int
+            Number of processes per node.
         memory : str
             Bytes of memory that the worker can use. This should be a string
             like "7GB" that can be interpretted both by PBS and Dask.
+        resource_spec : str
+            Request resources and specify job placement. Passed to `#PBS -l`
+            option.
         walltime : str
             Walltime for each worker job.
         interface : str
@@ -103,8 +111,10 @@ class PBSCluster(object):
                        'queue': queue,
                        'project': project,
                        'threads_per_worker': threads_per_worker,
+                       'processes': processes,
                        'walltime': walltime,
                        'scheduler': self.cluster.scheduler.address,
+                       'resource_spec': resource_spec,
                        'base_path': dirname,
                        'memory': memory,
                        'extra': extra}
@@ -199,7 +209,7 @@ class PBSCluster(object):
     def scale_down(self, workers):
         if isinstance(workers, dict): # https://github.com/dask/distributed/pull/1659
             names = {v['name'] for v in workers.values()}
-            job_ids = {name.split('-')[-1] for name in names}
+            job_ids = {name.split('-')[-2] for name in names}
             self.stop_workers(job_ids)
 
     def __enter__(self):

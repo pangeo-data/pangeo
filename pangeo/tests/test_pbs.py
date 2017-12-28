@@ -35,12 +35,18 @@ def test_basic(loop):
 
 def test_adaptive(loop):
     with PBSCluster(walltime='00:02:00', loop=loop) as cluster:
-        adapt = Adaptive(cluster.cluster.scheduler, cluster, startup_cost=5)
+        adapt = Adaptive(cluster.cluster.scheduler, cluster, startup_cost=5,
+                         key=lambda ws: ws.host)
         with Client(cluster) as client:
             future = client.submit(lambda x: x + 1, 10)
             assert future.result(60) == 11
 
             assert cluster.jobs
+
+            start = time()
+            while len(client.scheduler_info()['workers']) != cluster.config['processes']:
+                sleep(0.1)
+                assert time() < start + 10
 
             del future
 
