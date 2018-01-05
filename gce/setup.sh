@@ -15,7 +15,7 @@ helm repo add jupyterhub https://jupyterhub.github.io/helm-chart/
 helm repo update
 
 # Install JupyterHub and Dask on the cluster
-helm install jupyterhub/jupyterhub --version=v0.5 --name=jupyter --namespace=pangeo -f jupyter-config.yaml
+helm install jupyterhub/jupyterhub --version=v0.6.0-57c88a6 --name=jupyter --namespace=pangeo -f jupyter-config.yaml
 helm install dask/dask --name=dask --namespace=pangeo -f dask-config.yaml
 
 # Look for publised services.  Route domain name A records to these IPs.

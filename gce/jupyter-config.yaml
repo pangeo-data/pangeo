@@ -11,6 +11,7 @@ singleuser:
         git+https://github.com/pydata/xarray.git
         git+https://github.com/alimanfoo/zarr.git
     DASK_SCHEDULER_ADDRESS: dask-scheduler:8786
+    GRANT_SUDO: "yes"
 
 # proxy:
 #   https:
@@ -34,3 +35,10 @@ admin:
     - rabernat
     - yuvipanda
     - choldgraf
+
+rbac:
+  enabled: false
+
+hub:
+  extraConfig: |
+    c.KubeSpawner.singleuser_service_account = 'default'
