@@ -1,5 +1,5 @@
 # Start cluster on Google cloud
-gcloud container clusters create pangeo --num-nodes=3 --machine-type=n1-standard-2 --zone=us-central1-b  --cluster-version=1.8.4-gke.1
+gcloud container clusters create pangeo --num-nodes=10 --machine-type=n1-standard-2 --zone=us-central1-b  --cluster-version=1.8.4-gke.1
 gcloud container clusters get-credentials pangeo --zone us-central1-b --project pangeo-181919
 
 # Set up Kubernetes

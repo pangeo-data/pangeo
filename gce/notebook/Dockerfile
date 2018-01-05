@@ -14,4 +14,10 @@ RUN apt-get update \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
 RUN curl https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get | bash
+
+RUN pip install git+https://github.com/yuvipanda/nbserverproxy@websockets
+RUN jupyter serverextension enable --py nbserverproxy
+
+RUN pip install git+https://github.com/yuvipanda/daskernetes kubernetes
+
 USER $NB_USER

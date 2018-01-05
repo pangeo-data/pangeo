@@ -12,6 +12,17 @@ singleuser:
         git+https://github.com/alimanfoo/zarr.git
     DASK_SCHEDULER_ADDRESS: dask-scheduler:8786
     GRANT_SUDO: "yes"
+  uid: 0
+  gid: 0
+  storage:
+    extraVolumes:
+      - name: fuse
+        hostPath:
+          - path: /dev/fuse
+    extraVolumeMounts:
+      - name: fuse
+        mountPath: /dev/fuse
+
 
 # proxy:
 #   https:
@@ -21,11 +32,11 @@ singleuser:
 #       contactEmail: mrocklin@gmail.com
 
 auth:
-  type: github
-  github:
-    clientId: "2cb5e09d5733ff2e6ae3"
-    clientSecret: "SECRET"
-    callbackUrl: "http://pangeo.pydata.org/hub/oauth_callback"
+ type: github
+ github:
+   clientId: "2cb5e09d5733ff2e6ae3"
+   clientSecret: SECRET
+   callbackUrl: "http://pangeo.pydata.org/hub/oauth_callback"
 
 admin:
   access: true
@@ -42,3 +53,15 @@ rbac:
 hub:
   extraConfig: |
     c.KubeSpawner.singleuser_service_account = 'default'
+    c.Spawner.default_url = '/lab'
+
+    from kubernetes import client
+    def modify_pod_hook(spawner, pod):
+        pod.spec.containers[0].security_context = client.V1SecurityContext(
+            privileged=True,
+            capabilities=client.V1Capabilities(
+                add=['SYS_ADMIN']
+            )
+        )
+        return pod
+    c.KubeSpawner.modify_pod_hook = modify_pod_hook
