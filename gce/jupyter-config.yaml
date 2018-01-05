@@ -5,20 +5,18 @@ singleuser:
   image:
     name: daskdev/pangeo-notebook
     tag: latest
+  cmd: ['start-singleuser.sh']
   extraEnv:
     EXTRA_PIP_PACKAGES: >-
         gcsfs
         git+https://github.com/pydata/xarray.git
         git+https://github.com/alimanfoo/zarr.git
     DASK_SCHEDULER_ADDRESS: dask-scheduler:8786
-    GRANT_SUDO: "yes"
-  uid: 0
-  gid: 0
   storage:
     extraVolumes:
       - name: fuse
         hostPath:
-          - path: /dev/fuse
+          path: /dev/fuse
     extraVolumeMounts:
       - name: fuse
         mountPath: /dev/fuse
@@ -54,7 +52,6 @@ hub:
   extraConfig: |
     c.KubeSpawner.singleuser_service_account = 'default'
     c.Spawner.default_url = '/lab'
-
     from kubernetes import client
     def modify_pod_hook(spawner, pod):
         pod.spec.containers[0].security_context = client.V1SecurityContext(

@@ -15,9 +15,12 @@ RUN apt-get update \
   && rm -rf /var/lib/apt/lists/*
 RUN curl https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get | bash
 
-RUN pip install git+https://github.com/yuvipanda/nbserverproxy@websockets
+RUN echo "$NB_USER ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/notebook
+RUN sed -ri "s#Defaults\s+secure_path=\"([^\"]+)\"#Defaults secure_path=\"\1:$CONDA_DIR/bin\"#" /etc/sudoers
+
+USER $NB_USER
+
+RUN pip install git+https://github.com/jupyterhub/nbserverproxy
 RUN jupyter serverextension enable --py nbserverproxy
 
 RUN pip install git+https://github.com/yuvipanda/daskernetes kubernetes
-
-USER $NB_USER
