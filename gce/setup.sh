@@ -3,7 +3,7 @@ gcloud container clusters create pangeo --num-nodes=10 --machine-type=n1-standar
 gcloud container clusters get-credentials pangeo --zone us-central1-b --project pangeo-181919
 
 # Set up Kubernetes
-kubectl create clusterrolebinding cluster-admin-binding --clusterrole=cluster-admin --user=mrocklinWgmail.com
+kubectl create clusterrolebinding cluster-admin-binding --clusterrole=cluster-admin --user=mrocklin@gmail.com
 kubectl --namespace kube-system create sa tiller
 kubectl create clusterrolebinding tiller --clusterrole cluster-admin --serviceaccount=kube-system:tiller
 helm init --service-account tiller
@@ -15,7 +15,7 @@ helm repo add jupyterhub https://jupyterhub.github.io/helm-chart/
 helm repo update
 
 # Install JupyterHub and Dask on the cluster
-helm install jupyterhub/jupyterhub --version=v0.6.0-57c88a6 --name=jupyter --namespace=pangeo -f jupyter-config.yaml
+helm install jupyterhub/jupyterhub --version=v0.6.0-9701a90 --name=jupyter --namespace=pangeo -f jupyter-config.yaml
 helm install dask/dask --name=dask --namespace=pangeo -f dask-config.yaml
 
 # Look for publised services.  Route domain name A records to these IPs.
