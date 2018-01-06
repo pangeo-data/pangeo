@@ -16,7 +16,8 @@ RUN conda install --yes -c conda-forge \
     nomkl \
     fastparquet \
     zict \
-    blosc \
+    python-blosc \
+    numcodecs \
     cytoolz \
     ipywidgets \
     git \
@@ -32,7 +33,7 @@ RUN jupyter labextension install @jupyter-widgets/jupyterlab-manager@0.31
 
 RUN pip install click jedi kubernetes --upgrade
 
-RUN pip install git+https://github.com/yuvipanda/daskernetes \
+RUN pip install git+https://github.com/mrocklin/daskernetes@deploy \
                 git+https://github.com/zarr-developers/zarr \
                 git+https://github.com/jhamman/xarray@fix/zarr_set_attrs \
                 git+https://github.com/martindurant/gcsfs.git@fuse \

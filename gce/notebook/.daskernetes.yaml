@@ -1,7 +1,7 @@
 worker:
   spec:
     containers:
-    - args: [dask-worker, --nthreads, '2', --no-bokeh, --memory-limit, 8GB]
+    - args: [dask-worker, --nthreads, '2', --no-bokeh, --memory-limit, 8GB, --death-timeout, '60']
       image: daskdev/pangeo-worker:latest
       name: dask-worker
       security_context:

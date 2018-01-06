@@ -13,7 +13,8 @@ RUN conda install --yes -c conda-forge \
     nomkl \
     fastparquet \
     zict \
-    blosc \
+    python-blosc \
+    numcodecs \
     cytoolz \
     git \
     xarray \
@@ -26,7 +27,7 @@ RUN apt-get update \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
 
-RUN pip install pyasn1 click --upgrade
+RUN pip install pyasn1 click urllib3 --upgrade
 
 RUN pip install git+https://github.com/zarr-developers/zarr \
                 git+https://github.com/jhamman/xarray@fix/zarr_set_attrs \
