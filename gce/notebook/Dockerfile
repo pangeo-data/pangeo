@@ -4,10 +4,6 @@ RUN conda install --yes -c conda-forge \
     xarray \
     netcdf4 \
     scipy \
-    jedi \
-    dask \
-    distributed \
-    cloudpickle \
     && conda clean -tipsy
 
 RUN pip install git+https://github.com/martindurant/gcsfs.git@fuse fusepy click 
@@ -27,6 +23,8 @@ USER $NB_USER
 RUN pip install git+https://github.com/jupyterhub/nbserverproxy
 RUN jupyter serverextension enable --py nbserverproxy
 
-RUN pip install git+https://github.com/yuvipanda/daskernetes kubernetes
-RUN pip install git+https://github.com/zarr-developers/zarr
-RUN pip install git+https://github.com/jhamman/xarray@fix/zarr_set_attrs
+RUN pip install git+https://github.com/yuvipanda/daskernetes kubernetes \
+                git+https://github.com/zarr-developers/zarr \
+                git+https://github.com/jhamman/xarray@fix/zarr_set_attrs
+
+ RUN pip install jedi --upgrade
