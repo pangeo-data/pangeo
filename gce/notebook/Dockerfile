@@ -15,6 +15,7 @@ RUN conda install --yes -c conda-forge \
     git \
     ipywidgets \
     jupyterlab \
+    matplotlib \
     netcdf4 \
     nomkl \
     numba \
@@ -33,7 +34,7 @@ RUN jupyter labextension install @jupyter-widgets/jupyterlab-manager@0.31
 
 RUN pip install fusepy click jedi kubernetes --upgrade
 
-RUN pip install git+https://github.com/mrocklin/daskernetes@deploy \
+RUN pip install git+https://github.com/mrocklin/daskernetes@deploy  \
                 git+https://github.com/zarr-developers/zarr \
                 git+https://github.com/jhamman/xarray@fix/zarr_set_attrs \
                 git+https://github.com/martindurant/gcsfs.git@fuse \
