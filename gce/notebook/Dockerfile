@@ -36,8 +36,8 @@ RUN pip install git+https://github.com/mrocklin/daskernetes@deploy  \
                 git+https://github.com/zarr-developers/zarr \
                 git+https://github.com/jhamman/xarray@fix/zarr_set_attrs \
                 git+https://github.com/martindurant/gcsfs.git@fuse \
-                git+https://github.com/dask/distributed \
-                git+https://github.com/dask/dask \
+                git+https://github.com/dask/distributed@master \
+                git+https://github.com/dask/dask@master \
                 --no-cache-dir
 
 USER root
@@ -55,7 +55,7 @@ RUN echo "$NB_USER ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/notebook
 RUN sed -ri "s#Defaults\s+secure_path=\"([^\"]+)\"#Defaults secure_path=\"\1:$CONDA_DIR/bin\"#" /etc/sudoers
 USER $NB_USER
 
-RUN pip install git+https://github.com/jupyterhub/nbserverproxy@5daa89a5cdb8dd5ab8a42bb1f8c377d92204744d --no-cache-dir
+RUN pip install git+https://github.com/yuvipanda/nbserverproxy@websocket-binary --no-cache-dir
 RUN jupyter serverextension enable --py nbserverproxy --sys-prefix
 
 ENTRYPOINT ["tini", "--", "/usr/bin/prepare.sh"]
