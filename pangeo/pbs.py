@@ -7,8 +7,7 @@ import sys
 import toolz
 
 from distributed import LocalCluster
-from distributed.utils import (tmpfile, get_ip_interface, format_bytes,
-        parse_bytes, ignoring)
+from distributed.utils import tmpfile, get_ip_interface, ignoring
 
 template = """
 #!/bin/bash
@@ -19,7 +18,6 @@ template = """
 #PBS -l %(resource_spec)s
 #PBS -l walltime=%(walltime)s
 #PBS -j oe
-#PBS -m abe
 
 %(base_path)s/dask-worker %(scheduler)s \
     --nthreads %(threads_per_worker)d \
