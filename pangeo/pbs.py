@@ -23,6 +23,7 @@ template = """
     --nthreads %(threads_per_worker)d \
     --nprocs %(processes)s \
     --memory-limit %(memory)s \
+    --name %(name)s-%(n)d \
      %(extra)s
 """.lstrip()
 
