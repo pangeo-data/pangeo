@@ -1,10 +1,13 @@
+from contextlib import contextmanager
 import logging
 import os
 import socket
+import subprocess
 import sys
+import toolz
 
 from distributed import LocalCluster
-from distributed.utils import get_ip_interface
+from distributed.utils import tmpfile, get_ip_interface, ignoring
 from pangeo import JobQueue
 
 logger = logging.getLogger(__name__)
@@ -12,13 +15,13 @@ logger = logging.getLogger(__name__)
 dirname = os.path.dirname(sys.executable)
 
 
-class PBSCluster(JobQueue):
-    """ Launch Dask on a PBS cluster
+class SLURMCluster(object):
+    """ Launch Dask on a SLURM cluster
 
     Examples
     --------
-    >>> from pangeo import PBSCluster
-    >>> cluster = PBSCluster(project='...')
+    >>> from pangeo import SLURMCluster
+    >>> cluster = SLURMCluster(project='...')
     >>> cluster.start_workers(10)  # this may take a few seconds to launch
 
     >>> from dask.distributed import Client
@@ -31,27 +34,26 @@ class PBSCluster(JobQueue):
     """
     def __init__(self,
                  name='dask',
-                 queue='regular',
+                 queue='dav',
                  project=None,
-                 resource_spec='select=1:ncpus=36:mem=109GB',
                  threads_per_worker=4,
-                 processes=9,
+                 processes=8,
                  memory='7GB',
                  walltime='00:30:00',
                  interface=None,
                  extra='',
                  **kwargs):
-        """ Initialize a PBS Cluster
+        """ Initialize a SLURM Cluster
 
         Parameters
         ----------
         name : str
-            Name of worker jobs. Passed to `$PBS -N` option.
+            Name of worker jobs. Passed to `#SBATCH -J` option.
         queue : str
-            Destination queue for each worker job. Passed to `#PBS -q` option.
+            Destination queue for each worker job. Passed to `#SBATCH -p` option.
         project : str
             Accounting string associated with each worker job. Passed to
-            `#PBS -A` option.
+            `#SBATCH -A` option.
         threads_per_worker : int
             Number of threads per process.
         processes : int
@@ -59,9 +61,6 @@ class PBSCluster(JobQueue):
         memory : str
             Bytes of memory that the worker can use. This should be a string
             like "7GB" that can be interpretted both by PBS and Dask.
-        resource_spec : str
-            Request resources and specify job placement. Passed to `#PBS -l`
-            option.
         walltime : str
             Walltime for each worker job.
         interface : str
@@ -74,12 +73,13 @@ class PBSCluster(JobQueue):
         self._template = """
 #!/bin/bash
 
-#PBS -N %(name)s
-#PBS -q %(queue)s
-#PBS -A %(project)s
-#PBS -l %(resource_spec)s
-#PBS -l walltime=%(walltime)s
-#PBS -j oe
+#SBATCH -J %(name)s
+#SBATCH -n %(processes)d
+#SBATCH -p %(queue)s
+#SBATCH -A %(project)s
+#SBATCH -t %(walltime)s
+#SBATCH -e %(name)s.err
+#SBATCH -o %(name)s.out
 
 %(base_path)s/dask-worker %(scheduler)s \
     --nthreads %(threads_per_worker)d \
@@ -95,10 +95,10 @@ class PBSCluster(JobQueue):
         else:
             host = socket.gethostname()
 
-        project = project or os.environ.get('PBS_ACCOUNT')
+        project = project or os.environ.get('SLURM_ACCOUNT')
         if not project:
             raise ValueError("Must specify a project like `project='UCLB1234' "
-                             "or set PBS_ACCOUNT environment variable")
+                             "or set SLURM_ACCOUNT environment variable")
         self.cluster = LocalCluster(n_workers=0, ip=host, **kwargs)
         memory = memory.replace(' ', '')
         self.config = {'name': name,
@@ -108,14 +108,13 @@ class PBSCluster(JobQueue):
                        'processes': processes,
                        'walltime': walltime,
                        'scheduler': self.scheduler.address,
-                       'resource_spec': resource_spec,
                        'base_path': dirname,
                        'memory': memory,
                        'extra': extra}
         self.jobs = dict()
         self.n = 0
         self._adaptive = None
-        self._submitcmd = 'qsub'
-        self._cancelcmd = 'qdel'
+        self._submitcmd = 'sbatch'
+        self._cancelcmd = 'scancel'
 
         logger.debug("Job script: \n %s" % self.job_script())
