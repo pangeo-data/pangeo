@@ -68,5 +68,5 @@ hub:
 cull:
   enabled: true
   users: false
-  timeout: 600
+  timeout: 1200
   every: 120

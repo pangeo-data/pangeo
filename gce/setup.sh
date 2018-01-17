@@ -10,7 +10,6 @@ helm init --service-account tiller
 kubectl --namespace=kube-system patch deployment tiller-deploy --type=json --patch='[{"op": "add", "path": "/spec/template/spec/containers/0/command", "value": ["/tiller", "--listen=localhost:44134"]}]'
 
 # Get Helm repositories
-helm repo add dask https://dask.github.io/helm-chart/
 helm repo add jupyterhub https://jupyterhub.github.io/helm-chart/
 helm repo update
 

@@ -16,6 +16,7 @@ RUN conda install --yes -c conda-forge \
     ipywidgets \
     jupyterlab \
     matplotlib \
+    nb_conda_kernels \
     netcdf4 \
     nomkl \
     numba \
@@ -28,7 +29,7 @@ RUN conda install --yes -c conda-forge \
     zict \
     && conda clean -tipsy
 
-RUN jupyter labextension install @jupyter-widgets/jupyterlab-manager@0.31
+RUN jupyter labextension install @jupyter-widgets/jupyterlab-manager
 
 RUN pip install fusepy click jedi kubernetes --upgrade --no-cache-dir
 
@@ -55,7 +56,7 @@ RUN echo "$NB_USER ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/notebook
 RUN sed -ri "s#Defaults\s+secure_path=\"([^\"]+)\"#Defaults secure_path=\"\1:$CONDA_DIR/bin\"#" /etc/sudoers
 USER $NB_USER
 
-RUN pip install git+https://github.com/yuvipanda/nbserverproxy@websocket-binary --no-cache-dir
+RUN pip install git+https://github.com/jupyterhub/nbserverproxy --no-cache-dir
 RUN jupyter serverextension enable --py nbserverproxy --sys-prefix
 
 ENTRYPOINT ["tini", "--", "/usr/bin/prepare.sh"]
