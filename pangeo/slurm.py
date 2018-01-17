@@ -1,13 +1,10 @@
-from contextlib import contextmanager
 import logging
 import os
 import socket
-import subprocess
 import sys
-import toolz
 
 from distributed import LocalCluster
-from distributed.utils import tmpfile, get_ip_interface, ignoring
+from distributed.utils import get_ip_interface
 from pangeo import JobQueue
 
 logger = logging.getLogger(__name__)
@@ -15,7 +12,7 @@ logger = logging.getLogger(__name__)
 dirname = os.path.dirname(sys.executable)
 
 
-class SLURMCluster(object):
+class SLURMCluster(JobQueue):
     """ Launch Dask on a SLURM cluster
 
     Examples
@@ -106,8 +103,8 @@ class SLURMCluster(object):
                        'project': project,
                        'threads_per_worker': threads_per_worker,
                        'processes': processes,
-                       'walltime': walltime,
                        'scheduler': self.scheduler.address,
+                       'walltime': walltime,
                        'base_path': dirname,
                        'memory': memory,
                        'extra': extra}
