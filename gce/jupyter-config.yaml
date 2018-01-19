@@ -1,0 +1,72 @@
+proxy:
+  secretToken: SECRET
+
+singleuser:
+  image:
+    name: daskdev/pangeo-notebook
+    tag: latest
+  cmd: ['start-singleuser.sh']
+  extraEnv:
+    EXTRA_PIP_PACKAGES: >-
+    GCSFUSE_BUCKET: pangeo-data
+  storage:
+    extraVolumes:
+      - name: fuse
+        hostPath:
+          path: /dev/fuse
+    extraVolumeMounts:
+      - name: fuse
+        mountPath: /dev/fuse
+  cpu:
+    limit: 2
+    guarantee: 1
+  memory:
+    limit: 4G
+    guarantee: 2G
+
+
+# proxy:
+#   https:
+#     hosts:
+#       - pangeo.pydata.org
+#     letsencrypt:
+#       contactEmail: mrocklin@gmail.com
+
+auth:
+  type: github
+  github:
+    clientId: "2cb5e09d5733ff2e6ae3"
+    clientSecret: SECRET
+    callbackUrl: "http://pangeo.pydata.org/hub/oauth_callback"
+  admin:
+    access: true
+    users:
+      - mrocklin
+      - jhamman
+      - rabernat
+      - yuvipanda
+      - choldgraf
+
+rbac:
+  enabled: false
+
+hub:
+  extraConfig: |
+    c.KubeSpawner.singleuser_service_account = 'default'
+    c.Spawner.default_url = '/lab'
+    from kubernetes import client
+    def modify_pod_hook(spawner, pod):
+        pod.spec.containers[0].security_context = client.V1SecurityContext(
+            privileged=True,
+            capabilities=client.V1Capabilities(
+                add=['SYS_ADMIN']
+            )
+        )
+        return pod
+    c.KubeSpawner.modify_pod_hook = modify_pod_hook
+
+cull:
+  enabled: true
+  users: false
+  timeout: 1200
+  every: 120
