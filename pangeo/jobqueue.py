@@ -7,12 +7,15 @@ from distributed.utils import tmpfile, ignoring
 
 logger = logging.getLogger(__name__)
 
+
 class JobQueue(object):
-    """ Base class to launch Dask to a job queue, this class should not be used directly,
-    use inherited class appropriate for your queueing system eg PBScluster or SLURMcluster
+    """ Base class to launch Dask Distributed Clusters for job queues.
+
+    This class should not be used directly, use inherited class appropriate
+    for your queueing system (e.g. PBScluster or SLURMcluster)
     """
     def __init__(self):
-        logger.error("JobQueue class should not be called directly")
+        raise NotImplemented
 
     def job_script(self):
         self.n += 1
@@ -28,7 +31,6 @@ class JobQueue(object):
 
     def start_workers(self, n=1):
         """ Start workers and point them to our local scheduler """
-        outs = []
         workers = []
         for _ in range(n):
             with self.job_file() as fn:
@@ -101,7 +103,7 @@ class JobQueue(object):
         return self.start_workers(n - len(self.jobs))
 
     def scale_down(self, workers):
-        if isinstance(workers, dict): # https://github.com/dask/distributed/pull/1659
+        if isinstance(workers, dict):
             names = {v['name'] for v in workers.values()}
             job_ids = {name.split('-')[-2] for name in names}
             self.stop_workers(job_ids)

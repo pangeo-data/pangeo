@@ -47,7 +47,8 @@ class SLURMCluster(JobQueue):
         name : str
             Name of worker jobs. Passed to `#SBATCH -J` option.
         queue : str
-            Destination queue for each worker job. Passed to `#SBATCH -p` option.
+            Destination queue for each worker job.
+            Passed to `#SBATCH -p` option.
         project : str
             Accounting string associated with each worker job. Passed to
             `#SBATCH -A` option.

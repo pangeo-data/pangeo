@@ -4,7 +4,6 @@ from time import time, sleep
 import pytest
 
 from dask.distributed import Client
-from distributed.deploy.adaptive import Adaptive
 from distributed.utils_test import loop
 from pangeo import SLURMCluster
 
@@ -43,7 +42,8 @@ def test_adaptive(loop):
             assert cluster.jobs
 
             start = time()
-            while len(client.scheduler_info()['workers']) != cluster.config['processes']:
+            while len(client.scheduler_info()['workers']) \
+                  != cluster.config['processes']:
                 sleep(0.1)
                 assert time() < start + 10
 
@@ -63,6 +63,6 @@ def test_adaptive(loop):
 @pytest.mark.skipif('PBS_ACCOUNT' in os.environ, reason='PBS_ACCOUNT defined')
 def test_errors(loop):
     with pytest.raises(ValueError) as info:
-        PBSCluster()
+        SLURMCluster()
 
     assert 'project=' in str(info.value)
