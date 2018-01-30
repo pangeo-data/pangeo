@@ -4,54 +4,134 @@ from __future__ import print_function
 
 import os
 import sys
-import argparse
 import subprocess
 import re
 import time
 import logging
-import  socket
+import socket
+from contextlib import contextmanager
+
+import click
 from dask.distributed import Client
+from distributed.utils import tmpfile
+
+
 logger = logging.getLogger(__name__)
 
+WORKER_TEMPLATE = '''\
+    #!/bin/bash
+    #PBS -N dask-worker
+    #PBS -l select=1:ncpus=36:mpiprocs=9:ompthreads=4:mem=109GB
+    #PBS -j oe
 
-def parse_command_line(args, description):
+    # Setup Environment
+    module purge
+    source activate pangeo
 
-    parser = argparse.ArgumentParser(description=description,
-        formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+    # Setup dask worker
+    SCHEDULER=/glade/scratch/$USER/scheduler.json
+    mpirun --np 9 dask-mpi --nthreads 4 \
+        --memory-limit 12e9 \
+        --interface ib0 \
+        --no-scheduler --local-directory /glade/scratch/$USER \
+        --scheduler-file=$SCHEDULER
+    '''
 
-    parser.add_argument("--project", default=os.environ.get("PROJECT"),
-                        help="Specify a project id for the case (optional)."
-                        "Used for accounting when on a batch system."
-                        "The default is user-specified environment variable PROJECT")
+SCHEDULER_TEMPLATE = '''\
+    #!/bin/bash
+    #PBS -N dask-scheduler
+    #PBS -l select=1:ncpus=36:mpiprocs=9:ompthreads=4:mem=109GB
+    #PBS -j oe
 
-    parser.add_argument("--workers", default=0, type=int,
-                        help="Number of client nodes to launch")
+    # Writes ~/scheduler.json file in home directory
+    # Connect with
+    # >>> from dask.distributed import Client
+    # >>> client = Client(scheduler_file='~/scheduler.json')
 
-    parser.add_argument("--walltime", default="01:00:00",
-                        help="Set the wallclock limit for all nodes. ")
+    # Setup Environment
+    module purge
+    source activate pangeo
 
-    parser.add_argument("--queue", default="economy",
-                        help="Set the queue to use for submitted jobs. ")
+    SCHEDULER=/glade/scratch/$USER/scheduler.json
+    rm -f $SCHEDULER
+    mpirun --np 9 dask-mpi --nthreads 4 \
+        --memory-limit 12e9 \
+        --interface ib0 \
+        --local-directory /glade/scratch/$USER \
+        --scheduler-file=$SCHEDULER
+    '''
 
-    parser.add_argument("--workdir",
-                        default=os.path.join("/glade","scratch",os.environ.get("USER")),
-                        help="Set the working diirectory")
+USER = os.environ.get("USER")
+DEFAULT_WORKDIR = os.path.join("/glade", "scratch", USER)
+DEFAULT_NOTEBOOK_DIR = os.path.join("/glade", "p", "work", USER)
 
-    parser.add_argument("--notebookdir",
-                        default=os.path.join("/glade","p","work",os.environ.get("USER")),
-                        help="Set the notebook diirectory")
 
-    parser.add_argument("--notebook-port",type=int,
-                        default=8877,
-                        help="Set the notebook tcp/ip port")
+@click.command()
+@click.option("--project", default=os.environ.get("PROJECT"),
+              help="Specify a project id for the case (optional). Used for "
+                   "accounting when on a batch system. The default is "
+                   "user-specified environment variable PROJECT")
+@click.option("--nnodes", default=0, type=int,
+              help="Number of client nodes to launch")
+@click.option("--walltime", default="01:00:00",
+              help="Set the wallclock limit for all nodes.")
+@click.option("--queue", default="economy",
+              help="Set the queue to use for submitted jobs.")
+@click.option("--workdir", default=DEFAULT_WORKDIR,
+              help="Set the working diirectory")
+@click.option("--notebookdir", default=DEFAULT_NOTEBOOK_DIR,
+              help="Set the notebook diirectory")
+@click.option("--notebook-port", type=int, default=8877,
+              help="Set the notebook tcp/ip port")
+@click.option("--dashboard-port", type=int,
+              default=8878, help="Set the notebook tcp/ip port")
+def main(project, nnodes, walltime, queue, workdir, notebookdir, notebook_port,
+         dashboard_port):
 
-    parser.add_argument("--dashboard-port",type=int,
-                        default=8878,
-                        help="Set the notebook tcp/ip port")
+    logger = get_logger("DEBUG")
 
-    args = parser.parse_args(args)
+    jobids = []
+    with job_file(SCHEDULER_TEMPLATE) as scheduler_job_file:
+        scheduler_jobid = launch_job(scheduler_job_file, project, walltime,
+                                     queue)
+        jobids.append(scheduler_jobid)
 
-    return args.project, args.workers, args.walltime, args.notebookdir, args.workdir,args.notebook_port, args.dashboard_port, args.queue
+    with job_file(WORKER_TEMPLATE) as worker_job_file:
+        for i in range(nnodes):
+            jobids.append(launch_job(worker_job_file, project, walltime, queue))
+
+    wait = True
+    while wait:
+        time.sleep(5)
+        proc = subprocess.Popen("qstat {} ".
+                                format(scheduler_jobid),
+                                stdout=subprocess.PIPE,
+                                stderr=subprocess.PIPE,
+                                shell=True)
+
+        output, errput = proc.communicate()
+        output = output.decode('utf-8')
+        proc.wait()
+        if ' R ' in output:
+            logger.info("jobid {} started".format(scheduler_jobid))
+            wait = False
+        if ' Q ' in output:
+            logger.info("jobid {} in queue".format(scheduler_jobid))
+
+    setup_jlab(jlab_port=str(notebook_port),
+               dash_port=str(dashboard_port),
+               notebook_dir=notebookdir,
+               hostname="cheyenne.ucar.edu",
+               scheduler_file=os.path.join(workdir, "scheduler.json"))
+
+
+@contextmanager
+def job_file(lines):
+    """ Write job submission script to temporary file """
+    with tmpfile(extension='sh') as fn:
+        with open(fn, 'w') as f:
+            f.write(lines)
+        yield fn
 
 
 def launch_job(jobname, project, walltime, job_queue):
@@ -60,7 +140,7 @@ def launch_job(jobname, project, walltime, job_queue):
 
     proc = subprocess.Popen("qsub -A {} -l walltime={} -q {} {}".
                             format(project, walltime, job_queue, jobname),
-                            stdout=subprocess.PIPE,stderr=subprocess.PIPE,
+                            stdout=subprocess.PIPE, stderr=subprocess.PIPE,
                             shell=True)
 
     output, errput = proc.communicate()
@@ -96,7 +176,7 @@ def get_logger(log_level):
 
 
 def setup_jlab(scheduler_file, jlab_port, dash_port, notebook_dir,
-        hostname):
+               hostname):
 
     logger.info('getting client with scheduler file: %s' % scheduler_file)
     client = Client(scheduler_file=scheduler_file, timeout=30)
@@ -120,40 +200,5 @@ def setup_jlab(scheduler_file, jlab_port, dash_port, notebook_dir,
     print(f'\tDask dashboard: http://localhost:{dash_port}', flush=True)
 
 
-def _main_func(args, description):
-    project, workers, walltime, notebookdir, workdir, notebook_port, dashboard_port, job_queue = parse_command_line(args, description)
-
-    logger = get_logger("DEBUG")
-
-    jobids = []
-    jobids.append( launch_job("launch-dask-scheduler.sh", project, walltime, job_queue))
-
-    for i in range(workers):
-        jobids.append(launch_job("launch-dask-worker.sh", project, walltime, job_queue))
-
-    scheduler_jobid = jobids[0]
-    wait = True
-    while wait:
-        proc = subprocess.Popen("qstat {} ".
-                                format(scheduler_jobid),
-                                stdout=subprocess.PIPE,stderr=subprocess.PIPE,
-                                shell=True)
-
-        output, errput = proc.communicate()
-        output = output.decode('utf-8')
-        stat = proc.wait()
-        if ' R ' in output:
-            logger.info(" jobid {} started".format(scheduler_jobid))
-            time.sleep(5) # make sure scheduler file is written
-            wait = False
-        if ' Q ' in output:
-            logger.info(" jobid {} in queue".format(scheduler_jobid))
-            time.sleep(5)
-
-    setup_jlab(jlab_port=str(notebook_port), dash_port=str(dashboard_port), notebook_dir=notebookdir,
-               hostname="cheyenne.ucar.edu",
-               scheduler_file=os.path.join(workdir,"scheduler.json"))
-
-
 if __name__ == "__main__":
-    _main_func(sys.argv[1:], __doc__)
+    main()
