@@ -14,9 +14,16 @@
 module load anaconda
 source activate pangeo
 
+# memory-limit is per process
+# since we use six processes, we request approx 1/6 of system memory
+# 0.15 < 0.1666666
+
+LDIR=/local/$USER
+rm -rf $LDIR
+
 SCHEDULER=$HOME/scheduler.json
 mpirun --np 6 dask-mpi --nthreads 4 \
-    --memory-limit 12e9 \
+    --memory-limit 0.15 \
     --interface ib0 \
-    --no-scheduler --local-directory /local \
+    --no-scheduler --local-directory $LDIR \
     --scheduler-file=$SCHEDULER
