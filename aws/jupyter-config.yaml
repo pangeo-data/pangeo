@@ -1,0 +1,54 @@
+proxy:
+  secretToken: "e1e761517a8f4c025144e53be60ffc482e6321e26d8a184c2bab289948b8ba13"
+
+rbac:
+  enabled: false
+
+singleuser:
+  image:
+    name: daskdev/pangeo-notebook
+    tag: latest
+  cmd: ['start-singleuser.sh']
+  extraEnv:
+    EXTRA_PIP_PACKAGES: >-
+
+auth:
+  type: github
+  github:
+    clientId: "1fb1c4f13366624db097"
+    clientSecret: "SECRET"
+    callbackUrl: "https://pangeo-aws.cloudmaven.org/hub/oauth_callback"
+  admin:
+    access: true
+    users:
+      - mrocklin
+      - jhamman
+      - rabernat
+      - yuvipanda
+      - choldgraf
+      - robfatland
+      - aaarendt
+      - atlehr
+      - lsetiawan
+
+hub:
+  extraConfig: |
+    c.KubeSpawner.singleuser_service_account = 'default'
+    c.Spawner.default_url = '/lab'
+    from kubernetes import client
+    def modify_pod_hook(spawner, pod):
+        pod.spec.containers[0].security_context = client.V1SecurityContext(
+            privileged=True,
+            capabilities=client.V1Capabilities(
+                add=['SYS_ADMIN']
+            )
+        )
+        return pod
+    c.KubeSpawner.modify_pod_hook = modify_pod_hook
+
+cull:
+  enabled: true
+  users: false
+  timeout: 1200
+  every: 120
+
