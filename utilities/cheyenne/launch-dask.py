@@ -10,13 +10,12 @@ import time
 import logging
 import socket
 from contextlib import contextmanager
+from textwrap import dedent
 
 import click
 from dask.distributed import Client
 from distributed.utils import tmpfile
 
-
-logger = logging.getLogger(__name__)
 
 WORKER_TEMPLATE = '''\
     #!/bin/bash
@@ -85,20 +84,29 @@ DEFAULT_NOTEBOOK_DIR = os.path.join("/glade", "p", "work", USER)
               help="Set the notebook tcp/ip port")
 @click.option("--dashboard-port", type=int,
               default=8878, help="Set the notebook tcp/ip port")
+@click.option("--scheduler-file", default=None,
+              help='Filename to an existing JSON file including encoded '
+                   'scheduler information.')
 def main(project, nnodes, walltime, queue, workdir, notebookdir, notebook_port,
-         dashboard_port):
+         dashboard_port, scheduler_file):
 
-    logger = get_logger("DEBUG")
+    if project is None:
+        raise ValueError('project number was not specified')
 
     jobids = []
-    with job_file(SCHEDULER_TEMPLATE) as scheduler_job_file:
-        scheduler_jobid = launch_job(scheduler_job_file, project, walltime,
-                                     queue)
-        jobids.append(scheduler_jobid)
+    if scheduler_file is None:
+        with job_file(SCHEDULER_TEMPLATE) as scheduler_job_file:
+            scheduler_jobid = launch_job(scheduler_job_file, project, walltime,
+                                         queue)
+            jobids.append(scheduler_jobid)
 
     with job_file(WORKER_TEMPLATE) as worker_job_file:
         for i in range(nnodes):
-            jobids.append(launch_job(worker_job_file, project, walltime, queue))
+            jobids.append(launch_job(worker_job_file, project, walltime,
+                                     queue))
+
+    if scheduler_file is not None:
+        return
 
     wait = True
     while wait:
@@ -118,11 +126,8 @@ def main(project, nnodes, walltime, queue, workdir, notebookdir, notebook_port,
         if ' Q ' in output:
             logger.info("jobid {} in queue".format(scheduler_jobid))
 
-    setup_jlab(jlab_port=str(notebook_port),
-               dash_port=str(dashboard_port),
-               notebook_dir=notebookdir,
-               hostname="cheyenne.ucar.edu",
-               scheduler_file=os.path.join(workdir, "scheduler.json"))
+    setup_jlab(os.path.join(workdir, "scheduler.json"),
+               notebook_port, dashboard_port, notebookdir, "cheyenne.ucar.edu")
 
 
 @contextmanager
@@ -130,7 +135,7 @@ def job_file(lines):
     """ Write job submission script to temporary file """
     with tmpfile(extension='sh') as fn:
         with open(fn, 'w') as f:
-            f.write(lines)
+            f.write(dedent(lines))
         yield fn
 
 
@@ -138,9 +143,13 @@ def launch_job(jobname, project, walltime, job_queue):
 
     logger.info("submit job {}".format(jobname))
 
-    proc = subprocess.Popen("qsub -A {} -l walltime={} -q {} {}".
-                            format(project, walltime, job_queue, jobname),
-                            stdout=subprocess.PIPE, stderr=subprocess.PIPE,
+    cmd = "qsub -A {} -l walltime={} -q {} {}".format(project, walltime,
+                                                      job_queue, jobname)
+
+    logger.debug(cmd)
+
+    proc = subprocess.Popen(cmd, stdout=subprocess.PIPE,
+                            stderr=subprocess.PIPE,
                             shell=True)
 
     output, errput = proc.communicate()
@@ -155,8 +164,8 @@ def launch_job(jobname, project, walltime, job_queue):
 
 
 def start_jlab(dask_scheduler, host=None, port='8888', notebook_dir=''):
-    cmd = ['jupyter', 'lab', '--ip', host,
-           '--no-browser', '--port', port,
+    cmd = ['jupyter', 'lab', '--ip', str(host),
+           '--no-browser', '--port', str(port),
            '--notebook-dir', notebook_dir]
 
     proc = subprocess.Popen(cmd)
@@ -178,8 +187,10 @@ def get_logger(log_level):
 def setup_jlab(scheduler_file, jlab_port, dash_port, notebook_dir,
                hostname):
 
+    assert os.path.isfile(scheduler_file)
+
     logger.info('getting client with scheduler file: %s' % scheduler_file)
-    client = Client(scheduler_file=scheduler_file, timeout=30)
+    client = Client(scheduler_file=scheduler_file, timeout=60)
     logger.debug('Client: %s' % client)
 
     logger.debug('Getting hostname where scheduler is running')
@@ -191,14 +202,15 @@ def setup_jlab(scheduler_file, jlab_port, dash_port, notebook_dir,
                             notebook_dir=notebook_dir)
     logger.debug('Done.')
 
-    user = os.environ['USER']
     print('Run the following command from your local machine:')
     print(f'ssh -N -L {jlab_port}:{host}:{jlab_port} '
-          f'-L {dash_port}:{host}:8787 {user}@{hostname}')
+          f'-L {dash_port}:{host}:8787 {USER}@{hostname}')
     print('Then open the following URLs:')
     print(f'\tJupyter lab: http://localhost:{jlab_port}')
     print(f'\tDask dashboard: http://localhost:{dash_port}', flush=True)
 
+
+logger = get_logger("DEBUG")
 
 if __name__ == "__main__":
     main()
