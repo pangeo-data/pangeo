@@ -1,5 +1,5 @@
 proxy:
-  secretToken: "e1e761517a8f4c025144e53be60ffc482e6321e26d8a184c2bab289948b8ba13"
+  secretToken: "SECRET"
 
 rbac:
   enabled: false
