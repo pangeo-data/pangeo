@@ -19,48 +19,65 @@ utilities, respectively.
 
 .. code:: bash
 
-    module load python all-python-libs
-    export DAV_CORES=8  # request 8 cores
-    execgy start-notebook  # run the start-notebook command on geyser
+    execgy  # or execca
 
 after a brief minute, you should see something like:
 
 ::
 
-    Requesting 8 core(s) to geyser queue,
-    to submit start-notebook the usage is to be charged into UCLB0022
-    running
+    mem =
+    amount of memory is default
+    setting x forwarding for cheyenne6.ucar.edu:16.0
+    Submitting interactive job to slurm using account uclb0022 ...
 
-    bsub -Is -q geyser -n8 -PUCLB0022 -W24:00 "start-notebook"
+    submit  cmd is
+    salloc  -C geyser   -N 1  -n 1 -t 6:00:00 -p dav --account=uclb0022 srun --pty --export=HOME=/glade/u/home/username,PATH=/bin:/usr/bin,TERM=xterm-256color,SHELL=/bin/bash,DISPLAY=cheyenne6.ucar.edu:16.0,XAUTHORITY=/glade2/scratch2/username/.xauth.43241  /bin/bash -c "export DISPLAY=cheyenne6.ucar.edu:16.0; exec /bin/bash "
+    salloc: Pending job allocation 147402
+    salloc: job 147402 queued and waiting for resources
+    salloc: job 147402 has been allocated resources
+    salloc: Granted job allocation 147402
+    salloc: Waiting for resource configuration
+    salloc: Nodes geyser01 are ready for job
 
-    please wait..
+Now you can load the python and jupyter modules and run the ``start-notebook`` command:
 
-    Job <552080> is submitted to queue <geyser>.
-    <<Waiting for dispatch ...>>
-    Logging this session in /glade/scratch/username/.jupyter-notebook/log.20171128T001004
+.. code:: bash
 
+    module load python pyzmq/16.0.2 tornado/4.4.3
+    module load jupyter
+    start-notebook  # run the start-notebook command on geyser
 
-    Run the following command on your desktop or laptop:
-    ssh -N -l username -L 8888:geyser08-ib:8888 yellowstone.ucar.edu
+after a brief moment, you should see something like:
 
-    Log in with your token (there will be no prompt). Then
-    open a browser and go to http://localhost:8888.
+::
+
+    ssh -N -l username -L 8888:geyser08-ib:8888 geyser08.ucar.edu
 
 From your local machine, run the ssh command and open the url to the notebook
 server (http://localhost:8888).
-
-.. note::
-
-   Geyser and Caldra are shared systems. If you are going to use multiple cores,
-   it is a best practice to request multiple cores on the system via the
-   ``DAV_CORES`` environment variable.
 
 Finally, from within the notebook you'll be using, use the following snippit to
 start a ``LocalCluster`` and and connect dask to it.
 
 .. code:: python
 
-    from distributed import LocalCluster, Client
+    from pangeo import SlurmCluster
+    from distributed import Client
 
-    cluster = LocalCluster(processes=True, n_workers=4, threads_per_worker=4)
+    cluster = SlurmCluster(project='UCLB0022')
     client = Client(cluster)
+
+The SlurmCluster controls the dask workers and you can either manually scale up/down
+the cluster using the ``scale_up`` / ``scale_down`` methods:
+
+.. code:: python
+
+    cluster.scale_up(4)
+    # ...
+    cluster.scale_down(4)
+
+Or you can instruct the cluster to adapt to the computational load:
+
+.. code:: python
+
+    cluster.adapt()
