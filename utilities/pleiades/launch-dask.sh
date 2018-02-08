@@ -10,11 +10,9 @@ s=`qsub launch-dask-scheduler.sh`
 sjob=${s}
 echo ${s}
 
-workers=${1:-4}
+workers=${1:-8}
 echo "Launching dask workers (${workers})"
-for i in $(seq 1 ${workers}); do
-    qsub launch-dask-worker.sh
-done
+qsub -J 1-$workers launch-dask-worker.sh
 
 qstat ${sjob}
 
