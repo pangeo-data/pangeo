@@ -155,46 +155,55 @@ distributed cluster that can be run on Cheyenne.</p>
 <p>Once you have Conda and Jupyter configured. Load a few python modules and start
 a Jupyter session on Geyser or Caldara using the <code class="docutils literal"><span class="pre">execgy</span></code> or <code class="docutils literal"><span class="pre">`execca</span></code>
 utilities, respectively.</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>module load python all-python-libs
-<span class="nb">export</span> <span class="nv">DAV_CORES</span><span class="o">=</span><span class="m">8</span>  <span class="c1"># request 8 cores</span>
-execgy start-notebook  <span class="c1"># run the start-notebook command on geyser</span>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>execgy  <span class="c1"># or execca</span>
 </pre></div>
 </div>
 <p>after a brief minute, you should see something like:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Requesting</span> <span class="mi">8</span> <span class="n">core</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="n">to</span> <span class="n">geyser</span> <span class="n">queue</span><span class="p">,</span>
-<span class="n">to</span> <span class="n">submit</span> <span class="n">start</span><span class="o">-</span><span class="n">notebook</span> <span class="n">the</span> <span class="n">usage</span> <span class="ow">is</span> <span class="n">to</span> <span class="n">be</span> <span class="n">charged</span> <span class="n">into</span> <span class="n">UCLB0022</span>
-<span class="n">running</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">mem</span> <span class="o">=</span>
+<span class="n">amount</span> <span class="n">of</span> <span class="n">memory</span> <span class="ow">is</span> <span class="n">default</span>
+<span class="n">setting</span> <span class="n">x</span> <span class="n">forwarding</span> <span class="k">for</span> <span class="n">cheyenne6</span><span class="o">.</span><span class="n">ucar</span><span class="o">.</span><span class="n">edu</span><span class="p">:</span><span class="mf">16.0</span>
+<span class="n">Submitting</span> <span class="n">interactive</span> <span class="n">job</span> <span class="n">to</span> <span class="n">slurm</span> <span class="n">using</span> <span class="n">account</span> <span class="n">uclb0022</span> <span class="o">...</span>
 
-<span class="n">bsub</span> <span class="o">-</span><span class="n">Is</span> <span class="o">-</span><span class="n">q</span> <span class="n">geyser</span> <span class="o">-</span><span class="n">n8</span> <span class="o">-</span><span class="n">PUCLB0022</span> <span class="o">-</span><span class="n">W24</span><span class="p">:</span><span class="mi">00</span> <span class="s2">&quot;start-notebook&quot;</span>
-
-<span class="n">please</span> <span class="n">wait</span><span class="o">..</span>
-
-<span class="n">Job</span> <span class="o">&lt;</span><span class="mi">552080</span><span class="o">&gt;</span> <span class="ow">is</span> <span class="n">submitted</span> <span class="n">to</span> <span class="n">queue</span> <span class="o">&lt;</span><span class="n">geyser</span><span class="o">&gt;.</span>
-<span class="o">&lt;&lt;</span><span class="n">Waiting</span> <span class="k">for</span> <span class="n">dispatch</span> <span class="o">...&gt;&gt;</span>
-<span class="n">Logging</span> <span class="n">this</span> <span class="n">session</span> <span class="ow">in</span> <span class="o">/</span><span class="n">glade</span><span class="o">/</span><span class="n">scratch</span><span class="o">/</span><span class="n">username</span><span class="o">/.</span><span class="n">jupyter</span><span class="o">-</span><span class="n">notebook</span><span class="o">/</span><span class="n">log</span><span class="o">.</span><span class="mi">20171128</span><span class="n">T001004</span>
-
-
-<span class="n">Run</span> <span class="n">the</span> <span class="n">following</span> <span class="n">command</span> <span class="n">on</span> <span class="n">your</span> <span class="n">desktop</span> <span class="ow">or</span> <span class="n">laptop</span><span class="p">:</span>
-<span class="n">ssh</span> <span class="o">-</span><span class="n">N</span> <span class="o">-</span><span class="n">l</span> <span class="n">username</span> <span class="o">-</span><span class="n">L</span> <span class="mi">8888</span><span class="p">:</span><span class="n">geyser08</span><span class="o">-</span><span class="n">ib</span><span class="p">:</span><span class="mi">8888</span> <span class="n">yellowstone</span><span class="o">.</span><span class="n">ucar</span><span class="o">.</span><span class="n">edu</span>
-
-<span class="n">Log</span> <span class="ow">in</span> <span class="k">with</span> <span class="n">your</span> <span class="n">token</span> <span class="p">(</span><span class="n">there</span> <span class="n">will</span> <span class="n">be</span> <span class="n">no</span> <span class="n">prompt</span><span class="p">)</span><span class="o">.</span> <span class="n">Then</span>
-<span class="nb">open</span> <span class="n">a</span> <span class="n">browser</span> <span class="ow">and</span> <span class="n">go</span> <span class="n">to</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mf">8888.</span>
+<span class="n">submit</span>  <span class="n">cmd</span> <span class="ow">is</span>
+<span class="n">salloc</span>  <span class="o">-</span><span class="n">C</span> <span class="n">geyser</span>   <span class="o">-</span><span class="n">N</span> <span class="mi">1</span>  <span class="o">-</span><span class="n">n</span> <span class="mi">1</span> <span class="o">-</span><span class="n">t</span> <span class="mi">6</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span> <span class="o">-</span><span class="n">p</span> <span class="n">dav</span> <span class="o">--</span><span class="n">account</span><span class="o">=</span><span class="n">uclb0022</span> <span class="n">srun</span> <span class="o">--</span><span class="n">pty</span> <span class="o">--</span><span class="n">export</span><span class="o">=</span><span class="n">HOME</span><span class="o">=/</span><span class="n">glade</span><span class="o">/</span><span class="n">u</span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">username</span><span class="p">,</span><span class="n">PATH</span><span class="o">=/</span><span class="nb">bin</span><span class="p">:</span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="p">,</span><span class="n">TERM</span><span class="o">=</span><span class="n">xterm</span><span class="o">-</span><span class="mi">256</span><span class="n">color</span><span class="p">,</span><span class="n">SHELL</span><span class="o">=/</span><span class="nb">bin</span><span class="o">/</span><span class="n">bash</span><span class="p">,</span><span class="n">DISPLAY</span><span class="o">=</span><span class="n">cheyenne6</span><span class="o">.</span><span class="n">ucar</span><span class="o">.</span><span class="n">edu</span><span class="p">:</span><span class="mf">16.0</span><span class="p">,</span><span class="n">XAUTHORITY</span><span class="o">=/</span><span class="n">glade2</span><span class="o">/</span><span class="n">scratch2</span><span class="o">/</span><span class="n">username</span><span class="o">/.</span><span class="n">xauth</span><span class="o">.</span><span class="mi">43241</span>  <span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">bash</span> <span class="o">-</span><span class="n">c</span> <span class="s2">&quot;export DISPLAY=cheyenne6.ucar.edu:16.0; exec /bin/bash &quot;</span>
+<span class="n">salloc</span><span class="p">:</span> <span class="n">Pending</span> <span class="n">job</span> <span class="n">allocation</span> <span class="mi">147402</span>
+<span class="n">salloc</span><span class="p">:</span> <span class="n">job</span> <span class="mi">147402</span> <span class="n">queued</span> <span class="ow">and</span> <span class="n">waiting</span> <span class="k">for</span> <span class="n">resources</span>
+<span class="n">salloc</span><span class="p">:</span> <span class="n">job</span> <span class="mi">147402</span> <span class="n">has</span> <span class="n">been</span> <span class="n">allocated</span> <span class="n">resources</span>
+<span class="n">salloc</span><span class="p">:</span> <span class="n">Granted</span> <span class="n">job</span> <span class="n">allocation</span> <span class="mi">147402</span>
+<span class="n">salloc</span><span class="p">:</span> <span class="n">Waiting</span> <span class="k">for</span> <span class="n">resource</span> <span class="n">configuration</span>
+<span class="n">salloc</span><span class="p">:</span> <span class="n">Nodes</span> <span class="n">geyser01</span> <span class="n">are</span> <span class="n">ready</span> <span class="k">for</span> <span class="n">job</span>
+</pre></div>
+</div>
+<p>Now you can load the python and jupyter modules and run the <code class="docutils literal"><span class="pre">start-notebook</span></code> command:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>module load python pyzmq/16.0.2 tornado/4.4.3
+module load jupyter
+start-notebook  <span class="c1"># run the start-notebook command on geyser</span>
+</pre></div>
+</div>
+<p>after a brief moment, you should see something like:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">ssh</span> <span class="o">-</span><span class="n">N</span> <span class="o">-</span><span class="n">l</span> <span class="n">username</span> <span class="o">-</span><span class="n">L</span> <span class="mi">8888</span><span class="p">:</span><span class="n">geyser08</span><span class="o">-</span><span class="n">ib</span><span class="p">:</span><span class="mi">8888</span> <span class="n">geyser08</span><span class="o">.</span><span class="n">ucar</span><span class="o">.</span><span class="n">edu</span>
 </pre></div>
 </div>
 <p>From your local machine, run the ssh command and open the url to the notebook
 server (<a class="reference external" href="http://localhost:8888">http://localhost:8888</a>).</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Geyser and Caldra are shared systems. If you are going to use multiple cores,
-it is a best practice to request multiple cores on the system via the
-<code class="docutils literal"><span class="pre">DAV_CORES</span></code> environment variable.</p>
-</div>
 <p>Finally, from within the notebook you’ll be using, use the following snippit to
 start a <code class="docutils literal"><span class="pre">LocalCluster</span></code> and and connect dask to it.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">distributed</span> <span class="kn">import</span> <span class="n">LocalCluster</span><span class="p">,</span> <span class="n">Client</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pangeo</span> <span class="kn">import</span> <span class="n">SlurmCluster</span>
+<span class="kn">from</span> <span class="nn">distributed</span> <span class="kn">import</span> <span class="n">Client</span>
 
-<span class="n">cluster</span> <span class="o">=</span> <span class="n">LocalCluster</span><span class="p">(</span><span class="n">processes</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">n_workers</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">threads_per_worker</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">cluster</span> <span class="o">=</span> <span class="n">SlurmCluster</span><span class="p">(</span><span class="n">project</span><span class="o">=</span><span class="s1">&#39;UCLB0022&#39;</span><span class="p">)</span>
 <span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="n">cluster</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The SlurmCluster controls the dask workers and you can either manually scale up/down
+the cluster using the <code class="docutils literal"><span class="pre">scale_up</span></code> / <code class="docutils literal"><span class="pre">scale_down</span></code> methods:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">cluster</span><span class="o">.</span><span class="n">scale_up</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="c1"># ...</span>
+<span class="n">cluster</span><span class="o">.</span><span class="n">scale_down</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Or you can instruct the cluster to adapt to the computational load:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">cluster</span><span class="o">.</span><span class="n">adapt</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
