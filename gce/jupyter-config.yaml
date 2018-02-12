@@ -4,7 +4,7 @@ proxy:
 singleuser:
   image:
     name: daskdev/pangeo-notebook
-    tag: latest
+    tag: 2018-02-11.4
   cmd: ['start-singleuser.sh']
   extraEnv:
     EXTRA_PIP_PACKAGES: >-
@@ -68,5 +68,5 @@ hub:
 cull:
   enabled: true
   users: false
-  timeout: 1200
-  every: 120
+  timeout: 3600
+  every: 600
