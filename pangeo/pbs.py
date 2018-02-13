@@ -39,6 +39,7 @@ class PBSCluster(JobQueue):
                  memory='7GB',
                  walltime='00:30:00',
                  interface=None,
+                 death_timeout=60,
                  extra='',
                  **kwargs):
         """ Initialize a PBS Cluster
@@ -66,6 +67,8 @@ class PBSCluster(JobQueue):
             Walltime for each worker job.
         interface : str
             Network interface like 'eth0' or 'ib0'.
+        death_timeout : float
+            Seconds to wait for a scheduler before closing workers
         extra : str
             Additional arguments to pass to `dask-worker`
         kwargs : dict
@@ -86,6 +89,7 @@ class PBSCluster(JobQueue):
     --nprocs %(processes)s \
     --memory-limit %(memory)s \
     --name %(name)s-%(n)d \
+    --death-timeout %(death_timeout)s \
      %(extra)s
 """.lstrip()
 
@@ -111,6 +115,7 @@ class PBSCluster(JobQueue):
                        'resource_spec': resource_spec,
                        'base_path': dirname,
                        'memory': memory,
+                       'death_timeout': death_timeout,
                        'extra': extra}
         self.jobs = dict()
         self.n = 0
