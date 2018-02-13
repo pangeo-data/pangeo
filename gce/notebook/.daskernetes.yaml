@@ -17,11 +17,11 @@ worker:
         - name: GCSFUSE_BUCKET
           value: pangeo-data
       resources:
-        - limits:
-            cpu: "3"
-            memory: 8G
-        - requests:
-            cpu: "2"
-            memory: 8G
+        limits:
+          cpu: "3"
+          memory: 8G
+        requests:
+          cpu: "2"
+          memory: 8G
     restart_policy: Never
 
