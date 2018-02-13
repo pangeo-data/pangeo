@@ -79,6 +79,10 @@ class SLURMCluster(JobQueue):
 #SBATCH -e %(name)s.err
 #SBATCH -o %(name)s.out
 
+export LANG="en_US.utf8"
+export LANGUAGE="en_US.utf8"
+export LC_ALL="en_US.utf8"
+
 %(base_path)s/dask-worker %(scheduler)s \
     --nthreads %(threads_per_worker)d \
     --nprocs %(processes)s \
