@@ -33,7 +33,10 @@ RUN pip install pyasn1 click urllib3 --upgrade
 RUN pip install git+https://github.com/zarr-developers/zarr \
                 git+https://github.com/pydata/xarray \
                 git+https://github.com/dask/gcsfs \
-                fusepy
+                fusepy \
+                git+https://github.com/dask/distributed.git@bc436e242884a1d4cf3a85ce6d5d378b5663122d \
+                --no-cache-dir \
+                --no-dependencies 
 
 USER root
 COPY prepare.sh /usr/bin/prepare.sh
