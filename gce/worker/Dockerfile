@@ -5,21 +5,22 @@ RUN wget -O /usr/local/bin/dumb-init https://github.com/Yelp/dumb-init/releases/
 RUN chmod +x /usr/local/bin/dumb-init
 
 RUN conda install --yes -c conda-forge \
-    dask \
-    distributed \
+    cytoolz \
+    dask=0.17.0 \
+    distributed=1.21.0 \
+    fastparquet \
+    git \
+    netcdf4 \
+    nomkl \
+    numba \
+    numcodecs \
     numpy \
     pandas \
-    numba \
-    nomkl \
-    fastparquet \
-    zict \
     python-blosc \
-    numcodecs \
-    cytoolz \
-    git \
-    xarray \
-    netcdf4 \
+    scikit-image \
     scipy \
+    xarray \
+    zict \
     && conda clean -tipsy
 
 RUN apt-get update \
@@ -30,9 +31,12 @@ RUN apt-get update \
 RUN pip install pyasn1 click urllib3 --upgrade
 
 RUN pip install git+https://github.com/zarr-developers/zarr \
-                git+https://github.com/jhamman/xarray@fix/zarr_set_attrs \
-                git+https://github.com/martindurant/gcsfs.git@fuse \
-                fusepy
+                git+https://github.com/pydata/xarray \
+                git+https://github.com/dask/gcsfs \
+                fusepy \
+                git+https://github.com/dask/distributed.git@bc436e242884a1d4cf3a85ce6d5d378b5663122d \
+                --no-cache-dir \
+                --no-dependencies 
 
 USER root
 COPY prepare.sh /usr/bin/prepare.sh
