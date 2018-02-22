@@ -36,9 +36,12 @@ RUN pip install git+https://github.com/zarr-developers/zarr \
                 fusepy \
                 --no-cache-dir
 
-RUN pip install git+https://github.com/dask/distributed.git@bc436e242884a1d4cf3a85ce6d5d378b5663122d \
+RUN pip install distributed==1.21.1 \
+                dask==0.17.1 \
                 --no-dependencies \ 
                 --no-cache-dir
+
+ENV OMP_NUM_THREADS=1
 
 USER root
 COPY prepare.sh /usr/bin/prepare.sh

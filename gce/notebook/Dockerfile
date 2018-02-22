@@ -33,13 +33,14 @@ RUN jupyter labextension install @jupyter-widgets/jupyterlab-manager @jupyterlab
 
 RUN pip install fusepy click jedi kubernetes --upgrade --no-cache-dir
 
-RUN pip install git+https://github.com/dask/daskernetes \
+RUN pip install daskernetes==0.1.3 \
                 git+https://github.com/zarr-developers/zarr \
                 git+https://github.com/pydata/xarray \
                 git+https://github.com/dask/gcsfs \
                 --no-cache-dir
 
-RUN pip install git+https://github.com/dask/distributed.git@bc436e242884a1d4cf3a85ce6d5d378b5663122d \
+RUN pip install distributed==1.21.1 \
+                dask==0.17.1 \
                 --no-dependencies \ 
                 --no-cache-dir
 
@@ -55,6 +56,7 @@ COPY worker-template.yaml /pre-home
 COPY examples/ /pre-home/examples/
 ENV DASKERNETES_WORKER_TEMPLATE_PATH /home/$NB_USER/worker-template.yaml
 ENV DASKERNETES_DIAGNOSTICS_LINK {JUPYTERHUB_SERVICE_PREFIX}proxy/{port}/status
+ENV DASKERNETES_WORKER_NAME dask-{JUPYTERHUB_USER}-{uuid}
 RUN mkdir /gcs && chown -R $NB_USER /gcs
 RUN mkdir /opt/app
 
