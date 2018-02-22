@@ -3,7 +3,7 @@ spec:
   restartPolicy: Never
   containers:
   - args: [dask-worker, --nthreads, '2', --no-bokeh, --memory-limit, 7GB, --death-timeout, '60']
-    image: daskdev/pangeo-worker:2018-02-14
+    image: daskdev/pangeo-worker:2018-02-22
     name: dask-worker
     securityContext:
       capabilities:
