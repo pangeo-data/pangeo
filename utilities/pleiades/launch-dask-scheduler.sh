@@ -21,6 +21,7 @@ source activate pangeo
 SCHEDULER=/nobackup/$USER/dask/scheduler.json
 rm -f $SCHEDULER
 mpirun --np 5 dask-mpi --nthreads 4 \
+    --memory-limit 0.2 \
     --interface ib0 \
     --local-directory /nobackup/$USER/dask \
     --scheduler-file=$SCHEDULER
