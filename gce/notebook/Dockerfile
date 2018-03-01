@@ -36,7 +36,7 @@ RUN pip install fusepy click jedi kubernetes --upgrade --no-cache-dir
 RUN pip install daskernetes==0.1.3 \
                 git+https://github.com/zarr-developers/zarr \
                 git+https://github.com/pydata/xarray \
-                git+https://github.com/dask/gcsfs \
+                gcsfs==0.0.5 \
                 --no-cache-dir
 
 RUN pip install distributed==1.21.1 \
