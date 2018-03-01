@@ -1,3 +1,5 @@
+.. _use-cases:
+
 Pangeo Use Cases
 ================
 

@@ -1,0 +1,4 @@
+.. _quickstart:
+
+Pangeo Quickstart
+=================
