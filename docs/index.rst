@@ -11,10 +11,10 @@ Welcome to Pangeo
 The project has three main goals:
 
 #. Foster collaboration around the open source scientific python ecosystem for
-   ocean / atmosphere / land / climate science
-#. Build out the stack with domain-specific packages
-#. Scale out the stack to handle petabyte-scale datasets on HPC and cloud
-   platforms
+   ocean / atmosphere / land / climate science.
+#. Support the development with domain-specific geoscience packages.
+#. Improve scalability of these tools to to handle petabyte-scale datasets on
+   HPC and cloud platforms.
 
 There are different entry points to our documentation for different types of
 users:
@@ -23,7 +23,8 @@ users:
   read about the :ref:`packages`.
 - **Developers / system administrators**: learn about the :ref:`architecture`
   or read the :ref:`setup-guides`.
-- **General interest**: learn :ref:`about` and see the :ref:`collaborators`.
+- **General interest**: learn :ref:`about`, see the :ref:`collaborators`, or
+  read the :ref:`FAQ`.
 
 .. toctree::
    :maxdepth: 1
