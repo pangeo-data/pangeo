@@ -26,6 +26,7 @@ rbac:
 
 hub:
   extraConfig: |
+    c.JupyterHub.log_level = 'DEBUG'
     c.KubeSpawner.singleuser_service_account = 'default'
     c.Spawner.default_url = '/lab'
     from kubernetes import client
@@ -38,6 +39,26 @@ hub:
         )
         return pod
     c.KubeSpawner.modify_pod_hook = modify_pod_hook
+    c.JupyterHub.logo_file = '/usr/local/share/jupyter/hub/static/custom/images/logo.png'
+    c.JupyterHub.template_paths = ['/usr/local/share/jupyter/hub/custom_templates/',
+                                   '/usr/local/share/jupyter/hub/templates/']
+
+  extraVolumes:
+    - name: custom-templates
+      gitRepo:
+        repository: "https://github.com/pangeo-data/pangeo-custom-jupyterhub-templates.git"
+        revision: "5dbc3dca690a05ce499d9829e181d2c0bc107fb4"
+  extraVolumeMounts:
+    - mountPath: /usr/local/share/jupyter/hub/custom_templates
+      name: custom-templates
+      subPath: "pangeo-custom-jupyterhub-templates/templates"
+    - mountPath: /usr/local/share/jupyter/hub/static/custom
+      name: custom-templates
+      subPath: "pangeo-custom-jupyterhub-templates/assets"
+
+  prePuller:
+    hook:
+      enabled: false
 
 cull:
   enabled: true
