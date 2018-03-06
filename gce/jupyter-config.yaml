@@ -42,7 +42,9 @@ hub:
     c.JupyterHub.logo_file = '/usr/local/share/jupyter/hub/static/custom/images/logo.png'
     c.JupyterHub.template_paths = ['/usr/local/share/jupyter/hub/custom_templates/',
                                    '/usr/local/share/jupyter/hub/templates/']
-
+  image:
+    name: jupyterhub/k8s-hub
+    tag: v0.6
   extraVolumes:
     - name: custom-templates
       gitRepo:
@@ -55,10 +57,6 @@ hub:
     - mountPath: /usr/local/share/jupyter/hub/static/custom
       name: custom-templates
       subPath: "pangeo-custom-jupyterhub-templates/assets"
-
-  prePuller:
-    hook:
-      enabled: false
 
 cull:
   enabled: true
