@@ -16,8 +16,8 @@ can mean changing the way you think about software and your relationship to it.
 Below is a list of steps you can take to participate in the Pangeo project and
 take advantage of the tools we are developing.
 
-✅ Learn About the Open Source Ecosystem
-----------------------------------------
+Learn About the Open Source Ecosystem
+-------------------------------------
 
 If you are new to open source scientific software, you might want to learn a
 bit about the history and context of this community.
@@ -42,8 +42,8 @@ by Mikeal Rogers.
 
 .. _GitHub: https://github.org/
 
-✅ Learn Open Source Python Data Science Tools
-----------------------------------------------
+Learn Open Source Python Data Science Tools
+-------------------------------------------
 
 There are lots of great free and open resources to learn how to use scientific
 python for geoscience.
@@ -52,21 +52,35 @@ Here is a list of a few of our favorites.
 There are also some excellent books, including
 
 
-✅ Try Out a Pangeo Deployment
-------------------------------
+Try Out a Pangeo Deployment
+---------------------------
+
+There are several places where you can access a Pangeo deployment, from which
+you can analyze large datasets in a scalable, reproducible way.
+
+.. toctree::
+   :maxdepth: 2
+
+   deployments
+
+If none of these meets your needs, you can create your own deployment by
+following the :ref:`setup-guides`.
+
+Give Feedback
+-------------
 
 
-✅ Give Feedback
-----------------
+Contribute a Scientific Use Case
+--------------------------------
 
 
-✅ Contribute a Use Case
-------------------------
+Contribute Data
+---------------
 
 
-✅ Contribute Data
-------------------
+Become an Open Source Contributor
+---------------------------------
 
 
-✅ Develop Software
--------------------
+Develop New Software
+--------------------
