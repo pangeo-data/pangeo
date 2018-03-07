@@ -29,7 +29,14 @@ RUN conda install --yes -c conda-forge \
     zict \
     && conda clean -tipsy
 
-RUN jupyter labextension install @jupyter-widgets/jupyterlab-manager @jupyterlab/hub-extension
+# https://github.com/pangeo-data/pangeo/issues/145#issuecomment-371215319
+RUN conda install -c ioam/label/dev holoviews geoviews
+RUN conda install -c bokeh/label/dev bokeh
+
+RUN jupyter labextension install \
+    @jupyter-widgets/jupyterlab-manager \
+    @jupyterlab/hub-extension \
+    @pyviz/jupyterlab_holoviews
 
 RUN pip install fusepy click jedi kubernetes --upgrade --no-cache-dir
 
@@ -41,7 +48,7 @@ RUN pip install daskernetes==0.1.3 \
 
 RUN pip install distributed==1.21.1 \
                 dask==0.17.1 \
-                --no-dependencies \ 
+                --no-dependencies \
                 --no-cache-dir
 
 RUN pip install git+https://github.com/jupyterhub/nbserverproxy --no-cache-dir
