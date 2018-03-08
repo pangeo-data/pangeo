@@ -1,10 +1,7 @@
-proxy:
-  secretToken: SECRET
-
 singleuser:
   image:
     name: daskdev/pangeo-notebook
-    tag: latest
+    tag: 2018-03-01
   cmd: ['start-singleuser.sh']
   extraEnv:
     EXTRA_PIP_PACKAGES: >-
@@ -24,29 +21,6 @@ singleuser:
     limit: 4G
     guarantee: 2G
 
-
-# proxy:
-#   https:
-#     hosts:
-#       - pangeo.pydata.org
-#     letsencrypt:
-#       contactEmail: mrocklin@gmail.com
-
-auth:
-  type: github
-  github:
-    clientId: "2cb5e09d5733ff2e6ae3"
-    clientSecret: SECRET
-    callbackUrl: "http://pangeo.pydata.org/hub/oauth_callback"
-  admin:
-    access: true
-    users:
-      - mrocklin
-      - jhamman
-      - rabernat
-      - yuvipanda
-      - choldgraf
-
 rbac:
   enabled: false
 
@@ -64,9 +38,27 @@ hub:
         )
         return pod
     c.KubeSpawner.modify_pod_hook = modify_pod_hook
+    c.JupyterHub.logo_file = '/usr/local/share/jupyter/hub/static/custom/images/logo.png'
+    c.JupyterHub.template_paths = ['/usr/local/share/jupyter/hub/custom_templates/',
+                                   '/usr/local/share/jupyter/hub/templates/']
+  image:
+    name: jupyterhub/k8s-hub
+    tag: v0.6
+  extraVolumes:
+    - name: custom-templates
+      gitRepo:
+        repository: "https://github.com/pangeo-data/pangeo-custom-jupyterhub-templates.git"
+        revision: "b09721bb1a1248dc115730d3c8a791600eae257e"
+  extraVolumeMounts:
+    - mountPath: /usr/local/share/jupyter/hub/custom_templates
+      name: custom-templates
+      subPath: "pangeo-custom-jupyterhub-templates/templates"
+    - mountPath: /usr/local/share/jupyter/hub/static/custom
+      name: custom-templates
+      subPath: "pangeo-custom-jupyterhub-templates/assets"
 
 cull:
   enabled: true
   users: false
-  timeout: 1200
-  every: 120
+  timeout: 3600
+  every: 600
