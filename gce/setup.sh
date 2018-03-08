@@ -1,9 +1,10 @@
 # Start cluster on Google cloud
-gcloud container clusters create pangeo --num-nodes=10 --machine-type=n1-standard-2 --zone=us-central1-b  --cluster-version=1.8.4-gke.1
+gcloud container clusters create pangeo --num-nodes=10 --machine-type=n1-standard-2 --zone=us-central1-b  --cluster-version=1.9.3-gke.0
+
 gcloud container clusters get-credentials pangeo --zone us-central1-b --project pangeo-181919
 
 # Set up Kubernetes
-kubectl create clusterrolebinding cluster-admin-binding --clusterrole=cluster-admin --user=mrocklin@gmail.com
+kubectl create clusterrolebinding cluster-admin-binding --clusterrole=cluster-admin --user=jhamman1@gmail.com
 kubectl --namespace kube-system create sa tiller
 kubectl create clusterrolebinding tiller --clusterrole cluster-admin --serviceaccount=kube-system:tiller
 helm init --service-account tiller
