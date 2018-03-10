@@ -7,10 +7,10 @@ RUN apt-get update \
   && rm -rf /var/lib/apt/lists/*
 USER $NB_USER
 
-RUN conda install --yes -c conda-forge \
+RUN conda install --yes \
     cytoolz \
-    dask=0.17.0 \
-    distributed=1.21.0 \
+    dask=0.17.1 \
+    distributed=1.21.2 \
     fastparquet \
     ipywidgets \
     jupyterlab \
@@ -25,26 +25,28 @@ RUN conda install --yes -c conda-forge \
     python-blosc \
     scipy \
     scikit-image \
+    tornado=4.5 \
     xarray \
     zict \
     && conda clean -tipsy
 
-RUN jupyter labextension install @jupyter-widgets/jupyterlab-manager @jupyterlab/hub-extension
-
 RUN pip install fusepy click jedi kubernetes --upgrade --no-cache-dir
 
 RUN pip install daskernetes==0.1.3 \
+                distributed==1.21.3 \
+                git+https://github.com/dask/dask-kubernetes@5ba08f714ef38e585e9f2038b6be530c578b96dd \
                 git+https://github.com/zarr-developers/zarr \
                 git+https://github.com/pydata/xarray \
-                gcsfs==0.0.5 \
-                --no-cache-dir
+                git+https://github.com/ioam/holoviews \
+                git+https://github.com/dask/gcsfs \
+                git+https://github.com/jupyterhub/nbserverproxy \
+                --no-cache-dir \
+                --upgrade
 
-RUN pip install distributed==1.21.1 \
-                dask==0.17.1 \
-                --no-dependencies \ 
-                --no-cache-dir
+RUN jupyter labextension install @jupyter-widgets/jupyterlab-manager \
+                                 @jupyterlab/hub-extension \
+                                 @pyviz/jupyterlab_holoviews
 
-RUN pip install git+https://github.com/jupyterhub/nbserverproxy --no-cache-dir
 RUN jupyter serverextension enable --py nbserverproxy --sys-prefix
 
 USER root
@@ -54,9 +56,12 @@ RUN mkdir /home/$NB_USER/examples && chown -R $NB_USER /home/$NB_USER/examples
 RUN mkdir /pre-home && mkdir /pre-home/examples && chown -R $NB_USER /pre-home
 COPY worker-template.yaml /pre-home
 COPY examples/ /pre-home/examples/
-ENV DASKERNETES_WORKER_TEMPLATE_PATH /home/$NB_USER/worker-template.yaml
 ENV DASKERNETES_DIAGNOSTICS_LINK {JUPYTERHUB_SERVICE_PREFIX}proxy/{port}/status
+ENV DASKERNETES_WORKER_TEMPLATE_PATH /home/$NB_USER/worker-template.yaml
 ENV DASKERNETES_WORKER_NAME dask-{JUPYTERHUB_USER}-{uuid}
+ENV DASK_DIAGNOSTICS_LINK {JUPYTERHUB_SERVICE_PREFIX}proxy/{port}/status
+ENV DASK_KUBERNETES_WORKER_TEMPLATE_PATH /home/$NB_USER/worker-template.yaml
+ENV DASK_KUBERNETES_WORKER_NAME dask-{JUPYTERHUB_USER}-{uuid}
 RUN mkdir /gcs && chown -R $NB_USER /gcs
 RUN mkdir /opt/app
 
