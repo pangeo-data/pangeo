@@ -10,10 +10,10 @@ USER $NB_USER
 RUN conda install --yes \
     cytoolz \
     dask=0.17.1 \
-    distributed=1.21.2 \
     fastparquet \
     ipywidgets \
     jupyterlab \
+    lz4 \
     matplotlib \
     nb_conda_kernels \
     netcdf4 \
