@@ -24,7 +24,7 @@ the date like `YYYY-MM-DD` as a tag.
 ```bash
 cd gce/worker
 # edit Dockerfile
-docker build -t daskdev/pangeo-worker:TAG .
+docker build -t pangeo/notebook:TAG .
 ```
 
 You will probably have to do this a few times.
@@ -37,7 +37,7 @@ and `worker-template.yaml` file as necessary.  In particular you should update
 the `image:` tag to match the tag of the worker that you have just built.
 
 ```bash
-docker build -t daskdev/pangeo-notebook:TAG .
+docker build -t pangeo/notebook:TAG .
 ```
 
 ### Push to dockerhub
@@ -45,8 +45,8 @@ docker build -t daskdev/pangeo-notebook:TAG .
 You can push both images to docker hub:
 
 ```bash
-docker push daskdev/pangeo-worker:TAG
-docker push daskdev/pangeo-notebook:TAG
+docker push pangeo/worker:TAG
+docker push pangeo/notebook:TAG
 ```
 
 
@@ -56,7 +56,7 @@ Update JupyterHub config file
 The JupyterHub deployment is defined in the `gce/jupyter-config.yaml` file.
 You might want to take this opportunity to add new administrators, define
 memory and CPU resources limits for the Jupyter servers, etc..
-You will also need to update the tag of the `daskdev/pangeo-notebook`
+You will also need to update the tag of the `pangeo/notebook`
 docker image to the TAG that you created above (likely the date `YYYY-MM-DD`).
 
 You will also notice that two entries have been marked `SECRET`.

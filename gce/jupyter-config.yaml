@@ -1,7 +1,7 @@
 singleuser:
   image:
-    name: daskdev/pangeo-notebook
-    tag: 2018-03-01
+    name: pangeo/notebook
+    tag: 2018-03-11
   cmd: ['start-singleuser.sh']
   extraEnv:
     EXTRA_PIP_PACKAGES: >-
@@ -20,6 +20,8 @@ singleuser:
   memory:
     limit: 4G
     guarantee: 2G
+  cloudMetadata:
+    enabled: true
 
 rbac:
   enabled: false
@@ -60,5 +62,5 @@ hub:
 cull:
   enabled: true
   users: false
-  timeout: 3600
+  timeout: 1200
   every: 600

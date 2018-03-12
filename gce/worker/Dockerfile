@@ -7,9 +7,9 @@ RUN chmod +x /usr/local/bin/dumb-init
 RUN conda install --yes -c conda-forge \
     cytoolz \
     dask=0.17.0 \
-    distributed=1.21.0 \
     fastparquet \
     git \
+    lz4 \
     netcdf4 \
     nomkl \
     numba \
@@ -32,14 +32,16 @@ RUN pip install pyasn1 click urllib3 --upgrade
 
 RUN pip install git+https://github.com/zarr-developers/zarr \
                 git+https://github.com/pydata/xarray \
-                gcsfs==0.0.5 \
+                git+https://github.com/dask/gcsfs \
                 fusepy \
-                --no-cache-dir
+                --no-cache-dir \
+                --upgrade
 
-RUN pip install distributed==1.21.1 \
+RUN pip install distributed==1.21.3 \
                 dask==0.17.1 \
                 --no-dependencies \ 
-                --no-cache-dir
+                --no-cache-dir\ 
+                --upgrade
 
 ENV OMP_NUM_THREADS=1
 
