@@ -32,7 +32,6 @@ default=$HOME
 notebook=${2:-$default}
 echo "Setting up Jupyter Lab, Notebook dir: ${notebook}"
 
-module load anaconda
-source activate pangeo
+source mod_env_setup.sh
 ./setup-jlab.py --log_level=DEBUG --jlab_port=8877 --dash_port=8878 \
     --notebook_dir $notebook --scheduler_file $HOME/scheduler.json
