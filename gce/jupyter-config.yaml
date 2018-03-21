@@ -24,7 +24,7 @@ singleuser:
     enabled: true
 
 rbac:
-  enabled: false
+  enabled: true
 
 hub:
   extraConfig: |
