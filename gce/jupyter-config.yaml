@@ -28,7 +28,7 @@ rbac:
 
 hub:
   extraConfig: |
-    c.KubeSpawner.singleuser_service_account = 'default'
+    c.KubeSpawner.singleuser_service_account = 'daskkubernetes'
     c.Spawner.default_url = '/lab'
     from kubernetes import client
     def modify_pod_hook(spawner, pod):

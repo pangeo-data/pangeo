@@ -1,5 +1,5 @@
 # Start cluster on Google cloud
-gcloud container clusters create pangeo --num-nodes=10 --machine-type=n1-standard-2 --zone=us-central1-b  --cluster-version=1.9.3-gke.0
+gcloud container clusters create pangeo --no-enable-legacy-authorization --num-nodes=10 --machine-type=n1-standard-2 --zone=us-central1-b  --cluster-version=1.9.3-gke.0
 
 gcloud container clusters get-credentials pangeo --zone us-central1-b --project pangeo-181919
 
@@ -16,6 +16,10 @@ helm repo update
 
 # Install JupyterHub and Dask on the cluster
 helm install jupyterhub/jupyterhub --version=v0.6.0-9701a90 --name=jupyter --namespace=pangeo -f jupyter-config.yaml -f secret-config.yaml
+
+# create the kubernetesdask service account and role bindings
+echo "Installing service account for dask-kubernetes."
+kubectl create -f dask-kubernetes-serviceaccount.yaml
 
 # Look for publised services.  Route domain name A records to these IPs.
 kubectl get services --namespace pangeo
