@@ -11,8 +11,7 @@
 # >>> client = Client(scheduler_file='~/scheduler.json')
 
 # Setup Environment
-module load anaconda
-source activate pangeo
+source mod_env_setup.sh
 
 LDIR=/local/$USER
 rm -rf $LDIR
