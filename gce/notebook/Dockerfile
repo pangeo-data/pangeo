@@ -7,12 +7,15 @@ RUN apt-get update \
   && rm -rf /var/lib/apt/lists/*
 USER $NB_USER
 
-RUN conda install --yes \
+RUN conda install --yes -c ioam -c bokeh/channel/dev \
+    bokeh=0.12.15dev1 \
     cytoolz \
+    datashader \
     dask=0.17.1 \
     fastparquet \
     ipywidgets \
     jupyterlab \
+    holoviews \
     lz4 \
     matplotlib \
     nb_conda_kernels \
@@ -33,11 +36,11 @@ RUN conda install --yes \
 RUN pip install fusepy click jedi kubernetes --upgrade --no-cache-dir
 
 RUN pip install daskernetes==0.1.3 \
-                distributed==1.21.3 \
+                git+https://github.com/dask/distributed@9ade11e41b5c63a5977230a01ad5b2ef15517238 \
                 git+https://github.com/dask/dask-kubernetes@5ba08f714ef38e585e9f2038b6be530c578b96dd \
                 git+https://github.com/zarr-developers/zarr \
                 git+https://github.com/pydata/xarray \
-                git+https://github.com/ioam/holoviews \
+                git+https://github.com/ioam/holoviews@range_optimizations \
                 git+https://github.com/dask/gcsfs \
                 git+https://github.com/jupyterhub/nbserverproxy \
                 --no-cache-dir \
