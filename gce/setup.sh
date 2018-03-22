@@ -17,8 +17,8 @@ helm repo update
 # Install JupyterHub and Dask on the cluster
 helm install jupyterhub/jupyterhub --version=v0.6.0-9701a90 --name=jupyter --namespace=pangeo -f jupyter-config.yaml -f secret-config.yaml
 
-# create the kubernetesdask service account and role bindings
-echo "Installing service account for dask-kubernetes."
+# create the daskkubernetes service account and role bindings
+echo "Installing service account for daskkubernetes."
 kubectl create -f dask-kubernetes-serviceaccount.yaml
 
 # Look for publised services.  Route domain name A records to these IPs.
