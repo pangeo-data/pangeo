@@ -1,7 +1,7 @@
 singleuser:
   image:
     name: pangeo/notebook
-    tag: 2018-03-12
+    tag: 2018-03-22
   cmd: ['start-singleuser.sh']
   extraEnv:
     EXTRA_PIP_PACKAGES: >-
