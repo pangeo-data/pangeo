@@ -11,6 +11,16 @@ Chart dependencies:
 
 First off you need [helm](https://github.com/kubernetes/helm) if you don't have it already.
 
+You also need to add the dependent chart repos.
+
+```shell
+# Add repos
+helm repo add jupyterhub https://jupyterhub.github.io/helm-chart/
+
+# Update repos
+helm repo update
+```
+
 You then need to create a `values.yaml` file with your own config options in. As this chart is a collection of dependant charts you will need to refer to their configuration documentation for details. See the [values.yaml](pangeo/values.yaml) file for more information.
 
 ```shell
