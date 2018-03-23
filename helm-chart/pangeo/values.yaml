@@ -1,8 +1,7 @@
 # Pangeo configuration values
 # --------------------
 # The following configuration options are specifically for the custom Pangeo components.
-# Some configuration options may be duplicated in the dependencies, rbac for example.
-# These MUST still be configured in the dependencies too.
+# Some values will be inherited into the dependent chart configs. See requirements.yaml for info.
 
 # Create and use roles and service accounts on an RBAC enabled cluster.
 rbac:
