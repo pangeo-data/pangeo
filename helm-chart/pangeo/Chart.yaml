@@ -1,0 +1,7 @@
+apiVersion: v1
+name: pangeo
+version: 0.1.0
+description: An extention of jupyterhub with extra Pangeo resources
+maintainers:
+  - name: Jacob Tomlinson (Met Office)
+    email: jacob.tomlinson@informaticslab.co.uk

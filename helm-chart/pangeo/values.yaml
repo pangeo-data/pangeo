@@ -1,0 +1,20 @@
+# Pangeo configuration values
+# --------------------
+# The following configuration options are specifically for the custom Pangeo components.
+# Some configuration options may be duplicated in the dependencies, rbac for example.
+# These MUST still be configured in the dependencies too.
+
+# Create and use roles and service accounts on an RBAC enabled cluster.
+rbac:
+  enabled: true
+
+
+# Dependency configuration values
+# -------------------------------
+# To configure dependencies you must create a key with the name of the dependency
+# and then configure as per the dependent chart's values.yaml. Don't forget to indent!
+
+jupyterhub: {}
+  # Helm config for jupyterhub goes here
+  # See https://github.com/jupyterhub/zero-to-jupyterhub-k8s/blob/master/jupyterhub/values.yaml
+
