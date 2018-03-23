@@ -23,9 +23,6 @@ singleuser:
   cloudMetadata:
     enabled: true
 
-rbac:
-  enabled: true
-
 hub:
   extraConfig: |
     c.KubeSpawner.singleuser_service_account = 'daskkubernetes'
