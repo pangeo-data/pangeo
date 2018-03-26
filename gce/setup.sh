@@ -11,11 +11,11 @@ helm init --service-account tiller
 kubectl --namespace=kube-system patch deployment tiller-deploy --type=json --patch='[{"op": "add", "path": "/spec/template/spec/containers/0/command", "value": ["/tiller", "--listen=localhost:44134"]}]'
 
 # Get Helm repositories
-helm repo add jupyterhub https://jupyterhub.github.io/helm-chart/
+helm repo add pangeo https://pangeo-data.github.io/helm-chart/
 helm repo update
 
 # Install JupyterHub and Dask on the cluster
-helm install ../helm-chart/pangeo --name=jupyter --namespace=pangeo -f jupyter-config.yaml -f secret-config.yaml
+helm install pangeo/pangeo --name=jupyter --namespace=pangeo -f jupyter-config.yaml -f secret-config.yaml
 
 # Look for publised services.  Route domain name A records to these IPs.
 kubectl get services --namespace pangeo
