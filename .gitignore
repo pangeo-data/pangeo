@@ -110,7 +110,3 @@ scheduler.json
 
 # log files
 *.out
-
-# Helm stuff
-helm-chart/*/charts
-requirements.lock
