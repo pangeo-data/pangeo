@@ -1,8 +1,5 @@
 jupyterhub:
   singleuser:
-    image:
-      name: pangeo/notebook
-      tag: 2018-03-12
     cmd: ['start-singleuser.sh']
     extraEnv:
       EXTRA_PIP_PACKAGES: >-
@@ -15,19 +12,11 @@ jupyterhub:
       extraVolumeMounts:
         - name: fuse
           mountPath: /dev/fuse
-    cpu:
-      limit: 2
-      guarantee: 1
-    memory:
-      limit: 4G
-      guarantee: 2G
     cloudMetadata:
       enabled: true
 
   hub:
     extraConfig: |
-      c.KubeSpawner.singleuser_service_account = 'daskkubernetes'
-      c.Spawner.default_url = '/lab'
       from kubernetes import client
       def modify_pod_hook(spawner, pod):
           pod.spec.containers[0].security_context = client.V1SecurityContext(
