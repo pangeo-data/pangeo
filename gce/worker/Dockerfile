@@ -33,7 +33,7 @@ RUN pip install pyasn1 click urllib3 --upgrade
 
 RUN pip install git+https://github.com/zarr-developers/zarr \
                 git+https://github.com/pydata/xarray \
-                git+https://github.com/dask/gcsfs@2fbdc27e838a531ada080886ae778cb370ae48b8\
+                git+https://github.com/dask/gcsfs@f99177b31c44fcc404619b2876a77cdcda955a75 \
                 fusepy \
                 --no-cache-dir \
                 --upgrade
