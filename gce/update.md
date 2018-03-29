@@ -92,7 +92,7 @@ Finally, use helm to *upgrade* the JupyterHub deployment.  You will need to
 specify the jupyter-config.yaml file and a particular version of JupyterHub
 
 ```bash
-helm upgrade jupyter jupyterhub/jupyterhub -f jupyter-config.yaml -f secret-config.yaml --version=v0.6.0-9701a90
+helm upgrade jupyter pangeo/pangeo -f jupyter-config.yaml -f secret-config.yaml --version=v0.1.0-673e876
 ```
 
 Verify
