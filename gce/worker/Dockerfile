@@ -6,7 +6,8 @@ RUN chmod +x /usr/local/bin/dumb-init
 
 RUN conda install --yes -c conda-forge \
     cytoolz \
-    dask=0.17.0 \
+    dask=0.17.2 \
+    distributed=1.21.4 \
     fastparquet \
     git \
     lz4 \
@@ -32,18 +33,13 @@ RUN pip install pyasn1 click urllib3 --upgrade
 
 RUN pip install git+https://github.com/zarr-developers/zarr \
                 git+https://github.com/pydata/xarray \
-                git+https://github.com/dask/gcsfs \
+                git+https://github.com/dask/gcsfs@2fbdc27e838a531ada080886ae778cb370ae48b8\
                 fusepy \
                 --no-cache-dir \
                 --upgrade
 
-RUN pip install distributed==1.21.3 \
-                dask==0.17.1 \
-                --no-dependencies \ 
-                --no-cache-dir\ 
-                --upgrade
-
 ENV OMP_NUM_THREADS=1
+ENV DASK_TICK_MAXIMUM_DELAY=5s
 
 USER root
 COPY prepare.sh /usr/bin/prepare.sh
