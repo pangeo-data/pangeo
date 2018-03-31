@@ -1,0 +1,34 @@
+body {
+  font-size: 1.7rem;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+a {
+  color: #5eb130;
+}
+
+.navbar-inverse {
+  background: -webkit-linear-gradient(left, #5eb130, #003B71); /* Chrome10+, Safari5.1+ */
+  background: linear-gradient(left, #5eb130, #003B71);
+  border: None;
+}
+
+#pangeo h1 {
+  visibility: hidden;
+  margin-bottom: 0;
+}
+
+#pangeo img {
+  display: block;
+  margin: 0 auto;
+}
+
+.welcome h1 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.welcome h2 {
+  text-align: center;
+  margin-top: 50px;
+}

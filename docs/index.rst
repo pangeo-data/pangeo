@@ -3,12 +3,25 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Pangeo
-=================
+Pangeo
+======
 
-*Pangeo is a community-driven platform for Big Data geoscience.*
+.. image:: _static/small_e_logo_cropped.png
+   :scale: 40 %
 
-The project has three main goals:
+.. raw:: html
+
+   <br />
+
+.. image:: _static/pangeo_simple_logo.svg
+   :width: 250 px
+
+
+A community platform for Big Data geoscience
+============================================
+
+Our Goals
+^^^^^^^^^
 
 #. Foster collaboration around the open source scientific python ecosystem for
    ocean / atmosphere / land / climate science.
@@ -16,8 +29,8 @@ The project has three main goals:
 #. Improve scalability of these tools to to handle petabyte-scale datasets on
    HPC and cloud platforms.
 
-There are different entry points to our documentation for different types of
-users:
+Start Here
+^^^^^^^^^^
 
 - **Science users**: read the :ref:`quickstart`, browse the :ref:`use-cases`, or
   read about the :ref:`packages`.
@@ -26,9 +39,11 @@ users:
 - **General interest**: learn :ref:`about`, see the :ref:`collaborators`, or
   read the :ref:`FAQ`.
 
+Contents
+^^^^^^^^
+
 .. toctree::
    :maxdepth: 1
-   :caption: Contents:
 
    about
    packages
