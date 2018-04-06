@@ -38,17 +38,35 @@ can be found in the Wired article
 `The GitHub Revolution: Why We're All in Open Source Now <https://www.wired.com/2013/03/github/>`_
 by Mikeal Rogers.
 
+There are lots of great free and open resources to learn how to use scientific
+python.
+Here is a list of a few of our favorites.
+
+- list of
+- scientific python
+- online tutorials
+
+There are also some excellent books, including
+
+- list of
+- scientific python
+- books
 
 .. _GitHub: https://github.org/
 
-Learn Open Source Python Data Science Tools
--------------------------------------------
+Learn About Pangeo Software
+---------------------------
 
-There are lots of great free and open resources to learn how to use scientific
-python for geoscience.
-Here is a list of a few of our favorites.
+Pangeo is not a specific software pacakge.
+A Pangeo environment is made of up of many different open-source software packages.
+Each of these packages has its own repository, documentation, and development team.
+You can learn more about these packages by following the links below.
 
-There are also some excellent books, including
+.. toctree::
+   :maxdepth: 3
+
+   packages
+
 
 
 Try Out a Pangeo Deployment

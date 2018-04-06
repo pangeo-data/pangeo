@@ -93,6 +93,7 @@ todo_include_todos = True
 # https://pypi.python.org/pypi/sphinx-bootstrap-theme/
 html_theme = 'bootstrap'
 html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
+html_logo = '_static/small_e_reversed_24px.png'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -104,6 +105,8 @@ html_theme_options = {
 
     # Tab name for entire site. (Default: "Site")
     #'navbar_site_name': "Site",
+
+    'nosidebar': False,
 
     # A list of tuples containing pages or urls to link to.
     # Valid tuples should be in the following forms:
@@ -117,7 +120,7 @@ html_theme_options = {
     ],
 
     # Render the next and previous page links in navbar. (Default: true)
-    'navbar_sidebarrel': True,
+    'navbar_sidebarrel': False,
 
     # Render the current pages TOC in the navbar. (Default: true)
     'navbar_pagenav': True,
@@ -148,7 +151,7 @@ html_theme_options = {
 
     # Location of link to source.
     # Options are "nav" (default), "footer" or anything else to exclude.
-    'source_link_position': "nav",
+    'source_link_position': None,
 
     # Bootswatch (http://bootswatch.com/) theme.
     #
@@ -171,12 +174,12 @@ html_static_path = ['_static']
 #
 # This is required for the alabaster theme
 # refs: http://alabaster.readthedocs.io/en/latest/installation.html#sidebars
-# html_sidebars = {
-#     '**': [
-#         'relations.html',  # needs 'show_related': True theme option to display
-#         'searchbox.html',
-#     ]
-# }
+html_sidebars = {
+    'index': [],
+     '**': [
+          'localtoc.html',
+     ]
+ }
 
 
 # -- Options for HTMLHelp output ------------------------------------------

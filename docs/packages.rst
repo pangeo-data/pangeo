@@ -3,6 +3,90 @@
 Pangeo Packages
 ===============
 
+Pangeo is not one specific software pacakge.
+A Pangeo environment is made of up of many different open-source software packages.
+Each of these packages has its own repository, documentation, and development team.
+
+.. note::
+
+  Many people and organizations were involved in the development of the
+  software described on this page. Most of them have nothing to do with Pangeo.
+  By listing software packages on this website, we are in no way claiming
+  credit for their hard work. Full information about the developers
+  responsible for creating these tools can be found by following the links
+  below.
+
+Pangeo Core Packages
+--------------------
+
+Because of the :ref:`architecture` of Pangeo environments, these three core
+packages are considered essential to the project.
+
+Xarray
+~~~~~~
+
+.. image:: https://github.com/pydata/xarray/raw/master/doc/_static/dataset-diagram-logo.png
+   :width: 300 px
+
+- Website: http://xarray.pydata.org/en/latest
+- GitHub: https://github.com/pydata/xarray
+
+Xarray is an open source project and Python package
+that provides a toolkit for working with labeled multi-dimensional arrays of
+data. Xarray adopts the `Common Data Model`_ for self-
+describing scientific data in widespread use in the Earth sciences:
+``xarray.Dataset`` is an in-memory representation of a netCDF_ file.
+Xarray provides the basic data structures used by many other Pangeo packages,
+as well as powerful tools for computation and visualization.
+
+.. _Common Data Model: http://www.unidata.ucar.edu/software/thredds/current/netcdf-java/CDM
+.. _netCDF: http://www.unidata.ucar.edu/software/netcdf
+
+Dask
+~~~~
+
+.. image:: _static/dask_horizontal_no_pad.svg
+   :width: 300 px
+
+- Website: http://dask.readthedocs.io/en/latest/
+- GitHub: https://github.com/dask/dask
+
+Dask is a flexible parallel computing library for analytics.
+Dask is the key to the scalability of the Pangeo platform; its data structures are
+capable of representing extremely large datasets without actually loading them
+in memory, and its distributed schedulers permit supercomputers and cloud
+computing clusters to efficiently parallize computations across many nodes.
+
+Jupyter
+~~~~~~~
+
+.. image:: _static/jupyter-logo.svg
+  :height: 160 px
+
+- Website: http://jupyter.org/
+- GitHub: https://github.com/jupyter
+
+
+Project Jupyter exists to develop open-source software, open-standards, and
+services for interactive computing across dozens of programming languages.
+Jupyter provides the interactive layer to the Pangeo platform, allowing
+scientists to interact with remote systems where data and computing resources
+live.
+
+
+Pangeo Affiliated Packages
+--------------------------
+
+xgcm
+~~~~
+
+xesmf
+~~~~~
+
+
+Guidelines for New Packages
+---------------------------
+
 Our vision for the Pangeo project is an ecosystem of mutually compatible
 Geoscience python packages which follow open-source best practices.
 These practices are well established across the scientific python
