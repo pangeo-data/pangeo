@@ -28,9 +28,8 @@ entitled *PyData 101*.
 
    <iframe width="560" height="315" src="https://www.youtube.com/embed/DifMYH3iuFw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
-.. raw:: html
+Jakes slides are `available on SpeakerDeck <https://speakerdeck.com/jakevdp/intro-to-pydata>`_.
 
-   <script async class="speakerdeck-embed" data-id="e5a862c2a11849d082bd9e41484bd7d1" data-ratio="1.33333333333333" src="http://speakerdeck.com/assets/embed.js"></script>
 
 GitHub_ has become absolutely central to the way this community works.
 The Pangeo project is a GitHub-native organization.

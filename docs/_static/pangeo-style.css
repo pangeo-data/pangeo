@@ -1,3 +1,30 @@
+@font-face {
+    font-family: "Panton Black Caps";
+    /* src: url("http://ff.cdn.1001fonts.net/p/a/panton.black-caps.otf") */
+    src: url("panton.black-caps.otf");
+}
+
+@font-face {
+    font-family: "Panton Light Caps";
+    src: url("panton.light-caps.otf");
+}
+
+h1 {
+  color: #003B71;
+  font-family: "Panton Black Caps";
+  margin-top: 30px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.welcome h1 {
+  font-family: "Source Sans Pro",Calibri,Candara,Arial,sans-serif
+}
+
+h2, h3 {
+  font-family: "Panton Light Caps";
+}
+
 body {
   font-size: 1.7rem;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
@@ -7,10 +34,22 @@ a {
   color: #5eb130;
 }
 
+a:hover, a:focus {
+  color: #e50051;
+}
+
 .navbar-inverse {
   background: -webkit-linear-gradient(left, #5eb130, #003B71); /* Chrome10+, Safari5.1+ */
   background: linear-gradient(left, #5eb130, #003B71);
   border: None;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-nav>li>a:focus {
+    background-color: #e50051;
+}
+
+.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:hover, .navbar-inverse .navbar-nav>.open>a:focus  {
+    background-color: #e50051;
 }
 
 #pangeo h1 {
