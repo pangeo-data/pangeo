@@ -1,0 +1,53 @@
+<table class="table table-striped small">
+
+{% for person in people %}
+
+  <tr>
+    <td>
+      <ul class="list-inline">
+        <li><strong>{{ person.first_name }} {{ person.last_name}}</strong></li>
+        {% if person.github %}
+        <li>
+            <a class="icon" href="https://github.com/{{ person.github }}">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-github fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        {% endif %}
+        {% if person.twitter %}
+        <li>
+            <a class="icon" href="https://twitter.com/{{ person.twitter }}">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-twitter fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        {% endif %}
+        {% if person.email %}
+        <li>
+            <a class="icon" href="mailto:{{ person.email }}">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-envelope fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        {% endif %}
+        {% if person.website %}
+        <li>
+            <a class="icon" href="{{ person.website }}">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-external-link fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        {% endif %}
+      </ul>
+      <em>{{ person.institution }}</em>
+    {% for tag in person.tags %}
+      <mark>{{ tag }}</mark>
+    {% endfor %}
+    </td>
+  </tr>
+  {% endfor %}
+</table>

@@ -37,7 +37,8 @@ a:hover, a:focus {
   color: #e50051;
 }
 
-.alert-info {
+.alert-info, mark {
+  color: white;
   background-color: #00a3b0;
 }
 
@@ -94,4 +95,9 @@ h3 {
 
 #pangeo-packages h2, h3 {
     clear: both;
+}
+
+/* things for the custom people table */
+.icon {
+  color: #003B71;
 }
