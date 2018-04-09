@@ -251,7 +251,6 @@ import yaml
 with open('data/people.yml') as people_data_file:
     people = yaml.load(people_data_file)
 people.sort(key=lambda x: x['last_name'].lower())
-print(people[-1])
 html_context = {
     'people': people
 }
