@@ -14,12 +14,12 @@ jupyterhub:
           mountPath: /dev/fuse
     cloudMetadata:
       enabled: true
-     cpu:
-       limit: 4
-       guarantee: 1
-     memory:
-       limit: 16G
-       guarantee: 4G
+    cpu:
+      limit: 4
+      guarantee: 1
+    memory:
+      limit: 16G
+      guarantee: 4G
 
   hub:
     extraConfig: |
