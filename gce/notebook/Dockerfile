@@ -12,6 +12,7 @@ RUN conda install --yes -c ioam -c bokeh/channel/dev \
     cytoolz \
     datashader \
     dask=0.17.2 \
+    dask-ml \
     distributed=1.21.4 \
     fastparquet \
     ipywidgets \
@@ -29,6 +30,7 @@ RUN conda install --yes -c ioam -c bokeh/channel/dev \
     python-blosc \
     scipy \
     scikit-image \
+    scikit-learn \
     tornado \
     xarray \
     zict \
