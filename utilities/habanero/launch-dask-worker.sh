@@ -11,8 +11,7 @@
 # >>> client = Client(scheduler_file='~/scheduler.json')
 
 # Setup Environment
-module load anaconda
-source activate pangeo
+source mod_env_setup.sh
 
 # memory-limit is per process
 # since we use six processes, we request approx 1/6 of system memory
