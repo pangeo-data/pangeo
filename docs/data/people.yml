@@ -1,0 +1,514 @@
+- first_name: Ryan
+  last_name: Abernathey
+  institution: Lamont Doherty Earth Observatory
+  website: http://rabernat.github.io
+  email: rpa@ldeo.columbia.edu
+  github: rabernat
+  twitter: rabernat
+  orcid: 0000-0001-5999-4917
+  tags:
+    - physical oceanography
+    - climate
+
+- first_name: Joe
+  last_name: Hamman
+  institution: National Center for Atmospheric Research
+  website: http://joehamman.com
+  email: jhamman@ucar.edu
+  github: jhamman
+  twitter: HammanHydro
+  orcid: 0000-0001-7479-8439
+  tags:
+    - climate
+    - hydrology
+    - water resources
+
+- first_name: Chiara
+  last_name: Lepore
+  institution: Lamont Doherty Earth Observatory
+  website: http://www.ldeo.columbia.edu/~clepore/
+  twitter: lapiccolaflo
+  github: chiaral
+  tags:
+    - hydrology
+
+- first_name: Jeremy
+  last_name: McGibbon
+  institution: University of Washington Department of Atmospheric Sciences
+  website: http://www.jeremymcgibbon.com/
+  email: mcgibbon@uw.edu
+  github: mcgibbon
+  twitter: jeremy_mcgibbon
+  orcid: 0000-0003-4955-9772
+  tags:
+    - atmospheric science
+    - climate
+
+- first_name: James
+  last_name: Munroe
+  institution: Memorial University of Newfoundland
+  website: http://www.physics.mun.ca/~jmunroe/
+  email: jmunroe@mun.ca
+  github: jmunroe
+  twitter: JamesMunroeNL
+  orcid: 0000-0001-9098-6309
+  tags:
+    - physical oceanography
+
+- first_name: Matthew
+  last_name: Rocklin
+  institution: Continuum Analytics
+  website: http://www.matthewrocklin.com/
+  email: mrocklin@gmail.com
+  github: mrocklin
+  twitter: mrocklin
+  orcid: 0000-0002-3709-6953
+  tags:
+    - distributed computing
+    - algorithms
+
+- first_name: Daniel
+  last_name: Rothenberg
+  institution: Massachusetts Institute of Technology
+  website: http://www.danielrothenberg.com
+  email: darothen@mit.edu
+  github: darothen
+  twitter: danrothenberg
+  orcid: 0000-0002-8270-4831
+  tags:
+    - climate
+    - meteorology
+    - policy
+
+- first_name: Guillaume
+  last_name: Sérazin
+  institution: Laboratoire d'Étude en Géophysique et Océanographie Spatiale
+  website: https://github.com/serazing/serazing.github.io
+  email: guillaume.serazin@legos.obs-mip.fr
+  github: serazing
+  orcid: 0000-0002-7069-5886
+  tags:
+    - physical oceanography
+    - climate
+
+- first_name: Spencer
+  last_name: Hill
+  institution: UCLA Dept. of Atmospheric & Oceanic Sciences, and Caltech Division of Geological & Planetary Sciences
+  website: http://people.atmos.ucla.edu/shill/
+  email: shill@atmos.ucla.edu
+  github: spencerahill
+  twitter: spencerahill
+  orcid: 0000-0001-8672-0671
+  tags:
+    - atmospheric dynamics
+    - climate
+
+- first_name: Spencer
+  last_name: Clark
+  institution: Princeton University
+  website: http://www.princeton.edu/~skclark
+  email: skclark@princeton.edu
+  github: spencerkclark
+  orcid: 0000-0001-5595-7895
+  tags:
+    - atmospheric science
+    - climate
+
+- first_name: Nic
+  last_name: Wayand
+  institution: University of Saskatchewan
+  website: http://nicwayand.com
+  email: nic.wayand@usask.ca
+  github: NicWayand
+  orcid: 0000-0001-9894-6213
+  tags:
+    - hydrology
+    - atmospheric science
+
+- first_name: Ryan
+  last_name: May
+  institution: University Corporation for Atmospheric Research/Unidat
+  website: http://www.unidata.ucar.edu
+  email: rmay@ucar.edu
+  github: dopplershift
+  twitter: dopplershift
+  orcid: 0000-0003-2907-038X
+  tags:
+    - atmospheric science
+    - remote sensing
+    - algorithms
+
+- first_name: Ed
+  last_name: Doddridge
+  institution: Massachusetts Institute of Technology
+  website: https://doddridge.me
+  email: ewd@mit.edu
+  github: edoddridge
+  twitter: edoddridge
+  orcid: 0000-0002-6097-5729
+  tags:
+    - physical oceanography
+
+- first_name: Brian
+  last_name: Rose
+  institution: University at Albany
+  website: http://www.atmos.albany.edu/facstaff/brose/index.html
+  email: brose@albany.edu
+  github: brian-rose
+  twitter: BrianEJRose
+  orcid: 0000-0002-9961-3821
+  tags:
+    - climate
+    - atmospheric science
+    - physical oceanography
+    - modeling
+
+- first_name: Noah
+  last_name: Brenowitz
+  institution: University of Washington
+  website: http://www.noahbrenowitz.com/
+  email: nbren12@uw.edu
+  github: nbren12
+  orcid: 0000-0001-8615-4921
+  tags:
+    - atmospheric science
+    - machine learning
+
+- first_name: Joy
+  last_name: Monteiro
+  institution: Stockholm University
+  email: joy.monteiro@misu.su.se
+  github: JoyMonteiro
+  orcid: 0000-0002-3932-3603
+  tags:
+    - climate
+    - atmospheric science
+    - modeling
+
+- first_name: Julien
+  last_name: Le Sommer
+  institution: Institut des Géosciences de l’Environnement
+  website: http://lesommer.github.io/
+  email: julien.lesommer@univ-grenoble-alpes.fr
+  github: lesommer
+  orcid: 0000-0002-6882-2938
+  tags:
+    - physical oceanography
+    - ocean models
+    - climate
+
+- first_name: Phillip
+  last_name: Wolfram
+  institution: Los Alamos National Laboratory
+  website: https://github.com/pwolfram
+  email: pwolfram@lanl.gov
+  github: pwolfram
+  orcid: 0000-0001-5971-4241
+  tags:
+    - physical oceanography
+    - modeling
+    - climate
+
+- first_name: Rachel
+  last_name: Prudden
+  institution: Met Office Informatics Lab
+  website: http://informaticslab.co.uk/profiles/rachel-prudden.html
+  email: rachel.prudden@informaticslab.co.uk
+  github: RPrudden
+  twitter: RachelPrudden
+  tags:
+    - atmospheric science
+    - distributed computing
+    - algorithms
+
+- first_name: Kevin
+  last_name: Paul
+  institution: National Center for Atmospheric Research
+  website: https://staff.ucar.edu/users/kpaul
+  email: kpaul@ucar.edu
+  github: KMPaul
+  tags:
+    - climate
+    - distributed computing
+    - algorithms
+
+- first_name: Stephan
+  last_name: Hoyer
+  website: http://stephanhoyer.com
+  email: shoyer@gmail.com
+  github: shoyer
+  twitter: shoyer
+  tags:
+    - software
+    - algorithms
+
+- first_name: Stanislav
+  last_name: Seltser
+  website: http://www.petacube.com
+  email: stanislav.seltser@petacube.com
+  github: petacube
+  twitter: borshik45
+  tags:
+    - array storage engines
+    - scientific computing infrastructure
+
+- first_name: Anderson
+  last_name: Banihirwe
+  website: https://andersy005.github.io/
+  email: axbanihirwe@gmail.com
+  github: andersy005
+  tags:
+    - distributed computing
+    - climate
+    - software
+
+- first_name: Erik
+  last_name: van Sebille
+  institution: Institute for Marine and Atmospheric research Utrecht, Utrecht University, Netherlands
+  website: http://erik.vansebille.com/science/
+  email: E.vanSebille@uu.nl
+  github: erikvansebille
+  twitter: erikvansebille
+  orcid: 0000-0003-2041-0704
+  tags:
+    - physical oceanography
+    - climate
+    - software
+    
+- first_name: Jiawei
+  last_name: Zhuang
+  institution: Harvard University
+  website: https://scholar.harvard.edu/zhuangjw
+  email: jiaweizhuang@g.harvard.edu
+  github: JiaweiZhuang
+  twitter: Jiawei_Zhuang_
+  tags:
+    - atmospheric chemistry
+    - numerical methods
+    - HPC
+
+- first_name: Guido
+  last_name: Vettoretti
+  institution: University of Toronto
+  website: http://www.atmosp.physics.utoronto.ca/people/guido/guido.html
+  email: g.vettoretti@utoronto.ca
+  github: guidov
+  twitter: g_vettoretti
+  tags:
+    - paleoclimate
+    - HPC
+    - physical oceanography
+    
+    
+- first_name: Colin
+  last_name: Raymond
+  institution: Columbia University
+  website: http://www.ldeo.columbia.edu/user/raymondc
+  email: cr2630@columbia.edu
+  github: cr2630git
+  tags:
+    - climate
+    - atmospheric science
+    - modeling
+
+- first_name: Fabien
+  last_name: Maussion
+  institution: University of Innsbruck
+  website: http://fabienmaussion.info/
+  email: fabien.maussion@uibk.ac.at
+  github: fmaussion
+  orcid: 0000-0002-3211-506X
+  tags:
+    - climate
+    - glaciology
+
+- first_name: Ben
+  last_name: Koziol
+  institution: University of Colorado-Boulder / NOAA Global Systems Division
+  website: https://www.esrl.noaa.gov/gsd/nesii/about/staff/ben.html
+  email: ben.koziol@noaa.gov
+  github: bekozi
+  orcid: 0000-0003-1406-7399
+  tags:
+    - HPC
+    - climate
+    - software
+    - GIS
+  
+- first_name: Yu
+  last_name: Cheng
+  institution: University of Miami
+  website: https://fischcheng.github.io
+  email: yucheng@rsmas.miami.edu
+  github: fischcheng
+  tags:
+    - climate
+    - modeling
+    - physical oceanography
+
+- first_name: Maike
+  last_name: Sonnewald
+  institution: Massachusetts Insitute of Technology
+  website: https://maikejulie.github.io
+  email: maike_sg@mit.edu
+  github: maikejulie
+  tags:
+    - statistics
+    - modeling/HPC
+    - physical oceanography
+
+- first_name: Kai
+  last_name: Pak
+  institution: Columbia University
+  website: https://kaipak.github.io
+  email: kai.pak@columbia.edu
+  github: kaipak
+  tags:
+    - physical oceanography
+    - climate
+
+- first_name: Damien
+  last_name: Irving
+  institution: CSIRO
+  website: https://drclimate.wordpress.com/
+  email: irving.damien@gmail.com
+  github: damienirving
+  tags:
+    - physical oceanography
+    - climate
+    - software carpentry
+
+- first_name: Redouane  
+  last_name: Lguensat
+  institution: Institut des Géosciences de l’Environnement
+  website: http://redouanelg.github.io
+  email: redouane.lguensat@univ-grenoble-alpes.fr
+  github: redouanelg
+  twitter: redouanelg
+  orcid:  0000-0003-0226-9057
+  tags:
+    - machine learning
+    - computer vision
+    
+- first_name: Rich
+  last_name: Signell
+  institution: USGS
+  website: http://about.me/Rich.Signell
+  email: rsignell@usgs.gov
+  github: rsignell-usgs
+  twitter: rsignell
+  orcid: 0000-0003-0682-9613
+  tags:
+    - physical oceanography
+    - coastal ocean modeling
+    - geoinformatics
+    
+- first_name: Anthony
+  last_name: Arendt
+  institution: University of Washington
+  website: http://psc.apl.uw.edu/people/investigators/anthony-arendt/
+  email: arendta@uw.edu
+  github: aaarendt
+  twitter: aaarendt
+  orcid: 0000-0003-0429-6905
+  tags:
+    - alpine hydrology
+    - geospatial mapping
+    - remote sensing
+    
+    
+- first_name: Scott
+  last_name: Henderson
+  institution: University of Washington
+  website: http://escience.washington.edu/people/scott-henderson/
+  email: scottyh@uw.edu
+  github: scottyhq
+  twitter: scottyhq
+  orcid: 0000-0003-0624-4965
+  tags:
+    - remote sensing
+    - active tectonics
+    - geodesy
+
+- first_name: Rob
+  last_name: Fatland
+  institution: University of Washington
+  website: http://cloudraven.org
+  email: rob5@uw.edu
+  github: robfatland
+  orcid:  0000-0003-4556-8321
+  tags:
+    - remote sensing
+    - sensor networks
+    - data visualization
+    - cloud computing
+    - embedded hardware
+    - eduation and public outreach
+    
+- first_name: John
+  last_name: Burkhart
+  institution: University of Oslo
+  website: https://folk.uio.no/~johnbur
+  email: john.burkhart@geo.uio.no
+  github: jfburkhart
+  twitter: jfburkhart
+  orcid: 0000-0002-5587-1693
+  tags:
+    - climate
+    - snow hydrology
+    - energy transport
+    - cryosphere-aerosol
+    - remote sensing
+
+- first_name: Tom
+  last_name: Connolly
+  institution: Moss Landing Marine Labs
+  website: https://www.mlml.calstate.edu/physoce/people/tconnolly/
+  email: tconnolly@mlml.calstate.edu
+  github: tompc35
+  twitter: tompc35
+  orcid: 0000-0002-2159-5918
+  tags:
+    - physical oceanography
+    - coasts and estuaries
+    - observations
+    - numerical modeling
+    - teaching
+    
+- first_name: Bryan
+  last_name: Lawrence
+  institution: NCAS, University of Reading
+  website: https://www.bnlawrence.net
+  email: bryan.lawrence@ncas.ac.uk
+  github: bnlawrence
+  twitter: bnlawrence
+  orcid: 0000-0001-9262-7860
+  tags:
+    - climate simulation
+    - hpc 
+    - data infrastructure 
+    - cloud computing
+
+- first_name: Chris
+  last_name: Hill
+  institution: Massachusetts Institute of Technology
+  email: cnh@mit.edu
+  github: christophernhill
+  orcid: 0000-0003-3417-9056
+  tags:
+    - ocean modeling
+    - hpc 
+    - research computing
+    - cyberinfrastructure
+
+- first_name: David
+  last_name: Blodgett
+  institution: U.S. Geological Survey
+  email: dblodgett@usgs.gov
+  github: dblodgett-usgs
+  orcid: 0000-0001-9489-1710
+  tags:
+    - hydrology
+    - information modeling
+    - cyberinfrastructure
+    - geoinformatics
