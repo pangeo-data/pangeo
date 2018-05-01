@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>About Pangeo &#8212; Pangeo 0.0.1 documentation</title>
+    <title>Deployments &#8212; Pangeo 0.0.1 documentation</title>
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="_static/pangeo-style.css" type="text/css" />
@@ -26,11 +26,11 @@
     <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
     <script type="text/javascript" src="_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
-    <link rel="author" title="About these documents" href="#" />
+    <link rel="author" title="About these documents" href="about.html" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Frequently Asked Questions" href="faq.html" />
-    <link rel="prev" title="Pangeo" href="index.html" />
+    <link rel="next" title="Technical Architecture" href="architecture.html" />
+    <link rel="prev" title="Analysis of Gridded Ensemble Precipitation and Temperature Estimates over the Contiguous United States" href="use_cases/newmann_ensemble_meteorology.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -67,19 +67,19 @@
   <ul class="dropdown-menu globaltoc"
       role="menu"
       aria-labelledby="dLabelGlobalToc"><ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">About Pangeo</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#motivation">Motivation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#mission-statement">Mission Statement</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#vision">Vision</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#get-involved">Get Involved</a></li>
+<li class="toctree-l1"><a class="reference internal" href="about.html">About Pangeo</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="about.html#motivation">Motivation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="about.html#mission-statement">Mission Statement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="about.html#vision">Vision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="about.html#get-involved">Get Involved</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Guide for Scientists</a><ul>
+<li class="toctree-l1 current"><a class="reference internal" href="quickstart.html">Guide for Scientists</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="quickstart.html#learn-about-the-open-source-ecosystem">Learn About the Open Source Ecosystem</a></li>
 <li class="toctree-l2"><a class="reference internal" href="quickstart.html#learn-about-pangeo-software">Learn About Pangeo Software</a></li>
 <li class="toctree-l2"><a class="reference internal" href="quickstart.html#explore-the-use-cases">Explore the Use Cases</a></li>
-<li class="toctree-l2"><a class="reference internal" href="quickstart.html#try-out-a-pangeo-deployment">Try Out a Pangeo Deployment</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="quickstart.html#try-out-a-pangeo-deployment">Try Out a Pangeo Deployment</a></li>
 <li class="toctree-l2"><a class="reference internal" href="quickstart.html#give-feedback">Give Feedback</a></li>
 <li class="toctree-l2"><a class="reference internal" href="quickstart.html#contribute-a-use-case">Contribute a Use Case</a></li>
 <li class="toctree-l2"><a class="reference internal" href="quickstart.html#contribute-data">Contribute Data</a></li>
@@ -104,9 +104,9 @@
 <li class="toctree-l2"><a class="reference internal" href="setup_guides/geyser_and_caldera.html">Getting Started with Dask on Geyser and Caldera</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="deployments.html">Deployments</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="deployments.html#cheyenne">Cheyenne</a></li>
-<li class="toctree-l2"><a class="reference internal" href="deployments.html#google-cloud-platform">Google Cloud Platform</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Deployments</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#cheyenne">Cheyenne</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#google-cloud-platform">Google Cloud Platform</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="collaborators.html">Collaborators</a><ul>
@@ -128,11 +128,9 @@
   <ul class="dropdown-menu localtoc"
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
-<li><a class="reference internal" href="#">About Pangeo</a><ul>
-<li><a class="reference internal" href="#motivation">Motivation</a></li>
-<li><a class="reference internal" href="#mission-statement">Mission Statement</a></li>
-<li><a class="reference internal" href="#vision">Vision</a></li>
-<li><a class="reference internal" href="#get-involved">Get Involved</a></li>
+<li><a class="reference internal" href="#">Deployments</a><ul>
+<li><a class="reference internal" href="#cheyenne">Cheyenne</a></li>
+<li><a class="reference internal" href="#google-cloud-platform">Google Cloud Platform</a></li>
 </ul>
 </li>
 </ul>
@@ -157,11 +155,9 @@
   <div class="row">
       <div class="col-md-3">
         <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
-<li><a class="reference internal" href="#">About Pangeo</a><ul>
-<li><a class="reference internal" href="#motivation">Motivation</a></li>
-<li><a class="reference internal" href="#mission-statement">Mission Statement</a></li>
-<li><a class="reference internal" href="#vision">Vision</a></li>
-<li><a class="reference internal" href="#get-involved">Get Involved</a></li>
+<li><a class="reference internal" href="#">Deployments</a><ul>
+<li><a class="reference internal" href="#cheyenne">Cheyenne</a></li>
+<li><a class="reference internal" href="#google-cloud-platform">Google Cloud Platform</a></li>
 </ul>
 </li>
 </ul>
@@ -170,77 +166,14 @@
       </div>
     <div class="col-md-9 content ">
       
-  <div class="section" id="about-pangeo">
-<span id="about"></span><h1>About Pangeo<a class="headerlink" href="#about-pangeo" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="motivation">
-<h2>Motivation<a class="headerlink" href="#motivation" title="Permalink to this headline">¶</a></h2>
-<p>There are several building crises facing the Atmosphere / Ocean / Land /
-Climate (AOC) science community:</p>
-<ul class="simple">
-<li>Big Data: datasets are growing too rapidly and legacy software tools
-for scientific analysis can’t handle them. This is a major obstacle
-to scientific progress.</li>
-<li>Technology Gap: a growing gap between the technological
-sophistication of industry solutions (high) and scientific software
-(low).</li>
-<li>Reproducibility: a fragmentation of software tools and environments
-renders most AOC research effectively unreproducible and prone to
-failure.</li>
-</ul>
-<p>We believe these challenges can all be addressed through a unified
-effort.</p>
+  <div class="section" id="deployments">
+<h1>Deployments<a class="headerlink" href="#deployments" title="Permalink to this headline">¶</a></h1>
+<p>This is a catalog of known pangeo deployments.</p>
+<div class="section" id="cheyenne">
+<h2>Cheyenne<a class="headerlink" href="#cheyenne" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="mission-statement">
-<h2>Mission Statement<a class="headerlink" href="#mission-statement" title="Permalink to this headline">¶</a></h2>
-<p>Our mission is to cultivate an ecosystem in which the next generation of
-open-source analysis tools for ocean, atmosphere and climate science can
-be developed, distributed, and sustained. These tools must be scalable
-in order to meet the current and future challenges of big data, and
-these solutions should leverage the existing expertise outside of the
-AOC community.</p>
-</div>
-<div class="section" id="vision">
-<h2>Vision<a class="headerlink" href="#vision" title="Permalink to this headline">¶</a></h2>
-<p>We envision a collection of related but independent open-source packages
-that meet specific scientific needs within the AOC fields. These
-packages will follow modern best practices for software development,
-including:</p>
-<ul class="simple">
-<li>hosting on GitHub,</li>
-<li>testing,</li>
-<li>coverage,</li>
-<li>continuous integration,</li>
-<li>comprehensive documentation, and</li>
-<li>a welcoming and inclusive development culture.</li>
-</ul>
-<p>As much as possible, we will build on top of existing solutions and
-leverage expertise from the broader technology world, including
-industry.</p>
-<p>In practice, the “python data” software stack (see above) currently
-provides the most stable and powerful foundation layer for our desired
-tools. In particular the xarray and dask projects provide a mechanism to
-easily build scalability into scientific analysis. Our vision of future
-AOC software involves the adoption of these common software layers, and
-a clear communication between developers to define project scope and
-dependency that eliminates redundancy and fragmentation.</p>
-</div>
-<div class="section" id="get-involved">
-<h2>Get Involved<a class="headerlink" href="#get-involved" title="Permalink to this headline">¶</a></h2>
-<p>The scientific culture in the AOC community must be tied to, and evolve
-from, the community’s software culture. Hence, we depend upon
-contributions from the entire community, both scientific and industrial.</p>
-<p>We encourage everyone to get involved by:</p>
-<ul class="simple">
-<li>contributing to the goals and vision of the organization,</li>
-<li>contributing to the design documents of the proposed software,</li>
-<li>contributing to the software, via issues and pull requests, and/or</li>
-<li>using the software for your scientific analysis and letting us know
-about your experiences (e.g., contributing to examples)</li>
-</ul>
-<p>For now, community discussion is happening on our <a class="reference external" href="https://groups.google.com/forum/#!forum/pangeo">pangeo google
-group</a>. This is an
-open group, and we invite anyone interested to join.</p>
-<p>Pangeo receives support from the <a class="reference external" href="https://pangeo-data.github.io/">NSF</a> via the <a class="reference external" href="https://earthcube.org/">EarthCube</a> program.</p>
+<div class="section" id="google-cloud-platform">
+<h2>Google Cloud Platform<a class="headerlink" href="#google-cloud-platform" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 

@@ -3,9 +3,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Welcome to Pangeo’s documentation! &#8212; Pangeo 0.0.1 documentation</title>
+    <title>Pangeo &#8212; Pangeo 0.0.1 documentation</title>
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pangeo-style.css" type="text/css" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
@@ -45,9 +47,8 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="#"><span><img src="_static/small_e_reversed_24px.png"></span>
           Pangeo</a>
-        <span class="navbar-text navbar-version pull-left"><b>0.0.1</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
@@ -64,17 +65,53 @@
      href="#">Site <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
       role="menu"
-      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="about.html">About Pangeo</a></li>
+      aria-labelledby="dLabelGlobalToc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="about.html">About Pangeo</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="about.html#motivation">Motivation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="about.html#mission-statement">Mission Statement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="about.html#vision">Vision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="about.html#get-involved">Get Involved</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Guide for Scientists</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#learn-about-the-open-source-ecosystem">Learn About the Open Source Ecosystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#learn-about-pangeo-software">Learn About Pangeo Software</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#explore-the-use-cases">Explore the Use Cases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#try-out-a-pangeo-deployment">Try Out a Pangeo Deployment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#give-feedback">Give Feedback</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#contribute-a-use-case">Contribute a Use Case</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#contribute-data">Contribute Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#become-an-open-source-contributor">Become an Open Source Contributor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#develop-new-software">Develop New Software</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="packages.html">Packages</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="packages.html#pangeo-core-packages">Pangeo Core Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="packages.html#pangeo-affiliated-packages">Pangeo Affiliated Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="packages.html#guidelines-for-new-packages">Guidelines for New Packages</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="use_cases/index.html">Geoscience Use Cases</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="use_cases/ocean_cm2.6_eddy_statistics.html">Use Case: CM2.6 Eddy Statistics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="use_cases/newmann_ensemble_meteorology.html">Analysis of Gridded Ensemble Precipitation and Temperature Estimates over the Contiguous United States</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="architecture.html">Technical Architecture</a></li>
 <li class="toctree-l1"><a class="reference internal" href="setup_guides/index.html">Pangeo Setup Guides</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="setup_guides/cheyenne.html">Getting Started with Dask on Cheyenne</a></li>
 <li class="toctree-l2"><a class="reference internal" href="setup_guides/geyser_and_caldera.html">Getting Started with Dask on Geyser and Caldera</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="use_cases/index.html">Pangeo Use Cases</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="use_cases/ocean_cm2.6_eddy_statistics.html">Use Case: CM2.6 Eddy Statistics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="use_cases/newmann_ensemble_meteorology.html">Analysis of Gridded Ensemble Precipitation and Temperature Estimates over the Contiguous United States</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deployments.html">Deployments</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="deployments.html#cheyenne">Cheyenne</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deployments.html#google-cloud-platform">Google Cloud Platform</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="collaborators.html">Collaborators</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="collaborators.html#funding-agencies">Funding Agencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="collaborators.html#institutions">Institutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="collaborators.html#people">People</a></li>
 </ul>
 </li>
 </ul>
@@ -90,41 +127,26 @@
   <ul class="dropdown-menu localtoc"
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
-<li><a class="reference internal" href="#">Welcome to Pangeo’s documentation!</a></li>
+<li><a class="reference internal" href="#">Pangeo</a></li>
+<li><a class="reference internal" href="#a-community-platform-for-big-data-geoscience">A community platform for Big Data geoscience</a><ul>
+<li><a class="reference internal" href="#our-goals">Our Goals</a></li>
+<li><a class="reference internal" href="#start-here">Start Here</a></li>
+<li><a class="reference internal" href="#contents">Contents</a></li>
+</ul>
+</li>
 </ul>
 </ul>
 </li>
               
             
             
-              
-                
-  <li>
-    <a href="about.html" title="Next Chapter: About Pangeo"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">About Pangeo &raquo;</span>
-    </a>
-  </li>
-              
             
             
-            
-            
-              <li class="hidden-sm">
-<div id="sourcelink">
-  <a href="_sources/index.rst.txt"
-     rel="nofollow">Source</a>
-</div></li>
             
           </ul>
 
           
             
-<form class="navbar-form navbar-right" action="search.html" method="get">
- <div class="form-group">
-  <input type="text" name="q" class="form-control" placeholder="Search" />
- </div>
-  <input type="hidden" name="check_keywords" value="yes" />
-  <input type="hidden" name="area" value="default" />
-</form>
           
         </div>
     </div>
@@ -132,29 +154,95 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-12 content">
+    <div class="col-md-12 content welcome">
       
-  <div class="section" id="welcome-to-pangeo-s-documentation">
-<h1>Welcome to Pangeo’s documentation!<a class="headerlink" href="#welcome-to-pangeo-s-documentation" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="pangeo">
+<h1>Pangeo<a class="headerlink" href="#pangeo" title="Permalink to this headline">¶</a></h1>
+<a class="reference internal image-reference" href="_images/small_e_logo_cropped.png"><img alt="_images/small_e_logo_cropped.png" src="_images/small_e_logo_cropped.png" style="width: 351.6px; height: 339.6px;" /></a>
+<br /><a class="reference internal image-reference" href="_images/pangeo_simple_logo.svg"><img alt="_images/pangeo_simple_logo.svg" src="_images/pangeo_simple_logo.svg" width="250px" /></a>
+</div>
+<div class="section" id="a-community-platform-for-big-data-geoscience">
+<h1>A community platform for Big Data geoscience<a class="headerlink" href="#a-community-platform-for-big-data-geoscience" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="our-goals">
+<h2>Our Goals<a class="headerlink" href="#our-goals" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>Foster collaboration around the open source scientific python ecosystem for
+ocean / atmosphere / land / climate science.</li>
+<li>Support the development with domain-specific geoscience packages.</li>
+<li>Improve scalability of these tools to to handle petabyte-scale datasets on
+HPC and cloud platforms.</li>
+</ol>
+</div>
+<div class="section" id="start-here">
+<h2>Start Here<a class="headerlink" href="#start-here" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><strong>Science users</strong>: read the <a class="reference internal" href="quickstart.html#quickstart"><span class="std std-ref">Guide for Scientists</span></a>, browse the <a class="reference internal" href="use_cases/index.html#use-cases"><span class="std std-ref">Geoscience Use Cases</span></a>, or
+read about the <a class="reference internal" href="packages.html#packages"><span class="std std-ref">Packages</span></a>.</li>
+<li><strong>Developers / system administrators</strong>: learn about the <span class="xref std std-ref">architecture</span>
+or read the <a class="reference internal" href="setup_guides/index.html#setup-guides"><span class="std std-ref">Pangeo Setup Guides</span></a>.</li>
+<li><strong>General interest</strong>: learn <a class="reference internal" href="about.html#about"><span class="std std-ref">About Pangeo</span></a>, see the <a class="reference internal" href="collaborators.html#collaborators"><span class="std std-ref">Collaborators</span></a>, or
+read the <span class="xref std std-ref">FAQ</span>.</li>
+</ul>
+</div>
+<div class="section" id="contents">
+<h2>Contents<a class="headerlink" href="#contents" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">Contents:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="about.html">About Pangeo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="about.html">About Pangeo</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="about.html#motivation">Motivation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="about.html#mission-statement">Mission Statement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="about.html#vision">Vision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="about.html#get-involved">Get Involved</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Guide for Scientists</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#learn-about-the-open-source-ecosystem">Learn About the Open Source Ecosystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#learn-about-pangeo-software">Learn About Pangeo Software</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#explore-the-use-cases">Explore the Use Cases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#try-out-a-pangeo-deployment">Try Out a Pangeo Deployment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#give-feedback">Give Feedback</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#contribute-a-use-case">Contribute a Use Case</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#contribute-data">Contribute Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#become-an-open-source-contributor">Become an Open Source Contributor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#develop-new-software">Develop New Software</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="packages.html">Packages</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="packages.html#pangeo-core-packages">Pangeo Core Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="packages.html#pangeo-affiliated-packages">Pangeo Affiliated Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="packages.html#guidelines-for-new-packages">Guidelines for New Packages</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="use_cases/index.html">Geoscience Use Cases</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="use_cases/ocean_cm2.6_eddy_statistics.html">Use Case: CM2.6 Eddy Statistics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="use_cases/newmann_ensemble_meteorology.html">Analysis of Gridded Ensemble Precipitation and Temperature Estimates over the Contiguous United States</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="architecture.html">Technical Architecture</a></li>
 <li class="toctree-l1"><a class="reference internal" href="setup_guides/index.html">Pangeo Setup Guides</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="setup_guides/cheyenne.html">Getting Started with Dask on Cheyenne</a></li>
 <li class="toctree-l2"><a class="reference internal" href="setup_guides/geyser_and_caldera.html">Getting Started with Dask on Geyser and Caldera</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="use_cases/index.html">Pangeo Use Cases</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="use_cases/ocean_cm2.6_eddy_statistics.html">Use Case: CM2.6 Eddy Statistics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="use_cases/newmann_ensemble_meteorology.html">Analysis of Gridded Ensemble Precipitation and Temperature Estimates over the Contiguous United States</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deployments.html">Deployments</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="deployments.html#cheyenne">Cheyenne</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deployments.html#google-cloud-platform">Google Cloud Platform</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="collaborators.html">Collaborators</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="collaborators.html#funding-agencies">Funding Agencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="collaborators.html#institutions">Institutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="collaborators.html#people">People</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
+</div>
 
 
+      
     </div>
       
   </div>

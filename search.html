@@ -6,6 +6,8 @@
     <title>Search &#8212; Pangeo 0.0.1 documentation</title>
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pangeo-style.css" type="text/css" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
@@ -52,9 +54,8 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="index.html">
+        <a class="navbar-brand" href="index.html"><span><img src="_static/small_e_reversed_24px.png"></span>
           Pangeo</a>
-        <span class="navbar-text navbar-version pull-left"><b>0.0.1</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
@@ -71,17 +72,53 @@
      href="index.html">Site <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
       role="menu"
-      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="about.html">About Pangeo</a></li>
+      aria-labelledby="dLabelGlobalToc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="about.html">About Pangeo</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="about.html#motivation">Motivation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="about.html#mission-statement">Mission Statement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="about.html#vision">Vision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="about.html#get-involved">Get Involved</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Guide for Scientists</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#learn-about-the-open-source-ecosystem">Learn About the Open Source Ecosystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#learn-about-pangeo-software">Learn About Pangeo Software</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#explore-the-use-cases">Explore the Use Cases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#try-out-a-pangeo-deployment">Try Out a Pangeo Deployment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#give-feedback">Give Feedback</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#contribute-a-use-case">Contribute a Use Case</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#contribute-data">Contribute Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#become-an-open-source-contributor">Become an Open Source Contributor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#develop-new-software">Develop New Software</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="packages.html">Packages</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="packages.html#pangeo-core-packages">Pangeo Core Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="packages.html#pangeo-affiliated-packages">Pangeo Affiliated Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="packages.html#guidelines-for-new-packages">Guidelines for New Packages</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="use_cases/index.html">Geoscience Use Cases</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="use_cases/ocean_cm2.6_eddy_statistics.html">Use Case: CM2.6 Eddy Statistics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="use_cases/newmann_ensemble_meteorology.html">Analysis of Gridded Ensemble Precipitation and Temperature Estimates over the Contiguous United States</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="architecture.html">Technical Architecture</a></li>
 <li class="toctree-l1"><a class="reference internal" href="setup_guides/index.html">Pangeo Setup Guides</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="setup_guides/cheyenne.html">Getting Started with Dask on Cheyenne</a></li>
 <li class="toctree-l2"><a class="reference internal" href="setup_guides/geyser_and_caldera.html">Getting Started with Dask on Geyser and Caldera</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="use_cases/index.html">Pangeo Use Cases</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="use_cases/ocean_cm2.6_eddy_statistics.html">Use Case: CM2.6 Eddy Statistics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="use_cases/newmann_ensemble_meteorology.html">Analysis of Gridded Ensemble Precipitation and Temperature Estimates over the Contiguous United States</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deployments.html">Deployments</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="deployments.html#cheyenne">Cheyenne</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deployments.html#google-cloud-platform">Google Cloud Platform</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="collaborators.html">Collaborators</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="collaborators.html#funding-agencies">Funding Agencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="collaborators.html#institutions">Institutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="collaborators.html#people">People</a></li>
 </ul>
 </li>
 </ul>
@@ -101,14 +138,8 @@
               
             
             
-              
-                
-              
             
             
-            
-            
-              <li class="hidden-sm"></li>
             
           </ul>
 
@@ -121,7 +152,11 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-12 content">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+        </div>
+      </div>
+    <div class="col-md-9 content ">
       
   <h1 id="search-documentation">Search</h1>
   <div id="fallback" class="admonition warning">
@@ -153,6 +188,7 @@
   
   </div>
 
+      
     </div>
       
   </div>

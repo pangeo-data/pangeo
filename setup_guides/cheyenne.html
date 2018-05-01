@@ -6,6 +6,8 @@
     <title>Getting Started with Dask on Cheyenne &#8212; Pangeo 0.0.1 documentation</title>
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pangeo-style.css" type="text/css" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
@@ -46,9 +48,8 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../index.html">
+        <a class="navbar-brand" href="../index.html"><span><img src="../_static/small_e_reversed_24px.png"></span>
           Pangeo</a>
-        <span class="navbar-text navbar-version pull-left"><b>0.0.1</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
@@ -65,17 +66,53 @@
      href="../index.html">Site <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
       role="menu"
-      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Contents:</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../about.html">About Pangeo</a></li>
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../about.html">About Pangeo</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../about.html#motivation">Motivation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about.html#mission-statement">Mission Statement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about.html#vision">Vision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about.html#get-involved">Get Involved</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Guide for Scientists</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../quickstart.html#learn-about-the-open-source-ecosystem">Learn About the Open Source Ecosystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quickstart.html#learn-about-pangeo-software">Learn About Pangeo Software</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quickstart.html#explore-the-use-cases">Explore the Use Cases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quickstart.html#try-out-a-pangeo-deployment">Try Out a Pangeo Deployment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quickstart.html#give-feedback">Give Feedback</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quickstart.html#contribute-a-use-case">Contribute a Use Case</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quickstart.html#contribute-data">Contribute Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quickstart.html#become-an-open-source-contributor">Become an Open Source Contributor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quickstart.html#develop-new-software">Develop New Software</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../packages.html">Packages</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../packages.html#pangeo-core-packages">Pangeo Core Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../packages.html#pangeo-affiliated-packages">Pangeo Affiliated Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../packages.html#guidelines-for-new-packages">Guidelines for New Packages</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../use_cases/index.html">Geoscience Use Cases</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../use_cases/ocean_cm2.6_eddy_statistics.html">Use Case: CM2.6 Eddy Statistics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../use_cases/newmann_ensemble_meteorology.html">Analysis of Gridded Ensemble Precipitation and Temperature Estimates over the Contiguous United States</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../architecture.html">Technical Architecture</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Pangeo Setup Guides</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Getting Started with Dask on Cheyenne</a></li>
 <li class="toctree-l2"><a class="reference internal" href="geyser_and_caldera.html">Getting Started with Dask on Geyser and Caldera</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../use_cases/index.html">Pangeo Use Cases</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../use_cases/ocean_cm2.6_eddy_statistics.html">Use Case: CM2.6 Eddy Statistics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../use_cases/newmann_ensemble_meteorology.html">Analysis of Gridded Ensemble Precipitation and Temperature Estimates over the Contiguous United States</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deployments.html">Deployments</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../deployments.html#cheyenne">Cheyenne</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../deployments.html#google-cloud-platform">Google Cloud Platform</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../collaborators.html">Collaborators</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../collaborators.html#funding-agencies">Funding Agencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../collaborators.html#institutions">Institutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../collaborators.html#people">People</a></li>
 </ul>
 </li>
 </ul>
@@ -110,38 +147,13 @@
               
             
             
-              
-                
-  <li>
-    <a href="index.html" title="Previous Chapter: Pangeo Setup Guides"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Pangeo Setup Guides</span>
-    </a>
-  </li>
-  <li>
-    <a href="geyser_and_caldera.html" title="Next Chapter: Getting Started with Dask on Geyser and Caldera"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Getting Start... &raquo;</span>
-    </a>
-  </li>
-              
             
             
-            
-            
-              <li class="hidden-sm">
-<div id="sourcelink">
-  <a href="../_sources/setup_guides/cheyenne.rst.txt"
-     rel="nofollow">Source</a>
-</div></li>
             
           </ul>
 
           
             
-<form class="navbar-form navbar-right" action="../search.html" method="get">
- <div class="form-group">
-  <input type="text" name="q" class="form-control" placeholder="Search" />
- </div>
-  <input type="hidden" name="check_keywords" value="yes" />
-  <input type="hidden" name="area" value="default" />
-</form>
           
         </div>
     </div>
@@ -149,7 +161,26 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-12 content">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li><a class="reference internal" href="#">Getting Started with Dask on Cheyenne</a><ul>
+<li><a class="reference internal" href="#installing-a-software-environment">Installing a software environment</a></li>
+<li><a class="reference internal" href="#configure-jupyter">Configure Jupyter</a></li>
+<li><a class="reference internal" href="#launch-dask-with-a-script">Launch Dask with a script</a></li>
+<li><a class="reference internal" href="#launch-and-connect-to-jupyter">Launch and connect to Jupyter</a></li>
+<li><a class="reference internal" href="#open-a-notebook-and-perform-a-simple-computation">Open a notebook and perform a simple computation</a></li>
+<li><a class="reference internal" href="#dynamic-deployment">Dynamic Deployment</a><ul>
+<li><a class="reference internal" href="#main-script">Main script</a></li>
+<li><a class="reference internal" href="#add-one-worker-script">Add one worker script</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9 content ">
       
   <div class="section" id="getting-started-with-dask-on-cheyenne">
 <h1>Getting Started with Dask on Cheyenne<a class="headerlink" href="#getting-started-with-dask-on-cheyenne" title="Permalink to this headline">¶</a></h1>
@@ -442,6 +473,7 @@ contract your allocation dynamically and save compute time.</p>
 </div>
 
 
+      
     </div>
       
   </div>
