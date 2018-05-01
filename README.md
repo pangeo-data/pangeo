@@ -1,4 +1,4 @@
-[![Gitter chat](https://badges.gitter.im/pangeo-data/Lobby.png)](https://gitter.im/pangeo-data/Lobby)
+[![Gitter chat](https://badges.gitter.im/pangeo-data/Lobby.svg)](https://gitter.im/pangeo-data/Lobby)
 
 Pangeo Data
 ===========
