@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/pangeo-data/pangeo.svg?branch=master)](https://travis-ci.org/pangeo-data/pangeo)
 [![Gitter chat](https://badges.gitter.im/pangeo-data/Lobby.svg)](https://gitter.im/pangeo-data/Lobby)
 
 Pangeo Data
