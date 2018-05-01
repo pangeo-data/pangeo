@@ -1,3 +1,5 @@
+.. _setup-guides:
+
 Pangeo Setup Guides
 ===================
 

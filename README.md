@@ -1,3 +1,5 @@
+[![Gitter chat](https://badges.gitter.im/pangeo-data/Lobby.svg)](https://gitter.im/pangeo-data/Lobby)
+
 Pangeo Data
 ===========
 A community effort for big data geoscience
