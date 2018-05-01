@@ -1,7 +1,7 @@
 .. _use-cases:
 
-Pangeo Use Cases
-================
+Geoscience Use Cases
+====================
 
 
 Physical Oceanography

@@ -3,9 +3,15 @@
 Collaborators
 =============
 
+A range of funding agencies, academic institutions, companies, and individuals
+contribute to Pangeo in different ways.
+
 Funding Agencies
 ----------------
 
+We are grateful to have formal funding support from several funding agencies.
+
+.. _earthcube:
 US NSF EarthCube Program
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -51,17 +57,37 @@ Fellowship in Ocean Sciences awarded to Ryan Abernathey in 2016.
 Institutions
 ------------
 
+These institutions devote significant resources to the Pangeo project.
+We are always looking to expand this list.
+
 Lamont Doherty Earth Observatory
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. image:: _static/ldeo-logo.png
+
+LDEO is a primary recipient of the :ref:`earthcube` award. Several scientists
+and programmers at LDEO are active in the development of Pangeo architecture
+and scientific use cases.
 
 National Center for Atmospheric Research
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Continuum Analytics
-~~~~~~~~~~~~~~~~~~~
+NCAR is a primary recipient of the :ref:`earthcube` award. NCAR scientists and
+programmers are leading the deployment of Pangeo on NCAR's high-performance
+computing systems and conducting scientific investigations using Pangeo tools.
+
+Anaconda Inc.
+~~~~~~~~~~~~~
+
+Anaconda (formerly Continuum Analytics) receives support from the
+:ref:`earthcube` award. Anaconda developers are contributing the the development
+of xarray, dask, and the Pangeo cloud infrastucture.
 
 UK Met Office
 ~~~~~~~~~~~~~
 
 People
 ------
+
+These individuals identify themselves as contributors to Pangeo.
+Don't hesitate to ADD YOURSELF to the list.

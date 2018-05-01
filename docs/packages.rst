@@ -1,7 +1,7 @@
 .. _packages:
 
-Pangeo Packages
-===============
+Packages
+========
 
 Pangeo is not one specific software pacakge.
 A Pangeo environment is made of up of many different open-source software packages.

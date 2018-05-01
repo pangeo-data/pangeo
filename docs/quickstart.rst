@@ -1,7 +1,7 @@
 .. _quickstart:
 
-Pangeo Guide for Scientists
-===========================
+Guide for Scientists
+====================
 
 The goal of Pangeo is to make it quicker and easier to go from raw data to
 scientific insights.

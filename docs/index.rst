@@ -43,9 +43,14 @@ Contents
 ^^^^^^^^
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
 
    about
+   faq
+   quickstart
    packages
-   setup_guides/index
    use_cases/index
+   architecture
+   setup_guides/index
+   deployments
+   collaborators

@@ -1,5 +1,5 @@
-Pangeo Deployments
-==================
+Deployments
+===========
 
 This is a catalog of known pangeo deployments.
 
