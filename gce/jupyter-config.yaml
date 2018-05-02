@@ -57,3 +57,7 @@ jupyterhub:
     users: false
     timeout: 1200
     every: 600
+
+  proxy:
+    service:
+      loadBalancerIP: 35.224.8.169
