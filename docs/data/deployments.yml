@@ -58,12 +58,12 @@
   platform: HPC
   dask: dask-jobqueue and custom launch scripts
   jupyter: Single user notebook servers
-  kind: cloud
+  kind: hpc
 
 - name: RGH-Hub
   description: JupyterHub server used for interactive data analysis by Rhodium Group staff for climate research and analysis
   link: https://compute.rhg.com/hub/login
   platform: Google Cloud Platform
-  dask: KubeCluster
-  jupyter: Single-user notebooks spawned from Jupyterhub
-  kind: hpc
+  dask: dask-kubernetes
+  jupyter: Jupyterhub
+  kind: cloud
