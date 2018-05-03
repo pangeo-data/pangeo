@@ -1,0 +1,69 @@
+# Listing of current Pangeo deployments
+- name: NCAR Cheyenne Cluster
+  description: Large HPC cluster (5.34-petaflops) running at the National Center for Atmospheric Research
+  link: https://www2.cisl.ucar.edu/resources/computational-systems/cheyenne
+  platform: HPC
+  dask: dask-jobqueue and dask-mpi
+  jupyter: Single user notebook servers
+  kind: hpc
+
+- name: pangeo.pydata.org
+  description: Flagship Pangeo JupyterHub server for scalable interactive data analysis running on Google Cloud Platform
+  link: http://pangeo.pydata.org/hub/login
+  platform: Google Cloud Platform
+  dask: dask-kubernetes
+  jupyter: JupyterHub
+  kind: cloud
+
+- name: pangeo-aws.cloudmaven.org
+  description: Prototype JupyterHub server running on AWS
+  link: https://pangeo-aws.cloudmaven.org/hub/login
+  platform: Amazon Web Services
+  dask: dask-kubernetes
+  jupyter: JupyterHub
+  kind: cloud
+
+- name: NASA Pleiades Cluster
+  description: Large HPC cluster (7.24-petaflops) running at the NASA High-End Computing Capability Project
+  link: https://www.nas.nasa.gov/hecc/resources/pleiades.html
+  platform: HPC
+  dask: dask-mpi with custom launch scripts
+  jupyter: Single user notebook servers
+  kind: hpc
+
+- name: Columbia Habanero Cluster
+  description: Research cluster at Columbia University
+  link: https://confluence.columbia.edu/confluence/display/rcs/Habanero+HPC+Cluster+User+Documentation?src=contextnavpagetreemode
+  platform: HPC
+  dask: dask-mpi with custom launch scripts
+  jupyter: Single user notebook servers
+  kind: hpc
+
+- name: Lamont Real-Time Earth Pangeo Cluster
+  description: JupyterHub server used Earth/ocean science research
+  platform: Microsoft Azure Cloud
+  dask: dask-kubernetes
+  jupyter: JupyterHub
+  kind: cloud
+
+- name: CNES HAL
+  description: CNES research cluster
+  platform: HPC
+  dask: dask-jobqueue and custom launch scripts
+  jupyter: Single user notebook servers
+  kind: hpc
+
+- name: USGS Yeti
+  description: USGS's Advanced Research Computing cluster
+  platform: HPC
+  dask: dask-jobqueue and custom launch scripts
+  jupyter: Single user notebook servers
+  kind: cloud
+
+- name: RGH-Hub
+  description: JupyterHub server used for interactive data analysis by Rhodium Group staff for climate research and analysis
+  link: https://compute.rhg.com/hub/login
+  platform: Google Cloud Platform
+  dask: KubeCluster
+  jupyter: Single-user notebooks spawned from Jupyterhub
+  kind: hpc
