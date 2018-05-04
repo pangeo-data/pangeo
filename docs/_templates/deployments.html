@@ -1,0 +1,72 @@
+<h2> Cloud Computing Deployments </h2>
+<table class="table table-striped large">
+{% for deployment in deployments %}
+
+  {% if deployment.kind  == 'cloud' %}
+    <tr>
+      <td>
+        <ul class="list-inline">
+          <li><strong>{{ deployment.name}}</strong></li>
+          {% if deployment.link %}
+          <li>
+              <a class="icon" href="{{ deployment.link }}">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-external-link fa-stack-1x"></i>
+                  </span>
+              </a>
+          </li>
+          {% endif %}
+        </ul>
+        <li><em>Description: {{ deployment.description }}</em></li>
+        <!-- <br> -->
+        <li><em>Platform: {{ deployment.platform }}</em></li>
+        <!-- <br> -->
+        <li><em>Dask Deployment: {{ deployment.dask }}</em></li>
+        <!-- <br> -->
+        <li><em>Jupyter Deployment: {{ deployment.jupyter }}</em></li>
+        <!-- <br> -->
+      {% for tag in deployment.tags %}
+        <mark>{{ tag }}</mark>
+      {% endfor %}
+      </td>
+    </tr>
+    {% endif %}
+  {% endfor %}
+</table>
+
+
+<h2> High Performance Computing Deployments </h2>
+<table class="table table-striped large">
+{% for deployment in deployments %}
+
+  {% if deployment.kind  == 'hpc' %}
+    <tr>
+      <td>
+        <ul class="list-inline">
+          <li><strong>{{ deployment.name}}</strong></li>
+          {% if deployment.link %}
+          <li>
+              <a class="icon" href="{{ deployment.link }}">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-external-link fa-stack-1x"></i>
+                  </span>
+              </a>
+          </li>
+          {% endif %}
+        </ul>
+        <li><em>Description: {{ deployment.description }}</em></li>
+        <!-- <br> -->
+        <li><em>Platform: {{ deployment.platform }}</em></li>
+        <!-- <br> -->
+        <li><em>Dask Deployment: {{ deployment.dask }}</em></li>
+        <!-- <br> -->
+        <li><em>Jupyter Deploymentn: {{ deployment.jupyter }}</em></li>
+        <!-- <br> -->
+      {% for tag in deployment.tags %}
+        <mark>{{ tag }}</mark>
+      {% endfor %}
+      </td>
+    </tr>
+    {% endif %}
+  {% endfor %}
+</table>
