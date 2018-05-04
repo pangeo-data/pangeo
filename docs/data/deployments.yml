@@ -67,3 +67,10 @@
   dask: dask-kubernetes
   jupyter: Jupyterhub
   kind: cloud
+
+- name: Met Office Informatics Lab
+  description: A prototype cluster for the Met Office.
+  platform: Amazon Web Services
+  dask: dask-kubernetes
+  jupyter: Jupyterhub
+  kind: cloud
