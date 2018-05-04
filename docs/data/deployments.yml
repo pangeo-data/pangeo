@@ -74,3 +74,19 @@
   dask: dask-kubernetes
   jupyter: Jupyterhub
   kind: cloud
+
+- name: UW Hyak
+  description: The University of Washington's shared supercomputing cluster.
+  link: http://wiki.hyak.uw.edu/
+  platform: HPC
+  dask: dask-mpi and custom launch scripts
+  jupyter: Single user notebook servers
+  kind: hpc
+
+- name: DOD HPC Systems at AFRL and ERDC
+  description: Unclassified Department of Defense High Performance Computing Modernization Program Supercomputing Clusters (Thunder, Topaz, Utility Servers, etc.)
+  link: https://centers.hpc.mil/index.html
+  platform: HPC
+  dask: dask-jobqueue, dask-mpi, and custom launch scripts
+  jupyter: Single user notebook servers
+  kind: hpc
