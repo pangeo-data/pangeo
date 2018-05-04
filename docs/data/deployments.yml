@@ -90,3 +90,11 @@
   dask: dask-jobqueue, dask-mpi, and custom launch scripts
   jupyter: Single user notebook servers
   kind: hpc
+
+- name: Dask Tutorial Cluster
+  description: JupyterHub server used for dask tutorials
+  link: https://github.com/dask/dask-tutorial-infrastructure
+  platform: Google Cloud Platform
+  dask: dask-kubernetes
+  jupyter: Jupyterhub
+  kind: cloud
