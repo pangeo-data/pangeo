@@ -22,20 +22,21 @@ jupyterhub:
       guarantee: 4G
 
   hub:
-    extraConfig: |
-      from kubernetes import client
-      def modify_pod_hook(spawner, pod):
-          pod.spec.containers[0].security_context = client.V1SecurityContext(
-              privileged=True,
-              capabilities=client.V1Capabilities(
-                  add=['SYS_ADMIN']
-              )
-          )
-          return pod
-      c.KubeSpawner.modify_pod_hook = modify_pod_hook
-      c.JupyterHub.logo_file = '/usr/local/share/jupyter/hub/static/custom/images/logo.png'
-      c.JupyterHub.template_paths = ['/usr/local/share/jupyter/hub/custom_templates/',
-                                    '/usr/local/share/jupyter/hub/templates/']
+    extraConfig:
+      customPodHook: |
+        from kubernetes import client
+        def modify_pod_hook(spawner, pod):
+            pod.spec.containers[0].security_context = client.V1SecurityContext(
+                privileged=True,
+                capabilities=client.V1Capabilities(
+                    add=['SYS_ADMIN']
+                )
+            )
+            return pod
+        c.KubeSpawner.modify_pod_hook = modify_pod_hook
+        c.JupyterHub.logo_file = '/usr/local/share/jupyter/hub/static/custom/images/logo.png'
+        c.JupyterHub.template_paths = ['/usr/local/share/jupyter/hub/custom_templates/',
+                                      '/usr/local/share/jupyter/hub/templates/']
     image:
       name: jupyterhub/k8s-hub
       tag: v0.6
