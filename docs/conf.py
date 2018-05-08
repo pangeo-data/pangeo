@@ -35,6 +35,7 @@ extensions = [
     #'sphinx.ext.intersphinx',
     'sphinx.ext.todo',
     'sphinx.ext.mathjax',
+    'sphinx.ext.autosectionlabel',
     'nbsphinx']
 
 # https://nbsphinx.readthedocs.io/en/0.2.16/never-execute.html
@@ -251,6 +252,11 @@ import yaml
 with open('data/people.yml') as people_data_file:
     people = yaml.load(people_data_file)
 people.sort(key=lambda x: x['last_name'].lower())
+
+with open('data/deployments.yml') as deployments_data_file:
+    deployments = yaml.load(deployments_data_file)
+
 html_context = {
-    'people': people
+    'people': people,
+    'deployments': deployments
 }

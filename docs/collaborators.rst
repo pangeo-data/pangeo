@@ -1,5 +1,3 @@
-.. _collaborators:
-
 Collaborators
 =============
 
@@ -11,14 +9,14 @@ Funding Agencies
 
 We are grateful to have formal funding support from several funding agencies.
 
-.. _earthcube:
-US NSF EarthCube Program
-~~~~~~~~~~~~~~~~~~~~~~~~
+EarthCube
+~~~~~~~~~
 
 .. image:: _static/logo_NSF_earthcube_combined.png
+   :height: 150px
 
-Pangeo currently receives support from the NSF `EarthCube Program`_, which funds
-cyberinfrastructure projects related to Earth Science. This award supports
+Pangeo currently receives support from the US NSF `EarthCube Program`_, which
+funds cyberinfrastructure projects related to Earth Science. This award supports
 scientists and developers at Lamont Doherty Earth Observatory, National
 Center for Atmospheric Research, and Anaconda Inc.
 The public details of the awards can be found on the NSF website:
@@ -48,6 +46,7 @@ Sloan Foundation
 ~~~~~~~~~~~~~~~~
 
 .. image:: _static/Sloan-Logo-primary-blac-web.png
+   :height: 75px
 
 Early work on Pangeo was partly supported via the
 `Alfred P. Sloan foundation <https://sloan.org/>`_, via a Sloan Research
@@ -64,27 +63,45 @@ Lamont Doherty Earth Observatory
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: _static/ldeo-logo.png
+   :height: 75px
+   :target: http://www.ldeo.columbia.edu/
 
-LDEO is a primary recipient of the :ref:`earthcube` award. Several scientists
+LDEO is a primary recipient of the :ref:`EarthCube` award. Several scientists
 and programmers at LDEO are active in the development of Pangeo architecture
 and scientific use cases.
 
 National Center for Atmospheric Research
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-NCAR is a primary recipient of the :ref:`earthcube` award. NCAR scientists and
-programmers are leading the deployment of Pangeo on NCAR's high-performance
-computing systems and conducting scientific investigations using Pangeo tools.
+.. image:: _static/ncar-logo.png
+   :height: 75px
+   :target: https://ncar.ucar.edu/
+
+`NCAR <https://ncar.ucar.edu/>`_ is a primary recipient of the :ref:`EarthCube`
+award. NCAR scientists and programmers are leading the deployment of Pangeo
+on NCAR's high-performance computing systems and conducting scientific
+investigations using Pangeo tools.
 
 Anaconda Inc.
 ~~~~~~~~~~~~~
 
-Anaconda (formerly Continuum Analytics) receives support from the
-:ref:`earthcube` award. Anaconda developers are contributing the the development
-of xarray, dask, and the Pangeo cloud infrastucture.
+.. image:: _static/anaconda-logo.png
+   :height: 75px
+   :target: https://anaconda.org/
+
+`Anaconda <https://anaconda.org/>`_ (formerly Continuum Analytics) receives
+support from the :ref:`EarthCube` award. Anaconda developers are contributing
+the development of xarray, dask, and the Pangeo cloud infrastucture.
 
 UK Met Office
 ~~~~~~~~~~~~~
+
+.. image:: _static/metoffice-logo.png
+   :height: 75px
+   :target: http://www.informaticslab.co.uk
+
+Developers at the `UK Met Office Informatics Lab <http://www.informaticslab.co.uk>`_
+are contributing to the Pangeo cloud infrastructure.
 
 People
 ------
