@@ -35,6 +35,7 @@ extensions = [
     #'sphinx.ext.intersphinx',
     'sphinx.ext.todo',
     'sphinx.ext.mathjax',
+    'sphinx.ext.autosectionlabel',
     'nbsphinx']
 
 # https://nbsphinx.readthedocs.io/en/0.2.16/never-execute.html

@@ -1,5 +1,5 @@
-Getting Started with Dask on Cheyenne
-=====================================
+Getting Started with Pangeo on HPC
+==================================
 
 This documents how to set up an environment to run XArray on Cheyenne.
 In particular it covers the following:
