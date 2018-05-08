@@ -29,7 +29,7 @@
     <link rel="author" title="About these documents" href="about.html" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Getting Started with Dask on Geyser and Caldera" href="setup_guides/geyser_and_caldera.html" />
+    <link rel="prev" title="Getting Started with Pangeo on the Cloud" href="setup_guides/cloud.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -99,8 +99,8 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="architecture.html">Technical Architecture</a></li>
 <li class="toctree-l1"><a class="reference internal" href="setup_guides/index.html">Pangeo Setup Guides</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="setup_guides/cheyenne.html">Getting Started with Dask on Cheyenne</a></li>
-<li class="toctree-l2"><a class="reference internal" href="setup_guides/geyser_and_caldera.html">Getting Started with Dask on Geyser and Caldera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="setup_guides/hpc.html">Getting Started with Pangeo on HPC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="setup_guides/cloud.html">Getting Started with Pangeo on the Cloud</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="deployments.html">Deployments</a></li>
@@ -125,7 +125,7 @@
       aria-labelledby="dLabelLocalToc"><ul>
 <li><a class="reference internal" href="#">Collaborators</a><ul>
 <li><a class="reference internal" href="#funding-agencies">Funding Agencies</a><ul>
-<li><a class="reference internal" href="#us-nsf-earthcube-program">US NSF EarthCube Program</a></li>
+<li><a class="reference internal" href="#earthcube">EarthCube</a></li>
 <li><a class="reference internal" href="#sloan-foundation">Sloan Foundation</a></li>
 </ul>
 </li>
@@ -163,7 +163,7 @@
         <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
 <li><a class="reference internal" href="#">Collaborators</a><ul>
 <li><a class="reference internal" href="#funding-agencies">Funding Agencies</a><ul>
-<li><a class="reference internal" href="#us-nsf-earthcube-program">US NSF EarthCube Program</a></li>
+<li><a class="reference internal" href="#earthcube">EarthCube</a></li>
 <li><a class="reference internal" href="#sloan-foundation">Sloan Foundation</a></li>
 </ul>
 </li>
@@ -184,17 +184,17 @@
     <div class="col-md-9 content ">
       
   <div class="section" id="collaborators">
-<span id="id1"></span><h1>Collaborators<a class="headerlink" href="#collaborators" title="Permalink to this headline">¶</a></h1>
+<h1>Collaborators<a class="headerlink" href="#collaborators" title="Permalink to this headline">¶</a></h1>
 <p>A range of funding agencies, academic institutions, companies, and individuals
 contribute to Pangeo in different ways.</p>
 <div class="section" id="funding-agencies">
 <h2>Funding Agencies<a class="headerlink" href="#funding-agencies" title="Permalink to this headline">¶</a></h2>
 <p>We are grateful to have formal funding support from several funding agencies.</p>
-<div class="section" id="us-nsf-earthcube-program">
-<h3>US NSF EarthCube Program<a class="headerlink" href="#us-nsf-earthcube-program" title="Permalink to this headline">¶</a></h3>
-<img alt="_images/logo_NSF_earthcube_combined.png" src="_images/logo_NSF_earthcube_combined.png" />
-<p>Pangeo currently receives support from the NSF <a class="reference external" href="https://earthcube.org/">EarthCube Program</a>, which funds
-cyberinfrastructure projects related to Earth Science. This award supports
+<div class="section" id="earthcube">
+<h3>EarthCube<a class="headerlink" href="#earthcube" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="_images/logo_NSF_earthcube_combined.png"><img alt="_images/logo_NSF_earthcube_combined.png" src="_images/logo_NSF_earthcube_combined.png" style="height: 150px;" /></a>
+<p>Pangeo currently receives support from the US NSF <a class="reference external" href="https://earthcube.org/">EarthCube Program</a>, which
+funds cyberinfrastructure projects related to Earth Science. This award supports
 scientists and developers at Lamont Doherty Earth Observatory, National
 Center for Atmospheric Research, and Anaconda Inc.
 The public details of the awards can be found on the NSF website:</p>
@@ -218,7 +218,7 @@ is published under a CC BY 4.0 license on Figshare:</p>
 </div>
 <div class="section" id="sloan-foundation">
 <h3>Sloan Foundation<a class="headerlink" href="#sloan-foundation" title="Permalink to this headline">¶</a></h3>
-<img alt="_images/Sloan-Logo-primary-blac-web.png" src="_images/Sloan-Logo-primary-blac-web.png" />
+<a class="reference internal image-reference" href="_images/Sloan-Logo-primary-blac-web.png"><img alt="_images/Sloan-Logo-primary-blac-web.png" src="_images/Sloan-Logo-primary-blac-web.png" style="height: 75px;" /></a>
 <p>Early work on Pangeo was partly supported via the
 <a class="reference external" href="https://sloan.org/">Alfred P. Sloan foundation</a>, via a Sloan Research
 Fellowship in Ocean Sciences awarded to Ryan Abernathey in 2016.</p>
@@ -230,25 +230,31 @@ Fellowship in Ocean Sciences awarded to Ryan Abernathey in 2016.</p>
 We are always looking to expand this list.</p>
 <div class="section" id="lamont-doherty-earth-observatory">
 <h3>Lamont Doherty Earth Observatory<a class="headerlink" href="#lamont-doherty-earth-observatory" title="Permalink to this headline">¶</a></h3>
-<img alt="_static/ldeo-logo.png" src="_static/ldeo-logo.png" />
-<p>LDEO is a primary recipient of the <span class="xref std std-ref">earthcube</span> award. Several scientists
+<a class="reference external image-reference" href="http://www.ldeo.columbia.edu/"><img alt="_images/ldeo-logo.png" src="_images/ldeo-logo.png" style="height: 75px;" /></a>
+<p>LDEO is a primary recipient of the <a class="reference internal" href="#earthcube"><span class="std std-ref">EarthCube</span></a> award. Several scientists
 and programmers at LDEO are active in the development of Pangeo architecture
 and scientific use cases.</p>
 </div>
 <div class="section" id="national-center-for-atmospheric-research">
 <h3>National Center for Atmospheric Research<a class="headerlink" href="#national-center-for-atmospheric-research" title="Permalink to this headline">¶</a></h3>
-<p>NCAR is a primary recipient of the <span class="xref std std-ref">earthcube</span> award. NCAR scientists and
-programmers are leading the deployment of Pangeo on NCAR’s high-performance
-computing systems and conducting scientific investigations using Pangeo tools.</p>
+<a class="reference external image-reference" href="https://ncar.ucar.edu/"><img alt="_images/ncar-logo.png" src="_images/ncar-logo.png" style="height: 75px;" /></a>
+<p><a class="reference external" href="https://ncar.ucar.edu/">NCAR</a> is a primary recipient of the <a class="reference internal" href="#earthcube"><span class="std std-ref">EarthCube</span></a>
+award. NCAR scientists and programmers are leading the deployment of Pangeo
+on NCAR’s high-performance computing systems and conducting scientific
+investigations using Pangeo tools.</p>
 </div>
 <div class="section" id="anaconda-inc">
 <h3>Anaconda Inc.<a class="headerlink" href="#anaconda-inc" title="Permalink to this headline">¶</a></h3>
-<p>Anaconda (formerly Continuum Analytics) receives support from the
-<span class="xref std std-ref">earthcube</span> award. Anaconda developers are contributing the the development
-of xarray, dask, and the Pangeo cloud infrastucture.</p>
+<a class="reference external image-reference" href="https://anaconda.org/"><img alt="_images/anaconda-logo.png" src="_images/anaconda-logo.png" style="height: 75px;" /></a>
+<p><a class="reference external" href="https://anaconda.org/">Anaconda</a> (formerly Continuum Analytics) receives
+support from the <a class="reference internal" href="#earthcube"><span class="std std-ref">EarthCube</span></a> award. Anaconda developers are contributing
+the development of xarray, dask, and the Pangeo cloud infrastucture.</p>
 </div>
 <div class="section" id="uk-met-office">
 <h3>UK Met Office<a class="headerlink" href="#uk-met-office" title="Permalink to this headline">¶</a></h3>
+<a class="reference external image-reference" href="http://www.informaticslab.co.uk"><img alt="_images/metoffice-logo.png" src="_images/metoffice-logo.png" style="height: 75px;" /></a>
+<p>Developers at the <a class="reference external" href="http://www.informaticslab.co.uk">UK Met Office Informatics Lab</a>
+are contributing to the Pangeo cloud infrastructure.</p>
 </div>
 </div>
 <div class="section" id="people">
