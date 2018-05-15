@@ -122,6 +122,10 @@ in the Jupyter documentation.
 From here, we have two options. Option 1 will start a Jupyter Notebook Server
 and manage dask and using the `dask-jobqueue`_ package. Option 2 will start a dask
 cluster using `dask-mpi` and will run a Jupyter server as part of the dask cluster.
+We generally recommend starting with Option 1, espcially if you will be working
+interactively, unless you have a reason for managing the job submission scripts
+on your own. Users that will be using dask in batch-style workflows may prefer
+Option 2.
 
 Deploy Option 1: Jupyter + dask-jobqueue
 ----------------------------------------
@@ -167,10 +171,7 @@ Now we can launch the notebook server:
 ::
 
     (pangeo) $ jupyter lab --no-browser --ip=`hostname` --port=8877
-    [I 13:36:52.298 LabApp] JupyterLab beta preview extension loaded from /home/username/miniconda3/envs/pangeo/lib/python3.6/site-packages/jupyterlab
-    [I 13:36:52.298 LabApp] JupyterLab application directory is /home/username/miniconda3/envs/pangeo/share/jupyter/lab
-    [I 13:36:52.321 LabApp] Serving notebooks from local directory: /home/username
-    [I 13:36:52.321 LabApp] 0 active kernels
+    ...
     [I 13:36:52.321 LabApp] The Jupyter Notebook is running at:
     [I 13:36:52.321 LabApp] http://r8i4n0:8877/
     [I 13:36:52.321 LabApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
@@ -195,9 +196,9 @@ Launch Dask with dask-jobqueue
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Most HPC systems use a job-scheduling system to manage job submissions and
-executions among many users. The `dask-jobqueue`_ is designed to help dask
-interface with these job queing systems. Usage is quite simple and can be done
-from within your Jupyter Notebook:
+executions among many users. The `dask-jobqueue`_ package is designed to help
+dask interface with these job queing systems. Usage is quite simple and can be
+done from within your Jupyter Notebook:
 
 .. code:: python
 
@@ -408,7 +409,7 @@ Write these two scripts to your home directory:
     mpirun --np 6 dask-mpi --nthreads 6 \
         --memory-limit 22e9 \
         --interface ib0 \
-        --local-directory /glade/scratch/$USER
+        --local-directory $TMPDIR
 
 **Add one worker script**
 
@@ -428,7 +429,7 @@ Write these two scripts to your home directory:
         --memory-limit 22e9 \
         --interface ib0 \
         --no-scheduler \
-        --local-directory /glade/scratch/$USER
+        --local-directory $TMPDIR
 
 And then run the main one once
 
@@ -448,6 +449,19 @@ And the second one a few times
 You can run this more times during your session to increase your
 allocation dynamically. You can also kill these jobs independently to
 contract your allocation dynamically and save compute time.
+
+Further Reading
+---------------
+
+We have not attempted to provide a comprehensive tutorial on how to use Pangeo,
+Dask, or Jupyter on HPC systems. This is because each HPC system is uniquely
+configured. Instead we have provided two generalizable workflows for deploying
+Pangeo. Below we provide a few useful links that will be useful for further
+customization of these tools.
+
+ * `Deploying Dask on HPC <http://dask.pydata.org/en/latest/setup/hpc.html>`__
+ * `Configuring and Deploying Jupyter Servers <http://jupyter-notebook.readthedocs.io/en/stable/index.html>`__
+
 
 .. _conda: https://conda.io/docs/
 .. _Jupyter: https://jupyter.org/
