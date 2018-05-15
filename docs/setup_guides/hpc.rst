@@ -98,9 +98,8 @@ a hashed password by entering the following commands:
     Enter password:
 
 You can enter a password of your choice, and it will return to you a
-hashed password that encodes the same information, but is safe to
-include in a publicly accessible config file. I entered "password" (do
-not do this) and go the following output:
+encoded password. I entered "password" (do not do this) and go the following
+output:
 
 .. code:: python
 
@@ -112,7 +111,13 @@ Copy that string into your ``jupyter_notebook_config.py`` config file
 
     c.NotebookApp.password = u'sha1:69a76df803b9:99ca27341563cd85ba4e78684128e1f4ad2d8d0d'
 
-Great. We're done with that.
+For security reasons, we recommend making sure your ``jupyter_notebook_config.py``
+is readable only by you. For more information on and other methods for
+securing Jupyter, check out
+`Securing a notebook server <http://jupyter-notebook.readthedocs.io/en/stable/public_server.html#securing-a-notebook-server>`__
+in the Jupyter documentation.
+
+------------
 
 From here, we have two options. Option 1 will start a Jupyter Notebook Server
 and manage dask and using the `dask-jobqueue`_ package. Option 2 will start a dask
@@ -144,23 +149,24 @@ will want to reactivate it.
     source activate pangeo
 
 From here, we can start jupyter. The Cheyenne computer administrators have
-developed a `start-notebook https://www2.cisl.ucar.edu/resources/computational-systems/cheyenne/software/jupyter-and-ipython#notebook`
-utility that wraps the following steps into a  single execution. You should
+developed a `start-notebook <https://www2.cisl.ucar.edu/resources/computational-systems/cheyenne/software/jupyter-and-ipython#notebook>`__
+utility that wraps the following steps into a single execution. You should
 check with your system administrators to see if they have something similar.
 If not, you'll need to take the following steps:
 
-Determine the hostname of the machine you are on:
+Copy this line into your terminal. It will echo a command you'll want to use
+later.
 
 ::
 
-    (pangeo) $ hostname
-    r8i4n0
+    (pangeo) $ echo "ssh -N -L 8877:`hostname`:8877 -L 8878:`hostname`:8787 $USER@cheyenne.ucar.edu"
+    ssh -N -L 8877:r8i4n0:8877 -L 8878:r8i4n0:8787 username@cheyenne.ucar.edu
 
 Now we can launch the notebook server:
 
 ::
 
-    (pangeo) $ jupyter lab --no-browser --ip=r8i4n0 --port=8877
+    (pangeo) $ jupyter lab --no-browser --ip=`hostname` --port=8877
     [I 13:36:52.298 LabApp] JupyterLab beta preview extension loaded from /home/username/miniconda3/envs/pangeo/lib/python3.6/site-packages/jupyterlab
     [I 13:36:52.298 LabApp] JupyterLab application directory is /home/username/miniconda3/envs/pangeo/share/jupyter/lab
     [I 13:36:52.321 LabApp] Serving notebooks from local directory: /home/username
@@ -169,7 +175,7 @@ Now we can launch the notebook server:
     [I 13:36:52.321 LabApp] http://r8i4n0:8877/
     [I 13:36:52.321 LabApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
 
-Now, connect to the server ussing an ssh tunnel from your local machine
+Now, connect to the server using an ssh tunnel from your local machine
 (this could be your laptop or desktop).
 
 ::
@@ -180,6 +186,9 @@ You'll want to change the details in the command above but the basic idea is
 that we're passing the ports 8877 and 8878 from the compute node `r8i4n0` to our
 local system. Now open http://localhost:8877 on your local machine, you should
 find a jupyter server running!
+
+*Note that we're also passing the 8878 port through so we can access the dask
+dashboard later.*
 
 
 Launch Dask with dask-jobqueue
@@ -252,7 +261,7 @@ Copy and paste the following text into a file, dask.sh:
     #PBS -N sample
     #PBS -q economy
     #PBS -A UCLB0022
-    #PBS -l select=2:ncpus=72:mpiprocs=6:ompthreads=6
+    #PBS -l select=2:ncpus=72:mpiprocs=6
     #PBS -l walltime=01:00:00
     #PBS -j oe
     #PBS -m abe
@@ -266,7 +275,10 @@ Copy and paste the following text into a file, dask.sh:
     # >>> client = Client(scheduler_file='~/scheduler.json')
 
     rm -f scheduler.json
-    mpirun --np 12 dask-mpi --nthreads 6 --memory-limit 24e9 --interface ib0
+    mpirun --np 12 dask-mpi \
+        --nthreads 6 \
+        --memory-limit 24e9 \
+        --interface ib0
 
 This script asks for two nodes with 36 cores each. It breaks up each
 node into 6 MPI processes, each of which gets 6 cores and 24GB of RAM
@@ -382,7 +394,7 @@ Write these two scripts to your home directory:
     #PBS -N dask
     #PBS -q economy
     #PBS -A UCLB0022
-    #PBS -l select=1:ncpus=36:mpiprocs=6:ompthreads=6
+    #PBS -l select=1:ncpus=36:mpiprocs=6
     #PBS -l walltime=00:30:00
     #PBS -j oe
     #PBS -m abe
@@ -393,7 +405,10 @@ Write these two scripts to your home directory:
     # >>> client = Client(scheduler_file='~/scheduler.json')
 
     rm -f scheduler.json
-    mpirun --np 6 dask-mpi --nthreads 6 --memory-limit 22e9 --interface ib0 --local-directory /glade/scratch/$USER
+    mpirun --np 6 dask-mpi --nthreads 6 \
+        --memory-limit 22e9 \
+        --interface ib0 \
+        --local-directory /glade/scratch/$USER
 
 **Add one worker script**
 
@@ -404,12 +419,16 @@ Write these two scripts to your home directory:
     #PBS -N dask-workers
     #PBS -q economy
     #PBS -A UCLB0022
-    #PBS -l select=1:ncpus=36:mpiprocs=6:ompthreads=6
+    #PBS -l select=1:ncpus=36:mpiprocs=6
     #PBS -l walltime=00:30:00
     #PBS -j oe
     #PBS -m abe
 
-    mpirun --np 6 dask-mpi --nthreads 6 --memory-limit 22e9 --interface ib0 --no-scheduler --local-directory /glade/scratch/$USER
+    mpirun --np 6 dask-mpi --nthreads 6 \
+        --memory-limit 22e9 \
+        --interface ib0 \
+        --no-scheduler \
+        --local-directory /glade/scratch/$USER
 
 And then run the main one once
 
