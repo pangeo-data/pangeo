@@ -15,7 +15,7 @@ Performance Computing (HPC) systems. In particular it covers the following:
 Although the examples on this page were developed using NCAR's `Cheyenne`_ super
 computer, the concepts here should be generally applicable to typical HPC systems.
 This document assumes that you already have an access to an HPC like Cheyenne,
-and are comfortable using the command line. It may necessaary to work with your
+and are comfortable using the command line. It may be necessary to work with your
 system administrators to properly configure these tools for your machine.
 
 You should log into your HPC system now.
@@ -119,8 +119,8 @@ in the Jupyter documentation.
 
 ------------
 
-From here, we have two options. Option 1 will start a Jupyter Notebook Server
-and manage dask and using the `dask-jobqueue`_ package. Option 2 will start a dask
+From here, we have two options. Option 1 will start a Jupyter Notebook server
+and manage dask using the `dask-jobqueue`_ package. Option 2 will start a dask
 cluster using `dask-mpi` and will run a Jupyter server as part of the dask cluster.
 We generally recommend starting with Option 1, espcially if you will be working
 interactively, unless you have a reason for managing the job submission scripts
@@ -163,8 +163,8 @@ later.
 
 ::
 
-    (pangeo) $ echo "ssh -N -L 8877:`hostname`:8877 -L 8878:`hostname`:8787 $USER@cheyenne.ucar.edu"
-    ssh -N -L 8877:r8i4n0:8877 -L 8878:r8i4n0:8787 username@cheyenne.ucar.edu
+    (pangeo) $ echo "ssh -N -L 8877:`hostname`:8877 -L 8878:`hostname`:8878 $USER@cheyenne.ucar.edu"
+    ssh -N -L 8877:r8i4n0:8877 -L 8878:r8i4n0:8878 username@cheyenne.ucar.edu
 
 Now we can launch the notebook server:
 
@@ -197,14 +197,19 @@ Launch Dask with dask-jobqueue
 
 Most HPC systems use a job-scheduling system to manage job submissions and
 executions among many users. The `dask-jobqueue`_ package is designed to help
-dask interface with these job queing systems. Usage is quite simple and can be
+dask interface with these job queuing systems. Usage is quite simple and can be
 done from within your Jupyter Notebook:
 
 .. code:: python
 
     from dask_jobqueue import PBSCluster
 
-    cluster = PBSCluster(processes=6, threads=4, memory="16GB")
+    cluster = PBSCluster(processes=18,
+                         threads=4, memory="6GB",
+                         project='UCLB0022',
+                         queue='premium',
+                         resource_spec='select=1:ncpus=36:mem=109G',
+                         walltime='02:00:00')
     cluster.start_workers(10)
 
     from dask.distributed import Client
@@ -262,7 +267,7 @@ Copy and paste the following text into a file, dask.sh:
     #PBS -N sample
     #PBS -q economy
     #PBS -A UCLB0022
-    #PBS -l select=2:ncpus=72:mpiprocs=6
+    #PBS -l select=2:ncpus=36:mpiprocs=6
     #PBS -l walltime=01:00:00
     #PBS -j oe
     #PBS -m abe
@@ -306,7 +311,7 @@ And track its progress with ``qstat``
     1681778.chadmin username regular  sample      27872   2 144    --  00:20 R 00:01
 
 When this job runs it places a ``scheduler.json`` file in your home
-directory. This contains the necessaary information to connect to this
+directory. This contains the necessary information to connect to this
 cluster from anywhere in the network. We'll do that now briefly from the
 login node. In the next section we'll set up a Jupyter notebook server
 on your allocation.
@@ -461,7 +466,6 @@ customization of these tools.
 
  * `Deploying Dask on HPC <http://dask.pydata.org/en/latest/setup/hpc.html>`__
  * `Configuring and Deploying Jupyter Servers <http://jupyter-notebook.readthedocs.io/en/stable/index.html>`__
-
 
 .. _conda: https://conda.io/docs/
 .. _Jupyter: https://jupyter.org/
