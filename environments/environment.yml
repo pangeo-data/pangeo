@@ -2,6 +2,7 @@ name: pangeo
 channels:
   - conda-forge
   - defaults
+  - intake
 dependencies:
   - python=3.6
   - pip
@@ -54,6 +55,9 @@ dependencies:
   - gcsfs
   - nodejs
   - mpi4py
+  # intake cats
+  - intake
+  - intake-xarray
   - pip:
     - coveralls
     - pytest-cov

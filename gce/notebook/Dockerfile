@@ -7,11 +7,11 @@ RUN apt-get update \
   && rm -rf /var/lib/apt/lists/*
 USER $NB_USER
 
-RUN conda install --yes -c ioam -c bokeh/channel/dev \
-    bokeh=0.12.15dev3 \
+RUN conda install --yes -c defaults -c ioam -c bokeh/channel/dev -c intake \
+    bokeh=0.12.15dev1 \
     cytoolz \
     datashader \
-    dask=0.17.4 \
+    dask=0.17.5 \
     dask-ml \
     distributed=1.21.8 \
     fastparquet \
@@ -34,6 +34,7 @@ RUN conda install --yes -c ioam -c bokeh/channel/dev \
     tornado \
     xarray \
     zict \
+    intake-xarray \
     && conda clean -tipsy
 
 RUN pip install fusepy click jedi kubernetes --upgrade --no-cache-dir
