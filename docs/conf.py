@@ -245,7 +245,7 @@ intersphinx_mapping = {'https://docs.python.org/': None}
 # https://pypi.python.org/pypi/sphinx-bootstrap-theme/
 def setup(app):
     app.add_stylesheet("pangeo-style.css") # also can be a full URL
-    app.add_stylesheet("http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css")
+    app.add_stylesheet("https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css")
 
 # a hack to get our custom people data into sphinx
 import yaml
