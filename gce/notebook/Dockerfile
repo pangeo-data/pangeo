@@ -38,7 +38,7 @@ RUN conda install --yes -c defaults -c ioam -c bokeh/channel/dev -c intake \
 
 RUN pip install --upgrade pip
 
-RUN pip install fusepy click jedi kubernetes dask-kubernetes s3fs \
+RUN pip install fusepy click jedi kubernetes==4.0.0 dask-kubernetes s3fs \
                 gcsfs==0.1.0 zarr==2.2.0 xarray==0.10.4 \
                 --upgrade --no-cache-dir
 
