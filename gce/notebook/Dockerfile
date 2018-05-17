@@ -8,7 +8,7 @@ RUN apt-get update \
 USER $NB_USER
 
 RUN conda install --yes -c defaults -c ioam -c bokeh/channel/dev -c intake \
-    bokeh \
+    bokeh=0.12.16 \
     cytoolz \
     dask=0.17.5 \
     dask-ml \
@@ -36,13 +36,12 @@ RUN conda install --yes -c defaults -c ioam -c bokeh/channel/dev -c intake \
     intake-xarray \
     && conda clean -tipsy
 
-RUN pip install fusepy click jedi kubernetes --upgrade --no-cache-dir
+RUN pip install fusepy click jedi kubernetes gcsfs=0.1.0 --upgrade --no-cache-dir
 
 RUN pip install daskernetes==0.1.3 \
                 dask-kubernetes \
                 git+https://github.com/zarr-developers/zarr \
                 git+https://github.com/pydata/xarray \
-                git+https://github.com/dask/gcsfs \
                 git+https://github.com/jupyterhub/nbserverproxy \
                 git+https://github.com/xgcm/xgcm \
                 git+https://github.com/bokeh/datashader.git \
