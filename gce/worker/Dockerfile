@@ -29,13 +29,9 @@ RUN apt-get update \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
 
-RUN pip install pyasn1 click urllib3 gcsfs=0.1.0 --upgrade --no-cache-dir
-
-RUN pip install git+https://github.com/zarr-developers/zarr \
-                git+https://github.com/pydata/xarray \
-                fusepy \
-                --no-cache-dir \
-                --upgrade
+RUN pip install pyasn1 click urllib3 fusepy \
+                gcsfs=0.1.0 zarr=2.2.0 xarray=0.10.4 \
+                --upgrade --no-cache-dir
 
 ENV OMP_NUM_THREADS=1
 ENV DASK_TICK_MAXIMUM_DELAY=5s
