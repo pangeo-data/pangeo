@@ -8,9 +8,8 @@ RUN apt-get update \
 USER $NB_USER
 
 RUN conda install --yes -c defaults -c ioam -c bokeh/channel/dev -c intake \
-    bokeh=0.12.15dev1 \
+    bokeh \
     cytoolz \
-    datashader \
     dask=0.17.5 \
     dask-ml \
     distributed=1.21.8 \
@@ -25,7 +24,7 @@ RUN conda install --yes -c defaults -c ioam -c bokeh/channel/dev -c intake \
     nomkl \
     numba \
     numcodecs \
-    numpy \
+    numpy=1.14.3 \
     pandas \
     python-blosc \
     scipy \
@@ -46,6 +45,7 @@ RUN pip install daskernetes==0.1.3 \
                 git+https://github.com/dask/gcsfs \
                 git+https://github.com/jupyterhub/nbserverproxy \
                 git+https://github.com/xgcm/xgcm \
+                git+https://github.com/bokeh/datashader.git \
                 --no-cache-dir \
                 --upgrade
 

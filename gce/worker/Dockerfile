@@ -15,7 +15,7 @@ RUN conda install --yes -c conda-forge \
     nomkl \
     numba \
     numcodecs \
-    numpy \
+    numpy=1.14.3 \
     pandas \
     python-blosc \
     scikit-image \
@@ -33,7 +33,7 @@ RUN pip install pyasn1 click urllib3 --upgrade
 
 RUN pip install git+https://github.com/zarr-developers/zarr \
                 git+https://github.com/pydata/xarray \
-                git+https://github.com/dask/gcsfs@f99177b31c44fcc404619b2876a77cdcda955a75 \
+                git+https://github.com/dask/gcsfs \
                 fusepy \
                 --no-cache-dir \
                 --upgrade
