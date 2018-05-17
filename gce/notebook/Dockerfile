@@ -37,7 +37,7 @@ RUN conda install --yes -c defaults -c ioam -c bokeh/channel/dev -c intake \
     && conda clean -tipsy
 
 RUN pip install fusepy click jedi kubernetes dask-kubernetes \
-                daskernetes==0.1.3 gcsfs=0.1.0 zarr=2.2.0 xarray=0.10.4 \
+                daskernetes==0.1.3 gcsfs==0.1.0 zarr==2.2.0 xarray==0.10.4 \
                 --upgrade --no-cache-dir
 
 RUN pip install git+https://github.com/jupyterhub/nbserverproxy \

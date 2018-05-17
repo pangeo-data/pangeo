@@ -30,7 +30,7 @@ RUN apt-get update \
   && rm -rf /var/lib/apt/lists/*
 
 RUN pip install pyasn1 click urllib3 fusepy \
-                gcsfs=0.1.0 zarr=2.2.0 xarray=0.10.4 \
+                gcsfs==0.1.0 zarr==2.2.0 xarray==0.10.4 \
                 --upgrade --no-cache-dir
 
 ENV OMP_NUM_THREADS=1
