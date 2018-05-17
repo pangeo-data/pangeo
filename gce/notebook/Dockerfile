@@ -11,7 +11,7 @@ RUN conda install --yes -c defaults -c ioam -c bokeh/channel/dev -c intake \
     bokeh=0.12.15dev1 \
     cytoolz \
     datashader \
-    dask=0.17.4 \
+    dask=0.17.5 \
     dask-ml \
     distributed=1.21.8 \
     fastparquet \
