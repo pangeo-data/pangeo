@@ -36,13 +36,11 @@ RUN conda install --yes -c defaults -c ioam -c bokeh/channel/dev -c intake \
     intake-xarray \
     && conda clean -tipsy
 
-RUN pip install fusepy click jedi kubernetes gcsfs=0.1.0 --upgrade --no-cache-dir
+RUN pip install fusepy click jedi kubernetes dask-kubernetes \
+                daskernetes==0.1.3 gcsfs=0.1.0 zarr=2.2.0 xarray=0.10.4 \
+                --upgrade --no-cache-dir
 
-RUN pip install daskernetes==0.1.3 \
-                dask-kubernetes \
-                git+https://github.com/zarr-developers/zarr \
-                git+https://github.com/pydata/xarray \
-                git+https://github.com/jupyterhub/nbserverproxy \
+RUN pip install git+https://github.com/jupyterhub/nbserverproxy \
                 git+https://github.com/xgcm/xgcm \
                 git+https://github.com/bokeh/datashader.git \
                 --no-cache-dir \
