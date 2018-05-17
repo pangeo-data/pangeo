@@ -31,7 +31,7 @@ RUN apt-get update \
 
 RUN pip install --upgrade pip
 
-RUN pip install pyasn1 click urllib3 fusepy \
+RUN pip install pyasn1 click urllib3 fusepy s3fs \
                 gcsfs==0.1.0 zarr==2.2.0 xarray==0.10.4 \
                 --upgrade --no-cache-dir
 
