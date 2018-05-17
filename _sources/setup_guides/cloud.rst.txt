@@ -1,3 +1,5 @@
+.. _cloud:
+
 Getting Started with Pangeo on the Cloud
 ========================================
 This documents how to set up a cluster to run Dask on Kubernetes using GCP.

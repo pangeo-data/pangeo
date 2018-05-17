@@ -100,8 +100,8 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../architecture.html">Technical Architecture</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Pangeo Setup Guides</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="hpc.html">Getting Started with Pangeo on HPC</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cloud.html">Getting Started with Pangeo on the Cloud</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#setting-up-pangeo-on-hpc-systems">Setting up Pangeo on HPC Systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#setting-up-pangeo-on-cloud-systems">Setting up Pangeo on Cloud Systems</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../deployments.html">Deployments</a></li>
@@ -124,7 +124,11 @@
   <ul class="dropdown-menu localtoc"
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
-<li><a class="reference internal" href="#">Pangeo Setup Guides</a></li>
+<li><a class="reference internal" href="#">Pangeo Setup Guides</a><ul>
+<li><a class="reference internal" href="#setting-up-pangeo-on-hpc-systems">Setting up Pangeo on HPC Systems</a></li>
+<li><a class="reference internal" href="#setting-up-pangeo-on-cloud-systems">Setting up Pangeo on Cloud Systems</a></li>
+</ul>
+</li>
 </ul>
 </ul>
 </li>
@@ -147,7 +151,11 @@
   <div class="row">
       <div class="col-md-3">
         <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
-<li><a class="reference internal" href="#">Pangeo Setup Guides</a></li>
+<li><a class="reference internal" href="#">Pangeo Setup Guides</a><ul>
+<li><a class="reference internal" href="#setting-up-pangeo-on-hpc-systems">Setting up Pangeo on HPC Systems</a></li>
+<li><a class="reference internal" href="#setting-up-pangeo-on-cloud-systems">Setting up Pangeo on Cloud Systems</a></li>
+</ul>
+</li>
 </ul>
 
         </div>
@@ -156,18 +164,41 @@
       
   <div class="section" id="pangeo-setup-guides">
 <span id="setup-guides"></span><h1>Pangeo Setup Guides<a class="headerlink" href="#pangeo-setup-guides" title="Permalink to this headline">¶</a></h1>
-<p>For Advanced Users:</p>
+<p>The Pangeo software stack is an collection of <a class="reference internal" href="../packages.html#packages"><span class="std std-ref">Packages</span></a> that when used
+together facilitate scalable data analysis on a wide range of computing platforms
+(see <a class="reference internal" href="../deployments.html#deployments"><span class="std std-ref">Deployments</span></a> for a list of examples where Pangeo concepts have been
+deployed).</p>
+<p>This is a growing collection of information that will help you setup your own
+Pangeo deployment, whether it be on an <a class="reference internal" href="hpc.html"><span class="doc">HPC</span></a> system or on a public <a class="reference internal" href="cloud.html"><span class="doc">cloud</span></a>.</p>
+<p>If you have tips or deployments that you would like to share, or if you see
+anything that is incorrect, or have any questions, feel free to reach out at
+the <a class="reference external" href="https://github.com/pangeo-data/pangeo/issues">issues page</a>.</p>
+<p>We have broken our setup guides into two distinct tracks, one for <a class="reference internal" href="hpc.html"><span class="doc">HPC</span></a> systems,
+and another for <a class="reference internal" href="cloud.html"><span class="doc">cloud</span></a> systems:</p>
+<div class="section" id="setting-up-pangeo-on-hpc-systems">
+<h2>Setting up Pangeo on HPC Systems<a class="headerlink" href="#setting-up-pangeo-on-hpc-systems" title="Permalink to this headline">¶</a></h2>
+<p>This tutorial assumes you have access to a HPC system and that you have some
+basic Unix skills. We’ll walk you through some common steps for getting Pangeo
+running on a typical HPC system.</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="hpc.html">Getting Started with Pangeo on HPC</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="hpc.html#installing-a-software-environment">Installing a software environment</a></li>
 <li class="toctree-l2"><a class="reference internal" href="hpc.html#configure-jupyter">Configure Jupyter</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hpc.html#launch-dask-with-a-script">Launch Dask with a script</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hpc.html#launch-and-connect-to-jupyter">Launch and connect to Jupyter</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hpc.html#open-a-notebook-and-perform-a-simple-computation">Open a notebook and perform a simple computation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hpc.html#dynamic-deployment">Dynamic Deployment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hpc.html#deploy-option-1-jupyter-dask-jobqueue">Deploy Option 1: Jupyter + dask-jobqueue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hpc.html#deploy-option-2-jupyter-dask-mpi">Deploy Option 2: Jupyter + dask-mpi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hpc.html#further-reading">Further Reading</a></li>
 </ul>
 </li>
+</ul>
+</div>
+</div>
+<div class="section" id="setting-up-pangeo-on-cloud-systems">
+<h2>Setting up Pangeo on Cloud Systems<a class="headerlink" href="#setting-up-pangeo-on-cloud-systems" title="Permalink to this headline">¶</a></h2>
+<p>These tutorials describe how to deploy Pangeo using <a class="reference external" href="https://kubernetes.io/">Kubernetes</a>. Most users
+will also find the <a class="reference external" href="http://zero-to-jupyterhub.readthedocs.io">zero-to-jupyterhub</a> documentation quite useful.</p>
+<div class="toctree-wrapper compound">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="cloud.html">Getting Started with Pangeo on the Cloud</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="cloud.html#installing-a-software-environment">Installing a software environment</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cloud.html#setup-with-google-container-engine">Setup with Google Container Engine</a></li>
@@ -177,6 +208,7 @@
 </ul>
 </li>
 </ul>
+</div>
 </div>
 </div>
 

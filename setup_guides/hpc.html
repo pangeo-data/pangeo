@@ -100,8 +100,8 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../architecture.html">Technical Architecture</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Pangeo Setup Guides</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Getting Started with Pangeo on HPC</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cloud.html">Getting Started with Pangeo on the Cloud</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#setting-up-pangeo-on-hpc-systems">Setting up Pangeo on HPC Systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#setting-up-pangeo-on-cloud-systems">Setting up Pangeo on Cloud Systems</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../deployments.html">Deployments</a></li>
@@ -127,14 +127,16 @@
 <li><a class="reference internal" href="#">Getting Started with Pangeo on HPC</a><ul>
 <li><a class="reference internal" href="#installing-a-software-environment">Installing a software environment</a></li>
 <li><a class="reference internal" href="#configure-jupyter">Configure Jupyter</a></li>
-<li><a class="reference internal" href="#launch-dask-with-a-script">Launch Dask with a script</a></li>
-<li><a class="reference internal" href="#launch-and-connect-to-jupyter">Launch and connect to Jupyter</a></li>
-<li><a class="reference internal" href="#open-a-notebook-and-perform-a-simple-computation">Open a notebook and perform a simple computation</a></li>
-<li><a class="reference internal" href="#dynamic-deployment">Dynamic Deployment</a><ul>
-<li><a class="reference internal" href="#main-script">Main script</a></li>
-<li><a class="reference internal" href="#add-one-worker-script">Add one worker script</a></li>
+<li><a class="reference internal" href="#deploy-option-1-jupyter-dask-jobqueue">Deploy Option 1: Jupyter + dask-jobqueue</a><ul>
+<li><a class="reference internal" href="#start-a-jupyter-notebook-server">Start a Jupyter Notebook Server</a></li>
+<li><a class="reference internal" href="#launch-dask-with-dask-jobqueue">Launch Dask with dask-jobqueue</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#deploy-option-2-jupyter-dask-mpi">Deploy Option 2: Jupyter + dask-mpi</a><ul>
+<li><a class="reference internal" href="#launch-and-connect-to-jupyter">Launch and connect to Jupyter</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#further-reading">Further Reading</a></li>
 </ul>
 </li>
 </ul>
@@ -162,14 +164,16 @@
 <li><a class="reference internal" href="#">Getting Started with Pangeo on HPC</a><ul>
 <li><a class="reference internal" href="#installing-a-software-environment">Installing a software environment</a></li>
 <li><a class="reference internal" href="#configure-jupyter">Configure Jupyter</a></li>
-<li><a class="reference internal" href="#launch-dask-with-a-script">Launch Dask with a script</a></li>
-<li><a class="reference internal" href="#launch-and-connect-to-jupyter">Launch and connect to Jupyter</a></li>
-<li><a class="reference internal" href="#open-a-notebook-and-perform-a-simple-computation">Open a notebook and perform a simple computation</a></li>
-<li><a class="reference internal" href="#dynamic-deployment">Dynamic Deployment</a><ul>
-<li><a class="reference internal" href="#main-script">Main script</a></li>
-<li><a class="reference internal" href="#add-one-worker-script">Add one worker script</a></li>
+<li><a class="reference internal" href="#deploy-option-1-jupyter-dask-jobqueue">Deploy Option 1: Jupyter + dask-jobqueue</a><ul>
+<li><a class="reference internal" href="#start-a-jupyter-notebook-server">Start a Jupyter Notebook Server</a></li>
+<li><a class="reference internal" href="#launch-dask-with-dask-jobqueue">Launch Dask with dask-jobqueue</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#deploy-option-2-jupyter-dask-mpi">Deploy Option 2: Jupyter + dask-mpi</a><ul>
+<li><a class="reference internal" href="#launch-and-connect-to-jupyter">Launch and connect to Jupyter</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#further-reading">Further Reading</a></li>
 </ul>
 </li>
 </ul>
@@ -179,24 +183,25 @@
     <div class="col-md-9 content ">
       
   <div class="section" id="getting-started-with-pangeo-on-hpc">
-<h1>Getting Started with Pangeo on HPC<a class="headerlink" href="#getting-started-with-pangeo-on-hpc" title="Permalink to this headline">¶</a></h1>
-<p>This documents how to set up an environment to run XArray on Cheyenne.
-In particular it covers the following:</p>
+<span id="hpc"></span><h1>Getting Started with Pangeo on HPC<a class="headerlink" href="#getting-started-with-pangeo-on-hpc" title="Permalink to this headline">¶</a></h1>
+<p>This tutorial covers how to set up an environment to run Pangeo on High
+Performance Computing (HPC) systems. In particular it covers the following:</p>
 <ol class="arabic simple">
-<li>Install conda and creating an environment</li>
-<li>Configure Jupyter</li>
-<li>Launch Dask with a job scheduler</li>
-<li>Launch a Jupyter server for your job</li>
-<li>Connect to Jupyter and the Dask dashboard from your personal computer</li>
+<li>Install <a class="reference external" href="https://conda.io/docs/">conda</a> and creating an environment</li>
+<li>Configure <a class="reference external" href="https://jupyter.org/">Jupyter</a></li>
+<li>Launch <a class="reference external" href="https://dask.pydata.org/">Dask</a> with a job scheduler</li>
+<li>Launch a <a class="reference external" href="https://jupyter.org/">Jupyter</a> server for your job</li>
+<li>Connect to <a class="reference external" href="https://jupyter.org/">Jupyter</a> and the <a class="reference external" href="https://dask.pydata.org/">Dask</a> dashboard from your personal computer</li>
 </ol>
-<p>This document assumes that you already have an account on Cheyenne, and
-are comfortable using the command line. There is a
-<a class="reference external" href="https://www.youtube.com/watch?v=7i5m78DSr34&amp;feature=youtu.be">screencast</a>
-of this page.</p>
-<p>You should log into Cheyenne now.</p>
+<p>Although the examples on this page were developed using NCAR’s <a class="reference external" href="https://www2.cisl.ucar.edu/resources/computational-systems/cheyenne">Cheyenne</a> super
+computer, the concepts here should be generally applicable to typical HPC systems.
+This document assumes that you already have an access to an HPC like Cheyenne,
+and are comfortable using the command line. It may be necessary to work with your
+system administrators to properly configure these tools for your machine.</p>
+<p>You should log into your HPC system now.</p>
 <div class="section" id="installing-a-software-environment">
 <h2>Installing a software environment<a class="headerlink" href="#installing-a-software-environment" title="Permalink to this headline">¶</a></h2>
-<p>After you have logged into Cheyenne, download and install Miniconda:</p>
+<p>After you have logged into your HPC system, download and install Miniconda:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">wget</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">repo</span><span class="o">.</span><span class="n">continuum</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">miniconda</span><span class="o">/</span><span class="n">Miniconda3</span><span class="o">-</span><span class="n">latest</span><span class="o">-</span><span class="n">Linux</span><span class="o">-</span><span class="n">x86_64</span><span class="o">.</span><span class="n">sh</span>
 <span class="n">chmod</span> <span class="o">+</span><span class="n">x</span> <span class="n">Miniconda3</span><span class="o">-</span><span class="n">latest</span><span class="o">-</span><span class="n">Linux</span><span class="o">-</span><span class="n">x86_64</span><span class="o">.</span><span class="n">sh</span>
 <span class="o">./</span><span class="n">Miniconda3</span><span class="o">-</span><span class="n">latest</span><span class="o">-</span><span class="n">Linux</span><span class="o">-</span><span class="n">x86_64</span><span class="o">.</span><span class="n">sh</span>
@@ -208,21 +213,21 @@ create isolated software environments so that we can experiment in the
 future safely.</p>
 <p>Create a new conda environment for our pangeo work:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">create</span> <span class="o">-</span><span class="n">n</span> <span class="n">pangeo</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> \
-    <span class="n">python</span><span class="o">=</span><span class="mf">3.6</span> <span class="n">dask</span> <span class="n">distributed</span> <span class="n">xarray</span> <span class="n">jupyterlab</span> <span class="n">mpi4py</span>
+    <span class="n">python</span><span class="o">=</span><span class="mf">3.6</span> <span class="n">dask</span> <span class="n">distributed</span> <span class="n">xarray</span> <span class="n">jupyterlab</span> <span class="n">mpi4py</span> <span class="n">dask_jobqueue</span>
 </pre></div>
 </div>
 <p>Activate this environment</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="n">activate</span> <span class="n">pangeo</span>
 </pre></div>
 </div>
-<p>Your prompt should now look like this:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">pangeo</span><span class="p">)</span> <span class="n">mrocklin</span><span class="nd">@cheyenne5</span><span class="p">:</span><span class="o">~&gt;</span>
+<p>Your prompt should now look something like this (note the pangeo environment name):</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>(pangeo) $
 </pre></div>
 </div>
 <p>And if you ask where your Python command lives, it should direct you to
 somewhere in your home directory:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">pangeo</span><span class="p">)</span> <span class="n">mrocklin</span><span class="nd">@cheyenne5</span><span class="p">:</span><span class="o">~&gt;</span> <span class="n">which</span> <span class="n">python</span>
-<span class="o">/</span><span class="n">glade</span><span class="o">/</span><span class="n">u</span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">mrocklin</span><span class="o">/</span><span class="n">miniconda3</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">pangeo</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">python</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span>(pangeo) $ which python
+/home/username/miniconda3/envs/pangeo/bin/python
 </pre></div>
 </div>
 </div>
@@ -252,9 +257,8 @@ a hashed password by entering the following commands:</p>
 </pre></div>
 </div>
 <p>You can enter a password of your choice, and it will return to you a
-hashed password that encodes the same information, but is safe to
-include in a publicly accessible config file. I entered “password” (do
-not do this) and go the following output:</p>
+encoded password. I entered “password” (do not do this) and go the following
+output:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">Out</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="s1">&#39;sha1:69a76df803b9:99ca27341563cd85ba4e78684128e1f4ad2d8d0d&#39;</span>
 </pre></div>
 </div>
@@ -262,10 +266,98 @@ not do this) and go the following output:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">c</span><span class="o">.</span><span class="n">NotebookApp</span><span class="o">.</span><span class="n">password</span> <span class="o">=</span> <span class="sa">u</span><span class="s1">&#39;sha1:69a76df803b9:99ca27341563cd85ba4e78684128e1f4ad2d8d0d&#39;</span>
 </pre></div>
 </div>
-<p>Great. We’re done with that.</p>
+<p>For security reasons, we recommend making sure your <code class="docutils literal"><span class="pre">jupyter_notebook_config.py</span></code>
+is readable only by you. For more information on and other methods for
+securing Jupyter, check out
+<a class="reference external" href="http://jupyter-notebook.readthedocs.io/en/stable/public_server.html#securing-a-notebook-server">Securing a notebook server</a>
+in the Jupyter documentation.</p>
+<hr class="docutils" />
+<p>From here, we have two options. Option 1 will start a Jupyter Notebook server
+and manage dask using the <a class="reference external" href="http://dask-jobqueue.readthedocs.io">dask-jobqueue</a> package. Option 2 will start a dask
+cluster using <cite>dask-mpi</cite> and will run a Jupyter server as part of the dask cluster.
+We generally recommend starting with Option 1, espcially if you will be working
+interactively, unless you have a reason for managing the job submission scripts
+on your own. Users that will be using dask in batch-style workflows may prefer
+Option 2.</p>
 </div>
-<div class="section" id="launch-dask-with-a-script">
-<h2>Launch Dask with a script<a class="headerlink" href="#launch-dask-with-a-script" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="deploy-option-1-jupyter-dask-jobqueue">
+<h2>Deploy Option 1: Jupyter + dask-jobqueue<a class="headerlink" href="#deploy-option-1-jupyter-dask-jobqueue" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="start-a-jupyter-notebook-server">
+<h3>Start a Jupyter Notebook Server<a class="headerlink" href="#start-a-jupyter-notebook-server" title="Permalink to this headline">¶</a></h3>
+<p>Now that we have Jupyter configured, we can start a notebook server. In many
+cases, your system administrators will want you to run this notebook server in
+an interactive session on a compute node. This is not universal rule, but it is
+one we’ll follow for this tutorial.</p>
+<p>In our case, the Cheyenne super computer uses the PBS job scheduler, so typing:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>(pangeo) $ qsub -I -l select=1:ncpus=4 -l walltime=03:00:00 -q regular
+</pre></div>
+</div>
+<p>This will get us an interactive job on the <cite>regular</cite> queue for three hours. You
+may not see the <cite>pangeo</cite> environment anymore in your prompt, in this case, you
+will want to reactivate it.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="n">activate</span> <span class="n">pangeo</span>
+</pre></div>
+</div>
+<p>From here, we can start jupyter. The Cheyenne computer administrators have
+developed a <a class="reference external" href="https://www2.cisl.ucar.edu/resources/computational-systems/cheyenne/software/jupyter-and-ipython#notebook">start-notebook</a>
+utility that wraps the following steps into a single execution. You should
+check with your system administrators to see if they have something similar.
+If not, you’ll need to take the following steps:</p>
+<p>Copy this line into your terminal. It will echo a command you’ll want to use
+later.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>(pangeo) $ echo &quot;ssh -N -L 8877:`hostname`:8877 -L 8878:`hostname`:8878 $USER@cheyenne.ucar.edu&quot;
+ssh -N -L 8877:r8i4n0:8877 -L 8878:r8i4n0:8878 username@cheyenne.ucar.edu
+</pre></div>
+</div>
+<p>Now we can launch the notebook server:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>(pangeo) $ jupyter lab --no-browser --ip=`hostname` --port=8877
+...
+[I 13:36:52.321 LabApp] The Jupyter Notebook is running at:
+[I 13:36:52.321 LabApp] http://r8i4n0:8877/
+[I 13:36:52.321 LabApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+</pre></div>
+</div>
+<p>Now, connect to the server using an ssh tunnel from your local machine
+(this could be your laptop or desktop).</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ ssh -N -L 8877:r8i4n0:8877 -L 8878:r8i4n0:8787 username@cheyenne.ucar.edu
+</pre></div>
+</div>
+<p>You’ll want to change the details in the command above but the basic idea is
+that we’re passing the ports 8877 and 8878 from the compute node <cite>r8i4n0</cite> to our
+local system. Now open <a class="reference external" href="http://localhost:8877">http://localhost:8877</a> on your local machine, you should
+find a jupyter server running!</p>
+<p><em>Note that we’re also passing the 8878 port through so we can access the dask
+dashboard later.</em></p>
+</div>
+<div class="section" id="launch-dask-with-dask-jobqueue">
+<h3>Launch Dask with dask-jobqueue<a class="headerlink" href="#launch-dask-with-dask-jobqueue" title="Permalink to this headline">¶</a></h3>
+<p>Most HPC systems use a job-scheduling system to manage job submissions and
+executions among many users. The <a class="reference external" href="http://dask-jobqueue.readthedocs.io">dask-jobqueue</a> package is designed to help
+dask interface with these job queuing systems. Usage is quite simple and can be
+done from within your Jupyter Notebook:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">dask_jobqueue</span> <span class="kn">import</span> <span class="n">PBSCluster</span>
+
+<span class="n">cluster</span> <span class="o">=</span> <span class="n">PBSCluster</span><span class="p">(</span><span class="n">processes</span><span class="o">=</span><span class="mi">18</span><span class="p">,</span>
+                     <span class="n">threads</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">memory</span><span class="o">=</span><span class="s2">&quot;6GB&quot;</span><span class="p">,</span>
+                     <span class="n">project</span><span class="o">=</span><span class="s1">&#39;UCLB0022&#39;</span><span class="p">,</span>
+                     <span class="n">queue</span><span class="o">=</span><span class="s1">&#39;premium&#39;</span><span class="p">,</span>
+                     <span class="n">resource_spec</span><span class="o">=</span><span class="s1">&#39;select=1:ncpus=36:mem=109G&#39;</span><span class="p">,</span>
+                     <span class="n">walltime</span><span class="o">=</span><span class="s1">&#39;02:00:00&#39;</span><span class="p">)</span>
+<span class="n">cluster</span><span class="o">.</span><span class="n">start_workers</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="kn">from</span> <span class="nn">dask.distributed</span> <span class="kn">import</span> <span class="n">Client</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="n">cluster</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>For more examples of how to use <a class="reference external" href="http://dask-jobqueue.readthedocs.io">dask-jobqueue</a>, refer to the <a class="reference external" href="http://dask-jobqueue.readthedocs.io">package documentation</a>.</p>
+</div>
+</div>
+<div class="section" id="deploy-option-2-jupyter-dask-mpi">
+<h2>Deploy Option 2: Jupyter + dask-mpi<a class="headerlink" href="#deploy-option-2-jupyter-dask-mpi" title="Permalink to this headline">¶</a></h2>
+<p>This approach allows you to deploy dask directly using batch jobs on your HPC
+machine.</p>
+<p>The MPI library is only used to distribute the dask-workers across the
+cluster. MPI is <strong>NOT</strong> used for communication by dask.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p>The following scripts and proceedures have been packed into a convenient wrapper
@@ -297,7 +389,7 @@ the ``launch-dask.sh`` script should be enough to get started.</em></p>
 <span class="c1">#PBS -N sample</span>
 <span class="c1">#PBS -q economy</span>
 <span class="c1">#PBS -A UCLB0022</span>
-<span class="c1">#PBS -l select=2:ncpus=72:mpiprocs=6:ompthreads=6</span>
+<span class="c1">#PBS -l select=2:ncpus=36:mpiprocs=6</span>
 <span class="c1">#PBS -l walltime=01:00:00</span>
 <span class="c1">#PBS -j oe</span>
 <span class="c1">#PBS -m abe</span>
@@ -311,7 +403,10 @@ the ``launch-dask.sh`` script should be enough to get started.</em></p>
 <span class="c1"># &gt;&gt;&gt; client = Client(scheduler_file=&#39;~/scheduler.json&#39;)</span>
 
 rm -f scheduler.json
-mpirun --np <span class="m">12</span> dask-mpi --nthreads <span class="m">6</span> --memory-limit 24e9 --interface ib0
+mpirun --np <span class="m">12</span> dask-mpi <span class="se">\</span>
+    --nthreads <span class="m">6</span> <span class="se">\</span>
+    --memory-limit 24e9 <span class="se">\</span>
+    --interface ib0
 </pre></div>
 </div>
 <p>This script asks for two nodes with 36 cores each. It breaks up each
@@ -330,11 +425,11 @@ chadmin1:
                                                             Req&#39;d  Req&#39;d   Elap
 Job ID          Username Queue    Jobname    SessID NDS TSK Memory Time  S Time
 --------------- -------- -------- ---------- ------ --- --- ------ ----- - -----
-1681778.chadmin mrocklin regular  sample      27872   2 144    --  00:20 R 00:01
+1681778.chadmin username regular  sample      27872   2 144    --  00:20 R 00:01
 </pre></div>
 </div>
 <p>When this job runs it places a <code class="docutils literal"><span class="pre">scheduler.json</span></code> file in your home
-directory. This contains the necessaary information to connect to this
+directory. This contains the necessary information to connect to this
 cluster from anywhere in the network. We’ll do that now briefly from the
 login node. In the next section we’ll set up a Jupyter notebook server
 on your allocation.</p>
@@ -349,9 +444,8 @@ on your allocation.</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">Out</span><span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="o">&lt;</span><span class="n">Client</span><span class="p">:</span> <span class="n">scheduler</span><span class="o">=</span><span class="s1">&#39;tcp://10.148.0.92:8786&#39;</span> <span class="n">processes</span><span class="o">=</span><span class="mi">11</span> <span class="n">cores</span><span class="o">=</span><span class="mi">66</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-</div>
 <div class="section" id="launch-and-connect-to-jupyter">
-<h2>Launch and connect to Jupyter<a class="headerlink" href="#launch-and-connect-to-jupyter" title="Permalink to this headline">¶</a></h2>
+<h3>Launch and connect to Jupyter<a class="headerlink" href="#launch-and-connect-to-jupyter" title="Permalink to this headline">¶</a></h3>
 <p>From your same session on the login node, run the following code:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">dask.distributed</span> <span class="kn">import</span> <span class="n">Client</span>
 <span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="n">scheduler_file</span><span class="o">=</span><span class="s1">&#39;scheduler.json&#39;</span><span class="p">)</span>
@@ -370,7 +464,7 @@ on your allocation.</p>
 </pre></div>
 </div>
 <p>This should print out a statement like the following:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">ssh</span> <span class="o">-</span><span class="n">N</span> <span class="o">-</span><span class="n">L</span> <span class="mi">8787</span><span class="p">:</span><span class="n">r13i2n1</span><span class="p">:</span><span class="mi">8787</span> <span class="o">-</span><span class="n">L</span> <span class="mi">8888</span><span class="p">:</span><span class="n">r13i2n1</span><span class="p">:</span><span class="mi">8888</span> <span class="o">-</span><span class="n">l</span> <span class="n">mrocklin</span> <span class="n">cheyenne</span><span class="o">.</span><span class="n">ucar</span><span class="o">.</span><span class="n">edu</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">ssh</span> <span class="o">-</span><span class="n">N</span> <span class="o">-</span><span class="n">L</span> <span class="mi">8787</span><span class="p">:</span><span class="n">r13i2n1</span><span class="p">:</span><span class="mi">8787</span> <span class="o">-</span><span class="n">L</span> <span class="mi">8888</span><span class="p">:</span><span class="n">r13i2n1</span><span class="p">:</span><span class="mi">8888</span> <span class="o">-</span><span class="n">l</span> <span class="n">username</span> <span class="n">cheyenne</span><span class="o">.</span><span class="n">ucar</span><span class="o">.</span><span class="n">edu</span>
 </pre></div>
 </div>
 <p>You can run this command from your personal computer (not the terminal
@@ -383,22 +477,7 @@ able to open the following links in your web browser on your computer:</p>
 </ul>
 <p>The SSH tunnels will route these into the correct machine in your
 cluster allocation.</p>
-</div>
-<div class="section" id="open-a-notebook-and-perform-a-simple-computation">
-<h2>Open a notebook and perform a simple computation<a class="headerlink" href="#open-a-notebook-and-perform-a-simple-computation" title="Permalink to this headline">¶</a></h2>
-<p>From the <a class="reference external" href="http://localhost:8888">Jupyter Lab webpage</a> you can create
-and manage work in notebooks. You can download a <a class="reference external" href="https://gist.github.com/mrocklin/99e1c9b72eaebe6df5d146ac427261d1#file-cheyenne_xarray_dask_example-ipynb">basic starter
-notebook</a>
-that loads some data, connects to the cluster, and then does some basic
-analysis to your home directory using <code class="docutils literal"><span class="pre">wget</span></code></p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">wget</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">gist</span><span class="o">.</span><span class="n">githubusercontent</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">mrocklin</span><span class="o">/</span><span class="mf">99e1</span><span class="n">c9b72eaebe6df5d146ac427261d1</span><span class="o">/</span><span class="n">raw</span><span class="o">/</span><span class="mi">9387</span><span class="n">d577bffdf690b5527e9835354ee659089e23</span><span class="o">/</span><span class="n">cheyenne_xarray_dask_example</span><span class="o">.</span><span class="n">ipynb</span>
-</pre></div>
-</div>
-<p>From the <a class="reference external" href="http://localhost:8787">Dask dashboard</a> you can track the
-cluster’s progress as you do your work.</p>
-</div>
-<div class="section" id="dynamic-deployment">
-<h2>Dynamic Deployment<a class="headerlink" href="#dynamic-deployment" title="Permalink to this headline">¶</a></h2>
+<p><strong>Dynamic Deployment</strong></p>
 <p>The job scheduler that manages the cluster is not intended for
 interactive work like what we do with Jupyter notebooks. When we ask for
 a modestly large deployment (like five machines) it may wait for hours
@@ -415,13 +494,12 @@ complex by splitting it into two jobs:</p>
 <li>Another job that only launches workers on one machine</li>
 </ol>
 <p>Write these two scripts to your home directory:</p>
-<div class="section" id="main-script">
-<h3>Main script<a class="headerlink" href="#main-script" title="Permalink to this headline">¶</a></h3>
+<p><strong>Main script</strong></p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>#!/bin/bash
 #PBS -N dask
 #PBS -q economy
 #PBS -A UCLB0022
-#PBS -l select=1:ncpus=36:mpiprocs=6:ompthreads=6
+#PBS -l select=1:ncpus=36:mpiprocs=6
 #PBS -l walltime=00:30:00
 #PBS -j oe
 #PBS -m abe
@@ -432,22 +510,27 @@ complex by splitting it into two jobs:</p>
 # &gt;&gt;&gt; client = Client(scheduler_file=&#39;~/scheduler.json&#39;)
 
 rm -f scheduler.json
-mpirun --np 6 dask-mpi --nthreads 6 --memory-limit 22e9 --interface ib0 --local-directory /glade/scratch/$USER
+mpirun --np 6 dask-mpi --nthreads 6 \
+    --memory-limit 22e9 \
+    --interface ib0 \
+    --local-directory $TMPDIR
 </pre></div>
 </div>
-</div>
-<div class="section" id="add-one-worker-script">
-<h3>Add one worker script<a class="headerlink" href="#add-one-worker-script" title="Permalink to this headline">¶</a></h3>
+<p><strong>Add one worker script</strong></p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>#!/bin/bash
 #PBS -N dask-workers
 #PBS -q economy
 #PBS -A UCLB0022
-#PBS -l select=1:ncpus=36:mpiprocs=6:ompthreads=6
+#PBS -l select=1:ncpus=36:mpiprocs=6
 #PBS -l walltime=00:30:00
 #PBS -j oe
 #PBS -m abe
 
-mpirun --np 6 dask-mpi --nthreads 6 --memory-limit 22e9 --interface ib0 --no-scheduler --local-directory /glade/scratch/$USER
+mpirun --np 6 dask-mpi --nthreads 6 \
+    --memory-limit 22e9 \
+    --interface ib0 \
+    --no-scheduler \
+    --local-directory $TMPDIR
 </pre></div>
 </div>
 <p>And then run the main one once</p>
@@ -465,6 +548,20 @@ mpirun --np 6 dask-mpi --nthreads 6 --memory-limit 22e9 --interface ib0 --no-sch
 allocation dynamically. You can also kill these jobs independently to
 contract your allocation dynamically and save compute time.</p>
 </div>
+</div>
+<div class="section" id="further-reading">
+<h2>Further Reading<a class="headerlink" href="#further-reading" title="Permalink to this headline">¶</a></h2>
+<p>We have not attempted to provide a comprehensive tutorial on how to use Pangeo,
+Dask, or Jupyter on HPC systems. This is because each HPC system is uniquely
+configured. Instead we have provided two generalizable workflows for deploying
+Pangeo. Below we provide a few useful links that will be useful for further
+customization of these tools.</p>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference external" href="http://dask.pydata.org/en/latest/setup/hpc.html">Deploying Dask on HPC</a></li>
+<li><a class="reference external" href="http://jupyter-notebook.readthedocs.io/en/stable/index.html">Configuring and Deploying Jupyter Servers</a></li>
+</ul>
+</div></blockquote>
 </div>
 </div>
 
