@@ -5,6 +5,7 @@ RUN wget -O /usr/local/bin/dumb-init https://github.com/Yelp/dumb-init/releases/
 RUN chmod +x /usr/local/bin/dumb-init
 
 RUN conda install --yes -c conda-forge \
+    cython \
     cytoolz \
     dask=0.17.4 \
     distributed=1.21.8 \
@@ -20,7 +21,6 @@ RUN conda install --yes -c conda-forge \
     python-blosc \
     scikit-image \
     scipy \
-    xarray \
     zict \
     && conda clean -tipsy
 
@@ -28,6 +28,8 @@ RUN apt-get update \
   && apt-get install -yq --no-install-recommends libfuse-dev nano fuse \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
+
+RUN pip install --upgrade pip
 
 RUN pip install pyasn1 click urllib3 fusepy \
                 gcsfs==0.1.0 zarr==2.2.0 xarray==0.10.4 \

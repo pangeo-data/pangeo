@@ -9,6 +9,7 @@ USER $NB_USER
 
 RUN conda install --yes -c defaults -c ioam -c bokeh/channel/dev -c intake \
     bokeh=0.12.16 \
+    cython \
     cytoolz \
     dask=0.17.5 \
     dask-ml \
@@ -31,10 +32,11 @@ RUN conda install --yes -c defaults -c ioam -c bokeh/channel/dev -c intake \
     scikit-image \
     scikit-learn \
     tornado \
-    xarray \
     zict \
     intake-xarray \
     && conda clean -tipsy
+
+RUN pip install --upgrade pip
 
 RUN pip install fusepy click jedi kubernetes dask-kubernetes \
                 daskernetes==0.1.3 gcsfs==0.1.0 zarr==2.2.0 xarray==0.10.4 \
