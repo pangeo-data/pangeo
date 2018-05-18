@@ -8,15 +8,16 @@ RUN apt-get update \
 USER $NB_USER
 
 RUN conda install --yes -c defaults -c ioam -c bokeh/channel/dev -c intake \
-    bokeh=0.12.15dev1 \
+    bokeh=0.12.16 \
+    cython \
     cytoolz \
-    datashader \
     dask=0.17.5 \
     dask-ml \
     distributed=1.21.8 \
     fastparquet \
     ipywidgets \
-    jupyterlab \
+    jupyterlab=0.32.1 \
+    jupyterlab_launcher=0.10.5 \
     holoviews \
     lz4 \
     matplotlib \
@@ -25,27 +26,26 @@ RUN conda install --yes -c defaults -c ioam -c bokeh/channel/dev -c intake \
     nomkl \
     numba \
     numcodecs \
-    numpy \
+    numpy=1.14.3 \
     pandas \
     python-blosc \
     scipy \
     scikit-image \
     scikit-learn \
     tornado \
-    xarray \
     zict \
     intake-xarray \
     && conda clean -tipsy
 
-RUN pip install fusepy click jedi kubernetes --upgrade --no-cache-dir
+RUN pip install --upgrade pip
 
-RUN pip install daskernetes==0.1.3 \
-                dask-kubernetes \
-                git+https://github.com/zarr-developers/zarr \
-                git+https://github.com/pydata/xarray \
-                git+https://github.com/dask/gcsfs \
-                git+https://github.com/jupyterhub/nbserverproxy \
-                git+https://github.com/xgcm/xgcm \
+RUN pip install fusepy click jedi kubernetes==4.0.0 dask-kubernetes s3fs \
+                gcsfs==0.1.0 zarr==2.2.0 xarray==0.10.4 \
+                nbserverproxy==0.8.1 \
+                --upgrade --no-cache-dir
+
+RUN pip install git+https://github.com/xgcm/xgcm \
+                git+https://github.com/bokeh/datashader.git \
                 --no-cache-dir \
                 --upgrade
 

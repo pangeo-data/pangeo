@@ -5,6 +5,7 @@ RUN wget -O /usr/local/bin/dumb-init https://github.com/Yelp/dumb-init/releases/
 RUN chmod +x /usr/local/bin/dumb-init
 
 RUN conda install --yes -c conda-forge \
+    cython \
     cytoolz \
     dask=0.17.4 \
     distributed=1.21.8 \
@@ -15,12 +16,11 @@ RUN conda install --yes -c conda-forge \
     nomkl \
     numba \
     numcodecs \
-    numpy \
+    numpy=1.14.3 \
     pandas \
     python-blosc \
     scikit-image \
     scipy \
-    xarray \
     zict \
     && conda clean -tipsy
 
@@ -29,14 +29,11 @@ RUN apt-get update \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
 
-RUN pip install pyasn1 click urllib3 --upgrade
+RUN pip install --upgrade pip
 
-RUN pip install git+https://github.com/zarr-developers/zarr \
-                git+https://github.com/pydata/xarray \
-                git+https://github.com/dask/gcsfs@f99177b31c44fcc404619b2876a77cdcda955a75 \
-                fusepy \
-                --no-cache-dir \
-                --upgrade
+RUN pip install pyasn1 click urllib3 fusepy s3fs \
+                gcsfs==0.1.0 zarr==2.2.0 xarray==0.10.4 \
+                --upgrade --no-cache-dir
 
 ENV OMP_NUM_THREADS=1
 ENV DASK_TICK_MAXIMUM_DELAY=5s
