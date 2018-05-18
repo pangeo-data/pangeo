@@ -16,7 +16,8 @@ RUN conda install --yes -c defaults -c ioam -c bokeh/channel/dev -c intake \
     distributed=1.21.8 \
     fastparquet \
     ipywidgets \
-    jupyterlab \
+    jupyterlab=0.32.1 \
+    jupyterlab_launcher=0.10.5 \
     holoviews \
     lz4 \
     matplotlib \
@@ -53,6 +54,7 @@ RUN jupyter labextension install @jupyter-widgets/jupyterlab-manager \
                                  @pyviz/jupyterlab_holoviews
 
 RUN jupyter serverextension enable --py nbserverproxy --sys-prefix
+RUN jupyter serverextension enable --py jupyterlab --sys-prefix
 
 USER root
 COPY prepare.sh /usr/bin/prepare.sh
