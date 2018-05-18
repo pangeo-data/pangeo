@@ -11,7 +11,7 @@ spec:
       - 6GB
       - --death-timeout
       - '60'
-    image: pangeo/worker:2018-05-06
+    image: pangeo/worker:2018-05-17
     name: dask-worker
     securityContext:
       capabilities:
