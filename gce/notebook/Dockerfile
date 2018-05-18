@@ -41,10 +41,10 @@ RUN pip install --upgrade pip
 
 RUN pip install fusepy click jedi kubernetes==4.0.0 dask-kubernetes s3fs \
                 gcsfs==0.1.0 zarr==2.2.0 xarray==0.10.4 \
+                nbserverproxy==0.8.1 \
                 --upgrade --no-cache-dir
 
-RUN pip install git+https://github.com/jupyterhub/nbserverproxy \
-                git+https://github.com/xgcm/xgcm \
+RUN pip install git+https://github.com/xgcm/xgcm \
                 git+https://github.com/bokeh/datashader.git \
                 --no-cache-dir \
                 --upgrade
@@ -54,7 +54,6 @@ RUN jupyter labextension install @jupyter-widgets/jupyterlab-manager \
                                  @pyviz/jupyterlab_holoviews
 
 RUN jupyter serverextension enable --py nbserverproxy --sys-prefix
-RUN jupyter serverextension enable --py jupyterlab --sys-prefix
 
 USER root
 COPY prepare.sh /usr/bin/prepare.sh
