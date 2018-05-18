@@ -7,12 +7,13 @@ RUN apt-get update \
   && rm -rf /var/lib/apt/lists/*
 USER $NB_USER
 
-RUN conda install --yes -c defaults -c ioam -c bokeh/channel/dev -c intake \
+RUN conda install --yes -c defaults -c pyviz/label/dev -c bokeh/channel/dev -c intake \
     bokeh=0.12.16 \
     cython \
     cytoolz \
     dask=0.17.5 \
     dask-ml \
+    datashader \
     distributed=1.21.8 \
     fastparquet \
     ipywidgets \
@@ -45,13 +46,12 @@ RUN pip install fusepy click jedi kubernetes==4.0.0 dask-kubernetes s3fs \
                 --upgrade --no-cache-dir
 
 RUN pip install git+https://github.com/xgcm/xgcm \
-                git+https://github.com/bokeh/datashader.git \
                 --no-cache-dir \
                 --upgrade
 
 RUN jupyter labextension install @jupyter-widgets/jupyterlab-manager \
                                  @jupyterlab/hub-extension \
-                                 @pyviz/jupyterlab_holoviews
+                                 @pyviz/jupyterlab_pyviz
 
 RUN jupyter serverextension enable --py nbserverproxy --sys-prefix
 
