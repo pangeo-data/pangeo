@@ -52,7 +52,7 @@ We encourage everyone to get involved by:
 - contributing to the software, via issues and pull requests, and/or
 - using the software for your scientific analysis and letting us know about your experiences (e.g., contributing to examples)
 
-For now, community discussion is happening on the [GitHub issues page](https://github.com/pangeo-data/pangeo/blob/master/docs/_static/Sloan-Logo-primary-blac-web.png) or on the
+For now, community discussion is happening on the [GitHub issues page](https://github.com/pangeo-data/pangeo/issues) or on the
 [pangeo google group](https://groups.google.com/forum/#!forum/pangeo).
 This is an open group, and we invite anyone interested to join.
 
