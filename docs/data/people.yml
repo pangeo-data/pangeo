@@ -219,6 +219,22 @@
     - atmospheric science
     - distributed computing
     - algorithms
+    
+- first_name: Jacob
+  last_name: Tomlinson
+  institution: Met Office Informatics Lab
+  website: http://informaticslab.co.uk/profiles/jacob-tomlinson
+  email: jacob.tomlinson@informaticslab.co.uk
+  github: jacobtomlinson
+  twitter: _jacobtomlinson
+  tags:
+    - atmospheric science
+    - distributed computing
+    - kubernetes
+    - docker
+    - cloud computing
+    - infrastructure
+    - IT architecture
 
 - first_name: Kevin
   last_name: Paul
@@ -511,3 +527,5 @@
     - information modeling
     - cyberinfrastructure
     - geoinformatics
+    
+
