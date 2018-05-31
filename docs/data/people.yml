@@ -538,3 +538,18 @@
   tags:
     - atmospheric modeling 
     - research computing
+
+- first_name: Duncan
+  last_name: Watson-Parris
+  institution: University of Oxford
+  website: https://www2.physics.ox.ac.uk/contacts/people/watson-parris
+  email: duncan.watson-parris@physics.ox.ac.uk
+  github: duncanwp
+  twitter: dwatsonparris
+  orcid: 0000-0002-5312-4950
+  tags:
+    - amotpsheric physics
+    - numerical modelling
+    - observations
+    - data fusion
+    - machine learning
