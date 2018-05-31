@@ -528,4 +528,13 @@
     - cyberinfrastructure
     - geoinformatics
     
-
+- first_name: Naomi
+  last_name: Henderson
+  institution: Lamont Doherty Earth Observatory
+  email: nhn2@columbia.edu
+  github: naomi-henderson
+  twitter: noni
+  orcid: 0000-0002-9531-2159
+  tags:
+    - atmospheric modeling 
+    - research computing
