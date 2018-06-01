@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/pangeo-data/pangeo.svg?branch=master)](https://travis-ci.org/pangeo-data/pangeo)
 [![Gitter chat](https://badges.gitter.im/pangeo-data/Lobby.svg)](https://gitter.im/pangeo-data/Lobby)
 
 Pangeo Data
@@ -33,9 +34,9 @@ As much as possible, we will build on top of existing solutions and leverage exp
 
 The Python Data Stack:
 
-![The State of the Stack](../img/scientific-python-28-638.jpg "The State of the Stack")
+![The State of the Stack](https://github.com/pangeo-data/pangeo/raw/master/docs/_static/stack.png "The State of the Stack")
 (Source:  [Jake VanderPlas](https://staff.washington.edu/jakevdp/),
-  ["The State of the Stack,"](https://speakerdeck.com/jakevdp/the-state-of-the-stack-scipy-2015-keynote) SciPy Keynote (SciPy 2015).)
+  ["The State of the Stack,"](https://speakerdeck.com/jakevdp/the-state-of-the-stack-scipy-2015-keynote) SciPy Keynote (SciPy 2017).)
 
 
 In practice, the "python data" software stack (see above) currently provides the most stable and powerful foundation layer for our desired tools. In particular the xarray and dask projects provide a mechanism to easily build scalability into scientific analysis.  Our vision of future AOC software involves the adoption of these common software layers, and a clear communication between developers to define project scope and dependency that eliminates redundancy and fragmentation.
@@ -51,7 +52,7 @@ We encourage everyone to get involved by:
 - contributing to the software, via issues and pull requests, and/or
 - using the software for your scientific analysis and letting us know about your experiences (e.g., contributing to examples)
 
-For now, community discussion is happening on our
+For now, community discussion is happening on the [GitHub issues page](https://github.com/pangeo-data/pangeo/issues) or on the
 [pangeo google group](https://groups.google.com/forum/#!forum/pangeo).
 This is an open group, and we invite anyone interested to join.
 

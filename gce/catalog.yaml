@@ -1,0 +1,28 @@
+plugins:
+  source:
+    - module: intake_xarray
+sources:
+  newmann_netcdf:
+    description: newmann meteo ensemble in netcdf
+    driver: netcdf
+    args:
+      urlpath: '/gcs/newmann-met-ensemble-netcdf/conus_ens_00*.nc'
+      engine: netcdf4
+      concat_dim: ensemble
+      chunks: {'time': 50}
+  newmann_zarr:
+    description: newmann meteo ensemble in netcdf
+    driver: zarr
+    args:
+      storage_options:
+        project: 'pangeo-181919'
+        token: anon
+        access: read_only
+      urlpath: 'gcs://pangeo-data/newman-met-ensemble'
+  sea_surface:
+    description: sea-surface altimetry data from The Copernicus Marine Environment
+    driver: zarr
+    args:
+      urlpath: gcs://pangeo-data/dataset-duacs-rep-global-merged-allsat-phy-l4-v3-alt
+      storage_options:
+        token: anon

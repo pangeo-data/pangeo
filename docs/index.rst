@@ -14,7 +14,7 @@ Pangeo
    <br />
 
 .. image:: _static/pangeo_simple_logo.svg
-   :width: 250 px
+   :width: 175 px
 
 
 A community platform for Big Data geoscience
@@ -34,8 +34,8 @@ Start Here
 
 - **Science users**: read the :ref:`quickstart`, browse the :ref:`use-cases`, or
   read about the :ref:`packages`.
-- **Developers / system administrators**: learn about the :ref:`architecture`
-  or read the :ref:`setup-guides`.
+- **Developers / system administrators**: learn about the
+  :ref:`Technical Architecture` or read the :ref:`setup-guides`.
 - **General interest**: learn :ref:`about`, see the :ref:`collaborators`, or
   read the :ref:`FAQ`.
 

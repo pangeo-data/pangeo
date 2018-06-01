@@ -57,9 +57,8 @@
 
 - first_name: Matthew
   last_name: Rocklin
-  institution: Continuum Analytics
+  institution: Anaconda Inc
   website: http://www.matthewrocklin.com/
-  email: mrocklin@gmail.com
   github: mrocklin
   twitter: mrocklin
   orcid: 0000-0002-3709-6953
@@ -220,6 +219,22 @@
     - atmospheric science
     - distributed computing
     - algorithms
+    
+- first_name: Jacob
+  last_name: Tomlinson
+  institution: Met Office Informatics Lab
+  website: http://informaticslab.co.uk/profiles/jacob-tomlinson
+  email: jacob.tomlinson@informaticslab.co.uk
+  github: jacobtomlinson
+  twitter: _jacobtomlinson
+  tags:
+    - atmospheric science
+    - distributed computing
+    - kubernetes
+    - docker
+    - cloud computing
+    - infrastructure
+    - IT architecture
 
 - first_name: Kevin
   last_name: Paul
@@ -512,3 +527,29 @@
     - information modeling
     - cyberinfrastructure
     - geoinformatics
+    
+- first_name: Naomi
+  last_name: Henderson
+  institution: Lamont Doherty Earth Observatory
+  email: nhn2@columbia.edu
+  github: naomi-henderson
+  twitter: noni
+  orcid: 0000-0002-9531-2159
+  tags:
+    - atmospheric modeling 
+    - research computing
+
+- first_name: Duncan
+  last_name: Watson-Parris
+  institution: University of Oxford
+  website: https://www2.physics.ox.ac.uk/contacts/people/watson-parris
+  email: duncan.watson-parris@physics.ox.ac.uk
+  github: duncanwp
+  twitter: dwatsonparris
+  orcid: 0000-0002-5312-4950
+  tags:
+    - amotpsheric physics
+    - numerical modelling
+    - observations
+    - data fusion
+    - machine learning
