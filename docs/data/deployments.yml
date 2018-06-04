@@ -98,3 +98,18 @@
   dask: dask-kubernetes
   jupyter: Jupyterhub
   kind: cloud
+
+- name: GFDL Post-processing and Analysis Cluster
+  description: HPC cluster running at the NOAA Geophyiscal Fluid Dynamics Laboratory
+  platform: HPC
+  dask: dask-jobqueue with a custom PBSCluster subclass
+  jupyter: Single user notebook servers
+  kind: hpc
+
+- name: Princeton Tiger Cluster
+  description: Research computing cluster running at Princeton University
+  link: https://researchcomputing.princeton.edu/systems-and-services/available-systems/tiger
+  platform: HPC
+  dask: dask-jobqueue
+  jupyter: Single user notebook servers
+  kind: hpc
