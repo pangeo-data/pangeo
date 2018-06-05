@@ -238,8 +238,8 @@ github.
           - jacobtomlinson
 
 
-Deploy Helm Chart
------------------
+Step Five: Deploy Helm Chart
+----------------------------
 
 Check the `Pangeo Helm Chart <https://pangeo-data.github.io/helm-chart/>`_ for
 the latest helm chart version. Here the version we are using is ``0.1.1-a14d55b``.
@@ -261,7 +261,32 @@ the latest helm chart version. Here the version we are using is ``0.1.1-a14d55b`
      -f jupyter-config.yaml
 
 
+Upgrade Cluster
+---------------
+
+If you want to change the configuration, or to upgrade the cluster to a new
+version of the Helm Chart, run the following commmand
+
+.. code-block:: bash
+
+  $ helm upgrade --force --recreate-pods jupyter pangeo/pangeo \
+     --version=$VERSION \
+     -f secret-config.yaml \
+     -f jupyter-config.yaml
+
+
+Pangeo Helm Chart and Docker Images
+-----------------------------------
+
+Pangeo maintains its own Helm_ Chart and Docker_ images. These hold the
+default configuration for a Pangeo cloud deployment. These items live in
+the Pangeo helm-chart repository:
+
+- https://github.com/pangeo-data/helm-chart
+
+
 .. _Zero to Jupyterhub: https://zero-to-jupyterhub-with-kubernetes.readthedocs.io/en/latest/
 .. _Google Cloud Platform: https://cloud.google.com/
 .. _Kubernetes: https://kubernetes.io/docs/home/
 .. _Helm: https://docs.helm.sh/
+.. _Docker: https://docker.com/
