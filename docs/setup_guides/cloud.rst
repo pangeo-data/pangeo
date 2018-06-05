@@ -74,16 +74,19 @@ Here is a bash script that will create a cluster:
 
   set -e
 
-  EMAIL='ryan.abernathey@gmail.com'
-  PROJECTID='pangeo-181919'
+  PROJECTID=<YOUR GOOGLE CLOUD PROJECT ID>
+  # this is the zone used by pangeo.pydata.org
   ZONE='us-central1-b'
 
+  # cluster size settings: modify as needed to fit your needs / budget
   NUM_NODES=2
   MIN_WORKER_NODES=0
   MAX_WORKER_NODES=100
-  CLUSTER_NAME='pangeo-beast'
+  CLUSTER_NAME='pangeo'
+
   # https://cloud.google.com/compute/pricing
-  WORKER_MACHINE_TYPE='n1-highmem-16'
+  # change the machine typer based on your computing needs
+  WORKER_MACHINE_TYPE='n1-standard-4'
 
   # create cluster on GCP
   gcloud config set project $PROJECTID
@@ -93,6 +96,170 @@ Here is a bash script that will create a cluster:
       --machine-type=$WORKER_MACHINE_TYPE --preemptible --enable-autoscaling \
       --num-nodes=$MIN_WORKER_NODES --max-nodes=$MAX_WORKER_NODES --min-nodes=$MIN_WORKER_NODES
   gcloud container clusters get-credentials $CLUSTER_NAME --zone=$ZONE --project $PROJECTID
+
+
+Step Three: Configure Kubernetes
+--------------------------------
+
+This script sets up the Kubernetes
+`Role Based Access Control <https://kubernetes.io/docs/reference/access-authn-authz/rbac/>`_
+necessary for a secure cluster deployment.
+
+.. code-block:: bash
+
+  #!/bin/bash
+
+  set -e
+
+  EMAIL=<THE EMAIL ADDRESS ASSOCIATED WITH YOUR GOOGLE CLOUD ACCOUNT>
+
+  kubectl create clusterrolebinding cluster-admin-binding --clusterrole=cluster-admin --user=$EMAIL
+  kubectl create serviceaccount tiller --namespace=kube-system
+  kubectl create clusterrolebinding tiller --clusterrole=cluster-admin --serviceaccount=kube-system:tiller
+  helm init --service-account tiller
+  kubectl --namespace=kube-system patch deployment tiller-deploy --type=json \
+        --patch='[{"op": "add", "path": "/spec/template/spec/containers/0/command", "value": ["/tiller", "--listen=localhost:44134"]}]'
+
+
+Step Four: Create Cluster-Specific Configuration
+------------------------------------------------
+
+There are two configuration files needed to deploy the Pangeo helm chart.
+The first, ``jupyter_config.yaml``, specifies modifications to the configuration
+that are unique to each deploymment.
+
+.. code-block:: yaml
+
+  # file: jupyter_config.yaml
+
+  jupyterhub:
+    singleuser:
+      cmd: ['start-singleuser.sh']
+      extraEnv:
+        EXTRA_PIP_PACKAGES: >-
+        GCSFUSE_BUCKET: pangeo-data
+      storage:
+        extraVolumes:
+          - name: fuse
+            hostPath:
+              path: /dev/fuse
+        extraVolumeMounts:
+          - name: fuse
+            mountPath: /dev/fuse
+      cloudMetadata:
+        enabled: true
+      cpu:
+        limit: 4
+        guarantee: 1
+      memory:
+        limit: 14G
+        guarantee: 4G
+
+    hub:
+      extraConfig:
+        customPodHook: |
+          from kubernetes import client
+          def modify_pod_hook(spawner, pod):
+              pod.spec.containers[0].security_context = client.V1SecurityContext(
+                  privileged=True,
+                  capabilities=client.V1Capabilities(
+                      add=['SYS_ADMIN']
+                  )
+              )
+              return pod
+          c.KubeSpawner.modify_pod_hook = modify_pod_hook
+          c.JupyterHub.logo_file = '/usr/local/share/jupyter/hub/static/custom/images/logo.png'
+          c.JupyterHub.template_paths = ['/usr/local/share/jupyter/hub/custom_templates/',
+                                        '/usr/local/share/jupyter/hub/templates/']
+      image:
+        name: jupyterhub/k8s-hub
+        tag: v0.6
+      extraVolumes:
+        - name: custom-templates
+          gitRepo:
+            repository: "https://github.com/pangeo-data/pangeo-custom-jupyterhub-templates.git"
+            revision: "b09721bb1a1248dc115730d3c8a791600eae257e"
+      extraVolumeMounts:
+        - mountPath: /usr/local/share/jupyter/hub/custom_templates
+          name: custom-templates
+          subPath: "pangeo-custom-jupyterhub-templates/templates"
+        - mountPath: /usr/local/share/jupyter/hub/static/custom
+          name: custom-templates
+          subPath: "pangeo-custom-jupyterhub-templates/assets"
+
+    cull:
+      enabled: true
+      users: false
+      timeout: 1200
+      every: 600
+
+    # this section specifies the IP address for pangeo.pydata.org
+    # remove or change for a custom cluster
+    proxy:
+      service:
+        loadBalancerIP: 35.224.8.169
+
+The other file is ``secret_config.yaml``, which specifies cluster specific
+encryption tokens. The jupyerhub proxy secret token is just a random hash, which you
+can generate as follows.
+
+.. code-block:: bash
+
+  $ openssl rand -hex 32
+
+Pangeo.pydata.org uses
+`GitHub OAuth Callback <https://help.github.com/enterprise/2.13/admin/guides/user-management/using-github-oauth/>`_
+to authenticate users. The ``clientSecret`` token needs to be obtained via
+github.
+
+.. code-block:: yaml
+
+  # file: secret_config.yaml
+
+  jupyterhub:
+    proxy:
+      secretToken: <SECRET>
+
+    # comment this out if not using github authentication
+    auth:
+      type: github
+      github:
+        clientId: "2cb5e09d5733ff2e6ae3"
+        clientSecret: <SECRET>
+        callbackUrl: "http://pangeo.pydata.org/hub/oauth_callback"
+      admin:
+        access: true
+        users:
+          - mrocklin
+          - jhamman
+          - rabernat
+          - yuvipanda
+          - choldgraf
+          - jacobtomlinson
+
+
+Deploy Helm Chart
+-----------------
+
+Check the `Pangeo Helm Chart <https://pangeo-data.github.io/helm-chart/>`_ for
+the latest helm chart version. Here the version we are using is ``0.1.1-a14d55b``.
+
+.. code-block:: bash
+
+  #!/bin/bash
+
+  set -e
+
+  VERSION=0.1.1-a14d55b
+
+  helm repo add pangeo https://pangeo-data.github.io/helm-chart/
+  helm repo update
+
+  helm install pangeo/pangeo --version=$VERSION \
+     --namespace=pangeo --name=jupyter  \
+     -f secret-config.yaml \
+     -f jupyter-config.yaml
+
 
 .. _Zero to Jupyterhub: https://zero-to-jupyterhub-with-kubernetes.readthedocs.io/en/latest/
 .. _Google Cloud Platform: https://cloud.google.com/
