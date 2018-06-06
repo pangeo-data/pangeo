@@ -5,54 +5,16 @@ Guide for Scientists
 
 The goal of Pangeo is to make it quicker and easier to go from raw data to
 scientific insights.
-We want to spend less time writing boilerplate code and be able to iterate
-calculations quickly on very large datasets.
-These are ambitious yet achievable long-term goals.
-Reaching them will require scientists to participate in the open source process
-and contribute to the development of the underlying tools.
-For people coming from proprietary computing environments such as MATLAB, this
-can mean changing the way you think about software and your relationship to it.
-
-Below is a list of steps you can take to participate in the Pangeo project and
-take advantage of the tools we are developing.
-
-Learn About the Open Source Ecosystem
--------------------------------------
-
-If you are new to open source scientific software, you might want to learn a
-bit about the history and context of this community.
-We recommend the following talk by `Jake VanderPlas <http://vanderplas.com/>`_
-entitled *PyData 101*.
-
-.. raw:: html
-
-   <iframe width="560" height="315" src="https://www.youtube.com/embed/DifMYH3iuFw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
-Jake's slides are `available on SpeakerDeck <https://speakerdeck.com/jakevdp/intro-to-pydata>`_.
-
-
-GitHub_ has become absolutely central to the way this community works.
-The Pangeo project is a GitHub-native organization.
-A great general-audience introduction to the power and popularity of GitHub
-can be found in the Wired article
-`The GitHub Revolution: Why We're All in Open Source Now <https://www.wired.com/2013/03/github/>`_
-by Mikeal Rogers.
-
-There are lots of great free and open resources to learn how to use scientific
-python.
-Here is a list of a few of our favorites.
-
-- list of
-- scientific python
-- online tutorials
-
-There are also some excellent books, including
-
-- list of
-- scientific python
-- books
-
-.. _GitHub: https://github.org/
+We want to spend less time writing boilerplate code and be able to perform
+calculations quickly and interactively on very large datasets.
+Pangeo is based around the python programming language and the scientific
+python software ecosystem.
+Pangeo is aimed at users who already have basic familiarity with using
+scientific python and are looking for ways to make their analysis workflow more
+efficient, scalable, and pleasant.
+If you are completely new to scientific python, you should first familiarize
+yourself with the basics before moving forward with this guide.
+(We recommend the `Scipy Lectures`_ as a starting point.)
 
 Learn About Pangeo Software
 ---------------------------
@@ -68,6 +30,8 @@ This loose collection of packages is often referred to as the *Pangeo stack*.
 
    packages
 
+For more information about how these packages relate to each other, consult the
+:ref:`architecture` page.
 
 Explore the Use Cases
 ---------------------
@@ -75,6 +39,8 @@ Explore the Use Cases
 The Use Case Gallery demonstrates real-world science applications of the
 Pangeo stack. The use cases are formatted as `Jupyter Notebooks`_, a
 self-describing computational document including text, code, and figures.
+A great way to get started is to find a use case that is similar to the
+analysis you want to do and modify it to suit your needs.
 
 .. toctree::
   :maxdepth: 2
@@ -112,26 +78,45 @@ any challenges your have encountered along the way.
 Contribute a Use Case
 ---------------------
 
-If you are using Pangeo for your research, we would love to include and example
-in the Use Case Gallery.
-
-.. note::
-
-  The Use Case Gallery is still under construction. Check back soon for
-  detailed instructions on how to contribute your use case.
-  The technical implementation of the gallery is under discussion in
-  `Pangeo Github issue 201 <https://github.com/pangeo-data/pangeo/issues/201>`_.
+If you are using Pangeo for your research, we would love to include an example
+in the :ref:`Use Case Gallery <use-cases>`.
+Please raise an issue on the `Pangeo GitHub issue tracker`_ to propose your
+use case.
 
 Contribute Data
 ---------------
 
+Datasets are central to Pangeo. Our goal is to bring the computing to the data,
+rather than the other way around.
+If you have data you would like to make accessible to Pangeo, your best bet is
+to place it on a large shared HPC cluster or in cloud storage. The data
+page below provides a detailed description of how to interface pangeo with
+the datasets of your choice.
+
+.. toctree::
+   :maxdepth: 2
+
+   data
+
+In the future, we hope to curate a data catalog to make it easier for users to
+discover datasets on Pangeo platforms
+(see `the discussion on github <https://github.com/pangeo-data/pangeo/issues/39>`_
+for more detail.)
 
 Become an Open Source Contributor
 ---------------------------------
 
+The success of the Pangeo project depends on the sustainable development of
+the underlying :ref:`packages`. A great way to contribute to Pangeo is to
+contribute to those packages. Some ways to do this include:
 
-Develop New Software
---------------------
+- helping to improve the documentation of these packages
+- raising issues on the package github repositories to report bugs or identify
+  missing features
+- fixing bugs or implementing new features yourself
 
+
+
+.. _Scipy Lectures: https://www.scipy-lectures.org/
 .. _Pangeo GitHub issue tracker: https://github.com/pangeo-data/pangeo/issues
 .. _Jupyter Notebooks: https://jupyter-notebook.readthedocs.io/en/stable/notebook.html
