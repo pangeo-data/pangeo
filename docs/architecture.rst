@@ -107,7 +107,7 @@ Storage on the Cloud
 
 How we should store large N-dimensional arrays in the cloud storage context is
 an open question. Pangeo is developing `evaluation tools
-<https://github.com/pangeo-data/storage-benchmarks>`__ to help better understand
+<https://github.com/pangeo-data/storage-benchmarks>`_ to help better understand
 the performance of current methods for storing complex data in the cloud.
 
 
