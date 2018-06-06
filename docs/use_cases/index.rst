@@ -17,3 +17,10 @@ Meteorology
    :maxdepth: 1
 
    newmann_ensemble_meteorology
+
+Climate Modeling
+
+.. toctree::
+   :maxdepth: 1
+
+   CESM-Large-Ensemble-Tracer-Budget-Example
