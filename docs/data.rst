@@ -81,7 +81,11 @@ Our *current preference* for storing multidimensional array data in the cloud
 is the Zarr_ format.
 Zarr is a new storage format which, thanks to its simple yet well-designed
 specification, makes large datasets easily accessible to distributed computing.
-It works on both local filesystems and cloud-based object stores.
+In Zarr datasets, the arrays are divided into chunks and compressed.
+These individual chunks can be stored as files on a filesystem or as objects
+in a cloud storage bucket.
+The metadata are stored in lightweight ``.json`` files.
+Zarr works well on both local filesystems and cloud-based object stores.
 Existing datasets can easily be converted to zarr via
 `xarray's zarr functions <http://xarray.pydata.org/en/latest/io.html#zarr>`_.
 
@@ -165,8 +169,11 @@ These recommendations may change as cloud storage technology evolves.
    If your dataset is very large, this can take a very long time.
    The speed is generally constrained by the rate at which the data can be read
    from the storage device where the original files are located. If you are
-   on a high-performance cluster, you might consider using a dask distribute to
+   on a high-performance cluster, you might consider using a dask distributed to
    parallelize the operation across multiple nodes.
+
+   Xarray and zarr have many different options for encoding and compression of
+   the datasets.
 
 
 
