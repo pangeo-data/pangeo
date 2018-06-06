@@ -276,6 +276,21 @@ the latest helm chart version. Here the version we are using is ``0.1.1-a14d55b`
      -f jupyter-config.yaml
 
 
+If you have not specified a static IP address in your configuration, the
+jupyterhub will come up at a random IP address. To get the address, run the
+command
+
+.. code-block:: bash
+
+   kubectl --namespace=pangeo get svc proxy-public
+
+Here's what we see for pangeo.pydata.org when we run this commmand::
+
+  NAME           TYPE           CLUSTER-IP      EXTERNAL-IP    PORT(S)        AGE
+  proxy-public   LoadBalancer   10.23.255.193   35.224.8.169   80:30442/TCP   18d
+
+The ``EXTERNAL-IP`` value is the address of the hub.
+
 Upgrade Cluster
 ---------------
 
