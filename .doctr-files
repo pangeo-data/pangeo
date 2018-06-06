@@ -27,6 +27,7 @@
 ./_sources/setup_guides/cloud.rst.txt
 ./_sources/setup_guides/hpc.rst.txt
 ./_sources/setup_guides/index.rst.txt
+./_sources/use_cases/CESM-Large-Ensemble-Tracer-Budget-Example.ipynb.txt
 ./_sources/use_cases/index.rst.txt
 ./_sources/use_cases/newmann_ensemble_meteorology.ipynb.txt
 ./_sources/use_cases/ocean_cm2.6_eddy_statistics.ipynb.txt
@@ -149,6 +150,7 @@
 ./setup_guides/cloud.html
 ./setup_guides/hpc.html
 ./setup_guides/index.html
+./use_cases/CESM-Large-Ensemble-Tracer-Budget-Example.html
 ./use_cases/index.html
 ./use_cases/newmann_ensemble_meteorology.html
 ./use_cases/ocean_cm2.6_eddy_statistics.html
