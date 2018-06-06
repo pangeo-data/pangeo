@@ -1,3 +1,5 @@
+.. _collaborators:
+
 Collaborators
 =============
 
@@ -9,6 +11,7 @@ Funding Agencies
 
 We are grateful to have formal funding support from several funding agencies.
 
+.. _nsf-award:
 EarthCube
 ~~~~~~~~~
 
@@ -28,7 +31,7 @@ Anaconda is funded via a subaward through Columbia.
 We were awarded $1.2M over a three year period (Oct. 2017 - Sept. 2020).
 
 The specific solicitation we responded to is
-`here <https://www.google.com/url?q=https%3A%2F%2Fwww.nsf.gov%2Fpubs%2F2016%2Fnsf16514%2Fnsf16514.htm&sa=D&sntz=1&usg=AFQjCNHKvXj9L4pTCnv7Ls8k6Cj5L2Iu-w>`_.
+`here <https://www.nsf.gov/pubs/2016/nsf16514/nsf16514.htm>`_.
 Our project is technically called an “EarthCube integration.” This type of project requires a close link to “Geoscience Use Cases,” i.e. actual science applications.
 The need to closely intertwine the technical development and the scientific applications determined the structure of our proposal and the makeup of the team.
 

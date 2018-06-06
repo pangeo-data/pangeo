@@ -1,7 +1,7 @@
 .. _setup-guides:
 
-Pangeo Setup Guides
-===================
+Deployment Setup Guides
+=======================
 
 The Pangeo software stack is an collection of :ref:`packages` that when used
 together facilitate scalable data analysis on a wide range of computing platforms

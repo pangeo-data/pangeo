@@ -53,4 +53,5 @@ Contents
    architecture
    setup_guides/index
    deployments
+   data
    collaborators
