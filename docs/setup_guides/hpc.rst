@@ -41,7 +41,7 @@ Create a new conda environment for our pangeo work:
 ::
 
     conda create -n pangeo -c conda-forge \
-        python=3.6 dask distributed xarray jupyterlab mpi4py dask_jobqueue
+        python=3.6 dask distributed xarray jupyterlab mpi4py dask-jobqueue
 
 Activate this environment
 

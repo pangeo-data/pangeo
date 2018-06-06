@@ -32,7 +32,7 @@ import sphinx_bootstrap_theme
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    #'sphinx.ext.intersphinx',
+    'sphinx.ext.intersphinx',
     'sphinx.ext.todo',
     'sphinx.ext.mathjax',
     'sphinx.ext.autosectionlabel',
@@ -240,7 +240,8 @@ texinfo_documents = [
 ]
 
 # Example configuration for intersphinx: refer to the Python standard library.
-intersphinx_mapping = {'https://docs.python.org/': None}
+intersphinx_mapping = {'xarray': ('http://xarray.pydata.org/en/latest/', None),
+                       'zarr': ('http://xarray.pydata.org/en/latest/', None)}
 
 # https://pypi.python.org/pypi/sphinx-bootstrap-theme/
 def setup(app):

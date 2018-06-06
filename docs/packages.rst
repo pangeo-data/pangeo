@@ -130,7 +130,7 @@ additional recommendations.
 4. *Consume and Produce Xarray Objects:* Xarray data structures
    facilitate mutual interoperability between packages. (For more about
    Xarray , see below.)
-5. *Operate Lazily:* whevever possible, packages should avoid explicitly
+5. *Operate Lazily:* whenever possible, packages should avoid explicitly
    triggering computation on
    `Dask <http://dask.pydata.org/en/latest/array.html>`__ objects. (For
    more about Dask, see below)
