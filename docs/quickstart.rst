@@ -30,6 +30,8 @@ This loose collection of packages is often referred to as the *Pangeo stack*.
 
    packages
 
+For more information about how these packages relate to each other, consult the
+:ref:`architecture` page.
 
 Explore the Use Cases
 ---------------------
@@ -61,7 +63,7 @@ you can analyze large datasets in a scalable, reproducible way.
    deployments
 
 If none of these meets your needs, you can create your own deployment by
-following the :ref:`setup-guides`. 
+following the :ref:`setup-guides`.
 
 Give Feedback
 -------------
@@ -76,19 +78,44 @@ any challenges your have encountered along the way.
 Contribute a Use Case
 ---------------------
 
-If you are using Pangeo for your research, we would love to include and example
+If you are using Pangeo for your research, we would love to include an example
 in the :ref:`Use Case Gallery <use-cases>`.
+Please raise an issue on the `Pangeo GitHub issue tracker`_ to propose your
+use case.
 
 Contribute Data
 ---------------
 
+Datasets are central to Pangeo. Our goal is to bring the computing to the data,
+rather than the other way around.
+If you have data you would like to make accessible to Pangeo, your best bet is
+to place it on a large shared HPC cluster or in cloud storage. The data
+page below provides a detailed description of how to interface pangeo with
+the datasets of your choice.
+
+.. toctree::
+   :maxdepth: 2
+
+   data
+
+In the future, we hope to curate a data catalog to make it easier for users to
+discover datasets on Pangeo platforms
+(see `the discussion on github <https://github.com/pangeo-data/pangeo/issues/39>`_
+for more detail.)
 
 Become an Open Source Contributor
 ---------------------------------
 
+The success of the Pangeo project depends on the sustainable development of
+the underlying :ref:`packages`. A great way to contribute to Pangeo is to
+contribute to those packages. Some ways to do this include:
 
-Develop New Software
---------------------
+- helping to improve the documentation of these packages
+- raising issues on the package github repositories to report bugs or identify
+  missing features
+- fixing bugs or implementing new features yourself
+
+
 
 .. _Scipy Lectures: https://www.scipy-lectures.org/
 .. _Pangeo GitHub issue tracker: https://github.com/pangeo-data/pangeo/issues

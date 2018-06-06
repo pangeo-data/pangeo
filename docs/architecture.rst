@@ -1,3 +1,5 @@
+.. _architecture:
+
 Technical Architecture
 ======================
 
