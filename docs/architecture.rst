@@ -42,12 +42,16 @@ highlights some of the interchangeable components within Pangeo.
 Software
 --------
 
+The Pangeo software stack a collection of Python libraries that when used
+together facilitate scalable analysis. The packages themselves are described
+in more detail in the :ref:`packages` section.
+
 Python
 ~~~~~~
 
 The Python programming is quickly becoming the standard language in the
 open-source data science world. The core packages in the Pangeo stack are all
-build using Python.
+built using Python.
 
 Data Models
 ~~~~~~~~~~~
