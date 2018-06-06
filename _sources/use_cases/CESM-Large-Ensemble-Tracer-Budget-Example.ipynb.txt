@@ -125,7 +125,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "# Open the Dataset\n",
+    "## Open the Dataset\n",
     "If you're not using the ensemble, you may also want to try:\n",
     "`pl.open_pop_single_var_file`\n",
     "`pl.open_pop_multi_var_file`"
@@ -133,67 +133,11 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 6,
+   "execution_count": null,
    "metadata": {
     "scrolled": true
    },
-   "outputs": [
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "/glade/p/work/sridge/miniconda3/envs/pangeo/lib/python3.6/site-packages/xarray/conventions.py:362: SerializationWarning: variable 'UE_DIC_ALT_CO2' has multiple fill values {9.96921e+36, -1.0}, decoding all values to NaN.\n",
-      "  stack_char_dim=stack_char_dim)\n",
-      "/glade/p/work/sridge/miniconda3/envs/pangeo/lib/python3.6/site-packages/xarray/conventions.py:362: SerializationWarning: variable 'VN_DIC_ALT_CO2' has multiple fill values {9.96921e+36, -1.0}, decoding all values to NaN.\n",
-      "  stack_char_dim=stack_char_dim)\n",
-      "/glade/p/work/sridge/miniconda3/envs/pangeo/lib/python3.6/site-packages/xarray/conventions.py:362: SerializationWarning: variable 'WT_DIC_ALT_CO2' has multiple fill values {9.96921e+36, -1.0}, decoding all values to NaN.\n",
-      "  stack_char_dim=stack_char_dim)\n",
-      "/glade/p/work/sridge/miniconda3/envs/pangeo/lib/python3.6/site-packages/xarray/conventions.py:362: SerializationWarning: variable 'HDIFE_DIC_ALT_CO2' has multiple fill values {9.96921e+36, -1.0}, decoding all values to NaN.\n",
-      "  stack_char_dim=stack_char_dim)\n",
-      "/glade/p/work/sridge/miniconda3/envs/pangeo/lib/python3.6/site-packages/xarray/conventions.py:362: SerializationWarning: variable 'HDIFN_DIC_ALT_CO2' has multiple fill values {9.96921e+36, -1.0}, decoding all values to NaN.\n",
-      "  stack_char_dim=stack_char_dim)\n",
-      "/glade/p/work/sridge/miniconda3/envs/pangeo/lib/python3.6/site-packages/xarray/conventions.py:362: SerializationWarning: variable 'HDIFB_DIC_ALT_CO2' has multiple fill values {9.96921e+36, -1.0}, decoding all values to NaN.\n",
-      "  stack_char_dim=stack_char_dim)\n",
-      "/glade/p/work/sridge/miniconda3/envs/pangeo/lib/python3.6/site-packages/xarray/conventions.py:362: SerializationWarning: variable 'DIA_IMPVF_DIC_ALT_CO2' has multiple fill values {9.96921e+36, -1.0}, decoding all values to NaN.\n",
-      "  stack_char_dim=stack_char_dim)\n",
-      "/glade/p/work/sridge/miniconda3/envs/pangeo/lib/python3.6/site-packages/xarray/conventions.py:362: SerializationWarning: variable 'KPP_SRC_DIC_ALT_CO2' has multiple fill values {9.96921e+36, -1.0}, decoding all values to NaN.\n",
-      "  stack_char_dim=stack_char_dim)\n",
-      " 33%|███▎      | 1/3 [00:11<00:22, 11.17s/it]/glade/p/work/sridge/miniconda3/envs/pangeo/lib/python3.6/site-packages/xarray/conventions.py:362: SerializationWarning: variable 'UE_DIC_ALT_CO2' has multiple fill values {9.96921e+36, -1.0}, decoding all values to NaN.\n",
-      "  stack_char_dim=stack_char_dim)\n",
-      "/glade/p/work/sridge/miniconda3/envs/pangeo/lib/python3.6/site-packages/xarray/conventions.py:362: SerializationWarning: variable 'VN_DIC_ALT_CO2' has multiple fill values {9.96921e+36, -1.0}, decoding all values to NaN.\n",
-      "  stack_char_dim=stack_char_dim)\n",
-      "/glade/p/work/sridge/miniconda3/envs/pangeo/lib/python3.6/site-packages/xarray/conventions.py:362: SerializationWarning: variable 'WT_DIC_ALT_CO2' has multiple fill values {9.96921e+36, -1.0}, decoding all values to NaN.\n",
-      "  stack_char_dim=stack_char_dim)\n",
-      "/glade/p/work/sridge/miniconda3/envs/pangeo/lib/python3.6/site-packages/xarray/conventions.py:362: SerializationWarning: variable 'HDIFE_DIC_ALT_CO2' has multiple fill values {9.96921e+36, -1.0}, decoding all values to NaN.\n",
-      "  stack_char_dim=stack_char_dim)\n",
-      "/glade/p/work/sridge/miniconda3/envs/pangeo/lib/python3.6/site-packages/xarray/conventions.py:362: SerializationWarning: variable 'HDIFN_DIC_ALT_CO2' has multiple fill values {9.96921e+36, -1.0}, decoding all values to NaN.\n",
-      "  stack_char_dim=stack_char_dim)\n",
-      "/glade/p/work/sridge/miniconda3/envs/pangeo/lib/python3.6/site-packages/xarray/conventions.py:362: SerializationWarning: variable 'HDIFB_DIC_ALT_CO2' has multiple fill values {9.96921e+36, -1.0}, decoding all values to NaN.\n",
-      "  stack_char_dim=stack_char_dim)\n",
-      "/glade/p/work/sridge/miniconda3/envs/pangeo/lib/python3.6/site-packages/xarray/conventions.py:362: SerializationWarning: variable 'DIA_IMPVF_DIC_ALT_CO2' has multiple fill values {9.96921e+36, -1.0}, decoding all values to NaN.\n",
-      "  stack_char_dim=stack_char_dim)\n",
-      "/glade/p/work/sridge/miniconda3/envs/pangeo/lib/python3.6/site-packages/xarray/conventions.py:362: SerializationWarning: variable 'KPP_SRC_DIC_ALT_CO2' has multiple fill values {9.96921e+36, -1.0}, decoding all values to NaN.\n",
-      "  stack_char_dim=stack_char_dim)\n",
-      " 67%|██████▋   | 2/3 [00:17<00:08,  8.97s/it]/glade/p/work/sridge/miniconda3/envs/pangeo/lib/python3.6/site-packages/xarray/conventions.py:362: SerializationWarning: variable 'UE_DIC_ALT_CO2' has multiple fill values {9.96921e+36, -1.0}, decoding all values to NaN.\n",
-      "  stack_char_dim=stack_char_dim)\n",
-      "/glade/p/work/sridge/miniconda3/envs/pangeo/lib/python3.6/site-packages/xarray/conventions.py:362: SerializationWarning: variable 'VN_DIC_ALT_CO2' has multiple fill values {9.96921e+36, -1.0}, decoding all values to NaN.\n",
-      "  stack_char_dim=stack_char_dim)\n",
-      "/glade/p/work/sridge/miniconda3/envs/pangeo/lib/python3.6/site-packages/xarray/conventions.py:362: SerializationWarning: variable 'WT_DIC_ALT_CO2' has multiple fill values {9.96921e+36, -1.0}, decoding all values to NaN.\n",
-      "  stack_char_dim=stack_char_dim)\n",
-      "/glade/p/work/sridge/miniconda3/envs/pangeo/lib/python3.6/site-packages/xarray/conventions.py:362: SerializationWarning: variable 'HDIFE_DIC_ALT_CO2' has multiple fill values {9.96921e+36, -1.0}, decoding all values to NaN.\n",
-      "  stack_char_dim=stack_char_dim)\n",
-      "/glade/p/work/sridge/miniconda3/envs/pangeo/lib/python3.6/site-packages/xarray/conventions.py:362: SerializationWarning: variable 'HDIFN_DIC_ALT_CO2' has multiple fill values {9.96921e+36, -1.0}, decoding all values to NaN.\n",
-      "  stack_char_dim=stack_char_dim)\n",
-      "/glade/p/work/sridge/miniconda3/envs/pangeo/lib/python3.6/site-packages/xarray/conventions.py:362: SerializationWarning: variable 'HDIFB_DIC_ALT_CO2' has multiple fill values {9.96921e+36, -1.0}, decoding all values to NaN.\n",
-      "  stack_char_dim=stack_char_dim)\n",
-      "/glade/p/work/sridge/miniconda3/envs/pangeo/lib/python3.6/site-packages/xarray/conventions.py:362: SerializationWarning: variable 'DIA_IMPVF_DIC_ALT_CO2' has multiple fill values {9.96921e+36, -1.0}, decoding all values to NaN.\n",
-      "  stack_char_dim=stack_char_dim)\n",
-      "/glade/p/work/sridge/miniconda3/envs/pangeo/lib/python3.6/site-packages/xarray/conventions.py:362: SerializationWarning: variable 'KPP_SRC_DIC_ALT_CO2' has multiple fill values {9.96921e+36, -1.0}, decoding all values to NaN.\n",
-      "  stack_char_dim=stack_char_dim)\n",
-      "100%|██████████| 3/3 [00:25<00:00,  8.63s/it]\n"
-     ]
-    }
-   ],
+   "outputs": [],
    "source": [
     "# function that strips uneeded coordinate variables and groups  all model output into a single dataset\n",
     "ds = pl.open_pop_ensemble(ddir, transport_varnames[0:8], memberlist)"
@@ -329,7 +273,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "# Convert Units\n",
+    "## Convert Units\n",
     "All terms are converted to nmol/s"
    ]
   },
@@ -433,7 +377,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "# Calculate Divergence\n",
+    "## Calculate Divergence\n",
     "Methods are described in the __[POP Manual](http://www.cesm.ucar.edu/models/cesm2.0/ocean/doc/sci/POPRefManual.pdf)__ "
    ]
   },
@@ -546,7 +490,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "# Write to Disk\n",
+    "## Write to Disk\n",
     "\n",
     "The final product is grid cell by grid cell tracer divergence (nmol/s) that can be integrated vertically to the depth of your choosing for the column budget"
    ]
@@ -557,33 +501,7 @@
    "metadata": {
     "scrolled": false
    },
-   "outputs": [
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "0it [00:00, ?it/s]/glade/p/work/sridge/miniconda3/envs/pangeo/lib/python3.6/site-packages/distributed/worker.py:742: UserWarning: Large object of size 60.37 MB detected in task graph: \n",
-      "  (\"('mean_agg-aggregate-d524597c25bea3a6e73675f3802 ... 95c0>]), False)\n",
-      "Consider scattering large objects ahead of time\n",
-      "with client.scatter to reduce scheduler burden and \n",
-      "keep data on workers\n",
-      "\n",
-      "    future = client.submit(func, big_data)    # bad\n",
-      "\n",
-      "    big_future = client.scatter(big_data)     # good\n",
-      "    future = client.submit(func, big_future)  # good\n",
-      "  % (format_bytes(len(b)), s))\n",
-      "1it [01:14, 74.54s/it]distributed.comm.tcp - WARNING - Closing dangling stream in <TCP local=tcp://10.148.13.49:55650 remote=tcp://10.148.13.49:50623>\n",
-      "distributed.comm.tcp - WARNING - Closing dangling stream in <TCP local=tcp://10.148.13.49:55651 remote=tcp://10.148.13.49:50623>\n",
-      "2it [02:54, 87.06s/it]distributed.comm.tcp - WARNING - Closing dangling stream in <TCP local=tcp://10.148.13.49:55659 remote=tcp://10.148.13.49:50623>\n",
-      "distributed.comm.tcp - WARNING - Closing dangling stream in <TCP local=tcp://10.148.13.49:55661 remote=tcp://10.148.13.49:50623>\n",
-      "distributed.comm.tcp - WARNING - Closing dangling stream in <TCP local=tcp://10.148.13.49:55660 remote=tcp://10.148.13.49:50623>\n",
-      "3it [05:05, 101.93s/it]distributed.comm.tcp - WARNING - Closing dangling stream in <TCP local=tcp://10.148.13.49:55671 remote=tcp://10.148.13.49:50623>\n",
-      "distributed.comm.tcp - WARNING - Closing dangling stream in <TCP local=tcp://10.148.13.49:55669 remote=tcp://10.148.13.49:50623>\n",
-      "5it [09:46, 117.23s/it]"
-     ]
-    }
-   ],
+   "outputs": [],
    "source": [
     "# take ensemble mean and write to disk\n",
     "\n",

@@ -29,6 +29,8 @@
     <link rel="author" title="About these documents" href="../about.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Deployments" href="../deployments.html" />
+    <link rel="prev" title="Analysis of Gridded Ensemble Precipitation and Temperature Estimates over the Contiguous United States" href="newmann_ensemble_meteorology.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -64,7 +66,7 @@
      href="../index.html">Site <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
       role="menu"
-      aria-labelledby="dLabelGlobalToc"><ul>
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../about.html">About Pangeo</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../about.html#motivation">Motivation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../about.html#mission-statement">Mission Statement</a></li>
@@ -73,9 +75,9 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../faq.html">Frequently Asked Questions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Guide for Scientists</a><ul>
+<li class="toctree-l1 current"><a class="reference internal" href="../quickstart.html">Guide for Scientists</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../quickstart.html#learn-about-pangeo-software">Learn About Pangeo Software</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../quickstart.html#explore-the-use-cases">Explore the Use Cases</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../quickstart.html#explore-the-use-cases">Explore the Use Cases</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../quickstart.html#try-out-a-pangeo-deployment">Try Out a Pangeo Deployment</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../quickstart.html#give-feedback">Give Feedback</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../quickstart.html#contribute-a-use-case">Contribute a Use Case</a></li>
@@ -89,9 +91,10 @@
 <li class="toctree-l2"><a class="reference internal" href="../packages.html#guidelines-for-new-packages">Guidelines for New Packages</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="index.html">Geoscience Use Cases</a><ul>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Geoscience Use Cases</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="ocean_cm2.6_eddy_statistics.html">Use Case: CM2.6 Eddy Statistics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="newmann_ensemble_meteorology.html">Analysis of Gridded Ensemble Precipitation and Temperature Estimates over the Contiguous United States</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">CESM Large Ensemble Tracer Budget</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../architecture.html">Technical Architecture</a><ul>
@@ -132,18 +135,18 @@
   <ul class="dropdown-menu localtoc"
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
-<li><a class="reference internal" href="#">CESM Large Ensemble Tracer Budget</a></li>
+<li><a class="reference internal" href="#">CESM Large Ensemble Tracer Budget</a><ul>
 <li><a class="reference internal" href="#Open-the-Dataset">Open the Dataset</a></li>
 <li><a class="reference internal" href="#Convert-Units">Convert Units</a></li>
-<li><a class="reference internal" href="#Calculate-Divergence">Calculate Divergence</a><ul>
+<li><a class="reference internal" href="#Calculate-Divergence">Calculate Divergence</a></li>
 <li><a class="reference internal" href="#Vertical-Divergence:-Resolved-Advection">Vertical Divergence: Resolved Advection</a></li>
 <li><a class="reference internal" href="#Vertical-Divergence:-Submesoscale-Eddies-and-Isopycnal-Diffusion">Vertical Divergence: Submesoscale Eddies and Isopycnal Diffusion</a></li>
 <li><a class="reference internal" href="#Vertical-Divergence:-Diapycnal-Diffusion">Vertical Divergence: Diapycnal Diffusion</a></li>
 <li><a class="reference internal" href="#Horizontal-Divergence:-Resolved-Advection">Horizontal Divergence: Resolved Advection</a></li>
 <li><a class="reference internal" href="#Horizontal-Divergence:-Submesoscale-Eddies-and-Isopycnal-Diffusion">Horizontal Divergence: Submesoscale Eddies and Isopycnal Diffusion</a></li>
+<li><a class="reference internal" href="#Write-to-Disk">Write to Disk</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#Write-to-Disk">Write to Disk</a></li>
 </ul>
 </ul>
 </li>
@@ -166,18 +169,18 @@
   <div class="row">
       <div class="col-md-3">
         <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
-<li><a class="reference internal" href="#">CESM Large Ensemble Tracer Budget</a></li>
+<li><a class="reference internal" href="#">CESM Large Ensemble Tracer Budget</a><ul>
 <li><a class="reference internal" href="#Open-the-Dataset">Open the Dataset</a></li>
 <li><a class="reference internal" href="#Convert-Units">Convert Units</a></li>
-<li><a class="reference internal" href="#Calculate-Divergence">Calculate Divergence</a><ul>
+<li><a class="reference internal" href="#Calculate-Divergence">Calculate Divergence</a></li>
 <li><a class="reference internal" href="#Vertical-Divergence:-Resolved-Advection">Vertical Divergence: Resolved Advection</a></li>
 <li><a class="reference internal" href="#Vertical-Divergence:-Submesoscale-Eddies-and-Isopycnal-Diffusion">Vertical Divergence: Submesoscale Eddies and Isopycnal Diffusion</a></li>
 <li><a class="reference internal" href="#Vertical-Divergence:-Diapycnal-Diffusion">Vertical Divergence: Diapycnal Diffusion</a></li>
 <li><a class="reference internal" href="#Horizontal-Divergence:-Resolved-Advection">Horizontal Divergence: Resolved Advection</a></li>
 <li><a class="reference internal" href="#Horizontal-Divergence:-Submesoscale-Eddies-and-Isopycnal-Diffusion">Horizontal Divergence: Submesoscale Eddies and Isopycnal Diffusion</a></li>
+<li><a class="reference internal" href="#Write-to-Disk">Write to Disk</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#Write-to-Disk">Write to Disk</a></li>
 </ul>
 
         </div>
@@ -473,14 +476,13 @@ tools to handle the large data volume</p>
 </pre></div>
 </div>
 </div>
-</div>
 <div class="section" id="Open-the-Dataset">
-<h1>Open the Dataset<a class="headerlink" href="#Open-the-Dataset" title="Permalink to this headline">¶</a></h1>
+<h2>Open the Dataset<a class="headerlink" href="#Open-the-Dataset" title="Permalink to this headline">¶</a></h2>
 <p>If you’re not using the ensemble, you may also want to try:
 <code class="docutils literal"><span class="pre">pl.open_pop_single_var_file</span></code> <code class="docutils literal"><span class="pre">pl.open_pop_multi_var_file</span></code></p>
-<div class="nbinput docutils container">
+<div class="nbinput nblast docutils container">
 <div class="prompt highlight-none"><div class="highlight"><pre>
-<span></span>In [6]:
+<span></span>In [ ]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3"><div class="highlight"><pre>
@@ -488,62 +490,6 @@ tools to handle the large data volume</p>
 <span class="n">ds</span> <span class="o">=</span> <span class="n">pl</span><span class="o">.</span><span class="n">open_pop_ensemble</span><span class="p">(</span><span class="n">ddir</span><span class="p">,</span> <span class="n">transport_varnames</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">8</span><span class="p">],</span> <span class="n">memberlist</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="stderr output_area docutils container">
-<div class="highlight"><pre>
-/glade/p/work/sridge/miniconda3/envs/pangeo/lib/python3.6/site-packages/xarray/conventions.py:362: SerializationWarning: variable &#39;UE_DIC_ALT_CO2&#39; has multiple fill values {9.96921e+36, -1.0}, decoding all values to NaN.
-  stack_char_dim=stack_char_dim)
-/glade/p/work/sridge/miniconda3/envs/pangeo/lib/python3.6/site-packages/xarray/conventions.py:362: SerializationWarning: variable &#39;VN_DIC_ALT_CO2&#39; has multiple fill values {9.96921e+36, -1.0}, decoding all values to NaN.
-  stack_char_dim=stack_char_dim)
-/glade/p/work/sridge/miniconda3/envs/pangeo/lib/python3.6/site-packages/xarray/conventions.py:362: SerializationWarning: variable &#39;WT_DIC_ALT_CO2&#39; has multiple fill values {9.96921e+36, -1.0}, decoding all values to NaN.
-  stack_char_dim=stack_char_dim)
-/glade/p/work/sridge/miniconda3/envs/pangeo/lib/python3.6/site-packages/xarray/conventions.py:362: SerializationWarning: variable &#39;HDIFE_DIC_ALT_CO2&#39; has multiple fill values {9.96921e+36, -1.0}, decoding all values to NaN.
-  stack_char_dim=stack_char_dim)
-/glade/p/work/sridge/miniconda3/envs/pangeo/lib/python3.6/site-packages/xarray/conventions.py:362: SerializationWarning: variable &#39;HDIFN_DIC_ALT_CO2&#39; has multiple fill values {9.96921e+36, -1.0}, decoding all values to NaN.
-  stack_char_dim=stack_char_dim)
-/glade/p/work/sridge/miniconda3/envs/pangeo/lib/python3.6/site-packages/xarray/conventions.py:362: SerializationWarning: variable &#39;HDIFB_DIC_ALT_CO2&#39; has multiple fill values {9.96921e+36, -1.0}, decoding all values to NaN.
-  stack_char_dim=stack_char_dim)
-/glade/p/work/sridge/miniconda3/envs/pangeo/lib/python3.6/site-packages/xarray/conventions.py:362: SerializationWarning: variable &#39;DIA_IMPVF_DIC_ALT_CO2&#39; has multiple fill values {9.96921e+36, -1.0}, decoding all values to NaN.
-  stack_char_dim=stack_char_dim)
-/glade/p/work/sridge/miniconda3/envs/pangeo/lib/python3.6/site-packages/xarray/conventions.py:362: SerializationWarning: variable &#39;KPP_SRC_DIC_ALT_CO2&#39; has multiple fill values {9.96921e+36, -1.0}, decoding all values to NaN.
-  stack_char_dim=stack_char_dim)
- 33%|███▎      | 1/3 [00:11&lt;00:22, 11.17s/it]/glade/p/work/sridge/miniconda3/envs/pangeo/lib/python3.6/site-packages/xarray/conventions.py:362: SerializationWarning: variable &#39;UE_DIC_ALT_CO2&#39; has multiple fill values {9.96921e+36, -1.0}, decoding all values to NaN.
-  stack_char_dim=stack_char_dim)
-/glade/p/work/sridge/miniconda3/envs/pangeo/lib/python3.6/site-packages/xarray/conventions.py:362: SerializationWarning: variable &#39;VN_DIC_ALT_CO2&#39; has multiple fill values {9.96921e+36, -1.0}, decoding all values to NaN.
-  stack_char_dim=stack_char_dim)
-/glade/p/work/sridge/miniconda3/envs/pangeo/lib/python3.6/site-packages/xarray/conventions.py:362: SerializationWarning: variable &#39;WT_DIC_ALT_CO2&#39; has multiple fill values {9.96921e+36, -1.0}, decoding all values to NaN.
-  stack_char_dim=stack_char_dim)
-/glade/p/work/sridge/miniconda3/envs/pangeo/lib/python3.6/site-packages/xarray/conventions.py:362: SerializationWarning: variable &#39;HDIFE_DIC_ALT_CO2&#39; has multiple fill values {9.96921e+36, -1.0}, decoding all values to NaN.
-  stack_char_dim=stack_char_dim)
-/glade/p/work/sridge/miniconda3/envs/pangeo/lib/python3.6/site-packages/xarray/conventions.py:362: SerializationWarning: variable &#39;HDIFN_DIC_ALT_CO2&#39; has multiple fill values {9.96921e+36, -1.0}, decoding all values to NaN.
-  stack_char_dim=stack_char_dim)
-/glade/p/work/sridge/miniconda3/envs/pangeo/lib/python3.6/site-packages/xarray/conventions.py:362: SerializationWarning: variable &#39;HDIFB_DIC_ALT_CO2&#39; has multiple fill values {9.96921e+36, -1.0}, decoding all values to NaN.
-  stack_char_dim=stack_char_dim)
-/glade/p/work/sridge/miniconda3/envs/pangeo/lib/python3.6/site-packages/xarray/conventions.py:362: SerializationWarning: variable &#39;DIA_IMPVF_DIC_ALT_CO2&#39; has multiple fill values {9.96921e+36, -1.0}, decoding all values to NaN.
-  stack_char_dim=stack_char_dim)
-/glade/p/work/sridge/miniconda3/envs/pangeo/lib/python3.6/site-packages/xarray/conventions.py:362: SerializationWarning: variable &#39;KPP_SRC_DIC_ALT_CO2&#39; has multiple fill values {9.96921e+36, -1.0}, decoding all values to NaN.
-  stack_char_dim=stack_char_dim)
- 67%|██████▋   | 2/3 [00:17&lt;00:08,  8.97s/it]/glade/p/work/sridge/miniconda3/envs/pangeo/lib/python3.6/site-packages/xarray/conventions.py:362: SerializationWarning: variable &#39;UE_DIC_ALT_CO2&#39; has multiple fill values {9.96921e+36, -1.0}, decoding all values to NaN.
-  stack_char_dim=stack_char_dim)
-/glade/p/work/sridge/miniconda3/envs/pangeo/lib/python3.6/site-packages/xarray/conventions.py:362: SerializationWarning: variable &#39;VN_DIC_ALT_CO2&#39; has multiple fill values {9.96921e+36, -1.0}, decoding all values to NaN.
-  stack_char_dim=stack_char_dim)
-/glade/p/work/sridge/miniconda3/envs/pangeo/lib/python3.6/site-packages/xarray/conventions.py:362: SerializationWarning: variable &#39;WT_DIC_ALT_CO2&#39; has multiple fill values {9.96921e+36, -1.0}, decoding all values to NaN.
-  stack_char_dim=stack_char_dim)
-/glade/p/work/sridge/miniconda3/envs/pangeo/lib/python3.6/site-packages/xarray/conventions.py:362: SerializationWarning: variable &#39;HDIFE_DIC_ALT_CO2&#39; has multiple fill values {9.96921e+36, -1.0}, decoding all values to NaN.
-  stack_char_dim=stack_char_dim)
-/glade/p/work/sridge/miniconda3/envs/pangeo/lib/python3.6/site-packages/xarray/conventions.py:362: SerializationWarning: variable &#39;HDIFN_DIC_ALT_CO2&#39; has multiple fill values {9.96921e+36, -1.0}, decoding all values to NaN.
-  stack_char_dim=stack_char_dim)
-/glade/p/work/sridge/miniconda3/envs/pangeo/lib/python3.6/site-packages/xarray/conventions.py:362: SerializationWarning: variable &#39;HDIFB_DIC_ALT_CO2&#39; has multiple fill values {9.96921e+36, -1.0}, decoding all values to NaN.
-  stack_char_dim=stack_char_dim)
-/glade/p/work/sridge/miniconda3/envs/pangeo/lib/python3.6/site-packages/xarray/conventions.py:362: SerializationWarning: variable &#39;DIA_IMPVF_DIC_ALT_CO2&#39; has multiple fill values {9.96921e+36, -1.0}, decoding all values to NaN.
-  stack_char_dim=stack_char_dim)
-/glade/p/work/sridge/miniconda3/envs/pangeo/lib/python3.6/site-packages/xarray/conventions.py:362: SerializationWarning: variable &#39;KPP_SRC_DIC_ALT_CO2&#39; has multiple fill values {9.96921e+36, -1.0}, decoding all values to NaN.
-  stack_char_dim=stack_char_dim)
-100%|██████████| 3/3 [00:25&lt;00:00,  8.63s/it]
-</pre></div></div>
 </div>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none"><div class="highlight"><pre>
@@ -675,7 +621,7 @@ Attributes:
 </div>
 </div>
 <div class="section" id="Convert-Units">
-<h1>Convert Units<a class="headerlink" href="#Convert-Units" title="Permalink to this headline">¶</a></h1>
+<h2>Convert Units<a class="headerlink" href="#Convert-Units" title="Permalink to this headline">¶</a></h2>
 <p>All terms are converted to nmol/s</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none"><div class="highlight"><pre>
@@ -781,9 +727,10 @@ HDIFB_DIC_ALT_CO2
 </div>
 </div>
 <div class="section" id="Calculate-Divergence">
-<h1>Calculate Divergence<a class="headerlink" href="#Calculate-Divergence" title="Permalink to this headline">¶</a></h1>
+<h2>Calculate Divergence<a class="headerlink" href="#Calculate-Divergence" title="Permalink to this headline">¶</a></h2>
 <p>Methods are described in the <strong>`POP
 Manual &lt;http://www.cesm.ucar.edu/models/cesm2.0/ocean/doc/sci/POPRefManual.pdf&gt;`__</strong></p>
+</div>
 <div class="section" id="Vertical-Divergence:-Resolved-Advection">
 <h2>Vertical Divergence: Resolved Advection<a class="headerlink" href="#Vertical-Divergence:-Resolved-Advection" title="Permalink to this headline">¶</a></h2>
 <div class="nbinput nblast docutils container">
@@ -875,13 +822,12 @@ Manual &lt;http://www.cesm.ucar.edu/models/cesm2.0/ocean/doc/sci/POPRefManual.pd
 </div>
 </div>
 </div>
-</div>
 <div class="section" id="Write-to-Disk">
-<h1>Write to Disk<a class="headerlink" href="#Write-to-Disk" title="Permalink to this headline">¶</a></h1>
+<h2>Write to Disk<a class="headerlink" href="#Write-to-Disk" title="Permalink to this headline">¶</a></h2>
 <p>The final product is grid cell by grid cell tracer divergence (nmol/s)
 that can be integrated vertically to the depth of your choosing for the
 column budget</p>
-<div class="nbinput docutils container">
+<div class="nbinput nblast docutils container">
 <div class="prompt highlight-none"><div class="highlight"><pre>
 <span></span>In [ ]:
 </pre></div>
@@ -901,31 +847,6 @@ column budget</p>
 </pre></div>
 </div>
 </div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="stderr output_area docutils container">
-<div class="highlight"><pre>
-0it [00:00, ?it/s]/glade/p/work/sridge/miniconda3/envs/pangeo/lib/python3.6/site-packages/distributed/worker.py:742: UserWarning: Large object of size 60.37 MB detected in task graph:
-  (&#34;(&#39;mean_agg-aggregate-d524597c25bea3a6e73675f3802 ... 95c0&gt;]), False)
-Consider scattering large objects ahead of time
-with client.scatter to reduce scheduler burden and
-keep data on workers
-
-    future = client.submit(func, big_data)    # bad
-
-    big_future = client.scatter(big_data)     # good
-    future = client.submit(func, big_future)  # good
-  % (format_bytes(len(b)), s))
-1it [01:14, 74.54s/it]distributed.comm.tcp - WARNING - Closing dangling stream in &lt;TCP local=tcp://10.148.13.49:55650 remote=tcp://10.148.13.49:50623&gt;
-distributed.comm.tcp - WARNING - Closing dangling stream in &lt;TCP local=tcp://10.148.13.49:55651 remote=tcp://10.148.13.49:50623&gt;
-2it [02:54, 87.06s/it]distributed.comm.tcp - WARNING - Closing dangling stream in &lt;TCP local=tcp://10.148.13.49:55659 remote=tcp://10.148.13.49:50623&gt;
-distributed.comm.tcp - WARNING - Closing dangling stream in &lt;TCP local=tcp://10.148.13.49:55661 remote=tcp://10.148.13.49:50623&gt;
-distributed.comm.tcp - WARNING - Closing dangling stream in &lt;TCP local=tcp://10.148.13.49:55660 remote=tcp://10.148.13.49:50623&gt;
-3it [05:05, 101.93s/it]distributed.comm.tcp - WARNING - Closing dangling stream in &lt;TCP local=tcp://10.148.13.49:55671 remote=tcp://10.148.13.49:50623&gt;
-distributed.comm.tcp - WARNING - Closing dangling stream in &lt;TCP local=tcp://10.148.13.49:55669 remote=tcp://10.148.13.49:50623&gt;
-5it [09:46, 117.23s/it]
-</pre></div></div>
 </div>
 </div>
 
