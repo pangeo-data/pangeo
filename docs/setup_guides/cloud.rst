@@ -66,7 +66,22 @@ Step Two: Create a Cluster
 First, you must create an account on the cloud provider of your choice.
 Here we are using `Google Cloud Platform`_.
 
-Here is a bash script that will create a cluster:
+All Google Cloud services are provisioned within the context of a
+`project <https://cloud.google.com/resource-manager/docs/creating-managing-projects>`_.
+If you haven't done so already, you should create a project and switch to it
+in the Google Cloud console.
+From the *APIs and Services* section of the cloud console, you must then
+enable the Kubernetes Engine API for the project.
+
+To create the cluster from the command line, you must first be authenticated.
+Run the following from the commmand line
+
+.. code-block:: bash
+
+  gcloud config set container/new_scopes_behavior true
+  gcloud auth login
+
+Now here is a bash script that will create a cluster:
 
 .. code-block:: bash
 
