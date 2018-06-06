@@ -1,12 +1,14 @@
 ./_images/Sloan-Logo-primary-blac-web.png
 ./_images/anaconda-logo.png
 ./_images/dask_horizontal_no_pad.svg
+./_images/interop.jpeg
 ./_images/jupyter-logo.svg
 ./_images/ldeo-logo.png
 ./_images/logo_NSF_earthcube_combined.png
 ./_images/metoffice-logo.png
 ./_images/ncar-logo.png
 ./_images/pangeo_simple_logo.svg
+./_images/pangeo_tech_1.png
 ./_images/small_e_logo_cropped.png
 ./_images/use_cases_newmann_ensemble_meteorology_10_1.png
 ./_images/use_cases_newmann_ensemble_meteorology_18_1.png
@@ -102,6 +104,7 @@
 ./_static/down-pressed.png
 ./_static/down.png
 ./_static/file.png
+./_static/interop.jpeg
 ./_static/jquery-3.1.0.js
 ./_static/jquery.js
 ./_static/js/jquery-1.11.0.min.js
@@ -115,6 +118,7 @@
 ./_static/pangeo-style.css
 ./_static/pangeo_simple_logo.png
 ./_static/pangeo_simple_logo.svg
+./_static/pangeo_tech_1.png
 ./_static/panton.black-caps.otf
 ./_static/panton.light-caps.otf
 ./_static/plus.png
