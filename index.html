@@ -75,7 +75,6 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="quickstart.html">Guide for Scientists</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="quickstart.html#learn-about-the-open-source-ecosystem">Learn About the Open Source Ecosystem</a></li>
 <li class="toctree-l2"><a class="reference internal" href="quickstart.html#learn-about-pangeo-software">Learn About Pangeo Software</a></li>
 <li class="toctree-l2"><a class="reference internal" href="quickstart.html#explore-the-use-cases">Explore the Use Cases</a></li>
 <li class="toctree-l2"><a class="reference internal" href="quickstart.html#try-out-a-pangeo-deployment">Try Out a Pangeo Deployment</a></li>
@@ -83,7 +82,6 @@
 <li class="toctree-l2"><a class="reference internal" href="quickstart.html#contribute-a-use-case">Contribute a Use Case</a></li>
 <li class="toctree-l2"><a class="reference internal" href="quickstart.html#contribute-data">Contribute Data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="quickstart.html#become-an-open-source-contributor">Become an Open Source Contributor</a></li>
-<li class="toctree-l2"><a class="reference internal" href="quickstart.html#develop-new-software">Develop New Software</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="packages.html">Packages</a><ul>
@@ -105,12 +103,17 @@
 <li class="toctree-l2"><a class="reference internal" href="architecture.html#storage-formats">Storage Formats</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="setup_guides/index.html">Pangeo Setup Guides</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="setup_guides/index.html">Deployment Setup Guides</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="setup_guides/index.html#setting-up-pangeo-on-hpc-systems">Setting up Pangeo on HPC Systems</a></li>
 <li class="toctree-l2"><a class="reference internal" href="setup_guides/index.html#setting-up-pangeo-on-cloud-systems">Setting up Pangeo on Cloud Systems</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="deployments.html">Deployments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data.html">Pangeo and Data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="data.html#data-on-hpc">Data on HPC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html#data-in-the-cloud">Data in the Cloud</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="collaborators.html">Collaborators</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="collaborators.html#funding-agencies">Funding Agencies</a></li>
 <li class="toctree-l2"><a class="reference internal" href="collaborators.html#institutions">Institutions</a></li>
@@ -182,7 +185,7 @@ HPC and cloud platforms.</li>
 <li><strong>Science users</strong>: read the <a class="reference internal" href="quickstart.html#quickstart"><span class="std std-ref">Guide for Scientists</span></a>, browse the <a class="reference internal" href="use_cases/index.html#use-cases"><span class="std std-ref">Geoscience Use Cases</span></a>, or
 read about the <a class="reference internal" href="packages.html#packages"><span class="std std-ref">Packages</span></a>.</li>
 <li><strong>Developers / system administrators</strong>: learn about the
-<a class="reference internal" href="architecture.html#technical-architecture"><span class="std std-ref">Technical Architecture</span></a> or read the <a class="reference internal" href="setup_guides/index.html#setup-guides"><span class="std std-ref">Pangeo Setup Guides</span></a>.</li>
+<a class="reference internal" href="architecture.html#technical-architecture"><span class="std std-ref">Technical Architecture</span></a> or read the <a class="reference internal" href="setup_guides/index.html#setup-guides"><span class="std std-ref">Deployment Setup Guides</span></a>.</li>
 <li><strong>General interest</strong>: learn <a class="reference internal" href="about.html#about"><span class="std std-ref">About Pangeo</span></a>, see the <a class="reference internal" href="collaborators.html#collaborators"><span class="std std-ref">Collaborators</span></a>, or
 read the <a class="reference internal" href="faq.html#faq"><span class="std std-ref">Frequently Asked Questions</span></a>.</li>
 </ul>
@@ -200,7 +203,6 @@ read the <a class="reference internal" href="faq.html#faq"><span class="std std-
 </li>
 <li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="quickstart.html">Guide for Scientists</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="quickstart.html#learn-about-the-open-source-ecosystem">Learn About the Open Source Ecosystem</a></li>
 <li class="toctree-l2"><a class="reference internal" href="quickstart.html#learn-about-pangeo-software">Learn About Pangeo Software</a></li>
 <li class="toctree-l2"><a class="reference internal" href="quickstart.html#explore-the-use-cases">Explore the Use Cases</a></li>
 <li class="toctree-l2"><a class="reference internal" href="quickstart.html#try-out-a-pangeo-deployment">Try Out a Pangeo Deployment</a></li>
@@ -208,7 +210,6 @@ read the <a class="reference internal" href="faq.html#faq"><span class="std std-
 <li class="toctree-l2"><a class="reference internal" href="quickstart.html#contribute-a-use-case">Contribute a Use Case</a></li>
 <li class="toctree-l2"><a class="reference internal" href="quickstart.html#contribute-data">Contribute Data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="quickstart.html#become-an-open-source-contributor">Become an Open Source Contributor</a></li>
-<li class="toctree-l2"><a class="reference internal" href="quickstart.html#develop-new-software">Develop New Software</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="packages.html">Packages</a><ul>
@@ -230,12 +231,17 @@ read the <a class="reference internal" href="faq.html#faq"><span class="std std-
 <li class="toctree-l2"><a class="reference internal" href="architecture.html#storage-formats">Storage Formats</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="setup_guides/index.html">Pangeo Setup Guides</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="setup_guides/index.html">Deployment Setup Guides</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="setup_guides/index.html#setting-up-pangeo-on-hpc-systems">Setting up Pangeo on HPC Systems</a></li>
 <li class="toctree-l2"><a class="reference internal" href="setup_guides/index.html#setting-up-pangeo-on-cloud-systems">Setting up Pangeo on Cloud Systems</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="deployments.html">Deployments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data.html">Pangeo and Data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="data.html#data-on-hpc">Data on HPC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html#data-in-the-cloud">Data in the Cloud</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="collaborators.html">Collaborators</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="collaborators.html#funding-agencies">Funding Agencies</a></li>
 <li class="toctree-l2"><a class="reference internal" href="collaborators.html#institutions">Institutions</a></li>

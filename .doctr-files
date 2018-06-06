@@ -18,6 +18,7 @@
 ./_sources/about.rst.txt
 ./_sources/architecture.rst.txt
 ./_sources/collaborators.rst.txt
+./_sources/data.rst.txt
 ./_sources/deployments.rst.txt
 ./_sources/faq.rst.txt
 ./_sources/index.rst.txt
@@ -135,6 +136,7 @@
 ./about.html
 ./architecture.html
 ./collaborators.html
+./data.html
 ./deployments.html
 ./faq.html
 ./genindex.html

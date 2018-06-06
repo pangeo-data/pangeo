@@ -76,7 +76,6 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Guide for Scientists</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#learn-about-the-open-source-ecosystem">Learn About the Open Source Ecosystem</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#learn-about-pangeo-software">Learn About Pangeo Software</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#explore-the-use-cases">Explore the Use Cases</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#try-out-a-pangeo-deployment">Try Out a Pangeo Deployment</a></li>
@@ -84,7 +83,6 @@
 <li class="toctree-l2"><a class="reference internal" href="#contribute-a-use-case">Contribute a Use Case</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#contribute-data">Contribute Data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#become-an-open-source-contributor">Become an Open Source Contributor</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#develop-new-software">Develop New Software</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="packages.html">Packages</a><ul>
@@ -106,12 +104,17 @@
 <li class="toctree-l2"><a class="reference internal" href="architecture.html#storage-formats">Storage Formats</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="setup_guides/index.html">Pangeo Setup Guides</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="setup_guides/index.html">Deployment Setup Guides</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="setup_guides/index.html#setting-up-pangeo-on-hpc-systems">Setting up Pangeo on HPC Systems</a></li>
 <li class="toctree-l2"><a class="reference internal" href="setup_guides/index.html#setting-up-pangeo-on-cloud-systems">Setting up Pangeo on Cloud Systems</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="deployments.html">Deployments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data.html">Pangeo and Data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="data.html#data-on-hpc">Data on HPC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html#data-in-the-cloud">Data in the Cloud</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="collaborators.html">Collaborators</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="collaborators.html#funding-agencies">Funding Agencies</a></li>
 <li class="toctree-l2"><a class="reference internal" href="collaborators.html#institutions">Institutions</a></li>
@@ -132,7 +135,6 @@
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
 <li><a class="reference internal" href="#">Guide for Scientists</a><ul>
-<li><a class="reference internal" href="#learn-about-the-open-source-ecosystem">Learn About the Open Source Ecosystem</a></li>
 <li><a class="reference internal" href="#learn-about-pangeo-software">Learn About Pangeo Software</a></li>
 <li><a class="reference internal" href="#explore-the-use-cases">Explore the Use Cases</a></li>
 <li><a class="reference internal" href="#try-out-a-pangeo-deployment">Try Out a Pangeo Deployment</a></li>
@@ -140,7 +142,6 @@
 <li><a class="reference internal" href="#contribute-a-use-case">Contribute a Use Case</a></li>
 <li><a class="reference internal" href="#contribute-data">Contribute Data</a></li>
 <li><a class="reference internal" href="#become-an-open-source-contributor">Become an Open Source Contributor</a></li>
-<li><a class="reference internal" href="#develop-new-software">Develop New Software</a></li>
 </ul>
 </li>
 </ul>
@@ -166,7 +167,6 @@
       <div class="col-md-3">
         <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
 <li><a class="reference internal" href="#">Guide for Scientists</a><ul>
-<li><a class="reference internal" href="#learn-about-the-open-source-ecosystem">Learn About the Open Source Ecosystem</a></li>
 <li><a class="reference internal" href="#learn-about-pangeo-software">Learn About Pangeo Software</a></li>
 <li><a class="reference internal" href="#explore-the-use-cases">Explore the Use Cases</a></li>
 <li><a class="reference internal" href="#try-out-a-pangeo-deployment">Try Out a Pangeo Deployment</a></li>
@@ -174,7 +174,6 @@
 <li><a class="reference internal" href="#contribute-a-use-case">Contribute a Use Case</a></li>
 <li><a class="reference internal" href="#contribute-data">Contribute Data</a></li>
 <li><a class="reference internal" href="#become-an-open-source-contributor">Become an Open Source Contributor</a></li>
-<li><a class="reference internal" href="#develop-new-software">Develop New Software</a></li>
 </ul>
 </li>
 </ul>
@@ -187,43 +186,16 @@
 <span id="quickstart"></span><h1>Guide for Scientists<a class="headerlink" href="#guide-for-scientists" title="Permalink to this headline">¶</a></h1>
 <p>The goal of Pangeo is to make it quicker and easier to go from raw data to
 scientific insights.
-We want to spend less time writing boilerplate code and be able to iterate
-calculations quickly on very large datasets.
-These are ambitious yet achievable long-term goals.
-Reaching them will require scientists to participate in the open source process
-and contribute to the development of the underlying tools.
-For people coming from proprietary computing environments such as MATLAB, this
-can mean changing the way you think about software and your relationship to it.</p>
-<p>Below is a list of steps you can take to participate in the Pangeo project and
-take advantage of the tools we are developing.</p>
-<div class="section" id="learn-about-the-open-source-ecosystem">
-<h2>Learn About the Open Source Ecosystem<a class="headerlink" href="#learn-about-the-open-source-ecosystem" title="Permalink to this headline">¶</a></h2>
-<p>If you are new to open source scientific software, you might want to learn a
-bit about the history and context of this community.
-We recommend the following talk by <a class="reference external" href="http://vanderplas.com/">Jake VanderPlas</a>
-entitled <em>PyData 101</em>.</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/DifMYH3iuFw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe><p>Jake’s slides are <a class="reference external" href="https://speakerdeck.com/jakevdp/intro-to-pydata">available on SpeakerDeck</a>.</p>
-<p><a class="reference external" href="https://github.org/">GitHub</a> has become absolutely central to the way this community works.
-The Pangeo project is a GitHub-native organization.
-A great general-audience introduction to the power and popularity of GitHub
-can be found in the Wired article
-<a class="reference external" href="https://www.wired.com/2013/03/github/">The GitHub Revolution: Why We’re All in Open Source Now</a>
-by Mikeal Rogers.</p>
-<p>There are lots of great free and open resources to learn how to use scientific
-python.
-Here is a list of a few of our favorites.</p>
-<ul class="simple">
-<li>list of</li>
-<li>scientific python</li>
-<li>online tutorials</li>
-</ul>
-<p>There are also some excellent books, including</p>
-<ul class="simple">
-<li>list of</li>
-<li>scientific python</li>
-<li>books</li>
-</ul>
-</div>
+We want to spend less time writing boilerplate code and be able to perform
+calculations quickly and interactively on very large datasets.
+Pangeo is based around the python programming language and the scientific
+python software ecosystem.
+Pangeo is aimed at users who already have basic familiarity with using
+scientific python and are looking for ways to make their analysis workflow more
+efficient, scalable, and pleasant.
+If you are completely new to scientific python, you should first familiarize
+yourself with the basics before moving forward with this guide.
+(We recommend the <a class="reference external" href="https://www.scipy-lectures.org/">Scipy Lectures</a> as a starting point.)</p>
 <div class="section" id="learn-about-pangeo-software">
 <h2>Learn About Pangeo Software<a class="headerlink" href="#learn-about-pangeo-software" title="Permalink to this headline">¶</a></h2>
 <p>Pangeo is not a specific software pacakge.
@@ -255,12 +227,16 @@ This loose collection of packages is often referred to as the <em>Pangeo stack</
 </li>
 </ul>
 </div>
+<p>For more information about how these packages relate to each other, consult the
+<a class="reference internal" href="architecture.html#architecture"><span class="std std-ref">Technical Architecture</span></a> page.</p>
 </div>
 <div class="section" id="explore-the-use-cases">
 <h2>Explore the Use Cases<a class="headerlink" href="#explore-the-use-cases" title="Permalink to this headline">¶</a></h2>
 <p>The Use Case Gallery demonstrates real-world science applications of the
 Pangeo stack. The use cases are formatted as <a class="reference external" href="https://jupyter-notebook.readthedocs.io/en/stable/notebook.html">Jupyter Notebooks</a>, a
-self-describing computational document including text, code, and figures.</p>
+self-describing computational document including text, code, and figures.
+A great way to get started is to find a use case that is similar to the
+analysis you want to do and modify it to suit your needs.</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="use_cases/index.html">Geoscience Use Cases</a><ul>
@@ -284,7 +260,7 @@ you can analyze large datasets in a scalable, reproducible way.</p>
 </ul>
 </div>
 <p>If none of these meets your needs, you can create your own deployment by
-following the <a class="reference internal" href="setup_guides/index.html#setup-guides"><span class="std std-ref">Pangeo Setup Guides</span></a>.</p>
+following the <a class="reference internal" href="setup_guides/index.html#setup-guides"><span class="std std-ref">Deployment Setup Guides</span></a>.</p>
 </div>
 <div class="section" id="give-feedback">
 <h2>Give Feedback<a class="headerlink" href="#give-feedback" title="Permalink to this headline">¶</a></h2>
@@ -297,24 +273,44 @@ any challenges your have encountered along the way.</p>
 </div>
 <div class="section" id="contribute-a-use-case">
 <h2>Contribute a Use Case<a class="headerlink" href="#contribute-a-use-case" title="Permalink to this headline">¶</a></h2>
-<p>If you are using Pangeo for your research, we would love to include and example
-in the Use Case Gallery.</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">The Use Case Gallery is still under construction. Check back soon for
-detailed instructions on how to contribute your use case.
-The technical implementation of the gallery is under discussion in
-<a class="reference external" href="https://github.com/pangeo-data/pangeo/issues/201">Pangeo Github issue 201</a>.</p>
-</div>
+<p>If you are using Pangeo for your research, we would love to include an example
+in the <a class="reference internal" href="use_cases/index.html#use-cases"><span class="std std-ref">Use Case Gallery</span></a>.
+Please raise an issue on the <a class="reference external" href="https://github.com/pangeo-data/pangeo/issues">Pangeo GitHub issue tracker</a> to propose your
+use case.</p>
 </div>
 <div class="section" id="contribute-data">
 <h2>Contribute Data<a class="headerlink" href="#contribute-data" title="Permalink to this headline">¶</a></h2>
+<p>Datasets are central to Pangeo. Our goal is to bring the computing to the data,
+rather than the other way around.
+If you have data you would like to make accessible to Pangeo, your best bet is
+to place it on a large shared HPC cluster or in cloud storage. The data
+page below provides a detailed description of how to interface pangeo with
+the datasets of your choice.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="data.html">Pangeo and Data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="data.html#data-on-hpc">Data on HPC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html#data-in-the-cloud">Data in the Cloud</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<p>In the future, we hope to curate a data catalog to make it easier for users to
+discover datasets on Pangeo platforms
+(see <a class="reference external" href="https://github.com/pangeo-data/pangeo/issues/39">the discussion on github</a>
+for more detail.)</p>
 </div>
 <div class="section" id="become-an-open-source-contributor">
 <h2>Become an Open Source Contributor<a class="headerlink" href="#become-an-open-source-contributor" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="develop-new-software">
-<h2>Develop New Software<a class="headerlink" href="#develop-new-software" title="Permalink to this headline">¶</a></h2>
+<p>The success of the Pangeo project depends on the sustainable development of
+the underlying <a class="reference internal" href="packages.html#packages"><span class="std std-ref">Packages</span></a>. A great way to contribute to Pangeo is to
+contribute to those packages. Some ways to do this include:</p>
+<ul class="simple">
+<li>helping to improve the documentation of these packages</li>
+<li>raising issues on the package github repositories to report bugs or identify
+missing features</li>
+<li>fixing bugs or implementing new features yourself</li>
+</ul>
 </div>
 </div>
 

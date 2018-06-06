@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Pangeo Setup Guides &#8212; Pangeo 0.0.1 documentation</title>
+    <title>Deployment Setup Guides &#8212; Pangeo 0.0.1 documentation</title>
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pangeo-style.css" type="text/css" />
@@ -76,7 +76,6 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../faq.html">Frequently Asked Questions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Guide for Scientists</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../quickstart.html#learn-about-the-open-source-ecosystem">Learn About the Open Source Ecosystem</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../quickstart.html#learn-about-pangeo-software">Learn About Pangeo Software</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../quickstart.html#explore-the-use-cases">Explore the Use Cases</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../quickstart.html#try-out-a-pangeo-deployment">Try Out a Pangeo Deployment</a></li>
@@ -84,7 +83,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../quickstart.html#contribute-a-use-case">Contribute a Use Case</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../quickstart.html#contribute-data">Contribute Data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../quickstart.html#become-an-open-source-contributor">Become an Open Source Contributor</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../quickstart.html#develop-new-software">Develop New Software</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../packages.html">Packages</a><ul>
@@ -106,12 +104,17 @@
 <li class="toctree-l2"><a class="reference internal" href="../architecture.html#storage-formats">Storage Formats</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Pangeo Setup Guides</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Deployment Setup Guides</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#setting-up-pangeo-on-hpc-systems">Setting up Pangeo on HPC Systems</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#setting-up-pangeo-on-cloud-systems">Setting up Pangeo on Cloud Systems</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../deployments.html">Deployments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data.html">Pangeo and Data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../data.html#data-on-hpc">Data on HPC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data.html#data-in-the-cloud">Data in the Cloud</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../collaborators.html">Collaborators</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../collaborators.html#funding-agencies">Funding Agencies</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../collaborators.html#institutions">Institutions</a></li>
@@ -131,7 +134,7 @@
   <ul class="dropdown-menu localtoc"
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
-<li><a class="reference internal" href="#">Pangeo Setup Guides</a><ul>
+<li><a class="reference internal" href="#">Deployment Setup Guides</a><ul>
 <li><a class="reference internal" href="#setting-up-pangeo-on-hpc-systems">Setting up Pangeo on HPC Systems</a></li>
 <li><a class="reference internal" href="#setting-up-pangeo-on-cloud-systems">Setting up Pangeo on Cloud Systems</a></li>
 </ul>
@@ -158,7 +161,7 @@
   <div class="row">
       <div class="col-md-3">
         <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
-<li><a class="reference internal" href="#">Pangeo Setup Guides</a><ul>
+<li><a class="reference internal" href="#">Deployment Setup Guides</a><ul>
 <li><a class="reference internal" href="#setting-up-pangeo-on-hpc-systems">Setting up Pangeo on HPC Systems</a></li>
 <li><a class="reference internal" href="#setting-up-pangeo-on-cloud-systems">Setting up Pangeo on Cloud Systems</a></li>
 </ul>
@@ -169,8 +172,8 @@
       </div>
     <div class="col-md-9 content ">
       
-  <div class="section" id="pangeo-setup-guides">
-<span id="setup-guides"></span><h1>Pangeo Setup Guides<a class="headerlink" href="#pangeo-setup-guides" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="deployment-setup-guides">
+<span id="setup-guides"></span><h1>Deployment Setup Guides<a class="headerlink" href="#deployment-setup-guides" title="Permalink to this headline">¶</a></h1>
 <p>The Pangeo software stack is an collection of <a class="reference internal" href="../packages.html#packages"><span class="std std-ref">Packages</span></a> that when used
 together facilitate scalable data analysis on a wide range of computing platforms
 (see <a class="reference internal" href="../deployments.html#deployments"><span class="std std-ref">Deployments</span></a> for a list of examples where Pangeo concepts have been

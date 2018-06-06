@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Pangeo and Data &#8212; Pangeo 0.0.1 documentation</title>
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pangeo-style.css" type="text/css" />
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Technical Architecture" href="architecture.html" />
+    <link rel="prev" title="Deployments" href="deployments.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html"><span><img src="_static/small_e_reversed_24px.png"></span>
+          Pangeo</a>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="http://pangeo-data.github.io">Blog</a></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="about.html">About Pangeo</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="about.html#motivation">Motivation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="about.html#mission-statement">Mission Statement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="about.html#vision">Vision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="about.html#get-involved">Get Involved</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="quickstart.html">Guide for Scientists</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#learn-about-pangeo-software">Learn About Pangeo Software</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#explore-the-use-cases">Explore the Use Cases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#try-out-a-pangeo-deployment">Try Out a Pangeo Deployment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#give-feedback">Give Feedback</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#contribute-a-use-case">Contribute a Use Case</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="quickstart.html#contribute-data">Contribute Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#become-an-open-source-contributor">Become an Open Source Contributor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="packages.html">Packages</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="packages.html#pangeo-core-packages">Pangeo Core Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="packages.html#pangeo-affiliated-packages">Pangeo Affiliated Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="packages.html#guidelines-for-new-packages">Guidelines for New Packages</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="use_cases/index.html">Geoscience Use Cases</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="use_cases/ocean_cm2.6_eddy_statistics.html">Use Case: CM2.6 Eddy Statistics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="use_cases/newmann_ensemble_meteorology.html">Analysis of Gridded Ensemble Precipitation and Temperature Estimates over the Contiguous United States</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="architecture.html">Technical Architecture</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#where-we-began">Where we began</a></li>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#interoperability-in-pangeo">Interoperability in Pangeo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#software">Software</a></li>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#compute-platforms">Compute Platforms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#storage-formats">Storage Formats</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="setup_guides/index.html">Deployment Setup Guides</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="setup_guides/index.html#setting-up-pangeo-on-hpc-systems">Setting up Pangeo on HPC Systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="setup_guides/index.html#setting-up-pangeo-on-cloud-systems">Setting up Pangeo on Cloud Systems</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="deployments.html">Deployments</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Pangeo and Data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#data-on-hpc">Data on HPC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#data-in-the-cloud">Data in the Cloud</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="collaborators.html">Collaborators</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="collaborators.html#funding-agencies">Funding Agencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="collaborators.html#institutions">Institutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="collaborators.html#people">People</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Pangeo and Data</a><ul>
+<li><a class="reference internal" href="#data-on-hpc">Data on HPC</a></li>
+<li><a class="reference internal" href="#data-in-the-cloud">Data in the Cloud</a><ul>
+<li><a class="reference internal" href="#google-cloud-storage-data-catalog">Google Cloud Storage Data Catalog</a></li>
+<li><a class="reference internal" href="#guide-to-preparing-cloud-optimized-data">Guide to Preparing Cloud-Optimized Data</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+            
+            
+            
+          </ul>
+
+          
+            
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li><a class="reference internal" href="#">Pangeo and Data</a><ul>
+<li><a class="reference internal" href="#data-on-hpc">Data on HPC</a></li>
+<li><a class="reference internal" href="#data-in-the-cloud">Data in the Cloud</a><ul>
+<li><a class="reference internal" href="#google-cloud-storage-data-catalog">Google Cloud Storage Data Catalog</a></li>
+<li><a class="reference internal" href="#guide-to-preparing-cloud-optimized-data">Guide to Preparing Cloud-Optimized Data</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9 content ">
+      
+  <div class="section" id="pangeo-and-data">
+<span id="data"></span><h1>Pangeo and Data<a class="headerlink" href="#pangeo-and-data" title="Permalink to this headline">¶</a></h1>
+<p>Pangeo provides the computational tools to do scalable analysis of large
+geoscience datasets.
+For decades, our field has operated on a “download model,” under which
+scientists download the data they wish to analyze from remote FTP servers
+to their personal computers.
+Pangeo operates on a different philosophy; instead of bringing the data to the
+computer, we bring the computer to the data.
+The Pangeo <a class="reference internal" href="deployments.html#deployments"><span class="std std-ref">Deployments</span></a> provide high-performance computing clusters in
+close proximmity to high-performance storage.
+Many widely used datasets are already stored on these systems.</p>
+<p>If you are interested in analyzing a specific large dataset, you should
+attempt to determine if this dataset is already stored on an existing
+<a class="reference internal" href="deployments.html#deployments"><span class="std std-ref">Deployments</span></a>; you can then request access to that specific deployment to
+perform your analysis.
+Alternatively, if you lab or group already operates a data repository, you can
+consider deploying a Pangeo environment on computing resources proximal to the
+data server (consult the <a class="reference internal" href="setup_guides/index.html#setup-guides"><span class="std std-ref">Deployment Setup Guides</span></a> for more detail).</p>
+<p>We envision a future in which all relevant data is readily accessible to
+scalable computing; this will likely require the large-scale migration to the
+cloud.
+We aren’t there yet, but Pangeo is working towards this goal.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>The capability to read data in pangeo is dependent on the underlying
+<a class="reference internal" href="packages.html#packages"><span class="std std-ref">Packages</span></a>. The file formats and options are largely determined by:</p>
+<ul class="last simple">
+<li><a class="reference external" href="http://xarray.pydata.org/en/latest/io.html">Xarray’s I/O options</a></li>
+<li><a class="reference external" href="https://scitools.org.uk/iris/docs/latest/userguide/loading_iris_cubes.html">Iris’s I/O options</a></li>
+<li><a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/io.html">Pandas’s I/O options</a></li>
+</ul>
+</div>
+<div class="section" id="data-on-hpc">
+<h2>Data on HPC<a class="headerlink" href="#data-on-hpc" title="Permalink to this headline">¶</a></h2>
+<p>Many high-performance computing clusters serve as de-facto data repositories,
+particularly for the model simulations that run on those systems. Pangeo
+provides a way to leverage those same systems for data analysis.
+The most common data formats encountered on HPC systems are <a class="reference external" href="https://www.unidata.ucar.edu/software/netcdf/">netCDF</a> and <a class="reference external" href="https://www.hdfgroup.org/">HDF</a>.
+Pangeo on HPC works well with the standard archives of netCDF files commonly
+encountered on such systems.</p>
+<p>Particular effort has been made to integrate Pangeo with the systems operated
+by NCAR’s <a class="reference external" href="CISL">Computational and Information Systems Lab</a>, in particular
+the Cheyenne, Geyser, and Caldera clusters.
+NCAR’s <a class="reference external" href="https://rda.ucar.edu/">Research Data Archive</a> catalogs a huge number of datasets available
+from those clusters via the GLADE file systems.
+All of those datasets are accessible to Pangeo now via the Cheyenne deployment.</p>
+<p>Specific use case examples which load data from HPC platforms include:</p>
+<ul class="simple">
+<li>Sean’s thing</li>
+<li>What else?</li>
+</ul>
+</div>
+<div class="section" id="data-in-the-cloud">
+<h2>Data in the Cloud<a class="headerlink" href="#data-in-the-cloud" title="Permalink to this headline">¶</a></h2>
+<p>The Pangeo community is very excited about the opportunities presented by the
+cloud for scientific research in terms of scalability, reproducibility, and
+efficiency.
+However, the cloud presents new challenges; the data formats that work well
+on personal computers and HPC systems don’t necessarily translate well to the
+cloud environment.
+For an overview of these challenges, we recommend Matt Rocklin’s excellent
+blog post:</p>
+<ul class="simple">
+<li><a class="reference external" href="http://matthewrocklin.com/blog/work/2018/02/06/hdf-in-the-cloud">HDF in the Cloud: challenges and solutions for scientific data</a></li>
+</ul>
+<p>The Pangeo community is actively engaged in defining what constitutes
+“analysis ready geoscience data” on the cloud.
+We are experimenting with many different technologies and options.
+This is a rapidly evolving area.
+If you have ideas on this topic you would like to share with our community,
+please  <a class="reference external" href="https://github.com/pangeo-data/pangeo/issues">reach out to us on Github</a>.</p>
+<p>Our <em>current preference</em> for storing multidimensional array data in the cloud
+is the <a class="reference external" href="http://zarr.readthedocs.io/en/stable/">Zarr</a> format.
+Zarr is a new storage format which, thanks to its simple yet well-designed
+specification, makes large datasets easily accessible to distributed computing.
+In Zarr datasets, the arrays are divided into chunks and compressed.
+These individual chunks can be stored as files on a filesystem or as objects
+in a cloud storage bucket.
+The metadata are stored in lightweight <code class="docutils literal"><span class="pre">.json</span></code> files.
+Zarr works well on both local filesystems and cloud-based object stores.
+Existing datasets can easily be converted to zarr via
+<a class="reference external" href="http://xarray.pydata.org/en/latest/io.html#zarr">xarray’s zarr functions</a>.</p>
+<div class="section" id="google-cloud-storage-data-catalog">
+<h3>Google Cloud Storage Data Catalog<a class="headerlink" href="#google-cloud-storage-data-catalog" title="Permalink to this headline">¶</a></h3>
+<p>Thanks to our <a class="reference internal" href="collaborators.html#nsf-award"><span class="std std-ref">NSF Award</span></a>, Pangeo has a substantial allocation
+on Google Cloud Platform which we are currently using to host several large
+datasets.
+These datasets are directly accessible from the Google Cloud Pangeo deployment:
+<a class="reference external" href="http://pangeo.pydata.org">pangeo.pydata.org</a>.</p>
+<p><strong>HOW DO WE LIST THE DATASETS? CAN WE DIRECTLY PARSE THE INTAKE CATALOG?</strong></p>
+</div>
+<div class="section" id="guide-to-preparing-cloud-optimized-data">
+<span id="cloud-data-guide"></span><h3>Guide to Preparing Cloud-Optimized Data<a class="headerlink" href="#guide-to-preparing-cloud-optimized-data" title="Permalink to this headline">¶</a></h3>
+<p>How do you get data into the cloud in a format that is optimized for pangeo
+to read?
+This guide outlines our current practices for converting netCDF data to
+<a class="reference external" href="http://zarr.readthedocs.io/en/stable/">Zarr</a> and placing it on the cloud.
+These recommendations may change as cloud storage technology evolves.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">One important difference between local data storage and cloud data storage is
+that local storage is based on <em>individual files</em> while <a class="reference external" href="http://zarr.readthedocs.io/en/stable/">Zarr</a> is based on
+<em>entire datasets</em> (which may be derived from many individual files, a.k.a.
+“granules”). When preparing data for cloud storage, you should ask
+<em>what is the entire dataset we want to work with?</em> That’s what you will be
+preparing and uploading.</p>
+</div>
+<ol class="arabic">
+<li><p class="first"><strong>Open your Entire Dataset in Xarray</strong>.</p>
+<p>Xarray is designed to
+load many netCDF files into a single <a class="reference external" href="http://xarray.pydata.org/en/latest/generated/xarray.DataArray.html#xarray.DataArray" title="(in xarray v0.10.6)"><code class="xref py py-class docutils literal"><span class="pre">xarray.DataArray</span></code></a> object.
+The easiest way to accomplish this is using the <code class="xref py py-meth docutils literal"><span class="pre">xarray.open_mfdataset()</span></code>
+function. Suppose you have a directory full of netCDF files that comprise
+a single dataset stored in the directory <code class="docutils literal"><span class="pre">/path/to/mydataset</span></code>. If the files
+are properly formatted and sufficiently homogeneous, you can open them with
+a single line of xarray code.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">xarray</span> <span class="kn">as</span> <span class="nn">xr</span>
+<span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_mfdataset</span><span class="p">(</span><span class="s1">&#39;/path/to/mydataset/*.nc&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>More complicated datasets can be constructed manually by using
+<code class="xref py py-meth docutils literal"><span class="pre">xarray.concat()</span></code> and <code class="xref py py-meth docutils literal"><span class="pre">xarray.merge()</span></code> to combine individual
+files or sub-datasets into a single object.</p>
+<p>In creating your dataset, you should pay particular attention to the
+Dask chunk size. Consult
+<a class="reference external" href="http://xarray.pydata.org/en/latest/dask.html#chunking-and-performance">xarray’s documentation on chunking and performance</a>
+for guidance on choosing appropriately sized chunks. You may wish to manually
+specify the <code class="docutils literal"><span class="pre">chunks</span></code> argument when calling <code class="docutils literal"><span class="pre">xarray.open_dataset</span></code>
+and <code class="docutils literal"><span class="pre">xarray.open_mfdataset</span></code>.</p>
+<p>Inspect the representation of your dataset by printing its representation
+(i.e. <code class="docutils literal"><span class="pre">print(ds)</span></code>) and examining its full metadata (<code class="docutils literal"><span class="pre">ds.info()</span></code>).
+Make sure all the expected variables and metadata are present and have the
+correct shape / chunk structure.</p>
+</li>
+<li><p class="first"><strong>Export to Zarr Format</strong></p>
+<p>The next step is to export your <code class="docutils literal"><span class="pre">xarray.Dataset</span></code> to a
+<code class="xref py py-class docutils literal"><span class="pre">zarr</span> <span class="pre">Directory</span> <span class="pre">Store</span></code>. This is
+done as follows</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">ds</span><span class="o">.</span><span class="n">to_zarr</span><span class="p">(</span><span class="s1">&#39;/path/to/output/mydataset&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>If <code class="docutils literal"><span class="pre">/path/to/output/mydataset</span></code> does not exist yet, it will be created.
+(It’s best if does not exist, as conflicts with existing files could cause
+problems.)</p>
+<p>If your dataset is very large, this can take a very long time.
+The speed is generally constrained by the rate at which the data can be read
+from the storage device where the original files are located. If you are
+on a high-performance cluster, you might consider using a dask distributed to
+parallelize the operation across multiple nodes.</p>
+<p>Xarray and Zarr have many different options for encoding and compression of
+the datasets. This can be passed to <code class="docutils literal"><span class="pre">to_zarr</span></code> via the <code class="docutils literal"><span class="pre">encoding</span></code> keyword
+argument. Consult the relevant
+<a class="reference external" href="http://xarray.pydata.org/en/latest/io.html#zarr-compressors-and-filters">xarray documentation</a>
+and
+<a class="reference external" href="http://zarr.readthedocs.io/en/latest/tutorial.html#compressors">zarr documentation</a>
+for more detail.
+In our somewhat limited experience, the default encoding and compression
+perform adequately for most purposes.</p>
+</li>
+<li><p class="first"><strong>Upload to Cloud Storage</strong></p>
+<p>Once the export to zarr is complete, you now upload the directory and all
+its contents to cloud storage. In order to do this step, you will need
+the command line utilities from your cloud provider installed on your system.
+In this example, we use Google Cloud Platform, which requires installing the
+<span class="xref std std-ref">google-cloud-sdk</span>.</p>
+<p>First you must authenticate to obtain credentials to perform the upload:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">gcloud</span> <span class="n">auth</span> <span class="n">login</span>
+</pre></div>
+</div>
+<p>Now you can upload the dataset to the cloud-storage bucket of your choice.
+In this example, we upload to the <code class="docutils literal"><span class="pre">pangeo-data</span></code> bucket on Google Cloud
+Storage:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">gsutil</span> <span class="o">-</span><span class="n">m</span> <span class="n">cp</span> <span class="o">-</span><span class="n">r</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">output</span><span class="o">/</span><span class="n">mydataset</span> <span class="n">gs</span><span class="p">:</span><span class="o">//</span><span class="n">pangeo</span><span class="o">-</span><span class="n">data</span><span class="o">/</span>
+</pre></div>
+</div>
+<p>This command can also take a long time to execute, depending on the size of
+your dataset and the bandwidth of your internet connection. The dataset will
+be available at the <code class="docutils literal"><span class="pre">pangeo-data/mydataset</span></code> path.</p>
+</li>
+<li><p class="first"><strong>Verify Dataset from a Pangeo Cloud Deployment</strong></p>
+<p>The data you uploaded should be read from a Pangeo deployment in the same
+cloud and the same region as the bucket in which it resides.
+Otherwise, you may suffer from diminished performance and accrue extra
+charges for data transfers.
+The <code class="docutils literal"><span class="pre">pangeo-data</span></code> bucket is in Google Cloud Storage in the <code class="docutils literal"><span class="pre">US-CENTRAL1</span></code>
+region. It can therefore be accessed by the flagship
+<a class="reference external" href="http://pangeo.pydata.org">pangeo.pydata.org</a> deployment.</p>
+<p>To open the dataset we just uploaded from within a notebook or script in
+pangeo.pydata.org, do the following:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">xarray</span> <span class="kn">as</span> <span class="nn">xr</span>
+<span class="kn">import</span> <span class="nn">gcsfs</span>
+<span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_zarr</span><span class="p">(</span><span class="n">gcsfs</span><span class="o">.</span><span class="n">GCSMMap</span><span class="p">(</span><span class="s1">&#39;pangeo-data/mydataset&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>You should see all the variables and metadata from your original dataset in
+step 1. The dataset will automatically be created with dask chunks matching
+the underlying zarr chunks.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+
+
+      
+      
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, Pangeo Team.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
