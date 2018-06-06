@@ -123,18 +123,20 @@ These recommendations may change as cloud storage technology evolves.
 
 .. why doesn't the intersphinx :py:meth:`xarray.open_mfdataset` link work?
 
-#. **Open your entire dataset as an xarray Dataset**. Xarray is designed to
+#. **Open your Entire Dataset in Xarray**.
+
+   Xarray is designed to
    load many netCDF files into a single :py:class:`xarray.DataArray` object.
    The easiest way to accomplish this is using the :py:meth:`xarray.open_mfdataset`
    function. Suppose you have a directory full of netCDF files that comprise
-   a single dataset stored in the directory ``/path/to/files``. If the files are
-   properly formatted and sufficiently homogeneous, you can open them with
+   a single dataset stored in the directory ``/path/to/mydataset``. If the files
+   are properly formatted and sufficiently homogeneous, you can open them with
    a single line of xarray code.
 
    .. code-block:: python
 
       import xarray as xr
-      ds = xr.open_mfdataset('/path/to/files/*.nc')
+      ds = xr.open_mfdataset('/path/to/mydataset/*.nc')
 
    More complicated datasets can be constructed manually by using
    :py:meth:`xarray.concat` and :py:meth:`xarray.merge` to combine individual
@@ -160,9 +162,9 @@ These recommendations may change as cloud storage technology evolves.
 
    .. code-block:: python
 
-      ds.to_zarr('/path/to/output/directory')
+      ds.to_zarr('/path/to/output/mydataset')
 
-   If ``/path/to/output/directory`` does not exist yet, it will be created.
+   If ``/path/to/output/mydataset`` does not exist yet, it will be created.
    (It's best if does not exist, as conflicts with existing files could cause
    problems.)
 
@@ -172,9 +174,60 @@ These recommendations may change as cloud storage technology evolves.
    on a high-performance cluster, you might consider using a dask distributed to
    parallelize the operation across multiple nodes.
 
-   Xarray and zarr have many different options for encoding and compression of
-   the datasets.
+   Xarray and Zarr have many different options for encoding and compression of
+   the datasets. This can be passed to ``to_zarr`` via the ``encoding`` keyword
+   argument. Consult the relevant
+   `xarray documentation <http://xarray.pydata.org/en/latest/io.html#zarr-compressors-and-filters>`_
+   and
+   `zarr documentation <http://zarr.readthedocs.io/en/latest/tutorial.html#compressors>`_
+   for more detail.
+   In our somewhat limited experience, the default encoding and compression
+   perform adequately for most purposes.
 
+#. **Upload to Cloud Storage**
+
+   Once the export to zarr is complete, you now upload the directory and all
+   its contents to cloud storage. In order to do this step, you will need
+   the command line utilities from your cloud provider installed on your system.
+   In this example, we use Google Cloud Platform, which requires installing the
+   :ref:`google-cloud-sdk`.
+
+   First you must authenticate to obtain credentials to perform the upload::
+
+     gcloud auth login
+
+   Now you can upload the dataset to the cloud-storage bucket of your choice.
+   In this example, we upload to the ``pangeo-data`` bucket on Google Cloud
+   Storage::
+
+     gsutil -m cp -r /path/to/output/mydataset gs://pangeo-data/
+
+   This command can also take a long time to execute, depending on the size of
+   your dataset and the bandwidth of your internet connection. The dataset will
+   be available at the ``pangeo-data/mydataset`` path.
+
+#. **Verify Dataset from a Pangeo Cloud Deployment**
+
+   The data you uploaded should be read from a Pangeo deployment in the same
+   cloud and the same region as the bucket in which it resides.
+   Otherwise, you may suffer from diminished performance and accrue extra
+   charges for data transfers.
+   The ``pangeo-data`` bucket is in Google Cloud Storage in the ``US-CENTRAL1``
+   region. It can therefore be accessed by the flagship
+   `pangeo.pydata.org <http://pangeo.pydata.org>`_ deployment.
+
+   To open the dataset we just uploaded from within a notebook or script in
+   pangeo.pydata.org, do the following:
+
+   .. code-block:: python
+
+      import xarray as xr
+      import gcsfs
+      ds = xr.open_zarr(gcsfs.GCSMMap('pangeo-data/mydataset'))
+
+   You should see all the variables and metadata from your original dataset in
+   step 1. The dataset will automatically be created with dask chunks matching
+   the underlying zarr chunks.
 
 
 .. _CISL: https://www2.cisl.ucar.edu/
