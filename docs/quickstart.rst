@@ -61,7 +61,7 @@ you can analyze large datasets in a scalable, reproducible way.
    deployments
 
 If none of these meets your needs, you can create your own deployment by
-following the :ref:`setup-guides`.
+following the :ref:`setup-guides`. 
 
 Give Feedback
 -------------

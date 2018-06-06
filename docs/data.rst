@@ -214,7 +214,7 @@ These recommendations may change as cloud storage technology evolves.
    charges for data transfers.
    The ``pangeo-data`` bucket is in Google Cloud Storage in the ``US-CENTRAL1``
    region. It can therefore be accessed by the flagship
-   `pangeo.pydata.org <http://pangeo.pydata.org>`_ deployment.
+   `pangeo.pydata.org <http://pangeo.pydata.org>`_ deployment. 
 
    To open the dataset we just uploaded from within a notebook or script in
    pangeo.pydata.org, do the following:

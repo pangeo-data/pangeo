@@ -1,3 +1,11 @@
+/* colors from brand sheet
+  dark blue:  #003B71
+  green:      #5eb130
+  teal:       #00a3b0
+  purple:     #322173
+  pink:       #e50051
+*/
+
 @font-face {
     font-family: "Panton Black Caps";
     /* src: url("http://ff.cdn.1001fonts.net/p/a/panton.black-caps.otf") */
@@ -34,12 +42,17 @@ a {
 }
 
 a:hover, a:focus {
-  color: #e50051;
+  text-decoration: underline;
+  color: #5eb130;
 }
 
 .alert-info, mark {
   color: white;
   background-color: #00a3b0;
+}
+
+.alert-info a {
+  color: #322173;
 }
 
 .navbar-inverse {
