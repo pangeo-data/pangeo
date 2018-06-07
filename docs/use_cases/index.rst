@@ -9,7 +9,7 @@ Physical Oceanography
 .. toctree::
    :maxdepth: 1
 
-   ocean_cm2.6_eddy_statistics
+   sea-surface-height
 
 Meteorology
 
