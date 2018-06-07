@@ -100,7 +100,11 @@ datasets.
 These datasets are directly accessible from the Google Cloud Pangeo deployment:
 `pangeo.pydata.org <http://pangeo.pydata.org>`_.
 
-**HOW DO WE LIST THE DATASETS? CAN WE DIRECTLY PARSE THE INTAKE CATALOG?**
++--------+--------------+
+| Name   | Description  |
++========+==============+
+| Under  | Construction |
++--------+--------------+
 
 
 .. _cloud-data-guide:

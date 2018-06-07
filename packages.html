@@ -70,7 +70,7 @@
 <li class="toctree-l1"><a class="reference internal" href="about.html">About Pangeo</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="about.html#motivation">Motivation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="about.html#mission-statement">Mission Statement</a></li>
-<li class="toctree-l2"><a class="reference internal" href="about.html#vision">Vision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="about.html#goals">Goals</a></li>
 <li class="toctree-l2"><a class="reference internal" href="about.html#get-involved">Get Involved</a></li>
 </ul>
 </li>
@@ -142,15 +142,12 @@
 <li><a class="reference internal" href="#">Packages</a><ul>
 <li><a class="reference internal" href="#pangeo-core-packages">Pangeo Core Packages</a><ul>
 <li><a class="reference internal" href="#xarray">Xarray</a></li>
+<li><a class="reference internal" href="#iris">Iris</a></li>
 <li><a class="reference internal" href="#dask">Dask</a></li>
 <li><a class="reference internal" href="#jupyter">Jupyter</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#pangeo-affiliated-packages">Pangeo Affiliated Packages</a><ul>
-<li><a class="reference internal" href="#xgcm">xgcm</a></li>
-<li><a class="reference internal" href="#xesmf">xesmf</a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#pangeo-affiliated-packages">Pangeo Affiliated Packages</a></li>
 <li><a class="reference internal" href="#guidelines-for-new-packages">Guidelines for New Packages</a><ul>
 <li><a class="reference internal" href="#general-best-practices-for-open-source">General Best Practices for Open Source</a></li>
 <li><a class="reference internal" href="#best-practices-for-pangeo-projects">Best Practices for Pangeo Projects</a></li>
@@ -184,15 +181,12 @@
 <li><a class="reference internal" href="#">Packages</a><ul>
 <li><a class="reference internal" href="#pangeo-core-packages">Pangeo Core Packages</a><ul>
 <li><a class="reference internal" href="#xarray">Xarray</a></li>
+<li><a class="reference internal" href="#iris">Iris</a></li>
 <li><a class="reference internal" href="#dask">Dask</a></li>
 <li><a class="reference internal" href="#jupyter">Jupyter</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#pangeo-affiliated-packages">Pangeo Affiliated Packages</a><ul>
-<li><a class="reference internal" href="#xgcm">xgcm</a></li>
-<li><a class="reference internal" href="#xesmf">xesmf</a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#pangeo-affiliated-packages">Pangeo Affiliated Packages</a></li>
 <li><a class="reference internal" href="#guidelines-for-new-packages">Guidelines for New Packages</a><ul>
 <li><a class="reference internal" href="#general-best-practices-for-open-source">General Best Practices for Open Source</a></li>
 <li><a class="reference internal" href="#best-practices-for-pangeo-projects">Best Practices for Pangeo Projects</a></li>
@@ -208,7 +202,7 @@
     <div class="col-md-9 content ">
       
   <div class="section" id="packages">
-<span id="id1"></span><h1>Packages<a class="headerlink" href="#packages" title="Permalink to this headline">¶</a></h1>
+<h1>Packages<a class="headerlink" href="#packages" title="Permalink to this headline">¶</a></h1>
 <p>Pangeo is not one specific software pacakge.
 A Pangeo environment is made of up of many different open-source software packages.
 Each of these packages has its own repository, documentation, and development team.</p>
@@ -240,6 +234,24 @@ describing scientific data in widespread use in the Earth sciences:
 Xarray provides the basic data structures used by many other Pangeo packages,
 as well as powerful tools for computation and visualization.</p>
 </div>
+<div class="section" id="iris">
+<h3>Iris<a class="headerlink" href="#iris" title="Permalink to this headline">¶</a></h3>
+<img alt="_static/Iris_logo_banner.png" src="_static/Iris_logo_banner.png" />
+<ul class="simple">
+<li>Website: <a class="reference external" href="https://scitools.org.uk/iris/docs/latest/">https://scitools.org.uk/iris/docs/latest/</a></li>
+<li>GitHub: <a class="reference external" href="https://github.com/SciTools/iris">https://github.com/SciTools/iris</a></li>
+</ul>
+<p>Iris seeks to provide a powerful, easy to use, and community-driven Python
+library for analysing and visualising meteorological and oceanographic data sets.</p>
+<p>With Iris you can:</p>
+<ul class="simple">
+<li>Use a single API to work on your data, irrespective of its original format.</li>
+<li>Read and write (CF-)netCDF, GRIB, and PP files.</li>
+<li>Easily produce graphs and maps via integration with matplotlib and cartopy.</li>
+</ul>
+<p>Iris is an alternative to Xarray. Iris is developed primarily by the
+<a class="reference external" href="http://www.informaticslab.co.uk/">UK Met Office Informatics Lab</a>.</p>
+</div>
 <div class="section" id="dask">
 <h3>Dask<a class="headerlink" href="#dask" title="Permalink to this headline">¶</a></h3>
 <img alt="_images/dask_horizontal_no_pad.svg" src="_images/dask_horizontal_no_pad.svg" width="300px" /><ul class="simple">
@@ -267,12 +279,11 @@ live.</p>
 </div>
 <div class="section" id="pangeo-affiliated-packages">
 <h2>Pangeo Affiliated Packages<a class="headerlink" href="#pangeo-affiliated-packages" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="xgcm">
-<h3>xgcm<a class="headerlink" href="#xgcm" title="Permalink to this headline">¶</a></h3>
-</div>
-<div class="section" id="xesmf">
-<h3>xesmf<a class="headerlink" href="#xesmf" title="Permalink to this headline">¶</a></h3>
-</div>
+<p>There are many other python packages that can work with the core packages
+to provide additional functionality.
+We plan to eventually catalog these packages here on the Pangeo website.
+For now, please refer to the
+<a class="reference external" href="http://xarray.pydata.org/en/latest/faq.html#what-other-projects-leverage-xarray">Xarray list of related projects</a>.</p>
 </div>
 <div class="section" id="guidelines-for-new-packages">
 <h2>Guidelines for New Packages<a class="headerlink" href="#guidelines-for-new-packages" title="Permalink to this headline">¶</a></h2>
@@ -315,12 +326,9 @@ development and experimentation, however, some duplication will be
 inevitable as developers try implementing different solutions to the
 same general problems.)</li>
 <li><em>Consume and Produce Xarray Objects:</em> Xarray data structures
-facilitate mutual interoperability between packages. (For more about
-Xarray , see below.)</li>
+facilitate mutual interoperability between packages.</li>
 <li><em>Operate Lazily:</em> whenever possible, packages should avoid explicitly
-triggering computation on
-<a class="reference external" href="http://dask.pydata.org/en/latest/array.html">Dask</a> objects. (For
-more about Dask, see below)</li>
+triggering computation on Dask objects.</li>
 </ol>
 </div>
 <div class="section" id="why-xarray-and-dask">

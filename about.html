@@ -70,7 +70,7 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">About Pangeo</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#motivation">Motivation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#mission-statement">Mission Statement</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#vision">Vision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#goals">Goals</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#get-involved">Get Involved</a></li>
 </ul>
 </li>
@@ -142,7 +142,7 @@
 <li><a class="reference internal" href="#">About Pangeo</a><ul>
 <li><a class="reference internal" href="#motivation">Motivation</a></li>
 <li><a class="reference internal" href="#mission-statement">Mission Statement</a></li>
-<li><a class="reference internal" href="#vision">Vision</a></li>
+<li><a class="reference internal" href="#goals">Goals</a></li>
 <li><a class="reference internal" href="#get-involved">Get Involved</a></li>
 </ul>
 </li>
@@ -171,7 +171,7 @@
 <li><a class="reference internal" href="#">About Pangeo</a><ul>
 <li><a class="reference internal" href="#motivation">Motivation</a></li>
 <li><a class="reference internal" href="#mission-statement">Mission Statement</a></li>
-<li><a class="reference internal" href="#vision">Vision</a></li>
+<li><a class="reference internal" href="#goals">Goals</a></li>
 <li><a class="reference internal" href="#get-involved">Get Involved</a></li>
 </ul>
 </li>
@@ -183,23 +183,28 @@
       
   <div class="section" id="about-pangeo">
 <span id="about"></span><h1>About Pangeo<a class="headerlink" href="#about-pangeo" title="Permalink to this headline">¶</a></h1>
+<p>Pangeo is first and foremmost a <a class="reference internal" href="collaborators.html#collaborators"><span class="std std-ref">community of people</span></a>
+working collaboratively to develop software and infrastructure to enable
+Big Data geoscience research.</p>
+<p>Some of the products produced by this commmunity include interconnected
+<a class="reference internal" href="packages.html#packages"><span class="std std-ref">software pacakge</span></a> and <a class="reference internal" href="deployments.html#deployments"><span class="std std-ref">deployments</span></a> of
+this software in cloud and high-performance-computing environments. Such
+a deployment is sometimes referred to as a <em>Pangeo Environment</em>.</p>
 <div class="section" id="motivation">
 <h2>Motivation<a class="headerlink" href="#motivation" title="Permalink to this headline">¶</a></h2>
-<p>There are several building crises facing the Atmosphere / Ocean / Land /
-Climate (AOC) science community:</p>
+<p>There are several building crises facing the geoscience community:</p>
 <ul class="simple">
-<li>Big Data: datasets are growing too rapidly and legacy software tools
+<li><em>Big Data</em>: datasets are growing too rapidly and legacy software tools
 for scientific analysis can’t handle them. This is a major obstacle
 to scientific progress.</li>
-<li>Technology Gap: a growing gap between the technological
+<li><em>Technology Gap</em>: a growing gap between the technological
 sophistication of industry solutions (high) and scientific software
 (low).</li>
-<li>Reproducibility: a fragmentation of software tools and environments
-renders most AOC research effectively unreproducible and prone to
+<li><em>Reproducibility</em>: a fragmentation of software tools and environments
+renders most geoscience research effectively unreproducible and prone to
 failure.</li>
 </ul>
-<p>We believe these challenges can all be addressed through a unified
-effort.</p>
+<p>Pangeo aims to address these challenges through a unified, collaborative effort.</p>
 </div>
 <div class="section" id="mission-statement">
 <h2>Mission Statement<a class="headerlink" href="#mission-statement" title="Permalink to this headline">¶</a></h2>
@@ -208,50 +213,30 @@ open-source analysis tools for ocean, atmosphere and climate science can
 be developed, distributed, and sustained. These tools must be scalable
 in order to meet the current and future challenges of big data, and
 these solutions should leverage the existing expertise outside of the
-AOC community.</p>
+geoscience community.</p>
 </div>
-<div class="section" id="vision">
-<h2>Vision<a class="headerlink" href="#vision" title="Permalink to this headline">¶</a></h2>
-<p>We envision a collection of related but independent open-source packages
-that meet specific scientific needs within the AOC fields. These
-packages will follow modern best practices for software development,
-including:</p>
-<ul class="simple">
-<li>hosting on GitHub,</li>
-<li>testing,</li>
-<li>coverage,</li>
-<li>continuous integration,</li>
-<li>comprehensive documentation, and</li>
-<li>a welcoming and inclusive development culture.</li>
-</ul>
-<p>As much as possible, we will build on top of existing solutions and
-leverage expertise from the broader technology world, including
-industry.</p>
-<p>In practice, the “python data” software stack (see above) currently
-provides the most stable and powerful foundation layer for our desired
-tools. In particular the xarray and dask projects provide a mechanism to
-easily build scalability into scientific analysis. Our vision of future
-AOC software involves the adoption of these common software layers, and
-a clear communication between developers to define project scope and
-dependency that eliminates redundancy and fragmentation.</p>
+<div class="section" id="goals">
+<h2>Goals<a class="headerlink" href="#goals" title="Permalink to this headline">¶</a></h2>
+<p>To accomplish this mission, we have identified three specific goals.</p>
+<ol class="arabic simple">
+<li>Foster collaboration around the open source scientific python ecosystem for
+ocean / atmosphere / land / climate science.</li>
+<li>Support the development with domain-specific geoscience packages.</li>
+<li>Improve scalability of these tools to to handle petabyte-scale datasets on
+HPC and cloud platforms.</li>
+</ol>
 </div>
 <div class="section" id="get-involved">
 <h2>Get Involved<a class="headerlink" href="#get-involved" title="Permalink to this headline">¶</a></h2>
-<p>The scientific culture in the AOC community must be tied to, and evolve
-from, the community’s software culture. Hence, we depend upon
-contributions from the entire community, both scientific and industrial.</p>
-<p>We encourage everyone to get involved by:</p>
+<p>The pangeo project is completely open to involvement from anyone with interest.
+There are many ways to get involved:</p>
 <ul class="simple">
-<li>contributing to the goals and vision of the organization,</li>
-<li>contributing to the design documents of the proposed software,</li>
-<li>contributing to the software, via issues and pull requests, and/or</li>
-<li>using the software for your scientific analysis and letting us know
-about your experiences (e.g., contributing to examples)</li>
+<li><em>Science users</em>: read the <a class="reference internal" href="quickstart.html#quickstart"><span class="std std-ref">Guide for Scientists</span></a>, browse the <a class="reference internal" href="use_cases/index.html#use-cases"><span class="std std-ref">Geoscience Use Cases</span></a>,
+read about the <a class="reference internal" href="packages.html#packages"><span class="std std-ref">Packages</span></a>, or visit a <a class="reference internal" href="deployments.html#deployments"><span class="std std-ref">deployment</span></a>.</li>
+<li><em>Developers / system administrators</em>: learn about the
+<a class="reference internal" href="architecture.html#technical-architecture"><span class="std std-ref">Technical Architecture</span></a> or read the <a class="reference internal" href="setup_guides/index.html#setup-guides"><span class="std std-ref">Deployment Setup Guides</span></a>.</li>
 </ul>
-<p>For now, community discussion is happening on our <a class="reference external" href="https://groups.google.com/forum/#!forum/pangeo">pangeo google
-group</a>. This is an
-open group, and we invite anyone interested to join.</p>
-<p>Pangeo receives support from the <a class="reference external" href="https://pangeo-data.github.io/">NSF</a> via the <a class="reference external" href="https://earthcube.org/">EarthCube</a> program.</p>
+<p>For more information, consult the <a class="reference internal" href="faq.html#faq"><span class="std std-ref">Frequently Asked Questions</span></a>.</p>
 </div>
 </div>
 

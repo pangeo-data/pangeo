@@ -70,7 +70,7 @@
 <li class="toctree-l1"><a class="reference internal" href="about.html">About Pangeo</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="about.html#motivation">Motivation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="about.html#mission-statement">Mission Statement</a></li>
-<li class="toctree-l2"><a class="reference internal" href="about.html#vision">Vision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="about.html#goals">Goals</a></li>
 <li class="toctree-l2"><a class="reference internal" href="about.html#get-involved">Get Involved</a></li>
 </ul>
 </li>
@@ -236,6 +236,24 @@ promoting reproducibility and transparency, only the open source ecosystem
 has the modularity and collaborative structure required to achieve our goals.</p>
 </li>
 <li><p class="first"><em>Why don’t you use Julia or R?</em></p>
+<p>We would like Pangeo to evolve into a multi-language platform, including
+support for Julia, R, and other programming languages used for data science.
+Because Pangeo uses Jupyter to provide interactive commputing, this is
+already possible today; Jupyter can be configured to run Kernels in many
+different languages (see
+<a class="reference external" href="http://jupyter.readthedocs.io/en/latest/projects/kernels.html">Jupyter docs on Kernels</a>).
+These kernels can be configured to run on any of the
+Pangeo <a class="reference internal" href="deployments.html#deployments"><span class="std std-ref">Deployments</span></a>. However, the higher-level features of the Pangeo
+platform, in particular, parallel execution with Dask, are limited to
+Python at the moment. If you would like to work on enabling multi-language
+support, please engage with us via the <a class="reference external" href="https://github.com/pangeo-data/pangeo/issues">Pangeo GitHub issue tracker</a>.</p>
+</li>
+<li><p class="first"><em>Can I use Pangeo for X?</em></p>
+<p>Yes! Our goal is to point you towards the building blocks to create your
+own Pangeo, whatever that means for you. If you want to create up a custom
+Pangeo environment, start by consulting the <a class="reference internal" href="setup_guides/index.html#setup-guides"><span class="std std-ref">Deployment Setup Guides</span></a>. If you
+want help or want to discuss customization options, reach out via the
+<a class="reference external" href="https://github.com/pangeo-data/pangeo/issues">Pangeo GitHub issue tracker</a>.</p>
 </li>
 </ol>
 </div>
