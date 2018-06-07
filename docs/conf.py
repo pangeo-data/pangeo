@@ -243,10 +243,27 @@ texinfo_documents = [
 intersphinx_mapping = {'xarray': ('http://xarray.pydata.org/en/latest/', None),
                        'zarr': ('http://xarray.pydata.org/en/latest/', None)}
 
+# http://ericholscher.com/blog/2016/jul/25/integrating-jinja-rst-sphinx/
+def rstjinja(app, docname, source):
+    """
+    Render our pages as a jinja template for fancy templating goodness.
+    """
+    # Make sure we're outputting HTML
+    if app.builder.format != 'html':
+        return
+    src = source[0]
+    rendered = app.builder.templates.render_string(
+        src, app.config.html_context
+    )
+    source[0] = rendered
+
+
 # https://pypi.python.org/pypi/sphinx-bootstrap-theme/
 def setup(app):
-    app.add_stylesheet("pangeo-style.css") # also can be a full URL
+    app.add_stylesheet("pangeo-style.css")  # also can be a full URL
     app.add_stylesheet("https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css")
+    app.connect("source-read", rstjinja)
+
 
 # a hack to get our custom people data into sphinx
 import yaml
