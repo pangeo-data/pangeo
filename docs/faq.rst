@@ -78,3 +78,26 @@ Frequently Asked Questions
    has the modularity and collaborative structure required to achieve our goals.
 
 #. *Why don't you use Julia or R?*
+
+   We would like Pangeo to evolve into a multi-language platform, including
+   support for Julia, R, and other programming languages used for data science.
+   Because Pangeo uses Jupyter to provide interactive commputing, this is
+   already possible today; Jupyter can be configured to run Kernels in many
+   different languages (see
+   `Jupyter docs on Kernels <http://jupyter.readthedocs.io/en/latest/projects/kernels.html>`_).
+   These kernels can be configured to run on any of the
+   Pangeo :ref:`Deployments`. However, the higher-level features of the Pangeo
+   platform, in particular, parallel execution with Dask, are limited to
+   Python at the moment. If you would like to work on enabling multi-language
+   support, please engage with us via the `Pangeo GitHub issue tracker`_.
+
+#. *Can I use Pangeo for X?*
+
+   Yes! Our goal is to point you towards the building blocks to create your
+   own Pangeo, whatever that means for you. If you want to create up a custom
+   Pangeo environment, start by consulting the :ref:`setup-guides`. If you
+   want help or want to discuss customization options, reach out via the
+   `Pangeo GitHub issue tracker`_.
+
+
+.. _Pangeo GitHub issue tracker: https://github.com/pangeo-data/pangeo/issues

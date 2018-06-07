@@ -23,6 +23,8 @@ We hope to soon expand it to include AWS and Azure.
 Step One: Install the Necessary Software
 ----------------------------------------
 
+.. _google-cloud-sdk:
+
 Google Cloud SDK
 ~~~~~~~~~~~~~~~~
 
