@@ -182,6 +182,7 @@ html_sidebars = {
      ]
  }
 
+html_scaled_image_link = False
 
 # -- Options for HTMLHelp output ------------------------------------------
 
