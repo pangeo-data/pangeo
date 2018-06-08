@@ -94,7 +94,7 @@ Existing datasets can easily be converted to zarr via
 Google Cloud Storage Data Catalog
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Thanks to our :ref:`NSF Award <nsf-award>`, Pangeo has a substantial allocation
+Thanks to our :ref:`NSF Award <earthcube>`, Pangeo has a substantial allocation
 on Google Cloud Platform which we are currently using to host several large
 datasets.
 These datasets are directly accessible from the Google Cloud Pangeo deployment:

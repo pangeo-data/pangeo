@@ -1,3 +1,5 @@
+.. _packages:
+
 Packages
 ========
 
@@ -149,7 +151,7 @@ additional recommendations.
 4. *Consume and Produce Xarray Objects:* Xarray data structures
    facilitate mutual interoperability between packages.
 5. *Operate Lazily:* whenever possible, packages should avoid explicitly
-   triggering computation on Dask objects. 
+   triggering computation on Dask objects.
 
 Why Xarray and Dask?
 ~~~~~~~~~~~~~~~~~~~~
