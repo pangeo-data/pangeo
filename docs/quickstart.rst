@@ -47,7 +47,7 @@ analysis you want to do and modify it to suit your needs.
 
   use_cases/index
 
-A great for novices to learn how to use Pangeo is to start from one of these
+A great way for novices to learn how to use Pangeo is to start from one of these
 use cases and modify it for your needs. Many of the use cases are pre-loaded
 on the Pangeo deployments listed below.
 
