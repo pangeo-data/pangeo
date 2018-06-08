@@ -175,7 +175,7 @@ later.
 ::
 
     (pangeo) $ echo "ssh -N -L 8877:`hostname`:8877 $USER@cheyenne.ucar.edu"
-    ssh -N -L 8877:r8i4n0:8877username@cheyenne.ucar.edu
+    ssh -N -L 8877:r8i4n0:8877 username@cheyenne.ucar.edu
 
 Now we can launch the notebook server:
 
