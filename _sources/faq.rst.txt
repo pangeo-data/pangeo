@@ -65,7 +65,7 @@ Frequently Asked Questions
    Many excellent Big Data platforms and tools already exist. But the
    collaborators in the Pangeo project have concluded that none of these has
    sufficient flexibility to handle the diversity and complexity of real-world
-   :ref:`use-cases`. Instead, we have converged on the the :ref:`Pangeo Core Packages`
+   :ref:`use-cases`. Instead, we have converged on the the :ref:`packages`
    Xarray and Dask to provide the foundational data models and execution engine
    for our science. We know these tools work for us because many scientists are
    already using them in day-to-day research. Pangeo aims to make them better

@@ -11,7 +11,8 @@ Funding Agencies
 
 We are grateful to have formal funding support from several funding agencies.
 
-.. _nsf-award:
+.. _earthcube:
+
 EarthCube
 ~~~~~~~~~
 

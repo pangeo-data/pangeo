@@ -59,6 +59,6 @@ There are many ways to get involved:
 - *Science users*: read the :ref:`quickstart`, browse the :ref:`use-cases`,
   read about the :ref:`packages`, or visit a :ref:`deployment <deployments>`.
 - *Developers / system administrators*: learn about the
-  :ref:`Technical Architecture` or read the :ref:`setup-guides`.
+  :ref:`architecture` or read the :ref:`setup-guides`.
 
 For more information, consult the :ref:`FAQ`.
