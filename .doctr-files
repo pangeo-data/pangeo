@@ -1,3 +1,4 @@
+./_images/Iris_logo_banner.png
 ./_images/Sloan-Logo-primary-blac-web.png
 ./_images/anaconda-logo.png
 ./_images/dask_horizontal_no_pad.svg
@@ -22,6 +23,7 @@
 ./_sources/about.rst.txt
 ./_sources/architecture.rst.txt
 ./_sources/collaborators.rst.txt
+./_sources/contact.rst.txt
 ./_sources/data.rst.txt
 ./_sources/deployments.rst.txt
 ./_sources/faq.rst.txt
@@ -35,6 +37,7 @@
 ./_sources/use_cases/index.rst.txt
 ./_sources/use_cases/newmann_ensemble_meteorology.ipynb.txt
 ./_sources/use_cases/sea-surface-height.ipynb.txt
+./_static/Iris_logo_banner.png
 ./_static/Sloan-Logo-primary-blac-web.png
 ./_static/ajax-loader.gif
 ./_static/anaconda-logo.png
@@ -141,6 +144,7 @@
 ./about.html
 ./architecture.html
 ./collaborators.html
+./contact.html
 ./data.html
 ./deployments.html
 ./faq.html

@@ -55,3 +55,4 @@ Contents
    deployments
    data
    collaborators
+   contact
