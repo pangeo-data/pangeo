@@ -14,17 +14,25 @@ For a general inquiry about the project, please open an issue on the main
 
 For more specific inquiries, visit one of the following repositories:
 
-- **https://github.com/pangeo-data/pangeo**: A place to discuss and track issues
-  related to the Pangeo project
-- **https://github.com/pangeo-data/helm-chart**: Helm charts, Docker images,
-  and everything related to cloud / Kubernetes
-- **https://github.com/pangeo-data/branding**: Pangeo stylistic elements
+- `pangeo-data/pangeo <https://github.com/pangeo-data/pangeo>`_: A place to
+  discuss and track general issues related to the Pangeo project
+- `pangeo-data/helm-chart <https://github.com/pangeo-data/helm-chart>`_: Helm
+  charts, Docker images, and everything related to cloud / Kubernetes
+- `pangeo-data/branding <https://github.com/pangeo-data/branding>`_: Pangeo
+  stylistic elements
 
 Pangeo's online presence also includes a:
 
-- **Blog at Medium**: https://medium.com/pangeo
+- **Medium Blog**: https://medium.com/pangeo
 - **Twitter Account**: https://twitter.com/pangeo_data
 
+If wish to contact Pangeo via a non-public channel, you may email the following
+Pangeo collaborators:
+
+- Ryan Abernathey (Columbia / LDEO):
+  `rpa@ldeo.columbia.edu <mailto:rpa@ldeo.columbia.edu>`_
+- Joe Hamman (NCAR):
+  `jhammman@ucar.edu <mailto:rpa@jhammman@ucar.edu>`_
 
 .. _GitHub: https://github.org/
-.. _: https://github.com/pangeo-data/pangeo/issues
+.. _Pangeo GitHub issue tracker: https://github.com/pangeo-data/pangeo/issues
