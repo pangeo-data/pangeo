@@ -3,7 +3,7 @@
 Packages
 ========
 
-Pangeo is not one specific software pacakge.
+Pangeo is not one specific software package.
 A Pangeo environment is made of up of many different open-source software packages.
 Each of these packages has its own repository, documentation, and development team.
 
@@ -76,7 +76,7 @@ Dask is a flexible parallel computing library for analytics.
 Dask is the key to the scalability of the Pangeo platform; its data structures are
 capable of representing extremely large datasets without actually loading them
 in memory, and its distributed schedulers permit supercomputers and cloud
-computing clusters to efficiently parallize computations across many nodes.
+computing clusters to efficiently paralelize computations across many nodes.
 
 Jupyter
 ~~~~~~~
