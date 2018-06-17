@@ -35,7 +35,15 @@ extensions = [
     'sphinx.ext.intersphinx',
     'sphinx.ext.todo',
     'sphinx.ext.mathjax',
-    'nbsphinx']
+    'nbsphinx',
+    'sphinx_nbexamples']
+
+example_gallery_config = dict(
+    dont_preprocess=True,
+    examples_dirs=['../use_cases'],
+    gallery_dirs=['use_cases'],
+    pattern='.+.ipynb',
+    )
 
 # https://nbsphinx.readthedocs.io/en/0.2.16/never-execute.html
 nbsphinx_execute = 'never'
