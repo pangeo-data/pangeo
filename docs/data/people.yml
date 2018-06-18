@@ -565,3 +565,16 @@
     - marine geophysics
     - image analysis
     - seafloor instrumentation
+
+- first_name: Robert
+  last_name: Hetland
+  institution: Texas A&M University
+  website: http://pong.tamu.edu
+  email: hetland@tamu.edu
+  github: hetland
+  twitter: hetland
+  orcid: 0000-0001-9531-2119
+  tags:
+    - physical oceanography
+    - coastal ocean modeling
+
