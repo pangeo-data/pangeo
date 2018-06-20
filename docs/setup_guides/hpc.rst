@@ -126,7 +126,7 @@ This can be done by editing the dask distributed config file, e.g.:
 
 .. code:: python
 
-    diagnostics-link: "../proxy/{port}/status"
+    diagnostics-link: "/proxy/{port}/status"
 
 ------------
 
