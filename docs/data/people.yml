@@ -1,6 +1,6 @@
 - first_name: Ryan
   last_name: Abernathey
-  institution: Lamont Doherty Earth Observatory
+  institution: Lamont-Doherty Earth Observatory
   website: http://rabernat.github.io
   email: rpa@ldeo.columbia.edu
   github: rabernat
@@ -25,7 +25,7 @@
 
 - first_name: Chiara
   last_name: Lepore
-  institution: Lamont Doherty Earth Observatory
+  institution: Lamont-Doherty Earth Observatory
   website: http://www.ldeo.columbia.edu/~clepore/
   twitter: lapiccolaflo
   github: chiaral
@@ -530,7 +530,7 @@
     
 - first_name: Naomi
   last_name: Henderson
-  institution: Lamont Doherty Earth Observatory
+  institution: Lamont-Doherty Earth Observatory
   email: nhn2@columbia.edu
   github: naomi-henderson
   twitter: noni
@@ -553,3 +553,28 @@
     - observations
     - data fusion
     - machine learning
+
+- first_name: Tim
+  last_name: Crone
+  institution: Lamont-Doherty Earth Observatory
+  website: http://www.fluidcontinuity.org/
+  email: tjcrone@gmail.com
+  github: tjcrone
+  orcid: 0000-0002-8100-5633
+  tags:
+    - marine geophysics
+    - image analysis
+    - seafloor instrumentation
+
+- first_name: Robert
+  last_name: Hetland
+  institution: Texas A&M University
+  website: http://pong.tamu.edu
+  email: hetland@tamu.edu
+  github: hetland
+  twitter: hetland
+  orcid: 0000-0001-9531-2119
+  tags:
+    - physical oceanography
+    - coastal ocean modeling
+

@@ -3,12 +3,12 @@
 About Pangeo
 ============
 
-Pangeo is first and foremmost a :ref:`community of people <collaborators>`
+Pangeo is first and foremost a :ref:`community of people <collaborators>`
 working collaboratively to develop software and infrastructure to enable
 Big Data geoscience research.
 
-Some of the products produced by this commmunity include interconnected
-:ref:`software pacakge <packages>` and :ref:`deployments <deployments>` of
+Some of the products produced by this community include interconnected
+:ref:`software package <packages>` and :ref:`deployments <deployments>` of
 this software in cloud and high-performance-computing environments. Such
 a deployment is sometimes referred to as a *Pangeo Environment*.
 

@@ -19,7 +19,7 @@ yourself with the basics before moving forward with this guide.
 Learn About Pangeo Software
 ---------------------------
 
-Pangeo is not a specific software pacakge.
+Pangeo is not a specific software package.
 A Pangeo environment is made of up of many different open-source software packages.
 Each of these packages has its own repository, documentation, and development team.
 You can learn more about these packages by following the links below.
@@ -47,7 +47,7 @@ analysis you want to do and modify it to suit your needs.
 
   use_cases/index
 
-A great for novices to learn how to use Pangeo is to start from one of these
+A great way for novices to learn how to use Pangeo is to start from one of these
 use cases and modify it for your needs. Many of the use cases are pre-loaded
 on the Pangeo deployments listed below.
 
@@ -68,7 +68,7 @@ following the :ref:`setup-guides`.
 Give Feedback
 -------------
 
-Pangeo is a work in progress. We need engangement from scientists like you
+Pangeo is a work in progress. We need engagement from scientists like you
 to realize the goals of the project. Currently, the best way to provide your
 feedback and interact with the Pangeo community is via the
 `Pangeo GitHub issue tracker`_. We use this a forum to discuss all details

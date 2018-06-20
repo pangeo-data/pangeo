@@ -32,7 +32,7 @@ Pangeo collaborators:
 - Ryan Abernathey (Columbia / LDEO):
   `rpa@ldeo.columbia.edu <mailto:rpa@ldeo.columbia.edu>`_
 - Joe Hamman (NCAR):
-  `jhammman@ucar.edu <mailto:rpa@jhammman@ucar.edu>`_
+  `jhamman@ucar.edu <mailto:rpa@jhamman@ucar.edu>`_
 
 .. _GitHub: https://github.org/
 .. _Pangeo GitHub issue tracker: https://github.com/pangeo-data/pangeo/issues
