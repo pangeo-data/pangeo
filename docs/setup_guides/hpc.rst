@@ -45,6 +45,11 @@ Create a new conda environment for our pangeo work:
         jupyterlab nbserverproxy \
         dask distributed mpi4py dask-jobqueue
 
+.. note::
+
+   Depending on your application, you may choose to add additional conda
+   packages to this list.
+
 Activate this environment
 
 ::
@@ -120,7 +125,7 @@ securing Jupyter, check out
 `Securing a notebook server <http://jupyter-notebook.readthedocs.io/en/stable/public_server.html#securing-a-notebook-server>`__
 in the Jupyter documentation.
 
-Finally, we may want to configure dask's dashboard to forward through jupyterhub.
+Finally, we may want to configure dask's dashboard to forward through Jupyter.
 This can be done by editing the dask distributed config file, e.g.:
 ``.config/dask/distributed.yaml``. In this file, set:
 
@@ -133,7 +138,7 @@ This can be done by editing the dask distributed config file, e.g.:
 From here, we have two options. Option 1 will start a Jupyter Notebook server
 and manage dask using the `dask-jobqueue`_ package. Option 2 will start a dask
 cluster using `dask-mpi` and will run a Jupyter server as part of the dask cluster.
-We generally recommend starting with Option 1, espcially if you will be working
+We generally recommend starting with Option 1, especially if you will be working
 interactively, unless you have a reason for managing the job submission scripts
 on your own. Users that will be using dask in batch-style workflows may prefer
 Option 2.
@@ -217,12 +222,24 @@ done from within your Jupyter Notebook:
                          queue='premium',
                          resource_spec='select=1:ncpus=36:mem=109G',
                          walltime='02:00:00')
-    cluster.start_workers(10)
+    cluster.start_workers(18)
 
     from dask.distributed import Client
     client = Client(cluster)
 
-For more examples of how to use `dask-jobqueue`_, refer to the `package documentation <http://dask-jobqueue.readthedocs.io>`__.
+The `start_workers()` method submits a batch of jobs to the job queue system
+(in this case PBS). Depending on how busy the job queue is, it can take a few
+minutes for workers to join your cluster. You can usually check the status of
+your queued jobs using a command line utility like `qstat`. You can also check
+the status of your cluster from inside your Jupyter session:
+
+.. code:: python
+
+    print(client)
+
+For more examples of how to use
+`dask-jobqueue`_, refer to the
+`package documentation <http://dask-jobqueue.readthedocs.io>`__.
 
 Deploy Option 2: Jupyter + dask-mpi
 -----------------------------------
