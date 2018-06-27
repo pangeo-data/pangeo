@@ -26,6 +26,7 @@ NUM_NODES=2
 MIN_WORKER_NODES=0
 MAX_WORKER_NODES=10
 CLUSTER_NAME='pangeo-binder'
+VERSION='v0.1.0-856e3e6'
 
 # create cluster on GCP
 gcloud config set project $PROJECTID
@@ -47,7 +48,7 @@ helm repo update
 
 # install jupyterhub on the cluster
 echo "Installing jupyterhub."
-helm install jupyterhub/binder --version=v0.1.0-856e3e6 --name=jupyter --namespace=jupyter -f binder_config.yaml -f binder_secret.yaml
+helm install jupyterhub/binder --version=$VERSION --name=jupyter --namespace=jupyter -f binder_config.yaml -f binder_secret.yaml
 
 # to upgrade:
-# helm upgrade pangeo-binder jupyterhub/binderhub --version=v0.1.0-856e3e6 -f binder_config.yml -f binder_secret.yml --force --recreate-pods
+# helm upgrade pangeo-binder jupyterhub/binderhub --version=$VERSION -f binder_config.yml -f binder_secret.yml --force --recreate-pods
