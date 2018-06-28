@@ -270,6 +270,7 @@ def rstjinja(app, docname, source):
 def setup(app):
     app.add_stylesheet("pangeo-style.css")  # also can be a full URL
     app.add_stylesheet("https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css")
+    app.add_stylesheet("example_gallery_styles_patched.css")
     app.connect("source-read", rstjinja)
 
 
