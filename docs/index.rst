@@ -56,3 +56,7 @@ Contents
    data
    collaborators
    contact
+
+.. linkgalleries::
+
+    Pangeo
