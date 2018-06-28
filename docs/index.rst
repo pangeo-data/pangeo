@@ -57,6 +57,10 @@ Contents
    collaborators
    contact
 
+Examples
+^^^^^^^^
+See our :ref:`use-cases` section.
+
 .. linkgalleries::
 
     Pangeo
