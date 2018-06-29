@@ -181,7 +181,7 @@ Now, connect to the server using an ssh tunnel from your local machine
 
 ::
 
-    $ ssh -N -L 8877:r8i4n0:8877 -L 8878:r8i4n0:8787 username@cheyenne.ucar.edu
+    $ ssh -N -L 8877:r8i4n0:8877 -L 8787:r8i4n0:8787 username@cheyenne.ucar.edu
 
 You'll want to change the details in the command above but the basic idea is
 that we're passing the ports 8877 and 8878 from the compute node `r8i4n0` to our
