@@ -113,3 +113,11 @@
   dask: dask-jobqueue
   jupyter: Single user notebook servers
   kind: hpc
+
+- name: Pawsey Supercomputing Centre
+  description: Western Australian Supercomputing Centre
+  link: https://www.pawsey.org.au/our-systems/
+  platform: HPC
+  dask: dask-jobqueue
+  jupyter: Single user notebook servers
+  kind: hpc

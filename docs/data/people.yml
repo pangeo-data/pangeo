@@ -587,3 +587,19 @@
     - numerical modelling
     - atmospheric dynamics
     - cloud computing
+
+- first_name: Paul
+  last_name: Branson
+  institution: CSIRO/University of Western Australia
+  email: paul.branson@csiro.au
+  github: pbranson
+  twitter: pablobranson
+  orcid: 0000-0002-3825-9873
+  tags:
+    - physical oceanography
+    - coastal ocean modelling
+    - image analysis
+    - particle imaging velocimetry
+
+
+>>>>>>> 9ace2b1... Added to people.yml and deployments.yml
