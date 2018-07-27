@@ -11,10 +11,6 @@
 ./_images/pangeo_simple_logo.svg
 ./_images/pangeo_tech_1.png
 ./_images/small_e_logo_cropped.png
-./_images/use_cases_newmann_ensemble_meteorology_10_1.png
-./_images/use_cases_newmann_ensemble_meteorology_18_1.png
-./_images/use_cases_newmann_ensemble_meteorology_23_1.png
-./_images/use_cases_newmann_ensemble_meteorology_26_1.png
 ./_images/use_cases_sea-surface-height_11_1.png
 ./_images/use_cases_sea-surface-height_15_0.png
 ./_images/use_cases_sea-surface-height_18_0.png
@@ -35,7 +31,6 @@
 ./_sources/setup_guides/index.rst.txt
 ./_sources/use_cases/CESM-Large-Ensemble-Tracer-Budget-Example.ipynb.txt
 ./_sources/use_cases/index.rst.txt
-./_sources/use_cases/newmann_ensemble_meteorology.ipynb.txt
 ./_sources/use_cases/sea-surface-height.ipynb.txt
 ./_static/Iris_logo_banner.png
 ./_static/Sloan-Logo-primary-blac-web.png
@@ -160,5 +155,4 @@
 ./setup_guides/index.html
 ./use_cases/CESM-Large-Ensemble-Tracer-Budget-Example.html
 ./use_cases/index.html
-./use_cases/newmann_ensemble_meteorology.html
 ./use_cases/sea-surface-height.html
