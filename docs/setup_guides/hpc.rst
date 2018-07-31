@@ -122,7 +122,7 @@ in the Jupyter documentation.
 From here, we have two options. Option 1 will start a Jupyter Notebook server
 and manage dask using the `dask-jobqueue`_ package. Option 2 will start a dask
 cluster using `dask-mpi` and will run a Jupyter server as part of the dask cluster.
-We generally recommend starting with Option 1, espcially if you will be working
+We generally recommend starting with Option 1, especially if you will be working
 interactively, unless you have a reason for managing the job submission scripts
 on your own. Users that will be using dask in batch-style workflows may prefer
 Option 2.
@@ -163,17 +163,17 @@ later.
 
 ::
 
-    (pangeo) $ echo "ssh -N -L 8877:`hostname`:8877 -L 8878:`hostname`:8878 $USER@cheyenne.ucar.edu"
-    ssh -N -L 8877:r8i4n0:8877 -L 8878:r8i4n0:8878 username@cheyenne.ucar.edu
+    (pangeo) $ echo "ssh -N -L 8888:`hostname`:8888 -L 8787:`hostname`:8787 $USER@cheyenne.ucar.edu"
+    ssh -N -L 8888:r8i4n0:8888 -L 8787:r8i4n0:8787 username@cheyenne.ucar.edu
 
 Now we can launch the notebook server:
 
 ::
 
-    (pangeo) $ jupyter lab --no-browser --ip=`hostname` --port=8877
+    (pangeo) $ jupyter lab --no-browser --ip=`hostname` --port=8888
     ...
     [I 13:36:52.321 LabApp] The Jupyter Notebook is running at:
-    [I 13:36:52.321 LabApp] http://r8i4n0:8877/
+    [I 13:36:52.321 LabApp] http://r8i4n0:8888/
     [I 13:36:52.321 LabApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
 
 Now, connect to the server using an ssh tunnel from your local machine
@@ -181,14 +181,14 @@ Now, connect to the server using an ssh tunnel from your local machine
 
 ::
 
-    $ ssh -N -L 8877:r8i4n0:8877 -L 8878:r8i4n0:8787 username@cheyenne.ucar.edu
+    $ ssh -N -L 8888:r8i4n0:8888 -L 8787:r8i4n0:8787 username@cheyenne.ucar.edu
 
 You'll want to change the details in the command above but the basic idea is
-that we're passing the ports 8877 and 8878 from the compute node `r8i4n0` to our
-local system. Now open http://localhost:8877 on your local machine, you should
+that we're passing the ports 8888 and 8787 from the compute node `r8i4n0` to our
+local system. Now open http://localhost:8888 on your local machine, you should
 find a jupyter server running!
 
-*Note that we're also passing the 8878 port through so we can access the dask
+*Note that we're also passing the 8787 port through so we can access the dask
 dashboard later.*
 
 
@@ -246,10 +246,10 @@ cluster. MPI is **NOT** used for communication by dask.
    .. code:: bash
 
        Run the following command from your local machine:
-       ssh -N -L 8877:r7i3n13:8877 -L 8878:r7i3n13:8787 username@cheyenne.ucar.edu
+       ssh -N -L 8888:r7i3n13:8888 -L 8787:r7i3n13:8787 username@cheyenne.ucar.edu
        Then open the following URLs:
-           Jupyter lab: http://localhost:8877
-           Dask dashboard: http://localhost:8878
+           Jupyter lab: http://localhost:8888
+           Dask dashboard: http://localhost:8787
 
    It may be ncessessary to modify the included scripts to use different PBS
    project number, conda environment, or notebook directory.
@@ -350,7 +350,7 @@ From your same session on the login node, run the following code:
 
     client.run_on_scheduler(start_jlab)
 
-    print("ssh -N -L 8787:%s:8787 -L 8888:%s:8888 cheyenne.ucar.edu" % (host, host))
+    print("ssh -N -L 8888:%s:8888  -L 8787:%s:8787 cheyenne.ucar.edu" % (host, host))
 
 This should print out a statement like the following:
 
