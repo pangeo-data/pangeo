@@ -600,3 +600,17 @@
     - coastal ocean modelling
     - image analysis
     - particle imaging velocimetry
+
+- first_name: Guillaume
+  last_name: Eynard-Bontemps
+  institution: CNES, French space agency
+  email: guillaume.eynard-bontemps@cnes.fr
+  github: guillaumeeb
+  tags:
+    - distributed computing
+    - data engineering and analysis
+    - HPC
+    - cloud computing
+    - infrastructure
+    - IT architecture
+
