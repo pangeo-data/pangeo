@@ -117,6 +117,10 @@ securing Jupyter, check out
 `Securing a notebook server <http://jupyter-notebook.readthedocs.io/en/stable/public_server.html#securing-a-notebook-server>`__
 in the Jupyter documentation.
 
+::
+
+    chmod 400 ~/.jupyter/jupyter_notebook_config.py
+
 ------------
 
 From here, we have two options. Option 1 will start a Jupyter Notebook server

@@ -287,6 +287,9 @@ is readable only by you. For more information on and other methods for
 securing Jupyter, check out
 <a class="reference external" href="http://jupyter-notebook.readthedocs.io/en/stable/public_server.html#securing-a-notebook-server">Securing a notebook server</a>
 in the Jupyter documentation.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">chmod</span> <span class="mi">400</span> <span class="o">~/.</span><span class="n">jupyter</span><span class="o">/</span><span class="n">jupyter_notebook_config</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
 <hr class="docutils" />
 <p>From here, we have two options. Option 1 will start a Jupyter Notebook server
 and manage dask using the <a class="reference external" href="http://dask-jobqueue.readthedocs.io">dask-jobqueue</a> package. Option 2 will start a dask
