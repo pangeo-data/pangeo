@@ -121,3 +121,11 @@
   dask: dask-jobqueue
   jupyter: Single user notebook servers
   kind: hpc
+
+- name: Pegasus Supercomputer
+  description: University of Miami Supercomputer
+  link: http://ccs.miami.edu/pegasus
+  platform: HPC
+  dask: dask-jobqueue
+  jupyter: Single user notebook servers
+  kind: hpc

@@ -601,6 +601,17 @@
     - image analysis
     - particle imaging velocimetry
 
+- first_name: Ray
+  last_name: Bell
+  institution: Univesrsity of Miami
+  email: rbell@rsmas.miami.edu
+  github: raybellwaves
+  twitter: RayBell_UM
+  orcid: 0000-0003-2623-0587
+  tags:
+    - ocean wave modelling
+    - subseasonal forecasting
+
 - first_name: Guillaume
   last_name: Eynard-Bontemps
   institution: CNES, French space agency
@@ -613,4 +624,3 @@
     - cloud computing
     - infrastructure
     - IT architecture
-
