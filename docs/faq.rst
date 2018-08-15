@@ -5,7 +5,7 @@ Frequently Asked Questions
 
 #. *What is Pangeo?*
 
-   Pangeo is first and foremmost a :ref:`community of people <collaborators>`
+   Pangeo is first and foremost a :ref:`community of people <collaborators>`
    working collaboratively to develop software and infrastructure to enable
    Big Data geoscience research.
 

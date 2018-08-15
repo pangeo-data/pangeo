@@ -126,7 +126,7 @@
 
 - first_name: Ryan
   last_name: May
-  institution: University Corporation for Atmospheric Research/Unidat
+  institution: University Corporation for Atmospheric Research/Unidata
   website: http://www.unidata.ucar.edu
   email: rmay@ucar.edu
   github: dopplershift
@@ -565,3 +565,62 @@
     - marine geophysics
     - image analysis
     - seafloor instrumentation
+
+- first_name: Robert
+  last_name: Hetland
+  institution: Texas A&M University
+  website: http://pong.tamu.edu
+  email: hetland@tamu.edu
+  github: hetland
+  twitter: hetland
+  orcid: 0000-0001-9531-2119
+  tags:
+    - physical oceanography
+    - coastal ocean modeling
+
+- first_name: Leif
+  last_name: Denby
+  institution: ICAS, University of Leeds
+  email: leif@denby.eu
+  github: leifdenby
+  tags:
+    - numerical modelling
+    - atmospheric dynamics
+    - cloud computing
+
+- first_name: Paul
+  last_name: Branson
+  institution: CSIRO/University of Western Australia
+  email: paul.branson@csiro.au
+  github: pbranson
+  twitter: pablobranson
+  orcid: 0000-0002-3825-9873
+  tags:
+    - physical oceanography
+    - coastal ocean modelling
+    - image analysis
+    - particle imaging velocimetry
+
+- first_name: Ray
+  last_name: Bell
+  institution: Univesrsity of Miami
+  email: rbell@rsmas.miami.edu
+  github: raybellwaves
+  twitter: RayBell_UM
+  orcid: 0000-0003-2623-0587
+  tags:
+    - ocean wave modelling
+    - subseasonal forecasting
+
+- first_name: Guillaume
+  last_name: Eynard-Bontemps
+  institution: CNES, French space agency
+  email: guillaume.eynard-bontemps@cnes.fr
+  github: guillaumeeb
+  tags:
+    - distributed computing
+    - data engineering and analysis
+    - HPC
+    - cloud computing
+    - infrastructure
+    - IT architecture
