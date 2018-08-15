@@ -4,13 +4,15 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>CESM Large Ensemble Tracer Budget &#8212; Pangeo  documentation</title>
-    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pangeo-style.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/example_gallery_styles.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pangeo-style.css" type="text/css" />
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/example_gallery_styles_patched.css" type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../',
+        URL_ROOT:    '../../',
         VERSION:     '',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
@@ -18,19 +20,19 @@
         SOURCELINK_SUFFIX: '.txt'
       };
     </script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
-    <link rel="author" title="About these documents" href="../about.html" />
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Deployments" href="../deployments.html" />
-    <link rel="prev" title="Sea Surface Altimetry Data Analysis" href="sea-surface-height.html" />
+    <script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="author" title="About these documents" href="../../about.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Meteorology" href="../meteorology/index.html" />
+    <link rel="prev" title="Climate modeling" href="index.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -48,7 +50,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../index.html"><span><img src="../_static/small_e_reversed_24px.png"></span>
+        <a class="navbar-brand" href="../../index.html"><span><img src="../../_static/small_e_reversed_24px.png"></span>
           Pangeo</a>
       </div>
 
@@ -63,70 +65,70 @@
      id="dLabelGlobalToc"
      data-toggle="dropdown"
      data-target="#"
-     href="../index.html">Site <b class="caret"></b></a>
+     href="../../index.html">Site <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
       role="menu"
       aria-labelledby="dLabelGlobalToc"><ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../about.html">About Pangeo</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../about.html#motivation">Motivation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../about.html#mission-statement">Mission Statement</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../about.html#goals">Goals</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../about.html#get-involved">Get Involved</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../about.html">About Pangeo</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../about.html#motivation">Motivation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about.html#mission-statement">Mission Statement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about.html#goals">Goals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about.html#get-involved">Get Involved</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../faq.html">Frequently Asked Questions</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../quickstart.html">Guide for Scientists</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../quickstart.html#learn-about-pangeo-software">Learn About Pangeo Software</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../quickstart.html#explore-the-use-cases">Explore the Use Cases</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../quickstart.html#try-out-a-pangeo-deployment">Try Out a Pangeo Deployment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../quickstart.html#give-feedback">Give Feedback</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../quickstart.html#contribute-a-use-case">Contribute a Use Case</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../quickstart.html#contribute-data">Contribute Data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../quickstart.html#become-an-open-source-contributor">Become an Open Source Contributor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq.html">Frequently Asked Questions</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../quickstart.html">Guide for Scientists</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../quickstart.html#learn-about-pangeo-software">Learn About Pangeo Software</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../quickstart.html#explore-the-use-cases">Explore the Use Cases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../quickstart.html#try-out-a-pangeo-deployment">Try Out a Pangeo Deployment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../quickstart.html#give-feedback">Give Feedback</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../quickstart.html#contribute-a-use-case">Contribute a Use Case</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../quickstart.html#contribute-data">Contribute Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../quickstart.html#become-an-open-source-contributor">Become an Open Source Contributor</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../packages.html">Packages</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../packages.html#pangeo-core-packages">Pangeo Core Packages</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../packages.html#pangeo-affiliated-packages">Pangeo Affiliated Packages</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../packages.html#guidelines-for-new-packages">Guidelines for New Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../packages.html">Packages</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../packages.html#pangeo-core-packages">Pangeo Core Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../packages.html#pangeo-affiliated-packages">Pangeo Affiliated Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../packages.html#guidelines-for-new-packages">Guidelines for New Packages</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">Geoscience Use Cases</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="index.html#physical-oceanography">Physical Oceanography</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#meteorology">Meteorology</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html#climate-modeling">Climate Modeling</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Geoscience Use Cases</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Climate modeling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../meteorology/index.html">Meteorology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physical-oceanography/index.html">Physical Oceanography</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../architecture.html">Technical Architecture</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../architecture.html#where-we-began">Where we began</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../architecture.html#interoperability-in-pangeo">Interoperability in Pangeo</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../architecture.html#software">Software</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../architecture.html#compute-platforms">Compute Platforms</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../architecture.html#storage-formats">Storage Formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../architecture.html">Technical Architecture</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../architecture.html#where-we-began">Where we began</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../architecture.html#interoperability-in-pangeo">Interoperability in Pangeo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../architecture.html#software">Software</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../architecture.html#compute-platforms">Compute Platforms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../architecture.html#storage-formats">Storage Formats</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../setup_guides/index.html">Deployment Setup Guides</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../setup_guides/index.html#setting-up-pangeo-on-hpc-systems">Setting up Pangeo on HPC Systems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../setup_guides/index.html#setting-up-pangeo-on-cloud-systems">Setting up Pangeo on Cloud Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../setup_guides/index.html">Deployment Setup Guides</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../setup_guides/index.html#setting-up-pangeo-on-hpc-systems">Setting up Pangeo on HPC Systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../setup_guides/index.html#setting-up-pangeo-on-cloud-systems">Setting up Pangeo on Cloud Systems</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../deployments.html">Deployments</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../deployments.html#cloud-computing-deployments">Cloud Computing Deployments</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../deployments.html#high-performance-computing-deployments">High Performance Computing Deployments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../deployments.html">Deployments</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../deployments.html#cloud-computing-deployments">Cloud Computing Deployments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../deployments.html#high-performance-computing-deployments">High Performance Computing Deployments</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../data.html">Pangeo and Data</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../data.html#data-on-hpc">Data on HPC</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../data.html#data-in-the-cloud">Data in the Cloud</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../data.html">Pangeo and Data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../data.html#data-on-hpc">Data on HPC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data.html#data-in-the-cloud">Data in the Cloud</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../collaborators.html">Collaborators</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../collaborators.html#funding-agencies">Funding Agencies</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../collaborators.html#institutions">Institutions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../collaborators.html#people">People</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../collaborators.html">Collaborators</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../collaborators.html#funding-agencies">Funding Agencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../collaborators.html#institutions">Institutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../collaborators.html#people">People</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../contact.html">Contact Pangeo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contact.html">Contact Pangeo</a></li>
 </ul>
 </ul>
 </li>
@@ -141,15 +143,15 @@
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
 <li><a class="reference internal" href="#">CESM Large Ensemble Tracer Budget</a><ul>
-<li><a class="reference internal" href="#Open-the-Dataset">Open the Dataset</a></li>
-<li><a class="reference internal" href="#Convert-Units">Convert Units</a></li>
-<li><a class="reference internal" href="#Calculate-Divergence">Calculate Divergence</a></li>
-<li><a class="reference internal" href="#Vertical-Divergence:-Resolved-Advection">Vertical Divergence: Resolved Advection</a></li>
-<li><a class="reference internal" href="#Vertical-Divergence:-Submesoscale-Eddies-and-Isopycnal-Diffusion">Vertical Divergence: Submesoscale Eddies and Isopycnal Diffusion</a></li>
-<li><a class="reference internal" href="#Vertical-Divergence:-Diapycnal-Diffusion">Vertical Divergence: Diapycnal Diffusion</a></li>
-<li><a class="reference internal" href="#Horizontal-Divergence:-Resolved-Advection">Horizontal Divergence: Resolved Advection</a></li>
-<li><a class="reference internal" href="#Horizontal-Divergence:-Submesoscale-Eddies-and-Isopycnal-Diffusion">Horizontal Divergence: Submesoscale Eddies and Isopycnal Diffusion</a></li>
-<li><a class="reference internal" href="#Write-to-Disk">Write to Disk</a></li>
+<li><a class="reference internal" href="#open-the-dataset">Open the Dataset</a></li>
+<li><a class="reference internal" href="#convert-units">Convert Units</a></li>
+<li><a class="reference internal" href="#calculate-divergence">Calculate Divergence</a></li>
+<li><a class="reference internal" href="#vertical-divergence-resolved-advection">Vertical Divergence: Resolved Advection</a></li>
+<li><a class="reference internal" href="#vertical-divergence-submesoscale-eddies-and-isopycnal-diffusion">Vertical Divergence: Submesoscale Eddies and Isopycnal Diffusion</a></li>
+<li><a class="reference internal" href="#vertical-divergence-diapycnal-diffusion">Vertical Divergence: Diapycnal Diffusion</a></li>
+<li><a class="reference internal" href="#horizontal-divergence-resolved-advection">Horizontal Divergence: Resolved Advection</a></li>
+<li><a class="reference internal" href="#horizontal-divergence-submesoscale-eddies-and-isopycnal-diffusion">Horizontal Divergence: Submesoscale Eddies and Isopycnal Diffusion</a></li>
+<li><a class="reference internal" href="#write-to-disk">Write to Disk</a></li>
 </ul>
 </li>
 </ul>
@@ -175,15 +177,15 @@
       <div class="col-md-3">
         <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
 <li><a class="reference internal" href="#">CESM Large Ensemble Tracer Budget</a><ul>
-<li><a class="reference internal" href="#Open-the-Dataset">Open the Dataset</a></li>
-<li><a class="reference internal" href="#Convert-Units">Convert Units</a></li>
-<li><a class="reference internal" href="#Calculate-Divergence">Calculate Divergence</a></li>
-<li><a class="reference internal" href="#Vertical-Divergence:-Resolved-Advection">Vertical Divergence: Resolved Advection</a></li>
-<li><a class="reference internal" href="#Vertical-Divergence:-Submesoscale-Eddies-and-Isopycnal-Diffusion">Vertical Divergence: Submesoscale Eddies and Isopycnal Diffusion</a></li>
-<li><a class="reference internal" href="#Vertical-Divergence:-Diapycnal-Diffusion">Vertical Divergence: Diapycnal Diffusion</a></li>
-<li><a class="reference internal" href="#Horizontal-Divergence:-Resolved-Advection">Horizontal Divergence: Resolved Advection</a></li>
-<li><a class="reference internal" href="#Horizontal-Divergence:-Submesoscale-Eddies-and-Isopycnal-Diffusion">Horizontal Divergence: Submesoscale Eddies and Isopycnal Diffusion</a></li>
-<li><a class="reference internal" href="#Write-to-Disk">Write to Disk</a></li>
+<li><a class="reference internal" href="#open-the-dataset">Open the Dataset</a></li>
+<li><a class="reference internal" href="#convert-units">Convert Units</a></li>
+<li><a class="reference internal" href="#calculate-divergence">Calculate Divergence</a></li>
+<li><a class="reference internal" href="#vertical-divergence-resolved-advection">Vertical Divergence: Resolved Advection</a></li>
+<li><a class="reference internal" href="#vertical-divergence-submesoscale-eddies-and-isopycnal-diffusion">Vertical Divergence: Submesoscale Eddies and Isopycnal Diffusion</a></li>
+<li><a class="reference internal" href="#vertical-divergence-diapycnal-diffusion">Vertical Divergence: Diapycnal Diffusion</a></li>
+<li><a class="reference internal" href="#horizontal-divergence-resolved-advection">Horizontal Divergence: Resolved Advection</a></li>
+<li><a class="reference internal" href="#horizontal-divergence-submesoscale-eddies-and-isopycnal-diffusion">Horizontal Divergence: Submesoscale Eddies and Isopycnal Diffusion</a></li>
+<li><a class="reference internal" href="#write-to-disk">Write to Disk</a></li>
 </ul>
 </li>
 </ul>
@@ -192,174 +194,9 @@
       </div>
     <div class="col-md-9 content ">
       
-  
-<style>
-/* CSS for nbsphinx extension */
-
-/* remove conflicting styling from Sphinx themes */
-div.nbinput,
-div.nbinput div.prompt,
-div.nbinput div.input_area,
-div.nbinput div[class*=highlight],
-div.nbinput div[class*=highlight] pre,
-div.nboutput,
-div.nbinput div.prompt,
-div.nbinput div.output_area,
-div.nboutput div[class*=highlight],
-div.nboutput div[class*=highlight] pre {
-    background: none;
-    border: none;
-    padding: 0 0;
-    margin: 0;
-    box-shadow: none;
-}
-
-/* avoid gaps between output lines */
-div.nboutput div[class*=highlight] pre {
-    line-height: normal;
-}
-
-/* input/output containers */
-div.nbinput,
-div.nboutput {
-    display: -webkit-flex;
-    display: flex;
-    align-items: flex-start;
-    margin: 0;
-    width: 100%;
-}
-@media (max-width: 540px) {
-    div.nbinput,
-    div.nboutput {
-        flex-direction: column;
-    }
-}
-
-/* input container */
-div.nbinput {
-    padding-top: 5px;
-}
-
-/* last container */
-div.nblast {
-    padding-bottom: 5px;
-}
-
-/* input prompt */
-div.nbinput div.prompt pre {
-    color: #303F9F;
-}
-
-/* output prompt */
-div.nboutput div.prompt pre {
-    color: #D84315;
-}
-
-/* all prompts */
-div.nbinput div.prompt,
-div.nboutput div.prompt {
-    min-width: 9ex;
-    padding-top: 0.4em;
-    padding-right: 0.4em;
-    text-align: right;
-    flex: 0;
-}
-@media (max-width: 540px) {
-    div.nbinput div.prompt,
-    div.nboutput div.prompt {
-        text-align: left;
-        padding: 0.4em;
-    }
-    div.nboutput div.prompt.empty {
-        padding: 0;
-    }
-}
-
-/* disable scrollbars on prompts */
-div.nbinput div.prompt pre,
-div.nboutput div.prompt pre {
-    overflow: hidden;
-}
-
-/* input/output area */
-div.nbinput div.input_area,
-div.nboutput div.output_area {
-    padding: 0.4em;
-    -webkit-flex: 1;
-    flex: 1;
-    overflow: auto;
-}
-@media (max-width: 540px) {
-    div.nbinput div.input_area,
-    div.nboutput div.output_area {
-        width: 100%;
-    }
-}
-
-/* input area */
-div.nbinput div.input_area {
-    border: 1px solid #cfcfcf;
-    border-radius: 2px;
-    background: #f7f7f7;
-}
-
-/* override MathJax center alignment in output cells */
-div.nboutput div[class*=MathJax] {
-    text-align: left !important;
-}
-
-/* override sphinx.ext.pngmath center alignment in output cells */
-div.nboutput div.math p {
-    text-align: left;
-}
-
-/* standard error */
-div.nboutput div.output_area.stderr {
-    background: #fdd;
-}
-
-/* ANSI colors */
-.ansi-black-fg { color: #3E424D; }
-.ansi-black-bg { background-color: #3E424D; }
-.ansi-black-intense-fg { color: #282C36; }
-.ansi-black-intense-bg { background-color: #282C36; }
-.ansi-red-fg { color: #E75C58; }
-.ansi-red-bg { background-color: #E75C58; }
-.ansi-red-intense-fg { color: #B22B31; }
-.ansi-red-intense-bg { background-color: #B22B31; }
-.ansi-green-fg { color: #00A250; }
-.ansi-green-bg { background-color: #00A250; }
-.ansi-green-intense-fg { color: #007427; }
-.ansi-green-intense-bg { background-color: #007427; }
-.ansi-yellow-fg { color: #DDB62B; }
-.ansi-yellow-bg { background-color: #DDB62B; }
-.ansi-yellow-intense-fg { color: #B27D12; }
-.ansi-yellow-intense-bg { background-color: #B27D12; }
-.ansi-blue-fg { color: #208FFB; }
-.ansi-blue-bg { background-color: #208FFB; }
-.ansi-blue-intense-fg { color: #0065CA; }
-.ansi-blue-intense-bg { background-color: #0065CA; }
-.ansi-magenta-fg { color: #D160C4; }
-.ansi-magenta-bg { background-color: #D160C4; }
-.ansi-magenta-intense-fg { color: #A03196; }
-.ansi-magenta-intense-bg { background-color: #A03196; }
-.ansi-cyan-fg { color: #60C6C8; }
-.ansi-cyan-bg { background-color: #60C6C8; }
-.ansi-cyan-intense-fg { color: #258F8F; }
-.ansi-cyan-intense-bg { background-color: #258F8F; }
-.ansi-white-fg { color: #C5C1B4; }
-.ansi-white-bg { background-color: #C5C1B4; }
-.ansi-white-intense-fg { color: #A1A6B2; }
-.ansi-white-intense-bg { background-color: #A1A6B2; }
-
-.ansi-default-inverse-fg { color: #FFFFFF; }
-.ansi-default-inverse-bg { background-color: #000000; }
-
-.ansi-bold { font-weight: bold; }
-.ansi-underline { text-decoration: underline; }
-</style>
-<div class="section" id="CESM-Large-Ensemble-Tracer-Budget">
-<h1>CESM Large Ensemble Tracer Budget<a class="headerlink" href="#CESM-Large-Ensemble-Tracer-Budget" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="cesm-large-ensemble-tracer-budget">
+<span id="gallery-use-cases-climate-modeling-cesm-large-ensemble-tracer-budget-example-ipynb"></span><h1>CESM Large Ensemble Tracer Budget<a class="headerlink" href="#cesm-large-ensemble-tracer-budget" title="Permalink to this headline">¶</a></h1>
+<p>Example of calculating the oceanic DIC budget</p>
 <p>Here we calculate the DIC budget from the ocean component model (POP2)
 of the CESM Large Ensemble (CESM-LENS). This code can be used to create
 budgets, as is, for any tracer. Also, by replacing the load function in
@@ -374,36 +211,21 @@ To represent the full envelope of natural variability, the fully coupled
 version of the CESM has been run 40 times representing 40 different
 realizations of the period 1920-2100. Dask and xarray are the perfect
 tools to handle the large data volume</p>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none"><div class="highlight"><pre>
-<span></span>In [1]:
+<div class="highlight-ipython3"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">logging</span>
+<span class="n">logging</span><span class="o">.</span><span class="n">captureWarnings</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s1">&#39;py.warnings&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">ERROR</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3"><div class="highlight"><pre>
-<span></span><span class="o">!</span>qselect -N dask-worker <span class="p">|</span> xargs qdel
+<div class="highlight-ipython3"><div class="highlight"><pre><span></span><span class="o">!</span>qselect -N dask-worker <span class="p">|</span> xargs qdel
 </pre></div>
 </div>
-</div>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none"><div class="highlight"><pre>
-<span></span>In [2]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3"><div class="highlight"><pre>
-<span></span><span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
+<div class="highlight-ipython3"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">poploader</span> <span class="k">as</span> <span class="nn">pl</span> <span class="c1"># faster xarray dataset creation for POP2 (https://gist.github.com/sridge/fe5f180c7e1332212fcce0161c461716)</span>
 <span class="kn">from</span> <span class="nn">tqdm</span> <span class="k">import</span> <span class="n">tqdm</span> <span class="c1"># progressbar</span>
 </pre></div>
 </div>
-</div>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none"><div class="highlight"><pre>
-<span></span>In [3]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3"><div class="highlight"><pre>
-<span></span><span class="kn">from</span> <span class="nn">dask_jobqueue</span> <span class="k">import</span> <span class="n">PBSCluster</span>
+<div class="highlight-ipython3"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">dask_jobqueue</span> <span class="k">import</span> <span class="n">PBSCluster</span>
 
 <span class="n">cluster</span> <span class="o">=</span> <span class="n">PBSCluster</span><span class="p">(</span><span class="n">local_directory</span> <span class="o">=</span> <span class="s1">&#39;/glade/scratch/sridge/spill/&#39;</span><span class="p">,</span>
                      <span class="n">processes</span><span class="o">=</span><span class="mi">18</span><span class="p">,</span>
@@ -418,23 +240,9 @@ tools to handle the large data volume</p>
 <span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="n">cluster</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none"><div class="highlight"><pre>
-<span></span>In [4]:
+<div class="highlight-ipython3"><div class="highlight"><pre><span></span><span class="n">client</span>
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3"><div class="highlight"><pre>
-<span></span><span class="n">client</span>
-</pre></div>
-</div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt highlight-none"><div class="highlight"><pre>
-<span></span>Out[4]:
-</pre></div>
-</div>
-<div class="output_area docutils container">
 <table style="border: 2px solid white;">
 <tr>
 <td style="vertical-align: top; border: 0px solid white">
@@ -453,15 +261,7 @@ tools to handle the large data volume</p>
 </ul>
 </td>
 </tr>
-</table></div>
-</div>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none"><div class="highlight"><pre>
-<span></span>In [5]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3"><div class="highlight"><pre>
-<span></span><span class="n">tracer</span> <span class="o">=</span> <span class="s1">&#39;DIC_ALT_CO2&#39;</span>
+</table><div class="highlight-ipython3"><div class="highlight"><pre><span></span><span class="n">tracer</span> <span class="o">=</span> <span class="s1">&#39;DIC_ALT_CO2&#39;</span>
 
 <span class="n">ddir</span> <span class="o">=</span> <span class="s1">&#39;/glade/scratch/sridge/*/&#39;</span>
 <span class="n">outdir</span> <span class="o">=</span> <span class="s1">&#39;/glade/scratch/sridge/&#39;</span>
@@ -480,39 +280,18 @@ tools to handle the large data volume</p>
     <span class="n">transport_varnames</span> <span class="o">+=</span> <span class="p">[</span><span class="n">term</span> <span class="o">+</span> <span class="n">tracer</span><span class="p">]</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="Open-the-Dataset">
-<h2>Open the Dataset<a class="headerlink" href="#Open-the-Dataset" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="open-the-dataset">
+<h2>Open the Dataset<a class="headerlink" href="#open-the-dataset" title="Permalink to this headline">¶</a></h2>
 <p>If you’re not using the ensemble, you may also want to try:
 <code class="docutils literal"><span class="pre">pl.open_pop_single_var_file</span></code> <code class="docutils literal"><span class="pre">pl.open_pop_multi_var_file</span></code></p>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none"><div class="highlight"><pre>
-<span></span>In [ ]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3"><div class="highlight"><pre>
-<span></span><span class="c1"># function that strips uneeded coordinate variables and groups  all model output into a single dataset</span>
+<div class="highlight-ipython3"><div class="highlight"><pre><span></span><span class="c1"># function that strips uneeded coordinate variables and groups  all model output into a single dataset</span>
 <span class="n">ds</span> <span class="o">=</span> <span class="n">pl</span><span class="o">.</span><span class="n">open_pop_ensemble</span><span class="p">(</span><span class="n">ddir</span><span class="p">,</span> <span class="n">transport_varnames</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">8</span><span class="p">],</span> <span class="n">memberlist</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none"><div class="highlight"><pre>
-<span></span>In [7]:
+<div class="highlight-ipython3"><div class="highlight"><pre><span></span><span class="n">ds</span>
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3"><div class="highlight"><pre>
-<span></span><span class="n">ds</span>
-</pre></div>
-</div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt highlight-none"><div class="highlight"><pre>
-<span></span>Out[7]:
-</pre></div>
-</div>
-<div class="output_area highlight-none"><div class="highlight"><pre>
-<span></span>&lt;xarray.Dataset&gt;
+<div class="highlight-default"><div class="highlight"><pre><span></span>&lt;xarray.Dataset&gt;
 Dimensions:                (member: 4, nlat: 384, nlon: 320, time: 181, z_t: 60, z_t_150m: 15, z_w: 60, z_w_bot: 60, z_w_top: 60)
 Coordinates:
   * z_t                    (z_t) float32 500.0 1500.0 2500.0 3500.0 4500.0 ...
@@ -599,53 +378,25 @@ Attributes:
     tavg_sum:      31449600.0
 </pre></div>
 </div>
-</div>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none"><div class="highlight"><pre>
-<span></span>In [8]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3"><div class="highlight"><pre>
-<span></span><span class="c1"># # J_DIC was averaged with nco. Need to open separate ds and then correct time</span>
+<div class="highlight-ipython3"><div class="highlight"><pre><span></span><span class="c1"># # J_DIC was averaged with nco. Need to open separate ds and then correct time</span>
 <span class="c1"># ds_J = pl.open_pop_ensemble(ddir, [transport_varnames[8]], memberlist)</span>
 </pre></div>
 </div>
-</div>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none"><div class="highlight"><pre>
-<span></span>In [9]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3"><div class="highlight"><pre>
-<span></span><span class="c1"># ds_J[&#39;time&#39;] = ds[&#39;time&#39;]</span>
+<div class="highlight-ipython3"><div class="highlight"><pre><span></span><span class="c1"># ds_J[&#39;time&#39;] = ds[&#39;time&#39;]</span>
 
 <span class="c1"># ds = xr.merge([ds,ds_J])</span>
 <span class="c1"># ds.chunk({&#39;time&#39;: 1})</span>
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="Convert-Units">
-<h2>Convert Units<a class="headerlink" href="#Convert-Units" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="convert-units">
+<h2>Convert Units<a class="headerlink" href="#convert-units" title="Permalink to this headline">¶</a></h2>
 <p>All terms are converted to nmol/s</p>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none"><div class="highlight"><pre>
-<span></span>In [10]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3"><div class="highlight"><pre>
-<span></span><span class="n">tarea</span> <span class="o">=</span> <span class="n">ds</span><span class="p">[</span><span class="s1">&#39;TAREA&#39;</span><span class="p">]</span>
+<div class="highlight-ipython3"><div class="highlight"><pre><span></span><span class="n">tarea</span> <span class="o">=</span> <span class="n">ds</span><span class="p">[</span><span class="s1">&#39;TAREA&#39;</span><span class="p">]</span>
 <span class="n">vol</span> <span class="o">=</span> <span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">dz</span><span class="p">)</span><span class="o">*</span><span class="n">tarea</span>
 </pre></div>
 </div>
-</div>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none"><div class="highlight"><pre>
-<span></span>In [11]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3"><div class="highlight"><pre>
-<span></span><span class="c1"># adjust coords to z_t for later computation of divergence</span>
+<div class="highlight-ipython3"><div class="highlight"><pre><span></span><span class="c1"># adjust coords to z_t for later computation of divergence</span>
 <span class="n">hdifb_t</span> <span class="o">=</span> <span class="n">ds</span><span class="p">[</span><span class="s1">&#39;HDIFB_&#39;</span> <span class="o">+</span> <span class="n">tracer</span><span class="p">]</span>
 <span class="n">hdifb_t</span> <span class="o">=</span> <span class="n">hdifb_t</span><span class="o">.</span><span class="n">rename</span><span class="p">({</span><span class="s1">&#39;z_w_bot&#39;</span><span class="p">:</span><span class="s1">&#39;z_t&#39;</span><span class="p">})</span>
 <span class="n">hdifb_t</span><span class="p">[</span><span class="s1">&#39;z_t&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ds</span><span class="p">[</span><span class="s1">&#39;z_t&#39;</span><span class="p">]</span>
@@ -655,14 +406,7 @@ Attributes:
 <span class="n">wt_t</span><span class="p">[</span><span class="s1">&#39;z_t&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ds</span><span class="p">[</span><span class="s1">&#39;z_t&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
-</div>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none"><div class="highlight"><pre>
-<span></span>In [12]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3"><div class="highlight"><pre>
-<span></span><span class="c1"># terms in units of mmol m^{-3} s^{-1}</span>
+<div class="highlight-ipython3"><div class="highlight"><pre><span></span><span class="c1"># terms in units of mmol m^{-3} s^{-1}</span>
 <span class="n">transport_terms</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;UE_&#39;</span><span class="p">,</span><span class="s1">&#39;VN_&#39;</span><span class="p">,</span><span class="s1">&#39;HDIFE_&#39;</span><span class="p">,</span><span class="s1">&#39;HDIFN_&#39;</span><span class="p">,</span><span class="s1">&#39;KPP_SRC_&#39;</span><span class="p">]</span><span class="c1">#,&#39;J_&#39;]</span>
 
 <span class="k">for</span> <span class="n">term</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="p">(</span><span class="n">transport_terms</span><span class="p">):</span>
@@ -676,31 +420,14 @@ Attributes:
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;HDIFB_&#39;</span> <span class="o">+</span> <span class="n">tracer</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="nboutput docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="stderr output_area docutils container">
-<div class="highlight"><pre>
-100%|██████████| 5/5 [00:00&lt;00:00,  5.48it/s]
-</pre></div></div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-WT_DIC_ALT_CO2
-HDIFB_DIC_ALT_CO2
-</pre></div></div>
-</div>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none"><div class="highlight"><pre>
-<span></span>In [13]:
+<div class="highlight-default"><div class="highlight"><pre><span></span>100%|██████████| 5/5 [00:00&lt;00:00,  5.48it/s]
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3"><div class="highlight"><pre>
-<span></span><span class="c1"># DIA_IMPVF is in units of mmol m^{-2} cm s^{-1}</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">WT_DIC_ALT_CO2</span>
+<span class="n">HDIFB_DIC_ALT_CO2</span>
+</pre></div>
+</div>
+<div class="highlight-ipython3"><div class="highlight"><pre><span></span><span class="c1"># DIA_IMPVF is in units of mmol m^{-2} cm s^{-1}</span>
 <span class="c1"># convert to mmol s^{-1}</span>
 <span class="n">ds</span><span class="p">[</span><span class="s1">&#39;DIA_IMPVF_&#39;</span> <span class="o">+</span> <span class="n">tracer</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">ds</span><span class="p">[</span><span class="s1">&#39;DIA_IMPVF_&#39;</span> <span class="o">+</span> <span class="n">tracer</span><span class="p">])</span><span class="o">*</span><span class="n">tarea</span>
 <span class="n">ds</span><span class="p">[</span><span class="s1">&#39;DIA_IMPVF_&#39;</span> <span class="o">+</span> <span class="n">tracer</span><span class="p">]</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;units&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;nmol/s&#39;</span>
@@ -711,14 +438,7 @@ HDIFB_DIC_ALT_CO2
 <span class="n">diadiff_t</span><span class="p">[</span><span class="s1">&#39;z_t&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ds</span><span class="p">[</span><span class="s1">&#39;z_t&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
-</div>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none"><div class="highlight"><pre>
-<span></span>In [14]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3"><div class="highlight"><pre>
-<span></span><span class="n">ue_t</span> <span class="o">=</span> <span class="n">ds</span><span class="p">[</span><span class="s1">&#39;UE_&#39;</span> <span class="o">+</span> <span class="n">tracer</span><span class="p">]</span>
+<div class="highlight-ipython3"><div class="highlight"><pre><span></span><span class="n">ue_t</span> <span class="o">=</span> <span class="n">ds</span><span class="p">[</span><span class="s1">&#39;UE_&#39;</span> <span class="o">+</span> <span class="n">tracer</span><span class="p">]</span>
 <span class="n">vn_t</span> <span class="o">=</span> <span class="n">ds</span><span class="p">[</span><span class="s1">&#39;VN_&#39;</span> <span class="o">+</span> <span class="n">tracer</span><span class="p">]</span>
 <span class="n">wt_t</span> <span class="o">=</span> <span class="n">wt_t</span>
 <span class="n">hdife_t</span> <span class="o">=</span> <span class="n">ds</span><span class="p">[</span><span class="s1">&#39;HDIFE_&#39;</span> <span class="o">+</span> <span class="n">tracer</span><span class="p">]</span>
@@ -730,68 +450,40 @@ HDIFB_DIC_ALT_CO2
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="Calculate-Divergence">
-<h2>Calculate Divergence<a class="headerlink" href="#Calculate-Divergence" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="calculate-divergence">
+<h2>Calculate Divergence<a class="headerlink" href="#calculate-divergence" title="Permalink to this headline">¶</a></h2>
 <p>Methods are described in the <strong>`POP
 Manual &lt;http://www.cesm.ucar.edu/models/cesm2.0/ocean/doc/sci/POPRefManual.pdf&gt;`__</strong></p>
 </div>
-<div class="section" id="Vertical-Divergence:-Resolved-Advection">
-<h2>Vertical Divergence: Resolved Advection<a class="headerlink" href="#Vertical-Divergence:-Resolved-Advection" title="Permalink to this headline">¶</a></h2>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none"><div class="highlight"><pre>
-<span></span>In [15]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3"><div class="highlight"><pre>
-<span></span><span class="n">wt_t_kp1</span>  <span class="o">=</span> <span class="n">wt_t</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="n">z_t</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mf">0.</span><span class="p">)</span>
+<div class="section" id="vertical-divergence-resolved-advection">
+<h2>Vertical Divergence: Resolved Advection<a class="headerlink" href="#vertical-divergence-resolved-advection" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-ipython3"><div class="highlight"><pre><span></span><span class="n">wt_t_kp1</span>  <span class="o">=</span> <span class="n">wt_t</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="n">z_t</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mf">0.</span><span class="p">)</span>
 <span class="n">wdiv_t</span> <span class="o">=</span> <span class="n">wt_t_kp1</span> <span class="o">-</span> <span class="n">wt_t</span>
 <span class="n">wdiv_t</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;units&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;nmol/s&#39;</span>
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="Vertical-Divergence:-Submesoscale-Eddies-and-Isopycnal-Diffusion">
-<h2>Vertical Divergence: Submesoscale Eddies and Isopycnal Diffusion<a class="headerlink" href="#Vertical-Divergence:-Submesoscale-Eddies-and-Isopycnal-Diffusion" title="Permalink to this headline">¶</a></h2>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none"><div class="highlight"><pre>
-<span></span>In [16]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3"><div class="highlight"><pre>
-<span></span><span class="n">hdifb_t_km1</span> <span class="o">=</span> <span class="n">hdifb_t</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="n">z_t</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mf">0.</span><span class="p">)</span>
+<div class="section" id="vertical-divergence-submesoscale-eddies-and-isopycnal-diffusion">
+<h2>Vertical Divergence: Submesoscale Eddies and Isopycnal Diffusion<a class="headerlink" href="#vertical-divergence-submesoscale-eddies-and-isopycnal-diffusion" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-ipython3"><div class="highlight"><pre><span></span><span class="n">hdifb_t_km1</span> <span class="o">=</span> <span class="n">hdifb_t</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="n">z_t</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mf">0.</span><span class="p">)</span>
 <span class="n">wdiv_hdifb_t</span> <span class="o">=</span> <span class="n">hdifb_t_km1</span> <span class="o">-</span> <span class="n">hdifb_t</span>
 <span class="n">wdiv_hdifb_t</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;units&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;nmol/s&#39;</span>
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="Vertical-Divergence:-Diapycnal-Diffusion">
-<h2>Vertical Divergence: Diapycnal Diffusion<a class="headerlink" href="#Vertical-Divergence:-Diapycnal-Diffusion" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="vertical-divergence-diapycnal-diffusion">
+<h2>Vertical Divergence: Diapycnal Diffusion<a class="headerlink" href="#vertical-divergence-diapycnal-diffusion" title="Permalink to this headline">¶</a></h2>
 <p>(KPP parameterization, <strong>`Large et al.
 1994 &lt;http://www.cesm.ucar.edu/models/cesm2.0/ocean/doc/sci/POPRefManual.pdf&gt;`__</strong>)</p>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none"><div class="highlight"><pre>
-<span></span>In [17]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3"><div class="highlight"><pre>
-<span></span><span class="n">diadiff_t_km1</span> <span class="o">=</span> <span class="n">diadiff_t</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="n">z_t</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mf">0.</span><span class="p">)</span>
+<div class="highlight-ipython3"><div class="highlight"><pre><span></span><span class="n">diadiff_t_km1</span> <span class="o">=</span> <span class="n">diadiff_t</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="n">z_t</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mf">0.</span><span class="p">)</span>
 <span class="n">wdiv_diadiff_t</span> <span class="o">=</span> <span class="n">diadiff_t_km1</span> <span class="o">-</span> <span class="n">diadiff_t</span>
 <span class="n">wdiv_diadiff_t</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;units&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;nmol/s&#39;</span>
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="Horizontal-Divergence:-Resolved-Advection">
-<h2>Horizontal Divergence: Resolved Advection<a class="headerlink" href="#Horizontal-Divergence:-Resolved-Advection" title="Permalink to this headline">¶</a></h2>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none"><div class="highlight"><pre>
-<span></span>In [18]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3"><div class="highlight"><pre>
-<span></span><span class="n">ue_t_im1</span> <span class="o">=</span> <span class="n">ue_t</span><span class="o">.</span><span class="n">roll</span><span class="p">(</span><span class="n">nlon</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<div class="section" id="horizontal-divergence-resolved-advection">
+<h2>Horizontal Divergence: Resolved Advection<a class="headerlink" href="#horizontal-divergence-resolved-advection" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-ipython3"><div class="highlight"><pre><span></span><span class="n">ue_t_im1</span> <span class="o">=</span> <span class="n">ue_t</span><span class="o">.</span><span class="n">roll</span><span class="p">(</span><span class="n">nlon</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">udiv_t</span> <span class="o">=</span> <span class="n">ue_t_im1</span> <span class="o">-</span> <span class="n">ue_t</span>
 
 <span class="n">vn_t_jm1</span> <span class="o">=</span> <span class="n">vn_t</span><span class="o">.</span><span class="n">roll</span><span class="p">(</span><span class="n">nlat</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
@@ -804,16 +496,9 @@ Manual &lt;http://www.cesm.ucar.edu/models/cesm2.0/ocean/doc/sci/POPRefManual.pd
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="Horizontal-Divergence:-Submesoscale-Eddies-and-Isopycnal-Diffusion">
-<h2>Horizontal Divergence: Submesoscale Eddies and Isopycnal Diffusion<a class="headerlink" href="#Horizontal-Divergence:-Submesoscale-Eddies-and-Isopycnal-Diffusion" title="Permalink to this headline">¶</a></h2>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none"><div class="highlight"><pre>
-<span></span>In [19]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3"><div class="highlight"><pre>
-<span></span><span class="n">hdife_t_im1</span> <span class="o">=</span> <span class="n">hdife_t</span><span class="o">.</span><span class="n">roll</span><span class="p">(</span><span class="n">nlon</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<div class="section" id="horizontal-divergence-submesoscale-eddies-and-isopycnal-diffusion">
+<h2>Horizontal Divergence: Submesoscale Eddies and Isopycnal Diffusion<a class="headerlink" href="#horizontal-divergence-submesoscale-eddies-and-isopycnal-diffusion" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-ipython3"><div class="highlight"><pre><span></span><span class="n">hdife_t_im1</span> <span class="o">=</span> <span class="n">hdife_t</span><span class="o">.</span><span class="n">roll</span><span class="p">(</span><span class="n">nlon</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">udiv_hdife_t</span> <span class="o">=</span> <span class="n">hdife_t</span> <span class="o">-</span> <span class="n">hdife_t_im1</span>
 
 <span class="n">hdifn_t_jm1</span> <span class="o">=</span> <span class="n">hdifn_t</span><span class="o">.</span><span class="n">roll</span><span class="p">(</span><span class="n">nlat</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
@@ -826,19 +511,12 @@ Manual &lt;http://www.cesm.ucar.edu/models/cesm2.0/ocean/doc/sci/POPRefManual.pd
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="Write-to-Disk">
-<h2>Write to Disk<a class="headerlink" href="#Write-to-Disk" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="write-to-disk">
+<h2>Write to Disk<a class="headerlink" href="#write-to-disk" title="Permalink to this headline">¶</a></h2>
 <p>The final product is grid cell by grid cell tracer divergence (nmol/s)
 that can be integrated vertically to the depth of your choosing for the
 column budget</p>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none"><div class="highlight"><pre>
-<span></span>In [ ]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3"><div class="highlight"><pre>
-<span></span><span class="c1"># take ensemble mean and write to disk</span>
+<div class="highlight-ipython3"><div class="highlight"><pre><span></span><span class="c1"># take ensemble mean and write to disk</span>
 
 <span class="c1"># you don&#39;t have to worry about the warnings</span>
 <span class="c1"># https://github.com/dask/distributed/issues/730</span>
@@ -851,6 +529,9 @@ column budget</p>
     <span class="n">budget_file</span><span class="o">.</span><span class="n">to_netcdf</span><span class="p">((</span><span class="n">outdir</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="si">{}{}</span><span class="s1">_</span><span class="si">{}</span><span class="s1">.1850-2100.nc&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">budget_file_str</span><span class="p">,</span><span class="n">tracer</span><span class="p">,</span><span class="n">memberlist</span><span class="p">[</span><span class="mi">0</span><span class="p">])))</span>
 </pre></div>
 </div>
+<div class="sphx-glr-download docutils container">
+<p><strong>Download python file:</strong> <a class="reference download internal" href="../../_downloads/CESM-Large-Ensemble-Tracer-Budget-Example.py" download=""><code class="xref download docutils literal"><span class="pre">CESM-Large-Ensemble-Tracer-Budget-Example.py</span></code></a></p>
+<p><strong>Download IPython notebook:</strong> <a class="reference download internal" href="../../_downloads/CESM-Large-Ensemble-Tracer-Budget-Example.ipynb" download=""><code class="xref download docutils literal"><span class="pre">CESM-Large-Ensemble-Tracer-Budget-Example.ipynb</span></code></a></p>
 </div>
 </div>
 </div>

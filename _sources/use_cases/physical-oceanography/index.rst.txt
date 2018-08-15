@@ -1,0 +1,31 @@
+.. _gallery_use_cases_physical-oceanography:
+
+Physical Oceanography
+---------------------
+
+
+
+.. toctree::
+
+    sea-surface-height
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbContainer" tooltip="Example on using the gridded sea-surface altimetry data from The Copernicus Marine Environment">
+
+.. only:: html
+
+    .. figure:: /use_cases/physical-oceanography/images/thumb/gallery_use_cases_physical-oceanography_sea-surface-height.ipynb_thumb.png
+
+        :ref:`gallery_use_cases_physical-oceanography_sea-surface-height.ipynb`
+
+.. raw:: html
+
+    </div>
+
+
+.. raw:: html
+
+    <div style='clear:both'></div>
+
