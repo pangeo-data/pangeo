@@ -143,7 +143,7 @@ Step Four: Create Cluster-Specific Configuration
 
 There are two configuration files needed to deploy the Pangeo helm chart.
 The first, ``jupyter_config.yaml``, specifies modifications to the configuration
-that are unique to each deploymment.
+that are unique to each deployment.
 
 .. code-block:: yaml
 

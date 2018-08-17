@@ -7,7 +7,7 @@ can be found in the Wired article
 `The GitHub Revolution: Why We're All in Open Source Now <https://www.wired.com/2013/03/github/>`_
 by Mikeal Rogers.
 We prefer to conduct all project-related correspondence via our GitHub
-respositories.
+repositories.
 
 For a general inquiry about the project, please open an issue on the main
 `Pangeo GitHub issue tracker`_.

@@ -232,7 +232,7 @@ cluster. MPI is **NOT** used for communication by dask.
 
 .. note::
 
-   The following scripts and proceedures have been packed into a convenient wrapper
+   The following scripts and procedures have been packed into a convenient wrapper
    script ``launch-dask.sh``. It and its supporting utilities can be found in the
    `pangeo Github reposository <https://github.com/pangeo-data/pangeo/tree/master/utilities/cheyenne>`__.
 
@@ -255,7 +255,7 @@ cluster. MPI is **NOT** used for communication by dask.
            Jupyter lab: http://localhost:8888
            Dask dashboard: http://localhost:8787
 
-   It may be ncessessary to modify the included scripts to use different PBS
+   It may be necessary to modify the included scripts to use different PBS
    project number, conda environment, or notebook directory.
 
 *The remainder of this section is left here for completeness but for most users,
