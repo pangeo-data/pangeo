@@ -10,7 +10,7 @@ Frequently Asked Questions
    Big Data geoscience research.
 
    Some of the products produced by this commmunity include interconnected
-   :ref:`software pacakge <packages>` and :ref:`deployments <deployments>` of
+   :ref:`software package <packages>` and :ref:`deployments <deployments>` of
    this software in cloud and high-performance-computing environments. Such
    a deployment is sometimes referred to as a *Pangeo Environment*.
 
@@ -65,7 +65,7 @@ Frequently Asked Questions
    Many excellent Big Data platforms and tools already exist. But the
    collaborators in the Pangeo project have concluded that none of these has
    sufficient flexibility to handle the diversity and complexity of real-world
-   :ref:`use-cases`. Instead, we have converged on the the :ref:`packages`
+   :ref:`use-cases`. Instead, we have converged on the :ref:`packages`
    Xarray and Dask to provide the foundational data models and execution engine
    for our science. We know these tools work for us because many scientists are
    already using them in day-to-day research. Pangeo aims to make them better
@@ -81,7 +81,7 @@ Frequently Asked Questions
 
    We would like Pangeo to evolve into a multi-language platform, including
    support for Julia, R, and other programming languages used for data science.
-   Because Pangeo uses Jupyter to provide interactive commputing, this is
+   Because Pangeo uses Jupyter to provide interactive computing, this is
    already possible today; Jupyter can be configured to run Kernels in many
    different languages (see
    `Jupyter docs on Kernels <http://jupyter.readthedocs.io/en/latest/projects/kernels.html>`_).
