@@ -11,7 +11,7 @@ to their personal computers.
 Pangeo operates on a different philosophy; instead of bringing the data to the
 computer, we bring the computer to the data.
 The Pangeo :ref:`deployments` provide high-performance computing clusters in
-close proximmity to high-performance storage.
+close proximity to high-performance storage.
 Many widely used datasets are already stored on these systems.
 
 If you are interested in analyzing a specific large dataset, you should
