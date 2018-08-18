@@ -1,0 +1,17 @@
+registry:
+  prefix: gcr.io/pangeo-181919/pangeo-binder
+  enabled: true
+hub:
+  url: http://104.154.241.74
+  extraConfig:
+    customPodHook: |
+      from kubernetes import client
+      def modify_pod_hook(spawner, pod):
+          pod.spec.containers[0].security_context = client.V1SecurityContext(
+              privileged=True,
+              capabilities=client.V1Capabilities(
+                  add=['SYS_ADMIN']
+              )
+          )
+          return pod
+      c.KubeSpawner.modify_pod_hook = modify_pod_hook
