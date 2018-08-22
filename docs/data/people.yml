@@ -624,3 +624,17 @@
     - cloud computing
     - infrastructure
     - IT architecture
+
+- first_name: Niall
+  last_name: Robinson
+  institution: Met Office Informatics Lab
+  website: http://informaticslab.co.uk/profiles/niall-robinson
+  email: niall.robinson@informaticslab.co.uk
+  github: niallrobinson
+  twitter: niallhrobinson
+  tags:
+    - atmospheric science
+    - distributed computing
+    - cloud computing
+    - HPC
+
