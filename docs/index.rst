@@ -20,6 +20,11 @@ Pangeo
 A community platform for Big Data geoscience
 ============================================
 
+Join Us!
+^^^^^^^^
+We want the Pangeo community to be as diverse as possible. If you don't see people like you
+ represented by the current :ref:`contributors <collaborators>`, we would like especially to encourage you to reach out, and we will endeavour to make you feel welcomed.
+
 Our Goals
 ^^^^^^^^^
 
