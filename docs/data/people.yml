@@ -638,3 +638,14 @@
     - cloud computing
     - HPC
 
+- first_name: Willi
+  last_name: Rath
+  institution: GEOMAR Helmholtz Centre for Ocean Research Kiel
+  website: https://www.geomar.de/en/staff/fb1/tm/wrath/
+  email: wrath@geomar.de
+  github: willirath
+  tags:
+    - physical oceanography
+    - distributed computing
+    - ocean-data management
+    - HPC
