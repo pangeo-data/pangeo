@@ -30,9 +30,9 @@ Google Cloud SDK
 
 The Google Cloud SDK is the command-line interface for Google Cloud Platform
 products and services. Download and installation instructions are at
-https://cloud.google.com/sdk/downloads
+https://cloud.google.com/sdk/downloads.
 
-Kubernetes Kubectl
+Kubernetes kubectl
 ~~~~~~~~~~~~~~~~~~
 
 Kubernetes_ is an open source system for managing containerized applications in
@@ -46,7 +46,7 @@ kubectl is to run the following command on the command line::
   $ gcloud components install kubectl
 
 More comprehensive documentation for installing Kubernetes can be found at
-https://kubernetes.io/docs/tasks/tools/install-kubectl/
+https://kubernetes.io/docs/tasks/tools/install-kubectl/.
 
 Helm Client
 ~~~~~~~~~~~
@@ -55,15 +55,15 @@ Helm_ is a package manager for Kubernetes. Helm helps you automatically download
 and deploy the Pangeo default configuration for your cluster.
 
 To install the helm command line client, follow the installation instructions at
-https://docs.helm.sh/install/
+https://docs.helm.sh/install/.
 
 To do this in one line from the command line, run::
 
   $ curl https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get | bash
 
 
-Step Two: Create a Cluster
---------------------------
+Step Two: Create a Kubernetes Cluster
+-------------------------------------
 
 First, you must create an account on the cloud provider of your choice.
 Here we are using `Google Cloud Platform`_.
@@ -80,10 +80,13 @@ Run the following from the commmand line
 
 .. code-block:: bash
 
-  gcloud config set container/new_scopes_behavior true
   gcloud auth login
 
-Now here is a bash script that will create a cluster:
+Now here is a bash script that will create a cluster corresponding to Pangeo
+need:
+- An incompressible default node pool for the Jupyterhub, web proxy, and user
+  notebook servers.
+- An auto scaling node pool for Dask workers.
 
 .. code-block:: bash
 
@@ -106,6 +109,7 @@ Now here is a bash script that will create a cluster:
   WORKER_MACHINE_TYPE='n1-standard-4'
 
   # create cluster on GCP
+  gcloud config set container/new_scopes_behavior true
   gcloud config set project $PROJECTID
   gcloud container clusters create $CLUSTER_NAME --num-nodes=$NUM_NODES --zone=$ZONE \
       --machine-type=n1-standard-2 --no-enable-legacy-authorization
@@ -118,8 +122,8 @@ Now here is a bash script that will create a cluster:
 Step Three: Configure Kubernetes
 --------------------------------
 
-This script sets up the Kubernetes
-`Role Based Access Control <https://kubernetes.io/docs/reference/access-authn-authz/rbac/>`_
+This script sets up the Kubernetes `Role Based Access Control
+<https://kubernetes.io/docs/reference/access-authn-authz/rbac/>`_
 necessary for a secure cluster deployment.
 
 .. code-block:: bash
@@ -142,8 +146,19 @@ Step Four: Create Cluster-Specific Configuration
 ------------------------------------------------
 
 There are two configuration files needed to deploy the Pangeo helm chart.
-The first, ``jupyter_config.yaml``, specifies modifications to the configuration
-that are unique to each deployment.
+The first, ``jupyter_config.yaml``, specifies modifications to the
+configuration that are unique to each deployment. 
+
+Most important thing to configure here is the  ``loadBalancerIP``. If you've
+not `reserved a static external IP 
+<https://cloud.google.com/compute/docs/ip-addresses/reserve-static-external-ip-address>`_
+then you may just want to remove or comment the corresponding lines at the end
+of the file.
+
+Other things you might want to configure, but that can be left as is:
+- EXTRA_PIP_PACKAGES: for adding some python modules to your user environment.
+- GCSFUSE_BUCKET: for mounting some google cloud storage bucket as a standard
+  file system.
 
 .. code-block:: yaml
 
@@ -217,17 +232,27 @@ that are unique to each deployment.
         loadBalancerIP: 35.224.8.169
 
 The other file is ``secret_config.yaml``, which specifies cluster specific
-encryption tokens. The jupyerhub proxy secret token is just a random hash, which you
-can generate as follows.
+encryption tokens. The jupyterhub proxy secret token is just a random hash, 
+which you can generate as follows.
 
 .. code-block:: bash
 
   $ openssl rand -hex 32
 
-Pangeo.pydata.org uses
-`GitHub OAuth Callback <https://help.github.com/enterprise/2.13/admin/guides/user-management/using-github-oauth/>`_
+Pangeo.pydata.org uses `GitHub OAuth Callback
+<https://help.github.com/enterprise/2.13/admin/guides/user-management/using-github-oauth/>`_
 to authenticate users. The ``clientSecret`` token needs to be obtained via
-github.
+github. 
+
+This authentication method needs an IP or domain name to work, if you
+didn't specify the IP in ``jupyter_config.yaml``, then you'll need to deploy
+Helm chart with incorrect values here first, get the ``EXTERNAL-IP`` value
+of your service proxy, modify the secret_config.yaml file with this value 
+(and the Github OAuth configuration), and then upgrade the cluster with Helm. 
+All of this is described in `Step Five: Deploy Helm Chart`_.
+
+Alternatively, you can also change authentication method, see 
+`Zero to Jupyterhub`_ guide for more information on that.
 
 .. code-block:: yaml
 
@@ -258,8 +283,12 @@ github.
 Step Five: Deploy Helm Chart
 ----------------------------
 
-Check the `Pangeo Helm Chart <https://pangeo-data.github.io/helm-chart/>`_ for
-the latest helm chart version. Here the version we are using is ``0.1.1-a14d55b``.
+The following script deploy the last Pangeo chart on your Kubernetes cluster.
+
+If you want to use a specific version, check `Pangeo Helm Chart
+<https://pangeo-data.github.io/helm-chart/>`_ for the version you want.
+You can then add a ``--version=0.1.1-a14d55b`` argument to ``helm install``
+command, only keeping the last part of the realease, without ``pangeo-v``.
 
 .. code-block:: bash
 
@@ -267,15 +296,15 @@ the latest helm chart version. Here the version we are using is ``0.1.1-a14d55b`
 
   set -e
 
-  VERSION=0.1.1-a14d55b
-
   helm repo add pangeo https://pangeo-data.github.io/helm-chart/
   helm repo update
 
-  helm install pangeo/pangeo --version=$VERSION \
-     --namespace=pangeo --name=jupyter  \
-     -f secret-config.yaml \
-     -f jupyter-config.yaml
+  helm install pangeo/pangeo --namespace=pangeo --name=jupyter \
+     -f secret_config.yaml -f jupyter_config.yaml
+  
+  # helm install pangeo/pangeo --namespace=pangeo --name=jupyter \
+  #   --version=0.1.1-a14d55b \
+  #   -f secret_config.yaml -f jupyter_config.yaml
 
 
 If you have not specified a static IP address in your configuration, the
@@ -297,14 +326,15 @@ Upgrade Cluster
 ---------------
 
 If you want to change the configuration, or to upgrade the cluster to a new
-version of the Helm Chart, run the following commmand
+version of the Helm Chart, run the following commmand (if you are just updating
+jupyterhub authentication IP, ``--force`` and ``--recreate-pods`` are not
+needed)
 
 .. code-block:: bash
 
   $ helm upgrade --force --recreate-pods jupyter pangeo/pangeo \
      --version=$VERSION \
-     -f secret-config.yaml \
-     -f jupyter-config.yaml
+     -f secret_config.yaml -f jupyter_config.yaml
 
 
 Pangeo Helm Chart and Docker Images
