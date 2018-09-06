@@ -649,3 +649,16 @@
     - distributed computing
     - ocean-data management
     - HPC
+
+- first_name: Philippe
+  last_name: Delandmeter
+  institution: Institute for Marine and Atmospheric research Utrecht, Utrecht University, Netherlands
+  website: https://www.uu.nl/staff/PBDelandmeter
+  email: p.b.delandmeter@uu.nl
+  github: delandmeterp
+  orcid: 0000-0003-0100-5834
+  tags:
+    - ocean numerical modelling
+    - Lagrangian modelling
+    - particle tracking
+    - finite element methods
