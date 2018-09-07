@@ -1,4 +1,4 @@
-
+#!/usr/bin/env python
 # coding: utf-8
 
 # # Sea Surface Altimetry Data Analysis
@@ -169,4 +169,10 @@ sla_std = ds.sla.std(dim='time').load()
 
 
 sla_std.plot()
+
+
+# In[ ]:
+
+
+
 

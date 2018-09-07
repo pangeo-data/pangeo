@@ -353,6 +353,7 @@ variability.)
 
 
 
+
 .. only:: html
 
     .. container:: sphx-glr-download
