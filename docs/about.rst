@@ -3,24 +3,31 @@
 About Pangeo
 ============
 
+Pangeo is first and foremost a :ref:`community of people <collaborators>`
+working collaboratively to develop software and infrastructure to enable
+Big Data geoscience research.
+
+Some of the products produced by this community include interconnected
+:ref:`software package <packages>` and :ref:`deployments <deployments>` of
+this software in cloud and high-performance-computing environments. Such
+a deployment is sometimes referred to as a *Pangeo Environment*.
+
 Motivation
 ----------
 
-There are several building crises facing the Atmosphere / Ocean / Land /
-Climate (AOC) science community:
+There are several building crises facing the geoscience community:
 
--  Big Data: datasets are growing too rapidly and legacy software tools
+-  *Big Data*: datasets are growing too rapidly and legacy software tools
    for scientific analysis can't handle them. This is a major obstacle
    to scientific progress.
--  Technology Gap: a growing gap between the technological
+-  *Technology Gap*: a growing gap between the technological
    sophistication of industry solutions (high) and scientific software
    (low).
--  Reproducibility: a fragmentation of software tools and environments
-   renders most AOC research effectively unreproducible and prone to
+-  *Reproducibility*: a fragmentation of software tools and environments
+   renders most geoscience research effectively unreproducible and prone to
    failure.
 
-We believe these challenges can all be addressed through a unified
-effort.
+Pangeo aims to address these challenges through a unified, collaborative effort.
 
 Mission Statement
 -----------------
@@ -30,56 +37,28 @@ open-source analysis tools for ocean, atmosphere and climate science can
 be developed, distributed, and sustained. These tools must be scalable
 in order to meet the current and future challenges of big data, and
 these solutions should leverage the existing expertise outside of the
-AOC community.
+geoscience community.
 
-Vision
-------
+Goals
+-----
 
-We envision a collection of related but independent open-source packages
-that meet specific scientific needs within the AOC fields. These
-packages will follow modern best practices for software development,
-including:
+To accomplish this mission, we have identified three specific goals.
 
--  hosting on GitHub,
--  testing,
--  coverage,
--  continuous integration,
--  comprehensive documentation, and
--  a welcoming and inclusive development culture.
-
-As much as possible, we will build on top of existing solutions and
-leverage expertise from the broader technology world, including
-industry.
-
-In practice, the "python data" software stack (see above) currently
-provides the most stable and powerful foundation layer for our desired
-tools. In particular the xarray and dask projects provide a mechanism to
-easily build scalability into scientific analysis. Our vision of future
-AOC software involves the adoption of these common software layers, and
-a clear communication between developers to define project scope and
-dependency that eliminates redundancy and fragmentation.
+#. Foster collaboration around the open source scientific python ecosystem for
+   ocean / atmosphere / land / climate science.
+#. Support the development with domain-specific geoscience packages.
+#. Improve scalability of these tools to handle petabyte-scale datasets on
+   HPC and cloud platforms.
 
 Get Involved
 ------------
 
-The scientific culture in the AOC community must be tied to, and evolve
-from, the community's software culture. Hence, we depend upon
-contributions from the entire community, both scientific and industrial.
+The pangeo project is completely open to involvement from anyone with interest.
+There are many ways to get involved:
 
-We encourage everyone to get involved by:
+- *Science users*: read the :ref:`quickstart`, browse the :ref:`use-cases`,
+  read about the :ref:`packages`, or visit a :ref:`deployment <deployments>`.
+- *Developers / system administrators*: learn about the
+  :ref:`architecture` or read the :ref:`setup-guides`.
 
--  contributing to the goals and vision of the organization,
--  contributing to the design documents of the proposed software,
--  contributing to the software, via issues and pull requests, and/or
--  using the software for your scientific analysis and letting us know
-   about your experiences (e.g., contributing to examples)
-
-For now, community discussion is happening on our `pangeo google
-group <https://groups.google.com/forum/#!forum/pangeo>`__. This is an
-open group, and we invite anyone interested to join.
-
-
-Pangeo receives support from the NSF_ via the EarthCube_ program.
-
-.. _NSF: https://pangeo-data.github.io/
-.. _EarthCube: https://earthcube.org/
+For more information, consult the :ref:`FAQ`.

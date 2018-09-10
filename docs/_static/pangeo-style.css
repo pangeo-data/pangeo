@@ -62,11 +62,17 @@ a:hover, a:focus {
 }
 
 .navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-nav>li>a:focus {
-    background-color: #e50051;
+    background-color: #00a3b0;
 }
 
 .navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:hover, .navbar-inverse .navbar-nav>.open>a:focus  {
-    background-color: #e50051;
+    background-color: #00a3b0;
+}
+
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus {
+    text-decoration: none;
+    /* color: #ffffff; */
+    background-color: #00a3b0;
 }
 
 .navbar-brand {

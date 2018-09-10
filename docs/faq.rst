@@ -5,12 +5,12 @@ Frequently Asked Questions
 
 #. *What is Pangeo?*
 
-   Pangeo is first and foremmost a :ref:`community of people <collaborators>`
+   Pangeo is first and foremost a :ref:`community of people <collaborators>`
    working collaboratively to develop software and infrastructure to enable
    Big Data geoscience research.
 
    Some of the products produced by this commmunity include interconnected
-   :ref:`software pacakge <packages>` and :ref:`deployments <deployments>` of
+   :ref:`software package <packages>` and :ref:`deployments <deployments>` of
    this software in cloud and high-performance-computing environments. Such
    a deployment is sometimes referred to as a *Pangeo Environment*.
 
@@ -65,7 +65,7 @@ Frequently Asked Questions
    Many excellent Big Data platforms and tools already exist. But the
    collaborators in the Pangeo project have concluded that none of these has
    sufficient flexibility to handle the diversity and complexity of real-world
-   :ref:`use-cases`. Instead, we have converged on the the :ref:`Pangeo Core Packages`
+   :ref:`use-cases`. Instead, we have converged on the :ref:`packages`
    Xarray and Dask to provide the foundational data models and execution engine
    for our science. We know these tools work for us because many scientists are
    already using them in day-to-day research. Pangeo aims to make them better
@@ -78,3 +78,26 @@ Frequently Asked Questions
    has the modularity and collaborative structure required to achieve our goals.
 
 #. *Why don't you use Julia or R?*
+
+   We would like Pangeo to evolve into a multi-language platform, including
+   support for Julia, R, and other programming languages used for data science.
+   Because Pangeo uses Jupyter to provide interactive computing, this is
+   already possible today; Jupyter can be configured to run Kernels in many
+   different languages (see
+   `Jupyter docs on Kernels <http://jupyter.readthedocs.io/en/latest/projects/kernels.html>`_).
+   These kernels can be configured to run on any of the
+   Pangeo :ref:`Deployments`. However, the higher-level features of the Pangeo
+   platform, in particular, parallel execution with Dask, are limited to
+   Python at the moment. If you would like to work on enabling multi-language
+   support, please engage with us via the `Pangeo GitHub issue tracker`_.
+
+#. *Can I use Pangeo for X?*
+
+   Yes! Our goal is to point you towards the building blocks to create your
+   own Pangeo, whatever that means for you. If you want to create up a custom
+   Pangeo environment, start by consulting the :ref:`setup-guides`. If you
+   want help or want to discuss customization options, reach out via the
+   `Pangeo GitHub issue tracker`_.
+
+
+.. _Pangeo GitHub issue tracker: https://github.com/pangeo-data/pangeo/issues

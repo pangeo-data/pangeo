@@ -1,6 +1,6 @@
 - first_name: Ryan
   last_name: Abernathey
-  institution: Lamont Doherty Earth Observatory
+  institution: Lamont-Doherty Earth Observatory
   website: http://rabernat.github.io
   email: rpa@ldeo.columbia.edu
   github: rabernat
@@ -25,7 +25,7 @@
 
 - first_name: Chiara
   last_name: Lepore
-  institution: Lamont Doherty Earth Observatory
+  institution: Lamont-Doherty Earth Observatory
   website: http://www.ldeo.columbia.edu/~clepore/
   twitter: lapiccolaflo
   github: chiaral
@@ -126,7 +126,7 @@
 
 - first_name: Ryan
   last_name: May
-  institution: University Corporation for Atmospheric Research/Unidat
+  institution: University Corporation for Atmospheric Research/Unidata
   website: http://www.unidata.ucar.edu
   email: rmay@ucar.edu
   github: dopplershift
@@ -458,7 +458,7 @@
     - data visualization
     - cloud computing
     - embedded hardware
-    - eduation and public outreach
+    - education and public outreach
     
 - first_name: John
   last_name: Burkhart
@@ -530,7 +530,7 @@
     
 - first_name: Naomi
   last_name: Henderson
-  institution: Lamont Doherty Earth Observatory
+  institution: Lamont-Doherty Earth Observatory
   email: nhn2@columbia.edu
   github: naomi-henderson
   twitter: noni
@@ -548,8 +548,117 @@
   twitter: dwatsonparris
   orcid: 0000-0002-5312-4950
   tags:
-    - amotpsheric physics
+    - atmospheric physics
     - numerical modelling
     - observations
     - data fusion
     - machine learning
+
+- first_name: Tim
+  last_name: Crone
+  institution: Lamont-Doherty Earth Observatory
+  website: http://www.fluidcontinuity.org/
+  email: tjcrone@gmail.com
+  github: tjcrone
+  orcid: 0000-0002-8100-5633
+  tags:
+    - marine geophysics
+    - image analysis
+    - seafloor instrumentation
+
+- first_name: Robert
+  last_name: Hetland
+  institution: Texas A&M University
+  website: http://pong.tamu.edu
+  email: hetland@tamu.edu
+  github: hetland
+  twitter: hetland
+  orcid: 0000-0001-9531-2119
+  tags:
+    - physical oceanography
+    - coastal ocean modeling
+
+- first_name: Leif
+  last_name: Denby
+  institution: ICAS, University of Leeds
+  email: leif@denby.eu
+  github: leifdenby
+  tags:
+    - numerical modelling
+    - atmospheric dynamics
+    - cloud computing
+
+- first_name: Paul
+  last_name: Branson
+  institution: CSIRO/University of Western Australia
+  email: paul.branson@csiro.au
+  github: pbranson
+  twitter: pablobranson
+  orcid: 0000-0002-3825-9873
+  tags:
+    - physical oceanography
+    - coastal ocean modelling
+    - image analysis
+    - particle imaging velocimetry
+
+- first_name: Ray
+  last_name: Bell
+  institution: Univesrsity of Miami
+  email: rbell@rsmas.miami.edu
+  github: raybellwaves
+  twitter: RayBell_UM
+  orcid: 0000-0003-2623-0587
+  tags:
+    - ocean wave modelling
+    - subseasonal forecasting
+
+- first_name: Guillaume
+  last_name: Eynard-Bontemps
+  institution: CNES, French space agency
+  email: guillaume.eynard-bontemps@cnes.fr
+  github: guillaumeeb
+  tags:
+    - distributed computing
+    - data engineering and analysis
+    - HPC
+    - cloud computing
+    - infrastructure
+    - IT architecture
+
+- first_name: Niall
+  last_name: Robinson
+  institution: Met Office Informatics Lab
+  website: http://informaticslab.co.uk/profiles/niall-robinson
+  email: niall.robinson@informaticslab.co.uk
+  github: niallrobinson
+  twitter: niallhrobinson
+  tags:
+    - atmospheric science
+    - distributed computing
+    - cloud computing
+    - HPC
+
+- first_name: Willi
+  last_name: Rath
+  institution: GEOMAR Helmholtz Centre for Ocean Research Kiel
+  website: https://www.geomar.de/en/staff/fb1/tm/wrath/
+  email: wrath@geomar.de
+  github: willirath
+  tags:
+    - physical oceanography
+    - distributed computing
+    - ocean-data management
+    - HPC
+
+- first_name: Philippe
+  last_name: Delandmeter
+  institution: Institute for Marine and Atmospheric research Utrecht, Utrecht University, Netherlands
+  website: https://www.uu.nl/staff/PBDelandmeter
+  email: p.b.delandmeter@uu.nl
+  github: delandmeterp
+  orcid: 0000-0003-0100-5834
+  tags:
+    - ocean numerical modelling
+    - Lagrangian modelling
+    - particle tracking
+    - finite element methods

@@ -11,7 +11,7 @@ to their personal computers.
 Pangeo operates on a different philosophy; instead of bringing the data to the
 computer, we bring the computer to the data.
 The Pangeo :ref:`deployments` provide high-performance computing clusters in
-close proximmity to high-performance storage.
+close proximity to high-performance storage.
 Many widely used datasets are already stored on these systems.
 
 If you are interested in analyzing a specific large dataset, you should
@@ -94,13 +94,17 @@ Existing datasets can easily be converted to zarr via
 Google Cloud Storage Data Catalog
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Thanks to our :ref:`NSF Award <nsf-award>`, Pangeo has a substantial allocation
+Thanks to our :ref:`NSF Award <earthcube>`, Pangeo has a substantial allocation
 on Google Cloud Platform which we are currently using to host several large
 datasets.
 These datasets are directly accessible from the Google Cloud Pangeo deployment:
 `pangeo.pydata.org <http://pangeo.pydata.org>`_.
 
-**HOW DO WE LIST THE DATASETS? CAN WE DIRECTLY PARSE THE INTAKE CATALOG?**
++--------+--------------+
+| Name   | Description  |
++========+==============+
+| Under  | Construction |
++--------+--------------+
 
 
 .. _cloud-data-guide:
@@ -225,7 +229,7 @@ These recommendations may change as cloud storage technology evolves.
 
       import xarray as xr
       import gcsfs
-      ds = xr.open_zarr(gcsfs.GCSMMap('pangeo-data/mydataset'))
+      ds = xr.open_zarr(gcsfs.GCSMap('pangeo-data/mydataset'))
 
    You should see all the variables and metadata from your original dataset in
    step 1. The dataset will automatically be created with dask chunks matching

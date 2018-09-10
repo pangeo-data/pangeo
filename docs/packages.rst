@@ -3,7 +3,7 @@
 Packages
 ========
 
-Pangeo is not one specific software pacakge.
+Pangeo is not one specific software package.
 A Pangeo environment is made of up of many different open-source software packages.
 Each of these packages has its own repository, documentation, and development team.
 
@@ -42,6 +42,27 @@ as well as powerful tools for computation and visualization.
 .. _Common Data Model: http://www.unidata.ucar.edu/software/thredds/current/netcdf-java/CDM
 .. _netCDF: http://www.unidata.ucar.edu/software/netcdf
 
+
+Iris
+~~~~
+
+.. image:: _static/Iris_logo_banner.png
+
+- Website: https://scitools.org.uk/iris/docs/latest/
+- GitHub: https://github.com/SciTools/iris
+
+Iris seeks to provide a powerful, easy to use, and community-driven Python
+library for analysing and visualising meteorological and oceanographic data sets.
+
+With Iris you can:
+
+- Use a single API to work on your data, irrespective of its original format.
+- Read and write (CF-)netCDF, GRIB, and PP files.
+- Easily produce graphs and maps via integration with matplotlib and cartopy.
+
+Iris is an alternative to Xarray. Iris is developed primarily by the
+`UK Met Office Informatics Lab <http://www.informaticslab.co.uk/>`_.
+
 Dask
 ~~~~
 
@@ -55,7 +76,7 @@ Dask is a flexible parallel computing library for analytics.
 Dask is the key to the scalability of the Pangeo platform; its data structures are
 capable of representing extremely large datasets without actually loading them
 in memory, and its distributed schedulers permit supercomputers and cloud
-computing clusters to efficiently parallize computations across many nodes.
+computing clusters to efficiently parallelize computations across many nodes.
 
 Jupyter
 ~~~~~~~
@@ -77,11 +98,11 @@ live.
 Pangeo Affiliated Packages
 --------------------------
 
-xgcm
-~~~~
-
-xesmf
-~~~~~
+There are many other python packages that can work with the core packages
+to provide additional functionality.
+We plan to eventually catalog these packages here on the Pangeo website.
+For now, please refer to the
+`Xarray list of related projects <http://xarray.pydata.org/en/latest/faq.html#what-other-projects-leverage-xarray>`_.
 
 
 Guidelines for New Packages
@@ -128,12 +149,9 @@ additional recommendations.
    inevitable as developers try implementing different solutions to the
    same general problems.)
 4. *Consume and Produce Xarray Objects:* Xarray data structures
-   facilitate mutual interoperability between packages. (For more about
-   Xarray , see below.)
+   facilitate mutual interoperability between packages.
 5. *Operate Lazily:* whenever possible, packages should avoid explicitly
-   triggering computation on
-   `Dask <http://dask.pydata.org/en/latest/array.html>`__ objects. (For
-   more about Dask, see below)
+   triggering computation on Dask objects.
 
 Why Xarray and Dask?
 ~~~~~~~~~~~~~~~~~~~~
