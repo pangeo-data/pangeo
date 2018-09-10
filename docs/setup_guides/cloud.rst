@@ -61,6 +61,24 @@ To do this in one line from the command line, run::
 
   $ curl https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get | bash
 
+Pangeo scripts template
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Following chapters describe some batch scripts that are available in the pangeo
+repo. Just clone the repo using git and go to the appropriate folder to use
+them
+
+.. code-block:: bash
+
+  git clone https://github.com/pangeo-data/pangeo.git
+  cd pangeo/gce/setup-guide
+
+You can then edit your configuration parameters in 
+``gce-pangeo-environment.sh`` file and then export them
+
+.. code-block:: bash
+
+  source gce-pangeo-environment.sh
 
 Step Two: Create a Kubernetes Cluster
 -------------------------------------
@@ -87,6 +105,9 @@ need:
 - An incompressible default node pool for the Jupyterhub, web proxy, and user
   notebook servers.
 - An auto scaling node pool for Dask workers.
+
+This script is availabe in pangeo/gce/setup-guide as ``1_create_cluster.sh``,
+so you can use it directly.
 
 .. code-block:: bash
 
@@ -126,6 +147,9 @@ This script sets up the Kubernetes `Role Based Access Control
 <https://kubernetes.io/docs/reference/access-authn-authz/rbac/>`_
 necessary for a secure cluster deployment.
 
+This script is available in pangeo/gce/setup-guide as 
+``2_configure_kubernetes.sh``.
+
 .. code-block:: bash
 
   #!/bin/bash
@@ -145,7 +169,8 @@ necessary for a secure cluster deployment.
 Step Four: Create Cluster-Specific Configuration
 ------------------------------------------------
 
-There are two configuration files needed to deploy the Pangeo helm chart.
+There are two configuration files needed to deploy the Pangeo helm chart. 
+Thos files are available in the pangeo/gce/setup-guide folder of this repo. 
 The first, ``jupyter_config.yaml``, specifies modifications to the
 configuration that are unique to each deployment. 
 
@@ -290,6 +315,8 @@ If you want to use a specific version, check `Pangeo Helm Chart
 You can then add a ``--version=0.1.1-a14d55b`` argument to ``helm install``
 command, only keeping the last part of the realease, without ``pangeo-v``.
 
+This script is available as ``3_deploy_helm.sh`` in the repo.
+
 .. code-block:: bash
 
   #!/bin/bash
@@ -328,7 +355,10 @@ Upgrade Cluster
 If you want to change the configuration, or to upgrade the cluster to a new
 version of the Helm Chart, run the following commmand (if you are just updating
 jupyterhub authentication IP, ``--force`` and ``--recreate-pods`` are not
-needed)
+needed).
+
+Scripts ``4_upgrade_helm.sh`` and ``5_upgrade_helm_soft.sh`` are available for
+that.
 
 .. code-block:: bash
 
