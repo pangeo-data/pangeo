@@ -8,6 +8,7 @@ install: pip install -r docs/requirements.txt
 # https://github.com/drdoctr/doctr
 sudo: false
 env:
+  - HV_DOC_HTML='true'
   global:
     secure: "YVIIdedqg2auKJNhZTa+GMVMcQE2QJbUhUkCgaMHBI3dQLkX3WLGr148bPUdua7tmxzeScJ6B5oUUJFvJHagYN9nrycFrRZiIv0KnkYBn+rIUnlkUObcgMtKeNu+5/mXUYlkjSxG4Qip0zHgeOsM237Z+BFU1DhDJ7yJ+dQoIWYUSPd6uE4VhSf1lkMj/g2H5tHEB9c4YGdHBpuNHvu+RIyzJbkuLeLm6iM6zuKA7vI16AqzVDs2S4fssZUjYljtqMTBSmOIeavQQ5c209M8hA8wSiALwnD03LVYyZpE2YcsawaREp3+uqEaHui5xTKLogXz79n5+tTkrHEZrCstc+h5+CukyXKoUuhw5j95K4WDUNK9XcXX1TwMf9jMquSJQvnA4mupHFGCvDcenW3oNzOpF7ApyuEHi6+ty2hAZSG3Mr47cGr9I1jobv5tCyuYN/SJTTXuCWOBle72qwhLeSBU47+LpEczvxwIamrTnTkVgK+YJK7lmMzOKQ6l2mPn2EfTDptgAlpIxJuVEFhSRSF3F+wVyt2OFza9Y5cX8vcaKUmA2QT6+4b+w/o40AZHtO3HkZduKsoj8JmHFRppEh3hlVgqp6kTuoXo+DCP2ESTFEBN09Z1pyWlLOi96PojKLR36CeYb08r4OBTZ/yUUeLrP3A3+abA3bkFPSU4+9I="
 
