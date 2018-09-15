@@ -662,3 +662,15 @@
     - Lagrangian modelling
     - particle tracking
     - finite element methods
+
+- first_name: Bart
+  last_name: Nijssen
+  institution: University of Washington
+  website: http://www.hydro.washington.edu
+  email: nijssen@uw.edu
+  github: bartnijssen
+  orcid: 0000-0002-4062-0322
+  tags:
+    - climate
+    - hydrology
+    - water resources
