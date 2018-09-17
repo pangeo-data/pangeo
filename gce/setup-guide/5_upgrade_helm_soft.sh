@@ -2,7 +2,6 @@
 
 set -e
 
-helm upgrade pangeohub pangeo/pangeo 
-#   --version=$VERSION \
-   -f /opt/pangeo/secret_config.yaml \
-   -f /opt/pangeo/jupyter_config.yaml
+helm upgrade pangeohub pangeo/pangeo --devel \
+   -f secret_config.yaml \
+   -f jupyter_config.yaml
