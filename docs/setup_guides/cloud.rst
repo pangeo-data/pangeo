@@ -176,9 +176,11 @@ configuration that are unique to each deployment.
 
 Most important thing to configure here is the  ``loadBalancerIP``. If you've
 not `reserved a static external IP 
-<https://cloud.google.com/compute/docs/ip-addresses/reserve-static-external-ip-address>`_
-then you may just want to remove or comment the corresponding lines at the end
-of the file.
+<https://cloud.google.com/compute/docs/ip-addresses/reserve-static-external-ip-address>`_,
+you can do so by running::
+
+  gcloud compute addresses create pangeo-jhubip --region $REGION
+  gcloud compute addresses list | grep pangeo-jhubip
 
 Other things you might want to configure, but that can be left as is:
 - EXTRA_PIP_PACKAGES: for adding some python modules to your user environment.
@@ -265,16 +267,14 @@ which you can generate as follows.
   $ openssl rand -hex 32
 
 Pangeo.pydata.org uses `GitHub OAuth Callback
-<https://help.github.com/enterprise/2.13/admin/guides/user-management/using-github-oauth/>`_
+<https://help.github.com/enterprise/2.13/admin/guides/user-management/using-github-oauth/>`_,
+(or `GitHub OAuth for developer <https://developer.github.com/apps/building-oauth-apps/creating-an-oauth-app/>`_)
 to authenticate users. The ``clientSecret`` token needs to be obtained via
 github. 
 
-This authentication method needs an IP or domain name to work, if you
-didn't specify the IP in ``jupyter_config.yaml``, then you'll need to deploy
-Helm chart with incorrect values here first, get the ``EXTERNAL-IP`` value
-of your service proxy, modify the secret_config.yaml file with this value 
-(and the Github OAuth configuration), and then upgrade the cluster with Helm. 
-All of this is described in `Step Five: Deploy Helm Chart`_.
+This authentication method needs an IP or domain name to work, the IP you've
+reserved above and put in jupyter_config.yaml if you don't have a domain name
+yet (just put the IP in place of pangeo.pydata.org domain name).
 
 Alternatively, you can also change authentication method, see 
 `Zero to Jupyterhub`_ guide for more information on that.

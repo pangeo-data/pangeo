@@ -61,8 +61,7 @@ jupyterhub:
     timeout: 1200
     every: 600
 
-  # this section specifies the IP address for pangeo.pydata.org
-  # remove or change for a custom cluster
-#  proxy:
-#    service:
-#      loadBalancerIP: 35.205.79.244
+  # this section specifies the IP address for pangeo
+  proxy:
+    service:
+      loadBalancerIP: <GCE_EXTERNAL_IP>

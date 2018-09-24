@@ -5,6 +5,7 @@ export EMAIL='<THE EMAIL ADDRESS ASSOCIATED WITH YOUR GOOGLE CLOUD ACCOUNT>'
 
 # this is the zone used by pangeo.pydata.org
 export ZONE='<CLOUD ZONE>'
+export REGION='<CLOUD_REGION>'
 
 # cluster size settings: modify as needed to fit your needs / budget
 export MIN_WORKER_NODES=0
