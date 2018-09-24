@@ -100,12 +100,25 @@ datasets.
 These datasets are directly accessible from the Google Cloud Pangeo deployment:
 `pangeo.pydata.org <http://pangeo.pydata.org>`_.
 
-+--------+--------------+
-| Name   | Description  |
-+========+==============+
-| Under  | Construction |
-+--------+--------------+
+.. raw:: html
 
+    <table class="table table-striped large">
+    {% for name in catalog.walk() %}
+      {% set entry = catalog[name] %}
+
+      <tr>
+        <td>
+          <ul class="list-inline">
+            <li><strong>{{ name }}</strong></li><br>
+            <li>{{ entry.description }}</li><br>
+            <li><em>Format: {{ entry.describe_open()['plugin'] }}</em></li>
+            <li><em>Container: {{ entry.container }}</em></li><br>
+            <li><em>Location: {{ entry.urlpath }}</em></li>
+          </ul>
+        </td>
+      </tr>
+    {% endfor %}
+    </table>
 
 .. _cloud-data-guide:
 
