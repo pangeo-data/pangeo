@@ -145,11 +145,12 @@
 <li><a class="reference internal" href="#">Deploying Pangeo on the Cloud</a><ul>
 <li><a class="reference internal" href="#step-one-install-the-necessary-software">Step One: Install the Necessary Software</a><ul>
 <li><a class="reference internal" href="#google-cloud-sdk">Google Cloud SDK</a></li>
-<li><a class="reference internal" href="#kubernetes-kubectl">Kubernetes Kubectl</a></li>
+<li><a class="reference internal" href="#kubernetes-kubectl">Kubernetes kubectl</a></li>
 <li><a class="reference internal" href="#helm-client">Helm Client</a></li>
+<li><a class="reference internal" href="#pangeo-scripts-template">Pangeo scripts template</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#step-two-create-a-cluster">Step Two: Create a Cluster</a></li>
+<li><a class="reference internal" href="#step-two-create-a-kubernetes-cluster">Step Two: Create a Kubernetes Cluster</a></li>
 <li><a class="reference internal" href="#step-three-configure-kubernetes">Step Three: Configure Kubernetes</a></li>
 <li><a class="reference internal" href="#step-four-create-cluster-specific-configuration">Step Four: Create Cluster-Specific Configuration</a></li>
 <li><a class="reference internal" href="#step-five-deploy-helm-chart">Step Five: Deploy Helm Chart</a></li>
@@ -182,11 +183,12 @@
 <li><a class="reference internal" href="#">Deploying Pangeo on the Cloud</a><ul>
 <li><a class="reference internal" href="#step-one-install-the-necessary-software">Step One: Install the Necessary Software</a><ul>
 <li><a class="reference internal" href="#google-cloud-sdk">Google Cloud SDK</a></li>
-<li><a class="reference internal" href="#kubernetes-kubectl">Kubernetes Kubectl</a></li>
+<li><a class="reference internal" href="#kubernetes-kubectl">Kubernetes kubectl</a></li>
 <li><a class="reference internal" href="#helm-client">Helm Client</a></li>
+<li><a class="reference internal" href="#pangeo-scripts-template">Pangeo scripts template</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#step-two-create-a-cluster">Step Two: Create a Cluster</a></li>
+<li><a class="reference internal" href="#step-two-create-a-kubernetes-cluster">Step Two: Create a Kubernetes Cluster</a></li>
 <li><a class="reference internal" href="#step-three-configure-kubernetes">Step Three: Configure Kubernetes</a></li>
 <li><a class="reference internal" href="#step-four-create-cluster-specific-configuration">Step Four: Create Cluster-Specific Configuration</a></li>
 <li><a class="reference internal" href="#step-five-deploy-helm-chart">Step Five: Deploy Helm Chart</a></li>
@@ -222,10 +224,10 @@ We hope to soon expand it to include AWS and Azure.</p>
 <span id="id1"></span><h3>Google Cloud SDK<a class="headerlink" href="#google-cloud-sdk" title="Permalink to this headline">¶</a></h3>
 <p>The Google Cloud SDK is the command-line interface for Google Cloud Platform
 products and services. Download and installation instructions are at
-<a class="reference external" href="https://cloud.google.com/sdk/downloads">https://cloud.google.com/sdk/downloads</a></p>
+<a class="reference external" href="https://cloud.google.com/sdk/downloads">https://cloud.google.com/sdk/downloads</a>.</p>
 </div>
 <div class="section" id="kubernetes-kubectl">
-<h3>Kubernetes Kubectl<a class="headerlink" href="#kubernetes-kubectl" title="Permalink to this headline">¶</a></h3>
+<h3>Kubernetes kubectl<a class="headerlink" href="#kubernetes-kubectl" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://kubernetes.io/docs/home/">Kubernetes</a> is an open source system for managing containerized applications in
 the cloud. The Kubernetes command-line tool, <code class="docutils literal"><span class="pre">kubectl</span></code>, allows you to deploy
 and manage applications on Kubernetes. It is necessary to deploy a Pangeo
@@ -236,22 +238,37 @@ kubectl is to run the following command on the command line:</p>
 </pre></div>
 </div>
 <p>More comprehensive documentation for installing Kubernetes can be found at
-<a class="reference external" href="https://kubernetes.io/docs/tasks/tools/install-kubectl/">https://kubernetes.io/docs/tasks/tools/install-kubectl/</a></p>
+<a class="reference external" href="https://kubernetes.io/docs/tasks/tools/install-kubectl/">https://kubernetes.io/docs/tasks/tools/install-kubectl/</a>.</p>
 </div>
 <div class="section" id="helm-client">
 <h3>Helm Client<a class="headerlink" href="#helm-client" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://docs.helm.sh/">Helm</a> is a package manager for Kubernetes. Helm helps you automatically download
 and deploy the Pangeo default configuration for your cluster.</p>
 <p>To install the helm command line client, follow the installation instructions at
-<a class="reference external" href="https://docs.helm.sh/install/">https://docs.helm.sh/install/</a></p>
+<a class="reference external" href="https://docs.helm.sh/install/">https://docs.helm.sh/install/</a>.</p>
 <p>To do this in one line from the command line, run:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>$ curl https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get | bash
 </pre></div>
 </div>
 </div>
+<div class="section" id="pangeo-scripts-template">
+<h3>Pangeo scripts template<a class="headerlink" href="#pangeo-scripts-template" title="Permalink to this headline">¶</a></h3>
+<p>Following chapters describe some batch scripts that are available in the pangeo
+repo. Just clone the repo using git and go to the appropriate folder to use
+them</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>git clone https://github.com/pangeo-data/pangeo.git
+<span class="nb">cd</span> pangeo/gce/setup-guide
+</pre></div>
 </div>
-<div class="section" id="step-two-create-a-cluster">
-<h2>Step Two: Create a Cluster<a class="headerlink" href="#step-two-create-a-cluster" title="Permalink to this headline">¶</a></h2>
+<p>You can then edit your configuration parameters in
+<code class="docutils literal"><span class="pre">gce-pangeo-environment.sh</span></code> file and then export them</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="nb">source</span> gce-pangeo-environment.sh
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="step-two-create-a-kubernetes-cluster">
+<h2>Step Two: Create a Kubernetes Cluster<a class="headerlink" href="#step-two-create-a-kubernetes-cluster" title="Permalink to this headline">¶</a></h2>
 <p>First, you must create an account on the cloud provider of your choice.
 Here we are using <a class="reference external" href="https://cloud.google.com/">Google Cloud Platform</a>.</p>
 <p>All Google Cloud services are provisioned within the context of a
@@ -262,11 +279,19 @@ From the <em>APIs and Services</em> section of the cloud console, you must then
 enable the Kubernetes Engine API for the project.</p>
 <p>To create the cluster from the command line, you must first be authenticated.
 Run the following from the commmand line</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>gcloud config <span class="nb">set</span> container/new_scopes_behavior <span class="nb">true</span>
-gcloud auth login
+<div class="highlight-bash"><div class="highlight"><pre><span></span>gcloud auth login
 </pre></div>
 </div>
-<p>Now here is a bash script that will create a cluster:</p>
+<p>Now here is a bash script that will create a cluster corresponding to Pangeo
+need:
+- An incompressible default node pool for the Jupyterhub, web proxy, and user</p>
+<blockquote>
+<div>notebook servers.</div></blockquote>
+<ul class="simple">
+<li>An auto scaling node pool for Dask workers.</li>
+</ul>
+<p>This script is availabe in pangeo/gce/setup-guide as <code class="docutils literal"><span class="pre">1_create_cluster.sh</span></code>,
+so you can use it directly.</p>
 <div class="highlight-bash"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 
 <span class="nb">set</span> -e
@@ -286,6 +311,7 @@ gcloud auth login
 <span class="nv">WORKER_MACHINE_TYPE</span><span class="o">=</span><span class="s1">&#39;n1-standard-4&#39;</span>
 
 <span class="c1"># create cluster on GCP</span>
+gcloud config <span class="nb">set</span> container/new_scopes_behavior <span class="nb">true</span>
 gcloud config <span class="nb">set</span> project <span class="nv">$PROJECTID</span>
 gcloud container clusters create <span class="nv">$CLUSTER_NAME</span> --num-nodes<span class="o">=</span><span class="nv">$NUM_NODES</span> --zone<span class="o">=</span><span class="nv">$ZONE</span> <span class="se">\</span>
     --machine-type<span class="o">=</span>n1-standard-2 --no-enable-legacy-authorization
@@ -298,9 +324,10 @@ gcloud container clusters get-credentials <span class="nv">$CLUSTER_NAME</span> 
 </div>
 <div class="section" id="step-three-configure-kubernetes">
 <h2>Step Three: Configure Kubernetes<a class="headerlink" href="#step-three-configure-kubernetes" title="Permalink to this headline">¶</a></h2>
-<p>This script sets up the Kubernetes
-<a class="reference external" href="https://kubernetes.io/docs/reference/access-authn-authz/rbac/">Role Based Access Control</a>
+<p>This script sets up the Kubernetes <a class="reference external" href="https://kubernetes.io/docs/reference/access-authn-authz/rbac/">Role Based Access Control</a>
 necessary for a secure cluster deployment.</p>
+<p>This script is available in pangeo/gce/setup-guide as
+<code class="docutils literal"><span class="pre">2_configure_kubernetes.sh</span></code>.</p>
 <div class="highlight-bash"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 
 <span class="nb">set</span> -e
@@ -319,8 +346,21 @@ kubectl --namespace<span class="o">=</span>kube-system patch deployment tiller-d
 <div class="section" id="step-four-create-cluster-specific-configuration">
 <h2>Step Four: Create Cluster-Specific Configuration<a class="headerlink" href="#step-four-create-cluster-specific-configuration" title="Permalink to this headline">¶</a></h2>
 <p>There are two configuration files needed to deploy the Pangeo helm chart.
-The first, <code class="docutils literal"><span class="pre">jupyter_config.yaml</span></code>, specifies modifications to the configuration
-that are unique to each deployment.</p>
+Thos files are available in the pangeo/gce/setup-guide folder of this repo.
+The first, <code class="docutils literal"><span class="pre">jupyter_config.yaml</span></code>, specifies modifications to the
+configuration that are unique to each deployment.</p>
+<p>Most important thing to configure here is the  <code class="docutils literal"><span class="pre">loadBalancerIP</span></code>. If you’ve
+not <a class="reference external" href="https://cloud.google.com/compute/docs/ip-addresses/reserve-static-external-ip-address">reserved a static external IP</a>,
+you can do so by running:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>gcloud compute addresses create pangeo-jhubip --region $REGION
+gcloud compute addresses list | grep pangeo-jhubip
+</pre></div>
+</div>
+<p>Other things you might want to configure, but that can be left as is:
+- EXTRA_PIP_PACKAGES: for adding some python modules to your user environment.
+- GCSFUSE_BUCKET: for mounting some google cloud storage bucket as a standard</p>
+<blockquote>
+<div>file system.</div></blockquote>
 <div class="highlight-yaml"><div class="highlight"><pre><span></span><span class="c1"># file: jupyter_config.yaml</span>
 
 <span class="l l-Scalar l-Scalar-Plain">jupyterhub</span><span class="p p-Indicator">:</span>
@@ -392,15 +432,20 @@ that are unique to each deployment.</p>
 </pre></div>
 </div>
 <p>The other file is <code class="docutils literal"><span class="pre">secret_config.yaml</span></code>, which specifies cluster specific
-encryption tokens. The jupyerhub proxy secret token is just a random hash, which you
-can generate as follows.</p>
+encryption tokens. The jupyterhub proxy secret token is just a random hash,
+which you can generate as follows.</p>
 <div class="highlight-bash"><div class="highlight"><pre><span></span>$ openssl rand -hex <span class="m">32</span>
 </pre></div>
 </div>
-<p>Pangeo.pydata.org uses
-<a class="reference external" href="https://help.github.com/enterprise/2.13/admin/guides/user-management/using-github-oauth/">GitHub OAuth Callback</a>
+<p>Pangeo.pydata.org uses <a class="reference external" href="https://help.github.com/enterprise/2.13/admin/guides/user-management/using-github-oauth/">GitHub OAuth Callback</a>,
+(or <a class="reference external" href="https://developer.github.com/apps/building-oauth-apps/creating-an-oauth-app/">GitHub OAuth for developer</a>)
 to authenticate users. The <code class="docutils literal"><span class="pre">clientSecret</span></code> token needs to be obtained via
 github.</p>
+<p>This authentication method needs an IP or domain name to work, the IP you’ve
+reserved above and put in jupyter_config.yaml if you don’t have a domain name
+yet (just put the IP in place of pangeo.pydata.org domain name).</p>
+<p>Alternatively, you can also change authentication method, see
+<a class="reference external" href="https://zero-to-jupyterhub-with-kubernetes.readthedocs.io/en/latest/">Zero to Jupyterhub</a> guide for more information on that.</p>
 <div class="highlight-yaml"><div class="highlight"><pre><span></span><span class="c1"># file: secret_config.yaml</span>
 
 <span class="l l-Scalar l-Scalar-Plain">jupyterhub</span><span class="p p-Indicator">:</span>
@@ -428,21 +473,24 @@ github.</p>
 </div>
 <div class="section" id="step-five-deploy-helm-chart">
 <h2>Step Five: Deploy Helm Chart<a class="headerlink" href="#step-five-deploy-helm-chart" title="Permalink to this headline">¶</a></h2>
-<p>Check the <a class="reference external" href="https://pangeo-data.github.io/helm-chart/">Pangeo Helm Chart</a> for
-the latest helm chart version. Here the version we are using is <code class="docutils literal"><span class="pre">0.1.1-a14d55b</span></code>.</p>
+<p>The following script deploy the last Pangeo chart on your Kubernetes cluster.</p>
+<p>If you want to use a specific version, check <a class="reference external" href="https://pangeo-data.github.io/helm-chart/">Pangeo Helm Chart</a> for the version you want.
+You can then add a <code class="docutils literal"><span class="pre">--version=0.1.1-a14d55b</span></code> argument to <code class="docutils literal"><span class="pre">helm</span> <span class="pre">install</span></code>
+command, only keeping the last part of the realease, without <code class="docutils literal"><span class="pre">pangeo-v</span></code>.</p>
+<p>This script is available as <code class="docutils literal"><span class="pre">3_deploy_helm.sh</span></code> in the repo.</p>
 <div class="highlight-bash"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 
 <span class="nb">set</span> -e
 
-<span class="nv">VERSION</span><span class="o">=</span><span class="m">0</span>.1.1-a14d55b
-
 helm repo add pangeo https://pangeo-data.github.io/helm-chart/
 helm repo update
 
-helm install pangeo/pangeo --version<span class="o">=</span><span class="nv">$VERSION</span> <span class="se">\</span>
-   --namespace<span class="o">=</span>pangeo --name<span class="o">=</span>jupyter  <span class="se">\</span>
-   -f secret-config.yaml <span class="se">\</span>
-   -f jupyter-config.yaml
+helm install pangeo/pangeo --namespace<span class="o">=</span>pangeo --name<span class="o">=</span>jupyter <span class="se">\</span>
+   -f secret_config.yaml -f jupyter_config.yaml
+
+<span class="c1"># helm install pangeo/pangeo --namespace=pangeo --name=jupyter \</span>
+<span class="c1">#   --version=0.1.1-a14d55b \</span>
+<span class="c1">#   -f secret_config.yaml -f jupyter_config.yaml</span>
 </pre></div>
 </div>
 <p>If you have not specified a static IP address in your configuration, the
@@ -461,11 +509,14 @@ command</p>
 <div class="section" id="upgrade-cluster">
 <h2>Upgrade Cluster<a class="headerlink" href="#upgrade-cluster" title="Permalink to this headline">¶</a></h2>
 <p>If you want to change the configuration, or to upgrade the cluster to a new
-version of the Helm Chart, run the following commmand</p>
+version of the Helm Chart, run the following commmand (if you are just updating
+jupyterhub authentication IP, <code class="docutils literal"><span class="pre">--force</span></code> and <code class="docutils literal"><span class="pre">--recreate-pods</span></code> are not
+needed).</p>
+<p>Scripts <code class="docutils literal"><span class="pre">4_upgrade_helm.sh</span></code> and <code class="docutils literal"><span class="pre">5_upgrade_helm_soft.sh</span></code> are available for
+that.</p>
 <div class="highlight-bash"><div class="highlight"><pre><span></span>$ helm upgrade --force --recreate-pods jupyter pangeo/pangeo <span class="se">\</span>
    --version<span class="o">=</span><span class="nv">$VERSION</span> <span class="se">\</span>
-   -f secret-config.yaml <span class="se">\</span>
-   -f jupyter-config.yaml
+   -f secret_config.yaml -f jupyter_config.yaml
 </pre></div>
 </div>
 </div>
