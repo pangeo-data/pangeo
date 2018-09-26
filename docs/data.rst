@@ -102,7 +102,7 @@ These datasets are directly accessible from the Google Cloud Pangeo deployment:
 
 .. raw:: html
 
-    <table class="table table-striped large">
+    <table class="data-catalog table table-striped large">
     {% for name in catalog.walk() %}
       {% set entry = catalog[name] %}
 
@@ -114,6 +114,11 @@ These datasets are directly accessible from the Google Cloud Pangeo deployment:
             <li><em>Format: {{ entry.describe_open()['plugin'] }}</em></li>
             <li><em>Container: {{ entry.container }}</em></li><br>
             <li><em>Location: {{ entry.urlpath }}</em></li>
+            <li>
+            <pre>import intake
+    catalog_url = 'https://github.com/pangeo-data/pangeo/raw/master/gce/catalog.yaml'
+    {{ name }} = intake.Catalog(catalog_url).{{ name }}.to_dask()</pre>
+            </li>
           </ul>
         </td>
       </tr>
