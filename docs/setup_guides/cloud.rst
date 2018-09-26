@@ -102,7 +102,7 @@ Now here is a bash script that will create a cluster:
   CLUSTER_NAME='pangeo'
 
   # https://cloud.google.com/compute/pricing
-  # change the machine typer based on your computing needs
+  # change the machine type based on your computing needs
   WORKER_MACHINE_TYPE='n1-standard-4'
 
   # create cluster on GCP
@@ -274,8 +274,8 @@ the latest helm chart version. Here the version we are using is ``0.1.1-a14d55b`
 
   helm install pangeo/pangeo --version=$VERSION \
      --namespace=pangeo --name=jupyter  \
-     -f secret-config.yaml \
-     -f jupyter-config.yaml
+     -f secret_config.yaml \
+     -f jupyter_config.yaml
 
 
 If you have not specified a static IP address in your configuration, the
@@ -303,8 +303,8 @@ version of the Helm Chart, run the following commmand
 
   $ helm upgrade --force --recreate-pods jupyter pangeo/pangeo \
      --version=$VERSION \
-     -f secret-config.yaml \
-     -f jupyter-config.yaml
+     -f secret_config.yaml \
+     -f jupyter_config.yaml
 
 
 Pangeo Helm Chart and Docker Images
