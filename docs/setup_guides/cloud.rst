@@ -102,10 +102,13 @@ Run the following from the commmand line
 
 Now here is a bash script that will create a cluster corresponding to Pangeo
 need:
-- An incompressible default node pool for the Jupyterhub, web proxy, and user notebook servers.
-- An auto scaling node pool for Dask workers.
 
-This script is availabe in pangeo/gce/setup-guide as ``1_create_cluster.sh``,
+  - An incompressible default node pool for the Jupyterhub, web proxy, and user
+    notebook servers.
+  - An auto scaling node pool for Dask workers.
+
+This script is availabe in pangeo/gce/setup-guide as
+` ``1_create_cluster.sh`` <https://github.com/pangeo-data/pangeo/blob/master/gce/setup-guide/1_create_cluster.sh>`_,
 so you can use it directly.
 
 .. code-block:: bash
@@ -114,28 +117,20 @@ so you can use it directly.
 
   set -e
 
-  PROJECTID=<YOUR GOOGLE CLOUD PROJECT ID>
-  # this is the zone used by pangeo.pydata.org
-  ZONE='us-central1-b'
+  echo $PROJECTID
 
-  # cluster size settings: modify as needed to fit your needs / budget
   NUM_NODES=2
-  MIN_WORKER_NODES=0
-  MAX_WORKER_NODES=100
-  CLUSTER_NAME='pangeo'
-
-  # https://cloud.google.com/compute/pricing
-  # change the machine typer based on your computing needs
-  WORKER_MACHINE_TYPE='n1-standard-4'
 
   # create cluster on GCP
-  gcloud config set container/new_scopes_behavior true
   gcloud config set project $PROJECTID
   gcloud container clusters create $CLUSTER_NAME --num-nodes=$NUM_NODES --zone=$ZONE \
       --machine-type=n1-standard-2 --no-enable-legacy-authorization
+  #gcloud container node-pools create worker-pool --zone=$ZONE --cluster=$CLUSTER_NAME \
+  #    --machine-type=$WORKER_MACHINE_TYPE --preemptible --enable-autoscaling \
+  #    --num-nodes=$MIN_WORKER_NODES --max-nodes=$MAX_WORKER_NODES --min-nodes=$MIN_WORKER_NODES
   gcloud container node-pools create worker-pool --zone=$ZONE --cluster=$CLUSTER_NAME \
-      --machine-type=$WORKER_MACHINE_TYPE --preemptible --enable-autoscaling \
-      --num-nodes=$MIN_WORKER_NODES --max-nodes=$MAX_WORKER_NODES --min-nodes=$MIN_WORKER_NODES
+      --machine-type=$WORKER_MACHINE_TYPE --preemptible --num-nodes=$MIN_WORKER_NODES
+  gcloud container clusters update $CLUSTER_NAME --zone=$ZONE --node-pool=worker-pool --enable-autoscaling --max-nodes=$MAX_WORKER_NODES --min-nodes=$MIN_WORKER_NODES
   gcloud container clusters get-credentials $CLUSTER_NAME --zone=$ZONE --project $PROJECTID
 
 .. Note::
@@ -154,15 +149,13 @@ This script sets up the Kubernetes `Role Based Access Control
 necessary for a secure cluster deployment.
 
 This script is available in pangeo/gce/setup-guide as
-``2_configure_kubernetes.sh``.
+` ``2_configure_kubernetes.sh`` <https://github.com/pangeo-data/pangeo/blob/master/gce/setup-guide/2_configure_kubernetes.sh>`_.
 
 .. code-block:: bash
 
   #!/bin/bash
 
   set -e
-
-  EMAIL=<THE EMAIL ADDRESS ASSOCIATED WITH YOUR GOOGLE CLOUD ACCOUNT>
 
   kubectl create clusterrolebinding cluster-admin-binding --clusterrole=cluster-admin --user=$EMAIL
   kubectl create serviceaccount tiller --namespace=kube-system
@@ -177,8 +170,8 @@ Step Four: Create Cluster-Specific Configuration
 
 There are two configuration files needed to deploy the Pangeo helm chart.
 Those files are available in the pangeo/gce/setup-guide folder of this repo.
-The first, ``jupyter_config.yaml``, specifies modifications to the
-configuration that are unique to each deployment.
+The first, ` ``jupyter_config.yaml`` <https://github.com/pangeo-data/pangeo/blob/master/gce/setup-guide/jupyter_config.yaml>`_,
+specifies modifications to the configuration that are unique to each deployment.
 
 Most important thing to configure here is the  ``loadBalancerIP``. If you've
 not `reserved a static external IP
@@ -190,9 +183,9 @@ you can do so by running::
 
 Other things you might want to configure, but that can be left as is:
 
-- EXTRA_PIP_PACKAGES: for adding some python modules to your user environment.
-  file system.
-- GCSFUSE_BUCKET: for mounting some google cloud storage bucket as a standard file system.
+  - EXTRA_PIP_PACKAGES: for adding some python modules to your user environment.
+  - GCSFUSE_BUCKET: for mounting some google cloud storage bucket as a standard
+    file system.
 
 .. code-block:: yaml
 
@@ -265,9 +258,11 @@ Other things you might want to configure, but that can be left as is:
       service:
         loadBalancerIP: 35.224.8.169
 
-The other file is ``secret_config.yaml``, which specifies cluster specific
-encryption tokens. The jupyterhub proxy secret token is just a random hash,
-which you can generate as follows.
+The other file is
+` ``secret_config.yaml`` <https://github.com/pangeo-data/pangeo/blob/master/gce/setup-guide/secret_config.yaml>`_,
+which specifies cluster specific encryption tokens. The jupyterhub proxy secret
+ token is just a random hash, which you can generate as follows.
+
 
 .. code-block:: bash
 
@@ -322,7 +317,8 @@ If you want to use a specific version, check `Pangeo Helm Chart
 You can then add a ``--version=0.1.1-a14d55b`` argument to ``helm install``
 command, only keeping the last part of the realease, without ``pangeo-v``.
 
-This script is available as ``3_deploy_helm.sh`` in the repo.
+This script is available as
+` ``3_deploy_helm.sh`` <https://github.com/pangeo-data/pangeo/blob/master/gce/setup-guide/3_deploy_helm.sh>`_ in the repo.
 
 .. code-block:: bash
 
@@ -364,7 +360,8 @@ version of the Helm Chart, run the following commmand (if you are just updating
 jupyterhub authentication IP, ``--force`` and ``--recreate-pods`` are not
 needed).
 
-Scripts ``4_upgrade_helm.sh`` and ``5_upgrade_helm_soft.sh`` are available for
+Scripts ` ``4_upgrade_helm.sh`` <https://github.com/pangeo-data/pangeo/blob/master/gce/setup-guide/4_upgrade_helm.sh>`_
+and ` ``5_upgrade_helm_soft.sh`` <https://github.com/pangeo-data/pangeo/blob/master/gce/setup-guide/5_upgrade_helm_soft.sh>`_ are available for
 that.
 
 .. code-block:: bash
