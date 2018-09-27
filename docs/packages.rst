@@ -61,7 +61,7 @@ With Iris you can:
 - Easily produce graphs and maps via integration with matplotlib and cartopy.
 
 Iris is an alternative to Xarray. Iris is developed primarily by the
-`UK Met Office Informatics Lab <http://www.informaticslab.co.uk/>`_.
+`UK Met Office<http://www.metoffice.gov.uk/>` Analysis, Visualisation and Data team (AVD).
 
 Dask
 ~~~~
