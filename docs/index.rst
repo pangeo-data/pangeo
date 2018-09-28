@@ -55,6 +55,7 @@ Contents
    deployments
    data
    collaborators
+   meeting-notes
    contact
 
 Examples
