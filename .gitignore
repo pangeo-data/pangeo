@@ -112,3 +112,5 @@ scheduler.json
 
 # log files
 *.out
+
+.DS_Store
