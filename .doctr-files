@@ -50,6 +50,7 @@
 ./_sources/deployments.rst.txt
 ./_sources/faq.rst.txt
 ./_sources/index.rst.txt
+./_sources/meeting-notes.rst.txt
 ./_sources/packages.rst.txt
 ./_sources/quickstart.rst.txt
 ./_sources/setup_guides/cloud.rst.txt
@@ -179,6 +180,7 @@
 ./faq.html
 ./genindex.html
 ./index.html
+./meeting-notes.html
 ./objects.inv
 ./packages.html
 ./quickstart.html
