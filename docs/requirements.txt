@@ -7,3 +7,6 @@ nbconvert
 nbsphinx
 doctr>=1.6.3
 sphinx-nbexamples
+# for org membership update
+PyGithub
+pyyaml
