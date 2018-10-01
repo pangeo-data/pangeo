@@ -18,4 +18,8 @@ script:
   - doctr deploy . --built-docs docs/_build/html
 
 after_script:
-  - python docs/tools/member.py --access_token ${GITHUB_PEOPLE_TOKEN}  --people docs/data/people.yml
+  - if [[ -z "${GITHUB_PEOPLE_TOKEN}" ]]; then
+      echo "skipping because environment variable GITHUB_PEOPLE_TOKEN is not set";
+    else
+      python docs/tools/member.py --access_token ${GITHUB_PEOPLE_TOKEN}  --people docs/data/people.yml;
+    fi
