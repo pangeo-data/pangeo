@@ -3,9 +3,9 @@
 Deploying Pangeo on the Cloud
 =============================
 
-The commercial cloud is a powerful environment in which to deploy a pangeo environment.
+The commercial cloud is a powerful environment in which to deploy a Pangeo environment.
 However, cloud computing is unfamiliar to most geoscientists.
-The point of this guide is to describe how to setup up your own pangeo cluster
+The point of this guide is to describe how to setup up your own Pangeo cluster
 on the cloud platform of your choice, assuming zero knowledge of how the cloud works.
 We do assume you are comfortable using the unix command line and have access
 to one on your personal computer.
@@ -94,14 +94,14 @@ From the *APIs and Services* section of the cloud console, you must then
 enable the Kubernetes Engine API for the project.
 
 To create the cluster from the command line, you must first be authenticated.
-Run the following from the commmand line
+Run the following from the commmand line:
 
 .. code-block:: bash
 
   gcloud auth login
 
-A separate set of bash commands that will create a cluster corresponding to Pangeo
-need:
+Following this step, you will need to run a set of bash commands to
+create a cluster with the components that Pangeo requires:
 
   - An incompressible default node pool for the Jupyterhub, web proxy, and user
     notebook servers.
@@ -134,9 +134,9 @@ Step Four: Create Cluster-Specific Configuration
 There are two configuration files needed to deploy the Pangeo helm chart. Those
 files are available in the pangeo/gce/setup-guide folder of this repo. The
 first, `jupyter_config.yaml`_, specifies modifications to the configuration that
-are unique to each deployment.
+are unique to each deployment, so you will need to edit it.
 
-Most important thing to configure here is the  ``loadBalancerIP``.
+The most important thing to configure here is the  ``loadBalancerIP``.
 If you have not `reserved a static external IP
 <https://cloud.google.com/compute/docs/ip-addresses/reserve-static-external-ip-address>`_,
 you can do so by running::
@@ -164,11 +164,17 @@ Pangeo.pydata.org uses `GitHub OAuth Callback`_, (or `GitHub OAuth for developer
 to authenticate users. The ``clientSecret`` token needs to be obtained via
 github.
 
-This authentication method needs an IP or domain name to work, the IP you've
-reserved above and put in jupyter_config.yaml if you don't have a domain name
-yet (just put the IP in place of pangeo.pydata.org domain name).
+This authentication method needs an IP or domain name to work. This should be
+the IP you've reserved above, if you don't have a domain name yet. Insert
+this IP in the following block::
 
-Alternatively, you can also change authentication method, see
+  proxy:
+      service:
+        loadBalancerIP: <GCE_EXTERNAL_IP>
+
+Instead of `GCE_EXTERNAL_IP`.
+
+Alternatively, you can also change authentication method, see the
 `Zero to Jupyterhub`_ guide for more information on that.
 
 Step Five: Deploy Helm Chart
