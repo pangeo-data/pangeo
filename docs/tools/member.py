@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import os
 import argparse
 import yaml
 
@@ -38,6 +39,9 @@ def main(access_token, people_yml):
 
 
 if __name__ == "__main__":
+
+    print(list(os.environ.keys()), flush=True)
+
     parser = argparse.ArgumentParser(description='Add users to GitHub Org/Team')
     parser.add_argument('--access_token', required=True, type=str,
                         help='GitHub Access Token')
