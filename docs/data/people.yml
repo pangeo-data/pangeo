@@ -425,7 +425,7 @@
   email: arendta@uw.edu
   github: aaarendt
   twitter: aaarendt
-  orcid: 0000-0003-0429-6905
+  orcid: 0000-0003-4891-7435
   tags:
     - alpine hydrology
     - geospatial mapping
@@ -673,4 +673,16 @@
   tags:
     - climate
     - hydrology
+    - water resources
+    
+- first_name: Amanda
+  last_name: Tan
+  institution: University of Washington
+  website: https://escience.washington.edu/people/amanda-tan/
+  email: amandach@uw.edu
+  github: amanda-tan
+  orcid: 0000-0002-4062-0322
+  tags:
+    - cloud computing
+    - containers
     - water resources
