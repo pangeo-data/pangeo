@@ -9,18 +9,18 @@
 
 - name: pangeo.pydata.org
   description: Flagship Pangeo JupyterHub server for scalable interactive data analysis running on Google Cloud Platform
-  link: http://pangeo.pydata.org/hub/login
+  link: http://pangeo.pydata.org
   platform: Google Cloud Platform
   dask: dask-kubernetes
   jupyter: JupyterHub
   kind: cloud
 
-- name: pangeo-aws.cloudmaven.org
-  description: Prototype JupyterHub server running on AWS
-  link: https://pangeo-aws.cloudmaven.org/hub/login
-  platform: Amazon Web Services
+- name: binder.pangeo.io
+  description: Flagship Pangeo BinderHub deployment running on Google Cloud Platform
+  link: http://binder.pangeo.io/
+  platform: Google Cloud Platform
   dask: dask-kubernetes
-  jupyter: JupyterHub
+  jupyter: BinderHub
   kind: cloud
 
 - name: NASA Pleiades Cluster
