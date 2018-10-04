@@ -44,6 +44,7 @@
 ./_images/small_e_logo_cropped.png
 ./_sources/about.rst.txt
 ./_sources/architecture.rst.txt
+./_sources/catalog.rst.txt
 ./_sources/collaborators.rst.txt
 ./_sources/contact.rst.txt
 ./_sources/data.rst.txt
@@ -173,6 +174,7 @@
 ./_static/websupport.js
 ./about.html
 ./architecture.html
+./catalog.html
 ./collaborators.html
 ./contact.html
 ./data.html

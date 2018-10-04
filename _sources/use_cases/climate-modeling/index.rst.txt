@@ -16,7 +16,7 @@ Climate modeling
 
 .. only:: html
 
-    .. figure:: //home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/sphinx_nbexamples/_static/no_image.png
+    .. figure:: //home/travis/miniconda/envs/docs-environment/lib/python3.6/site-packages/sphinx_nbexamples/_static/no_image.png
 
         :ref:`gallery_use_cases_climate-modeling_cesm-large-ensemble-tracer-budget-example.ipynb`
 
