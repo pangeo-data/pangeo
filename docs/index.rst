@@ -54,6 +54,7 @@ Contents
    setup_guides/index
    deployments
    data
+   catalog
    collaborators
    meeting-notes
    contact
