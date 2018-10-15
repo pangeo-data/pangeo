@@ -57,15 +57,15 @@ ACCESS
 Pangeo receives support from the NASA `ACCESS Program`_, which funds
 projects that enhance, extend, and improve existing components of NASA’s
 distributed and heterogeneous data and information systems infrastructure. This
-award supports scientists and engineers at the University of Washington (UW), the 
-National Center for Atmospheric Research (NCAR), Anacona Inc., and Element 84.
+award supports scientists and engineers at the University of Washington (UW), the
+National Center for Atmospheric Research (NCAR), Anaconda Inc., and Element 84.
 The public details of the awards will be published when NASA makes them available.
 In total, we were awarded $1.5M over a two year period (Sept. 2018 - Aug. 2020).
 
 The specific solicitation we responded to is `here <https://nspires.nasaprs.com/external/solicitations/summary.do?method=init&solId={7782DF97-B7AE-BDEC-A677-E96F281D39A3}&path=closedPast>`_.
 
 The project's focus will be on the development of new data discovery tools
-and processing of remote sensing datasets. 
+and processing of remote sensing datasets.
 
 .. _ACCESS Program: https://science.nasa.gov/earth-science/earth-science-data/open-solicitations-earth-science-data-systems/#access
 
@@ -119,8 +119,8 @@ Anaconda Inc.
 
 `Anaconda <https://anaconda.org/>`_ (formerly Continuum Analytics) receives
 support from the :ref:`EarthCube` and :ref:`nasaaccess` awards. Anaconda
-developers are contributing the development of xarray, dask, and the Pangeo
-cloud infrastucture.
+developers are contributing to the development of xarray, dask, and the Pangeo
+cloud infrastructure.
 
 UK Met Office
 ~~~~~~~~~~~~~
@@ -150,7 +150,7 @@ Element84
    :height: 50px
    :target: https://www.element84.com/
 
-`Element 84 <https://www.element84.com/>`_ is a primary recipient of the 
+`Element 84 <https://www.element84.com/>`_ is a primary recipient of the
 :ref:`nasaaccess` award. Element84 developers are contributing to the development
 of data-discovery tools in the Pangeo ecosystem.
 
