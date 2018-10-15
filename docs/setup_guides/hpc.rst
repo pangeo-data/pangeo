@@ -69,6 +69,14 @@ Configure Jupyter
 (If you don't plan to use Jupyter notebooks then you can safely skip
 this section.)
 
+.. note::
+
+   When using recent Jupyter iteration the following section can be replaced by simply invoking the command::
+
+      jupyter notebook password
+
+   And entering desired password.
+
 Jupyter notebook servers include a password for security. We're going to
 setup a password for ourselves. First we generate the Jupyter config
 file
