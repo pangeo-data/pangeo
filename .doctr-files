@@ -20,12 +20,14 @@
 ./_images/Sloan-Logo-primary-blac-web.png
 ./_images/anaconda-logo.png
 ./_images/dask_horizontal_no_pad.svg
+./_images/e84-logo.svg
 ./_images/gallery_use_cases_meteorology_newmann_ensemble_meteorology.ipynb_thumb.png
 ./_images/gallery_use_cases_physical-oceanography_sea-surface-height.ipynb_thumb.png
 ./_images/gallery_use_cases_physical-oceanography_sose.ipynb_thumb.png
 ./_images/interop.jpeg
 ./_images/jupyter-logo.svg
 ./_images/ldeo-logo.png
+./_images/logo_NASA.png
 ./_images/logo_NSF_earthcube_combined.png
 ./_images/metoffice-logo.png
 ./_images/ncar-logo.png
@@ -42,6 +44,7 @@
 ./_images/sea-surface-height_3.png
 ./_images/sea-surface-height_4.png
 ./_images/small_e_logo_cropped.png
+./_images/uw-logo.jpg
 ./_sources/about.rst.txt
 ./_sources/architecture.rst.txt
 ./_sources/catalog.rst.txt
@@ -140,6 +143,7 @@
 ./_static/doctools.js
 ./_static/down-pressed.png
 ./_static/down.png
+./_static/e84-logo.svg
 ./_static/example_gallery_styles.css
 ./_static/example_gallery_styles_patched.css
 ./_static/file.png
@@ -150,6 +154,7 @@
 ./_static/js/jquery-fix.js
 ./_static/jupyter-logo.svg
 ./_static/ldeo-logo.png
+./_static/logo_NASA.png
 ./_static/logo_NSF_earthcube_combined.png
 ./_static/metoffice-logo.png
 ./_static/minus.png
@@ -171,6 +176,7 @@
 ./_static/underscore.js
 ./_static/up-pressed.png
 ./_static/up.png
+./_static/uw-logo.jpg
 ./_static/websupport.js
 ./about.html
 ./architecture.html
