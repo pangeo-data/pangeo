@@ -269,8 +269,8 @@
 
 - first_name: Anderson
   last_name: Banihirwe
+  institution: National Center for Atmospheric Research
   website: https://andersy005.github.io/
-  email: axbanihirwe@gmail.com
   github: andersy005
   tags:
     - distributed computing
