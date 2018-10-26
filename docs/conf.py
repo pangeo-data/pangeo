@@ -36,7 +36,8 @@ extensions = [
     'sphinx.ext.todo',
     'sphinx.ext.mathjax',
     'nbsphinx',
-    'sphinx_nbexamples']
+    'sphinx_nbexamples',
+    'sphinx_copybutton']
 
 example_gallery_config = dict(
     dont_preprocess=True,
