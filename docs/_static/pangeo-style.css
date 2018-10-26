@@ -120,3 +120,11 @@ h3 {
 .icon {
   color: #003B71;
 }
+
+/* Data catalog */
+.data-catalog .list-inline {
+    margin-bottom: 0px;
+}
+.data-catalog pre {
+    margin-bottom: 0px;
+}

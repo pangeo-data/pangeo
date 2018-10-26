@@ -269,8 +269,8 @@
 
 - first_name: Anderson
   last_name: Banihirwe
+  institution: National Center for Atmospheric Research
   website: https://andersy005.github.io/
-  email: axbanihirwe@gmail.com
   github: andersy005
   tags:
     - distributed computing
@@ -425,7 +425,7 @@
   email: arendta@uw.edu
   github: aaarendt
   twitter: aaarendt
-  orcid: 0000-0003-0429-6905
+  orcid: 0000-0003-4891-7435
   tags:
     - alpine hydrology
     - geospatial mapping
@@ -662,3 +662,27 @@
     - Lagrangian modelling
     - particle tracking
     - finite element methods
+
+- first_name: Bart
+  last_name: Nijssen
+  institution: University of Washington
+  website: http://www.hydro.washington.edu
+  email: nijssen@uw.edu
+  github: bartnijssen
+  orcid: 0000-0002-4062-0322
+  tags:
+    - climate
+    - hydrology
+    - water resources
+    
+- first_name: Amanda
+  last_name: Tan
+  institution: University of Washington
+  website: https://escience.washington.edu/people/amanda-tan/
+  email: amandach@uw.edu
+  github: amanda-tan
+  orcid: 0000-0002-4062-0322
+  tags:
+    - cloud computing
+    - containers
+    - water resources
