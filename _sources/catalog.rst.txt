@@ -16,7 +16,7 @@ These datasets are directly accessible from the Google Cloud Pangeo deployment:
         <td>
           <div id="{{ name }}">
           <ul class="list-inline">
-            <li><a href="#{{ name }}"><strong>{{ name }}</strong><a></li><br>
+            <li><a href="#{{ name }}"><strong>{{ name }}</strong></a></li><br>
             <li>{{ entry.description }}</li><br>
             <li><em>Format: {{ entry.describe_open()['plugin'] }}</em></li>
             <li><em>Container: {{ entry.container }}</em></li><br>
