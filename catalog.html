@@ -184,8 +184,9 @@
 
   <tr>
     <td>
+      <div id="newmann_netcdf">
       <ul class="list-inline">
-        <li><strong>newmann_netcdf</strong></li><br>
+        <li><a href="#newmann_netcdf"><strong>newmann_netcdf</strong><a></li><br>
         <li>Newman met ensemble in netcdf</li><br>
         <li><em>Format: netcdf</em></li>
         <li><em>Container: xarray</em></li><br>
@@ -196,6 +197,7 @@ catalog_url = 'https://github.com/pangeo-data/pangeo/raw/master/gce/catalog.yaml
 newmann_netcdf = intake.Catalog(catalog_url).newmann_netcdf.to_dask()</pre>
         </li>
       </ul>
+      </div>
     </td>
   </tr>
 
@@ -203,8 +205,9 @@ newmann_netcdf = intake.Catalog(catalog_url).newmann_netcdf.to_dask()</pre>
 
   <tr>
     <td>
+      <div id="newmann_zarr">
       <ul class="list-inline">
-        <li><strong>newmann_zarr</strong></li><br>
+        <li><a href="#newmann_zarr"><strong>newmann_zarr</strong><a></li><br>
         <li>Newman met ensemble in zarr format (9 ens members)</li><br>
         <li><em>Format: zarr</em></li>
         <li><em>Container: xarray</em></li><br>
@@ -215,6 +218,7 @@ catalog_url = 'https://github.com/pangeo-data/pangeo/raw/master/gce/catalog.yaml
 newmann_zarr = intake.Catalog(catalog_url).newmann_zarr.to_dask()</pre>
         </li>
       </ul>
+      </div>
     </td>
   </tr>
 
@@ -222,8 +226,9 @@ newmann_zarr = intake.Catalog(catalog_url).newmann_zarr.to_dask()</pre>
 
   <tr>
     <td>
+      <div id="gmet_v1">
       <ul class="list-inline">
-        <li><strong>gmet_v1</strong></li><br>
+        <li><a href="#gmet_v1"><strong>gmet_v1</strong><a></li><br>
         <li>Full GMET version 1 (Newman) met ensemble in zarr format</li><br>
         <li><em>Format: zarr</em></li>
         <li><em>Container: xarray</em></li><br>
@@ -234,6 +239,7 @@ catalog_url = 'https://github.com/pangeo-data/pangeo/raw/master/gce/catalog.yaml
 gmet_v1 = intake.Catalog(catalog_url).gmet_v1.to_dask()</pre>
         </li>
       </ul>
+      </div>
     </td>
   </tr>
 
@@ -241,8 +247,9 @@ gmet_v1 = intake.Catalog(catalog_url).gmet_v1.to_dask()</pre>
 
   <tr>
     <td>
+      <div id="sea_surface_height">
       <ul class="list-inline">
-        <li><strong>sea_surface_height</strong></li><br>
+        <li><a href="#sea_surface_height"><strong>sea_surface_height</strong><a></li><br>
         <li>sea-surface altimetry data from The Copernicus Marine Environment</li><br>
         <li><em>Format: zarr</em></li>
         <li><em>Container: xarray</em></li><br>
@@ -253,6 +260,7 @@ catalog_url = 'https://github.com/pangeo-data/pangeo/raw/master/gce/catalog.yaml
 sea_surface_height = intake.Catalog(catalog_url).sea_surface_height.to_dask()</pre>
         </li>
       </ul>
+      </div>
     </td>
   </tr>
 
@@ -260,8 +268,9 @@ sea_surface_height = intake.Catalog(catalog_url).sea_surface_height.to_dask()</p
 
   <tr>
     <td>
+      <div id="SOSE">
       <ul class="list-inline">
-        <li><strong>SOSE</strong></li><br>
+        <li><a href="#SOSE"><strong>SOSE</strong><a></li><br>
         <li>Southern Ocean State Estimate</li><br>
         <li><em>Format: zarr</em></li>
         <li><em>Container: xarray</em></li><br>
@@ -272,6 +281,7 @@ catalog_url = 'https://github.com/pangeo-data/pangeo/raw/master/gce/catalog.yaml
 SOSE = intake.Catalog(catalog_url).SOSE.to_dask()</pre>
         </li>
       </ul>
+      </div>
     </td>
   </tr>
 
@@ -279,8 +289,9 @@ SOSE = intake.Catalog(catalog_url).SOSE.to_dask()</pre>
 
   <tr>
     <td>
+      <div id="LLC4320_grid">
       <ul class="list-inline">
-        <li><strong>LLC4320_grid</strong></li><br>
+        <li><a href="#LLC4320_grid"><strong>LLC4320_grid</strong><a></li><br>
         <li>MITgcm LLC4320 Ocean Simulation Grid</li><br>
         <li><em>Format: zarr</em></li>
         <li><em>Container: xarray</em></li><br>
@@ -291,6 +302,7 @@ catalog_url = 'https://github.com/pangeo-data/pangeo/raw/master/gce/catalog.yaml
 LLC4320_grid = intake.Catalog(catalog_url).LLC4320_grid.to_dask()</pre>
         </li>
       </ul>
+      </div>
     </td>
   </tr>
 
@@ -298,8 +310,9 @@ LLC4320_grid = intake.Catalog(catalog_url).LLC4320_grid.to_dask()</pre>
 
   <tr>
     <td>
+      <div id="LLC4320_SST">
       <ul class="list-inline">
-        <li><strong>LLC4320_SST</strong></li><br>
+        <li><a href="#LLC4320_SST"><strong>LLC4320_SST</strong><a></li><br>
         <li>MITgcm LLC4320 Ocean Simulation Sea Surface Temperature</li><br>
         <li><em>Format: zarr</em></li>
         <li><em>Container: xarray</em></li><br>
@@ -310,6 +323,7 @@ catalog_url = 'https://github.com/pangeo-data/pangeo/raw/master/gce/catalog.yaml
 LLC4320_SST = intake.Catalog(catalog_url).LLC4320_SST.to_dask()</pre>
         </li>
       </ul>
+      </div>
     </td>
   </tr>
 
@@ -317,8 +331,9 @@ LLC4320_SST = intake.Catalog(catalog_url).LLC4320_SST.to_dask()</pre>
 
   <tr>
     <td>
+      <div id="LLC4320_SSS">
       <ul class="list-inline">
-        <li><strong>LLC4320_SSS</strong></li><br>
+        <li><a href="#LLC4320_SSS"><strong>LLC4320_SSS</strong><a></li><br>
         <li>MITgcm LLC4320 Ocean Simulation Sea Surface Salinity</li><br>
         <li><em>Format: zarr</em></li>
         <li><em>Container: xarray</em></li><br>
@@ -329,6 +344,7 @@ catalog_url = 'https://github.com/pangeo-data/pangeo/raw/master/gce/catalog.yaml
 LLC4320_SSS = intake.Catalog(catalog_url).LLC4320_SSS.to_dask()</pre>
         </li>
       </ul>
+      </div>
     </td>
   </tr>
 
@@ -336,8 +352,9 @@ LLC4320_SSS = intake.Catalog(catalog_url).LLC4320_SSS.to_dask()</pre>
 
   <tr>
     <td>
+      <div id="LLC4320_SSH">
       <ul class="list-inline">
-        <li><strong>LLC4320_SSH</strong></li><br>
+        <li><a href="#LLC4320_SSH"><strong>LLC4320_SSH</strong><a></li><br>
         <li>MITgcm LLC4320 Ocean Simulation Sea Surface Height</li><br>
         <li><em>Format: zarr</em></li>
         <li><em>Container: xarray</em></li><br>
@@ -348,6 +365,7 @@ catalog_url = 'https://github.com/pangeo-data/pangeo/raw/master/gce/catalog.yaml
 LLC4320_SSH = intake.Catalog(catalog_url).LLC4320_SSH.to_dask()</pre>
         </li>
       </ul>
+      </div>
     </td>
   </tr>
 
@@ -355,8 +373,9 @@ LLC4320_SSH = intake.Catalog(catalog_url).LLC4320_SSH.to_dask()</pre>
 
   <tr>
     <td>
+      <div id="LLC4320_SSU">
       <ul class="list-inline">
-        <li><strong>LLC4320_SSU</strong></li><br>
+        <li><a href="#LLC4320_SSU"><strong>LLC4320_SSU</strong><a></li><br>
         <li>MITgcm LLC4320 Ocean Simulation Sea Surface Zonal Velocity</li><br>
         <li><em>Format: zarr</em></li>
         <li><em>Container: xarray</em></li><br>
@@ -367,6 +386,7 @@ catalog_url = 'https://github.com/pangeo-data/pangeo/raw/master/gce/catalog.yaml
 LLC4320_SSU = intake.Catalog(catalog_url).LLC4320_SSU.to_dask()</pre>
         </li>
       </ul>
+      </div>
     </td>
   </tr>
 
@@ -374,8 +394,9 @@ LLC4320_SSU = intake.Catalog(catalog_url).LLC4320_SSU.to_dask()</pre>
 
   <tr>
     <td>
+      <div id="LLC4320_SSV">
       <ul class="list-inline">
-        <li><strong>LLC4320_SSV</strong></li><br>
+        <li><a href="#LLC4320_SSV"><strong>LLC4320_SSV</strong><a></li><br>
         <li>MITgcm LLC4320 Ocean Simulation Sea Surface Meridional Velocity</li><br>
         <li><em>Format: zarr</em></li>
         <li><em>Container: xarray</em></li><br>
@@ -386,6 +407,7 @@ catalog_url = 'https://github.com/pangeo-data/pangeo/raw/master/gce/catalog.yaml
 LLC4320_SSV = intake.Catalog(catalog_url).LLC4320_SSV.to_dask()</pre>
         </li>
       </ul>
+      </div>
     </td>
   </tr>
 
@@ -393,8 +415,9 @@ LLC4320_SSV = intake.Catalog(catalog_url).LLC4320_SSV.to_dask()</pre>
 
   <tr>
     <td>
+      <div id="ECCOv4r3">
       <ul class="list-inline">
-        <li><strong>ECCOv4r3</strong></li><br>
+        <li><a href="#ECCOv4r3"><strong>ECCOv4r3</strong><a></li><br>
         <li>Estimating the Circulation and Climate of the Ocean (ECCO) State Estimate Version 4 Release 3</li><br>
         <li><em>Format: zarr</em></li>
         <li><em>Container: xarray</em></li><br>
@@ -405,6 +428,7 @@ catalog_url = 'https://github.com/pangeo-data/pangeo/raw/master/gce/catalog.yaml
 ECCOv4r3 = intake.Catalog(catalog_url).ECCOv4r3.to_dask()</pre>
         </li>
       </ul>
+      </div>
     </td>
   </tr>
 
