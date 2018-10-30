@@ -14,8 +14,9 @@ These datasets are directly accessible from the Google Cloud Pangeo deployment:
 
       <tr>
         <td>
+          <div id="{{ name }}">
           <ul class="list-inline">
-            <li><strong>{{ name }}</strong></li><br>
+            <li><a href="#{{ name }}"><strong>{{ name }}</strong><a></li><br>
             <li>{{ entry.description }}</li><br>
             <li><em>Format: {{ entry.describe_open()['plugin'] }}</em></li>
             <li><em>Container: {{ entry.container }}</em></li><br>
@@ -26,6 +27,7 @@ These datasets are directly accessible from the Google Cloud Pangeo deployment:
     {{ name }} = intake.Catalog(catalog_url).{{ name }}.to_dask()</pre>
             </li>
           </ul>
+          </div>
         </td>
       </tr>
     {% endfor %}
