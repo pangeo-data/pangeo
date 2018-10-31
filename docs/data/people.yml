@@ -686,3 +686,17 @@
     - cloud computing
     - containers
     - water resources
+
+- first_name: Ethan
+  last_name: Gutmann
+  institution: National Center for Atmospheric Research
+  website: http://ethangutmann.com
+  email: gutmann@ucar.edu
+  github: gutmann
+  twitter: egutmann
+  orcid: 0000-0003-4077-3430
+  tags:
+    - climate
+    - hydrology
+    - water resources
+    - distributed computing
