@@ -11,7 +11,7 @@ to their personal computers.
 Pangeo operates on a different philosophy; instead of bringing the data to the
 computer, we bring the computer to the data.
 The Pangeo :ref:`deployments` provide high-performance computing clusters in
-close proximmity to high-performance storage.
+close proximity to high-performance storage.
 Many widely used datasets are already stored on these systems.
 
 If you are interested in analyzing a specific large dataset, you should
@@ -100,12 +100,7 @@ datasets.
 These datasets are directly accessible from the Google Cloud Pangeo deployment:
 `pangeo.pydata.org <http://pangeo.pydata.org>`_.
 
-+--------+--------------+
-| Name   | Description  |
-+========+==============+
-| Under  | Construction |
-+--------+--------------+
-
+See the list of available data sets in the :ref:`data catalog <catalog>`.
 
 .. _cloud-data-guide:
 

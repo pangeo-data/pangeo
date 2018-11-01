@@ -35,7 +35,16 @@ extensions = [
     'sphinx.ext.intersphinx',
     'sphinx.ext.todo',
     'sphinx.ext.mathjax',
-    'nbsphinx']
+    'nbsphinx',
+    'sphinx_nbexamples',
+    'sphinx_copybutton']
+
+example_gallery_config = dict(
+    dont_preprocess=True,
+    examples_dirs=['../use_cases'],
+    gallery_dirs=['use_cases'],
+    pattern='.+.ipynb',
+    )
 
 # https://nbsphinx.readthedocs.io/en/0.2.16/never-execute.html
 nbsphinx_execute = 'never'
@@ -262,8 +271,11 @@ def rstjinja(app, docname, source):
 def setup(app):
     app.add_stylesheet("pangeo-style.css")  # also can be a full URL
     app.add_stylesheet("https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css")
+    app.add_stylesheet("example_gallery_styles_patched.css")
     app.connect("source-read", rstjinja)
 
+import intake
+catalog = intake.Catalog('../gce/catalog.yaml')
 
 # a hack to get our custom people data into sphinx
 import yaml
@@ -276,5 +288,6 @@ with open('data/deployments.yml') as deployments_data_file:
 
 html_context = {
     'people': people,
-    'deployments': deployments
+    'deployments': deployments,
+    'catalog': catalog
 }

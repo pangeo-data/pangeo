@@ -26,7 +26,7 @@ Our Goals
 #. Foster collaboration around the open source scientific python ecosystem for
    ocean / atmosphere / land / climate science.
 #. Support the development with domain-specific geoscience packages.
-#. Improve scalability of these tools to to handle petabyte-scale datasets on
+#. Improve scalability of these tools to handle petabyte-scale datasets on
    HPC and cloud platforms.
 
 Start Here
@@ -54,5 +54,15 @@ Contents
    setup_guides/index
    deployments
    data
+   catalog
    collaborators
+   meeting-notes
    contact
+
+Examples
+^^^^^^^^
+See our :ref:`use-cases` section.
+
+.. linkgalleries::
+
+    Pangeo

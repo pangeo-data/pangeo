@@ -76,6 +76,14 @@ Configure Jupyter
 (If you don't plan to use Jupyter notebooks then you can safely skip
 this section.)
 
+.. note::
+
+   When using recent Jupyter iteration the following section can be replaced by simply invoking the command::
+
+      jupyter notebook password
+
+   And entering desired password.
+
 Jupyter notebook servers include a password for security. We're going to
 setup a password for ourselves. First we generate the Jupyter config
 file and install a notebook proxy service:
@@ -124,6 +132,10 @@ is readable only by you. For more information on and other methods for
 securing Jupyter, check out
 `Securing a notebook server <http://jupyter-notebook.readthedocs.io/en/stable/public_server.html#securing-a-notebook-server>`__
 in the Jupyter documentation.
+
+::
+
+    chmod 400 ~/.jupyter/jupyter_notebook_config.py
 
 Finally, we may want to configure dask's dashboard to forward through Jupyter.
 This can be done by editing the dask distributed config file, e.g.:
@@ -179,17 +191,17 @@ later.
 
 ::
 
-    (pangeo) $ echo "ssh -N -L 8877:`hostname`:8877 $USER@cheyenne.ucar.edu"
-    ssh -N -L 8877:r8i4n0:8877 username@cheyenne.ucar.edu
+    (pangeo) $ echo "ssh -N -L 8888:`hostname`:8888 $USER@cheyenne.ucar.edu"
+    ssh -N -L 8888:r8i4n0:8888 username@cheyenne.ucar.edu
 
 Now we can launch the notebook server:
 
 ::
 
-    (pangeo) $ jupyter lab --no-browser --ip=`hostname` --port=8877
+    (pangeo) $ jupyter lab --no-browser --ip=`hostname` --port=8888
     ...
     [I 13:36:52.321 LabApp] The Jupyter Notebook is running at:
-    [I 13:36:52.321 LabApp] http://r8i4n0:8877/
+    [I 13:36:52.321 LabApp] http://r8i4n0:8888/
     [I 13:36:52.321 LabApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
 
 Now, connect to the server using an ssh tunnel from your local machine
@@ -197,11 +209,11 @@ Now, connect to the server using an ssh tunnel from your local machine
 
 ::
 
-    $ ssh -N -L 8877:r8i4n0:8877 username@cheyenne.ucar.edu
+    $ ssh -N -L 8888:r8i4n0:8888 username@cheyenne.ucar.edu
 
 You'll want to change the details in the command above but the basic idea is
-that we're passing the port 8877 from the compute node `r8i4n0` to our
-local system. Now open http://localhost:8877 on your local machine, you should
+that we're passing the port 8888 from the compute node `r8i4n0` to our
+local system. Now open http://localhost:8888 on your local machine, you should
 find a jupyter server running!
 
 Launch Dask with dask-jobqueue
@@ -252,7 +264,7 @@ cluster. MPI is **NOT** used for communication by dask.
 
 .. note::
 
-   The following scripts and proceedures have been packed into a convenient wrapper
+   The following scripts and procedures have been packed into a convenient wrapper
    script ``launch-dask.sh``. It and its supporting utilities can be found in the
    `pangeo Github reposository <https://github.com/pangeo-data/pangeo/tree/master/utilities/cheyenne>`__.
 
@@ -270,12 +282,12 @@ cluster. MPI is **NOT** used for communication by dask.
    .. code:: bash
 
        Run the following command from your local machine:
-       ssh -N -L 8877:r7i3n13:8877 -L 8878:r7i3n13:8787 username@cheyenne.ucar.edu
+       ssh -N -L 8888:r7i3n13:8888 -L 8787:r7i3n13:8787 username@cheyenne.ucar.edu
        Then open the following URLs:
-           Jupyter lab: http://localhost:8877
-           Dask dashboard: http://localhost:8878
+           Jupyter lab: http://localhost:8888
+           Dask dashboard: http://localhost:8787
 
-   It may be ncessessary to modify the included scripts to use different PBS
+   It may be necessary to modify the included scripts to use different PBS
    project number, conda environment, or notebook directory.
 
 *The remainder of this section is left here for completeness but for most users,
@@ -374,7 +386,7 @@ From your same session on the login node, run the following code:
 
     client.run_on_scheduler(start_jlab)
 
-    print("ssh -N -L 8787:%s:8787 -L 8888:%s:8888 cheyenne.ucar.edu" % (host, host))
+    print("ssh -N -L 8888:%s:8888  -L 8787:%s:8787 cheyenne.ucar.edu" % (host, host))
 
 This should print out a statement like the following:
 

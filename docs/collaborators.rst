@@ -46,6 +46,30 @@ You may share and adapt this document as you wish, but please acknowledge the au
 
 .. _EarthCube Program: https://earthcube.org/
 
+.. _nasaaccess:
+
+ACCESS
+~~~~~~
+
+.. image:: _static/logo_NASA.png
+   :height: 150px
+
+Pangeo receives support from the NASA `ACCESS Program`_, which funds
+projects that enhance, extend, and improve existing components of NASA’s
+distributed and heterogeneous data and information systems infrastructure. This
+award supports scientists and engineers at the University of Washington (UW), the
+National Center for Atmospheric Research (NCAR), Anaconda Inc., and Element 84.
+The public details of the awards will be published when NASA makes them available.
+In total, we were awarded $1.5M over a two year period (Sept. 2018 - Aug. 2020).
+
+The specific solicitation we responded to is `here <https://nspires.nasaprs.com/external/solicitations/summary.do?method=init&solId={7782DF97-B7AE-BDEC-A677-E96F281D39A3}&path=closedPast>`_.
+
+The project's focus will be on the development of new data discovery tools
+and processing of remote sensing datasets.
+
+.. _ACCESS Program: https://science.nasa.gov/earth-science/earth-science-data/open-solicitations-earth-science-data-systems/#access
+
+
 Sloan Foundation
 ~~~~~~~~~~~~~~~~
 
@@ -82,9 +106,9 @@ National Center for Atmospheric Research
    :target: https://ncar.ucar.edu/
 
 `NCAR <https://ncar.ucar.edu/>`_ is a primary recipient of the :ref:`EarthCube`
-award. NCAR scientists and programmers are leading the deployment of Pangeo
-on NCAR's high-performance computing systems and conducting scientific
-investigations using Pangeo tools.
+and :ref:`nasaaccess` awards. NCAR scientists and programmers are leading the
+deployment of Pangeo on NCAR's high-performance computing systems and conducting
+scientific investigations using Pangeo tools.
 
 Anaconda Inc.
 ~~~~~~~~~~~~~
@@ -94,8 +118,9 @@ Anaconda Inc.
    :target: https://anaconda.org/
 
 `Anaconda <https://anaconda.org/>`_ (formerly Continuum Analytics) receives
-support from the :ref:`EarthCube` award. Anaconda developers are contributing
-the development of xarray, dask, and the Pangeo cloud infrastucture.
+support from the :ref:`EarthCube` and :ref:`nasaaccess` awards. Anaconda
+developers are contributing to the development of xarray, dask, and the Pangeo
+cloud infrastructure.
 
 UK Met Office
 ~~~~~~~~~~~~~
@@ -106,6 +131,28 @@ UK Met Office
 
 Developers at the `UK Met Office Informatics Lab <http://www.informaticslab.co.uk>`_
 are contributing to the Pangeo cloud infrastructure.
+
+The University of Washington
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. image:: _static/uw-logo.jpg
+   :height: 75px
+   :target: https://www.washington.edu/
+
+UW is a primary recipient of the :ref:`nasaaccess` award. Scientists and
+programmers at UW are active in the development of Pangeo cloud architecture
+and scientific applications.
+
+Element84
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. image:: _static/e84-logo.svg
+   :height: 50px
+   :target: https://www.element84.com/
+
+`Element 84 <https://www.element84.com/>`_ is a primary recipient of the
+:ref:`nasaaccess` award. Element84 developers are contributing to the development
+of data-discovery tools in the Pangeo ecosystem.
 
 People
 ------

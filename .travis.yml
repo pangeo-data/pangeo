@@ -3,13 +3,25 @@ python: 3.6
 addons:
   apt_packages:
     - pandoc
-install: pip install -r docs/requirements.txt
+install:
+  - wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
+  - bash miniconda.sh -b -p $HOME/miniconda
+  - export PATH="$HOME/miniconda/bin:$PATH"
+  - hash -r
+  - conda config --set always_yes yes --set changeps1 no
+  - conda update -q conda
+  # Useful for debugging any issues with conda
+  - conda info -a
+  - conda create -q -n docs-environment -c conda-forge -c intake python=$TRAVIS_PYTHON_VERSION intake intake-xarray
+  - source activate docs-environment
+  - pip install -r docs/requirements.txt
 
 # https://github.com/drdoctr/doctr
 sudo: false
 env:
   global:
-    secure: "YVIIdedqg2auKJNhZTa+GMVMcQE2QJbUhUkCgaMHBI3dQLkX3WLGr148bPUdua7tmxzeScJ6B5oUUJFvJHagYN9nrycFrRZiIv0KnkYBn+rIUnlkUObcgMtKeNu+5/mXUYlkjSxG4Qip0zHgeOsM237Z+BFU1DhDJ7yJ+dQoIWYUSPd6uE4VhSf1lkMj/g2H5tHEB9c4YGdHBpuNHvu+RIyzJbkuLeLm6iM6zuKA7vI16AqzVDs2S4fssZUjYljtqMTBSmOIeavQQ5c209M8hA8wSiALwnD03LVYyZpE2YcsawaREp3+uqEaHui5xTKLogXz79n5+tTkrHEZrCstc+h5+CukyXKoUuhw5j95K4WDUNK9XcXX1TwMf9jMquSJQvnA4mupHFGCvDcenW3oNzOpF7ApyuEHi6+ty2hAZSG3Mr47cGr9I1jobv5tCyuYN/SJTTXuCWOBle72qwhLeSBU47+LpEczvxwIamrTnTkVgK+YJK7lmMzOKQ6l2mPn2EfTDptgAlpIxJuVEFhSRSF3F+wVyt2OFza9Y5cX8vcaKUmA2QT6+4b+w/o40AZHtO3HkZduKsoj8JmHFRppEh3hlVgqp6kTuoXo+DCP2ESTFEBN09Z1pyWlLOi96PojKLR36CeYb08r4OBTZ/yUUeLrP3A3+abA3bkFPSU4+9I="
+    - HV_DOC_HTML='true'
+    - secure: "YVIIdedqg2auKJNhZTa+GMVMcQE2QJbUhUkCgaMHBI3dQLkX3WLGr148bPUdua7tmxzeScJ6B5oUUJFvJHagYN9nrycFrRZiIv0KnkYBn+rIUnlkUObcgMtKeNu+5/mXUYlkjSxG4Qip0zHgeOsM237Z+BFU1DhDJ7yJ+dQoIWYUSPd6uE4VhSf1lkMj/g2H5tHEB9c4YGdHBpuNHvu+RIyzJbkuLeLm6iM6zuKA7vI16AqzVDs2S4fssZUjYljtqMTBSmOIeavQQ5c209M8hA8wSiALwnD03LVYyZpE2YcsawaREp3+uqEaHui5xTKLogXz79n5+tTkrHEZrCstc+h5+CukyXKoUuhw5j95K4WDUNK9XcXX1TwMf9jMquSJQvnA4mupHFGCvDcenW3oNzOpF7ApyuEHi6+ty2hAZSG3Mr47cGr9I1jobv5tCyuYN/SJTTXuCWOBle72qwhLeSBU47+LpEczvxwIamrTnTkVgK+YJK7lmMzOKQ6l2mPn2EfTDptgAlpIxJuVEFhSRSF3F+wVyt2OFza9Y5cX8vcaKUmA2QT6+4b+w/o40AZHtO3HkZduKsoj8JmHFRppEh3hlVgqp6kTuoXo+DCP2ESTFEBN09Z1pyWlLOi96PojKLR36CeYb08r4OBTZ/yUUeLrP3A3+abA3bkFPSU4+9I="
 
 script:
   - set -e

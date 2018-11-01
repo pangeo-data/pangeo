@@ -126,7 +126,7 @@
 
 - first_name: Ryan
   last_name: May
-  institution: University Corporation for Atmospheric Research/Unidat
+  institution: University Corporation for Atmospheric Research/Unidata
   website: http://www.unidata.ucar.edu
   email: rmay@ucar.edu
   github: dopplershift
@@ -269,8 +269,8 @@
 
 - first_name: Anderson
   last_name: Banihirwe
+  institution: National Center for Atmospheric Research
   website: https://andersy005.github.io/
-  email: axbanihirwe@gmail.com
   github: andersy005
   tags:
     - distributed computing
@@ -425,7 +425,7 @@
   email: arendta@uw.edu
   github: aaarendt
   twitter: aaarendt
-  orcid: 0000-0003-0429-6905
+  orcid: 0000-0003-4891-7435
   tags:
     - alpine hydrology
     - geospatial mapping
@@ -458,7 +458,7 @@
     - data visualization
     - cloud computing
     - embedded hardware
-    - eduation and public outreach
+    - education and public outreach
     
 - first_name: John
   last_name: Burkhart
@@ -548,7 +548,7 @@
   twitter: dwatsonparris
   orcid: 0000-0002-5312-4950
   tags:
-    - amotpsheric physics
+    - atmospheric physics
     - numerical modelling
     - observations
     - data fusion
@@ -578,3 +578,125 @@
     - physical oceanography
     - coastal ocean modeling
 
+- first_name: Leif
+  last_name: Denby
+  institution: ICAS, University of Leeds
+  email: leif@denby.eu
+  github: leifdenby
+  tags:
+    - numerical modelling
+    - atmospheric dynamics
+    - cloud computing
+
+- first_name: Paul
+  last_name: Branson
+  institution: CSIRO/University of Western Australia
+  email: paul.branson@csiro.au
+  github: pbranson
+  twitter: pablobranson
+  orcid: 0000-0002-3825-9873
+  tags:
+    - physical oceanography
+    - coastal ocean modelling
+    - image analysis
+    - particle imaging velocimetry
+
+- first_name: Ray
+  last_name: Bell
+  institution: Univesrsity of Miami
+  email: rbell@rsmas.miami.edu
+  github: raybellwaves
+  twitter: RayBell_UM
+  orcid: 0000-0003-2623-0587
+  tags:
+    - ocean wave modelling
+    - subseasonal forecasting
+
+- first_name: Guillaume
+  last_name: Eynard-Bontemps
+  institution: CNES, French space agency
+  email: guillaume.eynard-bontemps@cnes.fr
+  github: guillaumeeb
+  tags:
+    - distributed computing
+    - data engineering and analysis
+    - HPC
+    - cloud computing
+    - infrastructure
+    - IT architecture
+
+- first_name: Niall
+  last_name: Robinson
+  institution: Met Office Informatics Lab
+  website: http://informaticslab.co.uk/profiles/niall-robinson
+  email: niall.robinson@informaticslab.co.uk
+  github: niallrobinson
+  twitter: niallhrobinson
+  tags:
+    - atmospheric science
+    - distributed computing
+    - cloud computing
+    - HPC
+
+- first_name: Willi
+  last_name: Rath
+  institution: GEOMAR Helmholtz Centre for Ocean Research Kiel
+  website: https://www.geomar.de/en/staff/fb1/tm/wrath/
+  email: wrath@geomar.de
+  github: willirath
+  tags:
+    - physical oceanography
+    - distributed computing
+    - ocean-data management
+    - HPC
+
+- first_name: Philippe
+  last_name: Delandmeter
+  institution: Institute for Marine and Atmospheric research Utrecht, Utrecht University, Netherlands
+  website: https://www.uu.nl/staff/PBDelandmeter
+  email: p.b.delandmeter@uu.nl
+  github: delandmeterp
+  orcid: 0000-0003-0100-5834
+  tags:
+    - ocean numerical modelling
+    - Lagrangian modelling
+    - particle tracking
+    - finite element methods
+
+- first_name: Bart
+  last_name: Nijssen
+  institution: University of Washington
+  website: http://www.hydro.washington.edu
+  email: nijssen@uw.edu
+  github: bartnijssen
+  orcid: 0000-0002-4062-0322
+  tags:
+    - climate
+    - hydrology
+    - water resources
+    
+- first_name: Amanda
+  last_name: Tan
+  institution: University of Washington
+  website: https://escience.washington.edu/people/amanda-tan/
+  email: amandach@uw.edu
+  github: amanda-tan
+  orcid: 0000-0002-4062-0322
+  tags:
+    - cloud computing
+    - containers
+    - water resources
+
+- first_name: Ethan
+  last_name: Gutmann
+  institution: National Center for Atmospheric Research
+  website: http://ethangutmann.com
+  email: gutmann@ucar.edu
+  github: gutmann
+  twitter: egutmann
+  orcid: 0000-0003-4077-3430
+  tags:
+    - climate
+    - hydrology
+    - water resources
+    - distributed computing

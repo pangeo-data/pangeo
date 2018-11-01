@@ -3,7 +3,7 @@ plugins:
     - module: intake_xarray
 sources:
   newmann_netcdf:
-    description: newmann meteo ensemble in netcdf
+    description: Newman met ensemble in netcdf
     driver: netcdf
     args:
       urlpath: '/gcs/newmann-met-ensemble-netcdf/conus_ens_00*.nc'
@@ -11,7 +11,7 @@ sources:
       concat_dim: ensemble
       chunks: {'time': 50}
   newmann_zarr:
-    description: newmann meteo ensemble in netcdf
+    description: Newman met ensemble in zarr format (9 ens members)
     driver: zarr
     args:
       storage_options:
@@ -19,10 +19,131 @@ sources:
         token: anon
         access: read_only
       urlpath: 'gcs://pangeo-data/newman-met-ensemble'
-  sea_surface:
+  gmet_v1:
+    description: Full GMET version 1 (Newman) met ensemble in zarr format
+    driver: zarr
+    args:
+      storage_options:
+        project: 'pangeo-181919'
+        token: anon
+        access: read_only
+      urlpath: 'gcs://pangeo-data/gmet_v1.zarr'
+  sea_surface_height:
     description: sea-surface altimetry data from The Copernicus Marine Environment
+    metadata:
+      url: 'http://marine.copernicus.eu/services-portfolio/access-to-products/?option=com_csw&view=details&product_id=SEALEVEL_GLO_PHY_L4_REP_OBSERVATIONS_008_047'
+      tags:
+        - ocean
+        - satellite
     driver: zarr
     args:
       urlpath: gcs://pangeo-data/dataset-duacs-rep-global-merged-allsat-phy-l4-v3-alt
       storage_options:
         token: anon
+        
+  SOSE:
+    description: Southern Ocean State Estimate
+    metadata:
+      url: 'http://sose.ucsd.edu/'
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      urlpath: 'gcs://pangeo-data/SOSE'
+      storage_options:
+        token: anon
+        
+  LLC4320_grid:
+    description: MITgcm LLC4320 Ocean Simulation Grid
+    metadata:
+      url: 'http://online.kitp.ucsb.edu/online/blayers18/menemenlis/'
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      urlpath: 'gcs://pangeo-data/llc4320_surface/grid'
+      storage_options:
+        token: anon
+ 
+  LLC4320_SST:
+    description: MITgcm LLC4320 Ocean Simulation Sea Surface Temperature
+    metadata:
+      url: 'http://online.kitp.ucsb.edu/online/blayers18/menemenlis/'
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      urlpath: 'gcs://pangeo-data/llc4320_surface/SST'
+      storage_options:
+        token: anon
+
+  LLC4320_SSS:
+    description: MITgcm LLC4320 Ocean Simulation Sea Surface Salinity
+    metadata:
+      url: 'http://online.kitp.ucsb.edu/online/blayers18/menemenlis/'
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      urlpath: 'gcs://pangeo-data/llc4320_surface/SSS'
+      storage_options:
+        token: anon
+
+  LLC4320_SSH:
+    description: MITgcm LLC4320 Ocean Simulation Sea Surface Height
+    metadata:
+      url: 'http://online.kitp.ucsb.edu/online/blayers18/menemenlis/'
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      urlpath: 'gcs://pangeo-data/llc4320_surface/Eta'
+      storage_options:
+        token: anon
+
+  LLC4320_SSU:
+    description: MITgcm LLC4320 Ocean Simulation Sea Surface Zonal Velocity
+    metadata:
+      url: 'http://online.kitp.ucsb.edu/online/blayers18/menemenlis/'
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      urlpath: 'gcs://pangeo-data/llc4320_surface/U'
+      storage_options:
+        token: anon
+
+  LLC4320_SSV:
+    description: MITgcm LLC4320 Ocean Simulation Sea Surface Meridional Velocity
+    metadata:
+      url: 'http://online.kitp.ucsb.edu/online/blayers18/menemenlis/'
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      urlpath: 'gcs://pangeo-data/llc4320_surface/V'
+      storage_options:
+        token: anon
+        
+  ECCOv4r3:
+    description: Estimating the Circulation and Climate of the Ocean (ECCO) State Estimate Version 4 Release 3
+    metadata:
+      url: 'https://ecco-v4-python-tutorial.readthedocs.io/intro.html'
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      urlpath: 'gcs://pangeo-data/ecco/eccov4r3'
+      storage_options:
+        token: anon      
+
+     
+    
