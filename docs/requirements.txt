@@ -7,3 +7,5 @@ nbconvert
 nbsphinx
 doctr>=1.6.3
 sphinx-nbexamples
+sphinx-copybutton
+
