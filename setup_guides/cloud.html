@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/example_gallery_styles.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pangeo-style.css" type="text/css" />
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/example_gallery_styles_patched.css" type="text/css" />
@@ -23,6 +24,8 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+    <script type="text/javascript" src="../_static/copybutton.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
@@ -286,12 +289,8 @@ Run the following from the commmand line</p>
 </div>
 <p>Now here is a bash script that will create a cluster corresponding to Pangeo
 need:
-- An incompressible default node pool for the Jupyterhub, web proxy, and user</p>
-<blockquote>
-<div>notebook servers.</div></blockquote>
-<ul class="simple">
-<li>An auto scaling node pool for Dask workers.</li>
-</ul>
+- An incompressible default node pool for the Jupyterhub, web proxy, and user notebook servers.
+- An auto scaling node pool for Dask workers.</p>
 <p>This script is availabe in pangeo/gce/setup-guide as <code class="docutils literal"><span class="pre">1_create_cluster.sh</span></code>,
 so you can use it directly.</p>
 <div class="highlight-bash"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
@@ -322,6 +321,15 @@ gcloud container node-pools create worker-pool --zone<span class="o">=</span><sp
     --num-nodes<span class="o">=</span><span class="nv">$MIN_WORKER_NODES</span> --max-nodes<span class="o">=</span><span class="nv">$MAX_WORKER_NODES</span> --min-nodes<span class="o">=</span><span class="nv">$MIN_WORKER_NODES</span>
 gcloud container clusters get-credentials <span class="nv">$CLUSTER_NAME</span> --zone<span class="o">=</span><span class="nv">$ZONE</span> --project <span class="nv">$PROJECTID</span>
 </pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If you expect your notebook images to be fairly large, it may be adventageous
+to setup your cluster to use faster SSD boot disks. This will typically provide
+faster boot times for notebooks and Dask workers. To do this, you’ll want
+to setup your cluster and any node pools with the <code class="docutils literal"><span class="pre">--disk-type</span> <span class="pre">pd-ssd</span></code> option.
+More information on how to configure SSD boot disks can be found in the <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/custom-boot-disks">GCP
+documentation</a>.</p>
 </div>
 </div>
 <div class="section" id="step-three-configure-kubernetes">
@@ -360,9 +368,7 @@ gcloud compute addresses list | grep pangeo-jhubip
 </div>
 <p>Other things you might want to configure, but that can be left as is:
 - EXTRA_PIP_PACKAGES: for adding some python modules to your user environment.
-- GCSFUSE_BUCKET: for mounting some google cloud storage bucket as a standard</p>
-<blockquote>
-<div>file system.</div></blockquote>
+- GCSFUSE_BUCKET: for mounting some google cloud storage bucket as a standard file system.</p>
 <div class="highlight-yaml"><div class="highlight"><pre><span></span><span class="c1"># file: jupyter_config.yaml</span>
 
 <span class="l l-Scalar l-Scalar-Plain">jupyterhub</span><span class="p p-Indicator">:</span>

@@ -139,6 +139,9 @@
 ./_static/comment-bright.png
 ./_static/comment-close.png
 ./_static/comment.png
+./_static/copy-button.svg
+./_static/copybutton.css
+./_static/copybutton.js
 ./_static/dask_horizontal_no_pad.svg
 ./_static/doctools.js
 ./_static/down-pressed.png

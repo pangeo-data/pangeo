@@ -102,8 +102,7 @@ Run the following from the commmand line
 
 Now here is a bash script that will create a cluster corresponding to Pangeo
 need:
-- An incompressible default node pool for the Jupyterhub, web proxy, and user
-  notebook servers.
+- An incompressible default node pool for the Jupyterhub, web proxy, and user notebook servers.
 - An auto scaling node pool for Dask workers.
 
 This script is availabe in pangeo/gce/setup-guide as ``1_create_cluster.sh``,
@@ -139,6 +138,13 @@ so you can use it directly.
       --num-nodes=$MIN_WORKER_NODES --max-nodes=$MAX_WORKER_NODES --min-nodes=$MIN_WORKER_NODES
   gcloud container clusters get-credentials $CLUSTER_NAME --zone=$ZONE --project $PROJECTID
 
+.. Note::
+  If you expect your notebook images to be fairly large, it may be adventageous
+  to setup your cluster to use faster SSD boot disks. This will typically provide
+  faster boot times for notebooks and Dask workers. To do this, you'll want
+  to setup your cluster and any node pools with the ``--disk-type pd-ssd`` option.
+  More information on how to configure SSD boot disks can be found in the `GCP
+  documentation <https://cloud.google.com/kubernetes-engine/docs/how-to/custom-boot-disks>`_.
 
 Step Three: Configure Kubernetes
 --------------------------------
@@ -184,8 +190,7 @@ you can do so by running::
 
 Other things you might want to configure, but that can be left as is:
 - EXTRA_PIP_PACKAGES: for adding some python modules to your user environment.
-- GCSFUSE_BUCKET: for mounting some google cloud storage bucket as a standard
-  file system.
+- GCSFUSE_BUCKET: for mounting some google cloud storage bucket as a standard file system.
 
 .. code-block:: yaml
 
