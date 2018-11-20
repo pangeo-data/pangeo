@@ -228,18 +228,18 @@ done from within your Jupyter Notebook:
 
     from dask_jobqueue import PBSCluster
 
-    cluster = PBSCluster(processes=18,
-                         threads=4, memory="6GB",
+    cluster = PBSCluster(cores=36,
+                         processes=18, memory="6GB",
                          project='UCLB0022',
                          queue='premium',
                          resource_spec='select=1:ncpus=36:mem=109G',
                          walltime='02:00:00')
-    cluster.start_workers(18)
+    cluster.scale(18)
 
     from dask.distributed import Client
     client = Client(cluster)
 
-The `start_workers()` method submits a batch of jobs to the job queue system
+The `scale()` method submits a batch of jobs to the job queue system
 (in this case PBS). Depending on how busy the job queue is, it can take a few
 minutes for workers to join your cluster. You can usually check the status of
 your queued jobs using a command line utility like `qstat`. You can also check
