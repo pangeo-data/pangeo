@@ -240,8 +240,15 @@ create isolated software environments so that we can experiment in the
 future safely.</p>
 <p>Create a new conda environment for our pangeo work:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">create</span> <span class="o">-</span><span class="n">n</span> <span class="n">pangeo</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> \
-    <span class="n">python</span><span class="o">=</span><span class="mf">3.6</span> <span class="n">dask</span> <span class="n">distributed</span> <span class="n">xarray</span> <span class="n">jupyterlab</span> <span class="n">mpi4py</span> <span class="n">dask</span><span class="o">-</span><span class="n">jobqueue</span>
+    <span class="n">python</span><span class="o">=</span><span class="mf">3.6</span> <span class="n">xarray</span> \
+    <span class="n">jupyterlab</span> <span class="n">nbserverproxy</span> \
+    <span class="n">dask</span> <span class="n">distributed</span> <span class="n">mpi4py</span> <span class="n">dask</span><span class="o">-</span><span class="n">jobqueue</span>
 </pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Depending on your application, you may choose to add additional conda
+packages to this list.</p>
 </div>
 <p>Activate this environment</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="n">activate</span> <span class="n">pangeo</span>
@@ -272,8 +279,9 @@ this section.)</p>
 </div>
 <p>Jupyter notebook servers include a password for security. We’re going to
 setup a password for ourselves. First we generate the Jupyter config
-file</p>
+file and install a notebook proxy service:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">jupyter</span> <span class="n">notebook</span> <span class="o">--</span><span class="n">generate</span><span class="o">-</span><span class="n">config</span>
+<span class="n">jupyter</span> <span class="n">serverextension</span> <span class="n">enable</span> <span class="o">--</span><span class="n">py</span> <span class="n">nbserverproxy</span>
 </pre></div>
 </div>
 <p>This created a file in <code class="docutils literal"><span class="pre">~/.jupyter/jupyter_notebook_config.py</span></code>. If you
@@ -307,6 +315,12 @@ securing Jupyter, check out
 <a class="reference external" href="http://jupyter-notebook.readthedocs.io/en/stable/public_server.html#securing-a-notebook-server">Securing a notebook server</a>
 in the Jupyter documentation.</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">chmod</span> <span class="mi">400</span> <span class="o">~/.</span><span class="n">jupyter</span><span class="o">/</span><span class="n">jupyter_notebook_config</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>Finally, we may want to configure dask’s dashboard to forward through Jupyter.
+This can be done by editing the dask distributed config file, e.g.:
+<code class="docutils literal"><span class="pre">.config/dask/distributed.yaml</span></code>. In this file, set:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">diagnostics</span><span class="o">-</span><span class="n">link</span><span class="p">:</span> <span class="s2">&quot;/proxy/{port}/status&quot;</span>
 </pre></div>
 </div>
 <hr class="docutils" />
@@ -343,8 +357,8 @@ check with your system administrators to see if they have something similar.
 If not, you’ll need to take the following steps:</p>
 <p>Copy this line into your terminal. It will echo a command you’ll want to use
 later.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>(pangeo) $ echo &quot;ssh -N -L 8888:`hostname`:8888 -L 8787:`hostname`:8787 $USER@cheyenne.ucar.edu&quot;
-ssh -N -L 8888:r8i4n0:8888 -L 8787:r8i4n0:8787 username@cheyenne.ucar.edu
+<div class="highlight-default"><div class="highlight"><pre><span></span>(pangeo) $ echo &quot;ssh -N -L 8888:`hostname`:8888 $USER@cheyenne.ucar.edu&quot;
+ssh -N -L 8888:r8i4n0:8888 username@cheyenne.ucar.edu
 </pre></div>
 </div>
 <p>Now we can launch the notebook server:</p>
@@ -357,15 +371,13 @@ ssh -N -L 8888:r8i4n0:8888 -L 8787:r8i4n0:8787 username@cheyenne.ucar.edu
 </div>
 <p>Now, connect to the server using an ssh tunnel from your local machine
 (this could be your laptop or desktop).</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>$ ssh -N -L 8888:r8i4n0:8888 -L 8787:r8i4n0:8787 username@cheyenne.ucar.edu
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ ssh -N -L 8888:r8i4n0:8888 username@cheyenne.ucar.edu
 </pre></div>
 </div>
 <p>You’ll want to change the details in the command above but the basic idea is
-that we’re passing the ports 8888 and 8787 from the compute node <cite>r8i4n0</cite> to our
+that we’re passing the port 8888 from the compute node <cite>r8i4n0</cite> to our
 local system. Now open <a class="reference external" href="http://localhost:8888">http://localhost:8888</a> on your local machine, you should
 find a jupyter server running!</p>
-<p><em>Note that we’re also passing the 8787 port through so we can access the dask
-dashboard later.</em></p>
 </div>
 <div class="section" id="launch-dask-with-dask-jobqueue">
 <h3>Launch Dask with dask-jobqueue<a class="headerlink" href="#launch-dask-with-dask-jobqueue" title="Permalink to this headline">¶</a></h3>
@@ -375,19 +387,29 @@ dask interface with these job queuing systems. Usage is quite simple and can be
 done from within your Jupyter Notebook:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">dask_jobqueue</span> <span class="kn">import</span> <span class="n">PBSCluster</span>
 
-<span class="n">cluster</span> <span class="o">=</span> <span class="n">PBSCluster</span><span class="p">(</span><span class="n">processes</span><span class="o">=</span><span class="mi">18</span><span class="p">,</span>
-                     <span class="n">threads</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">memory</span><span class="o">=</span><span class="s2">&quot;6GB&quot;</span><span class="p">,</span>
+<span class="n">cluster</span> <span class="o">=</span> <span class="n">PBSCluster</span><span class="p">(</span><span class="n">cores</span><span class="o">=</span><span class="mi">36</span><span class="p">,</span>
+                     <span class="n">processes</span><span class="o">=</span><span class="mi">18</span><span class="p">,</span> <span class="n">memory</span><span class="o">=</span><span class="s2">&quot;6GB&quot;</span><span class="p">,</span>
                      <span class="n">project</span><span class="o">=</span><span class="s1">&#39;UCLB0022&#39;</span><span class="p">,</span>
                      <span class="n">queue</span><span class="o">=</span><span class="s1">&#39;premium&#39;</span><span class="p">,</span>
                      <span class="n">resource_spec</span><span class="o">=</span><span class="s1">&#39;select=1:ncpus=36:mem=109G&#39;</span><span class="p">,</span>
                      <span class="n">walltime</span><span class="o">=</span><span class="s1">&#39;02:00:00&#39;</span><span class="p">)</span>
-<span class="n">cluster</span><span class="o">.</span><span class="n">start_workers</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">cluster</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="mi">18</span><span class="p">)</span>
 
 <span class="kn">from</span> <span class="nn">dask.distributed</span> <span class="kn">import</span> <span class="n">Client</span>
 <span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="n">cluster</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>For more examples of how to use <a class="reference external" href="http://dask-jobqueue.readthedocs.io">dask-jobqueue</a>, refer to the <a class="reference external" href="http://dask-jobqueue.readthedocs.io">package documentation</a>.</p>
+<p>The <cite>scale()</cite> method submits a batch of jobs to the job queue system
+(in this case PBS). Depending on how busy the job queue is, it can take a few
+minutes for workers to join your cluster. You can usually check the status of
+your queued jobs using a command line utility like <cite>qstat</cite>. You can also check
+the status of your cluster from inside your Jupyter session:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">client</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>For more examples of how to use
+<a class="reference external" href="http://dask-jobqueue.readthedocs.io">dask-jobqueue</a>, refer to the
+<a class="reference external" href="http://dask-jobqueue.readthedocs.io">package documentation</a>.</p>
 </div>
 </div>
 <div class="section" id="deploy-option-2-jupyter-dask-mpi">
