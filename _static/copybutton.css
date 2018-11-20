@@ -3,11 +3,10 @@ a.copybtn {
     position: absolute;
     top: 0;
     right: 0;
-    margin: 5px;
     width: 1em;
     height: 1em;
-    padding: 0 4px 2px;
-  }
+    padding: .3em;
+}
 
 div.highlight  {
     position: relative;
