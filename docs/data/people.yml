@@ -700,3 +700,16 @@
     - hydrology
     - water resources
     - distributed computing
+    
+- first_name: Savio
+  last_name: Kay
+  institution: University of Maryland - Baltimore County
+  website: https://saviokay.com
+  email: saviosebastian08@gmail.com
+  github: saviokay
+  tags:
+    - climate
+    - distributed computing
+    - water resources
+    - cloud computing
+
