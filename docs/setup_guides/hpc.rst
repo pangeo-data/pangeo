@@ -41,7 +41,14 @@ Create a new conda environment for our pangeo work:
 ::
 
     conda create -n pangeo -c conda-forge \
-        python=3.6 dask distributed xarray jupyterlab mpi4py dask-jobqueue
+        python=3.6 xarray \
+        jupyterlab nbserverproxy \
+        dask distributed mpi4py dask-jobqueue
+
+.. note::
+
+   Depending on your application, you may choose to add additional conda
+   packages to this list.
 
 Activate this environment
 
@@ -79,11 +86,12 @@ this section.)
 
 Jupyter notebook servers include a password for security. We're going to
 setup a password for ourselves. First we generate the Jupyter config
-file
+file and install a notebook proxy service:
 
 ::
 
     jupyter notebook --generate-config
+    jupyter serverextension enable --py nbserverproxy
 
 This created a file in ``~/.jupyter/jupyter_notebook_config.py``. If you
 open that file and search for "password", you'll see a line like the
@@ -128,6 +136,14 @@ in the Jupyter documentation.
 ::
 
     chmod 400 ~/.jupyter/jupyter_notebook_config.py
+
+Finally, we may want to configure dask's dashboard to forward through Jupyter.
+This can be done by editing the dask distributed config file, e.g.:
+``.config/dask/distributed.yaml``. In this file, set:
+
+.. code:: python
+
+    diagnostics-link: "/proxy/{port}/status"
 
 ------------
 
@@ -175,8 +191,8 @@ later.
 
 ::
 
-    (pangeo) $ echo "ssh -N -L 8888:`hostname`:8888 -L 8787:`hostname`:8787 $USER@cheyenne.ucar.edu"
-    ssh -N -L 8888:r8i4n0:8888 -L 8787:r8i4n0:8787 username@cheyenne.ucar.edu
+    (pangeo) $ echo "ssh -N -L 8888:`hostname`:8888 $USER@cheyenne.ucar.edu"
+    ssh -N -L 8888:r8i4n0:8888 username@cheyenne.ucar.edu
 
 Now we can launch the notebook server:
 
@@ -193,16 +209,12 @@ Now, connect to the server using an ssh tunnel from your local machine
 
 ::
 
-    $ ssh -N -L 8888:r8i4n0:8888 -L 8787:r8i4n0:8787 username@cheyenne.ucar.edu
+    $ ssh -N -L 8888:r8i4n0:8888 username@cheyenne.ucar.edu
 
 You'll want to change the details in the command above but the basic idea is
-that we're passing the ports 8888 and 8787 from the compute node `r8i4n0` to our
+that we're passing the port 8888 from the compute node `r8i4n0` to our
 local system. Now open http://localhost:8888 on your local machine, you should
 find a jupyter server running!
-
-*Note that we're also passing the 8787 port through so we can access the dask
-dashboard later.*
-
 
 Launch Dask with dask-jobqueue
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -216,18 +228,30 @@ done from within your Jupyter Notebook:
 
     from dask_jobqueue import PBSCluster
 
-    cluster = PBSCluster(processes=18,
-                         threads=4, memory="6GB",
+    cluster = PBSCluster(cores=36,
+                         processes=18, memory="6GB",
                          project='UCLB0022',
                          queue='premium',
                          resource_spec='select=1:ncpus=36:mem=109G',
                          walltime='02:00:00')
-    cluster.start_workers(10)
+    cluster.scale(18)
 
     from dask.distributed import Client
     client = Client(cluster)
 
-For more examples of how to use `dask-jobqueue`_, refer to the `package documentation <http://dask-jobqueue.readthedocs.io>`__.
+The `scale()` method submits a batch of jobs to the job queue system
+(in this case PBS). Depending on how busy the job queue is, it can take a few
+minutes for workers to join your cluster. You can usually check the status of
+your queued jobs using a command line utility like `qstat`. You can also check
+the status of your cluster from inside your Jupyter session:
+
+.. code:: python
+
+    print(client)
+
+For more examples of how to use
+`dask-jobqueue`_, refer to the
+`package documentation <http://dask-jobqueue.readthedocs.io>`__.
 
 Deploy Option 2: Jupyter + dask-mpi
 -----------------------------------

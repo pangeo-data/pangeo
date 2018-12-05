@@ -269,8 +269,8 @@
 
 - first_name: Anderson
   last_name: Banihirwe
+  institution: National Center for Atmospheric Research
   website: https://andersy005.github.io/
-  email: axbanihirwe@gmail.com
   github: andersy005
   tags:
     - distributed computing
@@ -690,7 +690,6 @@
 - first_name: Micah
   last_name: Wengren
   institution: NOAA
-  website: https://www.google.com/search?q=micah+wengren
   email: micah.wengren@gmail.com
   github: mwengren
   twitter: micahwengren
@@ -701,3 +700,30 @@
     - atmospheric science
     - oceanography
     - geology
+
+- first_name: Ethan
+  last_name: Gutmann
+  institution: National Center for Atmospheric Research
+  website: http://ethangutmann.com
+  email: gutmann@ucar.edu
+  github: gutmann
+  twitter: egutmann
+  orcid: 0000-0003-4077-3430
+  tags:
+    - climate
+    - hydrology
+    - water resources
+    - distributed computing
+    
+- first_name: Savio
+  last_name: Kay
+  institution: University of Maryland - Baltimore County
+  website: https://saviokay.com
+  email: saviosebastian08@gmail.com
+  github: saviokay
+  tags:
+    - climate
+    - distributed computing
+    - water resources
+    - cloud computing
+
