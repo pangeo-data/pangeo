@@ -360,7 +360,7 @@ kubectl --namespace<span class="o">=</span>kube-system patch deployment tiller-d
 <div class="section" id="step-four-create-cluster-specific-configuration">
 <h2>Step Four: Create Cluster-Specific Configuration<a class="headerlink" href="#step-four-create-cluster-specific-configuration" title="Permalink to this headline">¶</a></h2>
 <p>There are two configuration files needed to deploy the Pangeo helm chart.
-Thos files are available in the pangeo/gce/setup-guide folder of this repo.
+Those files are available in the pangeo/gce/setup-guide folder of this repo.
 The first, <code class="docutils literal"><span class="pre">jupyter_config.yaml</span></code>, specifies modifications to the
 configuration that are unique to each deployment.</p>
 <p>Most important thing to configure here is the  <code class="docutils literal"><span class="pre">loadBalancerIP</span></code>. If you’ve
@@ -370,9 +370,12 @@ you can do so by running:</p>
 gcloud compute addresses list | grep pangeo-jhubip
 </pre></div>
 </div>
-<p>Other things you might want to configure, but that can be left as is:
-- EXTRA_PIP_PACKAGES: for adding some python modules to your user environment.
-- GCSFUSE_BUCKET: for mounting some google cloud storage bucket as a standard file system.</p>
+<p>Other things you might want to configure, but that can be left as is:</p>
+<ul class="simple">
+<li>EXTRA_PIP_PACKAGES: for adding some python modules to your user environment.
+file system.</li>
+<li>GCSFUSE_BUCKET: for mounting some google cloud storage bucket as a standard file system.</li>
+</ul>
 <div class="highlight-yaml"><div class="highlight"><pre><span></span><span class="c1"># file: jupyter_config.yaml</span>
 
 <span class="l l-Scalar l-Scalar-Plain">jupyterhub</span><span class="p p-Indicator">:</span>
