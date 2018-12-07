@@ -136,7 +136,7 @@
   platform: Microsoft Azure Cloud
   dask: dask-kubernetes
   jupyter: JupyterHub
-  kind: cloud
+  kind: other_cloud
 
 - name: CNES HAL
   description: CNES research and productioncluster
@@ -158,14 +158,14 @@
   platform: Google Cloud Platform
   dask: dask-kubernetes
   jupyter: Jupyterhub
-  kind: cloud
+  kind: other_cloud
 
 - name: Met Office Informatics Lab
   description: A prototype cluster for the Met Office.
   platform: Amazon Web Services
   dask: dask-kubernetes
   jupyter: Jupyterhub
-  kind: cloud
+  kind: other_cloud
 
 - name: UW Hyak
   description: The University of Washington's shared supercomputing cluster.
@@ -189,7 +189,7 @@
   platform: Google Cloud Platform
   dask: dask-kubernetes
   jupyter: Jupyterhub
-  kind: cloud
+  kind: other_cloud
 
 - name: GFDL Post-processing and Analysis Cluster
   description: HPC cluster running at the NOAA Geophyiscal Fluid Dynamics Laboratory
