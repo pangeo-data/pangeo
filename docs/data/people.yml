@@ -726,4 +726,16 @@
     - distributed computing
     - water resources
     - cloud computing
+    
+- first_name: Jianwu
+  last_name: Wang
+  institution: University of Maryland - Baltimore County
+  website: https://userpages.umbc.edu/~jianwu/
+  email: jianwu@umbc.edu
+  github: jianwuwang
+  tags:
+    - climate informatics
+    - distributed computing
+    - cloud computing
+    - big data
 
