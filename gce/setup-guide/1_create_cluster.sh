@@ -8,6 +8,8 @@ NUM_NODES=2
 
 # create cluster on GCP
 gcloud config set project $PROJECTID
+gcloud services enable container.googleapis.com #To enable the Kubernetes Engine API
+
 gcloud container clusters create $CLUSTER_NAME --num-nodes=$NUM_NODES --zone=$ZONE \
     --machine-type=n1-standard-2 --no-enable-legacy-authorization
 #gcloud container node-pools create worker-pool --zone=$ZONE --cluster=$CLUSTER_NAME \
