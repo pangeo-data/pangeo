@@ -193,5 +193,4 @@ sources:
     driver: rasterio
     args:
       urlpath: 'gcs://pangeo-data/hydrosheds'
-      storage_options:
-        token: anon
+      chunks: {'lat': 6000, 'lon': 6000}
