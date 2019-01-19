@@ -145,5 +145,53 @@ sources:
       storage_options:
         token: anon      
 
-     
-    
+  gpm_imerg_early:
+    description: Early rainfall estimates from NASA's Global Precipitation Measurement mission
+    metadata:
+      url: 'https://pmm.nasa.gov/data-access/downloads/gpm'
+      tags:
+        - precipitation
+        - satellite
+    driver: zarr
+    args:
+      urlpath: 'gcs://pangeo-data/gpm_imerg_early'
+      storage_options:
+        token: anon
+
+  trmm_3b42rt:
+    description: Near real time rainfall estimates from NASA's Tropical Rainfall Measuring Mission
+    metadata:
+      url: 'https://trmm.gsfc.nasa.gov/data_dir/data.html'
+      tags:
+        - precipitation
+        - satellite
+    driver: zarr
+    args:
+      urlpath: 'gcs://pangeo-data/trmm_3b42rt'
+      storage_options:
+        token: anon
+
+  cgiar_pet:
+    description: Global potential evapotranspiration from CGIAR-CSI
+    metadata:
+      url: 'https://cgiarcsi.community/data/global-aridity-and-pet-database'
+      tags:
+        - evapotranspiration
+    driver: zarr
+    args:
+      urlpath: 'gcs://pangeo-data/cgiar_pet'
+      storage_options:
+        token: anon
+
+  hydrosheds:
+    description: Drainage directions and flow accumulation at 3-second resolution
+    metadata:
+      url: 'https://www.hydrosheds.org'
+      tags:
+        - drainage
+        - flow
+    driver: rasterio
+    args:
+      urlpath: 'gcs://pangeo-data/hydrosheds'
+      storage_options:
+        token: anon
