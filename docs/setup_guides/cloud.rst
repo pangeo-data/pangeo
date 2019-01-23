@@ -4,7 +4,7 @@ Deploying Pangeo on the Cloud
 =============================
 
 The commercial cloud is a powerful environment in which to deploy a Pangeo environment.
-However, cloud computing is unfamiliar to most geoscientists.
+However, cloud computing is unfamiliar to most researchers.
 The point of this guide is to describe how to setup up your own Pangeo cluster
 on the cloud platform of your choice, assuming zero knowledge of how the cloud works.
 We do assume you are comfortable using the unix command line and have access
