@@ -162,9 +162,12 @@ The jupyterhub proxy secret token is a random hash, which you can generate as fo
 
   $ openssl rand -hex 32
 
+Replace `<SECRET>` in the `secretToken` section with the output of this (note:
+you will stilll need the quotes around this value)
+
+
 Pangeo.pydata.org uses `GitHub OAuth Callback`_, (or `GitHub OAuth for developers`_)
-to authenticate users. The ``clientSecret`` token needs to be obtained via
-github.
+to authenticate users.
 
 This authentication method needs an IP or domain name to work. This should be
 the IP you've reserved above, if you don't have a domain name yet. Insert
@@ -175,6 +178,10 @@ this IP in the following block::
         loadBalancerIP: <GCE_EXTERNAL_IP>
 
 Instead of `GCE_EXTERNAL_IP`.
+
+Replace `clientId`, `clientSecret` and `callbackUrl` values in the
+`secret_config.yaml` file with the values obtained from the GitHub app that you
+create for this.
 
 Alternatively, you can also change authentication method, see the
 `Zero to Jupyterhub`_ guide for more information on that.
