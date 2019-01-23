@@ -507,17 +507,38 @@ cgiar_pet = intake.Catalog(catalog_url).cgiar_pet.to_dask()</pre>
 
   <tr>
     <td>
-      <div id="hydrosheds">
+      <div id="hydrosheds_dir">
       <ul class="list-inline">
-        <li><a href="#hydrosheds"><strong>hydrosheds</strong></a></li><br>
-        <li>Drainage directions and flow accumulation at 3-second resolution</li><br>
+        <li><a href="#hydrosheds_dir"><strong>hydrosheds_dir</strong></a></li><br>
+        <li>Drainage directions at 3-second resolution</li><br>
         <li><em>Format: rasterio</em></li>
         <li><em>Container: xarray</em></li><br>
-        <li><em>Location: gcs://pangeo-data/hydrosheds</em></li>
+        <li><em>Location: gs://pangeo-data/hydrosheds/dir.vrt</em></li>
         <li>
         <pre>import intake
 catalog_url = 'https://github.com/pangeo-data/pangeo/raw/master/gce/catalog.yaml'
-hydrosheds = intake.Catalog(catalog_url).hydrosheds.to_dask()</pre>
+hydrosheds_dir = intake.Catalog(catalog_url).hydrosheds_dir.to_dask()</pre>
+        </li>
+      </ul>
+      </div>
+    </td>
+  </tr>
+
+
+
+  <tr>
+    <td>
+      <div id="hydrosheds_acc">
+      <ul class="list-inline">
+        <li><a href="#hydrosheds_acc"><strong>hydrosheds_acc</strong></a></li><br>
+        <li>Flow accumulation at 3-second resolution</li><br>
+        <li><em>Format: rasterio</em></li>
+        <li><em>Container: xarray</em></li><br>
+        <li><em>Location: gs://pangeo-data/hydrosheds/acc.vrt</em></li>
+        <li>
+        <pre>import intake
+catalog_url = 'https://github.com/pangeo-data/pangeo/raw/master/gce/catalog.yaml'
+hydrosheds_acc = intake.Catalog(catalog_url).hydrosheds_acc.to_dask()</pre>
         </li>
       </ul>
       </div>
