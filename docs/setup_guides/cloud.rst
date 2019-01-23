@@ -166,7 +166,7 @@ Replace `<SECRET>` in the `secretToken` section with the output of this (note:
 you will stilll need the quotes around this value)
 
 
-Pangeo.pydata.org uses `GitHub OAuth Callback`_, (or `GitHub OAuth for developers`_)
+Most pangeo deployments use `GitHub OAuth Callback`_, (or `GitHub OAuth for developers`_)
 to authenticate users.
 
 This authentication method needs an IP or domain name to work. This should be
