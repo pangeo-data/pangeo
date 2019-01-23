@@ -43,7 +43,7 @@ cluster.
 If you have already installed the Google Cloud SDK, the easiest way to install
 kubectl is to run the following command on the command line::
 
-  $ gcloud components install kubectl
+gcloud components install kubectl
 
 More comprehensive documentation for installing Kubernetes can be found at
 https://kubernetes.io/docs/tasks/tools/install-kubectl/.
@@ -59,7 +59,7 @@ https://docs.helm.sh/install/.
 
 To do this in one line from the command line, run::
 
-  $ curl https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get | bash
+  curl https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get | bash
 
 Pangeo scripts template
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -160,7 +160,7 @@ The jupyterhub proxy secret token is a random hash, which you can generate as fo
 
 .. code-block:: bash
 
-  $ openssl rand -hex 32
+  openssl rand -hex 32
 
 Replace `<SECRET>` in the `secretToken` section with the output of this (note:
 you will stilll need the quotes around this value)
