@@ -65,7 +65,7 @@ Pangeo scripts template
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 Following chapters describe some batch scripts that are available in the pangeo
-repo. Just clone the repo using git and go to the appropriate folder to use
+repo. Clone the repo using git and go to the appropriate folder to use
 them
 
 .. code-block:: bash
