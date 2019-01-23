@@ -183,14 +183,32 @@ sources:
       storage_options:
         token: anon
 
-  hydrosheds:
-    description: Drainage directions and flow accumulation at 3-second resolution
+  hydrosheds_dir:
+    description: Drainage directions at 3-second resolution
     metadata:
       url: 'https://www.hydrosheds.org'
       tags:
         - drainage
+    driver: rasterio
+    cache:
+      - argkey: urlpath
+        regex: 'pangeo-data'
+        type: file
+    args:
+      urlpath: 'gs://pangeo-data/hydrosheds/dir.vrt'
+      chunks: {'y': 6000, 'x': 6000}
+
+  hydrosheds_acc:
+    description: Flow accumulation at 3-second resolution
+    metadata:
+      url: 'https://www.hydrosheds.org'
+      tags:
         - flow
     driver: rasterio
+    cache:
+      - argkey: urlpath
+        regex: 'pangeo-data'
+        type: file
     args:
-      urlpath: 'gcs://pangeo-data/hydrosheds'
-      chunks: {'lat': 6000, 'lon': 6000}
+      urlpath: 'gs://pangeo-data/hydrosheds/acc.vrt'
+      chunks: {'y': 6000, 'x': 6000}
