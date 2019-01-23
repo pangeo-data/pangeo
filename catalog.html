@@ -440,6 +440,90 @@ ECCOv4r3 = intake.Catalog(catalog_url).ECCOv4r3.to_dask()</pre>
     </td>
   </tr>
 
+
+
+  <tr>
+    <td>
+      <div id="gpm_imerg_early">
+      <ul class="list-inline">
+        <li><a href="#gpm_imerg_early"><strong>gpm_imerg_early</strong></a></li><br>
+        <li>Early rainfall estimates from NASA's Global Precipitation Measurement mission</li><br>
+        <li><em>Format: zarr</em></li>
+        <li><em>Container: xarray</em></li><br>
+        <li><em>Location: gcs://pangeo-data/gpm_imerg_early</em></li>
+        <li>
+        <pre>import intake
+catalog_url = 'https://github.com/pangeo-data/pangeo/raw/master/gce/catalog.yaml'
+gpm_imerg_early = intake.Catalog(catalog_url).gpm_imerg_early.to_dask()</pre>
+        </li>
+      </ul>
+      </div>
+    </td>
+  </tr>
+
+
+
+  <tr>
+    <td>
+      <div id="trmm_3b42rt">
+      <ul class="list-inline">
+        <li><a href="#trmm_3b42rt"><strong>trmm_3b42rt</strong></a></li><br>
+        <li>Near real time rainfall estimates from NASA's Tropical Rainfall Measuring Mission</li><br>
+        <li><em>Format: zarr</em></li>
+        <li><em>Container: xarray</em></li><br>
+        <li><em>Location: gcs://pangeo-data/trmm_3b42rt</em></li>
+        <li>
+        <pre>import intake
+catalog_url = 'https://github.com/pangeo-data/pangeo/raw/master/gce/catalog.yaml'
+trmm_3b42rt = intake.Catalog(catalog_url).trmm_3b42rt.to_dask()</pre>
+        </li>
+      </ul>
+      </div>
+    </td>
+  </tr>
+
+
+
+  <tr>
+    <td>
+      <div id="cgiar_pet">
+      <ul class="list-inline">
+        <li><a href="#cgiar_pet"><strong>cgiar_pet</strong></a></li><br>
+        <li>Global potential evapotranspiration from CGIAR-CSI</li><br>
+        <li><em>Format: zarr</em></li>
+        <li><em>Container: xarray</em></li><br>
+        <li><em>Location: gcs://pangeo-data/cgiar_pet</em></li>
+        <li>
+        <pre>import intake
+catalog_url = 'https://github.com/pangeo-data/pangeo/raw/master/gce/catalog.yaml'
+cgiar_pet = intake.Catalog(catalog_url).cgiar_pet.to_dask()</pre>
+        </li>
+      </ul>
+      </div>
+    </td>
+  </tr>
+
+
+
+  <tr>
+    <td>
+      <div id="hydrosheds">
+      <ul class="list-inline">
+        <li><a href="#hydrosheds"><strong>hydrosheds</strong></a></li><br>
+        <li>Drainage directions and flow accumulation at 3-second resolution</li><br>
+        <li><em>Format: rasterio</em></li>
+        <li><em>Container: xarray</em></li><br>
+        <li><em>Location: gcs://pangeo-data/hydrosheds</em></li>
+        <li>
+        <pre>import intake
+catalog_url = 'https://github.com/pangeo-data/pangeo/raw/master/gce/catalog.yaml'
+hydrosheds = intake.Catalog(catalog_url).hydrosheds.to_dask()</pre>
+        </li>
+      </ul>
+      </div>
+    </td>
+  </tr>
+
 </table></div>
 
 
