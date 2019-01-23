@@ -193,9 +193,10 @@ The following script deploys the most recent Pangeo Helm chart to your
 Kubernetes cluster.
 
 If you want to use a specific version, check `Pangeo Helm Chart
-<https://pangeo-data.github.io/helm-chart/>`_ for the version you want.
-You can then add a ``--version=0.1.1-a14d55b`` argument to ``helm install``
-command, only keeping the last part of the release, without ``pangeo-v``.
+<https://pangeo-data.github.io/helm-chart/>`_ for the version you want. You can
+then add a ``--version=0.1.1-a14d55b`` argument (for example) to ``helm
+install`` command, only keeping the last part of the release, without
+the ``pangeo-v`` prefix from the helm chart web-page.
 
 This script is available as
 ` ``3_deploy_helm.sh_`` <https://github.com/pangeo-data/pangeo/blob/master/gce/setup-guide/3_deploy_helm.sh>`_
