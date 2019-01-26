@@ -3,7 +3,7 @@ export PROJECTID='<YOUR GOOGLE CLOUD PROJECT ID>'
 # Kubernetes cluster admin
 export EMAIL='<THE EMAIL ADDRESS ASSOCIATED WITH YOUR GOOGLE CLOUD ACCOUNT>'
 
-# this is the zone used by pangeo.pydata.org
+# Set up zone and region (see: https://cloud.google.com/compute/docs/regions-zones/)
 export ZONE='<CLOUD ZONE>'
 export REGION='<CLOUD_REGION>'
 

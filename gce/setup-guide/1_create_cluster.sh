@@ -2,8 +2,6 @@
 
 set -e
 
-echo $PROJECTID
-
 NUM_NODES=2
 
 # create cluster on GCP
