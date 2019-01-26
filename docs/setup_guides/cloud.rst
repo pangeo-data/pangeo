@@ -109,7 +109,7 @@ create a cluster with the components that Pangeo requires:
 
 This script is availabe in pangeo/gce/setup-guide as
 ` ``1_create_cluster.sh`` <https://github.com/pangeo-data/pangeo/blob/master/gce/setup-guide/1_create_cluster.sh>`_,
-so you can use it directly, after editing it.
+so you can use it directly.
 
 .. Note::
   If you expect your notebook images to be fairly large, it may be adventageous
