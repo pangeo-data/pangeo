@@ -214,9 +214,9 @@
       
   <div class="section" id="deploying-pangeo-on-the-cloud">
 <span id="cloud"></span><h1>Deploying Pangeo on the Cloud<a class="headerlink" href="#deploying-pangeo-on-the-cloud" title="Permalink to this headline">¶</a></h1>
-<p>The commercial cloud is a powerful environment in which to deploy a pangeo environment.
-However, cloud computing is unfamiliar to most geoscientists.
-The point of this guide is to describe how to setup up your own pangeo cluster
+<p>The commercial cloud is a powerful environment in which to deploy a Pangeo environment.
+However, cloud computing is unfamiliar to most researchers.
+The point of this guide is to describe how to setup up your own Pangeo cluster
 on the cloud platform of your choice, assuming zero knowledge of how the cloud works.
 We do assume you are comfortable using the unix command line and have access
 to one on your personal computer.</p>
@@ -244,9 +244,7 @@ and manage applications on Kubernetes. It is necessary to deploy a Pangeo
 cluster.</p>
 <p>If you have already installed the Google Cloud SDK, the easiest way to install
 kubectl is to run the following command on the command line:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>$ gcloud components install kubectl
-</pre></div>
-</div>
+<p>gcloud components install kubectl</p>
 <p>More comprehensive documentation for installing Kubernetes can be found at
 <a class="reference external" href="https://kubernetes.io/docs/tasks/tools/install-kubectl/">https://kubernetes.io/docs/tasks/tools/install-kubectl/</a>.</p>
 </div>
@@ -257,14 +255,14 @@ and deploy the Pangeo default configuration for your cluster.</p>
 <p>To install the helm command line client, follow the installation instructions at
 <a class="reference external" href="https://docs.helm.sh/install/">https://docs.helm.sh/install/</a>.</p>
 <p>To do this in one line from the command line, run:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>$ curl https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get | bash
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">curl</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">raw</span><span class="o">.</span><span class="n">githubusercontent</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">kubernetes</span><span class="o">/</span><span class="n">helm</span><span class="o">/</span><span class="n">master</span><span class="o">/</span><span class="n">scripts</span><span class="o">/</span><span class="n">get</span> <span class="o">|</span> <span class="n">bash</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="pangeo-scripts-template">
 <h3>Pangeo scripts template<a class="headerlink" href="#pangeo-scripts-template" title="Permalink to this headline">¶</a></h3>
 <p>Following chapters describe some batch scripts that are available in the pangeo
-repo. Just clone the repo using git and go to the appropriate folder to use
+repo. Clone the repo using git and go to the appropriate folder to use
 them</p>
 <div class="highlight-bash"><div class="highlight"><pre><span></span>git clone https://github.com/pangeo-data/pangeo.git
 <span class="nb">cd</span> pangeo/gce/setup-guide
@@ -288,45 +286,22 @@ in the Google Cloud console.
 From the <em>APIs and Services</em> section of the cloud console, you must then
 enable the Kubernetes Engine API for the project.</p>
 <p>To create the cluster from the command line, you must first be authenticated.
-Run the following from the commmand line</p>
+Run the following from the commmand line:</p>
 <div class="highlight-bash"><div class="highlight"><pre><span></span>gcloud auth login
 </pre></div>
 </div>
-<p>Now here is a bash script that will create a cluster corresponding to Pangeo
-need:
-- An incompressible default node pool for the Jupyterhub, web proxy, and user notebook servers.
-- An auto scaling node pool for Dask workers.</p>
-<p>This script is availabe in pangeo/gce/setup-guide as <code class="docutils literal"><span class="pre">1_create_cluster.sh</span></code>,
+<p>Following this step, you will need to run a set of bash commands to
+create a cluster with the components that Pangeo requires:</p>
+<blockquote>
+<div><ul class="simple">
+<li>An incompressible default node pool for the Jupyterhub, web proxy, and user
+notebook servers.</li>
+<li>An auto scaling node pool for Dask workers.</li>
+</ul>
+</div></blockquote>
+<p>This script is availabe in pangeo/gce/setup-guide as
+` <code class="docutils literal"><span class="pre">1_create_cluster.sh</span></code> &lt;<a class="reference external" href="https://github.com/pangeo-data/pangeo/blob/master/gce/setup-guide/1_create_cluster.sh">https://github.com/pangeo-data/pangeo/blob/master/gce/setup-guide/1_create_cluster.sh</a>&gt;`_,
 so you can use it directly.</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
-
-<span class="nb">set</span> -e
-
-<span class="nv">PROJECTID</span><span class="o">=</span>&lt;YOUR GOOGLE CLOUD PROJECT ID&gt;
-<span class="c1"># this is the zone used by pangeo.pydata.org</span>
-<span class="nv">ZONE</span><span class="o">=</span><span class="s1">&#39;us-central1-b&#39;</span>
-
-<span class="c1"># cluster size settings: modify as needed to fit your needs / budget</span>
-<span class="nv">NUM_NODES</span><span class="o">=</span><span class="m">2</span>
-<span class="nv">MIN_WORKER_NODES</span><span class="o">=</span><span class="m">0</span>
-<span class="nv">MAX_WORKER_NODES</span><span class="o">=</span><span class="m">100</span>
-<span class="nv">CLUSTER_NAME</span><span class="o">=</span><span class="s1">&#39;pangeo&#39;</span>
-
-<span class="c1"># https://cloud.google.com/compute/pricing</span>
-<span class="c1"># change the machine typer based on your computing needs</span>
-<span class="nv">WORKER_MACHINE_TYPE</span><span class="o">=</span><span class="s1">&#39;n1-standard-4&#39;</span>
-
-<span class="c1"># create cluster on GCP</span>
-gcloud config <span class="nb">set</span> container/new_scopes_behavior <span class="nb">true</span>
-gcloud config <span class="nb">set</span> project <span class="nv">$PROJECTID</span>
-gcloud container clusters create <span class="nv">$CLUSTER_NAME</span> --num-nodes<span class="o">=</span><span class="nv">$NUM_NODES</span> --zone<span class="o">=</span><span class="nv">$ZONE</span> <span class="se">\</span>
-    --machine-type<span class="o">=</span>n1-standard-2 --no-enable-legacy-authorization
-gcloud container node-pools create worker-pool --zone<span class="o">=</span><span class="nv">$ZONE</span> --cluster<span class="o">=</span><span class="nv">$CLUSTER_NAME</span> <span class="se">\</span>
-    --machine-type<span class="o">=</span><span class="nv">$WORKER_MACHINE_TYPE</span> --preemptible --enable-autoscaling <span class="se">\</span>
-    --num-nodes<span class="o">=</span><span class="nv">$MIN_WORKER_NODES</span> --max-nodes<span class="o">=</span><span class="nv">$MAX_WORKER_NODES</span> --min-nodes<span class="o">=</span><span class="nv">$MIN_WORKER_NODES</span>
-gcloud container clusters get-credentials <span class="nv">$CLUSTER_NAME</span> --zone<span class="o">=</span><span class="nv">$ZONE</span> --project <span class="nv">$PROJECTID</span>
-</pre></div>
-</div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">If you expect your notebook images to be fairly large, it may be adventageous
@@ -341,174 +316,67 @@ documentation</a>.</p>
 <h2>Step Three: Configure Kubernetes<a class="headerlink" href="#step-three-configure-kubernetes" title="Permalink to this headline">¶</a></h2>
 <p>This script sets up the Kubernetes <a class="reference external" href="https://kubernetes.io/docs/reference/access-authn-authz/rbac/">Role Based Access Control</a>
 necessary for a secure cluster deployment.</p>
-<p>This script is available in pangeo/gce/setup-guide as
-<code class="docutils literal"><span class="pre">2_configure_kubernetes.sh</span></code>.</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
-
-<span class="nb">set</span> -e
-
-<span class="nv">EMAIL</span><span class="o">=</span>&lt;THE EMAIL ADDRESS ASSOCIATED WITH YOUR GOOGLE CLOUD ACCOUNT&gt;
-
-kubectl create clusterrolebinding cluster-admin-binding --clusterrole<span class="o">=</span>cluster-admin --user<span class="o">=</span><span class="nv">$EMAIL</span>
-kubectl create serviceaccount tiller --namespace<span class="o">=</span>kube-system
-kubectl create clusterrolebinding tiller --clusterrole<span class="o">=</span>cluster-admin --serviceaccount<span class="o">=</span>kube-system:tiller
-helm init --service-account tiller
-kubectl --namespace<span class="o">=</span>kube-system patch deployment tiller-deploy --type<span class="o">=</span>json <span class="se">\</span>
-      --patch<span class="o">=</span><span class="s1">&#39;[{&quot;op&quot;: &quot;add&quot;, &quot;path&quot;: &quot;/spec/template/spec/containers/0/command&quot;, &quot;value&quot;: [&quot;/tiller&quot;, &quot;--listen=localhost:44134&quot;]}]&#39;</span>
-</pre></div>
-</div>
+<p>This script is available in pangeo/gce/setup-guide as ` <code class="docutils literal"><span class="pre">2_configure_kubernetes.sh</span></code> &lt;<a class="reference external" href="https://github.com/pangeo-data/pangeo/blob/master/gce/setup-guide/2_configure_kubernetes.sh">https://github.com/pangeo-data/pangeo/blob/master/gce/setup-guide/2_configure_kubernetes.sh</a>&gt;`_.</p>
 </div>
 <div class="section" id="step-four-create-cluster-specific-configuration">
 <h2>Step Four: Create Cluster-Specific Configuration<a class="headerlink" href="#step-four-create-cluster-specific-configuration" title="Permalink to this headline">¶</a></h2>
-<p>There are two configuration files needed to deploy the Pangeo helm chart.
-Those files are available in the pangeo/gce/setup-guide folder of this repo.
-The first, <code class="docutils literal"><span class="pre">jupyter_config.yaml</span></code>, specifies modifications to the
-configuration that are unique to each deployment.</p>
-<p>Most important thing to configure here is the  <code class="docutils literal"><span class="pre">loadBalancerIP</span></code>. If you’ve
-not <a class="reference external" href="https://cloud.google.com/compute/docs/ip-addresses/reserve-static-external-ip-address">reserved a static external IP</a>,
+<p>There are two configuration files needed to deploy the Pangeo helm chart. Those
+files are available in the pangeo/gce/setup-guide folder of this repo. The
+first,
+` <code class="docutils literal"><span class="pre">jupyter_config.yaml</span></code> &lt;<a class="reference external" href="https://github.com/pangeo-data/pangeo/blob/master/gce/setup-guide/jupyter_config.yaml">https://github.com/pangeo-data/pangeo/blob/master/gce/setup-guide/jupyter_config.yaml</a>&gt;`_,
+specifies modifications to the configuration that are unique to each deployment, so you will need to edit it.</p>
+<p>The most important thing to configure here is the  <code class="docutils literal"><span class="pre">loadBalancerIP</span></code>.
+If you have not <a class="reference external" href="https://cloud.google.com/compute/docs/ip-addresses/reserve-static-external-ip-address">reserved a static external IP</a>,
 you can do so by running:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>gcloud compute addresses create pangeo-jhubip --region $REGION
 gcloud compute addresses list | grep pangeo-jhubip
 </pre></div>
 </div>
 <p>Other things you might want to configure, but that can be left as is:</p>
-<ul class="simple">
-<li>EXTRA_PIP_PACKAGES: for adding some python modules to your user environment.
+<blockquote>
+<div><ul class="simple">
+<li>EXTRA_PIP_PACKAGES: for adding some python modules to your user environment.</li>
+<li>GCSFUSE_BUCKET: for mounting some google cloud storage bucket as a standard
 file system.</li>
-<li>GCSFUSE_BUCKET: for mounting some google cloud storage bucket as a standard file system.</li>
 </ul>
-<div class="highlight-yaml"><div class="highlight"><pre><span></span><span class="c1"># file: jupyter_config.yaml</span>
-
-<span class="nt">jupyterhub</span><span class="p">:</span>
-  <span class="nt">singleuser</span><span class="p">:</span>
-    <span class="nt">cmd</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="s">&#39;start-singleuser.sh&#39;</span><span class="p p-Indicator">]</span>
-    <span class="nt">extraEnv</span><span class="p">:</span>
-      <span class="nt">EXTRA_PIP_PACKAGES</span><span class="p">:</span> <span class="p p-Indicator">&gt;-</span>
-      <span class="nt">GCSFUSE_BUCKET</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pangeo-data</span>
-    <span class="nt">storage</span><span class="p">:</span>
-      <span class="nt">extraVolumes</span><span class="p">:</span>
-        <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">fuse</span>
-          <span class="nt">hostPath</span><span class="p">:</span>
-            <span class="nt">path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/dev/fuse</span>
-      <span class="nt">extraVolumeMounts</span><span class="p">:</span>
-        <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">fuse</span>
-          <span class="nt">mountPath</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/dev/fuse</span>
-    <span class="nt">cloudMetadata</span><span class="p">:</span>
-      <span class="nt">enabled</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
-    <span class="nt">cpu</span><span class="p">:</span>
-      <span class="nt">limit</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">4</span>
-      <span class="nt">guarantee</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
-    <span class="nt">memory</span><span class="p">:</span>
-      <span class="nt">limit</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">14G</span>
-      <span class="nt">guarantee</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">4G</span>
-
-  <span class="nt">hub</span><span class="p">:</span>
-    <span class="nt">extraConfig</span><span class="p">:</span>
-      <span class="nt">customPodHook</span><span class="p">:</span> <span class="p p-Indicator">|</span>
-        <span class="no">from kubernetes import client</span>
-        <span class="no">def modify_pod_hook(spawner, pod):</span>
-            <span class="no">pod.spec.containers[0].security_context = client.V1SecurityContext(</span>
-                <span class="no">privileged=True,</span>
-                <span class="no">capabilities=client.V1Capabilities(</span>
-                    <span class="no">add=[&#39;SYS_ADMIN&#39;]</span>
-                <span class="no">)</span>
-            <span class="no">)</span>
-            <span class="no">return pod</span>
-        <span class="no">c.KubeSpawner.modify_pod_hook = modify_pod_hook</span>
-        <span class="no">c.JupyterHub.logo_file = &#39;/usr/local/share/jupyter/hub/static/custom/images/logo.png&#39;</span>
-        <span class="no">c.JupyterHub.template_paths = [&#39;/usr/local/share/jupyter/hub/custom_templates/&#39;,</span>
-                                      <span class="no">&#39;/usr/local/share/jupyter/hub/templates/&#39;]</span>
-    <span class="nt">image</span><span class="p">:</span>
-      <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">jupyterhub/k8s-hub</span>
-      <span class="nt">tag</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">v0.6</span>
-    <span class="nt">extraVolumes</span><span class="p">:</span>
-      <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">custom-templates</span>
-        <span class="nt">gitRepo</span><span class="p">:</span>
-          <span class="nt">repository</span><span class="p">:</span> <span class="s">&quot;https://github.com/pangeo-data/pangeo-custom-jupyterhub-templates.git&quot;</span>
-          <span class="nt">revision</span><span class="p">:</span> <span class="s">&quot;b09721bb1a1248dc115730d3c8a791600eae257e&quot;</span>
-    <span class="nt">extraVolumeMounts</span><span class="p">:</span>
-      <span class="p p-Indicator">-</span> <span class="nt">mountPath</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/usr/local/share/jupyter/hub/custom_templates</span>
-        <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">custom-templates</span>
-        <span class="nt">subPath</span><span class="p">:</span> <span class="s">&quot;pangeo-custom-jupyterhub-templates/templates&quot;</span>
-      <span class="p p-Indicator">-</span> <span class="nt">mountPath</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/usr/local/share/jupyter/hub/static/custom</span>
-        <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">custom-templates</span>
-        <span class="nt">subPath</span><span class="p">:</span> <span class="s">&quot;pangeo-custom-jupyterhub-templates/assets&quot;</span>
-
-  <span class="nt">cull</span><span class="p">:</span>
-    <span class="nt">enabled</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
-    <span class="nt">users</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
-    <span class="nt">timeout</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1200</span>
-    <span class="nt">every</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">600</span>
-
-  <span class="c1"># this section specifies the IP address for pangeo.pydata.org</span>
-  <span class="c1"># remove or change for a custom cluster</span>
-  <span class="nt">proxy</span><span class="p">:</span>
-    <span class="nt">service</span><span class="p">:</span>
-      <span class="nt">loadBalancerIP</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">35.224.8.169</span>
+</div></blockquote>
+<p>The other file is
+` <code class="docutils literal"><span class="pre">secret_config.yml</span></code> &lt;<a class="reference external" href="https://github.com/pangeo-data/pangeo/blob/master/gce/setup-guide/secret_config.yaml">https://github.com/pangeo-data/pangeo/blob/master/gce/setup-guide/secret_config.yaml</a>&gt;`_,
+which specifies cluster specific encryption tokens.</p>
+<p>The jupyterhub proxy secret token is a random hash, which you can generate as follows:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>openssl rand -hex <span class="m">32</span>
 </pre></div>
 </div>
-<p>The other file is <code class="docutils literal"><span class="pre">secret_config.yaml</span></code>, which specifies cluster specific
-encryption tokens. The jupyterhub proxy secret token is just a random hash,
-which you can generate as follows.</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>$ openssl rand -hex <span class="m">32</span>
+<p>Replace <cite>&lt;SECRET&gt;</cite> in the <cite>secretToken</cite> section with the output of this (note:
+you will stilll need the quotes around this value)</p>
+<p>Most pangeo deployments use <a class="reference external" href="https://help.github.com/enterprise/2.13/admin/guides/user-management/using-github-oauth/">GitHub OAuth Callback</a>, (or <a class="reference external" href="https://developer.github.com/apps/building-oauth-apps/creating-an-oauth-app/">GitHub OAuth for developers</a>)
+to authenticate users.</p>
+<p>This authentication method needs an IP or domain name to work. This should be
+the IP you’ve reserved above, if you don’t have a domain name yet. Insert
+this IP in the following block:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">proxy</span><span class="p">:</span>
+    <span class="n">service</span><span class="p">:</span>
+      <span class="n">loadBalancerIP</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">GCE_EXTERNAL_IP</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-<p>Pangeo.pydata.org uses <a class="reference external" href="https://help.github.com/enterprise/2.13/admin/guides/user-management/using-github-oauth/">GitHub OAuth Callback</a>,
-(or <a class="reference external" href="https://developer.github.com/apps/building-oauth-apps/creating-an-oauth-app/">GitHub OAuth for developer</a>)
-to authenticate users. The <code class="docutils literal"><span class="pre">clientSecret</span></code> token needs to be obtained via
-github.</p>
-<p>This authentication method needs an IP or domain name to work, the IP you’ve
-reserved above and put in jupyter_config.yaml if you don’t have a domain name
-yet (just put the IP in place of pangeo.pydata.org domain name).</p>
-<p>Alternatively, you can also change authentication method, see
+<p>Instead of <cite>GCE_EXTERNAL_IP</cite>.</p>
+<p>Replace <cite>clientId</cite>, <cite>clientSecret</cite> and <cite>callbackUrl</cite> values in the
+<cite>secret_config.yaml</cite> file with the values obtained from the GitHub app that you
+create for this.</p>
+<p>Alternatively, you can also change authentication method, see the
 <a class="reference external" href="https://zero-to-jupyterhub-with-kubernetes.readthedocs.io/en/latest/">Zero to Jupyterhub</a> guide for more information on that.</p>
-<div class="highlight-yaml"><div class="highlight"><pre><span></span><span class="c1"># file: secret_config.yaml</span>
-
-<span class="nt">jupyterhub</span><span class="p">:</span>
-  <span class="nt">proxy</span><span class="p">:</span>
-    <span class="nt">secretToken</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">&lt;SECRET&gt;</span>
-
-  <span class="c1"># comment this out if not using github authentication</span>
-  <span class="nt">auth</span><span class="p">:</span>
-    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">github</span>
-    <span class="nt">github</span><span class="p">:</span>
-      <span class="nt">clientId</span><span class="p">:</span> <span class="s">&quot;2cb5e09d5733ff2e6ae3&quot;</span>
-      <span class="nt">clientSecret</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">&lt;SECRET&gt;</span>
-      <span class="nt">callbackUrl</span><span class="p">:</span> <span class="s">&quot;http://pangeo.pydata.org/hub/oauth_callback&quot;</span>
-    <span class="nt">admin</span><span class="p">:</span>
-      <span class="nt">access</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
-      <span class="nt">users</span><span class="p">:</span>
-        <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">mrocklin</span>
-        <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">jhamman</span>
-        <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">rabernat</span>
-        <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">yuvipanda</span>
-        <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">choldgraf</span>
-        <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">jacobtomlinson</span>
-</pre></div>
-</div>
 </div>
 <div class="section" id="step-five-deploy-helm-chart">
 <h2>Step Five: Deploy Helm Chart<a class="headerlink" href="#step-five-deploy-helm-chart" title="Permalink to this headline">¶</a></h2>
-<p>The following script deploy the last Pangeo chart on your Kubernetes cluster.</p>
-<p>If you want to use a specific version, check <a class="reference external" href="https://pangeo-data.github.io/helm-chart/">Pangeo Helm Chart</a> for the version you want.
-You can then add a <code class="docutils literal"><span class="pre">--version=0.1.1-a14d55b</span></code> argument to <code class="docutils literal"><span class="pre">helm</span> <span class="pre">install</span></code>
-command, only keeping the last part of the realease, without <code class="docutils literal"><span class="pre">pangeo-v</span></code>.</p>
-<p>This script is available as <code class="docutils literal"><span class="pre">3_deploy_helm.sh</span></code> in the repo.</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
-
-<span class="nb">set</span> -e
-
-helm repo add pangeo https://pangeo-data.github.io/helm-chart/
-helm repo update
-
-helm install pangeo/pangeo --namespace<span class="o">=</span>pangeo --name<span class="o">=</span>jupyter <span class="se">\</span>
-   -f secret_config.yaml -f jupyter_config.yaml
-
-<span class="c1"># helm install pangeo/pangeo --namespace=pangeo --name=jupyter \</span>
-<span class="c1">#   --version=0.1.1-a14d55b \</span>
-<span class="c1">#   -f secret_config.yaml -f jupyter_config.yaml</span>
-</pre></div>
-</div>
+<p>The following script deploys the most recent Pangeo Helm chart to your
+Kubernetes cluster.</p>
+<p>If you want to use a specific version, check <a class="reference external" href="https://pangeo-data.github.io/helm-chart/">Pangeo Helm Chart</a> for the version you want. You can
+then add a <code class="docutils literal"><span class="pre">--version=0.1.1-a14d55b</span></code> argument (for example) to <code class="docutils literal"><span class="pre">helm</span>
+<span class="pre">install</span></code> command, only keeping the last part of the release, without
+the <code class="docutils literal"><span class="pre">pangeo-v</span></code> prefix from the helm chart web-page.</p>
+<p>This script is available as
+` <code class="docutils literal"><span class="pre">3_deploy_helm.sh_</span></code> &lt;<a class="reference external" href="https://github.com/pangeo-data/pangeo/blob/master/gce/setup-guide/3_deploy_helm.sh">https://github.com/pangeo-data/pangeo/blob/master/gce/setup-guide/3_deploy_helm.sh</a>&gt;`_
+in the repo.</p>
 <p>If you have not specified a static IP address in your configuration, the
 jupyterhub will come up at a random IP address. To get the address, run the
 command</p>
@@ -528,13 +396,11 @@ command</p>
 version of the Helm Chart, run the following commmand (if you are just updating
 jupyterhub authentication IP, <code class="docutils literal"><span class="pre">--force</span></code> and <code class="docutils literal"><span class="pre">--recreate-pods</span></code> are not
 needed).</p>
-<p>Scripts <code class="docutils literal"><span class="pre">4_upgrade_helm.sh</span></code> and <code class="docutils literal"><span class="pre">5_upgrade_helm_soft.sh</span></code> are available for
-that.</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>$ helm upgrade --force --recreate-pods jupyter pangeo/pangeo <span class="se">\</span>
-   --version<span class="o">=</span><span class="nv">$VERSION</span> <span class="se">\</span>
-   -f secret_config.yaml -f jupyter_config.yaml
-</pre></div>
-</div>
+<p>The scripts
+` <code class="docutils literal"><span class="pre">4_upgrade_helm.sh_</span></code> &lt;<a class="reference external" href="https://github.com/pangeo-data/pangeo/blob/master/gce/setup-guide/4_upgrade_helm.sh">https://github.com/pangeo-data/pangeo/blob/master/gce/setup-guide/4_upgrade_helm.sh</a>&gt;`
+and
+` <code class="docutils literal"><span class="pre">5_upgrade_helm_soft.sh_</span></code> &lt;<a class="reference external" href="https://github.com/pangeo-data/pangeo/blob/master/gce/setup-guide/5_upgrade_helm_soft.sh">https://github.com/pangeo-data/pangeo/blob/master/gce/setup-guide/5_upgrade_helm_soft.sh</a>&gt;`
+are available for that.</p>
 </div>
 <div class="section" id="pangeo-helm-chart-and-docker-images">
 <h2>Pangeo Helm Chart and Docker Images<a class="headerlink" href="#pangeo-helm-chart-and-docker-images" title="Permalink to this headline">¶</a></h2>
