@@ -17,4 +17,4 @@ export CLUSTER_NAME='pangeo-cluster'
 export WORKER_MACHINE_TYPE='n1-standard-4'
 
 # HELM Pangeo version if needed
-export VERSION="0.1.1-a8f057f"
+export VERSION="0.1.1-c02878a"
