@@ -149,7 +149,7 @@ Other things you might want to configure, but that can be left as is:
   - GCSFUSE_BUCKET: for mounting some google cloud storage bucket as a standard
     file system.
 
-The other file is `secret_config.yml`_, which specifies cluster specific
+The other file is `secret_config.yaml`_, which specifies cluster specific
 encryption tokens.
 
 The jupyterhub proxy secret token is a random hash, which you can generate as follows:
@@ -231,8 +231,8 @@ the Pangeo helm-chart repository:
 
 - https://github.com/pangeo-data/helm-chart
 
-.. _jupyter_config.yml: https://github.com/pangeo-data/pangeo/blob/master/gce/setup-guide/jupyter_config.yaml
-.. _secret_config.yml: https://github.com/pangeo-data/pangeo/blob/master/gce/setup-guide/secret_config.yaml
+.. _jupyter_config.yaml: https://github.com/pangeo-data/pangeo/blob/master/gce/setup-guide/jupyter_config.yaml
+.. _secret_config.yaml: https://github.com/pangeo-data/pangeo/blob/master/gce/setup-guide/secret_config.yaml
 .. _Github OAuth for developers: https://developer.github.com/apps/building-oauth-apps/creating-an-oauth-app/
 .. _GitHub OAuth Callback: https://help.github.com/enterprise/2.13/admin/guides/user-management/using-github-oauth/
 .. _Zero to Jupyterhub: https://zero-to-jupyterhub-with-kubernetes.readthedocs.io/en/latest/

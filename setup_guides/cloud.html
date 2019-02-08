@@ -321,7 +321,7 @@ necessary for a secure cluster deployment.</p>
 <h2>Step Four: Create Cluster-Specific Configuration<a class="headerlink" href="#step-four-create-cluster-specific-configuration" title="Permalink to this headline">¶</a></h2>
 <p>There are two configuration files needed to deploy the Pangeo helm chart. Those
 files are available in the pangeo/gce/setup-guide folder of this repo. The
-first, <a href="#id2"><span class="problematic" id="id3">`jupyter_config.yaml`_</span></a>, specifies modifications to the configuration
+first, <a class="reference external" href="https://github.com/pangeo-data/pangeo/blob/master/gce/setup-guide/jupyter_config.yaml">jupyter_config.yaml</a>, specifies modifications to the configuration
 that are unique to each deployment, so you will need to edit it.</p>
 <p>The most important thing to configure here is the  <code class="docutils literal"><span class="pre">loadBalancerIP</span></code>.
 If you have not <a class="reference external" href="https://cloud.google.com/compute/docs/ip-addresses/reserve-static-external-ip-address">reserved a static external IP</a>,
@@ -338,7 +338,7 @@ gcloud compute addresses list | grep pangeo-jhubip
 file system.</li>
 </ul>
 </div></blockquote>
-<p>The other file is <a class="reference external" href="https://github.com/pangeo-data/pangeo/blob/master/gce/setup-guide/secret_config.yaml">secret_config.yml</a>, which specifies cluster specific
+<p>The other file is <a class="reference external" href="https://github.com/pangeo-data/pangeo/blob/master/gce/setup-guide/secret_config.yaml">secret_config.yaml</a>, which specifies cluster specific
 encryption tokens.</p>
 <p>The jupyterhub proxy secret token is a random hash, which you can generate as follows:</p>
 <div class="highlight-bash"><div class="highlight"><pre><span></span>openssl rand -hex <span class="m">32</span>
