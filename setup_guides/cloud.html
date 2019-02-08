@@ -299,9 +299,8 @@ notebook servers.</li>
 <li>An auto scaling node pool for Dask workers.</li>
 </ul>
 </div></blockquote>
-<p>This script is availabe in pangeo/gce/setup-guide as
-` <code class="docutils literal"><span class="pre">1_create_cluster.sh</span></code> &lt;<a class="reference external" href="https://github.com/pangeo-data/pangeo/blob/master/gce/setup-guide/1_create_cluster.sh">https://github.com/pangeo-data/pangeo/blob/master/gce/setup-guide/1_create_cluster.sh</a>&gt;`_,
-so you can use it directly.</p>
+<p>This script is availabe in pangeo/gce/setup-guide as <a class="reference external" href="https://github.com/pangeo-data/pangeo/blob/master/gce/setup-guide/1_create_cluster.sh">1_create_cluster.sh</a>, so
+you can use it directly.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">If you expect your notebook images to be fairly large, it may be adventageous
@@ -316,15 +315,14 @@ documentation</a>.</p>
 <h2>Step Three: Configure Kubernetes<a class="headerlink" href="#step-three-configure-kubernetes" title="Permalink to this headline">¶</a></h2>
 <p>This script sets up the Kubernetes <a class="reference external" href="https://kubernetes.io/docs/reference/access-authn-authz/rbac/">Role Based Access Control</a>
 necessary for a secure cluster deployment.</p>
-<p>This script is available in pangeo/gce/setup-guide as ` <code class="docutils literal"><span class="pre">2_configure_kubernetes.sh</span></code> &lt;<a class="reference external" href="https://github.com/pangeo-data/pangeo/blob/master/gce/setup-guide/2_configure_kubernetes.sh">https://github.com/pangeo-data/pangeo/blob/master/gce/setup-guide/2_configure_kubernetes.sh</a>&gt;`_.</p>
+<p>This script is available in pangeo/gce/setup-guide as <a class="reference external" href="https://github.com/pangeo-data/pangeo/blob/master/gce/setup-guide/2_configure_kubernetes.sh">2_configure_kubernetes.sh</a>.</p>
 </div>
 <div class="section" id="step-four-create-cluster-specific-configuration">
 <h2>Step Four: Create Cluster-Specific Configuration<a class="headerlink" href="#step-four-create-cluster-specific-configuration" title="Permalink to this headline">¶</a></h2>
 <p>There are two configuration files needed to deploy the Pangeo helm chart. Those
 files are available in the pangeo/gce/setup-guide folder of this repo. The
-first,
-` <code class="docutils literal"><span class="pre">jupyter_config.yaml</span></code> &lt;<a class="reference external" href="https://github.com/pangeo-data/pangeo/blob/master/gce/setup-guide/jupyter_config.yaml">https://github.com/pangeo-data/pangeo/blob/master/gce/setup-guide/jupyter_config.yaml</a>&gt;`_,
-specifies modifications to the configuration that are unique to each deployment, so you will need to edit it.</p>
+first, <a href="#id2"><span class="problematic" id="id3">`jupyter_config.yaml`_</span></a>, specifies modifications to the configuration
+that are unique to each deployment, so you will need to edit it.</p>
 <p>The most important thing to configure here is the  <code class="docutils literal"><span class="pre">loadBalancerIP</span></code>.
 If you have not <a class="reference external" href="https://cloud.google.com/compute/docs/ip-addresses/reserve-static-external-ip-address">reserved a static external IP</a>,
 you can do so by running:</p>
@@ -340,9 +338,8 @@ gcloud compute addresses list | grep pangeo-jhubip
 file system.</li>
 </ul>
 </div></blockquote>
-<p>The other file is
-` <code class="docutils literal"><span class="pre">secret_config.yml</span></code> &lt;<a class="reference external" href="https://github.com/pangeo-data/pangeo/blob/master/gce/setup-guide/secret_config.yaml">https://github.com/pangeo-data/pangeo/blob/master/gce/setup-guide/secret_config.yaml</a>&gt;`_,
-which specifies cluster specific encryption tokens.</p>
+<p>The other file is <a class="reference external" href="https://github.com/pangeo-data/pangeo/blob/master/gce/setup-guide/secret_config.yaml">secret_config.yml</a>, which specifies cluster specific
+encryption tokens.</p>
 <p>The jupyterhub proxy secret token is a random hash, which you can generate as follows:</p>
 <div class="highlight-bash"><div class="highlight"><pre><span></span>openssl rand -hex <span class="m">32</span>
 </pre></div>
@@ -374,9 +371,7 @@ Kubernetes cluster.</p>
 then add a <code class="docutils literal"><span class="pre">--version=0.1.1-a14d55b</span></code> argument (for example) to <code class="docutils literal"><span class="pre">helm</span>
 <span class="pre">install</span></code> command, only keeping the last part of the release, without
 the <code class="docutils literal"><span class="pre">pangeo-v</span></code> prefix from the helm chart web-page.</p>
-<p>This script is available as
-` <code class="docutils literal"><span class="pre">3_deploy_helm.sh_</span></code> &lt;<a class="reference external" href="https://github.com/pangeo-data/pangeo/blob/master/gce/setup-guide/3_deploy_helm.sh">https://github.com/pangeo-data/pangeo/blob/master/gce/setup-guide/3_deploy_helm.sh</a>&gt;`_
-in the repo.</p>
+<p>This script is available as <a class="reference external" href="https://github.com/pangeo-data/pangeo/blob/master/gce/setup-guide/3_deploy_helm.sh">3_deploy_helm.sh</a> in the repo.</p>
 <p>If you have not specified a static IP address in your configuration, the
 jupyterhub will come up at a random IP address. To get the address, run the
 command</p>
@@ -396,11 +391,8 @@ command</p>
 version of the Helm Chart, run the following commmand (if you are just updating
 jupyterhub authentication IP, <code class="docutils literal"><span class="pre">--force</span></code> and <code class="docutils literal"><span class="pre">--recreate-pods</span></code> are not
 needed).</p>
-<p>The scripts
-` <code class="docutils literal"><span class="pre">4_upgrade_helm.sh_</span></code> &lt;<a class="reference external" href="https://github.com/pangeo-data/pangeo/blob/master/gce/setup-guide/4_upgrade_helm.sh">https://github.com/pangeo-data/pangeo/blob/master/gce/setup-guide/4_upgrade_helm.sh</a>&gt;`
-and
-` <code class="docutils literal"><span class="pre">5_upgrade_helm_soft.sh_</span></code> &lt;<a class="reference external" href="https://github.com/pangeo-data/pangeo/blob/master/gce/setup-guide/5_upgrade_helm_soft.sh">https://github.com/pangeo-data/pangeo/blob/master/gce/setup-guide/5_upgrade_helm_soft.sh</a>&gt;`
-are available for that.</p>
+<p>The scripts <a class="reference external" href="https://github.com/pangeo-data/pangeo/blob/master/gce/setup-guide/4_upgrade_helm.sh">4_upgrade_helm.sh</a> and <a class="reference external" href="https://github.com/pangeo-data/pangeo/blob/master/gce/setup-guide/5_upgrade_helm_soft.sh">5_upgrade_helm_soft.sh</a> are available
+for that.</p>
 </div>
 <div class="section" id="pangeo-helm-chart-and-docker-images">
 <h2>Pangeo Helm Chart and Docker Images<a class="headerlink" href="#pangeo-helm-chart-and-docker-images" title="Permalink to this headline">¶</a></h2>

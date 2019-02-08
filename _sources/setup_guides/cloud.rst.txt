@@ -107,9 +107,8 @@ create a cluster with the components that Pangeo requires:
     notebook servers.
   - An auto scaling node pool for Dask workers.
 
-This script is availabe in pangeo/gce/setup-guide as
-` ``1_create_cluster.sh`` <https://github.com/pangeo-data/pangeo/blob/master/gce/setup-guide/1_create_cluster.sh>`_,
-so you can use it directly.
+This script is availabe in pangeo/gce/setup-guide as `1_create_cluster.sh`_, so
+you can use it directly.
 
 .. Note::
   If you expect your notebook images to be fairly large, it may be adventageous
@@ -126,16 +125,15 @@ This script sets up the Kubernetes `Role Based Access Control
 <https://kubernetes.io/docs/reference/access-authn-authz/rbac/>`_
 necessary for a secure cluster deployment.
 
-This script is available in pangeo/gce/setup-guide as ` ``2_configure_kubernetes.sh`` <https://github.com/pangeo-data/pangeo/blob/master/gce/setup-guide/2_configure_kubernetes.sh>`_.
+This script is available in pangeo/gce/setup-guide as `2_configure_kubernetes.sh`_.
 
 Step Four: Create Cluster-Specific Configuration
 ------------------------------------------------
 
 There are two configuration files needed to deploy the Pangeo helm chart. Those
 files are available in the pangeo/gce/setup-guide folder of this repo. The
-first,
-` ``jupyter_config.yaml`` <https://github.com/pangeo-data/pangeo/blob/master/gce/setup-guide/jupyter_config.yaml>`_,
-specifies modifications to the configuration that are unique to each deployment, so you will need to edit it.
+first, `jupyter_config.yaml`_, specifies modifications to the configuration
+that are unique to each deployment, so you will need to edit it.
 
 The most important thing to configure here is the  ``loadBalancerIP``.
 If you have not `reserved a static external IP
@@ -151,12 +149,10 @@ Other things you might want to configure, but that can be left as is:
   - GCSFUSE_BUCKET: for mounting some google cloud storage bucket as a standard
     file system.
 
-The other file is
-` ``secret_config.yml`` <https://github.com/pangeo-data/pangeo/blob/master/gce/setup-guide/secret_config.yaml>`_,
-which specifies cluster specific encryption tokens.
+The other file is `secret_config.yml`_, which specifies cluster specific
+encryption tokens.
 
 The jupyterhub proxy secret token is a random hash, which you can generate as follows:
-
 
 .. code-block:: bash
 
@@ -198,9 +194,7 @@ then add a ``--version=0.1.1-a14d55b`` argument (for example) to ``helm
 install`` command, only keeping the last part of the release, without
 the ``pangeo-v`` prefix from the helm chart web-page.
 
-This script is available as
-` ``3_deploy_helm.sh_`` <https://github.com/pangeo-data/pangeo/blob/master/gce/setup-guide/3_deploy_helm.sh>`_
-in the repo.
+This script is available as `3_deploy_helm.sh`_ in the repo.
 
 If you have not specified a static IP address in your configuration, the
 jupyterhub will come up at a random IP address. To get the address, run the
@@ -225,11 +219,8 @@ version of the Helm Chart, run the following commmand (if you are just updating
 jupyterhub authentication IP, ``--force`` and ``--recreate-pods`` are not
 needed).
 
-The scripts
-` ``4_upgrade_helm.sh_`` <https://github.com/pangeo-data/pangeo/blob/master/gce/setup-guide/4_upgrade_helm.sh>`
-and
-` ``5_upgrade_helm_soft.sh_`` <https://github.com/pangeo-data/pangeo/blob/master/gce/setup-guide/5_upgrade_helm_soft.sh>`
-are available for that.
+The scripts `4_upgrade_helm.sh`_ and `5_upgrade_helm_soft.sh`_ are available
+for that.
 
 Pangeo Helm Chart and Docker Images
 -----------------------------------
