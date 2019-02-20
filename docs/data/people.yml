@@ -739,3 +739,14 @@
     - cloud computing
     - big data
 
+- first_name: Zhonghua
+  last_name: Zheng
+  institution: University of Illinois at Urbana-Champaign (UIUC)
+  website: http://zzheng25.web.engr.illinois.edu
+  email: zzheng25@illinois.edu
+  github: zzheng93
+  tags:
+    - atmospheric aerosols
+    - urban environment
+    - machine learning
+    - HPC
