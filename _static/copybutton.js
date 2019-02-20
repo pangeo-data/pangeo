@@ -11,6 +11,12 @@ const messages = {
     'copy_to_clipboard': 'Copiar al portapapeles',
     'copy_success': '¡Copiado!',
     'copy_failure': 'Error al copiar',
+  },
+  'de' : {
+    'copy': 'Kopieren',
+    'copy_to_clipboard': 'In die Zwischenablage kopieren',
+    'copy_success': 'Kopiert!',
+    'copy_failure': 'Fehler beim Kopieren',
   }
 }
 

@@ -1,15 +1,21 @@
 /* Copy buttons */
 a.copybtn {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 2px;
+    right: 2px;
     width: 1em;
     height: 1em;
     padding: .3em;
+	opacity: .3;
+	transition: opacity 0.5s;
 }
 
 div.highlight  {
     position: relative;
+}
+
+.highlight:hover .copybtn {
+	opacity: 1;
 }
 
 /**
@@ -23,7 +29,7 @@ div.highlight  {
  .o-tooltip--left {
   position: relative;
  }
- 
+
  .o-tooltip--left:after {
     opacity: 0;
     visibility: hidden;
@@ -38,7 +44,7 @@ div.highlight  {
     white-space: nowrap;
     z-index: 2;
     border-radius: 2px;
-    transform: translateX(-102%) translateY(0); 
+    transform: translateX(-102%) translateY(0);
     transition: opacity 0.2s cubic-bezier(0.64, 0.09, 0.08, 1), transform 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
 }
 
