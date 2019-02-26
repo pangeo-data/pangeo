@@ -23,8 +23,8 @@ A community platform for Big Data geoscience
 What is Pangeo?
 ^^^^^^^^^^^^^^^
 
-Pangeo is first and foremost a community promoting open, reproducible science.
-This community provides documentation, develops software, and deploys
+Pangeo is first and foremost a community promoting open, reproducible, and scalable science.
+This community provides documentation, develops and maintains software, and deploys
 computing infrastructure to make scientific research and programming easier.
 Below there are guides for finding and working with publicly available data
 using open source software.  For developers and IT professionals, there are
