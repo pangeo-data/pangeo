@@ -26,13 +26,16 @@ What is Pangeo?
 Pangeo is first and foremost a community promoting open, reproducible, and scalable science.
 This community provides documentation, develops and maintains software, and deploys
 computing infrastructure to make scientific research and programming easier.
-Pangeo's community has constructed a software ecosystem that consists of
-existing open source software like numpy, pandas, xarray, and dask.
-Below there are guides for finding and working with publicly available data
-using open source software.  For developers and IT professionals, there are
-instructions for developing cluster or cloud-based infrastructures; making new
-resources available to the community. Pangeo is a work in progress; we welcome
-people just like you to get involved.
+The Pangeo software ecosystem involves
+open source tools such as xarray, iris, dask, jupyter, and many other packages.
+There is no single software package called "pangeo"; rather, the Pangeo project serves
+as a coordination point between scientists, software, and computing infrastructure.
+On this website, scientists can find guides for accessing data and performing analysis
+using these tools. 
+Developers and IT professionals can find
+instructions for deploying cluster or cloud-based infrastructures.
+We welcome you to get more involved by...
+
 
 Our Goals
 ^^^^^^^^^
