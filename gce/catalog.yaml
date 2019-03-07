@@ -220,6 +220,6 @@ sources:
         - model
     driver: zarr
     args:
-      urlpath: 'gsc://pangeo-data/SAM/NG_5120x2560x34_4km_10s_QOBS_EQX/3d.zarr'
+      urlpath: 'gs://pangeo-data/SAM/NG_5120x2560x34_4km_10s_QOBS_EQX/3d.zarr'
       storage_options:
         token: anon
