@@ -212,3 +212,14 @@ sources:
     args:
       urlpath: 'gs://pangeo-data/hydrosheds/acc.vrt'
       chunks: {'y': 6000, 'x': 6000}
+  sam_ngaqua_qobs_eqx_3d:
+    description: 3D fields from a near-global Aquaplanet Simulation with the System for Atmospheric Modeling
+    metadata:
+      tags:
+        - atmosphere
+        - model
+    driver: zarr
+    args:
+      urlpath: 'gsc://pangeo-data/SAM/NG_5120x2560x34_4km_10s_QOBS_EQX/3d.zarr'
+      storage_options:
+        token: anon
