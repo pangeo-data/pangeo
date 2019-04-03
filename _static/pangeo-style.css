@@ -1,3 +1,5 @@
+@import url("./bootstrap-sphinx.css");
+
 /* colors from brand sheet
   dark blue:  #003B71
   green:      #5eb130
@@ -127,4 +129,29 @@ h3 {
 }
 .data-catalog pre {
     margin-bottom: 0px;
+}
+
+/* cloud hubs stuff */
+.cloud h2 {
+    float: left !important;
+}
+
+.jhub {
+    background-color: #f7f5fa;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.jhub h3 {
+    margin-top: 0px;
+    padding-bottom: 10px;
+    border-bottom: 2px dotted #ddd;
+}
+
+.jhub a.btn-primary {
+    background-color: #00a3b0;
+    border-color: #00a3b0;
+    border-radius: 5px;
+    font-weight: bold;
 }
