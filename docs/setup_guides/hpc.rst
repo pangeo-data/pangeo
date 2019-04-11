@@ -34,7 +34,25 @@ After you have logged into your HPC system, download and install Miniconda:
 This contains a self-contained Python environment that we can manipulate
 safely without requiring the involvement of IT. It also allows you to
 create isolated software environments so that we can experiment in the
-future safely.
+future safely. But, we recommend you update your conda package manager 
+before creating your environment with
+
+::
+    
+    conda update conda
+    
+.. note:: 
+
+    Depending if you chose to initialize Miniconda in your ``~/.bashrc``
+    at the end of the installation, this new conda update will activate
+    a ``(base)`` environment by default. If you wish to prevent conda
+    from activating the ``(base)`` environment by default:
+    ::
+    
+            conda config --set auto_activate_base false
+    
+    This will create a ``./condarc`` in your home
+    directory with this setting the first time you run it. 
 
 Create a new conda environment for our pangeo work:
 
@@ -54,7 +72,7 @@ Activate this environment
 
 ::
 
-    source activate pangeo
+    conda activate pangeo
 
 Your prompt should now look something like this (note the pangeo environment name):
 
@@ -171,7 +189,7 @@ In our case, the Cheyenne super computer uses the PBS job scheduler, so typing:
 
 ::
 
-    (pangeo) $ qsub -I -l select=1:ncpus=4 -l walltime=03:00:00 -q regular
+    (pangeo) $ qsub -I -A account -l select=1:ncpus=4 -l walltime=03:00:00 -q regular
 
 This will get us an interactive job on the `regular` queue for three hours. You
 may not see the `pangeo` environment anymore in your prompt, in this case, you
@@ -179,7 +197,7 @@ will want to reactivate it.
 
 ::
 
-    source activate pangeo
+    conda activate pangeo
 
 From here, we can start jupyter. The Cheyenne computer administrators have
 developed a `start-notebook <https://www2.cisl.ucar.edu/resources/computational-systems/cheyenne/software/jupyter-and-ipython#notebook>`__
