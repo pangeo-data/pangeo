@@ -34,8 +34,8 @@ After you have logged into your HPC system, download and install Miniconda:
 This contains a self-contained Python environment that we can manipulate
 safely without requiring the involvement of IT. It also allows you to
 create isolated software environments so that we can experiment in the
-future safely. But, we recommend you update your conda package manager 
-before creating your environment with
+future safely. Before creating your environment, we recommend you update
+your conda package manager with
 
 ::
     
@@ -46,7 +46,7 @@ before creating your environment with
     Depending if you chose to initialize Miniconda in your ``~/.bashrc``
     at the end of the installation, this new conda update will activate
     a ``(base)`` environment by default. If you wish to prevent conda
-    from activating the ``(base)`` environment by default:
+    from activating the ``(base)`` environment at shell initialization:
     ::
     
             conda config --set auto_activate_base false
