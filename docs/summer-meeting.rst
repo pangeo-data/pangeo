@@ -14,7 +14,7 @@ Meeting Details
 ---------------
 - **Dates**: 21-23 August 2019
 - **Location**: University of Washington, rooms TBA
-- **Registration**: `Register Here <http://...>`_
+- **Registration**: `Register Here <https://docs.google.com/forms/d/e/1FAIpQLSemu3o7Noo-B620tvIhIVrDCJHiBjYaTRin3RlBd-PN_CnVFw/viewform?usp=sf_link>`_
 
 Travel and Lodging Details
 --------------------------
