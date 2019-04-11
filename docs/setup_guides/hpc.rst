@@ -79,7 +79,8 @@ this section.)
 .. note::
 
    When using recent Jupyter iteration the following section can be replaced by simply invoking the command::
-
+   
+      jupyter notebook --generate-config
       jupyter notebook password
 
    And entering desired password.
