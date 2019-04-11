@@ -60,6 +60,7 @@
 ./_sources/setup_guides/cloud.rst.txt
 ./_sources/setup_guides/hpc.rst.txt
 ./_sources/setup_guides/index.rst.txt
+./_sources/summer-meeting.rst.txt
 ./_sources/use_cases/climate-modeling/CESM-Large-Ensemble-Tracer-Budget-Example.rst.txt
 ./_sources/use_cases/climate-modeling/index.rst.txt
 ./_sources/use_cases/index.rst.txt
@@ -200,6 +201,7 @@
 ./setup_guides/cloud.html
 ./setup_guides/hpc.html
 ./setup_guides/index.html
+./summer-meeting.html
 ./use_cases/climate-modeling/CESM-Large-Ensemble-Tracer-Budget-Example.html
 ./use_cases/climate-modeling/index.html
 ./use_cases/index.html

@@ -67,6 +67,7 @@ Contents
    catalog
    collaborators
    meeting-notes
+   summer-meeting
    contact
 
 Examples
