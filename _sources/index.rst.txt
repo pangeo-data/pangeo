@@ -68,6 +68,7 @@ Contents
    collaborators
    meeting-notes
    summer-meeting
+   2019_french-pangeo-meeting
    contact
 
 Examples

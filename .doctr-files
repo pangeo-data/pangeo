@@ -1,3 +1,4 @@
+./2019_french-pangeo-meeting.html
 ./_downloads/CESM-Large-Ensemble-Tracer-Budget-Example.ipynb
 ./_downloads/CESM-Large-Ensemble-Tracer-Budget-Example.py
 ./_downloads/SOSE.ipynb
@@ -45,6 +46,7 @@
 ./_images/sea-surface-height_4.png
 ./_images/small_e_logo_cropped.png
 ./_images/uw-logo.jpg
+./_sources/2019_french-pangeo-meeting.rst.txt
 ./_sources/about.rst.txt
 ./_sources/architecture.rst.txt
 ./_sources/catalog.rst.txt
