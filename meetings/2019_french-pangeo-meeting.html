@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Deployment Setup Guides &#8212; Pangeo  documentation</title>
+    <title>2019 French Pangeo Community Meeting &#8212; Pangeo  documentation</title>
     <link rel="stylesheet" href="../_static/pangeo-style.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/example_gallery_styles.css" type="text/css" />
@@ -33,8 +33,8 @@
     <link rel="author" title="About these documents" href="../about.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Getting Started with Pangeo on HPC" href="hpc.html" />
-    <link rel="prev" title="Technical Architecture" href="../architecture.html" />
+    <link rel="next" title="2019 Pangeo Community Meeting" href="2019_summer-meeting.html" />
+    <link rel="prev" title="Pangeo Conferences" href="index.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -111,9 +111,9 @@
 <li class="toctree-l2"><a class="reference internal" href="../architecture.html#storage-formats">Storage Formats</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Deployment Setup Guides</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#setting-up-pangeo-on-hpc-systems">Setting up Pangeo on HPC Systems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#setting-up-pangeo-on-cloud-systems">Setting up Pangeo on Cloud Systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../setup_guides/index.html">Deployment Setup Guides</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../setup_guides/index.html#setting-up-pangeo-on-hpc-systems">Setting up Pangeo on HPC Systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../setup_guides/index.html#setting-up-pangeo-on-cloud-systems">Setting up Pangeo on Cloud Systems</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../deployments.html">Deployments</a><ul>
@@ -139,8 +139,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../meeting-notes.html#id1">Meeting Notes</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../meetings/index.html">Pangeo Conferences</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../meetings/index.html#future-meetings">Future Meetings</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Pangeo Conferences</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#future-meetings">Future Meetings</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../contact.html">Contact Pangeo</a></li>
@@ -157,9 +157,8 @@
   <ul class="dropdown-menu localtoc"
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
-<li><a class="reference internal" href="#">Deployment Setup Guides</a><ul>
-<li><a class="reference internal" href="#setting-up-pangeo-on-hpc-systems">Setting up Pangeo on HPC Systems</a></li>
-<li><a class="reference internal" href="#setting-up-pangeo-on-cloud-systems">Setting up Pangeo on Cloud Systems</a></li>
+<li><a class="reference internal" href="#">2019 French Pangeo Community Meeting</a><ul>
+<li><a class="reference internal" href="#meeting-details">Meeting Details</a></li>
 </ul>
 </li>
 </ul>
@@ -171,11 +170,11 @@
               
                 
   <li>
-    <a href="../architecture.html" title="Previous Chapter: Technical Architecture"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Technical Arc...</span>
+    <a href="index.html" title="Previous Chapter: Pangeo Conferences"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Pangeo Conferences</span>
     </a>
   </li>
   <li>
-    <a href="hpc.html" title="Next Chapter: Getting Started with Pangeo on HPC"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Getting Start... &raquo;</span>
+    <a href="2019_summer-meeting.html" title="Next Chapter: 2019 Pangeo Community Meeting"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">2019 Pangeo C... &raquo;</span>
     </a>
   </li>
               
@@ -197,9 +196,8 @@
   <div class="row">
       <div class="col-md-3">
         <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
-<li><a class="reference internal" href="#">Deployment Setup Guides</a><ul>
-<li><a class="reference internal" href="#setting-up-pangeo-on-hpc-systems">Setting up Pangeo on HPC Systems</a></li>
-<li><a class="reference internal" href="#setting-up-pangeo-on-cloud-systems">Setting up Pangeo on Cloud Systems</a></li>
+<li><a class="reference internal" href="#">2019 French Pangeo Community Meeting</a><ul>
+<li><a class="reference internal" href="#meeting-details">Meeting Details</a></li>
 </ul>
 </li>
 </ul>
@@ -208,55 +206,16 @@
       </div>
     <div class="col-md-9 content ">
       
-  <div class="section" id="deployment-setup-guides">
-<span id="setup-guides"></span><h1>Deployment Setup Guides<a class="headerlink" href="#deployment-setup-guides" title="Permalink to this headline">¶</a></h1>
-<p>The Pangeo software stack is an collection of <a class="reference internal" href="../packages.html#packages"><span class="std std-ref">Packages</span></a> that when used
-together facilitate scalable data analysis on a wide range of computing platforms
-(see <a class="reference internal" href="../deployments.html#deployments"><span class="std std-ref">Deployments</span></a> for a list of examples where Pangeo concepts have been
-deployed).</p>
-<p>This is a growing collection of information that will help you setup your own
-Pangeo deployment, whether it be on an <a class="reference internal" href="hpc.html"><span class="doc">HPC</span></a> system or on a public <a class="reference internal" href="cloud.html"><span class="doc">cloud</span></a>.</p>
-<p>If you have tips or deployments that you would like to share, or if you see
-anything that is incorrect, or have any questions, feel free to reach out at
-the <a class="reference external" href="https://github.com/pangeo-data/pangeo/issues">issues page</a>.</p>
-<p>We have broken our setup guides into two distinct tracks, one for <a class="reference internal" href="hpc.html"><span class="doc">HPC</span></a> systems,
-and another for <a class="reference internal" href="cloud.html"><span class="doc">cloud</span></a> systems:</p>
-<div class="section" id="setting-up-pangeo-on-hpc-systems">
-<h2>Setting up Pangeo on HPC Systems<a class="headerlink" href="#setting-up-pangeo-on-hpc-systems" title="Permalink to this headline">¶</a></h2>
-<p>This tutorial assumes you have access to a HPC system and that you have some
-basic Unix skills. We’ll walk you through some common steps for getting Pangeo
-running on a typical HPC system.</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="hpc.html">Getting Started with Pangeo on HPC</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="hpc.html#installing-a-software-environment">Installing a software environment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hpc.html#configure-jupyter">Configure Jupyter</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hpc.html#deploy-option-1-jupyter-dask-jobqueue">Deploy Option 1: Jupyter + dask-jobqueue</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hpc.html#deploy-option-2-jupyter-dask-mpi">Deploy Option 2: Jupyter + dask-mpi</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hpc.html#further-reading">Further Reading</a></li>
+  <div class="section" id="french-pangeo-community-meeting">
+<span id="french-pangeo-meeting"></span><h1>2019 French Pangeo Community Meeting<a class="headerlink" href="#french-pangeo-community-meeting" title="Permalink to this headline">¶</a></h1>
+<p>TBC</p>
+<div class="section" id="meeting-details">
+<h2>Meeting Details<a class="headerlink" href="#meeting-details" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><strong>Dates</strong>: 23 May 2019, 09:00 to 18:00</li>
+<li><strong>Location</strong>: CNES headquarters, Paris les Halles, France</li>
+<li><strong>Registration</strong>: <a class="reference external" href="https://docs.google.com/forms/d/e/1FAIpQLSeaBMdbteOi0yMKb6xXnebGTCwlo4pjXRFDvGvVWFNNmTzDkg/viewform?usp=sf_link">https://docs.google.com/forms/d/e/1FAIpQLSeaBMdbteOi0yMKb6xXnebGTCwlo4pjXRFDvGvVWFNNmTzDkg/viewform?usp=sf_link</a></li>
 </ul>
-</li>
-</ul>
-</div>
-</div>
-<div class="section" id="setting-up-pangeo-on-cloud-systems">
-<h2>Setting up Pangeo on Cloud Systems<a class="headerlink" href="#setting-up-pangeo-on-cloud-systems" title="Permalink to this headline">¶</a></h2>
-<p>These tutorials describe how to deploy Pangeo using <a class="reference external" href="https://kubernetes.io/">Kubernetes</a>. Most users
-will also find the <a class="reference external" href="http://zero-to-jupyterhub.readthedocs.io">zero-to-jupyterhub</a> documentation quite useful.</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="cloud.html">Deploying Pangeo on the Cloud</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="cloud.html#step-one-install-the-necessary-software">Step One: Install the Necessary Software</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cloud.html#step-two-create-a-kubernetes-cluster">Step Two: Create a Kubernetes Cluster</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cloud.html#step-three-configure-kubernetes">Step Three: Configure Kubernetes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cloud.html#step-four-create-cluster-specific-configuration">Step Four: Create Cluster-Specific Configuration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cloud.html#step-five-deploy-helm-chart">Step Five: Deploy Helm Chart</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cloud.html#upgrade-cluster">Upgrade Cluster</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cloud.html#pangeo-helm-chart-and-docker-images">Pangeo Helm Chart and Docker Images</a></li>
-</ul>
-</li>
-</ul>
-</div>
 </div>
 </div>
 
