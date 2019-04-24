@@ -67,8 +67,7 @@ Contents
    catalog
    collaborators
    meeting-notes
-   summer-meeting
-   2019_french-pangeo-meeting
+   meetings/index
    contact
 
 Examples
