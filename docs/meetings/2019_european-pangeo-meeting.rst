@@ -18,7 +18,7 @@ Meeting Details
 - **Dates**: 23 May 2019, 09:00 to 18:00
 - **Location**: `Centre national d'études spatiales<https://cnes.fr/en/web/CNES-en/3801-cnes-facilities.php
 >`_, 2 place Maurice Quentin, 75 039 PARIS CEDEX 01, Salle de l’Espace
-- **Registration**: `here <https://docs.google.com/forms/d/e/1FAIpQLSeaBMdbteOi0yMKb6xXnebGTCwlo4pjXRFDvGvVWFNNmTzDkg/viewform?usp=sf_link>`_
+- **Registration**: `here <https://docs.google.com/forms/d/e/1FAIpQLSdcGdDNpSN_JOOzISn49ev7Br08VJY31KO9JUErbCBlKRxH9Q/viewform?usp=sf_link>`_
 - Coffee and lunch free on site.
 
 Travel Details
