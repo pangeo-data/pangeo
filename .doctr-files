@@ -55,7 +55,7 @@
 ./_sources/faq.rst.txt
 ./_sources/index.rst.txt
 ./_sources/meeting-notes.rst.txt
-./_sources/meetings/2019_french-pangeo-meeting.rst.txt
+./_sources/meetings/2019_european-pangeo-meeting.rst.txt
 ./_sources/meetings/2019_summer-meeting.rst.txt
 ./_sources/meetings/index.rst.txt
 ./_sources/packages.rst.txt
@@ -195,7 +195,7 @@
 ./genindex.html
 ./index.html
 ./meeting-notes.html
-./meetings/2019_french-pangeo-meeting.html
+./meetings/2019_european-pangeo-meeting.html
 ./meetings/2019_summer-meeting.html
 ./meetings/index.html
 ./objects.inv
