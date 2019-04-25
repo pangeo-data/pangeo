@@ -13,7 +13,7 @@ development.
 Meeting Details
 ---------------
 - **Dates**: 21-23 August 2019
-- **Location**: University of Washington, rooms TBA
+- **Location**: `Alder Hall <https://www.washington.edu/maps/#!/ald>`_, Room 107, University of Washington campus
 - **Registration**: `Register Here <https://docs.google.com/forms/d/e/1FAIpQLSemu3o7Noo-B620tvIhIVrDCJHiBjYaTRin3RlBd-PN_CnVFw/viewform?usp=sf_link>`_
 
 Travel and Lodging Details
@@ -27,7 +27,14 @@ to schedule travel.
 - **Ground Transportation**: `Sound Transit's Link Light Rail <https://www.soundtransit.org/>`_ runs every 
   6, 10, or 15 minutes between Sea-Tac and the University of Washington.
   One-way tickets cost $3.25. You can also rent a car or do the ride share thing.
-- **Hotel**: More details on this are forthcoming.
+- **Parking**: The closest gatehouse to Alder Hall is `West Gatehouse, NE 40th Street <https://transportation.uw.edu/park/visitor>`_
+- **Hotel**: Here are a few hotel options:
+    - `Residence Inn by Marriott, University District <https://www.marriott.com/hotels/travel/seaud-residence-inn-seattle-university-district/>`_
+    - `Watertown Hotel <https://www.staypineapple.com/watertown-hotel-seattle-wa?utm_source=google-my-business&amp;utm_medium=organic&amp;utm_campaign=GMB&amp;utm_term=wt>`_  
+    - `Silver Cloud Hotel, University District <https://www.silvercloud.com/university/>`_
+    - `University Inn <https://www.staypineapple.com/university-inn-seattle-wa?utm_source=google-my-business&amp;utm_medium=organic&amp;utm_campaign=GMB&amp;utm_term=ui>`_ 
+    - `Graduate Seattle <https://www.graduatehotels.com/seattle>`_
+    - `Travelodge by Wyndham, Seattle University <http://www.travelodgeseattleuniversity.com/>`_
 
 Meeting Links
 -------------
