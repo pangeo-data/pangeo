@@ -16,6 +16,13 @@ Meeting Details
 - **Location**: `Alder Hall <https://www.washington.edu/maps/#!/ald>`_, Room 107, University of Washington campus
 - **Registration**: `Register Here <https://docs.google.com/forms/d/e/1FAIpQLSemu3o7Noo-B620tvIhIVrDCJHiBjYaTRin3RlBd-PN_CnVFw/viewform?usp=sf_link>`_
 
+Code of Conduct
+---------------
+Pangeo values the safety and security of all of our members and, because of that,
+we will not tolerate any form of harassment or discrimination.
+All participants are expected to follow the
+`Pangeo code of conduct <https://github.com/pangeo-data/governance/blob/master/conduct/code_of_conduct.md>`_.
+
 Travel and Lodging Details
 --------------------------
 
