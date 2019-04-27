@@ -4,7 +4,7 @@ sphinx_bootstrap_theme
 sphinx_pangeo_theme
 jupyter
 ipython
-nbconvert
+nbconvert==5.4.1
 nbsphinx
 doctr>=1.6.3
 sphinx-nbexamples
