@@ -750,3 +750,13 @@
     - urban environment
     - machine learning
     - HPC
+    
+- first_name: Thomas
+  last_name: Moore
+  institution: CSIRO 
+  website: https://research.csiro.au/dfp/
+  email: thomas.moore@csiro.au
+  github: Thomas-Moore-Creative
+  tags:
+    - physical oceanography
+
