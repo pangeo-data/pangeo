@@ -759,3 +759,15 @@
   github: Thomas-Moore-Creative
   tags:
     - physical oceanography
+
+- first_name: Julia
+  last_name: Kent
+  institution: National Center for Atmospheric Research
+  website: https://staff.ucar.edu/users/jkent
+  email: jkent@ucar.edu
+  github: jukent
+  tags:
+    - climate
+    - distributed computing
+    - algorithms
+    - remote sensing
