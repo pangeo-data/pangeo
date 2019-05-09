@@ -771,3 +771,13 @@
     - distributed computing
     - algorithms
     - remote sensing
+
+- first_name: Aidan
+  last_name: Heerdegen
+  institution: Australian National University/Centre of Excellence for Climate Extremes
+  website: https://climateextremes.org.au
+  email: aidan.heerdegen@anu.edu.au
+  github: aidanheerdegen
+  tags:
+    - HPC
+    - ocean modelling
