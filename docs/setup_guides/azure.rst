@@ -33,8 +33,9 @@ and click the blue Add logo in the top left. This will display the Create Kubern
 wizard.
 
 Work through the wizard customising the Kubernetes service to be created as you
-see necessary (though the defaults are largely reasonable). In the last step before
-the cluster is created a validation process is run, ensuring that the customisations you have
+see necessary (all defaults are reasonable, so you should only need to edit the name
+of the Kubernetes service to be created). In the last step before
+the cluster is created a validation process is run, ensuring that any customizations you have
 made will produce a working cluster. At this step you can also download a
 template file to make reproducing or automating cluster creation simpler in the future.
 
@@ -50,6 +51,12 @@ link above and also be using an Azure region where nodes are supported.
 With both of these requirements met, you can enable virtual nodes for autoscaling your Kubernetes
 service. In the Scale tab, ensure that both the Virtual Nodes and VM scale sets selectors are
 set to 'Enabled'.
+
+.. note::
+
+  You cannot create a Kubernetes service with traditional cluster autoscaling using the
+  web interface. See the next section for details on using the Azure CLI to create a
+  Kubernetes service with tradtional cluster autoscaling.
 
 
 Using the Azure CLI
@@ -72,8 +79,10 @@ To create a basic Kubernetes service using the Azure CLI:
 
 You'll need to specify a name for your Kubernetes service (as ``$AKS_RESOURCE_NAME``) and a
 name for an (existing) resource group (as ``$RESOURCE_GROUP_NAME``). Note that here
-we've also asked for a medium-sized VM to host the node rather than the default.
-You can specify any VM name listed in the links from this page as the value to this key:
+we've also asked for a medium-sized VM (that is, ``Standard_B8ms``) to host the node
+rather than the default. We found that the default node was too small to host all
+the pods necessary for the basic Pangeo install created by following this guide.
+You can, however, specify any VM size name listed in the links from this page as the value to this key:
 https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes.
 
 .. note::
@@ -210,7 +219,11 @@ as follows:
   helm repo update
   helm upgrade --install --namespace pangeo pangeo pangeo/pangeo -f pangeo.yaml
 
-The contents of the ``pangeo.yaml`` file came from the Zero to Jupyterhub guide.
+The helm chart ``pangeo.yaml`` is the
+`Pangeo helm chart <https://pangeo-data.github.io/helm-chart/>`_. The customizations
+we made to it are documented in the
+`Zero to Jupyterhub <https://zero-to-jupyterhub.readthedocs.io/en/latest/setup-jupyterhub.html>`_
+guide.
 
 
 Test install
@@ -221,9 +234,13 @@ the IP address of the Pangeo proxy:
 
 .. code-block:: bash
 
-  kubectl get svc proxy-public --namespace=pangeo
+  kubectl get service proxy-public --namespace=pangeo
 
-Navigate to the ``EXTERNAL-IP`` address listed there in your web browser.
+Note that this service can take a long time to start up, so you may need to wait
+a while for the IP address of the Pangeo proxy to be displayed.
+
+Once the service has started up, navigate to the ``EXTERNAL-IP`` address listed
+in the output of the above command in your web browser.
 If JupyterHub loads then you have successfully installed Pangeo on your Azure Kubernetes service!
 
 
