@@ -79,7 +79,7 @@ https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes.
 .. note::
   RBAC (Role-Based Access Control) is enabled by default on Kubernetes services set up using
   the Azure CLI. If you need to change this default behaviour, you can specify the
-  ``disable-rbac`` flag when creating your Kubernetes cluster.
+  ``--disable-rbac`` flag when creating your Kubernetes cluster.
 
 The ``az aks create`` command above assumes that you have already set up a resource group
 to deploy your Kubernetes service into. If you have not already set up a resource group,
@@ -219,7 +219,7 @@ Test install
 To test that Pangeo has installed successfully on your Kubernetes service, find
 the IP address of the Pangeo proxy:
 
-.. code-block::
+.. code-block:: bash
 
   kubectl get svc proxy-public --namespace=pangeo
 
