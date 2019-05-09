@@ -237,7 +237,8 @@ the IP address of the Pangeo proxy:
   kubectl get service proxy-public --namespace=pangeo
 
 Note that this service can take a long time to start up, so you may need to wait
-a while for the IP address of the Pangeo proxy to be displayed.
+a while for the IP address of the Pangeo proxy to be displayed. The output of the
+above command will read ``<pending>`` while the service is starting up.
 
 Once the service has started up, navigate to the ``EXTERNAL-IP`` address listed
 in the output of the above command in your web browser.
