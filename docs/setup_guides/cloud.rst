@@ -16,8 +16,9 @@ to one on your personal computer.
   on the `Zero to Jupyterhub`_ guide. We strongly recommend that your read
   that guide closely if you want a more comprehensive understanding.
 
-This guide currently covers only deployment on `Google Cloud Platform`_.
-We hope to soon expand it to include AWS and Azure.
+This guide covers deployment on `Google Cloud Platform`_. There are also
+deployment instructions available for the :doc:`Azure cloud platform </azure>`.
+We hope soon to expand this guide to also include deployment instructions for AWS.
 
 
 Step One: Install the Necessary Software
