@@ -230,6 +230,5 @@ with open('data/deployments.yml') as deployments_data_file:
 
 html_context = {
     'people': people,
-    'deployments': deployments,
-    'catalog': catalog
+    'deployments': deployments
 }
