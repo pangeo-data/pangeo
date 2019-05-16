@@ -3,4 +3,4 @@
 Pangeo Data Catalog
 ===================
 
-Pangeo data catalog now leaves `here <https://pangeo-data.github.io/pangeo-datastore/>`.
+Pangeo data catalog now live `here <https://pangeo-data.github.io/pangeo-datastore/>`.
