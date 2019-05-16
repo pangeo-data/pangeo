@@ -12,7 +12,7 @@ install:
   - conda update -q conda
   # Useful for debugging any issues with conda
   - conda info -a
-  - conda create -q -n docs-environment -c conda-forge -c intake python=$TRAVIS_PYTHON_VERSION intake intake-xarray
+  - conda create -q -n docs-environment -c conda-forge python=$TRAVIS_PYTHON_VERSION
   - source activate docs-environment
   - pip install -r docs/requirements.txt
 
