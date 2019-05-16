@@ -256,7 +256,23 @@ system administrators to properly configure these tools for your machine.</p>
 <p>This contains a self-contained Python environment that we can manipulate
 safely without requiring the involvement of IT. It also allows you to
 create isolated software environments so that we can experiment in the
-future safely.</p>
+future safely. Before creating your environment, we recommend you update
+your conda package manager with</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">update</span> <span class="n">conda</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Depending if you chose to initialize Miniconda in your <code class="docutils literal"><span class="pre">~/.bashrc</span></code>
+at the end of the installation, this new conda update will activate
+a <code class="docutils literal"><span class="pre">(base)</span></code> environment by default. If you wish to prevent conda
+from activating the <code class="docutils literal"><span class="pre">(base)</span></code> environment at shell initialization:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">config</span> <span class="o">--</span><span class="nb">set</span> <span class="n">auto_activate_base</span> <span class="n">false</span>
+</pre></div>
+</div>
+<p class="last">This will create a <code class="docutils literal"><span class="pre">./condarc</span></code> in your home
+directory with this setting the first time you run it.</p>
+</div>
 <p>Create a new conda environment for our pangeo work:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">create</span> <span class="o">-</span><span class="n">n</span> <span class="n">pangeo</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> \
     <span class="n">python</span><span class="o">=</span><span class="mf">3.6</span> <span class="n">xarray</span> \
@@ -270,7 +286,7 @@ future safely.</p>
 packages to this list.</p>
 </div>
 <p>Activate this environment</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="n">activate</span> <span class="n">pangeo</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">activate</span> <span class="n">pangeo</span>
 </pre></div>
 </div>
 <p>Your prompt should now look something like this (note the pangeo environment name):</p>
@@ -339,8 +355,18 @@ in the Jupyter documentation.</p>
 </div>
 <p>Finally, we may want to configure dask’s dashboard to forward through Jupyter.
 This can be done by editing the dask distributed config file, e.g.:
-<code class="docutils literal"><span class="pre">.config/dask/distributed.yaml</span></code>. In this file, set:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">diagnostics</span><span class="o">-</span><span class="n">link</span><span class="p">:</span> <span class="s2">&quot;/proxy/{port}/status&quot;</span>
+<code class="docutils literal"><span class="pre">.config/dask/distributed.yaml</span></code>. By default, when <code class="docutils literal"><span class="pre">dask.distributed</span></code> or
+<code class="docutils literal"><span class="pre">dask-jobqueue</span></code> is first imported, it places a file at <code class="docutils literal"><span class="pre">~/.config/dask/distributed.yaml</span></code>
+with a commented out version. You can create this file and do this first import by simply</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">c</span> <span class="s1">&#39;from dask.distributed import Client&#39;</span>
+</pre></div>
+</div>
+<p>In this <code class="docutils literal"><span class="pre">.config/dask/distributed.yaml</span></code> file, set:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1">#   ###################</span>
+<span class="c1">#   # Bokeh dashboard #</span>
+<span class="c1">#   ###################</span>
+<span class="c1">#   dashboard:</span>
+    <span class="n">link</span><span class="p">:</span> <span class="s2">&quot;/proxy/{port}/status&quot;</span>
 </pre></div>
 </div>
 <hr class="docutils" />
@@ -361,13 +387,13 @@ cases, your system administrators will want you to run this notebook server in
 an interactive session on a compute node. This is not universal rule, but it is
 one we’ll follow for this tutorial.</p>
 <p>In our case, the Cheyenne super computer uses the PBS job scheduler, so typing:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>(pangeo) $ qsub -I -l select=1:ncpus=4 -l walltime=03:00:00 -q regular
+<div class="highlight-default"><div class="highlight"><pre><span></span>(pangeo) $ qsub -I -A account -l select=1:ncpus=4 -l walltime=03:00:00 -q regular
 </pre></div>
 </div>
 <p>This will get us an interactive job on the <cite>regular</cite> queue for three hours. You
 may not see the <cite>pangeo</cite> environment anymore in your prompt, in this case, you
 will want to reactivate it.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="n">activate</span> <span class="n">pangeo</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">activate</span> <span class="n">pangeo</span>
 </pre></div>
 </div>
 <p>From here, we can start jupyter. The Cheyenne computer administrators have

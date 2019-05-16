@@ -60,6 +60,7 @@
 ./_sources/meetings/index.rst.txt
 ./_sources/packages.rst.txt
 ./_sources/quickstart.rst.txt
+./_sources/setup_guides/azure.rst.txt
 ./_sources/setup_guides/cloud.rst.txt
 ./_sources/setup_guides/hpc.rst.txt
 ./_sources/setup_guides/index.rst.txt
@@ -203,6 +204,7 @@
 ./quickstart.html
 ./search.html
 ./searchindex.js
+./setup_guides/azure.html
 ./setup_guides/cloud.html
 ./setup_guides/hpc.html
 ./setup_guides/index.html
