@@ -20,21 +20,6 @@ Below we create a dask cluster with 30 nodes to do our work for us.
 
 .. code:: ipython3
 
-    
-    import logging
-    logging.captureWarnings(True)
-    logging.getLogger('py.warnings').setLevel(logging.ERROR)
-
-
-
-
-.. parsed-literal::
-
-    VBox(children=(HTML(value='<h2>KubeCluster</h2>'), HBox(children=(HTML(value='\n<div>\n  <style scoped>\n    .…
-
-
-.. code:: ipython3
-
     from dask.distributed import Client, progress
     from dask_kubernetes import KubeCluster
     cluster = KubeCluster(n_workers=50)
@@ -1347,6 +1332,6 @@ The monthly anomaly is also premoninantly driven by surface forcing.
 
     .. container:: sphx-glr-download
 
-        **Download python file:** :download:`SOSE.py`
+        **Download python script:** :download:`SOSE.py`
 
-        **Download IPython notebook:** :download:`SOSE.ipynb`
+        **Download Jupyter notebook:** :download:`SOSE.ipynb`

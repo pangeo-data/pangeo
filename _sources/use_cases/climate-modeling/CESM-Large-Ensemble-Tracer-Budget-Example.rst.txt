@@ -24,14 +24,6 @@ tools to handle the large data volume
 
 .. code:: ipython3
 
-    
-    import logging
-    logging.captureWarnings(True)
-    logging.getLogger('py.warnings').setLevel(logging.ERROR)
-
-
-.. code:: ipython3
-
     !qselect -N dask-worker | xargs qdel
 
 .. code:: ipython3
@@ -394,6 +386,6 @@ column budget
 
     .. container:: sphx-glr-download
 
-        **Download python file:** :download:`CESM-Large-Ensemble-Tracer-Budget-Example.py`
+        **Download python script:** :download:`CESM-Large-Ensemble-Tracer-Budget-Example.py`
 
-        **Download IPython notebook:** :download:`CESM-Large-Ensemble-Tracer-Budget-Example.ipynb`
+        **Download Jupyter notebook:** :download:`CESM-Large-Ensemble-Tracer-Budget-Example.ipynb`

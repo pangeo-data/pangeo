@@ -22,14 +22,6 @@ format.
 
 .. code:: ipython3
 
-    
-    import logging
-    logging.captureWarnings(True)
-    logging.getLogger('py.warnings').setLevel(logging.ERROR)
-
-
-.. code:: ipython3
-
     import numpy as np
     import xarray as xr
     import matplotlib.pyplot as plt
@@ -358,6 +350,6 @@ variability.)
 
     .. container:: sphx-glr-download
 
-        **Download python file:** :download:`sea-surface-height.py`
+        **Download python script:** :download:`sea-surface-height.py`
 
-        **Download IPython notebook:** :download:`sea-surface-height.ipynb`
+        **Download Jupyter notebook:** :download:`sea-surface-height.ipynb`

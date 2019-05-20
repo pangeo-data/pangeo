@@ -16,15 +16,6 @@
 # In[ ]:
 
 
-
-import logging
-logging.captureWarnings(True)
-logging.getLogger('py.warnings').setLevel(logging.ERROR)
-
-
-# In[ ]:
-
-
 from dask.distributed import Client, progress
 from dask_kubernetes import KubeCluster
 cluster = KubeCluster(n_workers=50)

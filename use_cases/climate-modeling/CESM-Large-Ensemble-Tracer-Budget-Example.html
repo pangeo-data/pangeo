@@ -239,11 +239,6 @@ To represent the full envelope of natural variability, the fully coupled
 version of the CESM has been run 40 times representing 40 different
 realizations of the period 1920-2100. Dask and xarray are the perfect
 tools to handle the large data volume</p>
-<div class="highlight-ipython3"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">logging</span>
-<span class="n">logging</span><span class="o">.</span><span class="n">captureWarnings</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s1">&#39;py.warnings&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">ERROR</span><span class="p">)</span>
-</pre></div>
-</div>
 <div class="highlight-ipython3"><div class="highlight"><pre><span></span><span class="o">!</span>qselect -N dask-worker <span class="p">|</span> xargs qdel
 </pre></div>
 </div>
@@ -558,8 +553,8 @@ column budget</p>
 </pre></div>
 </div>
 <div class="sphx-glr-download docutils container">
-<p><strong>Download python file:</strong> <a class="reference download internal" href="../../_downloads/CESM-Large-Ensemble-Tracer-Budget-Example.py" download=""><code class="xref download docutils literal"><span class="pre">CESM-Large-Ensemble-Tracer-Budget-Example.py</span></code></a></p>
-<p><strong>Download IPython notebook:</strong> <a class="reference download internal" href="../../_downloads/CESM-Large-Ensemble-Tracer-Budget-Example.ipynb" download=""><code class="xref download docutils literal"><span class="pre">CESM-Large-Ensemble-Tracer-Budget-Example.ipynb</span></code></a></p>
+<p><strong>Download python script:</strong> <a class="reference download internal" href="../../_downloads/CESM-Large-Ensemble-Tracer-Budget-Example.py" download=""><code class="xref download docutils literal"><span class="pre">CESM-Large-Ensemble-Tracer-Budget-Example.py</span></code></a></p>
+<p><strong>Download Jupyter notebook:</strong> <a class="reference download internal" href="../../_downloads/CESM-Large-Ensemble-Tracer-Budget-Example.ipynb" download=""><code class="xref download docutils literal"><span class="pre">CESM-Large-Ensemble-Tracer-Budget-Example.ipynb</span></code></a></p>
 </div>
 </div>
 </div>

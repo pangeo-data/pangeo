@@ -16,15 +16,6 @@
 # In[ ]:
 
 
-
-import logging
-logging.captureWarnings(True)
-logging.getLogger('py.warnings').setLevel(logging.ERROR)
-
-
-# In[ ]:
-
-
 import numpy as np
 import xarray as xr
 import matplotlib.pyplot as plt

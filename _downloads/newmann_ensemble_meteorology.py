@@ -16,15 +16,6 @@
 # In[ ]:
 
 
-
-import logging
-logging.captureWarnings(True)
-logging.getLogger('py.warnings').setLevel(logging.ERROR)
-
-
-# In[ ]:
-
-
 get_ipython().run_line_magic('matplotlib', 'inline')
 
 import numpy as np

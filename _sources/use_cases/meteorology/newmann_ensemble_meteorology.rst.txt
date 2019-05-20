@@ -21,14 +21,6 @@ https://www.earthsystemgrid.org/dataset/gridded\_precip\_and\_temp.html
 
 .. code:: ipython3
 
-    
-    import logging
-    logging.captureWarnings(True)
-    logging.getLogger('py.warnings').setLevel(logging.ERROR)
-
-
-.. code:: ipython3
-
         
     import numpy as np
     import xarray as xr
@@ -373,6 +365,6 @@ this exercise.
 
     .. container:: sphx-glr-download
 
-        **Download python file:** :download:`newmann_ensemble_meteorology.py`
+        **Download python script:** :download:`newmann_ensemble_meteorology.py`
 
-        **Download IPython notebook:** :download:`newmann_ensemble_meteorology.ipynb`
+        **Download Jupyter notebook:** :download:`newmann_ensemble_meteorology.ipynb`

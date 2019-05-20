@@ -258,14 +258,6 @@ Ocean State Estimate</p>
 <div class="section" id="connect-to-dask-cluster">
 <h2>Connect to Dask Cluster<a class="headerlink" href="#connect-to-dask-cluster" title="Permalink to this headline">¶</a></h2>
 <p>Below we create a dask cluster with 30 nodes to do our work for us.</p>
-<div class="highlight-ipython3"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">logging</span>
-<span class="n">logging</span><span class="o">.</span><span class="n">captureWarnings</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s1">&#39;py.warnings&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">ERROR</span><span class="p">)</span>
-</pre></div>
-</div>
-<pre class="literal-block">
-VBox(children=(HTML(value='&lt;h2&gt;KubeCluster&lt;/h2&gt;'), HBox(children=(HTML(value='n&lt;div&gt;n  &lt;style scoped&gt;n    .…
-</pre>
 <div class="highlight-ipython3"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">dask.distributed</span> <span class="k">import</span> <span class="n">Client</span><span class="p">,</span> <span class="n">progress</span>
 <span class="kn">from</span> <span class="nn">dask_kubernetes</span> <span class="k">import</span> <span class="n">KubeCluster</span>
 <span class="n">cluster</span> <span class="o">=</span> <span class="n">KubeCluster</span><span class="p">(</span><span class="n">n_workers</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
@@ -1301,8 +1293,8 @@ variability</p>
 <img alt="../../_images/SOSE_9.png" src="../../_images/SOSE_9.png" />
 <p>The monthly anomaly is also premoninantly driven by surface forcing.</p>
 <div class="sphx-glr-download docutils container">
-<p><strong>Download python file:</strong> <a class="reference download internal" href="../../_downloads/SOSE.py" download=""><code class="xref download docutils literal"><span class="pre">SOSE.py</span></code></a></p>
-<p><strong>Download IPython notebook:</strong> <a class="reference download internal" href="../../_downloads/SOSE.ipynb" download=""><code class="xref download docutils literal"><span class="pre">SOSE.ipynb</span></code></a></p>
+<p><strong>Download python script:</strong> <a class="reference download internal" href="../../_downloads/SOSE.py" download=""><code class="xref download docutils literal"><span class="pre">SOSE.py</span></code></a></p>
+<p><strong>Download Jupyter notebook:</strong> <a class="reference download internal" href="../../_downloads/SOSE.ipynb" download=""><code class="xref download docutils literal"><span class="pre">SOSE.ipynb</span></code></a></p>
 </div>
 </div>
 </div>

@@ -12,15 +12,6 @@
 # In[ ]:
 
 
-
-import logging
-logging.captureWarnings(True)
-logging.getLogger('py.warnings').setLevel(logging.ERROR)
-
-
-# In[ ]:
-
-
 get_ipython().system('qselect -N dask-worker | xargs qdel')
 
 
