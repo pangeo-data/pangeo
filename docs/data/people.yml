@@ -781,3 +781,13 @@
   tags:
     - HPC
     - ocean modelling
+
+- first_name: Dougie
+  last_name: Squire
+  institution: CSIRO 
+  website: https://research.csiro.au/dfp/
+  email: dougie.squire@csiro.au
+  github: dougiesquire
+  tags:
+    - climate
+    - atmospheric science
