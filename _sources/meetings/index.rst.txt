@@ -12,5 +12,12 @@ Future Meetings
 .. toctree::
    :maxdepth: 2
 
-   2019_european-pangeo-meeting
    2019_summer-meeting
+
+Past Meetings
+~~~~~~~~~~~~~
+
+.. toctree::
+   :maxdepth: 2
+
+   2019_european-pangeo-meeting
