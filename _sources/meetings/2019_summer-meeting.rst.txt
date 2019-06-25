@@ -14,7 +14,7 @@ Meeting Details
 ---------------
 - **Dates**: 21-23 August 2019
 - **Location**: `Alder Hall <https://www.washington.edu/maps/#!/ald>`_, Room 107, University of Washington campus
-- **Registration**: `Register Here <https://docs.google.com/forms/d/e/1FAIpQLSemu3o7Noo-B620tvIhIVrDCJHiBjYaTRin3RlBd-PN_CnVFw/viewform?usp=sf_link>`_
+- **Registration**: `Register Here <https://docs.google.com/forms/d/e/1FAIpQLSemu3o7Noo-B620tvIhIVrDCJHiBjYaTRin3RlBd-PN_CnVFw/viewform?usp=sf_link>`_ (Closed, email Joe Hamman (jhamman at ucar.edu) for more information).
 
 Code of Conduct
 ---------------
