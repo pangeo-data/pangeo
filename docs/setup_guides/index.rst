@@ -41,6 +41,7 @@ will also find the `zero-to-jupyterhub`_ documentation quite useful.
   :maxdepth: 2
 
   cloud
+  azure
 
 
 .. _HPC: hpc.rst

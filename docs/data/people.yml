@@ -750,3 +750,44 @@
     - urban environment
     - machine learning
     - HPC
+    
+- first_name: Thomas
+  last_name: Moore
+  institution: CSIRO 
+  website: https://research.csiro.au/dfp/
+  email: thomas.moore@csiro.au
+  github: Thomas-Moore-Creative
+  tags:
+    - physical oceanography
+
+- first_name: Julia
+  last_name: Kent
+  institution: National Center for Atmospheric Research
+  website: https://staff.ucar.edu/users/jkent
+  email: jkent@ucar.edu
+  github: jukent
+  tags:
+    - climate
+    - distributed computing
+    - algorithms
+    - remote sensing
+
+- first_name: Aidan
+  last_name: Heerdegen
+  institution: Australian National University/Centre of Excellence for Climate Extremes
+  website: https://climateextremes.org.au
+  email: aidan.heerdegen@anu.edu.au
+  github: aidanheerdegen
+  tags:
+    - HPC
+    - ocean modelling
+
+- first_name: Dougie
+  last_name: Squire
+  institution: CSIRO 
+  website: https://research.csiro.au/dfp/
+  email: dougie.squire@csiro.au
+  github: dougiesquire
+  tags:
+    - climate
+    - atmospheric science

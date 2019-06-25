@@ -219,9 +219,6 @@ def setup(app):
     app.add_stylesheet("example_gallery_styles_patched.css")
     app.connect("source-read", rstjinja)
 
-import intake
-catalog = intake.Catalog('../gce/catalog.yaml')
-
 # a hack to get our custom people data into sphinx
 import yaml
 with open('data/people.yml') as people_data_file:
@@ -233,6 +230,5 @@ with open('data/deployments.yml') as deployments_data_file:
 
 html_context = {
     'people': people,
-    'deployments': deployments,
-    'catalog': catalog
+    'deployments': deployments
 }

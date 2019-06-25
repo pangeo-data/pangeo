@@ -100,7 +100,8 @@ datasets.
 These datasets are directly accessible from the Google Cloud Pangeo deployment:
 `pangeo.pydata.org <http://pangeo.pydata.org>`_.
 
-See the list of available data sets in the :ref:`data catalog <catalog>`.
+See the list of available data sets in the
+`data catalog <https://pangeo-data.github.io/pangeo-datastore/>`_.
 
 .. _cloud-data-guide:
 
