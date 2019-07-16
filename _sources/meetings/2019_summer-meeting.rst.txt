@@ -15,6 +15,7 @@ Meeting Details
 - **Dates**: 21-23 August 2019
 - **Location**: `Alder Hall <https://www.washington.edu/maps/#!/ald>`_, Room 107, University of Washington campus
 - **Registration**: `Register Here <https://docs.google.com/forms/d/e/1FAIpQLSemu3o7Noo-B620tvIhIVrDCJHiBjYaTRin3RlBd-PN_CnVFw/viewform?usp=sf_link>`_ (Closed, email Joe Hamman (jhamman at ucar.edu) for more information).
+- **Remote Participation**: Plenary sessions will be live streamed (details coming soon). Remote participation for the sprints is also encouraged and will be coordinated via `GitHub <https://github.com/pangeo-data/pangeo/issues>`_ and `Gitter <https://gitter.im/pangeo-data>`_ during the meeting.
 
 Code of Conduct
 ---------------
