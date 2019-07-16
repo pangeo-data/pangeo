@@ -13,6 +13,7 @@ Author: `Ryan Abernathey <http://github.com/rabernat>`__
    :alt: SOSE Logo
 
    SOSE Logo
+
 Connect to Dask Cluster
 -----------------------
 

@@ -329,7 +329,7 @@ preparing and uploading.</p>
 <ol class="arabic">
 <li><p class="first"><strong>Open your Entire Dataset in Xarray</strong>.</p>
 <p>Xarray is designed to
-load many netCDF files into a single <a class="reference external" href="http://xarray.pydata.org/en/latest/generated/xarray.DataArray.html#xarray.DataArray" title="(in xarray v0)"><code class="xref py py-class docutils literal"><span class="pre">xarray.DataArray</span></code></a> object.
+load many netCDF files into a single <a class="reference external" href="http://xarray.pydata.org/en/latest/generated/xarray.Dataset.html#xarray.Dataset" title="(in xarray v0.12.3)"><code class="xref py py-class docutils literal"><span class="pre">xarray.Dataset</span></code></a> object.
 The easiest way to accomplish this is using the <code class="xref py py-meth docutils literal"><span class="pre">xarray.open_mfdataset()</span></code>
 function. Suppose you have a directory full of netCDF files that comprise
 a single dataset stored in the directory <code class="docutils literal"><span class="pre">/path/to/mydataset</span></code>. If the files
@@ -361,13 +361,13 @@ done as follows</p>
 </pre></div>
 </div>
 <p>If <code class="docutils literal"><span class="pre">/path/to/output/mydataset</span></code> does not exist yet, it will be created.
-(It’s best if does not exist, as conflicts with existing files could cause
+(It’s best if it does not exist, as conflicts with existing files could cause
 problems.)</p>
 <p>If your dataset is very large, this can take a very long time.
 The speed is generally constrained by the rate at which the data can be read
 from the storage device where the original files are located. If you are
-on a high-performance cluster, you might consider using a dask distributed to
-parallelize the operation across multiple nodes.</p>
+on a high-performance cluster, you might consider using <a class="reference external" href="https://distributed.dask.org/en/latest">Dask.distributed</a>
+to parallelize the operation across multiple nodes.</p>
 <p>Xarray and Zarr have many different options for encoding and compression of
 the datasets. This can be passed to <code class="docutils literal"><span class="pre">to_zarr</span></code> via the <code class="docutils literal"><span class="pre">encoding</span></code> keyword
 argument. Consult the relevant
@@ -414,7 +414,7 @@ pangeo.pydata.org, do the following:</p>
 </pre></div>
 </div>
 <p>You should see all the variables and metadata from your original dataset in
-step 1. The dataset will automatically be created with dask chunks matching
+step 1. The dataset will automatically be created with Dask chunks matching
 the underlying zarr chunks.</p>
 </li>
 </ol>

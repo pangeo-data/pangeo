@@ -32,13 +32,13 @@ propose your idea.
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbContainer" tooltip="Evaluating the conservation of heat and salt content in the Southern Ocean State Estimate ">
+    <div class="sphx-glr-thumbContainer" tooltip="Example on using the gridded sea-surface altimetry data from The Copernicus Marine Environment">
 
 .. only:: html
 
-    .. figure:: /use_cases/physical-oceanography/images/thumb/gallery_use_cases_physical-oceanography_sose.ipynb_thumb.png
+    .. figure:: /use_cases/physical-oceanography/images/thumb/gallery_use_cases_physical-oceanography_sea-surface-height.ipynb_thumb.png
 
-        :ref:`gallery_use_cases_physical-oceanography_sose.ipynb`
+        :ref:`gallery_use_cases_physical-oceanography_sea-surface-height.ipynb`
 
 .. raw:: html
 
@@ -47,13 +47,13 @@ propose your idea.
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbContainer" tooltip="Example on using the gridded sea-surface altimetry data from The Copernicus Marine Environment">
+    <div class="sphx-glr-thumbContainer" tooltip="Evaluating the conservation of heat and salt content in the Southern Ocean State Estimate ">
 
 .. only:: html
 
-    .. figure:: /use_cases/physical-oceanography/images/thumb/gallery_use_cases_physical-oceanography_sea-surface-height.ipynb_thumb.png
+    .. figure:: /use_cases/physical-oceanography/images/thumb/gallery_use_cases_physical-oceanography_sose.ipynb_thumb.png
 
-        :ref:`gallery_use_cases_physical-oceanography_sea-surface-height.ipynb`
+        :ref:`gallery_use_cases_physical-oceanography_sose.ipynb`
 
 .. raw:: html
 

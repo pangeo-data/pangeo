@@ -15,6 +15,7 @@ This is a widely used dataset in physical oceanography and climate.
    :alt: globe image
 
    globe image
+
 The dataset has already been extracted from copernicus and stored in
 google cloud storage in
 `xarray-zarr <http://xarray.pydata.org/en/latest/io.html#zarr>`__
