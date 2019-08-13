@@ -14,8 +14,8 @@ Meeting Details
 ---------------
 - **Dates**: 21-23 August 2019
 - **Location**: `Alder Hall <https://www.washington.edu/maps/#!/ald>`_, Room 107, University of Washington campus
-- **Registration**: `Register Here <https://docs.google.com/forms/d/e/1FAIpQLSemu3o7Noo-B620tvIhIVrDCJHiBjYaTRin3RlBd-PN_CnVFw/viewform?usp=sf_link>`_ (Closed, email Joe Hamman (jhamman at ucar.edu) for more information).
-- **Remote Participation**: Plenary sessions will be live streamed (details coming soon). Remote participation for the sprints is also encouraged and will be coordinated via `GitHub <https://github.com/pangeo-data/pangeo/issues>`_ and `Gitter <https://gitter.im/pangeo-data>`_ during the meeting.
+- **Registration**: Registration is now closed.
+- **Remote Participation**: Plenary sessions will be live streamed via Zoom. Click `here <https://washington.zoom.us/j/999388241>`_ to join the Zoom Meeting. Remote participation for the sprints is also encouraged and will be coordinated via `GitHub <https://github.com/pangeo-data/pangeo/issues>`_ and `Gitter <https://gitter.im/pangeo-data>`_ during the meeting.
 
 Code of Conduct
 ---------------
@@ -47,13 +47,15 @@ to schedule travel.
 Meeting Links
 -------------
 
-- Summary blog post from the 2018 meeting at NCAR [`link <https://medium.com/pangeo/the-2018-pangeo-developers-workshop-1be359dac33c>`_]
+- Sign up for Lightning Talks: [`link <https://forms.gle/4ZbCbHGxe2sRNf9y7>`_]
+- Sprint Proposals: [`link <https://docs.google.com/presentation/d/1XHtpTYOAxnYs8IyNm3PxcU5nIQWWC-050e-8WPme0rg/edit?usp=sharing>`_]
+- Summary blog post from the 2018 meeting at NCAR: [`link <https://medium.com/pangeo/the-2018-pangeo-developers-workshop-1be359dac33c>`_]
 
 Agenda
 ------
 
-The meeting will start at 9 AM on August 21st and will wrap up by 4 PM on August 23rd.
-While a detailed agenda is coming soon, a preliminary draft of the agenda is displayed below.
+The meeting will start at 9 AM on August 21st and will wrap up around 4 PM on August 23rd.
+The final agenda is embedded below.
 
 .. raw:: html
 
