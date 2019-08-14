@@ -60,3 +60,67 @@ The final agenda is embedded below.
 .. raw:: html
 
     <iframe width="100%" height="800" src="https://docs.google.com/document/d/e/2PACX-1vQtNNhS0KUh9oZUOG_T2f8_b507q9AlEhGTGMzCrZ61lQa5MyXNeKso1Ba1QxKGqSbD-iM8cC9ScNmq/pub?embedded=true"></iframe>
+    
+Attendees
+---------
+  
+1.	Shima Abadi, University of Washington
+2.	Ryan Abernathey, Columbia University
+3.	Mattia Almansi, Johns Hopkins University
+4.	Anthony Arendt, University of Washington
+5.	Philip Austin, University of British Columbia
+6.	Shannon Axelrod, Chan Zuckerberg Initiative
+7.	Anderson Banihirwe, National Center for Atmospheric Research
+8.	Aimee Barciauskas, Development Seed
+9.	Will Barnes, Bay Area Environmental Research Institute / Lockheed Martin Solar and Astrophysics Laboratory
+10.	Charles Becker, Boise State University
+11.	Karan Bhatia, Google
+12.	Sarah Bird, Mozilla
+13.	Scott Black, Utah State University
+14.	Charles Blackmon-Luca, Columbia University
+15.	Noah Brenowitz, University of Washington
+16.	Deepak Cherian, National Center for Atmospheric Research
+17.	Shreyas Cholia, Lawrence Berkeley Laboratory
+18.	Erin Dougherty, Colorado State University
+19.	Rob Fatland, University of Washington
+20.	Filipe Fernandes, National Oceanic and Atmospheric Administration / Integrated Ocean Observing System
+21.	Chelle Gentemann, Earth and Space Research
+22.	Joe Hamman, National Center for Atmospheric Research
+23.	Matthew Hanson, Element 84
+24.	Kirstie Haynie, United States Geological Survey
+25.	Lindsey Heagy, University of California Berkeley
+26.	Kate Hedstrom, University of Alaska Fairbanks
+27.	Scott Henderson, University of Washington
+28.	Chris Holdgraf, University of California Berkeley
+29.	Stephan Hoyer, Google
+30.	Spencer Jones, Lamont-Doherty Earth Observatory
+31.	Kevin Jorissen, Amazon Web Services
+32.	Julia Kent, National Center for Atmospheric Research
+33.	Friedrich Knuth, University of Washington
+34.	Luke Madaus, Jupiter
+35.	Rodrigo Manzanas, Intergovernmental Panel on Climate Change
+36.	Brian Mapes, University of Miami
+37.	Elizabeth Maroon, National Center for Atmospheric Research
+38.	Robin Matthews, Intergovernmental Panel on Climate Change
+39.	Jeremy McGibbon, University of Washington
+40.	Thomas Moore, Commonwealth Scientific and Industrial Research Organisation 
+41.	James Munroe, Memorial University of Newfoundland
+42.	Dan Nowacki, United States Geological Survey
+43.	Yuvi Panda, Project Jupyter
+44.	Kevin Paul, National Center for Atmospheric Research
+45.	Walter Perkins, University of Washington
+46.	Matthew Rocklin, NVIDIA
+47.	Ariel Rokem, The University of Washington
+48.	Jeffrey Sadler, US Geological Survey
+49.	Hillary Scannell, University of Washington
+50.	David Shean, University of Washington
+51.	Julia Signell, Anaconda
+52.	Nicholas Sofroniew, Chan Zuckerberg Initiative
+53.	Dax Soule, CUNY - Queens College
+54.	Dougie Squire, Commonwealth Scientific and Industrial Research Organisation 
+55.	Steven Stetzler, University of Washington
+56.	Jason Suwala, Hatfield Consultants
+57.	Amanda Tan, University of Washington
+58.	Dan Wessels, Mesosphere
+59.	Siyu Yang, Microsoft AI for Earth
+60.	Jiawei Zhuang, Harvard University
