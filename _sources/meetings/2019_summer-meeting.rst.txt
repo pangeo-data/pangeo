@@ -112,16 +112,17 @@ Attendees
 46.	Matthew Rocklin, NVIDIA
 47.	Ariel Rokem, The University of Washington
 48. Mary Romelfanger, Space Telescope Science Institute
-49.	Jeffrey Sadler, US Geological Survey
-50.	Hillary Scannell, University of Washington
-51.	David Shean, University of Washington
-52.	Julia Signell, Anaconda
-53.	Nicholas Sofroniew, Chan Zuckerberg Initiative
-54.	Dax Soule, CUNY - Queens College
-55.	Dougie Squire, Commonwealth Scientific and Industrial Research Organisation 
-56.	Steven Stetzler, University of Washington
-57.	Jason Suwala, Hatfield Consultants
-58.	Amanda Tan, University of Washington
-59.	Dan Wessels, Mesosphere
-60.	Siyu Yang, Microsoft AI for Earth
-61.	Jiawei Zhuang, Harvard University
+49. Daniel Rothenberg, ClimaCell
+50.	Jeffrey Sadler, US Geological Survey
+51.	Hillary Scannell, University of Washington
+52.	David Shean, University of Washington
+53.	Julia Signell, Anaconda
+54.	Nicholas Sofroniew, Chan Zuckerberg Initiative
+55.	Dax Soule, CUNY - Queens College
+56.	Dougie Squire, Commonwealth Scientific and Industrial Research Organisation 
+57.	Steven Stetzler, University of Washington
+58.	Jason Suwala, Hatfield Consultants
+59.	Amanda Tan, University of Washington
+60.	Dan Wessels, Mesosphere
+61.	Siyu Yang, Microsoft AI for Earth
+62.	Jiawei Zhuang, Harvard University
