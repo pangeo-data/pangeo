@@ -63,8 +63,7 @@ The final agenda is embedded below.
     
 Attendees
 ---------
-  
-1.	Shima Abadi, University of Washington
+  1.	Shima Abadi, University of Washington
 2.	Ryan Abernathey, Columbia University
 3.	Mattia Almansi, Johns Hopkins University
 4.	Anthony Arendt, University of Washington
@@ -103,28 +102,30 @@ Attendees
 37.	Brian Mapes, University of Miami
 38.	Elizabeth Maroon, National Center for Atmospheric Research
 39.	Robin Matthews, Intergovernmental Panel on Climate Change
-40.	Jeremy McGibbon, University of Washington
-41.	Thomas Moore, Commonwealth Scientific and Industrial Research Organisation 
-42.	James Munroe, Memorial University of Newfoundland
-43.	Dan Nowacki, United States Geological Survey
-44.	Yuvi Panda, Project Jupyter
-45.	Kevin Paul, National Center for Atmospheric Research
-46.	Walter Perkins, University of Washington
-47.	Matthew Rocklin, NVIDIA
-48.	Ariel Rokem, The University of Washington
-49.	Mary Romelfanger, Space Telescope Science Institute
-50.	Daniel Rothenberg, ClimaCell
-51.	Jeffrey Sadler, US Geological Survey
-52.	Hillary Scannell, University of Washington
-53.	David Shean, University of Washington
-54.	Julia Signell, Anaconda
-55.	Nicholas Sofroniew, Chan Zuckerberg Initiative
-56.	Dax Soule, CUNY - Queens College
-57.	Dougie Squire, Commonwealth Scientific and Industrial Research Organisation 
-58.	Steven Stetzler, University of Washington
-59.	Jason Suwala, Hatfield Consultants
-60.	Amanda Tan, University of Washington
-61.	Dan Wessels, Mesosphere
-62.	Siyu Yang, Microsoft AI for Earth
-63.	Jiawei Zhuang, Harvard University
+40.	Jacob Matuskey, Space Telescope Science Institute
+41.	Jeremy McGibbon, University of Washington
+42.	Thomas Moore, Commonwealth Scientific and Industrial Research Organisation 
+43.	James Munroe, Memorial University of Newfoundland
+44.	Dan Nowacki, United States Geological Survey
+45.	Yuvi Panda, Project Jupyter
+46.	Kevin Paul, National Center for Atmospheric Research
+47.	Walter Perkins, University of Washington
+48.	Matthew Rocklin, NVIDIA
+49.	Ariel Rokem, The University of Washington
+50.	Mary Romelfanger, Space Telescope Science Institute
+51.	Daniel Rothenberg, ClimaCell
+52.	Jeffrey Sadler, US Geological Survey
+53.	Hillary Scannell, University of Washington
+54.	David Shean, University of Washington
+55.	Julia Signell, Anaconda
+56.	Nicholas Sofroniew, Chan Zuckerberg Initiative
+57.	Dax Soule, CUNY - Queens College
+58.	Dougie Squire, Commonwealth Scientific and Industrial Research Organisation 
+59.	Steven Stetzler, University of Washington
+60.	Jason Suwala, Hatfield Consultants
+61.	Amanda Tan, University of Washington
+62.	Dan Wessels, Mesosphere
+63.	Siyu Yang, Microsoft AI for Earth
+64.	Jiawei Zhuang, Harvard University
+
 
