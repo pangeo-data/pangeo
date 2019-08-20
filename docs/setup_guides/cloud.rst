@@ -236,7 +236,7 @@ the Pangeo helm-chart repository:
 .. _secret_config.yaml: https://github.com/pangeo-data/pangeo/blob/master/gce/setup-guide/secret_config.yaml
 .. _Github OAuth for developers: https://developer.github.com/apps/building-oauth-apps/creating-an-oauth-app/
 .. _GitHub OAuth Callback: https://help.github.com/enterprise/2.13/admin/guides/user-management/using-github-oauth/
-.. _Zero to Jupyterhub: https://zero-to-jupyterhub-with-kubernetes.readthedocs.io/en/latest/
+.. _Zero to Jupyterhub: https://zero-to-jupyterhub.readthedocs.io/en/latest/
 .. _Google Cloud Platform: https://cloud.google.com/
 .. _Kubernetes: https://kubernetes.io/docs/home/
 .. _Helm: https://docs.helm.sh/
