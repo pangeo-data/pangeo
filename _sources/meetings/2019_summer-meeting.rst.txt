@@ -63,7 +63,7 @@ The final agenda is embedded below.
     
 Attendees
 ---------
-  1.	Shima Abadi, University of Washington
+1.	Shima Abadi, University of Washington
 2.	Ryan Abernathey, Columbia University
 3.	Mattia Almansi, Johns Hopkins University
 4.	Anthony Arendt, University of Washington
