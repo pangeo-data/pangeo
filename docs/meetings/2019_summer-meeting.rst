@@ -15,7 +15,7 @@ Meeting Details
 - **Dates**: 21-23 August 2019
 - **Location**: `Alder Hall <https://www.washington.edu/maps/#!/ald>`_, Room 107, University of Washington campus
 - **Registration**: Registration is now closed.
-- **Remote Participation**: Plenary sessions will be live streamed via Zoom. Click `here <https://washington.zoom.us/j/999388241>`_ to join the Zoom Meeting. Remote participation for the sprints is also encouraged and will be coordinated via `GitHub <https://github.com/pangeo-data/pangeo/issues>`_ and `Gitter <https://gitter.im/pangeo-data>`_ during the meeting.
+- **Remote Participation**: Plenary sessions will be live streamed via Google Hangouts. Click `here <https://stream.meet.google.com/stream/45a5212e-c3a9-4e44-973f-6fc2f1a4b78f>`_ to join the Zoom Meeting. Remote participation for the sprints is also encouraged and will be coordinated via `GitHub <https://github.com/pangeo-data/pangeo/issues>`_ and `Gitter <https://gitter.im/pangeo-data>`_ during the meeting.
 
 Code of Conduct
 ---------------
@@ -128,6 +128,3 @@ Attendees
 63.	Dan Wessels, Mesosphere
 64.	Siyu Yang, Microsoft AI for Earth
 65.	Jiawei Zhuang, Harvard University
-
-
-
