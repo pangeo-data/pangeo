@@ -224,8 +224,8 @@ These recommendations may change as cloud storage technology evolves.
    .. code-block:: python
 
       import xarray as xr
-      import gcsfs
-      ds = xr.open_zarr(gcsfs.GCSMap('pangeo-data/mydataset'))
+      import fsspec
+      ds = xr.open_zarr(fsspec.get_mapper('gcs://pangeo-data/mydataset'))
 
    You should see all the variables and metadata from your original dataset in
    step 1. The dataset will automatically be created with Dask chunks matching

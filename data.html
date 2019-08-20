@@ -409,8 +409,8 @@ region. It can therefore be accessed by the flagship
 <p>To open the dataset we just uploaded from within a notebook or script in
 pangeo.pydata.org, do the following:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">xarray</span> <span class="kn">as</span> <span class="nn">xr</span>
-<span class="kn">import</span> <span class="nn">gcsfs</span>
-<span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_zarr</span><span class="p">(</span><span class="n">gcsfs</span><span class="o">.</span><span class="n">GCSMap</span><span class="p">(</span><span class="s1">&#39;pangeo-data/mydataset&#39;</span><span class="p">))</span>
+<span class="kn">import</span> <span class="nn">fsspec</span>
+<span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_zarr</span><span class="p">(</span><span class="n">fsspec</span><span class="o">.</span><span class="n">get_mapper</span><span class="p">(</span><span class="s1">&#39;gcs://pangeo-data/mydataset&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
 <p>You should see all the variables and metadata from your original dataset in
