@@ -15,7 +15,7 @@ Meeting Details
 - **Dates**: 21-23 August 2019
 - **Location**: `Alder Hall <https://www.washington.edu/maps/#!/ald>`_, Room 107, University of Washington campus
 - **Registration**: Registration is now closed.
-- **Remote Participation**: Plenary sessions will be live streamed via Google Hangouts. Remote participation for the sprints is also encouraged and will be coordinated via `GitHub <https://github.com/pangeo-data/pangeo/issues>`_ and `Gitter <https://gitter.im/pangeo-data>`_ during the meeting.
+- **Remote Participation**: Plenary sessions will be live streamed via Zoom. Remote participation for the sprints is also encouraged and will be coordinated via `GitHub <https://github.com/pangeo-data/pangeo/issues>`_ and `Gitter <https://gitter.im/pangeo-data>`_ during the meeting.
     - Day 1 live stream: Click `here <https://washington.zoom.us/j/999388241>`_ (new Zoom link)
     - Day 2 live stream: Click `here <https://stream.meet.google.com/stream/fb959b61-e234-4400-b069-eb07021705e8>`_
 
