@@ -17,7 +17,7 @@ Meeting Details
 - **Registration**: Registration is now closed.
 - **Remote Participation**: Plenary sessions will be live streamed via Zoom. Remote participation for the sprints is also encouraged and will be coordinated via `GitHub <https://github.com/pangeo-data/pangeo/issues>`_ and `Gitter <https://gitter.im/pangeo-data>`_ during the meeting.
     - Day 1 live stream: Click `here <https://washington.zoom.us/j/999388241>`_ (new Zoom link)
-    - Day 2 live stream: Click `here <https://stream.meet.google.com/stream/fb959b61-e234-4400-b069-eb07021705e8>`_
+    - Day 2 live stream: Click `here <https://washington.zoom.us/j/999388241>`_ (new Zoom link)
 
 Code of Conduct
 ---------------
