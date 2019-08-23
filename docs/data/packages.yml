@@ -1,0 +1,31 @@
+- name: Visualization
+  intro: Tools to use when visualizing pangeo data
+  packages:
+
+    - repo: pyviz/hvplot
+      description: One line `.plot` style API for xarray, dask, geopandas data.
+      pypi_name: hvplot
+      conda_name: hvplot
+      site: https://hvplot.pyviz.org
+
+    - repo: pyviz/panel
+      description: Dashboarding solution for both inside and outside of jupyter.
+      pypi_name: panel
+      conda_name: panel
+      site: https://panel.pyviz.org
+
+    - repo: pyviz/datashader
+      description: Pixel-level aggregation for raster and point data.
+      pypi_name: datashader
+      conda_name: datashader
+      site: http://datashader.org
+
+- name: Data cataloging
+  intro: Tools for data cataloging
+  packages:
+
+    - repo: intake/intake
+      description: Lightweight package for finding, investigating, loading and disseminating data.
+      pypi_name: intake
+      conda_name: intake
+      site: https://intake.readthedocs.io
