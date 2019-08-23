@@ -1,0 +1,9 @@
+#packages-table table {
+    font-size: 80%;
+    border-collapse: separate;
+    border-spacing: 2px;
+}
+
+#packages-table th {
+    min-width: 50px;
+}

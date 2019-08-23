@@ -95,16 +95,6 @@ scientists to interact with remote systems where data and computing resources
 live.
 
 
-Pangeo Affiliated Packages
---------------------------
-
-There are many other python packages that can work with the core packages
-to provide additional functionality.
-We plan to eventually catalog these packages here on the Pangeo website.
-For now, please refer to the
-`Xarray list of related projects <http://xarray.pydata.org/en/latest/faq.html#what-other-projects-leverage-xarray>`_.
-
-
 Guidelines for New Packages
 ---------------------------
 
@@ -202,3 +192,10 @@ computer architectures using sophisticated techniques. By chaining
 operations on dask arrays together, researchers can symbolically
 represent large and complex data analysis pipelines and then deploy them
 effectively on large computer clusters.
+
+
+Pangeo Affiliated Packages
+--------------------------
+
+There are many other python packages that can work with the core packages
+to provide additional functionality.

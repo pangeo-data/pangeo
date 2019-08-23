@@ -1,0 +1,74 @@
+    <div id="packages-table">
+    {% for section in packages %}
+    <h3 id="{{ section.name.lower().replace(' ', '-') }}">{{ section.name }}</h3>
+    {{ section.get('intro', '') }}
+    <table>
+      <tr>
+        <th><h4>Name</h4></th>
+        <th><h4>Description</h4></th>
+        <th><h4>GitHub</h4></th>
+        <th></th>
+        <th><h4>License</h4></th>
+        <th><h4>Docs</h4></th>
+        <th><h4>PyPI</h4></th>
+        <th><h4>Conda</h4></th>
+      </tr>
+      {% for package in section.packages %}
+      <tr>
+        <td align='left'>
+          <a href="http://github.com/{{ package.repo }}">{{ package.name }}</a>
+        </td>
+        <td align='left'>
+          <p>{{ package.description }}</p>
+        </td>
+        <td align='left'>
+          <a href="https://github.com/{{ package.repo }}/stargazers">
+            <img src="https://img.shields.io/github/stars/{{ package.repo }}.svg?style=social&label=⭐&logo=github">
+          </a>
+        </td>
+        <td align='left'>
+          <a href="https://github.com/{{ package.repo }}/graphs/contributors">
+            <img src="https://img.shields.io/github/contributors/{{ package.repo }}.svg?style=social&label=👥&logo=github">
+          </a>
+        </td>
+          {% if package.pypi_name %}
+            <td align='left'>
+              <a href="https://pypi.python.org/pypi/{{ package.pypi_name }}">
+                <img src="https://img.shields.io/pypi/l/{{ package.pypi_name }}.svg?label">
+              </a>
+            </td>
+          {% else %}
+          <td align='center' class='empty-cell'>-</td>
+          {% endif %}
+          {% if package.site %}
+          <td align='left'>
+            <a href="{{ package.site_protocol }}://{{ package.site }}">
+              <img src="https://img.shields.io/website-up-down-green-red/{{ package.site_protocol }}/{{ package.site }}.svg?label">
+            </a>
+          </td>
+          {% else %}
+          <td align='center' class='empty-cell'>-</td>
+          {% endif %}
+          {% if package.pypi_name %}
+          <td align='left'>
+            <a href="https://pypi.python.org/pypi/{{ package.pypi_name }}">
+              <img src="https://img.shields.io/pypi/v/{{ package.pypi_name }}.svg?label">
+            </a>
+          </td>
+          {% else %}
+          <td align='center' class='empty-cell'>-</td>
+          {% endif %}
+          {% if package.conda_name %}
+          <td align='left'>
+            <a href="https://anaconda.org/{{ package.conda_channel }}/{{ package.conda_name }}">
+              <img src="https://img.shields.io/conda/vn/{{ package.conda_channel }}/{{ package.conda_name }}.svg?label">
+            </a>
+          </td>
+          {% else %}
+          <td align='center' class='empty-cell'>-</td>
+          {% endif %}
+      </tr>
+      {% endfor %}
+    </table>
+    {% endfor %}
+    </div>

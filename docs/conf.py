@@ -21,6 +21,7 @@
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 import sphinx_pangeo_theme
+from markdown import markdown
 
 # -- General configuration ------------------------------------------------
 
@@ -217,6 +218,7 @@ def rstjinja(app, docname, source):
 def setup(app):
     app.add_stylesheet("https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css")
     app.add_stylesheet("example_gallery_styles_patched.css")
+    app.add_stylesheet("packages_table_styles_patched.css")
     app.connect("source-read", rstjinja)
 
 # a hack to get our custom people data into sphinx
@@ -228,7 +230,26 @@ people.sort(key=lambda x: x['last_name'].lower())
 with open('data/deployments.yml') as deployments_data_file:
     deployments = yaml.load(deployments_data_file)
 
+with open('data/packages.yml') as packages_data_file:
+    packages = yaml.load(packages_data_file)
+    for section in packages:
+        if section.get('intro'):
+            section['intro'] = markdown(section['intro'])
+        for package in section['packages']:
+            try:
+                package['user'], package['name'] = package['repo'].split('/')
+            except:
+                raise Warning('Package.repo is not in correct format', package)
+                continue
+            if package.get('description'):
+                package['description'] = markdown(package['description'])
+            if 'conda_channel' not in package:
+                package['conda_channel'] = 'conda-forge'
+            if 'site' in package:
+                package['site_protocol'], package['site'] = package['site'].rstrip('/').split('://')
+
 html_context = {
     'people': people,
-    'deployments': deployments
+    'deployments': deployments,
+    'packages': packages,
 }
