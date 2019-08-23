@@ -128,7 +128,7 @@ These recommendations may change as cloud storage technology evolves.
 #. **Open your Entire Dataset in Xarray**.
 
    Xarray is designed to
-   load many netCDF files into a single :py:class:`xarray.DataArray` object.
+   load many netCDF files into a single :py:class:`xarray.Dataset` object.
    The easiest way to accomplish this is using the :py:meth:`xarray.open_mfdataset`
    function. Suppose you have a directory full of netCDF files that comprise
    a single dataset stored in the directory ``/path/to/mydataset``. If the files
@@ -167,14 +167,14 @@ These recommendations may change as cloud storage technology evolves.
       ds.to_zarr('/path/to/output/mydataset')
 
    If ``/path/to/output/mydataset`` does not exist yet, it will be created.
-   (It's best if does not exist, as conflicts with existing files could cause
+   (It's best if it does not exist, as conflicts with existing files could cause
    problems.)
 
    If your dataset is very large, this can take a very long time.
    The speed is generally constrained by the rate at which the data can be read
    from the storage device where the original files are located. If you are
-   on a high-performance cluster, you might consider using a dask distributed to
-   parallelize the operation across multiple nodes.
+   on a high-performance cluster, you might consider using `Dask.distributed <https://distributed.dask.org/en/latest>`_
+   to parallelize the operation across multiple nodes.
 
    Xarray and Zarr have many different options for encoding and compression of
    the datasets. This can be passed to ``to_zarr`` via the ``encoding`` keyword
@@ -224,11 +224,11 @@ These recommendations may change as cloud storage technology evolves.
    .. code-block:: python
 
       import xarray as xr
-      import gcsfs
-      ds = xr.open_zarr(gcsfs.GCSMap('pangeo-data/mydataset'))
+      import fsspec
+      ds = xr.open_zarr(fsspec.get_mapper('gcs://pangeo-data/mydataset'))
 
    You should see all the variables and metadata from your original dataset in
-   step 1. The dataset will automatically be created with dask chunks matching
+   step 1. The dataset will automatically be created with Dask chunks matching
    the underlying zarr chunks.
 
 

@@ -791,3 +791,17 @@
   tags:
     - climate
     - atmospheric science
+
+- first_name: Riley
+  last_name: Brady
+  institution: University of Colorado Boulder
+  website: https://www.rileyxbrady.com
+  email: riley.brady@colorado.edu
+  github: bradyrx
+  twitter: rileyxbrady
+  orcid: 0000-0002-2309-8245
+  tags:
+      - ocean biogeochemistry
+      - climate
+      - visualization
+      - decadal prediction

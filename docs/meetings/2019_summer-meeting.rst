@@ -14,7 +14,10 @@ Meeting Details
 ---------------
 - **Dates**: 21-23 August 2019
 - **Location**: `Alder Hall <https://www.washington.edu/maps/#!/ald>`_, Room 107, University of Washington campus
-- **Registration**: `Register Here <https://docs.google.com/forms/d/e/1FAIpQLSemu3o7Noo-B620tvIhIVrDCJHiBjYaTRin3RlBd-PN_CnVFw/viewform?usp=sf_link>`_ (Closed, email Joe Hamman (jhamman at ucar.edu) for more information).
+- **Registration**: Registration is now closed.
+- **Remote Participation**: Plenary sessions will be live streamed via Zoom. Remote participation for the sprints is also encouraged and will be coordinated via `GitHub <https://github.com/pangeo-data/pangeo/issues>`_ and `Gitter <https://gitter.im/pangeo-data>`_ during the meeting.
+    - Day 1 live stream: Click `here <https://washington.zoom.us/j/999388241>`_ (new Zoom link)
+    - Day 2 live stream: Click `here <https://washington.zoom.us/j/999388241>`_ (new Zoom link)
 
 Code of Conduct
 ---------------
@@ -46,14 +49,84 @@ to schedule travel.
 Meeting Links
 -------------
 
-- Summary blog post from the 2018 meeting at NCAR [`link <https://medium.com/pangeo/the-2018-pangeo-developers-workshop-1be359dac33c>`_]
+- Sign up for Lightning Talks: [`link <https://forms.gle/4ZbCbHGxe2sRNf9y7>`_]
+- Sprint Proposals: [`link <https://docs.google.com/presentation/d/1XHtpTYOAxnYs8IyNm3PxcU5nIQWWC-050e-8WPme0rg/edit?usp=sharing>`_]
+- Summary blog post from the 2018 meeting at NCAR: [`link <https://medium.com/pangeo/the-2018-pangeo-developers-workshop-1be359dac33c>`_]
 
 Agenda
 ------
 
-The meeting will start at 9 AM on August 21st and will wrap up by 4 PM on August 23rd.
-While a detailed agenda is coming soon, a preliminary draft of the agenda is displayed below.
+The meeting will start at 9 AM on August 21st and will wrap up around 4 PM on August 23rd.
+The final agenda is embedded below.
 
 .. raw:: html
 
     <iframe width="100%" height="800" src="https://docs.google.com/document/d/e/2PACX-1vQtNNhS0KUh9oZUOG_T2f8_b507q9AlEhGTGMzCrZ61lQa5MyXNeKso1Ba1QxKGqSbD-iM8cC9ScNmq/pub?embedded=true"></iframe>
+    
+Attendees
+---------
+1.	Shima Abadi, University of Washington
+2.	Ryan Abernathey, Columbia University
+3.	Mattia Almansi, Johns Hopkins University
+4.	Anthony Arendt, University of Washington
+5.	Philip Austin, University of British Columbia
+6.	Shannon Axelrod, Chan Zuckerberg Initiative
+7.	Norman Barker, TileDB
+8.	Anderson Banihirwe, National Center for Atmospheric Research
+9.	Aimee Barciauskas, Development Seed
+10.	Will Barnes, Bay Area Environmental Research Institute / Lockheed Martin Solar and Astrophysics Laboratory
+11.	Charles Becker, Boise State University
+12.	Karan Bhatia, Google
+13.	Sarah Bird, Mozilla
+14.	Scott Black, Utah State University
+15.	Charles Blackmon-Luca, Columbia University
+16.	Noah Brenowitz, University of Washington
+17.	Deepak Cherian, National Center for Atmospheric Research
+18.	Shreyas Cholia, Lawrence Berkeley Laboratory
+19.	Tim Crone, Columbia University
+20.	Erin Dougherty, Colorado State University
+21.	Rob Fatland, University of Washington
+22.	Filipe Fernandes, National Oceanic and Atmospheric Administration / Integrated Ocean Observing System
+23.	Chelle Gentemann, Earth and Space Research
+24.	Joe Hamman, National Center for Atmospheric Research
+25.	Matthew Hanson, Element 84
+26.	Kirstie Haynie, United States Geological Survey
+27.	Lindsey Heagy, University of California Berkeley
+28.	Kate Hedstrom, University of Alaska Fairbanks
+29.	Scott Henderson, University of Washington
+30.	Chris Holdgraf, University of California Berkeley
+31.	Stephan Hoyer, Google
+32.	Spencer Jones, Lamont-Doherty Earth Observatory
+33.	Kevin Jorissen, Amazon Web Services
+34.	Julia Kent, National Center for Atmospheric Research
+35.	Friedrich Knuth, University of Washington
+36.	Luke Madaus, Jupiter
+37.	Rodrigo Manzanas, Intergovernmental Panel on Climate Change
+38.	Brian Mapes, University of Miami
+39.	Elizabeth Maroon, National Center for Atmospheric Research
+40.	Robin Matthews, Intergovernmental Panel on Climate Change
+41.	Jacob Matuskey, Space Telescope Science Institute
+42.	Jeremy McGibbon, University of Washington
+43.	Thomas Moore, Commonwealth Scientific and Industrial Research Organisation 
+44.	James Munroe, Memorial University of Newfoundland
+45.	Dan Nowacki, United States Geological Survey
+46.	Yuvi Panda, Project Jupyter
+47.	Kevin Paul, National Center for Atmospheric Research
+48.	Walter Perkins, University of Washington
+49.	Matthew Rocklin, NVIDIA
+50.	Ariel Rokem, The University of Washington
+51.	Mary Romelfanger, Space Telescope Science Institute
+52.	Daniel Rothenberg, ClimaCell
+53.	Jeffrey Sadler, US Geological Survey
+54.	Hillary Scannell, University of Washington
+55.	David Shean, University of Washington
+56.	Julia Signell, Anaconda
+57.	Nicholas Sofroniew, Chan Zuckerberg Initiative
+58.	Dax Soule, CUNY - Queens College
+59.	Dougie Squire, Commonwealth Scientific and Industrial Research Organisation 
+60.	Steven Stetzler, University of Washington
+61.	Jason Suwala, Hatfield Consultants
+62.	Amanda Tan, University of Washington
+63.	Dan Wessels, Mesosphere
+64.	Siyu Yang, Microsoft AI for Earth
+65.	Jiawei Zhuang, Harvard University
