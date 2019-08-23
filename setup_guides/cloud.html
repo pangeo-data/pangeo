@@ -350,14 +350,6 @@ you can do so by running:</p>
 gcloud compute addresses list | grep pangeo-jhubip
 </pre></div>
 </div>
-<p>Other things you might want to configure, but that can be left as is:</p>
-<blockquote>
-<div><ul class="simple">
-<li>EXTRA_PIP_PACKAGES: for adding some python modules to your user environment.</li>
-<li>GCSFUSE_BUCKET: for mounting some google cloud storage bucket as a standard
-file system.</li>
-</ul>
-</div></blockquote>
 <p>The other file is <a class="reference external" href="https://github.com/pangeo-data/pangeo/blob/master/gce/setup-guide/secret_config.yaml">secret_config.yaml</a>, which specifies cluster specific
 encryption tokens.</p>
 <p>The jupyterhub proxy secret token is a random hash, which you can generate as follows:</p>
