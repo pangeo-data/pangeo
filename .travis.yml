@@ -22,5 +22,5 @@ after_script:
   - if [[ "${TRAVIS_BRANCH}" == "master" ]]; then
       doctr deploy . --built-docs docs/_build/html;
     else
-      doctr deploy . --built-docs docs/_build/html --no-require-master --deploy-repo pangeo-data/pangeo-dev-website;
+      doctr deploy dev --built-docs docs/_build/html --branch-whitelist dev;
     fi
