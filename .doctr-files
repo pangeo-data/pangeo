@@ -59,6 +59,7 @@
 ./_sources/meetings/2019_summer-meeting.rst.txt
 ./_sources/meetings/index.rst.txt
 ./_sources/packages.rst.txt
+./_sources/publications.rst.txt
 ./_sources/quickstart.rst.txt
 ./_sources/setup_guides/azure.rst.txt
 ./_sources/setup_guides/cloud.rst.txt
@@ -201,6 +202,7 @@
 ./meetings/index.html
 ./objects.inv
 ./packages.html
+./publications.html
 ./quickstart.html
 ./search.html
 ./searchindex.js
