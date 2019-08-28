@@ -17,6 +17,8 @@ collecting reports of publications on Aug. 19, 2019.
    :list: enumerated
    :style: unsrt
 
+:download:`download pangeo_publications.bib <pangeo_publications.bib>`
+
 Reporting Form
 --------------
 
