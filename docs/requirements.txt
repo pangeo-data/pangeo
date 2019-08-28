@@ -1,11 +1,13 @@
-# pip install doctr pelican jupyter ipython nbconvert beautifulsoup4 markdown
 sphinx==1.6.5
 sphinx_bootstrap_theme
 sphinx_pangeo_theme
 jupyter
 ipython
+pandas # needed to build publications
 nbconvert==5.4.1
 nbsphinx
 doctr>=1.6.3
 sphinx-nbexamples
 sphinx-copybutton
+sphinxcontrib-srclinks
+sphinxcontrib-bibtex
