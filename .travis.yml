@@ -37,7 +37,10 @@ jobs:
         - pip install -r docs/requirements.txt
       script:
         - set -e
-        - cd docs && make html && cd ..
+        - cd docs
+        - python build_pangeo_bib.py
+        - make html
+        - cd ..
 
     - <<: *build
       stage: build_release

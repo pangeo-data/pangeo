@@ -37,7 +37,9 @@ extensions = [
     'sphinx.ext.mathjax',
     'nbsphinx',
     'sphinx_nbexamples',
-    'sphinx_copybutton']
+    'sphinx_copybutton',
+    'sphinxcontrib.bibtex',
+    'sphinxcontrib.srclinks']
 
 example_gallery_config = dict(
     dont_preprocess=True,
@@ -85,7 +87,8 @@ language = None
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This patterns also effect to html_static_path and html_extra_path
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', '**.ipynb_checkpoints']
+exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', '**.ipynb_checkpoints',
+                    '*.py']
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = 'sphinx'
@@ -123,6 +126,12 @@ html_theme_options = {
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
+html_show_sourcelink = True
+
+srclink_project = 'https://github.com/pangeo-data/pangeo'
+srclink_branch = 'master'
+srclink_src_path = 'docs/'
+
 
 # Custom sidebar templates, must be a dictionary that maps document names
 # to template names.
@@ -133,6 +142,7 @@ html_sidebars = {
     'index': [],
      '**': [
           'localtoc.html',
+          'srclinks.html'
      ]
  }
 

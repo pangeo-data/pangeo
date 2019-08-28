@@ -66,6 +66,7 @@ Contents
    data
    catalog
    collaborators
+   publications
    meeting-notes
    meetings/index
    contact
