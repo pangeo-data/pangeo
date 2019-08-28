@@ -1,0 +1,391 @@
+.. _gallery_use_cases_climate-modeling_cesm-large-ensemble-tracer-budget-example.ipynb:
+
+
+CESM Large Ensemble Tracer Budget
+=================================
+
+Example of calculating the oceanic DIC budget
+
+Here we calculate the DIC budget from the ocean component model (POP2)
+of the CESM Large Ensemble (CESM-LENS). This code can be used to create
+budgets, as is, for any tracer. Also, by replacing the load function in
+cell 6,\ ``pl.open_pop_ensemble``, with ``pl.open_pop_single_var_file``
+or ``pl.open_pop_multi_var_file``, you can use this notebook to
+calculate tracer budgets with any POP2 output.
+
+CESM-LENS is a set climate simulations that allow for the study of
+natural climate varability and climate change. More about the project
+can be found
+`here <http://www.cesm.ucar.edu/projects/community-projects/LENS/>`__.
+To represent the full envelope of natural variability, the fully coupled
+version of the CESM has been run 40 times representing 40 different
+realizations of the period 1920-2100. Dask and xarray are the perfect
+tools to handle the large data volume
+
+.. code:: ipython3
+
+    !qselect -N dask-worker | xargs qdel
+
+.. code:: ipython3
+
+    import xarray as xr
+    import numpy as np
+    import poploader as pl # faster xarray dataset creation for POP2 (https://gist.github.com/sridge/fe5f180c7e1332212fcce0161c461716)
+    from tqdm import tqdm # progressbar
+
+.. code:: ipython3
+
+    from dask_jobqueue import PBSCluster
+    
+    cluster = PBSCluster(local_directory = '/glade/scratch/sridge/spill/',
+                         processes=18,
+                         threads=4, memory="6GB",
+                         project='UCLB0022',
+                         queue='premium',
+                         resource_spec='select=1:ncpus=36:mem=109G',
+                         walltime='1:00:00')
+    cluster.start_workers(16)
+    
+    from dask.distributed import Client
+    client = Client(cluster)
+
+.. code:: ipython3
+
+    client
+
+
+
+
+.. raw:: html
+
+    <table style="border: 2px solid white;">
+    <tr>
+    <td style="vertical-align: top; border: 0px solid white">
+    <h3>Client</h3>
+    <ul>
+      <li><b>Scheduler: </b>tcp://10.148.13.49:50623
+      <li><b>Dashboard: </b><a href='http://10.148.13.49:8787/status' target='_blank'>http://10.148.13.49:8787/status</a>
+    </ul>
+    </td>
+    <td style="vertical-align: top; border: 0px solid white">
+    <h3>Cluster</h3>
+    <ul>
+      <li><b>Workers: </b>0</li>
+      <li><b>Cores: </b>0</li>
+      <li><b>Memory: </b>0 B</li>
+    </ul>
+    </td>
+    </tr>
+    </table>
+
+
+
+.. code:: ipython3
+
+    tracer = 'DIC_ALT_CO2'
+    
+    ddir = '/glade/scratch/sridge/*/'
+    outdir = '/glade/scratch/sridge/'
+    
+    memberlist = [1, 2, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27,
+                  28, 29, 30, 31, 32, 33, 101, 102, 103, 104, 105]
+    
+    memberlist = memberlist[1:5] #smaller version to test
+    
+    transport_terms = ['UE_','VN_','WT_','HDIFE_','HDIFN_','HDIFB_','DIA_IMPVF_','KPP_SRC_']#,'J_']
+    
+    transport_varnames=[]
+    
+    for term in transport_terms:
+    
+        transport_varnames += [term + tracer]
+
+Open the Dataset
+----------------
+
+If you're not using the ensemble, you may also want to try:
+``pl.open_pop_single_var_file`` ``pl.open_pop_multi_var_file``
+
+.. code:: ipython3
+
+    # function that strips uneeded coordinate variables and groups  all model output into a single dataset
+    ds = pl.open_pop_ensemble(ddir, transport_varnames[0:8], memberlist)
+
+.. code:: ipython3
+
+    ds
+
+
+
+
+.. parsed-literal::
+
+    <xarray.Dataset>
+    Dimensions:                (member: 4, nlat: 384, nlon: 320, time: 181, z_t: 60, z_t_150m: 15, z_w: 60, z_w_bot: 60, z_w_top: 60)
+    Coordinates:
+      * z_t                    (z_t) float32 500.0 1500.0 2500.0 3500.0 4500.0 ...
+      * z_t_150m               (z_t_150m) float32 500.0 1500.0 2500.0 3500.0 ...
+      * z_w                    (z_w) float32 0.0 1000.0 2000.0 3000.0 4000.0 ...
+      * z_w_bot                (z_w_bot) float32 1000.0 2000.0 3000.0 4000.0 ...
+      * z_w_top                (z_w_top) float32 0.0 1000.0 2000.0 3000.0 4000.0 ...
+      * time                   (time) float64 7.012e+05 7.015e+05 7.019e+05 ...
+        dz                     (z_t) float32 1000.0 1000.0 1000.0 1000.0 1000.0 ...
+        dzw                    (z_w) float32 500.0 1000.0 1000.0 1000.0 1000.0 ...
+        ULONG                  (nlat, nlon) float64 321.1 322.3 323.4 324.5 ...
+        ULAT                   (nlat, nlon) float64 -78.95 -78.95 -78.95 -78.95 ...
+        TLONG                  (nlat, nlon) float64 320.6 321.7 322.8 323.9 ...
+        TLAT                   (nlat, nlon) float64 -79.22 -79.22 -79.22 -79.22 ...
+        KMT                    (nlat, nlon) float64 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ...
+        KMU                    (nlat, nlon) float64 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ...
+        REGION_MASK            (nlat, nlon) float64 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ...
+        UAREA                  (nlat, nlon) float64 1.423e+13 1.423e+13 ...
+        TAREA                  (nlat, nlon) float64 1.125e+13 1.125e+13 ...
+        HU                     (nlat, nlon) float64 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ...
+        HT                     (nlat, nlon) float64 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ...
+        DXU                    (nlat, nlon) float64 2.397e+06 2.397e+06 ...
+        DYU                    (nlat, nlon) float64 5.94e+06 5.94e+06 5.94e+06 ...
+        DXT                    (nlat, nlon) float64 1.894e+06 1.893e+06 ...
+        DYT                    (nlat, nlon) float64 5.94e+06 5.94e+06 5.94e+06 ...
+        HTN                    (nlat, nlon) float64 2.397e+06 2.397e+06 ...
+        HTE                    (nlat, nlon) float64 5.94e+06 5.94e+06 5.94e+06 ...
+        HUS                    (nlat, nlon) float64 2.397e+06 2.397e+06 ...
+        HUW                    (nlat, nlon) float64 5.94e+06 5.94e+06 5.94e+06 ...
+        ANGLE                  (nlat, nlon) float64 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ...
+        ANGLET                 (nlat, nlon) float64 0.0 0.0 0.0 0.0 0.0 0.0 0.0 ...
+        days_in_norm_year      float64 365.0
+        grav                   float64 980.6
+        omega                  float64 7.292e-05
+        radius                 float64 6.371e+08
+        cp_sw                  float64 3.996e+07
+        sound                  float64 1.5e+05
+        vonkar                 float64 0.4
+        cp_air                 float64 1.005e+03
+        rho_air                float64 1.292
+        rho_sw                 float64 1.026
+        rho_fw                 float64 1.0
+        stefan_boltzmann       float64 5.67e-08
+        latent_heat_vapor      float64 2.501e+06
+        latent_heat_fusion     float64 3.337e+09
+        ocn_ref_salinity       float64 34.7
+        sea_ice_salinity       float64 4.0
+        T0_Kelvin              float64 273.1
+        salt_to_ppt            float64 1e+03
+        ppt_to_salt            float64 0.001
+        mass_to_Sv             float64 1e-12
+        heat_to_PW             float64 4.186e-15
+        salt_to_Svppt          float64 1e-09
+        salt_to_mmday          float64 3.154e+05
+        momentum_factor        float64 10.0
+        hflux_factor           float64 2.439e-05
+        fwflux_factor          float64 0.0001
+        salinity_factor        float64 -0.00347
+        sflux_factor           float64 0.1
+        nsurface_t             float64 8.621e+04
+        nsurface_u             float64 8.305e+04
+      * member                 (member) int64 2 9 10 11
+    Dimensions without coordinates: nlat, nlon
+    Data variables:
+        UE_DIC_ALT_CO2         (member, time, z_t, nlat, nlon) float32 dask.array<shape=(4, 181, 60, 384, 320), chunksize=(1, 1, 60, 384, 320)>
+        VN_DIC_ALT_CO2         (member, time, z_t, nlat, nlon) float32 dask.array<shape=(4, 181, 60, 384, 320), chunksize=(1, 1, 60, 384, 320)>
+        WT_DIC_ALT_CO2         (member, time, z_w_top, nlat, nlon) float32 dask.array<shape=(4, 181, 60, 384, 320), chunksize=(1, 1, 60, 384, 320)>
+        HDIFE_DIC_ALT_CO2      (member, time, z_t, nlat, nlon) float32 dask.array<shape=(4, 181, 60, 384, 320), chunksize=(1, 1, 60, 384, 320)>
+        HDIFN_DIC_ALT_CO2      (member, time, z_t, nlat, nlon) float32 dask.array<shape=(4, 181, 60, 384, 320), chunksize=(1, 1, 60, 384, 320)>
+        HDIFB_DIC_ALT_CO2      (member, time, z_w_bot, nlat, nlon) float32 dask.array<shape=(4, 181, 60, 384, 320), chunksize=(1, 1, 60, 384, 320)>
+        DIA_IMPVF_DIC_ALT_CO2  (member, time, z_w_bot, nlat, nlon) float32 dask.array<shape=(4, 181, 60, 384, 320), chunksize=(1, 1, 60, 384, 320)>
+        KPP_SRC_DIC_ALT_CO2    (member, time, z_t, nlat, nlon) float32 dask.array<shape=(4, 181, 60, 384, 320), chunksize=(1, 1, 60, 384, 320)>
+    Attributes:
+        title:         b.e11.BRCP85C5CNBDRD.f09_g16.033
+        history:       none
+        Conventions:   CF-1.0; http://www.cgd.ucar.edu/cms/eaton/netcdf/CF-curren...
+        contents:      Diagnostic and Prognostic Variables
+        source:        CCSM POP2, the CCSM Ocean Component
+        revision:      $Id: tavg.F90 41939 2012-11-14 16:37:23Z mlevy@ucar.edu $
+        calendar:      All years have exactly  365 days.
+        start_time:    This dataset was created on 2014-07-07 at 19:34:58.4
+        cell_methods:  cell_methods = time: mean ==> the variable values are aver...
+        nsteps_total:  9100
+        tavg_sum:      31449600.0
+
+
+
+.. code:: ipython3
+
+    # # J_DIC was averaged with nco. Need to open separate ds and then correct time 
+    # ds_J = pl.open_pop_ensemble(ddir, [transport_varnames[8]], memberlist)
+
+.. code:: ipython3
+
+    # ds_J['time'] = ds['time']
+    
+    # ds = xr.merge([ds,ds_J])
+    # ds.chunk({'time': 1})
+
+Convert Units
+-------------
+
+All terms are converted to nmol/s
+
+.. code:: ipython3
+
+    tarea = ds['TAREA']
+    vol = (ds.dz)*tarea
+
+.. code:: ipython3
+
+    # adjust coords to z_t for later computation of divergence
+    hdifb_t = ds['HDIFB_' + tracer]
+    hdifb_t = hdifb_t.rename({'z_w_bot':'z_t'})
+    hdifb_t['z_t'] = ds['z_t']
+    
+    wt_t = ds['WT_' + tracer]
+    wt_t = wt_t.rename({'z_w_top':'z_t'})
+    wt_t['z_t'] = ds['z_t']
+
+.. code:: ipython3
+
+    # terms in units of mmol m^{-3} s^{-1}
+    transport_terms = ['UE_','VN_','HDIFE_','HDIFN_','KPP_SRC_']#,'J_']
+    
+    for term in tqdm(transport_terms):
+        
+      ds[term + tracer] = ds[term + tracer]*vol
+      ds[term + tracer].attrs['units'] = 'nmol/s'
+      
+    wt_t = wt_t*vol
+    print('WT_' + tracer)
+    hdifb_t = hdifb_t*vol
+    print('HDIFB_' + tracer)
+
+
+.. parsed-literal::
+
+    100%|██████████| 5/5 [00:00<00:00,  5.48it/s]
+
+
+.. parsed-literal::
+
+    WT_DIC_ALT_CO2
+    HDIFB_DIC_ALT_CO2
+
+
+.. code:: ipython3
+
+    # DIA_IMPVF is in units of mmol m^{-2} cm s^{-1} 
+    # convert to mmol s^{-1} 
+    ds['DIA_IMPVF_' + tracer] = (ds['DIA_IMPVF_' + tracer])*tarea
+    ds['DIA_IMPVF_' + tracer].attrs['units'] = 'nmol/s'
+    
+    # adjust coords to z_t for later computation of divergence
+    diadiff_t = ds['DIA_IMPVF_' + tracer]
+    diadiff_t = diadiff_t.rename({'z_w_bot':'z_t'})
+    diadiff_t['z_t'] = ds['z_t']
+
+.. code:: ipython3
+
+    ue_t = ds['UE_' + tracer]
+    vn_t = ds['VN_' + tracer]
+    wt_t = wt_t
+    hdife_t = ds['HDIFE_' + tracer]
+    hdifn_t = ds['HDIFN_' + tracer]
+    hdifb_t = hdifb_t
+    # bio_sms_t = ds['J_' + tracer]
+    kpp_sms_t = ds['KPP_SRC_' + tracer]
+    diadiff_t = diadiff_t
+
+Calculate Divergence
+--------------------
+
+Methods are described in the **`POP
+Manual <http://www.cesm.ucar.edu/models/cesm2.0/ocean/doc/sci/POPRefManual.pdf>`__**
+
+Vertical Divergence: Resolved Advection
+---------------------------------------
+
+.. code:: ipython3
+
+    wt_t_kp1  = wt_t.shift(z_t=-1).fillna(0.)
+    wdiv_t = wt_t_kp1 - wt_t
+    wdiv_t.attrs['units'] = 'nmol/s'
+
+Vertical Divergence: Submesoscale Eddies and Isopycnal Diffusion
+----------------------------------------------------------------
+
+.. code:: ipython3
+
+    hdifb_t_km1 = hdifb_t.shift(z_t=1).fillna(0.)
+    wdiv_hdifb_t = hdifb_t_km1 - hdifb_t
+    wdiv_hdifb_t.attrs['units'] = 'nmol/s'
+
+Vertical Divergence: Diapycnal Diffusion
+----------------------------------------
+
+(KPP parameterization, **`Large et al.
+1994 <http://www.cesm.ucar.edu/models/cesm2.0/ocean/doc/sci/POPRefManual.pdf>`__**)
+
+.. code:: ipython3
+
+    diadiff_t_km1 = diadiff_t.shift(z_t=1).fillna(0.)
+    wdiv_diadiff_t = diadiff_t_km1 - diadiff_t
+    wdiv_diadiff_t.attrs['units'] = 'nmol/s'
+
+Horizontal Divergence: Resolved Advection
+-----------------------------------------
+
+.. code:: ipython3
+
+    ue_t_im1 = ue_t.roll(nlon=1)
+    udiv_t = ue_t_im1 - ue_t
+    
+    vn_t_jm1 = vn_t.roll(nlat=1)
+    vdiv_t = vn_t_jm1 - vn_t
+    
+    udiv_t.attrs['units'] = 'nmol/s'
+    vdiv_t.attrs['units'] = 'nmol/s'
+    
+    hdiv_t = udiv_t + vdiv_t
+
+Horizontal Divergence: Submesoscale Eddies and Isopycnal Diffusion
+------------------------------------------------------------------
+
+.. code:: ipython3
+
+    hdife_t_im1 = hdife_t.roll(nlon=1)
+    udiv_hdife_t = hdife_t - hdife_t_im1
+    
+    hdifn_t_jm1 = hdifn_t.roll(nlat=1)
+    vdiv_hdifn_t = hdifn_t - hdifn_t_jm1
+    
+    udiv_hdife_t.attrs['units'] = 'nmol/s'
+    vdiv_hdifn_t.attrs['units'] = 'nmol/s'
+    
+    hdiv_hdif_t = udiv_hdife_t + vdiv_hdifn_t
+
+Write to Disk
+-------------
+
+The final product is grid cell by grid cell tracer divergence (nmol/s)
+that can be integrated vertically to the depth of your choosing for the
+column budget
+
+.. code:: ipython3
+
+    # take ensemble mean and write to disk
+    
+    # you don't have to worry about the warnings
+    # https://github.com/dask/distributed/issues/730
+    
+    budget_filelist = [hdiv_t,wdiv_t,hdiv_hdif_t,wdiv_hdifb_t,kpp_sms_t,wdiv_diadiff_t]#,bio_sms_t]
+    budget_filelist_str = ['hdiv_','wdiv_','hdiv_hdif_','wdiv_hdifb_','kpp_sms_','wdiv_diadiff_',]#'bio_sms_']
+    
+    for budget_file,budget_file_str in tqdm(zip(budget_filelist,budget_filelist_str)):
+        budget_file = budget_file.mean(dim='member')
+        budget_file.to_netcdf((outdir + '{}{}_{}.1850-2100.nc'.format(budget_file_str,tracer,memberlist[0])))
+
+
+.. only:: html
+
+    .. container:: sphx-glr-download
+
+        **Download python script:** :download:`CESM-Large-Ensemble-Tracer-Budget-Example.py`
+
+        **Download Jupyter notebook:** :download:`CESM-Large-Ensemble-Tracer-Budget-Example.ipynb`

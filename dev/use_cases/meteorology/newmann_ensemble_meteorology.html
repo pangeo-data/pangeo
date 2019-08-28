@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>US Precipitation and Temperature Analysis &#8212; Pangeo  documentation</title>
+    <link rel="stylesheet" href="../../_static/pangeo-style.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/example_gallery_styles.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/example_gallery_styles_patched.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+    <script type="text/javascript" src="../../_static/copybutton.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="author" title="About these documents" href="../../about.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Deployments" href="../../deployments.html" />
+    <link rel="prev" title="Meteorology" href="index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../index.html">
+            <span><img src="../../_static/small_e_reversed_24px.png"></span>
+          Pangeo</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="https://medium.com/pangeo">Blog</a></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../about.html">About Pangeo</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../about.html#motivation">Motivation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about.html#mission-statement">Mission Statement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about.html#goals">Goals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about.html#get-involved">Get Involved</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq.html">Frequently Asked Questions</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../quickstart.html">Guide for Scientists</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../quickstart.html#learn-about-pangeo-software">Learn About Pangeo Software</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../quickstart.html#explore-the-use-cases">Explore the Use Cases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../quickstart.html#try-out-a-pangeo-deployment">Try Out a Pangeo Deployment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../quickstart.html#give-feedback">Give Feedback</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../quickstart.html#contribute-a-use-case">Contribute a Use Case</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../quickstart.html#contribute-data">Contribute Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../quickstart.html#become-an-open-source-contributor">Become an Open Source Contributor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../packages.html">Packages</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../packages.html#pangeo-core-packages">Pangeo Core Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../packages.html#pangeo-affiliated-packages">Pangeo Affiliated Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../packages.html#guidelines-for-new-packages">Guidelines for New Packages</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Geoscience Use Cases</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../physical-oceanography/index.html">Physical Oceanography</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../climate-modeling/index.html">Climate modeling</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Meteorology</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../architecture.html">Technical Architecture</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../architecture.html#where-we-began">Where we began</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../architecture.html#interoperability-in-pangeo">Interoperability in Pangeo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../architecture.html#software">Software</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../architecture.html#compute-platforms">Compute Platforms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../architecture.html#storage-formats">Storage Formats</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../setup_guides/index.html">Deployment Setup Guides</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../setup_guides/index.html#setting-up-pangeo-on-hpc-systems">Setting up Pangeo on HPC Systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../setup_guides/index.html#setting-up-pangeo-on-cloud-systems">Setting up Pangeo on Cloud Systems</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../deployments.html">Deployments</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../deployments.html#pangeo-provided-cloud-deployments">Pangeo provided Cloud Deployments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../deployments.html#other-cloud-deployments">Other Cloud deployments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../deployments.html#high-performance-computing-deployments">High Performance Computing Deployments</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../data.html">Pangeo and Data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../data.html#data-on-hpc">Data on HPC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data.html#data-in-the-cloud">Data in the Cloud</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../catalog.html">Pangeo Data Catalog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../collaborators.html">Collaborators</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../collaborators.html#funding-agencies">Funding Agencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../collaborators.html#institutions">Institutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../collaborators.html#people">People</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../publications.html">Publications</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../publications.html#self-reported">Self-Reported</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../publications.html#reporting-form">Reporting Form</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../meeting-notes.html">Pangeo Weekly Meeting Notes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../meeting-notes.html#meeting-calendar">Meeting Calendar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../meeting-notes.html#id1">Meeting Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../meetings/index.html">Pangeo Conferences</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../meetings/index.html#future-meetings">Future Meetings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../meetings/index.html#past-meetings">Past Meetings</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../contact.html">Contact Pangeo</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">US Precipitation and Temperature Analysis</a><ul>
+<li><a class="reference internal" href="#connect-to-dask-distributed-cluster">Connect to Dask Distributed Cluster</a></li>
+<li><a class="reference internal" href="#open-the-dataset-using-xarray">Open the dataset using Xarray</a><ul>
+<li><a class="reference internal" href="#metadata">Metadata</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#figure-domain-mask">Figure: Domain mask</a></li>
+<li><a class="reference internal" href="#look-all-these-arrays-are-dask-arrays-under-the-hood-note-the-chunk-sizes">Look! All these arrays are dask arrays under the hood. Note the chunk sizes</a></li>
+<li><a class="reference internal" href="#intra-ensemble-range">Intra-ensemble range</a></li>
+<li><a class="reference internal" href="#calling-compute">Calling compute</a><ul>
+<li><a class="reference internal" href="#figure-intra-ensemble-range">Figure: Intra-ensemble range</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#persisting-data-on-the-cluster">Persisting data on the cluster</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="index.html" title="Previous Chapter: Meteorology"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Meteorology</span>
+    </a>
+  </li>
+  <li>
+    <a href="../../deployments.html" title="Next Chapter: Deployments"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Deployments &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+          </ul>
+
+          
+            
+            
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li><a class="reference internal" href="#">US Precipitation and Temperature Analysis</a><ul>
+<li><a class="reference internal" href="#connect-to-dask-distributed-cluster">Connect to Dask Distributed Cluster</a></li>
+<li><a class="reference internal" href="#open-the-dataset-using-xarray">Open the dataset using Xarray</a><ul>
+<li><a class="reference internal" href="#metadata">Metadata</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#figure-domain-mask">Figure: Domain mask</a></li>
+<li><a class="reference internal" href="#look-all-these-arrays-are-dask-arrays-under-the-hood-note-the-chunk-sizes">Look! All these arrays are dask arrays under the hood. Note the chunk sizes</a></li>
+<li><a class="reference internal" href="#intra-ensemble-range">Intra-ensemble range</a></li>
+<li><a class="reference internal" href="#calling-compute">Calling compute</a><ul>
+<li><a class="reference internal" href="#figure-intra-ensemble-range">Figure: Intra-ensemble range</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#persisting-data-on-the-cluster">Persisting data on the cluster</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="widget navlinks">
+  <ul class="this-page-menu">
+    <li><a href="https://github.com/pangeo-data/pangeo/blob/master/docs/use_cases/meteorology/newmann_ensemble_meteorology.rst"
+            rel="nofollow"
+            target="_blank"><span class="fa-stack fa-md"><i class="fa fa-github fa-stack-1x"></i></span> Edit on GitHub</a></li>
+  </ul>
+</div>
+        </div>
+      </div>
+    <div class="col-md-9 content ">
+      
+  <div class="section" id="us-precipitation-and-temperature-analysis">
+<span id="gallery-use-cases-meteorology-newmann-ensemble-meteorology-ipynb"></span><h1>US Precipitation and Temperature Analysis<a class="headerlink" href="#us-precipitation-and-temperature-analysis" title="Permalink to this headline">¶</a></h1>
+<p>Example of an analysis of gridded ensemble precipitation and temperature
+estimates over the contiguous United States</p>
+<p>by <a class="reference external" href="https://github.com/jhamman/">Joe Hamman</a> and <a class="reference external" href="https://github.com/mrocklin/">Matthew
+Rocklin</a></p>
+<p>For this example, we’ll open a 100 member ensemble of precipitation and
+temperature data. Each ensemble member is stored in a seperate netCDF
+file and are otherwise formatted identically. The analysis we do below
+is quite simple but the problem is a good illustration of an IO bound
+task.</p>
+<p>Link to dataset:
+<a class="reference external" href="https://www.earthsystemgrid.org/dataset/gridded_precip_and_temp.html">https://www.earthsystemgrid.org/dataset/gridded_precip_and_temp.html</a></p>
+<div class="highlight-ipython3"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+</div>
+<div class="section" id="connect-to-dask-distributed-cluster">
+<h2>Connect to Dask Distributed Cluster<a class="headerlink" href="#connect-to-dask-distributed-cluster" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-ipython3"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">dask.distributed</span> <span class="k">import</span> <span class="n">Client</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="n">scheduler_file</span><span class="o">=</span><span class="s1">&#39;/glade/scratch/jhamman/scheduler.json&#39;</span><span class="p">)</span>
+<span class="n">client</span>
+</pre></div>
+</div>
+<table style="border: 2px solid white;">
+<tr>
+<td style="vertical-align: top; border: 0px solid white">
+<h3>Client</h3>
+<ul>
+  <li><b>Scheduler: </b>tcp://10.148.5.204:8786
+  <li><b>Dashboard: </b><a href='http://10.148.5.204:8787' target='_blank'>http://10.148.5.204:8787</a>
+</ul>
+</td>
+<td style="vertical-align: top; border: 0px solid white">
+<h3>Cluster</h3>
+<ul>
+  <li><b>Workers: </b>65</li>
+  <li><b>Cores: </b>390</li>
+  <li><b>Memory: </b>1430.00 GB</li>
+</ul>
+</td>
+</tr>
+</table></div>
+<div class="section" id="open-the-dataset-using-xarray">
+<h2>Open the dataset using Xarray<a class="headerlink" href="#open-the-dataset-using-xarray" title="Permalink to this headline">¶</a></h2>
+<p>Here we open the 100 member ensemble. Each ensemble member is stored as
+a single file and we use <code class="docutils literal"><span class="pre">xarray.open_mfdataset</span></code> to concatenate them
+along a new <code class="docutils literal"><span class="pre">ensemble</span></code> dimension. In addition to chunking along the
+<code class="docutils literal"><span class="pre">ensemble</span></code> dimension (defaults to 1 chunk per file), we’ll also chunk
+along the <code class="docutils literal"><span class="pre">time</span></code> dimension.</p>
+<div class="highlight-ipython3"><div class="highlight"><pre><span></span><span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_mfdataset</span><span class="p">(</span><span class="s1">&#39;/glade/u/home/jhamman/workdir/GARD_inputs/newman_ensemble/conus_ens_[01]*&#39;</span><span class="p">,</span>
+                       <span class="n">engine</span><span class="o">=</span><span class="s1">&#39;netcdf4&#39;</span><span class="p">,</span> <span class="n">concat_dim</span><span class="o">=</span><span class="s1">&#39;ensemble&#39;</span><span class="p">,</span> <span class="n">chunks</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;time&#39;</span><span class="p">:</span> <span class="mi">366</span><span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-ipython3"><div class="highlight"><pre><span></span><span class="c1"># These clean up tasks can be removed after xarray 0.10 is release</span>
+<span class="n">ds</span><span class="p">[</span><span class="s1">&#39;elevation&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ds</span><span class="p">[</span><span class="s1">&#39;elevation&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">ensemble</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">ds</span><span class="p">[</span><span class="s1">&#39;mask&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ds</span><span class="p">[</span><span class="s1">&#39;mask&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">ensemble</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">int</span><span class="p">)</span>
+<span class="n">ds</span><span class="p">[</span><span class="s1">&#39;mask&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ds</span><span class="p">[</span><span class="s1">&#39;mask&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">ds</span><span class="p">[</span><span class="s1">&#39;mask&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="section" id="metadata">
+<h3>Metadata<a class="headerlink" href="#metadata" title="Permalink to this headline">¶</a></h3>
+<p>Let’s start by printing some metadata before we get started with the fun</p>
+<div class="highlight-ipython3"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ds size in GB </span><span class="si">{:0.2f}</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">nbytes</span> <span class="o">/</span> <span class="mf">1e9</span><span class="p">))</span>
+
+<span class="n">ds</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">ds</span> <span class="n">size</span> <span class="ow">in</span> <span class="n">GB</span> <span class="mf">5011.38</span>
+
+<span class="n">xarray</span><span class="o">.</span><span class="n">Dataset</span> <span class="p">{</span>
+<span class="n">dimensions</span><span class="p">:</span>
+    <span class="n">ensemble</span> <span class="o">=</span> <span class="mi">100</span> <span class="p">;</span>
+    <span class="n">lat</span> <span class="o">=</span> <span class="mi">224</span> <span class="p">;</span>
+    <span class="n">lon</span> <span class="o">=</span> <span class="mi">464</span> <span class="p">;</span>
+    <span class="n">time</span> <span class="o">=</span> <span class="mi">12054</span> <span class="p">;</span>
+
+<span class="n">variables</span><span class="p">:</span>
+    <span class="n">datetime64</span><span class="p">[</span><span class="n">ns</span><span class="p">]</span> <span class="n">time</span><span class="p">(</span><span class="n">time</span><span class="p">)</span> <span class="p">;</span>
+            <span class="n">time</span><span class="p">:</span><span class="n">standard_name</span> <span class="o">=</span> <span class="n">time</span> <span class="p">;</span>
+    <span class="n">float64</span> <span class="n">lon</span><span class="p">(</span><span class="n">lon</span><span class="p">)</span> <span class="p">;</span>
+            <span class="n">lon</span><span class="p">:</span><span class="n">long_name</span> <span class="o">=</span> <span class="n">longitude</span> <span class="p">;</span>
+            <span class="n">lon</span><span class="p">:</span><span class="n">units</span> <span class="o">=</span> <span class="n">degrees_east</span> <span class="p">;</span>
+            <span class="n">lon</span><span class="p">:</span><span class="n">standard_name</span> <span class="o">=</span> <span class="n">latitude</span> <span class="p">;</span>
+    <span class="n">float64</span> <span class="n">lat</span><span class="p">(</span><span class="n">lat</span><span class="p">)</span> <span class="p">;</span>
+            <span class="n">lat</span><span class="p">:</span><span class="n">long_name</span> <span class="o">=</span> <span class="n">latitude</span> <span class="p">;</span>
+            <span class="n">lat</span><span class="p">:</span><span class="n">units</span> <span class="o">=</span> <span class="n">degrees_north</span> <span class="p">;</span>
+            <span class="n">lat</span><span class="p">:</span><span class="n">standard_name</span> <span class="o">=</span> <span class="n">latitude</span> <span class="p">;</span>
+    <span class="n">float64</span> <span class="n">elevation</span><span class="p">(</span><span class="n">lat</span><span class="p">,</span> <span class="n">lon</span><span class="p">)</span> <span class="p">;</span>
+            <span class="n">elevation</span><span class="p">:</span><span class="n">units</span> <span class="o">=</span> <span class="n">meters</span> <span class="p">;</span>
+            <span class="n">elevation</span><span class="p">:</span><span class="n">long_name</span> <span class="o">=</span> <span class="n">Terrain</span> <span class="n">Elevation</span> <span class="p">;</span>
+            <span class="n">elevation</span><span class="p">:</span><span class="n">standard_name</span> <span class="o">=</span> <span class="n">elevation</span> <span class="p">;</span>
+    <span class="n">float64</span> <span class="n">pcp</span><span class="p">(</span><span class="n">ensemble</span><span class="p">,</span> <span class="n">time</span><span class="p">,</span> <span class="n">lat</span><span class="p">,</span> <span class="n">lon</span><span class="p">)</span> <span class="p">;</span>
+            <span class="n">pcp</span><span class="p">:</span><span class="n">long_name</span> <span class="o">=</span> <span class="n">Daily</span> <span class="n">estimated</span> <span class="n">precipitation</span> <span class="n">accumulation</span> <span class="p">;</span>
+            <span class="n">pcp</span><span class="p">:</span><span class="n">units</span> <span class="o">=</span> <span class="n">kg</span> <span class="n">m</span><span class="o">-</span><span class="mi">2</span> <span class="p">;</span>
+            <span class="n">pcp</span><span class="p">:</span><span class="n">standard_name</span> <span class="o">=</span> <span class="n">precipitation</span> <span class="p">;</span>
+    <span class="n">float64</span> <span class="n">t_mean</span><span class="p">(</span><span class="n">ensemble</span><span class="p">,</span> <span class="n">time</span><span class="p">,</span> <span class="n">lat</span><span class="p">,</span> <span class="n">lon</span><span class="p">)</span> <span class="p">;</span>
+            <span class="n">t_mean</span><span class="p">:</span><span class="n">long_name</span> <span class="o">=</span> <span class="n">Daily</span> <span class="n">estimated</span> <span class="n">mean</span> <span class="n">temperature</span> <span class="p">;</span>
+            <span class="n">t_mean</span><span class="p">:</span><span class="n">units</span> <span class="o">=</span> <span class="n">degC</span> <span class="p">;</span>
+    <span class="n">float64</span> <span class="n">t_range</span><span class="p">(</span><span class="n">ensemble</span><span class="p">,</span> <span class="n">time</span><span class="p">,</span> <span class="n">lat</span><span class="p">,</span> <span class="n">lon</span><span class="p">)</span> <span class="p">;</span>
+            <span class="n">t_range</span><span class="p">:</span><span class="n">long_name</span> <span class="o">=</span> <span class="n">Daily</span> <span class="n">estimated</span> <span class="n">diurnal</span> <span class="n">temperature</span> <span class="nb">range</span> <span class="p">;</span>
+            <span class="n">t_range</span><span class="p">:</span><span class="n">units</span> <span class="o">=</span> <span class="n">degC</span> <span class="p">;</span>
+    <span class="n">float64</span> <span class="n">mask</span><span class="p">(</span><span class="n">lat</span><span class="p">,</span> <span class="n">lon</span><span class="p">)</span> <span class="p">;</span>
+    <span class="n">float64</span> <span class="n">t_max</span><span class="p">(</span><span class="n">ensemble</span><span class="p">,</span> <span class="n">time</span><span class="p">,</span> <span class="n">lat</span><span class="p">,</span> <span class="n">lon</span><span class="p">)</span> <span class="p">;</span>
+            <span class="n">t_max</span><span class="p">:</span><span class="n">long_name</span> <span class="o">=</span> <span class="n">Daily</span> <span class="n">estimated</span> <span class="n">maximum</span> <span class="n">temperature</span> <span class="p">;</span>
+            <span class="n">t_max</span><span class="p">:</span><span class="n">units</span> <span class="o">=</span> <span class="n">degC</span> <span class="p">;</span>
+    <span class="n">float64</span> <span class="n">t_min</span><span class="p">(</span><span class="n">ensemble</span><span class="p">,</span> <span class="n">time</span><span class="p">,</span> <span class="n">lat</span><span class="p">,</span> <span class="n">lon</span><span class="p">)</span> <span class="p">;</span>
+            <span class="n">t_min</span><span class="p">:</span><span class="n">long_name</span> <span class="o">=</span> <span class="n">Daily</span> <span class="n">estimated</span> <span class="n">maximum</span> <span class="n">temperature</span> <span class="p">;</span>
+            <span class="n">t_min</span><span class="p">:</span><span class="n">units</span> <span class="o">=</span> <span class="n">degC</span> <span class="p">;</span>
+
+<span class="o">//</span> <span class="k">global</span> <span class="n">attributes</span><span class="p">:</span>
+    <span class="p">:</span><span class="n">history</span> <span class="o">=</span> <span class="n">Version</span> <span class="mf">1.0</span> <span class="n">of</span> <span class="n">ensemble</span> <span class="n">dataset</span><span class="p">,</span> <span class="n">created</span> <span class="n">December</span> <span class="mf">2014.</span><span class="n">Fri</span> <span class="n">Sep</span> <span class="mi">08</span> <span class="mi">12</span><span class="p">:</span><span class="mi">25</span><span class="p">:</span><span class="mi">30</span> <span class="mi">2017</span><span class="n">jhamman</span><span class="p">:</span> <span class="n">corrected</span> <span class="n">mask</span> <span class="ow">and</span> <span class="n">added</span> <span class="n">t_min</span> <span class="ow">and</span> <span class="n">tmax</span> <span class="k">as</span> <span class="n">ds</span><span class="p">[</span><span class="s1">&#39;t_mean&#39;</span><span class="p">]</span> <span class="o">+/-</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">ds</span><span class="p">[</span><span class="s1">&#39;t_range&#39;</span><span class="p">]</span>
+ <span class="p">;</span>
+    <span class="p">:</span><span class="n">nco_openmp_thread_number</span> <span class="o">=</span> <span class="mi">1</span> <span class="p">;</span>
+    <span class="p">:</span><span class="n">institution</span> <span class="o">=</span> <span class="n">National</span> <span class="n">Center</span> <span class="k">for</span> <span class="n">Atmospheric</span> <span class="n">Research</span> <span class="p">(</span><span class="n">NCAR</span><span class="p">),</span> <span class="n">Boulder</span><span class="p">,</span> <span class="n">CO</span> <span class="n">USA</span> <span class="p">;</span>
+    <span class="p">:</span><span class="n">title</span> <span class="o">=</span> <span class="n">CONUS</span> <span class="n">daily</span> <span class="mi">12</span><span class="o">-</span><span class="n">km</span> <span class="n">gridded</span> <span class="n">ensemble</span> <span class="n">precipitation</span> <span class="ow">and</span> <span class="n">temperature</span> <span class="n">dataset</span> <span class="k">for</span> <span class="mi">1980</span><span class="o">-</span><span class="mi">2012</span> <span class="p">;</span>
+    <span class="p">:</span><span class="n">source</span> <span class="o">=</span> <span class="n">Generated</span> <span class="n">using</span> <span class="n">version</span> <span class="mf">1.0</span> <span class="n">of</span> <span class="n">CONUS</span> <span class="n">ensemble</span> <span class="n">code</span> <span class="n">base</span> <span class="p">;</span>
+    <span class="p">:</span><span class="n">references</span> <span class="o">=</span> <span class="n">Newman</span> <span class="n">et</span> <span class="n">al</span><span class="o">.</span> <span class="mi">2015</span><span class="p">:</span> <span class="n">Gridded</span> <span class="n">Ensemble</span> <span class="n">Precipitation</span> <span class="ow">and</span> <span class="n">Temperature</span> <span class="n">Estimates</span> <span class="k">for</span> <span class="n">the</span> <span class="n">Contiguous</span> <span class="n">United</span> <span class="n">States</span><span class="o">.</span> <span class="n">J</span><span class="o">.</span> <span class="n">Hydrometeorology</span> <span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="figure-domain-mask">
+<h2>Figure: Domain mask<a class="headerlink" href="#figure-domain-mask" title="Permalink to this headline">¶</a></h2>
+<p>A quick plot of the mask to give us an idea of the spatial domain we’re
+working with</p>
+<div class="highlight-ipython3"><div class="highlight"><pre><span></span><span class="n">ds</span><span class="p">[</span><span class="s1">&#39;mask&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;mask&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">matplotlib</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">Text</span> <span class="n">at</span> <span class="mh">0x2aaae62a5198</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<img alt="../../_images/newmann_ensemble_meteorology_0.png" src="../../_images/newmann_ensemble_meteorology_0.png" />
+</div>
+<div class="section" id="look-all-these-arrays-are-dask-arrays-under-the-hood-note-the-chunk-sizes">
+<h2>Look! All these arrays are dask arrays under the hood. Note the chunk sizes<a class="headerlink" href="#look-all-these-arrays-are-dask-arrays-under-the-hood-note-the-chunk-sizes" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-ipython3"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">da</span> <span class="ow">in</span> <span class="n">ds</span><span class="o">.</span><span class="n">data_vars</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">da</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">elevation</span> <span class="n">dask</span><span class="o">.</span><span class="n">array</span><span class="o">&lt;</span><span class="n">getitem</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">224</span><span class="p">,</span> <span class="mi">464</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">float64</span><span class="p">,</span> <span class="n">chunksize</span><span class="o">=</span><span class="p">(</span><span class="mi">224</span><span class="p">,</span> <span class="mi">464</span><span class="p">)</span><span class="o">&gt;</span>
+<span class="n">pcp</span> <span class="n">dask</span><span class="o">.</span><span class="n">array</span><span class="o">&lt;</span><span class="n">concatenate</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">12054</span><span class="p">,</span> <span class="mi">224</span><span class="p">,</span> <span class="mi">464</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">float64</span><span class="p">,</span> <span class="n">chunksize</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">366</span><span class="p">,</span> <span class="mi">224</span><span class="p">,</span> <span class="mi">464</span><span class="p">)</span><span class="o">&gt;</span>
+<span class="n">t_mean</span> <span class="n">dask</span><span class="o">.</span><span class="n">array</span><span class="o">&lt;</span><span class="n">concatenate</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">12054</span><span class="p">,</span> <span class="mi">224</span><span class="p">,</span> <span class="mi">464</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">float64</span><span class="p">,</span> <span class="n">chunksize</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">366</span><span class="p">,</span> <span class="mi">224</span><span class="p">,</span> <span class="mi">464</span><span class="p">)</span><span class="o">&gt;</span>
+<span class="n">t_range</span> <span class="n">dask</span><span class="o">.</span><span class="n">array</span><span class="o">&lt;</span><span class="n">concatenate</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">12054</span><span class="p">,</span> <span class="mi">224</span><span class="p">,</span> <span class="mi">464</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">float64</span><span class="p">,</span> <span class="n">chunksize</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">366</span><span class="p">,</span> <span class="mi">224</span><span class="p">,</span> <span class="mi">464</span><span class="p">)</span><span class="o">&gt;</span>
+<span class="n">mask</span> <span class="n">dask</span><span class="o">.</span><span class="n">array</span><span class="o">&lt;</span><span class="n">where</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">224</span><span class="p">,</span> <span class="mi">464</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">float64</span><span class="p">,</span> <span class="n">chunksize</span><span class="o">=</span><span class="p">(</span><span class="mi">224</span><span class="p">,</span> <span class="mi">464</span><span class="p">)</span><span class="o">&gt;</span>
+<span class="n">t_max</span> <span class="n">dask</span><span class="o">.</span><span class="n">array</span><span class="o">&lt;</span><span class="n">concatenate</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">12054</span><span class="p">,</span> <span class="mi">224</span><span class="p">,</span> <span class="mi">464</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">float64</span><span class="p">,</span> <span class="n">chunksize</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">366</span><span class="p">,</span> <span class="mi">224</span><span class="p">,</span> <span class="mi">464</span><span class="p">)</span><span class="o">&gt;</span>
+<span class="n">t_min</span> <span class="n">dask</span><span class="o">.</span><span class="n">array</span><span class="o">&lt;</span><span class="n">concatenate</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">12054</span><span class="p">,</span> <span class="mi">224</span><span class="p">,</span> <span class="mi">464</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">float64</span><span class="p">,</span> <span class="n">chunksize</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">366</span><span class="p">,</span> <span class="mi">224</span><span class="p">,</span> <span class="mi">464</span><span class="p">)</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="intra-ensemble-range">
+<h2>Intra-ensemble range<a class="headerlink" href="#intra-ensemble-range" title="Permalink to this headline">¶</a></h2>
+<p>We can start by calculating the intra-ensemble range for all the mean
+daily temperature in this dataset.</p>
+<div class="highlight-ipython3"><div class="highlight"><pre><span></span><span class="c1"># calculates the long term mean along the time dimension</span>
+<span class="n">da_mean</span> <span class="o">=</span> <span class="n">ds</span><span class="p">[</span><span class="s1">&#39;t_mean&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s1">&#39;time&#39;</span><span class="p">)</span>
+<span class="c1"># calculate the intra-ensemble range of long term means</span>
+<span class="n">da_spread</span> <span class="o">=</span> <span class="n">da_mean</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s1">&#39;ensemble&#39;</span><span class="p">)</span> <span class="o">-</span> <span class="n">da_mean</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s1">&#39;ensemble&#39;</span><span class="p">)</span>
+<span class="n">da_spread</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">xarray</span><span class="o">.</span><span class="n">DataArray</span> <span class="s1">&#39;t_mean&#39;</span> <span class="p">(</span><span class="n">lat</span><span class="p">:</span> <span class="mi">224</span><span class="p">,</span> <span class="n">lon</span><span class="p">:</span> <span class="mi">464</span><span class="p">)</span><span class="o">&gt;</span>
+<span class="n">dask</span><span class="o">.</span><span class="n">array</span><span class="o">&lt;</span><span class="n">sub</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">224</span><span class="p">,</span> <span class="mi">464</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">float64</span><span class="p">,</span> <span class="n">chunksize</span><span class="o">=</span><span class="p">(</span><span class="mi">224</span><span class="p">,</span> <span class="mi">464</span><span class="p">)</span><span class="o">&gt;</span>
+<span class="n">Coordinates</span><span class="p">:</span>
+  <span class="o">*</span> <span class="n">lon</span>      <span class="p">(</span><span class="n">lon</span><span class="p">)</span> <span class="n">float64</span> <span class="o">-</span><span class="mf">124.9</span> <span class="o">-</span><span class="mf">124.8</span> <span class="o">-</span><span class="mf">124.7</span> <span class="o">-</span><span class="mf">124.6</span> <span class="o">-</span><span class="mf">124.4</span> <span class="o">-</span><span class="mf">124.3</span> <span class="o">-</span><span class="mf">124.2</span> <span class="o">...</span>
+  <span class="o">*</span> <span class="n">lat</span>      <span class="p">(</span><span class="n">lat</span><span class="p">)</span> <span class="n">float64</span> <span class="mf">25.06</span> <span class="mf">25.19</span> <span class="mf">25.31</span> <span class="mf">25.44</span> <span class="mf">25.56</span> <span class="mf">25.69</span> <span class="mf">25.81</span> <span class="mf">25.94</span> <span class="o">...</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="calling-compute">
+<h2>Calling compute<a class="headerlink" href="#calling-compute" title="Permalink to this headline">¶</a></h2>
+<p>The expressions above didn’t actually compute anything. They just build
+the dask task graph. To do the computations, we call the <code class="docutils literal"><span class="pre">compute</span></code>
+method:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">CPU</span> <span class="n">times</span><span class="p">:</span> <span class="n">user</span> <span class="mf">1.77</span> <span class="n">s</span><span class="p">,</span> <span class="n">sys</span><span class="p">:</span> <span class="mi">40</span> <span class="n">ms</span><span class="p">,</span> <span class="n">total</span><span class="p">:</span> <span class="mf">1.81</span> <span class="n">s</span>
+<span class="n">Wall</span> <span class="n">time</span><span class="p">:</span> <span class="mi">4</span><span class="nb">min</span> <span class="mi">19</span><span class="n">s</span>
+</pre></div>
+</div>
+<div class="section" id="figure-intra-ensemble-range">
+<h3>Figure: Intra-ensemble range<a class="headerlink" href="#figure-intra-ensemble-range" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-ipython3"><div class="highlight"><pre><span></span><span class="n">da_spread</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">robust</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Intra-ensemble range in mean annual temperature&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">matplotlib</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">Text</span> <span class="n">at</span> <span class="mh">0x2aaae613e470</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<img alt="../../_images/newmann_ensemble_meteorology_1.png" src="../../_images/newmann_ensemble_meteorology_1.png" />
+</div>
+</div>
+<div class="section" id="persisting-data-on-the-cluster">
+<h2>Persisting data on the cluster<a class="headerlink" href="#persisting-data-on-the-cluster" title="Permalink to this headline">¶</a></h2>
+<p>(Make sure you have well over 300GB of RAM on your cluster, you can
+change the <code class="docutils literal"><span class="pre">ensemble=slice(0,</span> <span class="pre">25)</span></code> section below to use more/less
+ensemble members.</p>
+<p>Most of the time spent in the last calculation was loading data from
+disk. After we were done with this data, Dask threw it away to free up
+memory. If we plan to reuse the same dataset many times then we may want
+to <code class="docutils literal"><span class="pre">persist</span></code> it in memory.</p>
+<div class="highlight-ipython3"><div class="highlight"><pre><span></span><span class="n">t_mean</span> <span class="o">=</span> <span class="n">ds</span><span class="p">[</span><span class="s1">&#39;t_mean&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">ensemble</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">25</span><span class="p">))</span>
+<span class="n">t_mean</span> <span class="o">=</span> <span class="n">t_mean</span><span class="o">.</span><span class="n">persist</span><span class="p">()</span>
+<span class="n">t_mean</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">xarray</span><span class="o">.</span><span class="n">DataArray</span> <span class="s1">&#39;t_mean&#39;</span> <span class="p">(</span><span class="n">ensemble</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span> <span class="n">time</span><span class="p">:</span> <span class="mi">12054</span><span class="p">,</span> <span class="n">lat</span><span class="p">:</span> <span class="mi">224</span><span class="p">,</span> <span class="n">lon</span><span class="p">:</span> <span class="mi">464</span><span class="p">)</span><span class="o">&gt;</span>
+<span class="n">dask</span><span class="o">.</span><span class="n">array</span><span class="o">&lt;</span><span class="n">getitem</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="mi">12054</span><span class="p">,</span> <span class="mi">224</span><span class="p">,</span> <span class="mi">464</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">float64</span><span class="p">,</span> <span class="n">chunksize</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">366</span><span class="p">,</span> <span class="mi">224</span><span class="p">,</span> <span class="mi">464</span><span class="p">)</span><span class="o">&gt;</span>
+<span class="n">Coordinates</span><span class="p">:</span>
+  <span class="o">*</span> <span class="n">time</span>     <span class="p">(</span><span class="n">time</span><span class="p">)</span> <span class="n">datetime64</span><span class="p">[</span><span class="n">ns</span><span class="p">]</span> <span class="mi">1980</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">01</span> <span class="mi">1980</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">02</span> <span class="mi">1980</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">03</span> <span class="o">...</span>
+  <span class="o">*</span> <span class="n">lon</span>      <span class="p">(</span><span class="n">lon</span><span class="p">)</span> <span class="n">float64</span> <span class="o">-</span><span class="mf">124.9</span> <span class="o">-</span><span class="mf">124.8</span> <span class="o">-</span><span class="mf">124.7</span> <span class="o">-</span><span class="mf">124.6</span> <span class="o">-</span><span class="mf">124.4</span> <span class="o">-</span><span class="mf">124.3</span> <span class="o">-</span><span class="mf">124.2</span> <span class="o">...</span>
+  <span class="o">*</span> <span class="n">lat</span>      <span class="p">(</span><span class="n">lat</span><span class="p">)</span> <span class="n">float64</span> <span class="mf">25.06</span> <span class="mf">25.19</span> <span class="mf">25.31</span> <span class="mf">25.44</span> <span class="mf">25.56</span> <span class="mf">25.69</span> <span class="mf">25.81</span> <span class="mf">25.94</span> <span class="o">...</span>
+<span class="n">Dimensions</span> <span class="n">without</span> <span class="n">coordinates</span><span class="p">:</span> <span class="n">ensemble</span>
+<span class="n">Attributes</span><span class="p">:</span>
+    <span class="n">long_name</span><span class="p">:</span>  <span class="n">Daily</span> <span class="n">estimated</span> <span class="n">mean</span> <span class="n">temperature</span>
+    <span class="n">units</span><span class="p">:</span>      <span class="n">degC</span>
+</pre></div>
+</div>
+<p>Now the t_mean DataArray is resident in memory on our workers. We can
+repeat our computation from last time much more quickly.</p>
+<div class="highlight-ipython3"><div class="highlight"><pre><span></span>    <span class="n">temp_mean</span> <span class="o">=</span> <span class="n">t_mean</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s1">&#39;time&#39;</span><span class="p">)</span>
+<span class="n">spread</span> <span class="o">=</span> <span class="n">temp_mean</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s1">&#39;ensemble&#39;</span><span class="p">)</span> <span class="o">-</span> <span class="n">temp_mean</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s1">&#39;ensemble&#39;</span><span class="p">)</span>  <span class="c1"># calculates the intra-ensemble range of long term means</span>
+<span class="n">mean</span> <span class="o">=</span> <span class="n">spread</span><span class="o">.</span><span class="n">compute</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">CPU</span> <span class="n">times</span><span class="p">:</span> <span class="n">user</span> <span class="mi">588</span> <span class="n">ms</span><span class="p">,</span> <span class="n">sys</span><span class="p">:</span> <span class="mi">32</span> <span class="n">ms</span><span class="p">,</span> <span class="n">total</span><span class="p">:</span> <span class="mi">620</span> <span class="n">ms</span>
+<span class="n">Wall</span> <span class="n">time</span><span class="p">:</span> <span class="mi">1</span><span class="nb">min</span> <span class="mi">17</span><span class="n">s</span>
+</pre></div>
+</div>
+<div class="highlight-ipython3"><div class="highlight"><pre><span></span><span class="n">mean</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">robust</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Intra-ensemble range in mean annual temperature&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">matplotlib</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">Text</span> <span class="n">at</span> <span class="mh">0x2aaae652eb70</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<img alt="../../_images/newmann_ensemble_meteorology_2.png" src="../../_images/newmann_ensemble_meteorology_2.png" />
+<p>And we can also modify the computation and try something new. Keeping
+data in memory allows to <em>iterate quickly</em>, which is the whole point of
+this exercise.</p>
+<div class="highlight-ipython3"><div class="highlight"><pre><span></span>    <span class="n">temp_mean</span> <span class="o">=</span> <span class="n">t_mean</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s1">&#39;time&#39;</span><span class="p">)</span>
+<span class="n">spread</span> <span class="o">=</span> <span class="n">temp_mean</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s1">&#39;ensemble&#39;</span><span class="p">)</span> <span class="o">-</span> <span class="n">temp_mean</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s1">&#39;ensemble&#39;</span><span class="p">)</span>  <span class="c1"># calculates the intra-ensemble range of long term means</span>
+<span class="n">std</span> <span class="o">=</span> <span class="n">spread</span><span class="o">.</span><span class="n">compute</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">CPU</span> <span class="n">times</span><span class="p">:</span> <span class="n">user</span> <span class="mi">428</span> <span class="n">ms</span><span class="p">,</span> <span class="n">sys</span><span class="p">:</span> <span class="mi">8</span> <span class="n">ms</span><span class="p">,</span> <span class="n">total</span><span class="p">:</span> <span class="mi">436</span> <span class="n">ms</span>
+<span class="n">Wall</span> <span class="n">time</span><span class="p">:</span> <span class="mi">9</span> <span class="n">s</span>
+</pre></div>
+</div>
+<div class="highlight-ipython3"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">robust</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Intra-ensemble range in standard deviation of annual temperature&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">matplotlib</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">Text</span> <span class="n">at</span> <span class="mh">0x2aaae668a668</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<img alt="../../_images/newmann_ensemble_meteorology_3.png" src="../../_images/newmann_ensemble_meteorology_3.png" />
+<div class="sphx-glr-download docutils container">
+<p><strong>Download python script:</strong> <a class="reference download internal" href="../../_downloads/newmann_ensemble_meteorology.py" download=""><code class="xref download docutils literal"><span class="pre">newmann_ensemble_meteorology.py</span></code></a></p>
+<p><strong>Download Jupyter notebook:</strong> <a class="reference download internal" href="../../_downloads/newmann_ensemble_meteorology.ipynb" download=""><code class="xref download docutils literal"><span class="pre">newmann_ensemble_meteorology.ipynb</span></code></a></p>
+</div>
+</div>
+</div>
+
+
+      
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2018, Pangeo Team.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.<br/>
+    </p>
+  </div>
+</footer>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-120544092-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-120544092-1');
+</script>
+  </body>
+</html>

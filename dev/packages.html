@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Packages &#8212; Pangeo  documentation</title>
+    <link rel="stylesheet" href="_static/pangeo-style.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/example_gallery_styles.css" type="text/css" />
+    <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/example_gallery_styles_patched.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+    <script type="text/javascript" src="_static/copybutton.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Geoscience Use Cases" href="use_cases/index.html" />
+    <link rel="prev" title="Guide for Scientists" href="quickstart.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+            <span><img src="_static/small_e_reversed_24px.png"></span>
+          Pangeo</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="https://medium.com/pangeo">Blog</a></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="about.html">About Pangeo</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="about.html#motivation">Motivation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="about.html#mission-statement">Mission Statement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="about.html#goals">Goals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="about.html#get-involved">Get Involved</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="quickstart.html">Guide for Scientists</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="quickstart.html#learn-about-pangeo-software">Learn About Pangeo Software</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#explore-the-use-cases">Explore the Use Cases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#try-out-a-pangeo-deployment">Try Out a Pangeo Deployment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#give-feedback">Give Feedback</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#contribute-a-use-case">Contribute a Use Case</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#contribute-data">Contribute Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#become-an-open-source-contributor">Become an Open Source Contributor</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Packages</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#pangeo-core-packages">Pangeo Core Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pangeo-affiliated-packages">Pangeo Affiliated Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#guidelines-for-new-packages">Guidelines for New Packages</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="use_cases/index.html">Geoscience Use Cases</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="use_cases/physical-oceanography/index.html">Physical Oceanography</a></li>
+<li class="toctree-l2"><a class="reference internal" href="use_cases/climate-modeling/index.html">Climate modeling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="use_cases/meteorology/index.html">Meteorology</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="architecture.html">Technical Architecture</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#where-we-began">Where we began</a></li>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#interoperability-in-pangeo">Interoperability in Pangeo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#software">Software</a></li>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#compute-platforms">Compute Platforms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#storage-formats">Storage Formats</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="setup_guides/index.html">Deployment Setup Guides</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="setup_guides/index.html#setting-up-pangeo-on-hpc-systems">Setting up Pangeo on HPC Systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="setup_guides/index.html#setting-up-pangeo-on-cloud-systems">Setting up Pangeo on Cloud Systems</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="deployments.html">Deployments</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="deployments.html#pangeo-provided-cloud-deployments">Pangeo provided Cloud Deployments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deployments.html#other-cloud-deployments">Other Cloud deployments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deployments.html#high-performance-computing-deployments">High Performance Computing Deployments</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="data.html">Pangeo and Data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="data.html#data-on-hpc">Data on HPC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html#data-in-the-cloud">Data in the Cloud</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="catalog.html">Pangeo Data Catalog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="collaborators.html">Collaborators</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="collaborators.html#funding-agencies">Funding Agencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="collaborators.html#institutions">Institutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="collaborators.html#people">People</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="publications.html">Publications</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="publications.html#self-reported">Self-Reported</a></li>
+<li class="toctree-l2"><a class="reference internal" href="publications.html#reporting-form">Reporting Form</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="meeting-notes.html">Pangeo Weekly Meeting Notes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="meeting-notes.html#meeting-calendar">Meeting Calendar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meeting-notes.html#id1">Meeting Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="meetings/index.html">Pangeo Conferences</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="meetings/index.html#future-meetings">Future Meetings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meetings/index.html#past-meetings">Past Meetings</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="contact.html">Contact Pangeo</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Packages</a><ul>
+<li><a class="reference internal" href="#pangeo-core-packages">Pangeo Core Packages</a><ul>
+<li><a class="reference internal" href="#xarray">Xarray</a></li>
+<li><a class="reference internal" href="#iris">Iris</a></li>
+<li><a class="reference internal" href="#dask">Dask</a></li>
+<li><a class="reference internal" href="#jupyter">Jupyter</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#pangeo-affiliated-packages">Pangeo Affiliated Packages</a></li>
+<li><a class="reference internal" href="#guidelines-for-new-packages">Guidelines for New Packages</a><ul>
+<li><a class="reference internal" href="#general-best-practices-for-open-source">General Best Practices for Open Source</a></li>
+<li><a class="reference internal" href="#best-practices-for-pangeo-projects">Best Practices for Pangeo Projects</a></li>
+<li><a class="reference internal" href="#why-xarray-and-dask">Why Xarray and Dask?</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="quickstart.html" title="Previous Chapter: Guide for Scientists"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Guide for Scientists</span>
+    </a>
+  </li>
+  <li>
+    <a href="use_cases/index.html" title="Next Chapter: Geoscience Use Cases"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Geoscience Use Cases &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+          </ul>
+
+          
+            
+            
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li><a class="reference internal" href="#">Packages</a><ul>
+<li><a class="reference internal" href="#pangeo-core-packages">Pangeo Core Packages</a><ul>
+<li><a class="reference internal" href="#xarray">Xarray</a></li>
+<li><a class="reference internal" href="#iris">Iris</a></li>
+<li><a class="reference internal" href="#dask">Dask</a></li>
+<li><a class="reference internal" href="#jupyter">Jupyter</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#pangeo-affiliated-packages">Pangeo Affiliated Packages</a></li>
+<li><a class="reference internal" href="#guidelines-for-new-packages">Guidelines for New Packages</a><ul>
+<li><a class="reference internal" href="#general-best-practices-for-open-source">General Best Practices for Open Source</a></li>
+<li><a class="reference internal" href="#best-practices-for-pangeo-projects">Best Practices for Pangeo Projects</a></li>
+<li><a class="reference internal" href="#why-xarray-and-dask">Why Xarray and Dask?</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+<div class="widget navlinks">
+  <ul class="this-page-menu">
+    <li><a href="https://github.com/pangeo-data/pangeo/blob/master/docs/packages.rst"
+            rel="nofollow"
+            target="_blank"><span class="fa-stack fa-md"><i class="fa fa-github fa-stack-1x"></i></span> Edit on GitHub</a></li>
+  </ul>
+</div>
+        </div>
+      </div>
+    <div class="col-md-9 content ">
+      
+  <div class="section" id="packages">
+<span id="id1"></span><h1>Packages<a class="headerlink" href="#packages" title="Permalink to this headline">¶</a></h1>
+<p>Pangeo is not one specific software package.
+A Pangeo environment is made of up of many different open-source software packages.
+Each of these packages has its own repository, documentation, and development team.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Many people and organizations were involved in the development of the
+software described on this page. Most of them have nothing to do with Pangeo.
+By listing software packages on this website, we are in no way claiming
+credit for their hard work. Full information about the developers
+responsible for creating these tools can be found by following the links
+below.</p>
+</div>
+<div class="section" id="pangeo-core-packages">
+<h2>Pangeo Core Packages<a class="headerlink" href="#pangeo-core-packages" title="Permalink to this headline">¶</a></h2>
+<p>Because of the <a class="reference internal" href="architecture.html#architecture"><span class="std std-ref">Technical Architecture</span></a> of Pangeo environments, these three core
+packages are considered essential to the project.</p>
+<div class="section" id="xarray">
+<h3>Xarray<a class="headerlink" href="#xarray" title="Permalink to this headline">¶</a></h3>
+<img alt="https://github.com/pydata/xarray/raw/master/doc/_static/dataset-diagram-logo.png" src="https://github.com/pydata/xarray/raw/master/doc/_static/dataset-diagram-logo.png" style="width: 300px;" />
+<ul class="simple">
+<li>Website: <a class="reference external" href="http://xarray.pydata.org/en/latest">http://xarray.pydata.org/en/latest</a></li>
+<li>GitHub: <a class="reference external" href="https://github.com/pydata/xarray">https://github.com/pydata/xarray</a></li>
+</ul>
+<p>Xarray is an open source project and Python package
+that provides a toolkit for working with labeled multi-dimensional arrays of
+data. Xarray adopts the <a class="reference external" href="http://www.unidata.ucar.edu/software/thredds/current/netcdf-java/CDM">Common Data Model</a> for self-
+describing scientific data in widespread use in the Earth sciences:
+<code class="docutils literal"><span class="pre">xarray.Dataset</span></code> is an in-memory representation of a <a class="reference external" href="http://www.unidata.ucar.edu/software/netcdf">netCDF</a> file.
+Xarray provides the basic data structures used by many other Pangeo packages,
+as well as powerful tools for computation and visualization.</p>
+</div>
+<div class="section" id="iris">
+<h3>Iris<a class="headerlink" href="#iris" title="Permalink to this headline">¶</a></h3>
+<img alt="_images/Iris_logo_banner.png" src="_images/Iris_logo_banner.png" />
+<ul class="simple">
+<li>Website: <a class="reference external" href="https://scitools.org.uk/iris/docs/latest/">https://scitools.org.uk/iris/docs/latest/</a></li>
+<li>GitHub: <a class="reference external" href="https://github.com/SciTools/iris">https://github.com/SciTools/iris</a></li>
+</ul>
+<p>Iris seeks to provide a powerful, easy to use, and community-driven Python
+library for analysing and visualising meteorological and oceanographic data sets.</p>
+<p>With Iris you can:</p>
+<ul class="simple">
+<li>Use a single API to work on your data, irrespective of its original format.</li>
+<li>Read and write (CF-)netCDF, GRIB, and PP files.</li>
+<li>Easily produce graphs and maps via integration with matplotlib and cartopy.</li>
+</ul>
+<p>Iris is an alternative to Xarray. Iris is developed primarily by the
+<cite>UK Met Office&lt;http://www.metoffice.gov.uk/&gt;</cite> Analysis, Visualisation and Data team (AVD).</p>
+</div>
+<div class="section" id="dask">
+<h3>Dask<a class="headerlink" href="#dask" title="Permalink to this headline">¶</a></h3>
+<img alt="_images/dask_horizontal_no_pad.svg" src="_images/dask_horizontal_no_pad.svg" width="300px" /><ul class="simple">
+<li>Website: <a class="reference external" href="http://dask.readthedocs.io/en/latest/">http://dask.readthedocs.io/en/latest/</a></li>
+<li>GitHub: <a class="reference external" href="https://github.com/dask/dask">https://github.com/dask/dask</a></li>
+</ul>
+<p>Dask is a flexible parallel computing library for analytics.
+Dask is the key to the scalability of the Pangeo platform; its data structures are
+capable of representing extremely large datasets without actually loading them
+in memory, and its distributed schedulers permit supercomputers and cloud
+computing clusters to efficiently parallelize computations across many nodes.</p>
+</div>
+<div class="section" id="jupyter">
+<h3>Jupyter<a class="headerlink" href="#jupyter" title="Permalink to this headline">¶</a></h3>
+<img alt="_images/jupyter-logo.svg" height="160px" src="_images/jupyter-logo.svg" /><ul class="simple">
+<li>Website: <a class="reference external" href="http://jupyter.org/">http://jupyter.org/</a></li>
+<li>GitHub: <a class="reference external" href="https://github.com/jupyter">https://github.com/jupyter</a></li>
+</ul>
+<p>Project Jupyter exists to develop open-source software, open-standards, and
+services for interactive computing across dozens of programming languages.
+Jupyter provides the interactive layer to the Pangeo platform, allowing
+scientists to interact with remote systems where data and computing resources
+live.</p>
+</div>
+</div>
+<div class="section" id="pangeo-affiliated-packages">
+<h2>Pangeo Affiliated Packages<a class="headerlink" href="#pangeo-affiliated-packages" title="Permalink to this headline">¶</a></h2>
+<p>There are many other python packages that can work with the core packages
+to provide additional functionality.
+We plan to eventually catalog these packages here on the Pangeo website.
+For now, please refer to the
+<a class="reference external" href="http://xarray.pydata.org/en/latest/faq.html#what-other-projects-leverage-xarray">Xarray list of related projects</a>.</p>
+</div>
+<div class="section" id="guidelines-for-new-packages">
+<h2>Guidelines for New Packages<a class="headerlink" href="#guidelines-for-new-packages" title="Permalink to this headline">¶</a></h2>
+<p>Our vision for the Pangeo project is an ecosystem of mutually compatible
+Geoscience python packages which follow open-source best practices.
+These practices are well established across the scientific python
+community.</p>
+<div class="section" id="general-best-practices-for-open-source">
+<h3>General Best Practices for Open Source<a class="headerlink" href="#general-best-practices-for-open-source" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li>Use an open-source license. See <a class="reference external" href="http://www.astrobetter.com/blog/2014/03/10/the-whys-and-hows-of-licensing-scientific-code/">Jake VanderPlas’ article on
+licensing scientific
+code</a>
+or <a class="reference external" href="https://choosealicense.com/">these more general guidelines</a></li>
+<li>Use version control for source code (for example, on
+<a class="reference external" href="http://github.org">github</a>)</li>
+<li>Provide thorough test coverage and continuous integration of testing</li>
+<li>Maintain comprehensive Documentation</li>
+<li>Establish a <a class="reference external" href="https://opensource.guide/code-of-conduct/">code of
+conduct</a> for
+contributors</li>
+</ol>
+<p>The <a class="reference external" href="https://opensource.guide/">open-source guide</a> provides some
+great advice on building and maintaining open-source projects.</p>
+</div>
+<div class="section" id="best-practices-for-pangeo-projects">
+<h3>Best Practices for Pangeo Projects<a class="headerlink" href="#best-practices-for-pangeo-projects" title="Permalink to this headline">¶</a></h3>
+<p>To address the needs of geoscience researchers, we have developed some
+additional recommendations.</p>
+<ol class="arabic simple">
+<li><em>Solve a general problem:</em> packages should solve a general problem
+that is encountered by a relatively broad groups of researchers.</li>
+<li><em>Clearly defined scope:</em> packages should have a clear and relatively
+narrow scope, solving the specific problem[s] identified in the point
+above (rather than attempting to cover every possible aspect of
+geoscience research computing).</li>
+<li><em>No duplication:</em> developers should try to leverage existing packages
+as much as possible to avoid duplication of effort. (In early-stage
+development and experimentation, however, some duplication will be
+inevitable as developers try implementing different solutions to the
+same general problems.)</li>
+<li><em>Consume and Produce Xarray Objects:</em> Xarray data structures
+facilitate mutual interoperability between packages.</li>
+<li><em>Operate Lazily:</em> whenever possible, packages should avoid explicitly
+triggering computation on Dask objects.</li>
+</ol>
+</div>
+<div class="section" id="why-xarray-and-dask">
+<h3>Why Xarray and Dask?<a class="headerlink" href="#why-xarray-and-dask" title="Permalink to this headline">¶</a></h3>
+<p>The Pangeo project strongly encourages the use of Xarray data structures
+wherever possible. Xarray Dataset and DataArrays contain
+multidimensional numeric array data and also the metadata describing the
+data’s coordinates, labels, units, and other relevant attributes. Xarray
+makes it easy to keep this important metadata together with the raw
+data; applications can then take advantage of the metadata to perform
+calculations or create visualizations in a coordinate-aware fashion. The
+use of Xarray eliminates many common bugs, reduces the need to write
+boilerplate code, makes code easier to understand, and generally makes
+users and developers happier and more productive in their day-to-day
+scientific computing.</p>
+<p>Xarray’s data model is explicitly based on the <a class="reference external" href="http://cfconventions.org/">CF
+Conventions</a>, a well-established community
+standard which encompasses many different common scenarios encountered
+in Earth System science. However, Xarray is flexible and does not
+<em>require</em> compliance with CF conventions. We encourage Pangeo packages
+to follow CF conventions wherever it makes sense to do so.</p>
+<p>Most geoscientists have encountered the CF data model via the ubiquitous
+<a class="reference external" href="https://www.unidata.ucar.edu/software/netcdf/">netCDF file format</a>.
+While Xarray can easily read and write netCDF files, it doesn’t have to.
+This is a key difference between software built on Xarray and numerous
+other tools designed to process netCDF data (e.g. nco, cdo, etc. etc.):
+<em>Xarray data can be passed directly between python libraries (or over a
+network) without ever touching a disk drive.</em> This “in-memory”
+capability is a key ingredient to the Big-Data scalability of Pangeo
+packages. Very frequently the bottleneck in data processing pipelines is
+reading and writing files.</p>
+<p>Another important aspect of scalability is the use of Dask for parallel
+and out-of-core computations. The raw data underlying Xarray objects can
+be either standard in-memory <a class="reference external" href="http://www.numpy.org/">numpy arrays</a> or
+<a class="reference external" href="http://dask.pydata.org/en/latest/array.html">Dask arrays</a>. Dask
+arrays behave nearly identically to numpy arrays (they support the same
+API), but instead of storing raw data directly, they store a symbolic
+computational graph of operations (e.g. reading data from disk or
+network, performing transformations or mathematical calculations, etc.)
+that must be executed in order to obtain the data. No operations are
+actually executed until actual numerical values are required, such as
+for making a figure. (This is called <em>lazy execution</em>.) Dask figures out
+how to execute these computational graphs efficiently on different
+computer architectures using sophisticated techniques. By chaining
+operations on dask arrays together, researchers can symbolically
+represent large and complex data analysis pipelines and then deploy them
+effectively on large computer clusters.</p>
+</div>
+</div>
+</div>
+
+
+      
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2018, Pangeo Team.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.<br/>
+    </p>
+  </div>
+</footer>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-120544092-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-120544092-1');
+</script>
+  </body>
+</html>

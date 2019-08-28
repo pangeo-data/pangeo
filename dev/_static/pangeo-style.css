@@ -1,0 +1,157 @@
+@import url("./bootstrap-sphinx.css");
+
+/* colors from brand sheet
+  dark blue:  #003B71
+  green:      #5eb130
+  teal:       #00a3b0
+  purple:     #322173
+  pink:       #e50051
+*/
+
+@font-face {
+    font-family: "Panton Black Caps";
+    /* src: url("http://ff.cdn.1001fonts.net/p/a/panton.black-caps.otf") */
+    src: url("panton.black-caps.otf");
+}
+
+@font-face {
+    font-family: "Panton Light Caps";
+    src: url("panton.light-caps.otf");
+}
+
+h1 {
+  color: #003B71;
+  font-family: "Panton Black Caps";
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.welcome h1 {
+  font-family: "Source Sans Pro",Calibri,Candara,Arial,sans-serif
+}
+
+h2 {
+  font-family: "Panton Light Caps";
+}
+
+body {
+  font-size: 1.7rem;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+a {
+  color: #5eb130;
+}
+
+a:hover, a:focus {
+  text-decoration: underline;
+  color: #5eb130;
+}
+
+.alert-info, mark {
+  color: white;
+  background-color: #00a3b0;
+}
+
+.alert-info a {
+  color: #322173;
+}
+
+.navbar-inverse {
+  background: -webkit-linear-gradient(left, #5eb130, #003B71); /* Chrome10+, Safari5.1+ */
+  background: linear-gradient(left, #5eb130, #003B71);
+  border: None;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-nav>li>a:focus {
+    background-color: #00a3b0;
+}
+
+.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:hover, .navbar-inverse .navbar-nav>.open>a:focus  {
+    background-color: #00a3b0;
+}
+
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus {
+    text-decoration: none;
+    /* color: #ffffff; */
+    background-color: #00a3b0;
+}
+
+.navbar-brand {
+  font-family: "Panton Black Caps";
+}
+
+#pangeo h1 {
+  visibility: hidden;
+  margin-bottom: 0;
+}
+
+#pangeo img {
+  display: block;
+  margin: 0 auto;
+}
+
+.welcome h1 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.welcome h2 {
+  text-align: center;
+}
+
+h2 {
+  margin-top: 50px;
+}
+
+h3 {
+  margin-top: 30px;
+}
+
+#pangeo-packages img {
+  float: right;
+  margin: 5px;
+}
+
+
+#pangeo-packages h2, h3 {
+    clear: both;
+}
+
+/* things for the custom people table */
+.icon {
+  color: #003B71;
+}
+
+/* Data catalog */
+.data-catalog .list-inline {
+    margin-bottom: 0px;
+}
+.data-catalog pre {
+    margin-bottom: 0px;
+}
+
+/* cloud hubs stuff */
+.cloud h2 {
+    float: left !important;
+}
+
+.jhub {
+    background-color: #f7f5fa;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.jhub h3 {
+    margin-top: 0px;
+    padding-bottom: 10px;
+    border-bottom: 2px dotted #ddd;
+}
+
+.jhub a.btn-primary {
+    background-color: #00a3b0;
+    border-color: #00a3b0;
+    border-radius: 5px;
+    font-weight: bold;
+}

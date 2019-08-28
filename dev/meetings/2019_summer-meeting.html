@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>2019 Pangeo Community Meeting &#8212; Pangeo  documentation</title>
+    <link rel="stylesheet" href="../_static/pangeo-style.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/example_gallery_styles.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/example_gallery_styles_patched.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+    <script type="text/javascript" src="../_static/copybutton.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="2019 European Pangeo Community Meeting" href="2019_european-pangeo-meeting.html" />
+    <link rel="prev" title="Pangeo Conferences" href="index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+            <span><img src="../_static/small_e_reversed_24px.png"></span>
+          Pangeo</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="https://medium.com/pangeo">Blog</a></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../about.html">About Pangeo</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../about.html#motivation">Motivation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about.html#mission-statement">Mission Statement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about.html#goals">Goals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about.html#get-involved">Get Involved</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Guide for Scientists</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../quickstart.html#learn-about-pangeo-software">Learn About Pangeo Software</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quickstart.html#explore-the-use-cases">Explore the Use Cases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quickstart.html#try-out-a-pangeo-deployment">Try Out a Pangeo Deployment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quickstart.html#give-feedback">Give Feedback</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quickstart.html#contribute-a-use-case">Contribute a Use Case</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quickstart.html#contribute-data">Contribute Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quickstart.html#become-an-open-source-contributor">Become an Open Source Contributor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../packages.html">Packages</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../packages.html#pangeo-core-packages">Pangeo Core Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../packages.html#pangeo-affiliated-packages">Pangeo Affiliated Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../packages.html#guidelines-for-new-packages">Guidelines for New Packages</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../use_cases/index.html">Geoscience Use Cases</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../use_cases/physical-oceanography/index.html">Physical Oceanography</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../use_cases/climate-modeling/index.html">Climate modeling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../use_cases/meteorology/index.html">Meteorology</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../architecture.html">Technical Architecture</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../architecture.html#where-we-began">Where we began</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../architecture.html#interoperability-in-pangeo">Interoperability in Pangeo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../architecture.html#software">Software</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../architecture.html#compute-platforms">Compute Platforms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../architecture.html#storage-formats">Storage Formats</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../setup_guides/index.html">Deployment Setup Guides</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../setup_guides/index.html#setting-up-pangeo-on-hpc-systems">Setting up Pangeo on HPC Systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../setup_guides/index.html#setting-up-pangeo-on-cloud-systems">Setting up Pangeo on Cloud Systems</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../deployments.html">Deployments</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../deployments.html#pangeo-provided-cloud-deployments">Pangeo provided Cloud Deployments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../deployments.html#other-cloud-deployments">Other Cloud deployments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../deployments.html#high-performance-computing-deployments">High Performance Computing Deployments</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../data.html">Pangeo and Data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../data.html#data-on-hpc">Data on HPC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data.html#data-in-the-cloud">Data in the Cloud</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../catalog.html">Pangeo Data Catalog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../collaborators.html">Collaborators</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../collaborators.html#funding-agencies">Funding Agencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../collaborators.html#institutions">Institutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../collaborators.html#people">People</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../publications.html">Publications</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../publications.html#self-reported">Self-Reported</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../publications.html#reporting-form">Reporting Form</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../meeting-notes.html">Pangeo Weekly Meeting Notes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../meeting-notes.html#meeting-calendar">Meeting Calendar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../meeting-notes.html#id1">Meeting Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Pangeo Conferences</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#future-meetings">Future Meetings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#past-meetings">Past Meetings</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../contact.html">Contact Pangeo</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">2019 Pangeo Community Meeting</a><ul>
+<li><a class="reference internal" href="#meeting-details">Meeting Details</a></li>
+<li><a class="reference internal" href="#code-of-conduct">Code of Conduct</a></li>
+<li><a class="reference internal" href="#travel-and-lodging-details">Travel and Lodging Details</a></li>
+<li><a class="reference internal" href="#meeting-links">Meeting Links</a></li>
+<li><a class="reference internal" href="#agenda">Agenda</a></li>
+<li><a class="reference internal" href="#attendees">Attendees</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="index.html" title="Previous Chapter: Pangeo Conferences"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Pangeo Conferences</span>
+    </a>
+  </li>
+  <li>
+    <a href="2019_european-pangeo-meeting.html" title="Next Chapter: 2019 European Pangeo Community Meeting"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">2019 European... &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+          </ul>
+
+          
+            
+            
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li><a class="reference internal" href="#">2019 Pangeo Community Meeting</a><ul>
+<li><a class="reference internal" href="#meeting-details">Meeting Details</a></li>
+<li><a class="reference internal" href="#code-of-conduct">Code of Conduct</a></li>
+<li><a class="reference internal" href="#travel-and-lodging-details">Travel and Lodging Details</a></li>
+<li><a class="reference internal" href="#meeting-links">Meeting Links</a></li>
+<li><a class="reference internal" href="#agenda">Agenda</a></li>
+<li><a class="reference internal" href="#attendees">Attendees</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="widget navlinks">
+  <ul class="this-page-menu">
+    <li><a href="https://github.com/pangeo-data/pangeo/blob/master/docs/meetings/2019_summer-meeting.rst"
+            rel="nofollow"
+            target="_blank"><span class="fa-stack fa-md"><i class="fa fa-github fa-stack-1x"></i></span> Edit on GitHub</a></li>
+  </ul>
+</div>
+        </div>
+      </div>
+    <div class="col-md-9 content ">
+      
+  <div class="section" id="pangeo-community-meeting">
+<span id="summer-meeting"></span><h1>2019 Pangeo Community Meeting<a class="headerlink" href="#pangeo-community-meeting" title="Permalink to this headline">¶</a></h1>
+<p>The 2019 Pangeo Community Meeting will take place 21-23 August 2019 at the
+University of Washington in Seattle, WA.</p>
+<p>This year’s meeting will include a combination of plenary presentations,
+working group breakouts, and unstructured time for collaboration and hands on
+development.</p>
+<div class="section" id="meeting-details">
+<h2>Meeting Details<a class="headerlink" href="#meeting-details" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><strong>Dates</strong>: 21-23 August 2019</li>
+<li><strong>Location</strong>: <a class="reference external" href="https://www.washington.edu/maps/#!/ald">Alder Hall</a>, Room 107, University of Washington campus</li>
+<li><strong>Registration</strong>: Registration is now closed.</li>
+<li><dl class="first docutils">
+<dt><strong>Remote Participation</strong>: Plenary sessions will be live streamed via Zoom. Remote participation for the sprints is also encouraged and will be coordinated via <a class="reference external" href="https://github.com/pangeo-data/pangeo/issues">GitHub</a> and <a class="reference external" href="https://gitter.im/pangeo-data">Gitter</a> during the meeting.</dt>
+<dd><ul class="first last">
+<li>Day 1 live stream: Click <a class="reference external" href="https://washington.zoom.us/j/999388241">here</a> (new Zoom link)</li>
+<li>Day 2 live stream: Click <a class="reference external" href="https://washington.zoom.us/j/999388241">here</a> (new Zoom link)</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="code-of-conduct">
+<h2>Code of Conduct<a class="headerlink" href="#code-of-conduct" title="Permalink to this headline">¶</a></h2>
+<p>Pangeo values the safety and security of all of our members and, because of that,
+we will not tolerate any form of harassment or discrimination.
+All participants are expected to follow the
+<a class="reference external" href="https://github.com/pangeo-data/governance/blob/master/conduct/code_of_conduct.md">Pangeo code of conduct</a>.</p>
+</div>
+<div class="section" id="travel-and-lodging-details">
+<h2>Travel and Lodging Details<a class="headerlink" href="#travel-and-lodging-details" title="Permalink to this headline">¶</a></h2>
+<p>We’ll post more details soon but here are a few quick pointers if you’re eager
+to schedule travel.</p>
+<ul class="simple">
+<li><strong>Air Travel</strong>: If you are flying into Seattle, you will likely want to fly into
+<a class="reference external" href="https://www.portseattle.org/sea-tac">Sea-Tac International Airport</a>.</li>
+<li><strong>Ground Transportation</strong>: <a class="reference external" href="https://www.soundtransit.org/">Sound Transit’s Link Light Rail</a> runs every
+6, 10, or 15 minutes between Sea-Tac and the University of Washington.
+One-way tickets cost $3.25. You can also rent a car or do the ride share thing.</li>
+<li><strong>Parking</strong>: The closest gatehouse to Alder Hall is <a class="reference external" href="https://transportation.uw.edu/park/visitor">West Gatehouse, NE 40th Street</a></li>
+<li><dl class="first docutils">
+<dt><strong>Hotel</strong>: Here are a few hotel options:</dt>
+<dd><ul class="first last">
+<li><a class="reference external" href="https://www.marriott.com/hotels/travel/seaud-residence-inn-seattle-university-district/">Residence Inn by Marriott, University District</a></li>
+<li><a class="reference external" href="https://www.staypineapple.com/watertown-hotel-seattle-wa?utm_source=google-my-business&amp;amp;utm_medium=organic&amp;amp;utm_campaign=GMB&amp;amp;utm_term=wt">Watertown Hotel</a></li>
+<li><a class="reference external" href="https://www.silvercloud.com/university/">Silver Cloud Hotel, University District</a></li>
+<li><a class="reference external" href="https://www.staypineapple.com/university-inn-seattle-wa?utm_source=google-my-business&amp;amp;utm_medium=organic&amp;amp;utm_campaign=GMB&amp;amp;utm_term=ui">University Inn</a></li>
+<li><a class="reference external" href="https://www.graduatehotels.com/seattle">Graduate Seattle</a></li>
+<li><a class="reference external" href="http://www.travelodgeseattleuniversity.com/">Travelodge by Wyndham, Seattle University</a></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="meeting-links">
+<h2>Meeting Links<a class="headerlink" href="#meeting-links" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Sign up for Lightning Talks: [<a class="reference external" href="https://forms.gle/4ZbCbHGxe2sRNf9y7">link</a>]</li>
+<li>Sprint Proposals: [<a class="reference external" href="https://docs.google.com/presentation/d/1XHtpTYOAxnYs8IyNm3PxcU5nIQWWC-050e-8WPme0rg/edit?usp=sharing">link</a>]</li>
+<li>Summary blog post from the 2018 meeting at NCAR: [<a class="reference external" href="https://medium.com/pangeo/the-2018-pangeo-developers-workshop-1be359dac33c">link</a>]</li>
+</ul>
+</div>
+<div class="section" id="agenda">
+<h2>Agenda<a class="headerlink" href="#agenda" title="Permalink to this headline">¶</a></h2>
+<p>The meeting will start at 9 AM on August 21st and will wrap up around 4 PM on August 23rd.
+The final agenda is embedded below.</p>
+<iframe width="100%" height="800" src="https://docs.google.com/document/d/e/2PACX-1vQtNNhS0KUh9oZUOG_T2f8_b507q9AlEhGTGMzCrZ61lQa5MyXNeKso1Ba1QxKGqSbD-iM8cC9ScNmq/pub?embedded=true"></iframe></div>
+<div class="section" id="attendees">
+<h2>Attendees<a class="headerlink" href="#attendees" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>Shima Abadi, University of Washington</li>
+<li>Ryan Abernathey, Columbia University</li>
+<li>Mattia Almansi, Johns Hopkins University</li>
+<li>Anthony Arendt, University of Washington</li>
+<li>Philip Austin, University of British Columbia</li>
+<li>Shannon Axelrod, Chan Zuckerberg Initiative</li>
+<li>Norman Barker, TileDB</li>
+<li>Anderson Banihirwe, National Center for Atmospheric Research</li>
+<li>Aimee Barciauskas, Development Seed</li>
+<li>Will Barnes, Bay Area Environmental Research Institute / Lockheed Martin Solar and Astrophysics Laboratory</li>
+<li>Charles Becker, Boise State University</li>
+<li>Karan Bhatia, Google</li>
+<li>Sarah Bird, Mozilla</li>
+<li>Scott Black, Utah State University</li>
+<li>Charles Blackmon-Luca, Columbia University</li>
+<li>Noah Brenowitz, University of Washington</li>
+<li>Deepak Cherian, National Center for Atmospheric Research</li>
+<li>Shreyas Cholia, Lawrence Berkeley Laboratory</li>
+<li>Tim Crone, Columbia University</li>
+<li>Erin Dougherty, Colorado State University</li>
+<li>Rob Fatland, University of Washington</li>
+<li>Filipe Fernandes, National Oceanic and Atmospheric Administration / Integrated Ocean Observing System</li>
+<li>Chelle Gentemann, Earth and Space Research</li>
+<li>Joe Hamman, National Center for Atmospheric Research</li>
+<li>Matthew Hanson, Element 84</li>
+<li>Kirstie Haynie, United States Geological Survey</li>
+<li>Lindsey Heagy, University of California Berkeley</li>
+<li>Kate Hedstrom, University of Alaska Fairbanks</li>
+<li>Scott Henderson, University of Washington</li>
+<li>Chris Holdgraf, University of California Berkeley</li>
+<li>Stephan Hoyer, Google</li>
+<li>Spencer Jones, Lamont-Doherty Earth Observatory</li>
+<li>Kevin Jorissen, Amazon Web Services</li>
+<li>Julia Kent, National Center for Atmospheric Research</li>
+<li>Friedrich Knuth, University of Washington</li>
+<li>Luke Madaus, Jupiter</li>
+<li>Rodrigo Manzanas, Intergovernmental Panel on Climate Change</li>
+<li>Brian Mapes, University of Miami</li>
+<li>Elizabeth Maroon, National Center for Atmospheric Research</li>
+<li>Robin Matthews, Intergovernmental Panel on Climate Change</li>
+<li>Jacob Matuskey, Space Telescope Science Institute</li>
+<li>Jeremy McGibbon, University of Washington</li>
+<li>Thomas Moore, Commonwealth Scientific and Industrial Research Organisation</li>
+<li>James Munroe, Memorial University of Newfoundland</li>
+<li>Dan Nowacki, United States Geological Survey</li>
+<li>Yuvi Panda, Project Jupyter</li>
+<li>Kevin Paul, National Center for Atmospheric Research</li>
+<li>Walter Perkins, University of Washington</li>
+<li>Matthew Rocklin, NVIDIA</li>
+<li>Ariel Rokem, The University of Washington</li>
+<li>Mary Romelfanger, Space Telescope Science Institute</li>
+<li>Daniel Rothenberg, ClimaCell</li>
+<li>Jeffrey Sadler, US Geological Survey</li>
+<li>Hillary Scannell, University of Washington</li>
+<li>David Shean, University of Washington</li>
+<li>Julia Signell, Anaconda</li>
+<li>Nicholas Sofroniew, Chan Zuckerberg Initiative</li>
+<li>Dax Soule, CUNY - Queens College</li>
+<li>Dougie Squire, Commonwealth Scientific and Industrial Research Organisation</li>
+<li>Steven Stetzler, University of Washington</li>
+<li>Jason Suwala, Hatfield Consultants</li>
+<li>Amanda Tan, University of Washington</li>
+<li>Dan Wessels, Mesosphere</li>
+<li>Siyu Yang, Microsoft AI for Earth</li>
+<li>Jiawei Zhuang, Harvard University</li>
+</ol>
+</div>
+</div>
+
+
+      
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2018, Pangeo Team.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.<br/>
+    </p>
+  </div>
+</footer>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-120544092-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-120544092-1');
+</script>
+  </body>
+</html>

@@ -1,0 +1,3602 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Collaborators &#8212; Pangeo  documentation</title>
+    <link rel="stylesheet" href="_static/pangeo-style.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/example_gallery_styles.css" type="text/css" />
+    <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/example_gallery_styles_patched.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+    <script type="text/javascript" src="_static/copybutton.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Publications" href="publications.html" />
+    <link rel="prev" title="Pangeo Data Catalog" href="catalog.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+            <span><img src="_static/small_e_reversed_24px.png"></span>
+          Pangeo</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="https://medium.com/pangeo">Blog</a></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="about.html">About Pangeo</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="about.html#motivation">Motivation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="about.html#mission-statement">Mission Statement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="about.html#goals">Goals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="about.html#get-involved">Get Involved</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Guide for Scientists</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#learn-about-pangeo-software">Learn About Pangeo Software</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#explore-the-use-cases">Explore the Use Cases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#try-out-a-pangeo-deployment">Try Out a Pangeo Deployment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#give-feedback">Give Feedback</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#contribute-a-use-case">Contribute a Use Case</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#contribute-data">Contribute Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#become-an-open-source-contributor">Become an Open Source Contributor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="packages.html">Packages</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="packages.html#pangeo-core-packages">Pangeo Core Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="packages.html#pangeo-affiliated-packages">Pangeo Affiliated Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="packages.html#guidelines-for-new-packages">Guidelines for New Packages</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="use_cases/index.html">Geoscience Use Cases</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="use_cases/physical-oceanography/index.html">Physical Oceanography</a></li>
+<li class="toctree-l2"><a class="reference internal" href="use_cases/climate-modeling/index.html">Climate modeling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="use_cases/meteorology/index.html">Meteorology</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="architecture.html">Technical Architecture</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#where-we-began">Where we began</a></li>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#interoperability-in-pangeo">Interoperability in Pangeo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#software">Software</a></li>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#compute-platforms">Compute Platforms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#storage-formats">Storage Formats</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="setup_guides/index.html">Deployment Setup Guides</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="setup_guides/index.html#setting-up-pangeo-on-hpc-systems">Setting up Pangeo on HPC Systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="setup_guides/index.html#setting-up-pangeo-on-cloud-systems">Setting up Pangeo on Cloud Systems</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="deployments.html">Deployments</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="deployments.html#pangeo-provided-cloud-deployments">Pangeo provided Cloud Deployments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deployments.html#other-cloud-deployments">Other Cloud deployments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deployments.html#high-performance-computing-deployments">High Performance Computing Deployments</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="data.html">Pangeo and Data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="data.html#data-on-hpc">Data on HPC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html#data-in-the-cloud">Data in the Cloud</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="catalog.html">Pangeo Data Catalog</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Collaborators</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#funding-agencies">Funding Agencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#institutions">Institutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#people">People</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="publications.html">Publications</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="publications.html#self-reported">Self-Reported</a></li>
+<li class="toctree-l2"><a class="reference internal" href="publications.html#reporting-form">Reporting Form</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="meeting-notes.html">Pangeo Weekly Meeting Notes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="meeting-notes.html#meeting-calendar">Meeting Calendar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meeting-notes.html#id1">Meeting Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="meetings/index.html">Pangeo Conferences</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="meetings/index.html#future-meetings">Future Meetings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meetings/index.html#past-meetings">Past Meetings</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="contact.html">Contact Pangeo</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Collaborators</a><ul>
+<li><a class="reference internal" href="#funding-agencies">Funding Agencies</a><ul>
+<li><a class="reference internal" href="#earthcube">EarthCube</a></li>
+<li><a class="reference internal" href="#access">ACCESS</a></li>
+<li><a class="reference internal" href="#sloan-foundation">Sloan Foundation</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#institutions">Institutions</a><ul>
+<li><a class="reference internal" href="#lamont-doherty-earth-observatory">Lamont Doherty Earth Observatory</a></li>
+<li><a class="reference internal" href="#national-center-for-atmospheric-research">National Center for Atmospheric Research</a></li>
+<li><a class="reference internal" href="#anaconda-inc">Anaconda Inc.</a></li>
+<li><a class="reference internal" href="#uk-met-office">UK Met Office</a></li>
+<li><a class="reference internal" href="#the-university-of-washington">The University of Washington</a></li>
+<li><a class="reference internal" href="#element84">Element84</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#people">People</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="catalog.html" title="Previous Chapter: Pangeo Data Catalog"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Pangeo Data Catalog</span>
+    </a>
+  </li>
+  <li>
+    <a href="publications.html" title="Next Chapter: Publications"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Publications &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+          </ul>
+
+          
+            
+            
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li><a class="reference internal" href="#">Collaborators</a><ul>
+<li><a class="reference internal" href="#funding-agencies">Funding Agencies</a><ul>
+<li><a class="reference internal" href="#earthcube">EarthCube</a></li>
+<li><a class="reference internal" href="#access">ACCESS</a></li>
+<li><a class="reference internal" href="#sloan-foundation">Sloan Foundation</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#institutions">Institutions</a><ul>
+<li><a class="reference internal" href="#lamont-doherty-earth-observatory">Lamont Doherty Earth Observatory</a></li>
+<li><a class="reference internal" href="#national-center-for-atmospheric-research">National Center for Atmospheric Research</a></li>
+<li><a class="reference internal" href="#anaconda-inc">Anaconda Inc.</a></li>
+<li><a class="reference internal" href="#uk-met-office">UK Met Office</a></li>
+<li><a class="reference internal" href="#the-university-of-washington">The University of Washington</a></li>
+<li><a class="reference internal" href="#element84">Element84</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#people">People</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="widget navlinks">
+  <ul class="this-page-menu">
+    <li><a href="https://github.com/pangeo-data/pangeo/blob/master/docs/collaborators.rst"
+            rel="nofollow"
+            target="_blank"><span class="fa-stack fa-md"><i class="fa fa-github fa-stack-1x"></i></span> Edit on GitHub</a></li>
+  </ul>
+</div>
+        </div>
+      </div>
+    <div class="col-md-9 content ">
+      
+  <div class="section" id="collaborators">
+<span id="id1"></span><h1>Collaborators<a class="headerlink" href="#collaborators" title="Permalink to this headline">¶</a></h1>
+<p>A range of funding agencies, academic institutions, companies, and individuals
+contribute to Pangeo in different ways.</p>
+<div class="section" id="funding-agencies">
+<h2>Funding Agencies<a class="headerlink" href="#funding-agencies" title="Permalink to this headline">¶</a></h2>
+<p>We are grateful to have formal funding support from several funding agencies.</p>
+<div class="section" id="earthcube">
+<span id="id2"></span><h3>EarthCube<a class="headerlink" href="#earthcube" title="Permalink to this headline">¶</a></h3>
+<img alt="_images/logo_NSF_earthcube_combined.png" src="_images/logo_NSF_earthcube_combined.png" style="height: 150px;" />
+<p>Pangeo currently receives support from the US NSF <a class="reference external" href="https://earthcube.org/">EarthCube Program</a>, which
+funds cyberinfrastructure projects related to Earth Science. This award supports
+scientists and developers at Lamont Doherty Earth Observatory, National
+Center for Atmospheric Research, and Anaconda Inc.
+The public details of the awards can be found on the NSF website:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1740648&amp;HistoricalAwards=false">LDEO Award</a></li>
+<li><a class="reference external" href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1740633&amp;HistoricalAwards=false">NCAR Award</a></li>
+</ul>
+<p>Anaconda is funded via a subaward through Columbia.
+We were awarded $1.2M over a three year period (Oct. 2017 - Sept. 2020).</p>
+<p>The specific solicitation we responded to is
+<a class="reference external" href="https://www.nsf.gov/pubs/2016/nsf16514/nsf16514.htm">here</a>.
+Our project is technically called an “EarthCube integration.” This type of project requires a close link to “Geoscience Use Cases,” i.e. actual science applications.
+The need to closely intertwine the technical development and the scientific applications determined the structure of our proposal and the makeup of the team.</p>
+<p>The proposal Project Description, entitled
+<em>Pangeo: An Open Source Big Data Climate Science Platform</em>
+is published under a CC BY 4.0 license on Figshare:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://figshare.com/articles/Pangeo_NSF_Earthcube_Proposal/5361094">https://figshare.com/articles/Pangeo_NSF_Earthcube_Proposal/5361094</a></li>
+</ul>
+<p>You may share and adapt this document as you wish, but please acknowledge the authors.</p>
+</div>
+<div class="section" id="access">
+<span id="nasaaccess"></span><h3>ACCESS<a class="headerlink" href="#access" title="Permalink to this headline">¶</a></h3>
+<img alt="_images/logo_NASA.png" src="_images/logo_NASA.png" style="height: 150px;" />
+<p>Pangeo receives support from the NASA <a class="reference external" href="https://science.nasa.gov/earth-science/earth-science-data/open-solicitations-earth-science-data-systems/#access">ACCESS Program</a>, which funds
+projects that enhance, extend, and improve existing components of NASA’s
+distributed and heterogeneous data and information systems infrastructure. This
+award supports scientists and engineers at the University of Washington (UW), the
+National Center for Atmospheric Research (NCAR), Anaconda Inc., and Element 84.
+The public details of the awards will be published when NASA makes them available.
+In total, we were awarded $1.5M over a two year period (Sept. 2018 - Aug. 2020).</p>
+<p>The specific solicitation we responded to is <a class="reference external" href="https://nspires.nasaprs.com/external/solicitations/summary.do?method=init&amp;solId={7782DF97-B7AE-BDEC-A677-E96F281D39A3}&amp;path=closedPast">here</a>.</p>
+<p>The project’s focus will be on the development of new data discovery tools
+and processing of remote sensing datasets.</p>
+</div>
+<div class="section" id="sloan-foundation">
+<h3>Sloan Foundation<a class="headerlink" href="#sloan-foundation" title="Permalink to this headline">¶</a></h3>
+<img alt="_images/Sloan-Logo-primary-blac-web.png" src="_images/Sloan-Logo-primary-blac-web.png" style="height: 75px;" />
+<p>Early work on Pangeo was partly supported via the
+<a class="reference external" href="https://sloan.org/">Alfred P. Sloan foundation</a>, via a Sloan Research
+Fellowship in Ocean Sciences awarded to Ryan Abernathey in 2016.</p>
+</div>
+</div>
+<div class="section" id="institutions">
+<h2>Institutions<a class="headerlink" href="#institutions" title="Permalink to this headline">¶</a></h2>
+<p>These institutions devote significant resources to the Pangeo project.
+We are always looking to expand this list.</p>
+<div class="section" id="lamont-doherty-earth-observatory">
+<h3>Lamont Doherty Earth Observatory<a class="headerlink" href="#lamont-doherty-earth-observatory" title="Permalink to this headline">¶</a></h3>
+<a class="reference external image-reference" href="http://www.ldeo.columbia.edu/"><img alt="_images/ldeo-logo.png" src="_images/ldeo-logo.png" style="height: 75px;" /></a>
+<p>LDEO is a primary recipient of the <a class="reference internal" href="#earthcube"><span class="std std-ref">EarthCube</span></a> award. Several scientists
+and programmers at LDEO are active in the development of Pangeo architecture
+and scientific use cases.</p>
+</div>
+<div class="section" id="national-center-for-atmospheric-research">
+<h3>National Center for Atmospheric Research<a class="headerlink" href="#national-center-for-atmospheric-research" title="Permalink to this headline">¶</a></h3>
+<a class="reference external image-reference" href="https://ncar.ucar.edu/"><img alt="_images/ncar-logo.png" src="_images/ncar-logo.png" style="height: 75px;" /></a>
+<p><a class="reference external" href="https://ncar.ucar.edu/">NCAR</a> is a primary recipient of the <a class="reference internal" href="#earthcube"><span class="std std-ref">EarthCube</span></a>
+and <a class="reference internal" href="#nasaaccess"><span class="std std-ref">ACCESS</span></a> awards. NCAR scientists and programmers are leading the
+deployment of Pangeo on NCAR’s high-performance computing systems and conducting
+scientific investigations using Pangeo tools.</p>
+</div>
+<div class="section" id="anaconda-inc">
+<h3>Anaconda Inc.<a class="headerlink" href="#anaconda-inc" title="Permalink to this headline">¶</a></h3>
+<a class="reference external image-reference" href="https://anaconda.org/"><img alt="_images/anaconda-logo.png" src="_images/anaconda-logo.png" style="height: 75px;" /></a>
+<p><a class="reference external" href="https://anaconda.org/">Anaconda</a> (formerly Continuum Analytics) receives
+support from the <a class="reference internal" href="#earthcube"><span class="std std-ref">EarthCube</span></a> and <a class="reference internal" href="#nasaaccess"><span class="std std-ref">ACCESS</span></a> awards. Anaconda
+developers are contributing to the development of xarray, dask, and the Pangeo
+cloud infrastructure.</p>
+</div>
+<div class="section" id="uk-met-office">
+<h3>UK Met Office<a class="headerlink" href="#uk-met-office" title="Permalink to this headline">¶</a></h3>
+<a class="reference external image-reference" href="http://www.informaticslab.co.uk"><img alt="_images/metoffice-logo.png" src="_images/metoffice-logo.png" style="height: 75px;" /></a>
+<p>Developers at the <a class="reference external" href="http://www.informaticslab.co.uk">UK Met Office Informatics Lab</a>
+are contributing to the Pangeo cloud infrastructure.</p>
+</div>
+<div class="section" id="the-university-of-washington">
+<h3>The University of Washington<a class="headerlink" href="#the-university-of-washington" title="Permalink to this headline">¶</a></h3>
+<a class="reference external image-reference" href="https://www.washington.edu/"><img alt="_images/uw-logo.jpg" src="_images/uw-logo.jpg" style="height: 75px;" /></a>
+<p>UW is a primary recipient of the <a class="reference internal" href="#nasaaccess"><span class="std std-ref">ACCESS</span></a> award. Scientists and
+programmers at UW are active in the development of Pangeo cloud architecture
+and scientific applications.</p>
+</div>
+<div class="section" id="element84">
+<h3>Element84<a class="headerlink" href="#element84" title="Permalink to this headline">¶</a></h3>
+<a class="reference external image-reference" href="https://www.element84.com/"><img alt="_images/e84-logo.svg" height="50px" src="_images/e84-logo.svg" /></a>
+<p><a class="reference external" href="https://www.element84.com/">Element 84</a> is a primary recipient of the
+<a class="reference internal" href="#nasaaccess"><span class="std std-ref">ACCESS</span></a> award. Element84 developers are contributing to the development
+of data-discovery tools in the Pangeo ecosystem.</p>
+</div>
+</div>
+<div class="section" id="people">
+<h2>People<a class="headerlink" href="#people" title="Permalink to this headline">¶</a></h2>
+<p>These individuals identify themselves as contributors to Pangeo.
+Don’t hesitate to ADD YOURSELF to the list.</p>
+</div>
+</div>
+
+
+      
+          <table class="table table-striped small">
+
+
+
+  <tr>
+    <td>
+      <ul class="list-inline">
+        <li><strong>Ryan Abernathey</strong></li>
+        
+        <li>
+            <a class="icon" href="https://github.com/rabernat">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-github fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="https://twitter.com/rabernat">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-twitter fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="mailto:rpa@ldeo.columbia.edu">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-envelope fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="http://rabernat.github.io">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-external-link fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+      </ul>
+      <em>Lamont-Doherty Earth Observatory</em>
+    
+      <mark>physical oceanography</mark>
+    
+      <mark>climate</mark>
+    
+    </td>
+  </tr>
+  
+
+  <tr>
+    <td>
+      <ul class="list-inline">
+        <li><strong>Anthony Arendt</strong></li>
+        
+        <li>
+            <a class="icon" href="https://github.com/aaarendt">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-github fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="https://twitter.com/aaarendt">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-twitter fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="mailto:arendta@uw.edu">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-envelope fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="http://psc.apl.uw.edu/people/investigators/anthony-arendt/">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-external-link fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+      </ul>
+      <em>University of Washington</em>
+    
+      <mark>alpine hydrology</mark>
+    
+      <mark>geospatial mapping</mark>
+    
+      <mark>remote sensing</mark>
+    
+    </td>
+  </tr>
+  
+
+  <tr>
+    <td>
+      <ul class="list-inline">
+        <li><strong>Anderson Banihirwe</strong></li>
+        
+        <li>
+            <a class="icon" href="https://github.com/andersy005">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-github fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        
+        
+        <li>
+            <a class="icon" href="https://andersy005.github.io/">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-external-link fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+      </ul>
+      <em>National Center for Atmospheric Research</em>
+    
+      <mark>distributed computing</mark>
+    
+      <mark>climate</mark>
+    
+      <mark>software</mark>
+    
+    </td>
+  </tr>
+  
+
+  <tr>
+    <td>
+      <ul class="list-inline">
+        <li><strong>Ray Bell</strong></li>
+        
+        <li>
+            <a class="icon" href="https://github.com/raybellwaves">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-github fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="https://twitter.com/RayBell_UM">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-twitter fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="mailto:rbell@rsmas.miami.edu">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-envelope fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+      </ul>
+      <em>Univesrsity of Miami</em>
+    
+      <mark>ocean wave modelling</mark>
+    
+      <mark>subseasonal forecasting</mark>
+    
+    </td>
+  </tr>
+  
+
+  <tr>
+    <td>
+      <ul class="list-inline">
+        <li><strong>David Blodgett</strong></li>
+        
+        <li>
+            <a class="icon" href="https://github.com/dblodgett-usgs">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-github fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        
+        <li>
+            <a class="icon" href="mailto:dblodgett@usgs.gov">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-envelope fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+      </ul>
+      <em>U.S. Geological Survey</em>
+    
+      <mark>hydrology</mark>
+    
+      <mark>information modeling</mark>
+    
+      <mark>cyberinfrastructure</mark>
+    
+      <mark>geoinformatics</mark>
+    
+    </td>
+  </tr>
+  
+
+  <tr>
+    <td>
+      <ul class="list-inline">
+        <li><strong>Riley Brady</strong></li>
+        
+        <li>
+            <a class="icon" href="https://github.com/bradyrx">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-github fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="https://twitter.com/rileyxbrady">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-twitter fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="mailto:riley.brady@colorado.edu">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-envelope fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="https://www.rileyxbrady.com">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-external-link fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+      </ul>
+      <em>University of Colorado Boulder</em>
+    
+      <mark>ocean biogeochemistry</mark>
+    
+      <mark>climate</mark>
+    
+      <mark>visualization</mark>
+    
+      <mark>decadal prediction</mark>
+    
+    </td>
+  </tr>
+  
+
+  <tr>
+    <td>
+      <ul class="list-inline">
+        <li><strong>Paul Branson</strong></li>
+        
+        <li>
+            <a class="icon" href="https://github.com/pbranson">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-github fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="https://twitter.com/pablobranson">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-twitter fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="mailto:paul.branson@csiro.au">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-envelope fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+      </ul>
+      <em>CSIRO/University of Western Australia</em>
+    
+      <mark>physical oceanography</mark>
+    
+      <mark>coastal ocean modelling</mark>
+    
+      <mark>image analysis</mark>
+    
+      <mark>particle imaging velocimetry</mark>
+    
+    </td>
+  </tr>
+  
+
+  <tr>
+    <td>
+      <ul class="list-inline">
+        <li><strong>Noah Brenowitz</strong></li>
+        
+        <li>
+            <a class="icon" href="https://github.com/nbren12">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-github fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        
+        <li>
+            <a class="icon" href="mailto:nbren12@uw.edu">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-envelope fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="http://www.noahbrenowitz.com/">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-external-link fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+      </ul>
+      <em>University of Washington</em>
+    
+      <mark>atmospheric science</mark>
+    
+      <mark>machine learning</mark>
+    
+    </td>
+  </tr>
+  
+
+  <tr>
+    <td>
+      <ul class="list-inline">
+        <li><strong>John Burkhart</strong></li>
+        
+        <li>
+            <a class="icon" href="https://github.com/jfburkhart">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-github fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="https://twitter.com/jfburkhart">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-twitter fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="mailto:john.burkhart@geo.uio.no">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-envelope fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="https://folk.uio.no/~johnbur">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-external-link fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+      </ul>
+      <em>University of Oslo</em>
+    
+      <mark>climate</mark>
+    
+      <mark>snow hydrology</mark>
+    
+      <mark>energy transport</mark>
+    
+      <mark>cryosphere-aerosol</mark>
+    
+      <mark>remote sensing</mark>
+    
+    </td>
+  </tr>
+  
+
+  <tr>
+    <td>
+      <ul class="list-inline">
+        <li><strong>Yu Cheng</strong></li>
+        
+        <li>
+            <a class="icon" href="https://github.com/fischcheng">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-github fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        
+        <li>
+            <a class="icon" href="mailto:yucheng@rsmas.miami.edu">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-envelope fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="https://fischcheng.github.io">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-external-link fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+      </ul>
+      <em>University of Miami</em>
+    
+      <mark>climate</mark>
+    
+      <mark>modeling</mark>
+    
+      <mark>physical oceanography</mark>
+    
+    </td>
+  </tr>
+  
+
+  <tr>
+    <td>
+      <ul class="list-inline">
+        <li><strong>Spencer Clark</strong></li>
+        
+        <li>
+            <a class="icon" href="https://github.com/spencerkclark">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-github fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        
+        <li>
+            <a class="icon" href="mailto:skclark@princeton.edu">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-envelope fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="http://www.princeton.edu/~skclark">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-external-link fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+      </ul>
+      <em>Princeton University</em>
+    
+      <mark>atmospheric science</mark>
+    
+      <mark>climate</mark>
+    
+    </td>
+  </tr>
+  
+
+  <tr>
+    <td>
+      <ul class="list-inline">
+        <li><strong>Tom Connolly</strong></li>
+        
+        <li>
+            <a class="icon" href="https://github.com/tompc35">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-github fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="https://twitter.com/tompc35">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-twitter fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="mailto:tconnolly@mlml.calstate.edu">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-envelope fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="https://www.mlml.calstate.edu/physoce/people/tconnolly/">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-external-link fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+      </ul>
+      <em>Moss Landing Marine Labs</em>
+    
+      <mark>physical oceanography</mark>
+    
+      <mark>coasts and estuaries</mark>
+    
+      <mark>observations</mark>
+    
+      <mark>numerical modeling</mark>
+    
+      <mark>teaching</mark>
+    
+    </td>
+  </tr>
+  
+
+  <tr>
+    <td>
+      <ul class="list-inline">
+        <li><strong>Tim Crone</strong></li>
+        
+        <li>
+            <a class="icon" href="https://github.com/tjcrone">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-github fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        
+        <li>
+            <a class="icon" href="mailto:tjcrone@gmail.com">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-envelope fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="http://www.fluidcontinuity.org/">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-external-link fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+      </ul>
+      <em>Lamont-Doherty Earth Observatory</em>
+    
+      <mark>marine geophysics</mark>
+    
+      <mark>image analysis</mark>
+    
+      <mark>seafloor instrumentation</mark>
+    
+    </td>
+  </tr>
+  
+
+  <tr>
+    <td>
+      <ul class="list-inline">
+        <li><strong>Philippe Delandmeter</strong></li>
+        
+        <li>
+            <a class="icon" href="https://github.com/delandmeterp">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-github fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        
+        <li>
+            <a class="icon" href="mailto:p.b.delandmeter@uu.nl">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-envelope fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="https://www.uu.nl/staff/PBDelandmeter">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-external-link fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+      </ul>
+      <em>Institute for Marine and Atmospheric research Utrecht, Utrecht University, Netherlands</em>
+    
+      <mark>ocean numerical modelling</mark>
+    
+      <mark>Lagrangian modelling</mark>
+    
+      <mark>particle tracking</mark>
+    
+      <mark>finite element methods</mark>
+    
+    </td>
+  </tr>
+  
+
+  <tr>
+    <td>
+      <ul class="list-inline">
+        <li><strong>Leif Denby</strong></li>
+        
+        <li>
+            <a class="icon" href="https://github.com/leifdenby">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-github fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        
+        <li>
+            <a class="icon" href="mailto:leif@denby.eu">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-envelope fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+      </ul>
+      <em>ICAS, University of Leeds</em>
+    
+      <mark>numerical modelling</mark>
+    
+      <mark>atmospheric dynamics</mark>
+    
+      <mark>cloud computing</mark>
+    
+    </td>
+  </tr>
+  
+
+  <tr>
+    <td>
+      <ul class="list-inline">
+        <li><strong>Ed Doddridge</strong></li>
+        
+        <li>
+            <a class="icon" href="https://github.com/edoddridge">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-github fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="https://twitter.com/edoddridge">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-twitter fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="mailto:ewd@mit.edu">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-envelope fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="https://doddridge.me">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-external-link fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+      </ul>
+      <em>Massachusetts Institute of Technology</em>
+    
+      <mark>physical oceanography</mark>
+    
+    </td>
+  </tr>
+  
+
+  <tr>
+    <td>
+      <ul class="list-inline">
+        <li><strong>Guillaume Eynard-Bontemps</strong></li>
+        
+        <li>
+            <a class="icon" href="https://github.com/guillaumeeb">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-github fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        
+        <li>
+            <a class="icon" href="mailto:guillaume.eynard-bontemps@cnes.fr">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-envelope fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+      </ul>
+      <em>CNES, French space agency</em>
+    
+      <mark>distributed computing</mark>
+    
+      <mark>data engineering and analysis</mark>
+    
+      <mark>HPC</mark>
+    
+      <mark>cloud computing</mark>
+    
+      <mark>infrastructure</mark>
+    
+      <mark>IT architecture</mark>
+    
+    </td>
+  </tr>
+  
+
+  <tr>
+    <td>
+      <ul class="list-inline">
+        <li><strong>Rob Fatland</strong></li>
+        
+        <li>
+            <a class="icon" href="https://github.com/robfatland">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-github fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        
+        <li>
+            <a class="icon" href="mailto:rob5@uw.edu">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-envelope fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="http://cloudraven.org">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-external-link fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+      </ul>
+      <em>University of Washington</em>
+    
+      <mark>remote sensing</mark>
+    
+      <mark>sensor networks</mark>
+    
+      <mark>data visualization</mark>
+    
+      <mark>cloud computing</mark>
+    
+      <mark>embedded hardware</mark>
+    
+      <mark>education and public outreach</mark>
+    
+    </td>
+  </tr>
+  
+
+  <tr>
+    <td>
+      <ul class="list-inline">
+        <li><strong>Ethan Gutmann</strong></li>
+        
+        <li>
+            <a class="icon" href="https://github.com/gutmann">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-github fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="https://twitter.com/egutmann">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-twitter fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="mailto:gutmann@ucar.edu">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-envelope fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="http://ethangutmann.com">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-external-link fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+      </ul>
+      <em>National Center for Atmospheric Research</em>
+    
+      <mark>climate</mark>
+    
+      <mark>hydrology</mark>
+    
+      <mark>water resources</mark>
+    
+      <mark>distributed computing</mark>
+    
+    </td>
+  </tr>
+  
+
+  <tr>
+    <td>
+      <ul class="list-inline">
+        <li><strong>Joe Hamman</strong></li>
+        
+        <li>
+            <a class="icon" href="https://github.com/jhamman">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-github fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="https://twitter.com/HammanHydro">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-twitter fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="mailto:jhamman@ucar.edu">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-envelope fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="http://joehamman.com">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-external-link fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+      </ul>
+      <em>National Center for Atmospheric Research</em>
+    
+      <mark>climate</mark>
+    
+      <mark>hydrology</mark>
+    
+      <mark>water resources</mark>
+    
+    </td>
+  </tr>
+  
+
+  <tr>
+    <td>
+      <ul class="list-inline">
+        <li><strong>Aidan Heerdegen</strong></li>
+        
+        <li>
+            <a class="icon" href="https://github.com/aidanheerdegen">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-github fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        
+        <li>
+            <a class="icon" href="mailto:aidan.heerdegen@anu.edu.au">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-envelope fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="https://climateextremes.org.au">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-external-link fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+      </ul>
+      <em>Australian National University/Centre of Excellence for Climate Extremes</em>
+    
+      <mark>HPC</mark>
+    
+      <mark>ocean modelling</mark>
+    
+    </td>
+  </tr>
+  
+
+  <tr>
+    <td>
+      <ul class="list-inline">
+        <li><strong>Scott Henderson</strong></li>
+        
+        <li>
+            <a class="icon" href="https://github.com/scottyhq">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-github fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="https://twitter.com/scottyhq">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-twitter fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="mailto:scottyh@uw.edu">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-envelope fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="http://escience.washington.edu/people/scott-henderson/">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-external-link fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+      </ul>
+      <em>University of Washington</em>
+    
+      <mark>remote sensing</mark>
+    
+      <mark>active tectonics</mark>
+    
+      <mark>geodesy</mark>
+    
+    </td>
+  </tr>
+  
+
+  <tr>
+    <td>
+      <ul class="list-inline">
+        <li><strong>Naomi Henderson</strong></li>
+        
+        <li>
+            <a class="icon" href="https://github.com/naomi-henderson">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-github fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="https://twitter.com/noni">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-twitter fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="mailto:nhn2@columbia.edu">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-envelope fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+      </ul>
+      <em>Lamont-Doherty Earth Observatory</em>
+    
+      <mark>atmospheric modeling</mark>
+    
+      <mark>research computing</mark>
+    
+    </td>
+  </tr>
+  
+
+  <tr>
+    <td>
+      <ul class="list-inline">
+        <li><strong>Robert Hetland</strong></li>
+        
+        <li>
+            <a class="icon" href="https://github.com/hetland">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-github fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="https://twitter.com/hetland">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-twitter fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="mailto:hetland@tamu.edu">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-envelope fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="http://pong.tamu.edu">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-external-link fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+      </ul>
+      <em>Texas A&M University</em>
+    
+      <mark>physical oceanography</mark>
+    
+      <mark>coastal ocean modeling</mark>
+    
+    </td>
+  </tr>
+  
+
+  <tr>
+    <td>
+      <ul class="list-inline">
+        <li><strong>Spencer Hill</strong></li>
+        
+        <li>
+            <a class="icon" href="https://github.com/spencerahill">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-github fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="https://twitter.com/spencerahill">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-twitter fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="mailto:shill@atmos.ucla.edu">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-envelope fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="http://people.atmos.ucla.edu/shill/">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-external-link fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+      </ul>
+      <em>UCLA Dept. of Atmospheric & Oceanic Sciences, and Caltech Division of Geological & Planetary Sciences</em>
+    
+      <mark>atmospheric dynamics</mark>
+    
+      <mark>climate</mark>
+    
+    </td>
+  </tr>
+  
+
+  <tr>
+    <td>
+      <ul class="list-inline">
+        <li><strong>Chris Hill</strong></li>
+        
+        <li>
+            <a class="icon" href="https://github.com/christophernhill">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-github fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        
+        <li>
+            <a class="icon" href="mailto:cnh@mit.edu">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-envelope fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+      </ul>
+      <em>Massachusetts Institute of Technology</em>
+    
+      <mark>ocean modeling</mark>
+    
+      <mark>hpc</mark>
+    
+      <mark>research computing</mark>
+    
+      <mark>cyberinfrastructure</mark>
+    
+    </td>
+  </tr>
+  
+
+  <tr>
+    <td>
+      <ul class="list-inline">
+        <li><strong>Stephan Hoyer</strong></li>
+        
+        <li>
+            <a class="icon" href="https://github.com/shoyer">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-github fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="https://twitter.com/shoyer">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-twitter fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="mailto:shoyer@gmail.com">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-envelope fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="http://stephanhoyer.com">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-external-link fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+      </ul>
+      <em></em>
+    
+      <mark>software</mark>
+    
+      <mark>algorithms</mark>
+    
+    </td>
+  </tr>
+  
+
+  <tr>
+    <td>
+      <ul class="list-inline">
+        <li><strong>Damien Irving</strong></li>
+        
+        <li>
+            <a class="icon" href="https://github.com/damienirving">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-github fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        
+        <li>
+            <a class="icon" href="mailto:irving.damien@gmail.com">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-envelope fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="https://drclimate.wordpress.com/">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-external-link fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+      </ul>
+      <em>CSIRO</em>
+    
+      <mark>physical oceanography</mark>
+    
+      <mark>climate</mark>
+    
+      <mark>software carpentry</mark>
+    
+    </td>
+  </tr>
+  
+
+  <tr>
+    <td>
+      <ul class="list-inline">
+        <li><strong>Savio Kay</strong></li>
+        
+        <li>
+            <a class="icon" href="https://github.com/saviokay">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-github fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        
+        <li>
+            <a class="icon" href="mailto:saviosebastian08@gmail.com">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-envelope fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="https://saviokay.com">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-external-link fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+      </ul>
+      <em>University of Maryland - Baltimore County</em>
+    
+      <mark>climate</mark>
+    
+      <mark>distributed computing</mark>
+    
+      <mark>water resources</mark>
+    
+      <mark>cloud computing</mark>
+    
+    </td>
+  </tr>
+  
+
+  <tr>
+    <td>
+      <ul class="list-inline">
+        <li><strong>Julia Kent</strong></li>
+        
+        <li>
+            <a class="icon" href="https://github.com/jukent">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-github fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        
+        <li>
+            <a class="icon" href="mailto:jkent@ucar.edu">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-envelope fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="https://staff.ucar.edu/users/jkent">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-external-link fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+      </ul>
+      <em>National Center for Atmospheric Research</em>
+    
+      <mark>climate</mark>
+    
+      <mark>distributed computing</mark>
+    
+      <mark>algorithms</mark>
+    
+      <mark>remote sensing</mark>
+    
+    </td>
+  </tr>
+  
+
+  <tr>
+    <td>
+      <ul class="list-inline">
+        <li><strong>Ben Koziol</strong></li>
+        
+        <li>
+            <a class="icon" href="https://github.com/bekozi">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-github fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        
+        <li>
+            <a class="icon" href="mailto:ben.koziol@noaa.gov">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-envelope fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="https://www.esrl.noaa.gov/gsd/nesii/about/staff/ben.html">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-external-link fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+      </ul>
+      <em>University of Colorado-Boulder / NOAA Global Systems Division</em>
+    
+      <mark>HPC</mark>
+    
+      <mark>climate</mark>
+    
+      <mark>software</mark>
+    
+      <mark>GIS</mark>
+    
+    </td>
+  </tr>
+  
+
+  <tr>
+    <td>
+      <ul class="list-inline">
+        <li><strong>Bryan Lawrence</strong></li>
+        
+        <li>
+            <a class="icon" href="https://github.com/bnlawrence">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-github fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="https://twitter.com/bnlawrence">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-twitter fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="mailto:bryan.lawrence@ncas.ac.uk">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-envelope fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="https://www.bnlawrence.net">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-external-link fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+      </ul>
+      <em>NCAS, University of Reading</em>
+    
+      <mark>climate simulation</mark>
+    
+      <mark>hpc</mark>
+    
+      <mark>data infrastructure</mark>
+    
+      <mark>cloud computing</mark>
+    
+    </td>
+  </tr>
+  
+
+  <tr>
+    <td>
+      <ul class="list-inline">
+        <li><strong>Julien Le Sommer</strong></li>
+        
+        <li>
+            <a class="icon" href="https://github.com/lesommer">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-github fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        
+        <li>
+            <a class="icon" href="mailto:julien.lesommer@univ-grenoble-alpes.fr">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-envelope fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="http://lesommer.github.io/">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-external-link fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+      </ul>
+      <em>Institut des Géosciences de l’Environnement</em>
+    
+      <mark>physical oceanography</mark>
+    
+      <mark>ocean models</mark>
+    
+      <mark>climate</mark>
+    
+    </td>
+  </tr>
+  
+
+  <tr>
+    <td>
+      <ul class="list-inline">
+        <li><strong>Chiara Lepore</strong></li>
+        
+        <li>
+            <a class="icon" href="https://github.com/chiaral">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-github fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="https://twitter.com/lapiccolaflo">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-twitter fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        
+        <li>
+            <a class="icon" href="http://www.ldeo.columbia.edu/~clepore/">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-external-link fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+      </ul>
+      <em>Lamont-Doherty Earth Observatory</em>
+    
+      <mark>hydrology</mark>
+    
+    </td>
+  </tr>
+  
+
+  <tr>
+    <td>
+      <ul class="list-inline">
+        <li><strong>Redouane Lguensat</strong></li>
+        
+        <li>
+            <a class="icon" href="https://github.com/redouanelg">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-github fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="https://twitter.com/redouanelg">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-twitter fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="mailto:redouane.lguensat@univ-grenoble-alpes.fr">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-envelope fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="http://redouanelg.github.io">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-external-link fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+      </ul>
+      <em>Institut des Géosciences de l’Environnement</em>
+    
+      <mark>machine learning</mark>
+    
+      <mark>computer vision</mark>
+    
+    </td>
+  </tr>
+  
+
+  <tr>
+    <td>
+      <ul class="list-inline">
+        <li><strong>Fabien Maussion</strong></li>
+        
+        <li>
+            <a class="icon" href="https://github.com/fmaussion">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-github fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        
+        <li>
+            <a class="icon" href="mailto:fabien.maussion@uibk.ac.at">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-envelope fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="http://fabienmaussion.info/">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-external-link fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+      </ul>
+      <em>University of Innsbruck</em>
+    
+      <mark>climate</mark>
+    
+      <mark>glaciology</mark>
+    
+    </td>
+  </tr>
+  
+
+  <tr>
+    <td>
+      <ul class="list-inline">
+        <li><strong>Ryan May</strong></li>
+        
+        <li>
+            <a class="icon" href="https://github.com/dopplershift">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-github fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="https://twitter.com/dopplershift">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-twitter fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="mailto:rmay@ucar.edu">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-envelope fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="http://www.unidata.ucar.edu">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-external-link fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+      </ul>
+      <em>University Corporation for Atmospheric Research/Unidata</em>
+    
+      <mark>atmospheric science</mark>
+    
+      <mark>remote sensing</mark>
+    
+      <mark>algorithms</mark>
+    
+    </td>
+  </tr>
+  
+
+  <tr>
+    <td>
+      <ul class="list-inline">
+        <li><strong>Jeremy McGibbon</strong></li>
+        
+        <li>
+            <a class="icon" href="https://github.com/mcgibbon">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-github fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="https://twitter.com/jeremy_mcgibbon">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-twitter fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="mailto:mcgibbon@uw.edu">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-envelope fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="http://www.jeremymcgibbon.com/">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-external-link fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+      </ul>
+      <em>University of Washington Department of Atmospheric Sciences</em>
+    
+      <mark>atmospheric science</mark>
+    
+      <mark>climate</mark>
+    
+    </td>
+  </tr>
+  
+
+  <tr>
+    <td>
+      <ul class="list-inline">
+        <li><strong>Joy Monteiro</strong></li>
+        
+        <li>
+            <a class="icon" href="https://github.com/JoyMonteiro">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-github fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        
+        <li>
+            <a class="icon" href="mailto:joy.monteiro@misu.su.se">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-envelope fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+      </ul>
+      <em>Stockholm University</em>
+    
+      <mark>climate</mark>
+    
+      <mark>atmospheric science</mark>
+    
+      <mark>modeling</mark>
+    
+    </td>
+  </tr>
+  
+
+  <tr>
+    <td>
+      <ul class="list-inline">
+        <li><strong>Thomas Moore</strong></li>
+        
+        <li>
+            <a class="icon" href="https://github.com/Thomas-Moore-Creative">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-github fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        
+        <li>
+            <a class="icon" href="mailto:thomas.moore@csiro.au">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-envelope fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="https://research.csiro.au/dfp/">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-external-link fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+      </ul>
+      <em>CSIRO</em>
+    
+      <mark>physical oceanography</mark>
+    
+    </td>
+  </tr>
+  
+
+  <tr>
+    <td>
+      <ul class="list-inline">
+        <li><strong>James Munroe</strong></li>
+        
+        <li>
+            <a class="icon" href="https://github.com/jmunroe">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-github fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="https://twitter.com/JamesMunroeNL">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-twitter fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="mailto:jmunroe@mun.ca">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-envelope fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="http://www.physics.mun.ca/~jmunroe/">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-external-link fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+      </ul>
+      <em>Memorial University of Newfoundland</em>
+    
+      <mark>physical oceanography</mark>
+    
+    </td>
+  </tr>
+  
+
+  <tr>
+    <td>
+      <ul class="list-inline">
+        <li><strong>Bart Nijssen</strong></li>
+        
+        <li>
+            <a class="icon" href="https://github.com/bartnijssen">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-github fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        
+        <li>
+            <a class="icon" href="mailto:nijssen@uw.edu">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-envelope fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="http://www.hydro.washington.edu">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-external-link fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+      </ul>
+      <em>University of Washington</em>
+    
+      <mark>climate</mark>
+    
+      <mark>hydrology</mark>
+    
+      <mark>water resources</mark>
+    
+    </td>
+  </tr>
+  
+
+  <tr>
+    <td>
+      <ul class="list-inline">
+        <li><strong>Kai Pak</strong></li>
+        
+        <li>
+            <a class="icon" href="https://github.com/kaipak">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-github fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        
+        <li>
+            <a class="icon" href="mailto:kai.pak@columbia.edu">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-envelope fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="https://kaipak.github.io">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-external-link fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+      </ul>
+      <em>Columbia University</em>
+    
+      <mark>physical oceanography</mark>
+    
+      <mark>climate</mark>
+    
+    </td>
+  </tr>
+  
+
+  <tr>
+    <td>
+      <ul class="list-inline">
+        <li><strong>Kevin Paul</strong></li>
+        
+        <li>
+            <a class="icon" href="https://github.com/KMPaul">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-github fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        
+        <li>
+            <a class="icon" href="mailto:kpaul@ucar.edu">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-envelope fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="https://staff.ucar.edu/users/kpaul">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-external-link fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+      </ul>
+      <em>National Center for Atmospheric Research</em>
+    
+      <mark>climate</mark>
+    
+      <mark>distributed computing</mark>
+    
+      <mark>algorithms</mark>
+    
+    </td>
+  </tr>
+  
+
+  <tr>
+    <td>
+      <ul class="list-inline">
+        <li><strong>Rachel Prudden</strong></li>
+        
+        <li>
+            <a class="icon" href="https://github.com/RPrudden">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-github fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="https://twitter.com/RachelPrudden">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-twitter fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="mailto:rachel.prudden@informaticslab.co.uk">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-envelope fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="http://informaticslab.co.uk/profiles/rachel-prudden.html">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-external-link fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+      </ul>
+      <em>Met Office Informatics Lab</em>
+    
+      <mark>atmospheric science</mark>
+    
+      <mark>distributed computing</mark>
+    
+      <mark>algorithms</mark>
+    
+    </td>
+  </tr>
+  
+
+  <tr>
+    <td>
+      <ul class="list-inline">
+        <li><strong>Willi Rath</strong></li>
+        
+        <li>
+            <a class="icon" href="https://github.com/willirath">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-github fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        
+        <li>
+            <a class="icon" href="mailto:wrath@geomar.de">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-envelope fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="https://www.geomar.de/en/staff/fb1/tm/wrath/">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-external-link fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+      </ul>
+      <em>GEOMAR Helmholtz Centre for Ocean Research Kiel</em>
+    
+      <mark>physical oceanography</mark>
+    
+      <mark>distributed computing</mark>
+    
+      <mark>ocean-data management</mark>
+    
+      <mark>HPC</mark>
+    
+    </td>
+  </tr>
+  
+
+  <tr>
+    <td>
+      <ul class="list-inline">
+        <li><strong>Colin Raymond</strong></li>
+        
+        <li>
+            <a class="icon" href="https://github.com/cr2630git">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-github fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        
+        <li>
+            <a class="icon" href="mailto:cr2630@columbia.edu">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-envelope fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="http://www.ldeo.columbia.edu/user/raymondc">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-external-link fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+      </ul>
+      <em>Columbia University</em>
+    
+      <mark>climate</mark>
+    
+      <mark>atmospheric science</mark>
+    
+      <mark>modeling</mark>
+    
+    </td>
+  </tr>
+  
+
+  <tr>
+    <td>
+      <ul class="list-inline">
+        <li><strong>Niall Robinson</strong></li>
+        
+        <li>
+            <a class="icon" href="https://github.com/niallrobinson">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-github fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="https://twitter.com/niallhrobinson">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-twitter fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="mailto:niall.robinson@informaticslab.co.uk">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-envelope fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="http://informaticslab.co.uk/profiles/niall-robinson">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-external-link fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+      </ul>
+      <em>Met Office Informatics Lab</em>
+    
+      <mark>atmospheric science</mark>
+    
+      <mark>distributed computing</mark>
+    
+      <mark>cloud computing</mark>
+    
+      <mark>HPC</mark>
+    
+    </td>
+  </tr>
+  
+
+  <tr>
+    <td>
+      <ul class="list-inline">
+        <li><strong>Matthew Rocklin</strong></li>
+        
+        <li>
+            <a class="icon" href="https://github.com/mrocklin">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-github fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="https://twitter.com/mrocklin">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-twitter fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        
+        <li>
+            <a class="icon" href="http://www.matthewrocklin.com/">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-external-link fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+      </ul>
+      <em>Anaconda Inc</em>
+    
+      <mark>distributed computing</mark>
+    
+      <mark>algorithms</mark>
+    
+    </td>
+  </tr>
+  
+
+  <tr>
+    <td>
+      <ul class="list-inline">
+        <li><strong>Brian Rose</strong></li>
+        
+        <li>
+            <a class="icon" href="https://github.com/brian-rose">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-github fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="https://twitter.com/BrianEJRose">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-twitter fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="mailto:brose@albany.edu">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-envelope fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="http://www.atmos.albany.edu/facstaff/brose/index.html">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-external-link fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+      </ul>
+      <em>University at Albany</em>
+    
+      <mark>climate</mark>
+    
+      <mark>atmospheric science</mark>
+    
+      <mark>physical oceanography</mark>
+    
+      <mark>modeling</mark>
+    
+    </td>
+  </tr>
+  
+
+  <tr>
+    <td>
+      <ul class="list-inline">
+        <li><strong>Daniel Rothenberg</strong></li>
+        
+        <li>
+            <a class="icon" href="https://github.com/darothen">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-github fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="https://twitter.com/danrothenberg">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-twitter fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="mailto:darothen@mit.edu">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-envelope fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="http://www.danielrothenberg.com">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-external-link fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+      </ul>
+      <em>Massachusetts Institute of Technology</em>
+    
+      <mark>climate</mark>
+    
+      <mark>meteorology</mark>
+    
+      <mark>policy</mark>
+    
+    </td>
+  </tr>
+  
+
+  <tr>
+    <td>
+      <ul class="list-inline">
+        <li><strong>Stanislav Seltser</strong></li>
+        
+        <li>
+            <a class="icon" href="https://github.com/petacube">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-github fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="https://twitter.com/borshik45">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-twitter fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="mailto:stanislav.seltser@petacube.com">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-envelope fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="http://www.petacube.com">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-external-link fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+      </ul>
+      <em></em>
+    
+      <mark>array storage engines</mark>
+    
+      <mark>scientific computing infrastructure</mark>
+    
+    </td>
+  </tr>
+  
+
+  <tr>
+    <td>
+      <ul class="list-inline">
+        <li><strong>Rich Signell</strong></li>
+        
+        <li>
+            <a class="icon" href="https://github.com/rsignell-usgs">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-github fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="https://twitter.com/rsignell">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-twitter fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="mailto:rsignell@usgs.gov">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-envelope fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="http://about.me/Rich.Signell">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-external-link fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+      </ul>
+      <em>USGS</em>
+    
+      <mark>physical oceanography</mark>
+    
+      <mark>coastal ocean modeling</mark>
+    
+      <mark>geoinformatics</mark>
+    
+    </td>
+  </tr>
+  
+
+  <tr>
+    <td>
+      <ul class="list-inline">
+        <li><strong>Maike Sonnewald</strong></li>
+        
+        <li>
+            <a class="icon" href="https://github.com/maikejulie">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-github fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        
+        <li>
+            <a class="icon" href="mailto:maike_sg@mit.edu">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-envelope fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="https://maikejulie.github.io">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-external-link fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+      </ul>
+      <em>Massachusetts Insitute of Technology</em>
+    
+      <mark>statistics</mark>
+    
+      <mark>modeling/HPC</mark>
+    
+      <mark>physical oceanography</mark>
+    
+    </td>
+  </tr>
+  
+
+  <tr>
+    <td>
+      <ul class="list-inline">
+        <li><strong>Dougie Squire</strong></li>
+        
+        <li>
+            <a class="icon" href="https://github.com/dougiesquire">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-github fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        
+        <li>
+            <a class="icon" href="mailto:dougie.squire@csiro.au">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-envelope fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="https://research.csiro.au/dfp/">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-external-link fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+      </ul>
+      <em>CSIRO</em>
+    
+      <mark>climate</mark>
+    
+      <mark>atmospheric science</mark>
+    
+    </td>
+  </tr>
+  
+
+  <tr>
+    <td>
+      <ul class="list-inline">
+        <li><strong>Guillaume Sérazin</strong></li>
+        
+        <li>
+            <a class="icon" href="https://github.com/serazing">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-github fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        
+        <li>
+            <a class="icon" href="mailto:guillaume.serazin@legos.obs-mip.fr">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-envelope fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="https://github.com/serazing/serazing.github.io">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-external-link fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+      </ul>
+      <em>Laboratoire d'Étude en Géophysique et Océanographie Spatiale</em>
+    
+      <mark>physical oceanography</mark>
+    
+      <mark>climate</mark>
+    
+    </td>
+  </tr>
+  
+
+  <tr>
+    <td>
+      <ul class="list-inline">
+        <li><strong>Amanda Tan</strong></li>
+        
+        <li>
+            <a class="icon" href="https://github.com/amanda-tan">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-github fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        
+        <li>
+            <a class="icon" href="mailto:amandach@uw.edu">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-envelope fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="https://escience.washington.edu/people/amanda-tan/">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-external-link fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+      </ul>
+      <em>University of Washington</em>
+    
+      <mark>cloud computing</mark>
+    
+      <mark>containers</mark>
+    
+      <mark>water resources</mark>
+    
+    </td>
+  </tr>
+  
+
+  <tr>
+    <td>
+      <ul class="list-inline">
+        <li><strong>Jacob Tomlinson</strong></li>
+        
+        <li>
+            <a class="icon" href="https://github.com/jacobtomlinson">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-github fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="https://twitter.com/_jacobtomlinson">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-twitter fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="mailto:jacob.tomlinson@informaticslab.co.uk">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-envelope fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="http://informaticslab.co.uk/profiles/jacob-tomlinson">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-external-link fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+      </ul>
+      <em>Met Office Informatics Lab</em>
+    
+      <mark>atmospheric science</mark>
+    
+      <mark>distributed computing</mark>
+    
+      <mark>kubernetes</mark>
+    
+      <mark>docker</mark>
+    
+      <mark>cloud computing</mark>
+    
+      <mark>infrastructure</mark>
+    
+      <mark>IT architecture</mark>
+    
+    </td>
+  </tr>
+  
+
+  <tr>
+    <td>
+      <ul class="list-inline">
+        <li><strong>Erik van Sebille</strong></li>
+        
+        <li>
+            <a class="icon" href="https://github.com/erikvansebille">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-github fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="https://twitter.com/erikvansebille">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-twitter fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="mailto:E.vanSebille@uu.nl">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-envelope fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="http://erik.vansebille.com/science/">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-external-link fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+      </ul>
+      <em>Institute for Marine and Atmospheric research Utrecht, Utrecht University, Netherlands</em>
+    
+      <mark>physical oceanography</mark>
+    
+      <mark>climate</mark>
+    
+      <mark>software</mark>
+    
+    </td>
+  </tr>
+  
+
+  <tr>
+    <td>
+      <ul class="list-inline">
+        <li><strong>Guido Vettoretti</strong></li>
+        
+        <li>
+            <a class="icon" href="https://github.com/guidov">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-github fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="https://twitter.com/g_vettoretti">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-twitter fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="mailto:g.vettoretti@utoronto.ca">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-envelope fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="http://www.atmosp.physics.utoronto.ca/people/guido/guido.html">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-external-link fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+      </ul>
+      <em>University of Toronto</em>
+    
+      <mark>paleoclimate</mark>
+    
+      <mark>HPC</mark>
+    
+      <mark>physical oceanography</mark>
+    
+    </td>
+  </tr>
+  
+
+  <tr>
+    <td>
+      <ul class="list-inline">
+        <li><strong>Jianwu Wang</strong></li>
+        
+        <li>
+            <a class="icon" href="https://github.com/jianwuwang">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-github fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        
+        <li>
+            <a class="icon" href="mailto:jianwu@umbc.edu">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-envelope fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="https://userpages.umbc.edu/~jianwu/">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-external-link fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+      </ul>
+      <em>University of Maryland - Baltimore County</em>
+    
+      <mark>climate informatics</mark>
+    
+      <mark>distributed computing</mark>
+    
+      <mark>cloud computing</mark>
+    
+      <mark>big data</mark>
+    
+    </td>
+  </tr>
+  
+
+  <tr>
+    <td>
+      <ul class="list-inline">
+        <li><strong>Duncan Watson-Parris</strong></li>
+        
+        <li>
+            <a class="icon" href="https://github.com/duncanwp">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-github fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="https://twitter.com/dwatsonparris">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-twitter fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="mailto:duncan.watson-parris@physics.ox.ac.uk">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-envelope fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="https://www2.physics.ox.ac.uk/contacts/people/watson-parris">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-external-link fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+      </ul>
+      <em>University of Oxford</em>
+    
+      <mark>atmospheric physics</mark>
+    
+      <mark>numerical modelling</mark>
+    
+      <mark>observations</mark>
+    
+      <mark>data fusion</mark>
+    
+      <mark>machine learning</mark>
+    
+    </td>
+  </tr>
+  
+
+  <tr>
+    <td>
+      <ul class="list-inline">
+        <li><strong>Nic Wayand</strong></li>
+        
+        <li>
+            <a class="icon" href="https://github.com/NicWayand">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-github fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        
+        <li>
+            <a class="icon" href="mailto:nic.wayand@usask.ca">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-envelope fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="http://nicwayand.com">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-external-link fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+      </ul>
+      <em>University of Saskatchewan</em>
+    
+      <mark>hydrology</mark>
+    
+      <mark>atmospheric science</mark>
+    
+    </td>
+  </tr>
+  
+
+  <tr>
+    <td>
+      <ul class="list-inline">
+        <li><strong>Micah Wengren</strong></li>
+        
+        <li>
+            <a class="icon" href="https://github.com/mwengren">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-github fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="https://twitter.com/micahwengren">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-twitter fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="mailto:micah.wengren@gmail.com">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-envelope fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+      </ul>
+      <em>NOAA</em>
+    
+      <mark>cloud computing</mark>
+    
+      <mark>open data</mark>
+    
+      <mark>climate</mark>
+    
+      <mark>atmospheric science</mark>
+    
+      <mark>oceanography</mark>
+    
+      <mark>geology</mark>
+    
+    </td>
+  </tr>
+  
+
+  <tr>
+    <td>
+      <ul class="list-inline">
+        <li><strong>Phillip Wolfram</strong></li>
+        
+        <li>
+            <a class="icon" href="https://github.com/pwolfram">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-github fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        
+        <li>
+            <a class="icon" href="mailto:pwolfram@lanl.gov">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-envelope fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="https://github.com/pwolfram">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-external-link fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+      </ul>
+      <em>Los Alamos National Laboratory</em>
+    
+      <mark>physical oceanography</mark>
+    
+      <mark>modeling</mark>
+    
+      <mark>climate</mark>
+    
+    </td>
+  </tr>
+  
+
+  <tr>
+    <td>
+      <ul class="list-inline">
+        <li><strong>Zhonghua Zheng</strong></li>
+        
+        <li>
+            <a class="icon" href="https://github.com/zzheng93">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-github fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        
+        <li>
+            <a class="icon" href="mailto:zzheng25@illinois.edu">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-envelope fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="http://zzheng25.web.engr.illinois.edu">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-external-link fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+      </ul>
+      <em>University of Illinois at Urbana-Champaign (UIUC)</em>
+    
+      <mark>atmospheric aerosols</mark>
+    
+      <mark>urban environment</mark>
+    
+      <mark>machine learning</mark>
+    
+      <mark>HPC</mark>
+    
+    </td>
+  </tr>
+  
+
+  <tr>
+    <td>
+      <ul class="list-inline">
+        <li><strong>Jiawei Zhuang</strong></li>
+        
+        <li>
+            <a class="icon" href="https://github.com/JiaweiZhuang">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-github fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="https://twitter.com/Jiawei_Zhuang_">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-twitter fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="mailto:jiaweizhuang@g.harvard.edu">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-envelope fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+        
+        <li>
+            <a class="icon" href="https://scholar.harvard.edu/zhuangjw">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-external-link fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        
+      </ul>
+      <em>Harvard University</em>
+    
+      <mark>atmospheric chemistry</mark>
+    
+      <mark>numerical methods</mark>
+    
+      <mark>HPC</mark>
+    
+    </td>
+  </tr>
+  
+</table>
+      
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2018, Pangeo Team.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.<br/>
+    </p>
+  </div>
+</footer>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-120544092-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-120544092-1');
+</script>
+  </body>
+</html>
