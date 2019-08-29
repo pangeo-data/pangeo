@@ -46,12 +46,52 @@ to schedule travel.
     - `Graduate Seattle <https://www.graduatehotels.com/seattle>`_
     - `Travelodge by Wyndham, Seattle University <http://www.travelodgeseattleuniversity.com/>`_
 
-Meeting Links
--------------
+Talks
+-----
 
-- Sign up for Lightning Talks: [`link <https://forms.gle/4ZbCbHGxe2sRNf9y7>`_]
-- Sprint Proposals: [`link <https://docs.google.com/presentation/d/1XHtpTYOAxnYs8IyNm3PxcU5nIQWWC-050e-8WPme0rg/edit?usp=sharing>`_]
-- Summary blog post from the 2018 meeting at NCAR: [`link <https://medium.com/pangeo/the-2018-pangeo-developers-workshop-1be359dac33c>`_]
+Keynotes
+~~~~~~~~
+- Lindsey Heagy: `Science enabled by open source tools and communities: Geophysical simulations and inversions <https://docs.google.com/presentation/d/1Wfh2xPw28fqlHMehhys1__SFH4Dmrzq7LI2KcBsuVyc/edit?usp=sharing>`_
+- Stephan Hoyer: `Data driven discretization <https://www.pnas.org/content/116/31/15344>`_
+- Elizabeth Maroon: `Applying the Pangeo Toolbox to the Calculation of Oceanic Overturning <https://drive.google.com/a/ucar.edu/file/d/1gEF6MO2eGre2c6PTHUQO40djjbZHftVK/view?usp=sharing>`_
+
+Tools Talks
+~~~~~~~~~~~
+- Linsey Heagy: `Z2JH/Hubploy <https://docs.google.com/presentation/d/1-3X0bDmIMCKJ4vDuHSuf59nnhlxWS5hhZZEQLvzOVPE/edit#slide=id.g5f3a2dc113_0_516 >`_
+- Chris Holdgraf: `Binder Project <https://docs.google.com/presentation/d/1-3X0bDmIMCKJ4vDuHSuf59nnhlxWS5hhZZEQLvzOVPE/edit#slide=id.g5f3a2dc113_0_516 >`_
+- Anderson Banihirwe: `Jupyterhub on HPC <https://andersonbanihirwe.dev/talks/jupyterhub-on-hpc-pangeo-2019.html >`_
+- Scott Henerson: `Pangeo Helm Chart / Cloud Federation <https://docs.google.com/presentation/d/1wQzdwk3_C6R0BVigWOeYo9GYIqRQrD3i39OmbLZJyk8/edit?usp=sharing >`_
+- Filipe Pires Alvarenga Fernandes: `Conda-forge <https://docs.google.com/presentation/d/1u5H4TD8FFNXnPD3mn4ap6B6_Np25QRRdhmedG-4OGEc/edit?usp=sharing>`_
+- Deepak Cherian: `Xarray <https://www.dropbox.com/s/8b0bivdf5vc3rh5/2019-08-pangeo-seattle.pptx?dl=0 >`_
+- Matt Rocklin: `Dask <https://www.dropbox.com/s/gynbc71x5jgst85/dask-pangeo-2019.pdf?dl=0 >`_
+- Jawei Zhuang: `XESMF <https://docs.google.com/presentation/d/1WxhT6DryujvszJ6tfdweHCnXHowcGsR1-JiZQF-KNTc/edit?usp=sharing >`_
+- Kevin Paul: `Zarr / NetCDF <https://docs.google.com/presentation/d/1UKYQ0qQYAs0OUdJ5qSNMk_iMg9iyTu_rbiybJZsRoNU >`_
+- Julia Signell: `Intake <https://docs.google.com/presentation/d/15kxhKzyklkV_Jo7drGEJ70Wk5KOoMJgfiufBfq66Xyc/edit?usp=sharing>`_
+- Matt Hanson: `STAC <https://docs.google.com/presentation/d/1iiSUvtE6lMaZMTWQrQQTUl8MBecZRFjb3QJyjZKZNO0/edit?usp=sharing >`_
+- Anderson Banihirwe: `Intake-ESM <https://andersonbanihirwe.dev/talks/intake-esm-pangeo-2019.html >`_
+- Julia Signell: `PyViz / HoloViz <https://docs.google.com/presentation/d/1j2LFUHS1ahsfEThpFwnAZHqt4IeijJ4Kj9Jjcoh7IKU/edit?usp=sharing>`_
+
+Lightning Talks
+~~~~~~~~~~~~~~~
+- Robin Matthews: `Enhancing Traceability of Figures in the Working Group I (WGI) report for the IPCC 6th assessment <https://drive.google.com/file/d/1Z9ECFn6y5cnge61coasDRQWZbDe8nEgx/view?usp=sharing>`_
+- Kirstie Haynie: `Introduction - introduce myself & how I plan to use Pangeo <https://drive.google.com/file/d/1SLA33HV2FyYws6AmT7MT-VuASSh2AKcO/view>`_
+- Matthew Rocklin: `Easy dashboarding with Bokeh and JupyterLab <https://github.com/ian-r-rose/jupyterlab-bokeh-server/>`_
+- Spencer Jones: `Mentoring beginners with Pangeo <https://docs.google.com/presentation/d/1MBXWtJ7EPlKRPxevXErI1NuHRvbC9CTX-YpK_XF5_9Q/edit?usp=sharing>`_
+- Erin Dougherty: `Deploying Pangeo on a supercomputer to study future flash floods: challenges and successes <https://docs.google.com/presentation/d/1na5vAB8ZpcatKen29d91iJbxegqGSW5bdn6QZeUPTpY/edit?usp=sharing>`_
+- Siyu Yang: `Microsoft AI for Earth - apply for a grant and our land cover mapping project <https://ai4ehackathons.blob.core.windows.net/siyu/AI4E_at_Pangeo.pdf>`_
+- Julia Kent: `Bias Correction <https://docs.google.com/presentation/d/1GB57yuV5BM903Ktbh_eDNYNzntVhLIejs7me_BMekC8/edit?usp=sharing>`_
+- Mattia Almansi: `The Poseidon project <https://jh.box.com/s/uau4j0n4q7jmdrob0t4yc85e773ok3ho>`_
+- Shreyas Cholia: `Interactive HPC with Jupyter and Friends <https://docs.google.com/presentation/d/1MwxG3B-7FRJ_TzPAqmpQ4uo_8j5_4j5tFd3Nt_FNwSI/edit>`_
+- Jeff Sadler: `Machine Learning Workflows from Regional to CONUS Scale <https://docs.google.com/presentation/d/1LBqjjJ3Qo7yMM4l-c98Vkr-IyJ208iOZCgs-we5kurI/edit?usp=sharing>`_
+- Nicholas Sofroniew: `A community platform for Big Data bio-imaging? <https://docs.google.com/presentation/d/18Z4G58oQXUYl0EfuqgzF98B0gfnabhieW3_k-xeyHC0/edit?usp=sharing>`_
+- Will Barnes: `The Sun at Scale: Analyzing Data from the Solar Dynamics Observatory on NASA Pleiades with Dask <https://docs.google.com/presentation/d/1vzCPwIcBgbLADLgEC3kf4Kj3p4opbcGt-4QJssTRkvw/edit?usp=sharing>`_
+- Ariel Rokem: `PanNeuro <https://arokem.github.io/2019-BRAINI-PanNeuro-slides/#/>`_
+- Norman Barker: `TileDB <https://docs.google.com/presentation/d/1gioRfodyngdHREPYO7dHprcnOr_mtGV3nWgpSk9UsH8/edit?usp=sharing>`_
+- Philip Austin: `UBC grad student survey on research computing <https://docs.google.com/presentation/d/1yLq3Veo1aMnCk46rXvS7QfZXv_xVRVRn11M2DrEYvlA/edit?usp=sharing>`_
+- Rob Fatland: `Pangeo Education Working Group <https://docs.google.com/presentation/d/1S2pET0zzo5TYyH4jvXLQJuPelmh99X7JJ1cTbdJCtJ8/edit?usp=sharing>`_
+- Jeremy McGibbon: `Write Clean Code! <https://docs.google.com/presentation/d/e/2PACX-1vSBDSwxyzZz2kCzAv4n7KFsOXeHDWPXkn-P-K_gelUokfXoYbAsxLHXwhyPWSfM7148iPHW7BUfSBzj/pub?start=false&loop=false&delayms=60000>`_
+- Ryan Abernathey: `The XGCM Family of Python Packages <https://speakerdeck.com/rabernat/the-xgcm-family-of-python-packages>`_
+- Matt Rocklin: `High Performance Python Components <https://www.google.com/url?q=https://docs.google.com/presentation/d/e/2PACX-1vSajAH6FzgQH4OwOJD5y-t9mjF9tTKEeljguEsfcjavp18pL4LkpABy4lW2uMykIUvP2dC-1AmhCq6l/pub?start%3Dfalse%26loop%3Dfalse%26delayms%3D3000&sa=D&source=hangouts&ust=1566584370314000&usg=AFQjCNGpY_hdcM9Boj8ZZaF-9baKdykBJg>`_
 
 Agenda
 ------
