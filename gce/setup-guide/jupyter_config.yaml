@@ -2,64 +2,12 @@
 
 jupyterhub:
   singleuser:
-    cmd: ['start-singleuser.sh']
-    extraEnv:
-      EXTRA_PIP_PACKAGES: >-
-      GCSFUSE_BUCKET: pangeo-data
-    storage:
-      extraVolumes:
-        - name: fuse
-          hostPath:
-            path: /dev/fuse
-      extraVolumeMounts:
-        - name: fuse
-          mountPath: /dev/fuse
-    cloudMetadata:
-      enabled: true
     cpu:
       limit: 4
       guarantee: 1
     memory:
       limit: 14G
       guarantee: 4G
-
-  hub:
-    extraConfig:
-      customPodHook: |
-        from kubernetes import client
-        def modify_pod_hook(spawner, pod):
-            pod.spec.containers[0].security_context = client.V1SecurityContext(
-                privileged=True,
-                capabilities=client.V1Capabilities(
-                    add=['SYS_ADMIN']
-                )
-            )
-            return pod
-        c.KubeSpawner.modify_pod_hook = modify_pod_hook
-        c.JupyterHub.logo_file = '/usr/local/share/jupyter/hub/static/custom/images/logo.png'
-        c.JupyterHub.template_paths = ['/usr/local/share/jupyter/hub/custom_templates/',
-                                      '/usr/local/share/jupyter/hub/templates/']
-    image:
-      name: jupyterhub/k8s-hub
-      tag: v0.6
-    extraVolumes:
-      - name: custom-templates
-        gitRepo:
-          repository: "https://github.com/pangeo-data/pangeo-custom-jupyterhub-templates.git"
-          revision: "b09721bb1a1248dc115730d3c8a791600eae257e"
-    extraVolumeMounts:
-      - mountPath: /usr/local/share/jupyter/hub/custom_templates
-        name: custom-templates
-        subPath: "pangeo-custom-jupyterhub-templates/templates"
-      - mountPath: /usr/local/share/jupyter/hub/static/custom
-        name: custom-templates
-        subPath: "pangeo-custom-jupyterhub-templates/assets"
-
-  cull:
-    enabled: true
-    users: false
-    timeout: 1200
-    every: 600
 
   # this section specifies the IP address for pangeo
   proxy:

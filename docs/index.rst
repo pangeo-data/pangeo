@@ -20,6 +20,26 @@ Pangeo
 A community platform for Big Data geoscience
 ============================================
 
+What is Pangeo?
+^^^^^^^^^^^^^^^
+
+Pangeo is first and foremost a community promoting open, reproducible, and scalable science.
+This community provides documentation, develops and maintains software, and deploys
+computing infrastructure to make scientific research and programming easier.
+The Pangeo software ecosystem involves
+open source tools such as xarray, iris, dask, jupyter, and many other packages.
+There is no single software package called "pangeo"; rather, the Pangeo project serves
+as a coordination point between scientists, software, and computing infrastructure.
+On this website, scientists can find guides for accessing data and performing analysis
+using these tools (read the :ref:`quickstart`, browse the :ref:`use-cases`, and
+learn about the :ref:`packages`).
+Those interested in building infrastructure can find
+instructions for deploying Pangeo environments on HPC or cloud clusters
+(learn about the :ref:`architecture` or read the :ref:`setup-guides`).
+For more general information, read :ref:`about`, see the :ref:`collaborators`,
+or read the :ref:`FAQ`.
+Welcome to the Pangeo community!
+
 Our Goals
 ^^^^^^^^^
 
@@ -28,16 +48,6 @@ Our Goals
 #. Support the development with domain-specific geoscience packages.
 #. Improve scalability of these tools to handle petabyte-scale datasets on
    HPC and cloud platforms.
-
-Start Here
-^^^^^^^^^^
-
-- **Science users**: read the :ref:`quickstart`, browse the :ref:`use-cases`, or
-  read about the :ref:`packages`.
-- **Developers / system administrators**: learn about the
-  :ref:`architecture` or read the :ref:`setup-guides`.
-- **General interest**: learn :ref:`about`, see the :ref:`collaborators`, or
-  read the :ref:`FAQ`.
 
 Contents
 ^^^^^^^^
@@ -56,7 +66,9 @@ Contents
    data
    catalog
    collaborators
+   publications
    meeting-notes
+   meetings/index
    contact
 
 Examples

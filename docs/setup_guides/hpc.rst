@@ -34,20 +34,45 @@ After you have logged into your HPC system, download and install Miniconda:
 This contains a self-contained Python environment that we can manipulate
 safely without requiring the involvement of IT. It also allows you to
 create isolated software environments so that we can experiment in the
-future safely.
+future safely. Before creating your environment, we recommend you update
+your conda package manager with
+
+::
+    
+    conda update conda
+    
+.. note:: 
+
+    Depending if you chose to initialize Miniconda in your ``~/.bashrc``
+    at the end of the installation, this new conda update will activate
+    a ``(base)`` environment by default. If you wish to prevent conda
+    from activating the ``(base)`` environment at shell initialization:
+    ::
+    
+            conda config --set auto_activate_base false
+    
+    This will create a ``./condarc`` in your home
+    directory with this setting the first time you run it. 
 
 Create a new conda environment for our pangeo work:
 
 ::
 
     conda create -n pangeo -c conda-forge \
-        python=3.6 dask distributed xarray jupyterlab mpi4py dask-jobqueue
+        python=3.6 xarray \
+        jupyterlab nbserverproxy \
+        dask distributed mpi4py dask-jobqueue
+
+.. note::
+
+   Depending on your application, you may choose to add additional conda
+   packages to this list.
 
 Activate this environment
 
 ::
 
-    source activate pangeo
+    conda activate pangeo
 
 Your prompt should now look something like this (note the pangeo environment name):
 
@@ -72,18 +97,20 @@ this section.)
 .. note::
 
    When using recent Jupyter iteration the following section can be replaced by simply invoking the command::
-
+   
+      jupyter notebook --generate-config
       jupyter notebook password
 
    And entering desired password.
 
 Jupyter notebook servers include a password for security. We're going to
 setup a password for ourselves. First we generate the Jupyter config
-file
+file and install a notebook proxy service:
 
 ::
 
     jupyter notebook --generate-config
+    jupyter serverextension enable --py nbserverproxy
 
 This created a file in ``~/.jupyter/jupyter_notebook_config.py``. If you
 open that file and search for "password", you'll see a line like the
@@ -129,6 +156,27 @@ in the Jupyter documentation.
 
     chmod 400 ~/.jupyter/jupyter_notebook_config.py
 
+Finally, we may want to configure dask's dashboard to forward through Jupyter.
+This can be done by editing the dask distributed config file, e.g.:
+``.config/dask/distributed.yaml``. By default, when ``dask.distributed`` or
+``dask-jobqueue`` is first imported, it places a file at ``~/.config/dask/distributed.yaml``
+with a commented out version. You can create this file and do this first import by simply 
+
+::
+
+    python -c 'from dask.distributed import Client'
+
+In this ``.config/dask/distributed.yaml`` file, set:
+
+.. code:: python
+
+  #   ###################
+  #   # Bokeh dashboard #
+  #   ###################
+  #   dashboard:
+      link: "/proxy/{port}/status"
+      
+
 ------------
 
 From here, we have two options. Option 1 will start a Jupyter Notebook server
@@ -154,7 +202,7 @@ In our case, the Cheyenne super computer uses the PBS job scheduler, so typing:
 
 ::
 
-    (pangeo) $ qsub -I -l select=1:ncpus=4 -l walltime=03:00:00 -q regular
+    (pangeo) $ qsub -I -A account -l select=1:ncpus=4 -l walltime=03:00:00 -q regular
 
 This will get us an interactive job on the `regular` queue for three hours. You
 may not see the `pangeo` environment anymore in your prompt, in this case, you
@@ -162,7 +210,7 @@ will want to reactivate it.
 
 ::
 
-    source activate pangeo
+    conda activate pangeo
 
 From here, we can start jupyter. The Cheyenne computer administrators have
 developed a `start-notebook <https://www2.cisl.ucar.edu/resources/computational-systems/cheyenne/software/jupyter-and-ipython#notebook>`__
@@ -175,8 +223,8 @@ later.
 
 ::
 
-    (pangeo) $ echo "ssh -N -L 8888:`hostname`:8888 -L 8787:`hostname`:8787 $USER@cheyenne.ucar.edu"
-    ssh -N -L 8888:r8i4n0:8888 -L 8787:r8i4n0:8787 username@cheyenne.ucar.edu
+    (pangeo) $ echo "ssh -N -L 8888:`hostname`:8888 $USER@cheyenne.ucar.edu"
+    ssh -N -L 8888:r8i4n0:8888 username@cheyenne.ucar.edu
 
 Now we can launch the notebook server:
 
@@ -193,16 +241,12 @@ Now, connect to the server using an ssh tunnel from your local machine
 
 ::
 
-    $ ssh -N -L 8888:r8i4n0:8888 -L 8787:r8i4n0:8787 username@cheyenne.ucar.edu
+    $ ssh -N -L 8888:r8i4n0:8888 username@cheyenne.ucar.edu
 
 You'll want to change the details in the command above but the basic idea is
-that we're passing the ports 8888 and 8787 from the compute node `r8i4n0` to our
+that we're passing the port 8888 from the compute node `r8i4n0` to our
 local system. Now open http://localhost:8888 on your local machine, you should
 find a jupyter server running!
-
-*Note that we're also passing the 8787 port through so we can access the dask
-dashboard later.*
-
 
 Launch Dask with dask-jobqueue
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -216,18 +260,30 @@ done from within your Jupyter Notebook:
 
     from dask_jobqueue import PBSCluster
 
-    cluster = PBSCluster(processes=18,
-                         threads=4, memory="6GB",
+    cluster = PBSCluster(cores=36,
+                         processes=18, memory="6GB",
                          project='UCLB0022',
                          queue='premium',
                          resource_spec='select=1:ncpus=36:mem=109G',
                          walltime='02:00:00')
-    cluster.start_workers(10)
+    cluster.scale(18)
 
     from dask.distributed import Client
     client = Client(cluster)
 
-For more examples of how to use `dask-jobqueue`_, refer to the `package documentation <http://dask-jobqueue.readthedocs.io>`__.
+The `scale()` method submits a batch of jobs to the job queue system
+(in this case PBS). Depending on how busy the job queue is, it can take a few
+minutes for workers to join your cluster. You can usually check the status of
+your queued jobs using a command line utility like `qstat`. You can also check
+the status of your cluster from inside your Jupyter session:
+
+.. code:: python
+
+    print(client)
+
+For more examples of how to use
+`dask-jobqueue`_, refer to the
+`package documentation <http://dask-jobqueue.readthedocs.io>`__.
 
 Deploy Option 2: Jupyter + dask-mpi
 -----------------------------------

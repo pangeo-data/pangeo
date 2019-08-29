@@ -219,7 +219,7 @@
     - atmospheric science
     - distributed computing
     - algorithms
-    
+
 - first_name: Jacob
   last_name: Tomlinson
   institution: Met Office Informatics Lab
@@ -289,7 +289,7 @@
     - physical oceanography
     - climate
     - software
-    
+
 - first_name: Jiawei
   last_name: Zhuang
   institution: Harvard University
@@ -313,8 +313,8 @@
     - paleoclimate
     - HPC
     - physical oceanography
-    
-    
+
+
 - first_name: Colin
   last_name: Raymond
   institution: Columbia University
@@ -349,7 +349,7 @@
     - climate
     - software
     - GIS
-  
+
 - first_name: Yu
   last_name: Cheng
   institution: University of Miami
@@ -393,7 +393,7 @@
     - climate
     - software carpentry
 
-- first_name: Redouane  
+- first_name: Redouane
   last_name: Lguensat
   institution: Institut des Géosciences de l’Environnement
   website: http://redouanelg.github.io
@@ -404,7 +404,7 @@
   tags:
     - machine learning
     - computer vision
-    
+
 - first_name: Rich
   last_name: Signell
   institution: USGS
@@ -417,7 +417,7 @@
     - physical oceanography
     - coastal ocean modeling
     - geoinformatics
-    
+
 - first_name: Anthony
   last_name: Arendt
   institution: University of Washington
@@ -430,8 +430,8 @@
     - alpine hydrology
     - geospatial mapping
     - remote sensing
-    
-    
+
+
 - first_name: Scott
   last_name: Henderson
   institution: University of Washington
@@ -459,7 +459,7 @@
     - cloud computing
     - embedded hardware
     - education and public outreach
-    
+
 - first_name: John
   last_name: Burkhart
   institution: University of Oslo
@@ -489,7 +489,7 @@
     - observations
     - numerical modeling
     - teaching
-    
+
 - first_name: Bryan
   last_name: Lawrence
   institution: NCAS, University of Reading
@@ -500,8 +500,8 @@
   orcid: 0000-0001-9262-7860
   tags:
     - climate simulation
-    - hpc 
-    - data infrastructure 
+    - hpc
+    - data infrastructure
     - cloud computing
 
 - first_name: Chris
@@ -512,7 +512,7 @@
   orcid: 0000-0003-3417-9056
   tags:
     - ocean modeling
-    - hpc 
+    - hpc
     - research computing
     - cyberinfrastructure
 
@@ -527,7 +527,7 @@
     - information modeling
     - cyberinfrastructure
     - geoinformatics
-    
+
 - first_name: Naomi
   last_name: Henderson
   institution: Lamont-Doherty Earth Observatory
@@ -536,7 +536,7 @@
   twitter: noni
   orcid: 0000-0002-9531-2159
   tags:
-    - atmospheric modeling 
+    - atmospheric modeling
     - research computing
 
 - first_name: Duncan
@@ -674,7 +674,7 @@
     - climate
     - hydrology
     - water resources
-    
+
 - first_name: Amanda
   last_name: Tan
   institution: University of Washington
@@ -686,3 +686,122 @@
     - cloud computing
     - containers
     - water resources
+
+- first_name: Micah
+  last_name: Wengren
+  institution: NOAA
+  email: micah.wengren@gmail.com
+  github: mwengren
+  twitter: micahwengren
+  tags:
+    - cloud computing
+    - open data
+    - climate
+    - atmospheric science
+    - oceanography
+    - geology
+
+- first_name: Ethan
+  last_name: Gutmann
+  institution: National Center for Atmospheric Research
+  website: http://ethangutmann.com
+  email: gutmann@ucar.edu
+  github: gutmann
+  twitter: egutmann
+  orcid: 0000-0003-4077-3430
+  tags:
+    - climate
+    - hydrology
+    - water resources
+    - distributed computing
+    
+- first_name: Savio
+  last_name: Kay
+  institution: University of Maryland - Baltimore County
+  website: https://saviokay.com
+  email: saviosebastian08@gmail.com
+  github: saviokay
+  tags:
+    - climate
+    - distributed computing
+    - water resources
+    - cloud computing
+    
+- first_name: Jianwu
+  last_name: Wang
+  institution: University of Maryland - Baltimore County
+  website: https://userpages.umbc.edu/~jianwu/
+  email: jianwu@umbc.edu
+  github: jianwuwang
+  tags:
+    - climate informatics
+    - distributed computing
+    - cloud computing
+    - big data
+
+- first_name: Zhonghua
+  last_name: Zheng
+  institution: University of Illinois at Urbana-Champaign (UIUC)
+  website: http://zzheng25.web.engr.illinois.edu
+  email: zzheng25@illinois.edu
+  github: zzheng93
+  tags:
+    - atmospheric aerosols
+    - urban environment
+    - machine learning
+    - HPC
+    
+- first_name: Thomas
+  last_name: Moore
+  institution: CSIRO 
+  website: https://research.csiro.au/dfp/
+  email: thomas.moore@csiro.au
+  github: Thomas-Moore-Creative
+  tags:
+    - physical oceanography
+
+- first_name: Julia
+  last_name: Kent
+  institution: National Center for Atmospheric Research
+  website: https://staff.ucar.edu/users/jkent
+  email: jkent@ucar.edu
+  github: jukent
+  tags:
+    - climate
+    - distributed computing
+    - algorithms
+    - remote sensing
+
+- first_name: Aidan
+  last_name: Heerdegen
+  institution: Australian National University/Centre of Excellence for Climate Extremes
+  website: https://climateextremes.org.au
+  email: aidan.heerdegen@anu.edu.au
+  github: aidanheerdegen
+  tags:
+    - HPC
+    - ocean modelling
+
+- first_name: Dougie
+  last_name: Squire
+  institution: CSIRO 
+  website: https://research.csiro.au/dfp/
+  email: dougie.squire@csiro.au
+  github: dougiesquire
+  tags:
+    - climate
+    - atmospheric science
+
+- first_name: Riley
+  last_name: Brady
+  institution: University of Colorado Boulder
+  website: https://www.rileyxbrady.com
+  email: riley.brady@colorado.edu
+  github: bradyrx
+  twitter: rileyxbrady
+  orcid: 0000-0002-2309-8245
+  tags:
+      - ocean biogeochemistry
+      - climate
+      - visualization
+      - decadal prediction
