@@ -21,6 +21,8 @@
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 import sphinx_pangeo_theme
+import pybtex.errors
+pybtex.errors.set_strict_mode(False)
 
 # -- General configuration ------------------------------------------------
 
