@@ -38,7 +38,8 @@ jobs:
       script:
         - set -e
         - cd docs
-        - python build_pangeo_bib.py
+        # bib file is now stored in the repo
+        #- python build_pangeo_bib.py
         - make html
         - cd ..
 

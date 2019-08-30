@@ -34,20 +34,24 @@ to schedule travel.
 
 - **Air Travel**: If you are flying into Seattle, you will likely want to fly into
   `Sea-Tac International Airport <https://www.portseattle.org/sea-tac>`_.
-- **Ground Transportation**: `Sound Transit's Link Light Rail <https://www.soundtransit.org/>`_ runs every 
+- **Ground Transportation**: `Sound Transit's Link Light Rail <https://www.soundtransit.org/>`_ runs every
   6, 10, or 15 minutes between Sea-Tac and the University of Washington.
   One-way tickets cost $3.25. You can also rent a car or do the ride share thing.
 - **Parking**: The closest gatehouse to Alder Hall is `West Gatehouse, NE 40th Street <https://transportation.uw.edu/park/visitor>`_
 - **Hotel**: Here are a few hotel options:
     - `Residence Inn by Marriott, University District <https://www.marriott.com/hotels/travel/seaud-residence-inn-seattle-university-district/>`_
-    - `Watertown Hotel <https://www.staypineapple.com/watertown-hotel-seattle-wa?utm_source=google-my-business&amp;utm_medium=organic&amp;utm_campaign=GMB&amp;utm_term=wt>`_  
+    - `Watertown Hotel <https://www.staypineapple.com/watertown-hotel-seattle-wa?utm_source=google-my-business&amp;utm_medium=organic&amp;utm_campaign=GMB&amp;utm_term=wt>`_
     - `Silver Cloud Hotel, University District <https://www.silvercloud.com/university/>`_
-    - `University Inn <https://www.staypineapple.com/university-inn-seattle-wa?utm_source=google-my-business&amp;utm_medium=organic&amp;utm_campaign=GMB&amp;utm_term=ui>`_ 
+    - `University Inn <https://www.staypineapple.com/university-inn-seattle-wa?utm_source=google-my-business&amp;utm_medium=organic&amp;utm_campaign=GMB&amp;utm_term=ui>`_
     - `Graduate Seattle <https://www.graduatehotels.com/seattle>`_
     - `Travelodge by Wyndham, Seattle University <http://www.travelodgeseattleuniversity.com/>`_
 
 Talks
 -----
+
+Intro
+~~~~~
+- Ryan Abernathey: `The State of Pangeo <https://speakerdeck.com/rabernat/state-of-pangeo-august-2019>`_
 
 Keynotes
 ~~~~~~~~
@@ -57,18 +61,18 @@ Keynotes
 
 Tools Talks
 ~~~~~~~~~~~
-- Linsey Heagy: `Z2JH/Hubploy <https://docs.google.com/presentation/d/1-3X0bDmIMCKJ4vDuHSuf59nnhlxWS5hhZZEQLvzOVPE/edit#slide=id.g5f3a2dc113_0_516 >`_
-- Chris Holdgraf: `Binder Project <https://docs.google.com/presentation/d/1-3X0bDmIMCKJ4vDuHSuf59nnhlxWS5hhZZEQLvzOVPE/edit#slide=id.g5f3a2dc113_0_516 >`_
-- Anderson Banihirwe: `Jupyterhub on HPC <https://andersonbanihirwe.dev/talks/jupyterhub-on-hpc-pangeo-2019.html >`_
-- Scott Henerson: `Pangeo Helm Chart / Cloud Federation <https://docs.google.com/presentation/d/1wQzdwk3_C6R0BVigWOeYo9GYIqRQrD3i39OmbLZJyk8/edit?usp=sharing >`_
+- Linsey Heagy: `Z2JH/Hubploy <https://docs.google.com/presentation/d/1-3X0bDmIMCKJ4vDuHSuf59nnhlxWS5hhZZEQLvzOVPE/edit#slide=id.g5f3a2dc113_0_516>`_
+- Chris Holdgraf: `Binder Project <https://docs.google.com/presentation/d/1-3X0bDmIMCKJ4vDuHSuf59nnhlxWS5hhZZEQLvzOVPE/edit#slide=id.g5f3a2dc113_0_516>`_
+- Anderson Banihirwe: `Jupyterhub on HPC <https://andersonbanihirwe.dev/talks/jupyterhub-on-hpc-pangeo-2019.html>`_
+- Scott Henerson: `Pangeo Helm Chart / Cloud Federation <https://docs.google.com/presentation/d/1wQzdwk3_C6R0BVigWOeYo9GYIqRQrD3i39OmbLZJyk8/edit?usp=sharing>`_
 - Filipe Pires Alvarenga Fernandes: `Conda-forge <https://docs.google.com/presentation/d/1u5H4TD8FFNXnPD3mn4ap6B6_Np25QRRdhmedG-4OGEc/edit?usp=sharing>`_
-- Deepak Cherian: `Xarray <https://www.dropbox.com/s/8b0bivdf5vc3rh5/2019-08-pangeo-seattle.pptx?dl=0 >`_
+- Deepak Cherian: `Xarray <https://www.dropbox.com/s/8b0bivdf5vc3rh5/2019-08-pangeo-seattle.pptx?dl=0>`_
 - Matt Rocklin: `Dask <https://www.dropbox.com/s/gynbc71x5jgst85/dask-pangeo-2019.pdf?dl=0 >`_
-- Jawei Zhuang: `XESMF <https://docs.google.com/presentation/d/1WxhT6DryujvszJ6tfdweHCnXHowcGsR1-JiZQF-KNTc/edit?usp=sharing >`_
-- Kevin Paul: `Zarr / NetCDF <https://docs.google.com/presentation/d/1UKYQ0qQYAs0OUdJ5qSNMk_iMg9iyTu_rbiybJZsRoNU >`_
+- Jawei Zhuang: `XESMF <https://docs.google.com/presentation/d/1WxhT6DryujvszJ6tfdweHCnXHowcGsR1-JiZQF-KNTc/edit?usp=sharing>`_
+- Kevin Paul: `Zarr / NetCDF <https://docs.google.com/presentation/d/1UKYQ0qQYAs0OUdJ5qSNMk_iMg9iyTu_rbiybJZsRoNU>`_
 - Julia Signell: `Intake <https://docs.google.com/presentation/d/15kxhKzyklkV_Jo7drGEJ70Wk5KOoMJgfiufBfq66Xyc/edit?usp=sharing>`_
-- Matt Hanson: `STAC <https://docs.google.com/presentation/d/1iiSUvtE6lMaZMTWQrQQTUl8MBecZRFjb3QJyjZKZNO0/edit?usp=sharing >`_
-- Anderson Banihirwe: `Intake-ESM <https://andersonbanihirwe.dev/talks/intake-esm-pangeo-2019.html >`_
+- Matt Hanson: `STAC <https://docs.google.com/presentation/d/1iiSUvtE6lMaZMTWQrQQTUl8MBecZRFjb3QJyjZKZNO0/edit?usp=sharing>`_
+- Anderson Banihirwe: `Intake-ESM <https://andersonbanihirwe.dev/talks/intake-esm-pangeo-2019.html>`_
 - Julia Signell: `PyViz / HoloViz <https://docs.google.com/presentation/d/1j2LFUHS1ahsfEThpFwnAZHqt4IeijJ4Kj9Jjcoh7IKU/edit?usp=sharing>`_
 
 Lightning Talks
@@ -102,7 +106,7 @@ The final agenda is embedded below.
 .. raw:: html
 
     <iframe width="100%" height="800" src="https://docs.google.com/document/d/e/2PACX-1vQtNNhS0KUh9oZUOG_T2f8_b507q9AlEhGTGMzCrZ61lQa5MyXNeKso1Ba1QxKGqSbD-iM8cC9ScNmq/pub?embedded=true"></iframe>
-    
+
 Attendees
 ---------
 1.	Shima Abadi, University of Washington
@@ -147,7 +151,7 @@ Attendees
 40.	Robin Matthews, Intergovernmental Panel on Climate Change
 41.	Jacob Matuskey, Space Telescope Science Institute
 42.	Jeremy McGibbon, University of Washington
-43.	Thomas Moore, Commonwealth Scientific and Industrial Research Organisation 
+43.	Thomas Moore, Commonwealth Scientific and Industrial Research Organisation
 44.	James Munroe, Memorial University of Newfoundland
 45.	Dan Nowacki, United States Geological Survey
 46.	Yuvi Panda, Project Jupyter
@@ -163,7 +167,7 @@ Attendees
 56.	Julia Signell, Anaconda
 57.	Nicholas Sofroniew, Chan Zuckerberg Initiative
 58.	Dax Soule, CUNY - Queens College
-59.	Dougie Squire, Commonwealth Scientific and Industrial Research Organisation 
+59.	Dougie Squire, Commonwealth Scientific and Industrial Research Organisation
 60.	Steven Stetzler, University of Washington
 61.	Jason Suwala, Hatfield Consultants
 62.	Amanda Tan, University of Washington
