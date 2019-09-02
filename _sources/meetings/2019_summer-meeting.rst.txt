@@ -51,6 +51,7 @@ Talks
 
 Intro
 ~~~~~
+- Joe Hamman: `Welcome and Logistics <https://speakerdeck.com/jhamman/pangeo-summer-meeting-welcome-and-logistics>`_
 - Ryan Abernathey: `The State of Pangeo <https://speakerdeck.com/rabernat/state-of-pangeo-august-2019>`_
 
 Keynotes
