@@ -194,7 +194,7 @@
 - name: GFDL Post-processing and Analysis Cluster
   description: HPC cluster running at the NOAA Geophyiscal Fluid Dynamics Laboratory
   platform: HPC
-  dask: dask-jobqueue with a custom PBSCluster subclass
+  dask: dask-jobqueue
   jupyter: Single user notebook servers
   kind: hpc
 
