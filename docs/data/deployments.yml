@@ -1,10 +1,11 @@
 # Listing of current Pangeo deployments
 - name: NCAR Cheyenne Cluster
   description: Large HPC cluster (5.34-petaflops) running at the National Center for Atmospheric Research
-  link: https://www2.cisl.ucar.edu/resources/computational-systems/cheyenne
+  link: https://jupyterhub.ucar.edu
   platform: HPC
   dask: dask-jobqueue and dask-mpi
-  jupyter: Single user notebook servers
+  jupyter: Jupyterhub
+  access: Must have an account on Cheyenne supercomputer 
   kind: hpc
 
 - name: hub.pangeo.io
