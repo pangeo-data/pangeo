@@ -68,7 +68,7 @@ Tools Talks
 - Scott Henerson: `Pangeo Helm Chart / Cloud Federation <https://docs.google.com/presentation/d/1wQzdwk3_C6R0BVigWOeYo9GYIqRQrD3i39OmbLZJyk8/edit?usp=sharing>`_
 - Filipe Pires Alvarenga Fernandes: `Conda-forge <https://docs.google.com/presentation/d/1u5H4TD8FFNXnPD3mn4ap6B6_Np25QRRdhmedG-4OGEc/edit?usp=sharing>`_
 - Deepak Cherian: `Xarray <https://www.dropbox.com/s/8b0bivdf5vc3rh5/2019-08-pangeo-seattle.pptx?dl=0>`_
-- Matt Rocklin: `Dask <https://www.dropbox.com/s/gynbc71x5jgst85/dask-pangeo-2019.pdf?dl=0 >`_
+- Matt Rocklin: `Dask <https://www.dropbox.com/s/gynbc71x5jgst85/dask-pangeo-2019.pdf?dl=0>`_
 - Jawei Zhuang: `XESMF <https://docs.google.com/presentation/d/1WxhT6DryujvszJ6tfdweHCnXHowcGsR1-JiZQF-KNTc/edit?usp=sharing>`_
 - Kevin Paul: `Zarr / NetCDF <https://docs.google.com/presentation/d/1UKYQ0qQYAs0OUdJ5qSNMk_iMg9iyTu_rbiybJZsRoNU>`_
 - Julia Signell: `Intake <https://docs.google.com/presentation/d/15kxhKzyklkV_Jo7drGEJ70Wk5KOoMJgfiufBfq66Xyc/edit?usp=sharing>`_
