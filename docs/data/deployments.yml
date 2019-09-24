@@ -221,3 +221,11 @@
   dask: dask-jobqueue
   jupyter: Single user notebook servers
   kind: hpc
+  
+- name: JASMIN Super-Data-Cluster
+  description: UK Science and Technology Facilities Council
+  link: http://www.jasmin.ac.uk/
+  platform: HPC
+  dask: ???
+  jupyter: Single user notebook servers
+  kind: hpc
