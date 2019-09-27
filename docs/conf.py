@@ -121,6 +121,7 @@ html_theme_options = {
     # an arbitrary url.
     'navbar_links': [
         ("Blog", "https://medium.com/pangeo", True),
+        ("Forum", "https://discourse.pangeo.io", True),
     ],
 }
 
