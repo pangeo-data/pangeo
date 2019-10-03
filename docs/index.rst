@@ -6,19 +6,31 @@
 Pangeo
 ======
 
-.. image:: _static/small_e_logo_cropped.png
-   :scale: 40 %
-
-.. raw:: html
-
-   <br />
-
 .. image:: _static/pangeo_simple_logo.svg
    :width: 175 px
 
-
 A community platform for Big Data geoscience
 ============================================
+
+.. raw:: html
+
+    <div class="row">
+
+     <div class="col-md-6 center-block">
+         <h2>Pangeo Discourse</h2>
+         <p>An open discussion forum</p>
+         <div class="feedgrabbr_widget" id="fgid_d0649815dd692ed59cba2d8d0"></div>
+         <script>if (typeof (fg_widgets) === "undefined") fg_widgets = new Array(); fg_widgets.push("fgid_d0649815dd692ed59cba2d8d0");</script>
+         <script async src="https://www.feedgrabbr.com/widget/fgwidget.js"></script>
+     </div>
+     <div class="col-md-6 center-block">
+         <h2>Pangeo Twitter</h2>
+         <p>News about the project</p>
+         <a class="twitter-timeline" data-width="400" data-height="500" data-theme="light" data-link-color="#5eb130" href="https://twitter.com/pangeo_data?ref_src=twsrc%5Etfw">Tweets by pangeo_data</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+     </div>
+    </div>
+
+
 
 What is Pangeo?
 ^^^^^^^^^^^^^^^
