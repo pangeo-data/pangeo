@@ -10,4 +10,5 @@ doctr>=1.6.3
 sphinx-nbexamples
 sphinx-copybutton
 sphinxcontrib-srclinks
-sphinxcontrib-bibtex
+# we need to eventually upgrade sphinx in order to unpin
+sphinxcontrib-bibtex=0.4.2 
