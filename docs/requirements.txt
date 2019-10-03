@@ -11,4 +11,4 @@ sphinx-nbexamples
 sphinx-copybutton
 sphinxcontrib-srclinks
 # we need to eventually upgrade sphinx in order to unpin
-sphinxcontrib-bibtex=0.4.2 
+sphinxcontrib-bibtex==0.4.2 
