@@ -23,16 +23,16 @@ Working Group Meetings
 
 1. Data Working Group
     * Schedule: Every other Tuesday at 4p GMT
-    * Conferencing: `Zoom <https://zoom.us/j/5944845886>`_)
+    * Conferencing: `Zoom <https://zoom.us/j/5944845886>`_
     * Notes: `link <https://docs.google.com/document/d/e/2PACX-1vTP1iV4YJcHznwcfUwlLoEDVPdgtD9iAXql73vn4uAotOQMVh9R8vTIKxPHnvnrijX1C24T5aJJZ95x/pub>`_
 2. Machine Learning Working Group
     * Schedule: First Monday of the month at 6p GMT
-    * Conferencing: Zoom (link TBD)
-    * Notes: (link TBD)
+    * Conferencing:  `Zoom <https://meet.google.com/ubc-tgak-ugg>`_
+    * Notes: `GitHub <https://github.com/pangeo-data/ml-workflow-examples>`__
 3. Education Working Group 
     * Schedule: (Schedule TBD)
     * Conferencing: `whereby.com/pangeo <https://whereby.com/pangeo>`_
-    * Notes: (link TBD)
+    * Notes: `GitHub <https://github.com/pangeo-data/education-material>`__
 4. Cloud Operations Working Group
     * Schedule: (Schedule TBD)
     * Conferencing: `whereby.com/pangeo <https://whereby.com/pangeo>`_
