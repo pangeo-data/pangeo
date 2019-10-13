@@ -25,6 +25,7 @@ Our mission is to cultivate an ecosystem in which the next generation of open-so
 We envision a collection of related but independent open-source packages that meet specific scientific needs within the AOC fields. These packages will follow modern best practices for software development, including:
 
 - hosting on GitHub,
+- Analysing and examining the project idea,
 - testing,
 - coverage,
 - continuous integration,
