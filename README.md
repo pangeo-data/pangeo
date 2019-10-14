@@ -18,7 +18,7 @@ We believe these challenges can all be addressed through a unified effort.
 
 ## Mission Statement
 
-Our mission is to cultivate an ecosystem in which the next generation of open-source analysis tools for ocean, atmosphere and climate science can be developed, distributed, and sustained. These tools must be scalable in order to meet the current and future challenges of big data, and these solutions should leverage the existing expertise outside of the AOC community.
+Our mission is to cultivate an ecosystem in which the next generation of open-source analysis tools for ocean, atmosphere and climate science can be developed, distributed, and sustained. These tools must be scalable in order to meet the current and future challenges of big data, and these solutions should leverage the existing expertise outside of the AOC community. Big data will further help to flurish the new AI technologies and better source code management
 
 ## Vision
 
