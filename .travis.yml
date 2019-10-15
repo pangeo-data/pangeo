@@ -29,7 +29,6 @@ jobs:
         - export PATH="$HOME/miniconda/bin:$PATH"
         - hash -r
         - conda config --set always_yes yes --set changeps1 no
-        - conda update --force -q conda
         # Useful for debugging any issues with conda
         - conda info -a
         - conda create -q -n docs-environment -c conda-forge python=$TRAVIS_PYTHON_VERSION
