@@ -6,8 +6,8 @@ Meeting Schedule and Notes
 Weekly Community Meeting
 ------------------------
 
-Pangeo holds weekly check-in meetings every Wednesday. The meetings are held at
-`whereby.com/pangeo <https://whereby.com/pangeo>`_. These meetings are open to 
+Pangeo holds weekly check-in meetings every Wednesday. The meetings are held on
+`Zoom <https://columbiauniversity.zoom.us/j/953527251>`_. These meetings are open to 
 anyone who wishes to participate. The meeting alternates between an early and
 late time to allow participants from multiple time zones to attend. We publish
 the `meeting notes here <https://docs.google.com/document/d/e/2PACX-1vRerhoxG-wOvh-wQTj7F8HPYve75l8pAtL-tgtzY_3YLqVUsaMSEgE4K70HgMt5S91FMwSu8EIizewy/pub>`_.
