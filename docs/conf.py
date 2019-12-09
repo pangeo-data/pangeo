@@ -230,6 +230,7 @@ def rstjinja(app, docname, source):
 def setup(app):
     app.add_stylesheet("https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css")
     app.add_stylesheet("example_gallery_styles_patched.css")
+    app.add_stylesheet("pangeo-main-site-custom.css")
     app.connect("source-read", rstjinja)
 
 # a hack to get our custom people data into sphinx
