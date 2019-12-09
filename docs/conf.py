@@ -107,6 +107,8 @@ todo_include_todos = True
 # https://pypi.python.org/pypi/sphinx-bootstrap-theme/
 html_theme = 'pangeo'
 
+html_favicon = '_static/favicon.png'
+
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
@@ -230,6 +232,7 @@ def rstjinja(app, docname, source):
 def setup(app):
     app.add_stylesheet("https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css")
     app.add_stylesheet("example_gallery_styles_patched.css")
+    app.add_stylesheet("pangeo-main-site-custom.css")
     app.connect("source-read", rstjinja)
 
 # a hack to get our custom people data into sphinx
