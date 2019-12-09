@@ -107,6 +107,8 @@ todo_include_todos = True
 # https://pypi.python.org/pypi/sphinx-bootstrap-theme/
 html_theme = 'pangeo'
 
+html_favicon = '_static/favicon.png'
+
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
