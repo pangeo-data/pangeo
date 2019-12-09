@@ -44,7 +44,6 @@
 ./_images/sea-surface-height_2.png
 ./_images/sea-surface-height_3.png
 ./_images/sea-surface-height_4.png
-./_images/small_e_logo_cropped.png
 ./_images/uw-logo.jpg
 ./_sources/about.rst.txt
 ./_sources/architecture.rst.txt
@@ -155,6 +154,7 @@
 ./_static/e84-logo.svg
 ./_static/example_gallery_styles.css
 ./_static/example_gallery_styles_patched.css
+./_static/favicon.png
 ./_static/file.png
 ./_static/interop.jpeg
 ./_static/jquery-3.1.0.js
@@ -169,6 +169,7 @@
 ./_static/minus.png
 ./_static/ncar-logo.png
 ./_static/no_image.png
+./_static/pangeo-main-site-custom.css
 ./_static/pangeo-style.css
 ./_static/pangeo_simple_logo.png
 ./_static/pangeo_simple_logo.svg

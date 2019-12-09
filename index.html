@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
     <link rel="stylesheet" href="_static/example_gallery_styles_patched.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pangeo-main-site-custom.css" type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
@@ -31,6 +32,7 @@
     <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
     <script type="text/javascript" src="_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.png"/>
     <link rel="author" title="About these documents" href="about.html" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -165,8 +167,8 @@
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
 <li><a class="reference internal" href="#">Pangeo</a></li>
-<li><a class="reference internal" href="#a-community-platform-for-big-data-geoscience">A community platform for Big Data geoscience</a><ul>
-<li><a class="reference internal" href="#what-is-pangeo">What is Pangeo?</a></li>
+<li><a class="reference internal" href="#a-community-platform-for-big-data-geoscience">A community platform for Big Data geoscience</a></li>
+<li><a class="reference internal" href="#what-is-pangeo">What is Pangeo?</a><ul>
 <li><a class="reference internal" href="#our-goals">Our Goals</a></li>
 <li><a class="reference internal" href="#contents">Contents</a></li>
 <li><a class="reference internal" href="#examples">Examples</a></li>
@@ -205,12 +207,36 @@
       
   <div class="section" id="pangeo">
 <h1>Pangeo<a class="headerlink" href="#pangeo" title="Permalink to this headline">¶</a></h1>
-<img alt="_images/small_e_logo_cropped.png" src="_images/small_e_logo_cropped.png" style="width: 351.6px; height: 339.6px;" />
-<br /><img alt="_images/pangeo_simple_logo.svg" src="_images/pangeo_simple_logo.svg" width="175px" /></div>
+<img alt="_images/pangeo_simple_logo.svg" src="_images/pangeo_simple_logo.svg" width="175px" /></div>
 <div class="section" id="a-community-platform-for-big-data-geoscience">
 <h1>A community platform for Big Data geoscience<a class="headerlink" href="#a-community-platform-for-big-data-geoscience" title="Permalink to this headline">¶</a></h1>
+<a class="reference external image-reference" href="https://github.com/pangeo-data/pangeo"><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/pangeo-data/pangeo?logo=github&amp;style=flat-square" /></a>
+<a class="reference external image-reference" href="https://discourse.pangeo.io/"><img alt="Discourse Forum" src="https://img.shields.io/discourse/users?server=https%3A%2F%2Fdiscourse.pangeo.io%2F&amp;style=flat-square&amp;logo=discourse" /></a>
+<a class="reference external image-reference" href="https://gitter.im/pangeo-data/Lobby"><img alt="Gitter" src="https://img.shields.io/gitter/room/pangeo-data/lobby?color=blue&amp;logo=gitter&amp;style=flat-square" /></a>
+<a class="reference external image-reference" href="https://twitter.com/pangeo_data"><img alt="Twitter" src="https://img.shields.io/twitter/follow/pangeo_data?logo=twitter&amp;style=flat-square" /></a>
+<p>This website contains general information about the Pangeo project.
+For news and updates about Pangeo, check out our
+<a class="reference external" href="https://medium.com/pangeo">Medium blog</a> and our
+<a class="reference external" href="https://twitter.com/pangeo_data">Twitter feed</a>.
+To engage with the Pangeo community, head over to our
+<a class="reference external" href="https://discourse.pangeo.io/">Discourse forum</a>
+or browse our <a class="reference external" href="https://github.com/pangeo-data/">GitHub repos</a>.</p>
+<div class="row">
+ <div class="col-md-6 center-block">
+    <h2><a href="https://twitter.com/pangeo_data">Twitter Feed</a></h2>
+    <p class="text-center font-italic">We use twitter to share announcements and retweet content of interest to our community.</p>
+    <a class="twitter-timeline" data-width="100%" data-height="500" data-theme="light" data-link-color="#5eb130" href="https://twitter.com/pangeo_data?ref_src=twsrc%5Etfw">Tweets by pangeo_data</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+ </div>
+ <div class="col-md-6 center-blockr">
+     <h2><a href="https://discourse.pangeo.io/">Discourse Forum</a></h2>
+     <p class="text-center font-italic">Discourse is a message board where we discuss all aspects of the project in a friendly, inclusive way.</p>
+     <div class="feedgrabbr_widget" id="fgid_d0649815dd692ed59cba2d8d0"></div>
+     <script>if (typeof (fg_widgets) === "undefined") fg_widgets = new Array(); fg_widgets.push("fgid_d0649815dd692ed59cba2d8d0");</script>
+     <script async src="https://www.feedgrabbr.com/widget/fgwidget.js"></script>
+ </div>
+</div></div>
 <div class="section" id="what-is-pangeo">
-<h2>What is Pangeo?<a class="headerlink" href="#what-is-pangeo" title="Permalink to this headline">¶</a></h2>
+<h1>What is Pangeo?<a class="headerlink" href="#what-is-pangeo" title="Permalink to this headline">¶</a></h1>
 <p>Pangeo is first and foremost a community promoting open, reproducible, and scalable science.
 This community provides documentation, develops and maintains software, and deploys
 computing infrastructure to make scientific research and programming easier.
@@ -227,7 +253,6 @@ instructions for deploying Pangeo environments on HPC or cloud clusters
 For more general information, read <a class="reference internal" href="about.html#about"><span class="std std-ref">About Pangeo</span></a>, see the <a class="reference internal" href="collaborators.html#collaborators"><span class="std std-ref">Collaborators</span></a>,
 or read the <a class="reference internal" href="faq.html#faq"><span class="std std-ref">Frequently Asked Questions</span></a>.
 Welcome to the Pangeo community!</p>
-</div>
 <div class="section" id="our-goals">
 <h2>Our Goals<a class="headerlink" href="#our-goals" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
