@@ -15,7 +15,7 @@ A community platform for Big Data geoscience
 .. image:: https://img.shields.io/github/contributors/pangeo-data/pangeo?logo=github&style=flat-square
    :target: https://github.com/pangeo-data/pangeo
    :alt: GitHub contributors
-.. image::  https://img.shields.io/discourse/users?server=https%3A%2F%2Fdiscourse.pangeo.io%2F&style=flat-square
+.. image::  https://img.shields.io/discourse/users?server=https%3A%2F%2Fdiscourse.pangeo.io%2F&style=flat-square&logo=discourse
    :target: https://discourse.pangeo.io/
    :alt: Discourse Forum
 .. image:: https://img.shields.io/gitter/room/pangeo-data/lobby?color=blue&logo=gitter&style=flat-square
