@@ -34,10 +34,10 @@ Working Group Meetings
     * Conferencing: `whereby.com/pangeo <https://whereby.com/pangeo>`_
     * Notes: `GitHub <https://github.com/pangeo-data/education-material>`__
 4. Cloud Operations Working Group
-    * Schedule: (Schedule TBD)
+    * Schedule: Second Monday of the month at 4:30p GMT
     * Conferencing: `whereby.com/pangeo <https://whereby.com/pangeo>`_
-    * Notes: (link TBD)
-
+    * Notes: `link <https://docs.google.com/document/d/1I-2VNNHoAjjeYvlCezQhFLmiu2OevqGDS5nUAP-6Hfw/edit?usp=sharing>`__
+    
 Meeting Calendar
 ----------------
 
