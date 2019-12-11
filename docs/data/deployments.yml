@@ -222,10 +222,10 @@
   jupyter: Single user notebook servers
   kind: hpc
   
-- name: JASMIN Super-Data-Cluster
-  description: UK Science and Technology Facilities Council
+- name: JASMIN Cluster-as-a-Service
+  description: Dynamic, user-provisioned Pangeo clusters running on the JASMIN Cloud. Supported by UK Science and Technology Facilities Council.
   link: http://www.jasmin.ac.uk/
-  platform: HPC
-  dask: ???
-  jupyter: Single user notebook servers
-  kind: hpc
+  platform: OpenStack Cloud
+  dask: dask-kubernetes
+  jupyter: JupyterHub
+  kind: openstack
