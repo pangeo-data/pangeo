@@ -228,5 +228,5 @@
   platform: OpenStack Cloud
   dask: dask-kubernetes
   jupyter: JupyterHub
-  kind: openstack
   access: Requires access to a JASMIN Cloud tenancy, available primarily for NCAS-affiliated projects.
+  kind: openstack
