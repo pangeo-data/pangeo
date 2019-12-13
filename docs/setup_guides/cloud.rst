@@ -144,12 +144,6 @@ you can do so by running::
   gcloud compute addresses create pangeo-jhubip --region $REGION
   gcloud compute addresses list | grep pangeo-jhubip
 
-Other things you might want to configure, but that can be left as is:
-
-  - EXTRA_PIP_PACKAGES: for adding some python modules to your user environment.
-  - GCSFUSE_BUCKET: for mounting some google cloud storage bucket as a standard
-    file system.
-
 The other file is `secret_config.yaml`_, which specifies cluster specific
 encryption tokens.
 

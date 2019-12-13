@@ -164,7 +164,7 @@ These recommendations may change as cloud storage technology evolves.
 
    .. code-block:: python
 
-      ds.to_zarr('/path/to/output/mydataset')
+      ds.to_zarr('/path/to/output/mydataset', consolidated=True)
 
    If ``/path/to/output/mydataset`` does not exist yet, it will be created.
    (It's best if it does not exist, as conflicts with existing files could cause

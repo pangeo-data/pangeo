@@ -22,6 +22,8 @@
 # sys.path.insert(0, os.path.abspath('.'))
 import sphinx_pangeo_theme
 from markdown import markdown
+import pybtex.errors
+pybtex.errors.set_strict_mode(False)
 
 # -- General configuration ------------------------------------------------
 
@@ -38,7 +40,9 @@ extensions = [
     'sphinx.ext.mathjax',
     'nbsphinx',
     'sphinx_nbexamples',
-    'sphinx_copybutton']
+    'sphinx_copybutton',
+    'sphinxcontrib.bibtex',
+    'sphinxcontrib.srclinks']
 
 example_gallery_config = dict(
     dont_preprocess=True,
@@ -86,7 +90,8 @@ language = None
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This patterns also effect to html_static_path and html_extra_path
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', '**.ipynb_checkpoints']
+exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', '**.ipynb_checkpoints',
+                    '*.py']
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = 'sphinx'
@@ -103,6 +108,8 @@ todo_include_todos = True
 # https://pypi.python.org/pypi/sphinx-bootstrap-theme/
 html_theme = 'pangeo'
 
+html_favicon = '_static/favicon.png'
+
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
@@ -117,6 +124,7 @@ html_theme_options = {
     # an arbitrary url.
     'navbar_links': [
         ("Blog", "https://medium.com/pangeo", True),
+        ("Forum", "https://discourse.pangeo.io", True),
     ],
 }
 
@@ -124,6 +132,12 @@ html_theme_options = {
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
+html_show_sourcelink = True
+
+srclink_project = 'https://github.com/pangeo-data/pangeo'
+srclink_branch = 'master'
+srclink_src_path = 'docs/'
+
 
 # Custom sidebar templates, must be a dictionary that maps document names
 # to template names.
@@ -134,6 +148,7 @@ html_sidebars = {
     'index': [],
      '**': [
           'localtoc.html',
+          'srclinks.html'
      ]
  }
 
@@ -219,6 +234,7 @@ def setup(app):
     app.add_stylesheet("https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css")
     app.add_stylesheet("example_gallery_styles_patched.css")
     app.add_stylesheet("packages_table_styles_patched.css")
+    app.add_stylesheet("pangeo-main-site-custom.css")
     app.connect("source-read", rstjinja)
 
 # a hack to get our custom people data into sphinx

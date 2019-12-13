@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/basH
 #SBATCH -J dask-worker
 #SBATCH -o worker.%j.out
 #SBATCH -p normal

@@ -1,10 +1,11 @@
 # Listing of current Pangeo deployments
 - name: NCAR Cheyenne Cluster
   description: Large HPC cluster (5.34-petaflops) running at the National Center for Atmospheric Research
-  link: https://www2.cisl.ucar.edu/resources/computational-systems/cheyenne
+  link: https://jupyterhub.ucar.edu
   platform: HPC
   dask: dask-jobqueue and dask-mpi
-  jupyter: Single user notebook servers
+  jupyter: Jupyterhub
+  access: Must have an account on Cheyenne supercomputer 
   kind: hpc
 
 - name: hub.pangeo.io
@@ -194,7 +195,7 @@
 - name: GFDL Post-processing and Analysis Cluster
   description: HPC cluster running at the NOAA Geophyiscal Fluid Dynamics Laboratory
   platform: HPC
-  dask: dask-jobqueue with a custom PBSCluster subclass
+  dask: dask-jobqueue
   jupyter: Single user notebook servers
   kind: hpc
 
@@ -221,3 +222,12 @@
   dask: dask-jobqueue
   jupyter: Single user notebook servers
   kind: hpc
+  
+- name: JASMIN Cluster-as-a-Service
+  description: Dynamic, user-provisioned Pangeo clusters running on the JASMIN Cloud. UK Natural Environment Research Council (NERC) facility, operated by UK Science and Technology Facilities Council (STFC).
+  link: http://www.jasmin.ac.uk/
+  platform: OpenStack Cloud
+  dask: dask-kubernetes
+  jupyter: JupyterHub
+  access: Requires access to a JASMIN Cloud tenancy, available primarily for NERC-affiliated projects.
+  kind: openstack
