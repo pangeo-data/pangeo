@@ -8,7 +8,7 @@ nbconvert==5.4.1
 nbsphinx==0.4.3
 doctr>=1.6.3
 sphinx-nbexamples
-sphinx-copybutton
+sphinx-copybutton==0.2.5
 sphinxcontrib-srclinks
 # we need to eventually upgrade sphinx in order to unpin
 sphinxcontrib-bibtex==0.4.2
