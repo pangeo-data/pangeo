@@ -97,11 +97,11 @@ Google Cloud Storage Data Catalog
 Thanks to our :ref:`NSF Award <earthcube>`, Pangeo has a substantial allocation
 on Google Cloud Platform which we are currently using to host several large
 datasets.
-These datasets are directly accessible from the Google Cloud Pangeo deployment:
-`pangeo.pydata.org <http://pangeo.pydata.org>`_.
+These datasets are directly accessible from any Google Cloud Pangeo deployment,
+e.g. `ocean.pangeo.io <http://ocean.pangeo.io>`_.
 
 See the list of available data sets in the
-`data catalog <https://pangeo-data.github.io/pangeo-datastore/>`_.
+`data catalog <http://catalog.pangeo.io/>`_.
 
 .. _cloud-data-guide:
 
