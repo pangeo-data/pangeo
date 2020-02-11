@@ -225,7 +225,8 @@ These recommendations may change as cloud storage technology evolves.
 
       import xarray as xr
       import fsspec
-      ds = xr.open_zarr(fsspec.get_mapper('gcs://pangeo-data/mydataset'))
+      ds = xr.open_zarr(fsspec.get_mapper('gcs://pangeo-data/mydataset'),
+                        consolidated=True)
 
    You should see all the variables and metadata from your original dataset in
    step 1. The dataset will automatically be created with Dask chunks matching
