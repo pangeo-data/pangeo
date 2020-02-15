@@ -1,6 +1,5 @@
 sphinx==1.6.5
-sphinx_bootstrap_theme
-sphinx_pangeo_theme
+sphinx_pangeo_theme==0.2
 jupyter
 ipython
 pandas # needed to build publications
