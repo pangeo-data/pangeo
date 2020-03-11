@@ -5,7 +5,7 @@ from time import sleep
 fname = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQDdsyiuh00D7PGFQ5HHUjtYIqhSnBt96vltbuMJUbkNRch6Nm6fhJjYwvUn9auOzr8-obG3owlyBUU/pub?gid=1350682285&single=true&output=csv'
 
 df = pd.read_csv(fname)
-split_dois = df.DOI.str.split(pat='[,|\s]+')
+split_dois = df.DOIs.str.split(pat='[,|\s]+')
 all_dois = pd.Series([i for items in split_dois.values for i in items])
 clean_dois = all_dois.str.replace('http://|https://', '').str.replace('dx.doi.org/|doi.org/', '').unique()
 
