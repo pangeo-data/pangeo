@@ -199,7 +199,7 @@ command
 
    kubectl --namespace=pangeo get svc proxy-public
 
-Here's what we see for pangeo.pydata.org when we run this commmand::
+Here's what we see for hub.pangeo.io when we run this commmand::
 
   NAME           TYPE           CLUSTER-IP      EXTERNAL-IP    PORT(S)        AGE
   proxy-public   LoadBalancer   10.23.255.193   35.224.8.169   80:30442/TCP   18d

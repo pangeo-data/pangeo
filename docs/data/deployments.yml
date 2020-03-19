@@ -44,15 +44,6 @@
   access: Used by Pangeo core developers, need a github account and specific authorization
   kind: pangeo_cloud
 
-- name: pangeo.pydata.org
-  description: Former flagship Pangeo JupyterHub server for scalable interactive data analysis running on Google Cloud Platform
-  link: http://pangeo.pydata.org
-  platform: Google Cloud Platform
-  dask: dask-kubernetes
-  jupyter: JupyterHub
-  access: Soon being closed
-  kind: pangeo_cloud
-
 - name: binder.pangeo.io
   description: Flagship Pangeo BinderHub deployment running on Google Cloud Platform
   link: http://binder.pangeo.io/

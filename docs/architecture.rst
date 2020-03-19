@@ -90,7 +90,7 @@ Cloud
 Commercial Cloud Computing offers the scientific community a fundamentally new
 model for doing data science. A specific focus of Pangeo is the development of
 scalable, flexible, and configurable cloud deployments. Our flagship deployment
-is `pangeo.pydata.org <http://pangeo.pydata.org>`__ running on Google Cloud
+is `hub.pangeo.io <https://hub.pangeo.io>`__ running on Google Cloud
 Platform.
 
 Storage Formats
