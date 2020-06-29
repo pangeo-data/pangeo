@@ -3,7 +3,7 @@
 Pangeo Cloud
 ============
 
-Pangeo cloud is an experimental service providing cloud-based data-science
+Pangeo Cloud is an experimental service providing cloud-based data-science
 environments.
 
 .. warning::
