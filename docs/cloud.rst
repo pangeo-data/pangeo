@@ -8,7 +8,7 @@ environments.
 
 .. warning::
     We currently have no long-term funding to support Pangeo Cloud.
-    At present, cobble together funding from various grants from funding
+    At present, we've cobbled together funding from various grants from funding
     agencies and cloud providers.
     All users must understand that Pangeo Cloud environments could disappear
     at any time.
