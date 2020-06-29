@@ -1,12 +1,6 @@
 sphinx==1.6.5
 sphinx_pangeo_theme==0.2
-jupyter
-ipython
-pandas # needed to build publications
-nbconvert==5.4.1
-nbsphinx==0.4.3
 doctr>=1.6.3
-sphinx-nbexamples
 sphinx-copybutton==0.2.5
 sphinxcontrib-srclinks
 # we need to eventually upgrade sphinx in order to unpin

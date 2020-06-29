@@ -37,21 +37,10 @@ extensions = [
     'sphinx.ext.intersphinx',
     'sphinx.ext.todo',
     'sphinx.ext.mathjax',
-    'nbsphinx',
-    'sphinx_nbexamples',
     'sphinx_copybutton',
     'sphinxcontrib.bibtex',
     'sphinxcontrib.srclinks']
 
-example_gallery_config = dict(
-    dont_preprocess=True,
-    examples_dirs=['../use_cases'],
-    gallery_dirs=['use_cases'],
-    pattern='.+.ipynb',
-    )
-
-# https://nbsphinx.readthedocs.io/en/0.2.16/never-execute.html
-nbsphinx_execute = 'never'
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -67,7 +56,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'Pangeo'
-copyright = '2018, Pangeo Team'
+copyright = '2018-2020, Pangeo Team'
 author = 'Pangeo Team'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -233,17 +222,3 @@ def setup(app):
     app.add_stylesheet("example_gallery_styles_patched.css")
     app.add_stylesheet("pangeo-main-site-custom.css")
     app.connect("source-read", rstjinja)
-
-# a hack to get our custom people data into sphinx
-import yaml
-with open('data/people.yml') as people_data_file:
-    people = yaml.load(people_data_file)
-people.sort(key=lambda x: x['last_name'].lower())
-
-with open('data/deployments.yml') as deployments_data_file:
-    deployments = yaml.load(deployments_data_file)
-
-html_context = {
-    'people': people,
-    'deployments': deployments
-}

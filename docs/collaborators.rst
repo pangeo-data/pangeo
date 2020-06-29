@@ -1,7 +1,7 @@
 .. _collaborators:
 
-Collaborators
-=============
+Funders and Collaborators
+=========================
 
 A range of funding agencies, academic institutions, companies, and individuals
 contribute to Pangeo in different ways.
@@ -144,7 +144,7 @@ programmers at UW are active in the development of Pangeo cloud architecture
 and scientific applications.
 
 Element84
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~
 
 .. image:: _static/e84-logo.svg
    :height: 50px
@@ -157,5 +157,8 @@ of data-discovery tools in the Pangeo ecosystem.
 People
 ------
 
-These individuals identify themselves as contributors to Pangeo.
-Don't hesitate to ADD YOURSELF to the list.
+Given the informal nature of our project, Pangeo no longer attempts to maintain
+a comprehensive list of everyone involved in the collaboration.
+Currently active participants can be seen on our
+`Discourse Forum <https://discourse.pangeo.io/u>`_ and
+`GitHub Organization <https://github.com/orgs/pangeo-data/people>`_
