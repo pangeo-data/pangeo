@@ -27,6 +27,38 @@ and its technical suitability for Pangeo Cloud.
 
 .. _Pangeo Cloud Application: https://forms.gle/J3hVVBgobwpYVWHF8
 
+
+Getting Support
+----------------
+
+We would like for Pangeo Cloud to one day be a full-featured, professional
+service. **But it's not yet!**
+It is an experiment, run by scientists and hackers who devote
+their nights and weekends to this project.
+Professional level support (a service-level agreement, a 24-hour helpdesk) is non-existent.
+
+With those caveats, support requests for Pangeo Cloud can be made on our Discourse forum
+
+- https://discourse.pangeo.io/c/Cloud/Tech-support-forum-for-Pangeo-Cloud/17
+
+We use this forum to track technical support requests for Pangeo Cloud.
+Someone will do their best to respond to you as quickly as possible given the circumstances.
+This is not a place for general support requests about scientific python.
+This forum is specific to issues related to Pangeo Cloud such as:
+
+- login problems
+- environment configuration
+- reading / writing cloud data
+- Dask Gateway on Pangeo Cloud
+
+In making a support request, please provide the following information:
+
+- Which cluster are you using (e.g. ``us-central1-b.gcp.pangeo.io``)
+- A concise summary of your problem
+- If your problem involves code, please do your best to include a
+  `minimum reproducible example <https://matthewrocklin.com/blog/work/2018/02/28/minimal-bug-reports>`_
+
+
 Clusters
 --------
 
