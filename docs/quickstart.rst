@@ -44,8 +44,8 @@ analysis you want to do and modify it to suit your needs.
 A great way for novices to learn how to use Pangeo is to start from one of these
 use cases and modify it for your needs.
 
-Try Out a Pangeo
----------------------------
+Try Out a Pangeo Environment
+----------------------------
 
 The best way to try out Pangeo is to explore one of the interactive
 Binders in `Pangeo Gallery`_.
@@ -68,7 +68,7 @@ Contribute a Use Case
 ---------------------
 
 If you are using Pangeo for your research, we would love to include an example
-in the :ref:`Pangeo Gallery`. It's easy to add a new gallery!
+in the `Pangeo Gallery`_. It's easy to add a new gallery!
 Feel free to raise an issue on the `Pangeo Discourse Forum`_ to propose your
 use case.
 
@@ -79,7 +79,7 @@ Datasets are central to Pangeo. Our goal is to bring the computing to the data,
 rather than the other way around.
 If you have data you would like to make accessible to Pangeo, your best bet is
 to place it on a large shared HPC cluster or in cloud storage.
-You can then add your dataset to `catalog.pangeo.io <https://catalog.pangeo.io`_.
+You can then add your dataset to `catalog.pangeo.io <https://catalog.pangeo.io>`_.
 via the GitHub repo `https://github.com/pangeo-data/pangeo-datastore <https://github.com/pangeo-data/pangeo-datastore>`_.
 
 Become an Open Source Contributor

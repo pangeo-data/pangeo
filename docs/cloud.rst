@@ -34,7 +34,10 @@ Pangeo Cloud currently comprises two different computing clusters:
 
 - `us-central1-b.gcp.pangeo.io <https://us-central1-b.gcp.pangeo.io/>`_: A cluster in
   Google Cloud Platform.
-- `uswest2.pangeo.io <https://uswest2.pangeo.io>`_: A cluster in AWS.
+- `aws-uswest2.pangeo.io <https://aws-uswest2.pangeo.io>`_: A cluster in AWS.
+
+We recommend choosing a cluster based on which data you want to access.
+E.g. if your data live primarily in AWS, choose ``aws-uswest2``.
 
 Once your application is approved, you will be able to log in to the resources
 you requested.
@@ -195,7 +198,68 @@ bucket are pre-loaded into your Pangeo Cloud environment.
     Any data in scratch buckets will be deleted once it is 7 days old.
     Do not use scratch buckets to store data permanently.
 
-Dask Gateway
-------------
+The location of your scratch bucket is contained in the environment variable ``PANGEO_SCRATCH``.
+To create mutable mapping that can write to your scratch bucket with zarr,
+the following code should work::
 
-TODO: write about how to use Dask Gateway.
+   import os
+   PANGEO_SCRATCH = os.environ['PANGEO_SCRATCH']
+   # -> gs://pangeo-scratch/<username>
+   import fsspec
+   mapper = fsspec.get_mapper(f'PANGEO_SCRATCH/sub/path')
+   # mapper can now be to read / write zarr stores
+
+.. warning::
+    A common set of credentials is currently used for accessing scratch buckets.
+    This means users can read, and potentially remove / overwrite, each others'
+    data. You can avoid this problem by always using ``PANGEO_SCRATCH`` as a prefix.
+    Still, you should not store any sensitive or mission-critical data in
+    the scratch bucket.
+
+
+Dask
+----
+
+`Dask <http://dask.pydata.org/>`_ is an important component of Pangeo Cloud and can be used to help parallelize large calculations.
+All environments support the standard multi-threaded dask scheduler, and by default,
+zarr-backed cloud data datasets will open in Xarray as collections of Dask arrays.
+
+Guidelines for using Dask
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+- Familiarize yourself with `Dask best practices <https://docs.dask.org/en/latest/array-best-practices.html>`_.
+- Don’t use Dask! Or more specifically, only use a distributed cluster if you really need it, i.e. if your calculations are running out of memory or are taking an unacceptably long time to complete.
+- Start small; work on a small subset of your problem to debug before scaling up to a very large dataset.
+- If you use a distributed cluster, use `adapative mode <https://jobqueue.dask.org/en/latest/index.html#adaptivity>`_ rather than a fixed size cluster; this will help share resources more effectively.
+- Use the Dask dashboard heavily to monitor the activity of your cluster.
+
+Dask Gateway
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Pangeo cloud environments are configured to work with
+`Dask Gateway <https://gateway.dask.org/>`_.
+Dask gateway gives you the power to create a distributed cluster using many
+cloud compute nodes. *Please use this power carefully!*
+Avoid large, long-running, idle clusters, which are a waste of Pangeo's limited cloud computing budget.
+Only use a cluster while you need
+
+To create a cluster first connect to the gateway, create the cluster, and then connect to it::
+
+    from dask.distributed import Client
+    from dask_gateway import Gateway
+    gateway = Gateway()  # connect to Gateway
+    cluster = gateway.new_cluster()  # create cluster
+    cluster.adapt(minimum=2, maximum=10) # adaptive mode
+    client = Client(cluster)  # connect Client to Cluster
+    # Dask computations are now automatically routed through the cluster
+    # When you're done computing:
+    client.close()
+    cluster.close()
+
+You can specify custom options for your cluster as follows::
+
+    import dask_gateway
+    gateway = dask_gateway.Gateway()
+    options = gateway.cluster_options()
+    options.worker_memory = 10 # each worker will have 10 GB of memory
+    cluster = gateway.new_cluster(options)
