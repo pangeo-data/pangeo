@@ -79,9 +79,6 @@
     {%- block sidebar1 %}{{ bsidebar() }}{% endblock %}
     <div class="{{ bs_span_prefix }}{{ bs_content_width }} content {{ content_class }}">
       {% block body %}{% endblock %}
-      {% if pagename == 'collaborators' %}
-          {% include 'people.html' %}
-      {% endif %}
     </div>
     {% block sidebar2 %} {# possible location for sidebar #} {% endblock %}
   </div>

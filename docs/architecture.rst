@@ -89,9 +89,11 @@ Cloud
 
 Commercial Cloud Computing offers the scientific community a fundamentally new
 model for doing data science. A specific focus of Pangeo is the development of
-scalable, flexible, and configurable cloud deployments. Our flagship deployment
-is `pangeo.pydata.org <http://pangeo.pydata.org>`__ running on Google Cloud
-Platform.
+scalable, flexible, and configurable cloud deployments.
+Detailed information about deploying Pangeo on the cloud can be found at
+`https://github.com/pangeo-data/pangeo-cloud-federation/ <https://github.com/pangeo-data/pangeo-cloud-federation/>`_.
+
+Pangeo currently operates an experimental service called :ref:`Pangeo Cloud`.
 
 Storage Formats
 ---------------
@@ -102,15 +104,13 @@ HDF and NetCDF
 The Hierarchical Data Format (HDF) and the Network Common Data Format (NetCDF)
 are two of the most common on-disk storage layers across the geosciences. The
 ability to read and write datasets in these common formats in a scalable manor,
-in conjunction with the rest of the Pangeo stack, is an ongoing focus of Pangeo.
+in conjunction with the rest of the Pangeo stack, is an ongoing focus.
 
 Storage on the Cloud
 ~~~~~~~~~~~~~~~~~~~~
 
-How we should store large N-dimensional arrays in the cloud storage context is
-an open question. Pangeo is developing `evaluation tools
-<https://github.com/pangeo-data/storage-benchmarks>`_ to help better understand
-the performance of current methods for storing complex data in the cloud.
+Our project is experimenting with a range of cloud-native storage formats, including
+Zarr_, TileDB_, and Parquet_.
 
 
 .. _Xarray: http://xarray.pydata.org
@@ -118,3 +118,6 @@ the performance of current methods for storing complex data in the cloud.
 .. _Pandas: https://pandas.pydata.org
 .. _NumPy: http://www.numpy.org/
 .. _Jupyter: https://jupyter.org
+.. _Zarr: http://zarr.readthedocs.io/
+.. _TileDB: https://tiledb.com/
+.. _Parquet: https://parquet.apache.org/
