@@ -13,21 +13,6 @@ environments.
     All users must understand that Pangeo Cloud environments could disappear
     at any time.
 
-Sign Up
--------
-
-Pangeo Cloud is available to researchers across the world engaged in
-data-intensive Earth and Environmental Science.
-Prospective users must apply using the following form:
-
-- `Pangeo Cloud Application`_
-
-Access will be granted based on a review of the proposed research project
-and its technical suitability for Pangeo Cloud.
-
-.. _Pangeo Cloud Application: https://forms.gle/J3hVVBgobwpYVWHF8
-
-
 Getting Support
 ----------------
 
@@ -59,6 +44,25 @@ In making a support request, please provide the following information:
   `minimum reproducible example <https://matthewrocklin.com/blog/work/2018/02/28/minimal-bug-reports>`_
 
 
+Sign Up
+-------
+
+Pangeo Cloud is available to researchers across the world engaged in
+data-intensive Earth and Environmental Science.
+Prospective users must apply using the following form:
+
+- `Pangeo Cloud Application`_
+
+Access will be granted based on a review of the proposed research project
+and its technical suitability for Pangeo Cloud.
+
+.. _Pangeo Cloud Application: https://forms.gle/J3hVVBgobwpYVWHF8
+
+If your application is approved, you will receive an invitation to join
+a GitHub Team in the ``pangeo-data`` organization.
+You must accept this invitation to gain access to Pangeo Cloud resources.
+
+
 Clusters
 --------
 
@@ -73,6 +77,7 @@ E.g. if your data live primarily in AWS, choose ``aws-uswest2``.
 
 Once your application is approved, you will be able to log in to the resources
 you requested.
+
 
 Software Environment
 --------------------
@@ -90,7 +95,7 @@ this repository.
 Users may use ``pip`` and ``conda`` to install new packages in their own
 environments, but this approach currently has some limitations
 
-- The environment will be reset back ot the base environment every time the
+- The environment will be reset back to the base environment every time the
   user logs out of the cluster.
 - Changes in environment cannot be propagated to Dask workers.
 
@@ -266,14 +271,16 @@ Guidelines for using Dask
 - Use the Dask dashboard heavily to monitor the activity of your cluster.
 
 Dask Gateway
-^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^
 
 Pangeo cloud environments are configured to work with
 `Dask Gateway <https://gateway.dask.org/>`_.
 Dask gateway gives you the power to create a distributed cluster using many
 cloud compute nodes. *Please use this power carefully!*
-Avoid large, long-running, idle clusters, which are a waste of Pangeo's limited cloud computing budget.
-Only use a cluster while you need
+
+.. warning::
+    Avoid large, long-running, idle clusters, which are a waste of Pangeo's limited cloud computing budget.
+    Only use a cluster while you need
 
 To create a cluster first connect to the gateway, create the cluster, and then connect to it::
 
