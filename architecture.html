@@ -6,7 +6,6 @@
     <title>Technical Architecture &#8212; Pangeo  documentation</title>
     <link rel="stylesheet" href="_static/pangeo-style.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/example_gallery_styles.css" type="text/css" />
     <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
     <link rel="stylesheet" href="_static/example_gallery_styles_patched.css" type="text/css" />
     <link rel="stylesheet" href="_static/pangeo-main-site-custom.css" type="text/css" />
@@ -26,7 +25,6 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
     <script type="text/javascript" src="_static/copybutton.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
     <script type="text/javascript" src="_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
@@ -36,7 +34,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Deployment Setup Guides" href="setup_guides/index.html" />
-    <link rel="prev" title="Pangeo and Data" href="data.html" />
+    <link rel="prev" title="Pangeo Gallery" href="gallery.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -87,7 +85,7 @@
 <li class="toctree-l1"><a class="reference internal" href="quickstart.html">Guide for Scientists</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="quickstart.html#learn-about-pangeo-software">Learn About Pangeo Software</a></li>
 <li class="toctree-l2"><a class="reference internal" href="quickstart.html#explore-the-use-cases">Explore the Use Cases</a></li>
-<li class="toctree-l2"><a class="reference internal" href="quickstart.html#try-out-a-pangeo-deployment">Try Out a Pangeo Deployment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#try-out-a-pangeo-environment">Try Out a Pangeo Environment</a></li>
 <li class="toctree-l2"><a class="reference internal" href="quickstart.html#give-feedback">Give Feedback</a></li>
 <li class="toctree-l2"><a class="reference internal" href="quickstart.html#contribute-a-use-case">Contribute a Use Case</a></li>
 <li class="toctree-l2"><a class="reference internal" href="quickstart.html#contribute-data">Contribute Data</a></li>
@@ -100,12 +98,7 @@
 <li class="toctree-l2"><a class="reference internal" href="packages.html#guidelines-for-new-packages">Guidelines for New Packages</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="use_cases/index.html">Geoscience Use Cases</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="use_cases/physical-oceanography/index.html">Physical Oceanography</a></li>
-<li class="toctree-l2"><a class="reference internal" href="use_cases/climate-modeling/index.html">Climate modeling</a></li>
-<li class="toctree-l2"><a class="reference internal" href="use_cases/meteorology/index.html">Meteorology</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="gallery.html">Pangeo Gallery</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Technical Architecture</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#where-we-began">Where we began</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#interoperability-in-pangeo">Interoperability in Pangeo</a></li>
@@ -119,10 +112,16 @@
 <li class="toctree-l2"><a class="reference internal" href="setup_guides/index.html#setting-up-pangeo-on-cloud-systems">Setting up Pangeo on Cloud Systems</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="deployments.html">Deployments</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="deployments.html#pangeo-provided-cloud-deployments">Pangeo provided Cloud Deployments</a></li>
-<li class="toctree-l2"><a class="reference internal" href="deployments.html#other-cloud-deployments">Other Cloud deployments</a></li>
-<li class="toctree-l2"><a class="reference internal" href="deployments.html#high-performance-computing-deployments">High Performance Computing Deployments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cloud.html">Pangeo Cloud</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cloud.html#getting-support">Getting Support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud.html#sign-up">Sign Up</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud.html#clusters">Clusters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud.html#software-environment">Software Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud.html#hardware-environment">Hardware Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud.html#your-home-directory">Your Home Directory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud.html#ssh-keys">SSH Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud.html#cloud-object-storage">Cloud Object Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud.html#dask">Dask</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="data.html">Pangeo and Data</a><ul>
@@ -131,7 +130,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="catalog.html">Pangeo Data Catalog</a></li>
-<li class="toctree-l1"><a class="reference internal" href="collaborators.html">Collaborators</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="collaborators.html">Funders and Collaborators</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="collaborators.html#funding-agencies">Funding Agencies</a></li>
 <li class="toctree-l2"><a class="reference internal" href="collaborators.html#institutions">Institutions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="collaborators.html#people">People</a></li>
@@ -152,7 +151,12 @@
 <li class="toctree-l2"><a class="reference internal" href="meetings/index.html#past-meetings">Past Meetings</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="contact.html">Contact Pangeo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contact.html">Contact Pangeo</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="contact.html#discourse">Discourse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contact.html#github">Github</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contact.html#other-media">Other Media</a></li>
+</ul>
+</li>
 </ul>
 </ul>
 </li>
@@ -196,7 +200,7 @@
               
                 
   <li>
-    <a href="data.html" title="Previous Chapter: Pangeo and Data"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Pangeo and Data</span>
+    <a href="gallery.html" title="Previous Chapter: Pangeo Gallery"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Pangeo Gallery</span>
     </a>
   </li>
   <li>
@@ -329,9 +333,10 @@ be used to facilitate rapid scientific analysis.</p>
 <h3>Cloud<a class="headerlink" href="#cloud" title="Permalink to this headline">¶</a></h3>
 <p>Commercial Cloud Computing offers the scientific community a fundamentally new
 model for doing data science. A specific focus of Pangeo is the development of
-scalable, flexible, and configurable cloud deployments. Our flagship deployment
-is <a class="reference external" href="http://pangeo.pydata.org">pangeo.pydata.org</a> running on Google Cloud
-Platform.</p>
+scalable, flexible, and configurable cloud deployments.
+Detailed information about deploying Pangeo on the cloud can be found at
+<a class="reference external" href="https://github.com/pangeo-data/pangeo-cloud-federation/">https://github.com/pangeo-data/pangeo-cloud-federation/</a>.</p>
+<p>Pangeo currently operates an experimental service called <span class="xref std std-ref">Pangeo Cloud</span>.</p>
 </div>
 </div>
 <div class="section" id="storage-formats">
@@ -341,19 +346,17 @@ Platform.</p>
 <p>The Hierarchical Data Format (HDF) and the Network Common Data Format (NetCDF)
 are two of the most common on-disk storage layers across the geosciences. The
 ability to read and write datasets in these common formats in a scalable manor,
-in conjunction with the rest of the Pangeo stack, is an ongoing focus of Pangeo.</p>
+in conjunction with the rest of the Pangeo stack, is an ongoing focus.</p>
 </div>
 <div class="section" id="storage-on-the-cloud">
 <h3>Storage on the Cloud<a class="headerlink" href="#storage-on-the-cloud" title="Permalink to this headline">¶</a></h3>
-<p>How we should store large N-dimensional arrays in the cloud storage context is
-an open question. Pangeo is developing <a class="reference external" href="https://github.com/pangeo-data/storage-benchmarks">evaluation tools</a> to help better understand
-the performance of current methods for storing complex data in the cloud.</p>
+<p>Our project is experimenting with a range of cloud-native storage formats, including
+<a class="reference external" href="http://zarr.readthedocs.io/">Zarr</a>, <a class="reference external" href="https://tiledb.com/">TileDB</a>, and <a class="reference external" href="https://parquet.apache.org/">Parquet</a>.</p>
 </div>
 </div>
 </div>
 
 
-      
     </div>
       
   </div>
@@ -365,7 +368,7 @@ the performance of current methods for storing complex data in the cloud.</p>
       
     </p>
     <p>
-        &copy; Copyright 2018, Pangeo Team.<br/>
+        &copy; Copyright 2018-2020, Pangeo Team.<br/>
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.<br/>
     </p>
   </div>

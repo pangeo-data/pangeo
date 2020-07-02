@@ -3,10 +3,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Deploying Pangeo on the Cloud &#8212; Pangeo  documentation</title>
+    <title>Deploying Pangeo in the Cloud &#8212; Pangeo  documentation</title>
     <link rel="stylesheet" href="../_static/pangeo-style.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/example_gallery_styles.css" type="text/css" />
     <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
     <link rel="stylesheet" href="../_static/example_gallery_styles_patched.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pangeo-main-site-custom.css" type="text/css" />
@@ -26,7 +25,6 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
     <script type="text/javascript" src="../_static/copybutton.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
@@ -87,7 +85,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Guide for Scientists</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../quickstart.html#learn-about-pangeo-software">Learn About Pangeo Software</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../quickstart.html#explore-the-use-cases">Explore the Use Cases</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../quickstart.html#try-out-a-pangeo-deployment">Try Out a Pangeo Deployment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quickstart.html#try-out-a-pangeo-environment">Try Out a Pangeo Environment</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../quickstart.html#give-feedback">Give Feedback</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../quickstart.html#contribute-a-use-case">Contribute a Use Case</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../quickstart.html#contribute-data">Contribute Data</a></li>
@@ -100,12 +98,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../packages.html#guidelines-for-new-packages">Guidelines for New Packages</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../use_cases/index.html">Geoscience Use Cases</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../use_cases/physical-oceanography/index.html">Physical Oceanography</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../use_cases/climate-modeling/index.html">Climate modeling</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../use_cases/meteorology/index.html">Meteorology</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../gallery.html">Pangeo Gallery</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../architecture.html">Technical Architecture</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../architecture.html#where-we-began">Where we began</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../architecture.html#interoperability-in-pangeo">Interoperability in Pangeo</a></li>
@@ -119,10 +112,16 @@
 <li class="toctree-l2 current"><a class="reference internal" href="index.html#setting-up-pangeo-on-cloud-systems">Setting up Pangeo on Cloud Systems</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../deployments.html">Deployments</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../deployments.html#pangeo-provided-cloud-deployments">Pangeo provided Cloud Deployments</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../deployments.html#other-cloud-deployments">Other Cloud deployments</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../deployments.html#high-performance-computing-deployments">High Performance Computing Deployments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cloud.html">Pangeo Cloud</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../cloud.html#getting-support">Getting Support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cloud.html#sign-up">Sign Up</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cloud.html#clusters">Clusters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cloud.html#software-environment">Software Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cloud.html#hardware-environment">Hardware Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cloud.html#your-home-directory">Your Home Directory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cloud.html#ssh-keys">SSH Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cloud.html#cloud-object-storage">Cloud Object Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cloud.html#dask">Dask</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../data.html">Pangeo and Data</a><ul>
@@ -131,7 +130,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../catalog.html">Pangeo Data Catalog</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../collaborators.html">Collaborators</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../collaborators.html">Funders and Collaborators</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../collaborators.html#funding-agencies">Funding Agencies</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../collaborators.html#institutions">Institutions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../collaborators.html#people">People</a></li>
@@ -152,7 +151,12 @@
 <li class="toctree-l2"><a class="reference internal" href="../meetings/index.html#past-meetings">Past Meetings</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../contact.html">Contact Pangeo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contact.html">Contact Pangeo</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../contact.html#discourse">Discourse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contact.html#github">Github</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contact.html#other-media">Other Media</a></li>
+</ul>
+</li>
 </ul>
 </ul>
 </li>
@@ -166,22 +170,7 @@
   <ul class="dropdown-menu localtoc"
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
-<li><a class="reference internal" href="#">Deploying Pangeo on the Cloud</a><ul>
-<li><a class="reference internal" href="#step-one-install-the-necessary-software">Step One: Install the Necessary Software</a><ul>
-<li><a class="reference internal" href="#google-cloud-sdk">Google Cloud SDK</a></li>
-<li><a class="reference internal" href="#kubernetes-kubectl">Kubernetes kubectl</a></li>
-<li><a class="reference internal" href="#helm-client">Helm Client</a></li>
-<li><a class="reference internal" href="#pangeo-scripts-template">Pangeo scripts template</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#step-two-create-a-kubernetes-cluster">Step Two: Create a Kubernetes Cluster</a></li>
-<li><a class="reference internal" href="#step-three-configure-kubernetes">Step Three: Configure Kubernetes</a></li>
-<li><a class="reference internal" href="#step-four-create-cluster-specific-configuration">Step Four: Create Cluster-Specific Configuration</a></li>
-<li><a class="reference internal" href="#step-five-deploy-helm-chart">Step Five: Deploy Helm Chart</a></li>
-<li><a class="reference internal" href="#upgrade-cluster">Upgrade Cluster</a></li>
-<li><a class="reference internal" href="#pangeo-helm-chart-and-docker-images">Pangeo Helm Chart and Docker Images</a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#">Deploying Pangeo in the Cloud</a></li>
 </ul>
 </ul>
 </li>
@@ -217,22 +206,7 @@
   <div class="row">
       <div class="col-md-3">
         <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
-<li><a class="reference internal" href="#">Deploying Pangeo on the Cloud</a><ul>
-<li><a class="reference internal" href="#step-one-install-the-necessary-software">Step One: Install the Necessary Software</a><ul>
-<li><a class="reference internal" href="#google-cloud-sdk">Google Cloud SDK</a></li>
-<li><a class="reference internal" href="#kubernetes-kubectl">Kubernetes kubectl</a></li>
-<li><a class="reference internal" href="#helm-client">Helm Client</a></li>
-<li><a class="reference internal" href="#pangeo-scripts-template">Pangeo scripts template</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#step-two-create-a-kubernetes-cluster">Step Two: Create a Kubernetes Cluster</a></li>
-<li><a class="reference internal" href="#step-three-configure-kubernetes">Step Three: Configure Kubernetes</a></li>
-<li><a class="reference internal" href="#step-four-create-cluster-specific-configuration">Step Four: Create Cluster-Specific Configuration</a></li>
-<li><a class="reference internal" href="#step-five-deploy-helm-chart">Step Five: Deploy Helm Chart</a></li>
-<li><a class="reference internal" href="#upgrade-cluster">Upgrade Cluster</a></li>
-<li><a class="reference internal" href="#pangeo-helm-chart-and-docker-images">Pangeo Helm Chart and Docker Images</a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#">Deploying Pangeo in the Cloud</a></li>
 </ul>
 
 <div class="widget navlinks">
@@ -246,194 +220,17 @@
       </div>
     <div class="col-md-9 content ">
       
-  <div class="section" id="deploying-pangeo-on-the-cloud">
-<span id="cloud"></span><h1>Deploying Pangeo on the Cloud<a class="headerlink" href="#deploying-pangeo-on-the-cloud" title="Permalink to this headline">¶</a></h1>
-<p>The commercial cloud is a powerful environment in which to deploy a Pangeo environment.
-However, cloud computing is unfamiliar to most researchers.
-The point of this guide is to describe how to setup up your own Pangeo cluster
-on the cloud platform of your choice, assuming zero knowledge of how the cloud works.
-We do assume you are comfortable using the unix command line and have access
-to one on your personal computer.</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">This guide, and the Pangeo cloud configuration in general, is based heavily
-on the <a class="reference external" href="https://zero-to-jupyterhub.readthedocs.io/en/latest/">Zero to Jupyterhub</a> guide. We strongly recommend that your read
-that guide closely if you want a more comprehensive understanding.</p>
-</div>
-<p>This guide covers deployment on <a class="reference external" href="https://cloud.google.com/">Google Cloud Platform</a>. There are also
-deployment instructions available for the <span class="xref std std-doc">Azure cloud platform</span>.
-We hope soon to expand this guide to also include deployment instructions for AWS.</p>
-<div class="section" id="step-one-install-the-necessary-software">
-<h2>Step One: Install the Necessary Software<a class="headerlink" href="#step-one-install-the-necessary-software" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="google-cloud-sdk">
-<span id="id1"></span><h3>Google Cloud SDK<a class="headerlink" href="#google-cloud-sdk" title="Permalink to this headline">¶</a></h3>
-<p>The Google Cloud SDK is the command-line interface for Google Cloud Platform
-products and services. Download and installation instructions are at
-<a class="reference external" href="https://cloud.google.com/sdk/downloads">https://cloud.google.com/sdk/downloads</a>.</p>
-</div>
-<div class="section" id="kubernetes-kubectl">
-<h3>Kubernetes kubectl<a class="headerlink" href="#kubernetes-kubectl" title="Permalink to this headline">¶</a></h3>
-<p><a class="reference external" href="https://kubernetes.io/docs/home/">Kubernetes</a> is an open source system for managing containerized applications in
-the cloud. The Kubernetes command-line tool, <code class="docutils literal"><span class="pre">kubectl</span></code>, allows you to deploy
-and manage applications on Kubernetes. It is necessary to deploy a Pangeo
-cluster.</p>
-<p>If you have already installed the Google Cloud SDK, the easiest way to install
-kubectl is to run the following command on the command line:</p>
-<p>gcloud components install kubectl</p>
-<p>More comprehensive documentation for installing Kubernetes can be found at
-<a class="reference external" href="https://kubernetes.io/docs/tasks/tools/install-kubectl/">https://kubernetes.io/docs/tasks/tools/install-kubectl/</a>.</p>
-</div>
-<div class="section" id="helm-client">
-<h3>Helm Client<a class="headerlink" href="#helm-client" title="Permalink to this headline">¶</a></h3>
-<p><a class="reference external" href="https://docs.helm.sh/">Helm</a> is a package manager for Kubernetes. Helm helps you automatically download
-and deploy the Pangeo default configuration for your cluster.</p>
-<p>To install the helm command line client, follow the installation instructions at
-<a class="reference external" href="https://docs.helm.sh/install/">https://docs.helm.sh/install/</a>.</p>
-<p>To do this in one line from the command line, run:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">curl</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">raw</span><span class="o">.</span><span class="n">githubusercontent</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">kubernetes</span><span class="o">/</span><span class="n">helm</span><span class="o">/</span><span class="n">master</span><span class="o">/</span><span class="n">scripts</span><span class="o">/</span><span class="n">get</span> <span class="o">|</span> <span class="n">bash</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="pangeo-scripts-template">
-<h3>Pangeo scripts template<a class="headerlink" href="#pangeo-scripts-template" title="Permalink to this headline">¶</a></h3>
-<p>Following chapters describe some batch scripts that are available in the pangeo
-repo. Clone the repo using git and go to the appropriate folder to use
-them</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>git clone https://github.com/pangeo-data/pangeo.git
-<span class="nb">cd</span> pangeo/gce/setup-guide
-</pre></div>
-</div>
-<p>You can then edit your configuration parameters in
-<code class="docutils literal"><span class="pre">gce-pangeo-environment.sh</span></code> file and then export them</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="nb">source</span> gce-pangeo-environment.sh
-</pre></div>
-</div>
-</div>
-</div>
-<div class="section" id="step-two-create-a-kubernetes-cluster">
-<h2>Step Two: Create a Kubernetes Cluster<a class="headerlink" href="#step-two-create-a-kubernetes-cluster" title="Permalink to this headline">¶</a></h2>
-<p>First, you must create an account on the cloud provider of your choice.
-Here we are using <a class="reference external" href="https://cloud.google.com/">Google Cloud Platform</a>.</p>
-<p>All Google Cloud services are provisioned within the context of a
-<a class="reference external" href="https://cloud.google.com/resource-manager/docs/creating-managing-projects">project</a>.
-If you haven’t done so already, you should create a project and switch to it
-in the Google Cloud console.
-From the <em>APIs and Services</em> section of the cloud console, you must then
-enable the Kubernetes Engine API for the project.</p>
-<p>To create the cluster from the command line, you must first be authenticated.
-Run the following from the commmand line:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>gcloud auth login
-</pre></div>
-</div>
-<p>Following this step, you will need to run a set of bash commands to
-create a cluster with the components that Pangeo requires:</p>
-<blockquote>
-<div><ul class="simple">
-<li>An incompressible default node pool for the Jupyterhub, web proxy, and user
-notebook servers.</li>
-<li>An auto scaling node pool for Dask workers.</li>
-</ul>
-</div></blockquote>
-<p>This script is availabe in pangeo/gce/setup-guide as <a class="reference external" href="https://github.com/pangeo-data/pangeo/blob/master/gce/setup-guide/1_create_cluster.sh">1_create_cluster.sh</a>, so
-you can use it directly.</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">If you expect your notebook images to be fairly large, it may be adventageous
-to setup your cluster to use faster SSD boot disks. This will typically provide
-faster boot times for notebooks and Dask workers. To do this, you’ll want
-to setup your cluster and any node pools with the <code class="docutils literal"><span class="pre">--disk-type</span> <span class="pre">pd-ssd</span></code> option.
-More information on how to configure SSD boot disks can be found in the <a class="reference external" href="https://cloud.google.com/kubernetes-engine/docs/how-to/custom-boot-disks">GCP
-documentation</a>.</p>
-</div>
-</div>
-<div class="section" id="step-three-configure-kubernetes">
-<h2>Step Three: Configure Kubernetes<a class="headerlink" href="#step-three-configure-kubernetes" title="Permalink to this headline">¶</a></h2>
-<p>This script sets up the Kubernetes <a class="reference external" href="https://kubernetes.io/docs/reference/access-authn-authz/rbac/">Role Based Access Control</a>
-necessary for a secure cluster deployment.</p>
-<p>This script is available in pangeo/gce/setup-guide as <a class="reference external" href="https://github.com/pangeo-data/pangeo/blob/master/gce/setup-guide/2_configure_kubernetes.sh">2_configure_kubernetes.sh</a>.</p>
-</div>
-<div class="section" id="step-four-create-cluster-specific-configuration">
-<h2>Step Four: Create Cluster-Specific Configuration<a class="headerlink" href="#step-four-create-cluster-specific-configuration" title="Permalink to this headline">¶</a></h2>
-<p>There are two configuration files needed to deploy the Pangeo helm chart. Those
-files are available in the pangeo/gce/setup-guide folder of this repo. The
-first, <a class="reference external" href="https://github.com/pangeo-data/pangeo/blob/master/gce/setup-guide/jupyter_config.yaml">jupyter_config.yaml</a>, specifies modifications to the configuration
-that are unique to each deployment, so you will need to edit it.</p>
-<p>The most important thing to configure here is the  <code class="docutils literal"><span class="pre">loadBalancerIP</span></code>.
-If you have not <a class="reference external" href="https://cloud.google.com/compute/docs/ip-addresses/reserve-static-external-ip-address">reserved a static external IP</a>,
-you can do so by running:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>gcloud compute addresses create pangeo-jhubip --region $REGION
-gcloud compute addresses list | grep pangeo-jhubip
-</pre></div>
-</div>
-<p>The other file is <a class="reference external" href="https://github.com/pangeo-data/pangeo/blob/master/gce/setup-guide/secret_config.yaml">secret_config.yaml</a>, which specifies cluster specific
-encryption tokens.</p>
-<p>The jupyterhub proxy secret token is a random hash, which you can generate as follows:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>openssl rand -hex <span class="m">32</span>
-</pre></div>
-</div>
-<p>Replace <cite>&lt;SECRET&gt;</cite> in the <cite>secretToken</cite> section with the output of this (note:
-you will stilll need the quotes around this value)</p>
-<p>Most pangeo deployments use <a class="reference external" href="https://help.github.com/enterprise/2.13/admin/guides/user-management/using-github-oauth/">GitHub OAuth Callback</a>, (or <a class="reference external" href="https://developer.github.com/apps/building-oauth-apps/creating-an-oauth-app/">GitHub OAuth for developers</a>)
-to authenticate users.</p>
-<p>This authentication method needs an IP or domain name to work. This should be
-the IP you’ve reserved above, if you don’t have a domain name yet. Insert
-this IP in the following block:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">proxy</span><span class="p">:</span>
-    <span class="n">service</span><span class="p">:</span>
-      <span class="n">loadBalancerIP</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">GCE_EXTERNAL_IP</span><span class="o">&gt;</span>
-</pre></div>
-</div>
-<p>Instead of <cite>GCE_EXTERNAL_IP</cite>.</p>
-<p>Replace <cite>clientId</cite>, <cite>clientSecret</cite> and <cite>callbackUrl</cite> values in the
-<cite>secret_config.yaml</cite> file with the values obtained from the GitHub app that you
-create for this.</p>
-<p>Alternatively, you can also change authentication method, see the
-<a class="reference external" href="https://zero-to-jupyterhub.readthedocs.io/en/latest/">Zero to Jupyterhub</a> guide for more information on that.</p>
-</div>
-<div class="section" id="step-five-deploy-helm-chart">
-<h2>Step Five: Deploy Helm Chart<a class="headerlink" href="#step-five-deploy-helm-chart" title="Permalink to this headline">¶</a></h2>
-<p>The following script deploys the most recent Pangeo Helm chart to your
-Kubernetes cluster.</p>
-<p>If you want to use a specific version, check <a class="reference external" href="https://pangeo-data.github.io/helm-chart/">Pangeo Helm Chart</a> for the version you want. You can
-then add a <code class="docutils literal"><span class="pre">--version=0.1.1-a14d55b</span></code> argument (for example) to <code class="docutils literal"><span class="pre">helm</span>
-<span class="pre">install</span></code> command, only keeping the last part of the release, without
-the <code class="docutils literal"><span class="pre">pangeo-v</span></code> prefix from the helm chart web-page.</p>
-<p>This script is available as <a class="reference external" href="https://github.com/pangeo-data/pangeo/blob/master/gce/setup-guide/3_deploy_helm.sh">3_deploy_helm.sh</a> in the repo.</p>
-<p>If you have not specified a static IP address in your configuration, the
-jupyterhub will come up at a random IP address. To get the address, run the
-command</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>kubectl --namespace<span class="o">=</span>pangeo get svc proxy-public
-</pre></div>
-</div>
-<p>Here’s what we see for pangeo.pydata.org when we run this commmand:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">NAME</span>           <span class="n">TYPE</span>           <span class="n">CLUSTER</span><span class="o">-</span><span class="n">IP</span>      <span class="n">EXTERNAL</span><span class="o">-</span><span class="n">IP</span>    <span class="n">PORT</span><span class="p">(</span><span class="n">S</span><span class="p">)</span>        <span class="n">AGE</span>
-<span class="n">proxy</span><span class="o">-</span><span class="n">public</span>   <span class="n">LoadBalancer</span>   <span class="mf">10.23</span><span class="o">.</span><span class="mf">255.193</span>   <span class="mf">35.224</span><span class="o">.</span><span class="mf">8.169</span>   <span class="mi">80</span><span class="p">:</span><span class="mi">30442</span><span class="o">/</span><span class="n">TCP</span>   <span class="mi">18</span><span class="n">d</span>
-</pre></div>
-</div>
-<p>The <code class="docutils literal"><span class="pre">EXTERNAL-IP</span></code> value is the address of the hub.</p>
-</div>
-<div class="section" id="upgrade-cluster">
-<h2>Upgrade Cluster<a class="headerlink" href="#upgrade-cluster" title="Permalink to this headline">¶</a></h2>
-<p>If you want to change the configuration, or to upgrade the cluster to a new
-version of the Helm Chart, run the following commmand (if you are just updating
-jupyterhub authentication IP, <code class="docutils literal"><span class="pre">--force</span></code> and <code class="docutils literal"><span class="pre">--recreate-pods</span></code> are not
-needed).</p>
-<p>The scripts <a class="reference external" href="https://github.com/pangeo-data/pangeo/blob/master/gce/setup-guide/4_upgrade_helm.sh">4_upgrade_helm.sh</a> and <a class="reference external" href="https://github.com/pangeo-data/pangeo/blob/master/gce/setup-guide/5_upgrade_helm_soft.sh">5_upgrade_helm_soft.sh</a> are available
-for that.</p>
-</div>
-<div class="section" id="pangeo-helm-chart-and-docker-images">
-<h2>Pangeo Helm Chart and Docker Images<a class="headerlink" href="#pangeo-helm-chart-and-docker-images" title="Permalink to this headline">¶</a></h2>
-<p>Pangeo maintains its own <a class="reference external" href="https://docs.helm.sh/">Helm</a> Chart and <a class="reference external" href="https://docker.com/">Docker</a> images. These hold the
-default configuration for a Pangeo cloud deployment. These items live in
-the Pangeo helm-chart repository:</p>
-<ul class="simple">
-<li><a class="reference external" href="https://github.com/pangeo-data/helm-chart">https://github.com/pangeo-data/helm-chart</a></li>
-</ul>
-</div>
+  <div class="section" id="deploying-pangeo-in-the-cloud">
+<span id="cloud-setup"></span><h1>Deploying Pangeo in the Cloud<a class="headerlink" href="#deploying-pangeo-in-the-cloud" title="Permalink to this headline">¶</a></h1>
+<p>Pangeo in the cloud is essentially a customized deployment of Jupyterhub.
+As a starting point, we recommend reading the <a class="reference external" href="https://zero-to-jupyterhub.readthedocs.io/en/latest/">Zero to Jupyterhub</a> guide.</p>
+<p>The Pangeo customizations are evolving rapidly.
+We hope to release an up-to-date deployment guide soon.
+For now, the best place to get information on deploying in the cloud is in the
+GitHub repo <a class="reference external" href="https://github.com/pangeo-data/pangeo-cloud-federation/">pangeo-data/pangeo-cloud-federation/</a>.</p>
 </div>
 
 
-      
     </div>
       
   </div>
@@ -445,7 +242,7 @@ the Pangeo helm-chart repository:</p>
       
     </p>
     <p>
-        &copy; Copyright 2018, Pangeo Team.<br/>
+        &copy; Copyright 2018-2020, Pangeo Team.<br/>
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.<br/>
     </p>
   </div>

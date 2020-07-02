@@ -6,7 +6,6 @@
     <title>Deployments &#8212; Pangeo  documentation</title>
     <link rel="stylesheet" href="_static/pangeo-style.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/example_gallery_styles.css" type="text/css" />
     <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
     <link rel="stylesheet" href="_static/example_gallery_styles_patched.css" type="text/css" />
     <link rel="stylesheet" href="_static/pangeo-main-site-custom.css" type="text/css" />
@@ -26,7 +25,6 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
     <script type="text/javascript" src="_static/copybutton.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
     <script type="text/javascript" src="_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
@@ -35,8 +33,6 @@
     <link rel="author" title="About these documents" href="about.html" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Pangeo and Data" href="data.html" />
-    <link rel="prev" title="US Precipitation and Temperature Analysis" href="use_cases/meteorology/newmann_ensemble_meteorology.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -75,7 +71,7 @@
      href="index.html">Site <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
       role="menu"
-      aria-labelledby="dLabelGlobalToc"><ul class="current">
+      aria-labelledby="dLabelGlobalToc"><ul>
 <li class="toctree-l1"><a class="reference internal" href="about.html">About Pangeo</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="about.html#motivation">Motivation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="about.html#mission-statement">Mission Statement</a></li>
@@ -84,10 +80,10 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="quickstart.html">Guide for Scientists</a><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Guide for Scientists</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="quickstart.html#learn-about-pangeo-software">Learn About Pangeo Software</a></li>
 <li class="toctree-l2"><a class="reference internal" href="quickstart.html#explore-the-use-cases">Explore the Use Cases</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="quickstart.html#try-out-a-pangeo-deployment">Try Out a Pangeo Deployment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#try-out-a-pangeo-environment">Try Out a Pangeo Environment</a></li>
 <li class="toctree-l2"><a class="reference internal" href="quickstart.html#give-feedback">Give Feedback</a></li>
 <li class="toctree-l2"><a class="reference internal" href="quickstart.html#contribute-a-use-case">Contribute a Use Case</a></li>
 <li class="toctree-l2"><a class="reference internal" href="quickstart.html#contribute-data">Contribute Data</a></li>
@@ -100,12 +96,7 @@
 <li class="toctree-l2"><a class="reference internal" href="packages.html#guidelines-for-new-packages">Guidelines for New Packages</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="use_cases/index.html">Geoscience Use Cases</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="use_cases/physical-oceanography/index.html">Physical Oceanography</a></li>
-<li class="toctree-l2"><a class="reference internal" href="use_cases/climate-modeling/index.html">Climate modeling</a></li>
-<li class="toctree-l2"><a class="reference internal" href="use_cases/meteorology/index.html">Meteorology</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="gallery.html">Pangeo Gallery</a></li>
 <li class="toctree-l1"><a class="reference internal" href="architecture.html">Technical Architecture</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="architecture.html#where-we-began">Where we began</a></li>
 <li class="toctree-l2"><a class="reference internal" href="architecture.html#interoperability-in-pangeo">Interoperability in Pangeo</a></li>
@@ -119,10 +110,16 @@
 <li class="toctree-l2"><a class="reference internal" href="setup_guides/index.html#setting-up-pangeo-on-cloud-systems">Setting up Pangeo on Cloud Systems</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Deployments</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#pangeo-provided-cloud-deployments">Pangeo provided Cloud Deployments</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#other-cloud-deployments">Other Cloud deployments</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#high-performance-computing-deployments">High Performance Computing Deployments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cloud.html">Pangeo Cloud</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cloud.html#getting-support">Getting Support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud.html#sign-up">Sign Up</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud.html#clusters">Clusters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud.html#software-environment">Software Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud.html#hardware-environment">Hardware Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud.html#your-home-directory">Your Home Directory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud.html#ssh-keys">SSH Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud.html#cloud-object-storage">Cloud Object Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud.html#dask">Dask</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="data.html">Pangeo and Data</a><ul>
@@ -131,7 +128,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="catalog.html">Pangeo Data Catalog</a></li>
-<li class="toctree-l1"><a class="reference internal" href="collaborators.html">Collaborators</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="collaborators.html">Funders and Collaborators</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="collaborators.html#funding-agencies">Funding Agencies</a></li>
 <li class="toctree-l2"><a class="reference internal" href="collaborators.html#institutions">Institutions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="collaborators.html#people">People</a></li>
@@ -152,7 +149,12 @@
 <li class="toctree-l2"><a class="reference internal" href="meetings/index.html#past-meetings">Past Meetings</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="contact.html">Contact Pangeo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contact.html">Contact Pangeo</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="contact.html#discourse">Discourse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contact.html#github">Github</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contact.html#other-media">Other Media</a></li>
+</ul>
+</li>
 </ul>
 </ul>
 </li>
@@ -166,16 +168,7 @@
   <ul class="dropdown-menu localtoc"
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
-<li><a class="reference internal" href="#">Deployments</a><ul>
-<li><a class="reference internal" href="#pangeo-provided-cloud-deployments">Pangeo provided Cloud Deployments</a><ul>
-<li><a class="reference internal" href="#test-development-and-binder-hubs">Test, development and Binder hubs</a></li>
-<li><a class="reference internal" href="#domain-specific-deployments">Domain specific deployments</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#other-cloud-deployments">Other Cloud deployments</a></li>
-<li><a class="reference internal" href="#high-performance-computing-deployments">High Performance Computing Deployments</a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#">Deployments</a></li>
 </ul>
 </ul>
 </li>
@@ -184,14 +177,6 @@
             
               
                 
-  <li>
-    <a href="use_cases/meteorology/newmann_ensemble_meteorology.html" title="Previous Chapter: US Precipitation and Temperature Analysis"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; US Precipitat...</span>
-    </a>
-  </li>
-  <li>
-    <a href="data.html" title="Next Chapter: Pangeo and Data"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Pangeo and Data &raquo;</span>
-    </a>
-  </li>
               
             
             
@@ -211,16 +196,7 @@
   <div class="row">
       <div class="col-md-3">
         <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
-<li><a class="reference internal" href="#">Deployments</a><ul>
-<li><a class="reference internal" href="#pangeo-provided-cloud-deployments">Pangeo provided Cloud Deployments</a><ul>
-<li><a class="reference internal" href="#test-development-and-binder-hubs">Test, development and Binder hubs</a></li>
-<li><a class="reference internal" href="#domain-specific-deployments">Domain specific deployments</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#other-cloud-deployments">Other Cloud deployments</a></li>
-<li><a class="reference internal" href="#high-performance-computing-deployments">High Performance Computing Deployments</a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#">Deployments</a></li>
 </ul>
 
 <div class="widget navlinks">
@@ -236,934 +212,13 @@
       
   <div class="section" id="deployments">
 <span id="id1"></span><h1>Deployments<a class="headerlink" href="#deployments" title="Permalink to this headline">¶</a></h1>
-<p>This is a list of Pangeo deployments either provided by us for development and
-demonstration purpose, or other platforms that we know about. If you have
-deployed something like pangeo on either a HPC or cloud computing system,
-please let us know via an issue or Pull Request through
-<a class="reference external" href="https://github.com/pangeo-data/pangeo/">github</a>.</p>
-<p>For more information on how pangeo is deployed on these systems, checkout our
-<a class="reference external" href="setup_guides/index.html">setup guides</a>.</p>
-<div class="section" id="pangeo-provided-cloud-deployments">
-<h2>Pangeo provided Cloud Deployments<a class="headerlink" href="#pangeo-provided-cloud-deployments" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="test-development-and-binder-hubs">
-<h3>Test, development and Binder hubs<a class="headerlink" href="#test-development-and-binder-hubs" title="Permalink to this headline">¶</a></h3>
-<p>Those are deployments managed by Pangeo collaborators and open to everyone,
-usually by Pangeo github organization public membership for the standard
-Jupyterhubs, and with no restriction for Binder hubs. All of them rely
-on <a class="reference external" href="https://kubernetes.dask.org">dask-kubernetes</a> for (auto)scaling.</p>
-<table class="table table-striped large">
-
-
-
-
-
-
-    <tr>
-      <td>
-        <ul class="list-inline">
-          <li><strong>hub.pangeo.io</strong></li>
-
-          <li>
-              <a class="icon" href="https://hub.pangeo.io">
-                  <span class="fa-stack fa-lg">
-                    <i class="fa fa-external-link fa-stack-1x"></i>
-                  </span>
-              </a>
-          </li>
-
-        </ul>
-        <li><em>Description: Flagship Pangeo JupyterHub server for scalable interactive data analysis running on Google Cloud Platform</em></li>
-        <li><em>Cloud provider: Google Cloud Platform</em></li>
-        <li><em>Jupyter Deployment: JupyterHub</em></li>
-        <li><em>Access: Need a github account part of the Pangeo organization with affiliaton set to public</em></li>
-
-      </td>
-    </tr>
-
-
-
-
-    <tr>
-      <td>
-        <ul class="list-inline">
-          <li><strong>example.pangeo.io</strong></li>
-
-          <li>
-              <a class="icon" href="https://example.pangeo.io">
-                  <span class="fa-stack fa-lg">
-                    <i class="fa fa-external-link fa-stack-1x"></i>
-                  </span>
-              </a>
-          </li>
-
-        </ul>
-        <li><em>Description: Pangeo demo and model for domain specific deployments</em></li>
-        <li><em>Cloud provider: Google Cloud Platform</em></li>
-        <li><em>Jupyter Deployment: JupyterHub</em></li>
-        <li><em>Access: Need a github account part of the Pangeo organization with affiliaton set to public</em></li>
-
-      </td>
-    </tr>
-
-
-
-
-    <tr>
-      <td>
-        <ul class="list-inline">
-          <li><strong>staging.pangeo.io</strong></li>
-
-          <li>
-              <a class="icon" href="https://staging.pangeo.io">
-                  <span class="fa-stack fa-lg">
-                    <i class="fa fa-external-link fa-stack-1x"></i>
-                  </span>
-              </a>
-          </li>
-
-        </ul>
-        <li><em>Description: Validation and integration environment for Pangeo platform</em></li>
-        <li><em>Cloud provider: Google Cloud Platform</em></li>
-        <li><em>Jupyter Deployment: JupyterHub</em></li>
-        <li><em>Access: Used by Pangeo core developers, need a github account and specific authorization</em></li>
-
-      </td>
-    </tr>
-
-
-
-
-    <tr>
-      <td>
-        <ul class="list-inline">
-          <li><strong>dev.pangeo.io</strong></li>
-
-          <li>
-              <a class="icon" href="https://dev.pangeo.io">
-                  <span class="fa-stack fa-lg">
-                    <i class="fa fa-external-link fa-stack-1x"></i>
-                  </span>
-              </a>
-          </li>
-
-        </ul>
-        <li><em>Description: Develoment environment for Pangeo platform, highly unstable</em></li>
-        <li><em>Cloud provider: Google Cloud Platform</em></li>
-        <li><em>Jupyter Deployment: JupyterHub</em></li>
-        <li><em>Access: Used by Pangeo core developers, need a github account and specific authorization</em></li>
-
-      </td>
-    </tr>
-
-
-
-
-    <tr>
-      <td>
-        <ul class="list-inline">
-          <li><strong>pangeo.pydata.org</strong></li>
-
-          <li>
-              <a class="icon" href="http://pangeo.pydata.org">
-                  <span class="fa-stack fa-lg">
-                    <i class="fa fa-external-link fa-stack-1x"></i>
-                  </span>
-              </a>
-          </li>
-
-        </ul>
-        <li><em>Description: Former flagship Pangeo JupyterHub server for scalable interactive data analysis running on Google Cloud Platform</em></li>
-        <li><em>Cloud provider: Google Cloud Platform</em></li>
-        <li><em>Jupyter Deployment: JupyterHub</em></li>
-        <li><em>Access: Soon being closed</em></li>
-
-      </td>
-    </tr>
-
-
-
-
-    <tr>
-      <td>
-        <ul class="list-inline">
-          <li><strong>binder.pangeo.io</strong></li>
-
-          <li>
-              <a class="icon" href="http://binder.pangeo.io/">
-                  <span class="fa-stack fa-lg">
-                    <i class="fa fa-external-link fa-stack-1x"></i>
-                  </span>
-              </a>
-          </li>
-
-        </ul>
-        <li><em>Description: Flagship Pangeo BinderHub deployment running on Google Cloud Platform</em></li>
-        <li><em>Cloud provider: Google Cloud Platform</em></li>
-        <li><em>Jupyter Deployment: BinderHub</em></li>
-        <li><em>Access: Anyone, look at http://binder.pangeo.io/v2/gh/pangeo-data/pangeo-example-notebooks/master</em></li>
-
-      </td>
-    </tr>
-
-
-
-
-    <tr>
-      <td>
-        <ul class="list-inline">
-          <li><strong>staging.binder.pangeo.io</strong></li>
-
-          <li>
-              <a class="icon" href="http://binder.pangeo.io/">
-                  <span class="fa-stack fa-lg">
-                    <i class="fa fa-external-link fa-stack-1x"></i>
-                  </span>
-              </a>
-          </li>
-
-        </ul>
-        <li><em>Description: Developement and integration Pangeo BinderHub deployment running on Google Cloud Platform</em></li>
-        <li><em>Cloud provider: Google Cloud Platform</em></li>
-        <li><em>Jupyter Deployment: BinderHub</em></li>
-        <li><em>Access: Used by Pangeo core developers</em></li>
-
-      </td>
-    </tr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</table></div>
-<div class="section" id="domain-specific-deployments">
-<h3>Domain specific deployments<a class="headerlink" href="#domain-specific-deployments" title="Permalink to this headline">¶</a></h3>
-<p>Those are designed specifically for domain use cases and communities,
-allowing to customize both infrastructure and software environment
-toward a particular need. If you’re interested in one of this deployment,
-please contact one of its responsible.</p>
-<p>All deployments here use standard Jupyterhub and dask-kubernetes.</p>
-<table class="table table-striped large">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <tr>
-      <td>
-        <ul class="list-inline">
-          <li><strong>atmos.pangeo.io</strong></li>
-
-          <li>
-              <a class="icon" href="http://atmos.pangeo.io">
-                  <span class="fa-stack fa-lg">
-                    <i class="fa fa-external-link fa-stack-1x"></i>
-                  </span>
-              </a>
-          </li>
-
-        </ul>
-        <li><em>Description: Pangeo platform for developing atmospheric use cases</em></li>
-        <li><em>Cloud provider: Google Cloud Platform</em></li>
-        <li><em>Access: Ask @charlesbluca and @biasuttimic on https://github.com/pangeo-data/atmos.pangeo.io-deploy/</em></li>
-
-      </td>
-    </tr>
-
-
-
-
-    <tr>
-      <td>
-        <ul class="list-inline">
-          <li><strong>hydroshare.pangeo.io</strong></li>
-
-          <li>
-              <a class="icon" href="http://hydroshare.pangeo.io">
-                  <span class="fa-stack fa-lg">
-                    <i class="fa fa-external-link fa-stack-1x"></i>
-                  </span>
-              </a>
-          </li>
-
-        </ul>
-        <li><em>Description: Pangeo platform for developing hydrologic use cases</em></li>
-        <li><em>Cloud provider: Google Cloud Platform</em></li>
-        <li><em>Access: Ask @jhamman or @bartnijssen</em></li>
-
-      </td>
-    </tr>
-
-
-
-
-    <tr>
-      <td>
-        <ul class="list-inline">
-          <li><strong>polar.pangeo.io</strong></li>
-
-          <li>
-              <a class="icon" href="http://polar.pangeo.io">
-                  <span class="fa-stack fa-lg">
-                    <i class="fa fa-external-link fa-stack-1x"></i>
-                  </span>
-              </a>
-          </li>
-
-        </ul>
-        <li><em>Description: Pangeo platform for developing polar use cases</em></li>
-        <li><em>Cloud provider: Google Cloud Platform</em></li>
-        <li><em>Access: Ask @NicWayand on https://github.com/NicWayand/polar.pangeo.io-deploy</em></li>
-
-      </td>
-    </tr>
-
-
-
-
-    <tr>
-      <td>
-        <ul class="list-inline">
-          <li><strong>astro.pangeo.io</strong></li>
-
-          <li>
-              <a class="icon" href="http://astro.pangeo.io">
-                  <span class="fa-stack fa-lg">
-                    <i class="fa fa-external-link fa-stack-1x"></i>
-                  </span>
-              </a>
-          </li>
-
-        </ul>
-        <li><em>Description: Pangeo platform for developing astronomic use cases</em></li>
-        <li><em>Cloud provider: Google Cloud Platform</em></li>
-        <li><em>Access: Ask @SimonKrughoff and @wtbarnes on https://github.com/pangeo-data/astro.pangeo.io-deploy</em></li>
-
-      </td>
-    </tr>
-
-
-
-
-    <tr>
-      <td>
-        <ul class="list-inline">
-          <li><strong>ocean.pangeo.io</strong></li>
-
-          <li>
-              <a class="icon" href="http://ocean.pangeo.io">
-                  <span class="fa-stack fa-lg">
-                    <i class="fa fa-external-link fa-stack-1x"></i>
-                  </span>
-              </a>
-          </li>
-
-        </ul>
-        <li><em>Description: Pangeo platform for developing ocean use cases</em></li>
-        <li><em>Cloud provider: Google Cloud Platform</em></li>
-        <li><em>Access: Ask @raphaeldussin on https://github.com/raphaeldussin/example.pangeo.io-deploy</em></li>
-
-      </td>
-    </tr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</table></div>
-</div>
-<div class="section" id="other-cloud-deployments">
-<h2>Other Cloud deployments<a class="headerlink" href="#other-cloud-deployments" title="Permalink to this headline">¶</a></h2>
-<table class="table table-striped large">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <tr>
-      <td>
-        <ul class="list-inline">
-          <li><strong>Lamont Real-Time Earth Pangeo Cluster</strong></li>
-
-        </ul>
-        <li><em>Description: JupyterHub server used Earth/ocean science research</em></li>
-        <li><em>Cloud provider: Microsoft Azure Cloud</em></li>
-        <li><em>Dask Deployment: dask-kubernetes</em></li>
-        <li><em>Jupyter Deployment: JupyterHub</em></li>
-
-      </td>
-    </tr>
-
-
-
-
-
-
-
-
-
-
-    <tr>
-      <td>
-        <ul class="list-inline">
-          <li><strong>RGH-Hub</strong></li>
-
-          <li>
-              <a class="icon" href="https://compute.rhg.com/hub/login">
-                  <span class="fa-stack fa-lg">
-                    <i class="fa fa-external-link fa-stack-1x"></i>
-                  </span>
-              </a>
-          </li>
-
-        </ul>
-        <li><em>Description: JupyterHub server used for interactive data analysis by Rhodium Group staff for climate research and analysis</em></li>
-        <li><em>Cloud provider: Google Cloud Platform</em></li>
-        <li><em>Dask Deployment: dask-kubernetes</em></li>
-        <li><em>Jupyter Deployment: Jupyterhub</em></li>
-
-      </td>
-    </tr>
-
-
-
-
-    <tr>
-      <td>
-        <ul class="list-inline">
-          <li><strong>Met Office Informatics Lab</strong></li>
-
-        </ul>
-        <li><em>Description: A prototype cluster for the Met Office.</em></li>
-        <li><em>Cloud provider: Amazon Web Services</em></li>
-        <li><em>Dask Deployment: dask-kubernetes</em></li>
-        <li><em>Jupyter Deployment: Jupyterhub</em></li>
-
-      </td>
-    </tr>
-
-
-
-
-
-
-
-
-
-
-    <tr>
-      <td>
-        <ul class="list-inline">
-          <li><strong>Dask Tutorial Cluster</strong></li>
-
-          <li>
-              <a class="icon" href="https://github.com/dask/dask-tutorial-infrastructure">
-                  <span class="fa-stack fa-lg">
-                    <i class="fa fa-external-link fa-stack-1x"></i>
-                  </span>
-              </a>
-          </li>
-
-        </ul>
-        <li><em>Description: JupyterHub server used for dask tutorials</em></li>
-        <li><em>Cloud provider: Google Cloud Platform</em></li>
-        <li><em>Dask Deployment: dask-kubernetes</em></li>
-        <li><em>Jupyter Deployment: Jupyterhub</em></li>
-
-      </td>
-    </tr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</table></div>
-<div class="section" id="high-performance-computing-deployments">
-<h2>High Performance Computing Deployments<a class="headerlink" href="#high-performance-computing-deployments" title="Permalink to this headline">¶</a></h2>
-<table class="table table-striped large">
-
-
-
-    <tr>
-      <td>
-        <ul class="list-inline">
-          <li><strong>NCAR Cheyenne Cluster</strong></li>
-
-          <li>
-              <a class="icon" href="https://jupyterhub.ucar.edu">
-                  <span class="fa-stack fa-lg">
-                    <i class="fa fa-external-link fa-stack-1x"></i>
-                  </span>
-              </a>
-          </li>
-
-        </ul>
-        <li><em>Description: Large HPC cluster (5.34-petaflops) running at the National Center for Atmospheric Research</em></li>
-        <li><em>Platform: HPC</em></li>
-        <li><em>Dask Deployment: dask-jobqueue and dask-mpi</em></li>
-        <li><em>Jupyter Deployment: Jupyterhub</em></li>
-
-      </td>
-    </tr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <tr>
-      <td>
-        <ul class="list-inline">
-          <li><strong>NASA Pleiades Cluster</strong></li>
-
-          <li>
-              <a class="icon" href="https://www.nas.nasa.gov/hecc/resources/pleiades.html">
-                  <span class="fa-stack fa-lg">
-                    <i class="fa fa-external-link fa-stack-1x"></i>
-                  </span>
-              </a>
-          </li>
-
-        </ul>
-        <li><em>Description: Large HPC cluster (7.24-petaflops) running at the NASA High-End Computing Capability Project</em></li>
-        <li><em>Platform: HPC</em></li>
-        <li><em>Dask Deployment: dask-mpi with custom launch scripts</em></li>
-        <li><em>Jupyter Deployment: Single user notebook servers</em></li>
-
-      </td>
-    </tr>
-
-
-
-
-    <tr>
-      <td>
-        <ul class="list-inline">
-          <li><strong>Columbia Habanero Cluster</strong></li>
-
-          <li>
-              <a class="icon" href="https://confluence.columbia.edu/confluence/display/rcs/Habanero+HPC+Cluster+User+Documentation?src=contextnavpagetreemode">
-                  <span class="fa-stack fa-lg">
-                    <i class="fa fa-external-link fa-stack-1x"></i>
-                  </span>
-              </a>
-          </li>
-
-        </ul>
-        <li><em>Description: Research cluster at Columbia University</em></li>
-        <li><em>Platform: HPC</em></li>
-        <li><em>Dask Deployment: dask-mpi with custom launch scripts</em></li>
-        <li><em>Jupyter Deployment: Single user notebook servers</em></li>
-
-      </td>
-    </tr>
-
-
-
-
-
-
-
-    <tr>
-      <td>
-        <ul class="list-inline">
-          <li><strong>CNES HAL</strong></li>
-
-        </ul>
-        <li><em>Description: CNES research and productioncluster</em></li>
-        <li><em>Platform: HPC</em></li>
-        <li><em>Dask Deployment: dask-jobqueue and dask-mpi</em></li>
-        <li><em>Jupyter Deployment: Jupyterhub server on a VM connected to PBSPro</em></li>
-
-      </td>
-    </tr>
-
-
-
-
-    <tr>
-      <td>
-        <ul class="list-inline">
-          <li><strong>USGS Yeti</strong></li>
-
-        </ul>
-        <li><em>Description: USGS's Advanced Research Computing cluster</em></li>
-        <li><em>Platform: HPC</em></li>
-        <li><em>Dask Deployment: dask-jobqueue and custom launch scripts</em></li>
-        <li><em>Jupyter Deployment: Single user notebook servers</em></li>
-
-      </td>
-    </tr>
-
-
-
-
-
-
-
-
-
-
-    <tr>
-      <td>
-        <ul class="list-inline">
-          <li><strong>UW Hyak</strong></li>
-
-          <li>
-              <a class="icon" href="http://wiki.hyak.uw.edu/">
-                  <span class="fa-stack fa-lg">
-                    <i class="fa fa-external-link fa-stack-1x"></i>
-                  </span>
-              </a>
-          </li>
-
-        </ul>
-        <li><em>Description: The University of Washington's shared supercomputing cluster.</em></li>
-        <li><em>Platform: HPC</em></li>
-        <li><em>Dask Deployment: dask-mpi and custom launch scripts</em></li>
-        <li><em>Jupyter Deployment: Single user notebook servers</em></li>
-
-      </td>
-    </tr>
-
-
-
-
-    <tr>
-      <td>
-        <ul class="list-inline">
-          <li><strong>DOD HPC Systems at AFRL and ERDC</strong></li>
-
-          <li>
-              <a class="icon" href="https://centers.hpc.mil/index.html">
-                  <span class="fa-stack fa-lg">
-                    <i class="fa fa-external-link fa-stack-1x"></i>
-                  </span>
-              </a>
-          </li>
-
-        </ul>
-        <li><em>Description: Unclassified Department of Defense High Performance Computing Modernization Program Supercomputing Clusters (Thunder, Topaz, Utility Servers, etc.)</em></li>
-        <li><em>Platform: HPC</em></li>
-        <li><em>Dask Deployment: dask-jobqueue, dask-mpi, and custom launch scripts</em></li>
-        <li><em>Jupyter Deployment: Single user notebook servers</em></li>
-
-      </td>
-    </tr>
-
-
-
-
-
-
-
-    <tr>
-      <td>
-        <ul class="list-inline">
-          <li><strong>GFDL Post-processing and Analysis Cluster</strong></li>
-
-        </ul>
-        <li><em>Description: HPC cluster running at the NOAA Geophyiscal Fluid Dynamics Laboratory</em></li>
-        <li><em>Platform: HPC</em></li>
-        <li><em>Dask Deployment: dask-jobqueue</em></li>
-        <li><em>Jupyter Deployment: Single user notebook servers</em></li>
-
-      </td>
-    </tr>
-
-
-
-
-    <tr>
-      <td>
-        <ul class="list-inline">
-          <li><strong>Princeton Tiger Cluster</strong></li>
-
-          <li>
-              <a class="icon" href="https://researchcomputing.princeton.edu/systems-and-services/available-systems/tiger">
-                  <span class="fa-stack fa-lg">
-                    <i class="fa fa-external-link fa-stack-1x"></i>
-                  </span>
-              </a>
-          </li>
-
-        </ul>
-        <li><em>Description: Research computing cluster running at Princeton University</em></li>
-        <li><em>Platform: HPC</em></li>
-        <li><em>Dask Deployment: dask-jobqueue</em></li>
-        <li><em>Jupyter Deployment: Single user notebook servers</em></li>
-
-      </td>
-    </tr>
-
-
-
-
-    <tr>
-      <td>
-        <ul class="list-inline">
-          <li><strong>Pawsey Supercomputing Centre</strong></li>
-
-          <li>
-              <a class="icon" href="https://www.pawsey.org.au/our-systems/">
-                  <span class="fa-stack fa-lg">
-                    <i class="fa fa-external-link fa-stack-1x"></i>
-                  </span>
-              </a>
-          </li>
-
-        </ul>
-        <li><em>Description: Western Australian Supercomputing Centre</em></li>
-        <li><em>Platform: HPC</em></li>
-        <li><em>Dask Deployment: dask-jobqueue</em></li>
-        <li><em>Jupyter Deployment: Single user notebook servers</em></li>
-
-      </td>
-    </tr>
-
-
-
-
-    <tr>
-      <td>
-        <ul class="list-inline">
-          <li><strong>Pegasus Supercomputer</strong></li>
-
-          <li>
-              <a class="icon" href="http://ccs.miami.edu/pegasus">
-                  <span class="fa-stack fa-lg">
-                    <i class="fa fa-external-link fa-stack-1x"></i>
-                  </span>
-              </a>
-          </li>
-
-        </ul>
-        <li><em>Description: University of Miami Supercomputer</em></li>
-        <li><em>Platform: HPC</em></li>
-        <li><em>Dask Deployment: dask-jobqueue</em></li>
-        <li><em>Jupyter Deployment: Single user notebook servers</em></li>
-
-      </td>
-    </tr>
-
-
-
-
-
-</table></div>
+<p>Due to the rapid growth of Pangeo, we no longer attempt to keep a central
+database of all Pangeo deployments.</p>
+<p>Pangeo’s experimental cloud service is described at <a class="reference internal" href="cloud.html#cloud"><span class="std std-ref">Pangeo Cloud</span></a>.</p>
+<p>For information on deploying Pangeo on HPC, please see <a class="reference internal" href="setup_guides/hpc.html#hpc"><span class="std std-ref">Getting Started with Pangeo on HPC</span></a>.</p>
 </div>
 
 
-      
     </div>
       
   </div>
@@ -1175,7 +230,7 @@ please contact one of its responsible.</p>
       
     </p>
     <p>
-        &copy; Copyright 2018, Pangeo Team.<br/>
+        &copy; Copyright 2018-2020, Pangeo Team.<br/>
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.<br/>
     </p>
   </div>

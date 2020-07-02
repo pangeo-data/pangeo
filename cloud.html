@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Pangeo Cloud &#8212; Pangeo  documentation</title>
+    <link rel="stylesheet" href="_static/pangeo-style.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
+    <link rel="stylesheet" href="_static/example_gallery_styles_patched.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pangeo-main-site-custom.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+    <script type="text/javascript" src="_static/copybutton.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.png"/>
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Pangeo and Data" href="data.html" />
+    <link rel="prev" title="Installing Pangeo on Azure" href="setup_guides/azure.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+            <span><img src="_static/small_e_reversed_24px.png"></span>
+          Pangeo</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="https://medium.com/pangeo">Blog</a></li>
+                <li><a href="https://discourse.pangeo.io">Forum</a></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="about.html">About Pangeo</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="about.html#motivation">Motivation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="about.html#mission-statement">Mission Statement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="about.html#goals">Goals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="about.html#get-involved">Get Involved</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Guide for Scientists</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#learn-about-pangeo-software">Learn About Pangeo Software</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#explore-the-use-cases">Explore the Use Cases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#try-out-a-pangeo-environment">Try Out a Pangeo Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#give-feedback">Give Feedback</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#contribute-a-use-case">Contribute a Use Case</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#contribute-data">Contribute Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#become-an-open-source-contributor">Become an Open Source Contributor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="packages.html">Packages</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="packages.html#pangeo-core-packages">Pangeo Core Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="packages.html#pangeo-affiliated-packages">Pangeo Affiliated Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="packages.html#guidelines-for-new-packages">Guidelines for New Packages</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="gallery.html">Pangeo Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="architecture.html">Technical Architecture</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#where-we-began">Where we began</a></li>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#interoperability-in-pangeo">Interoperability in Pangeo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#software">Software</a></li>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#compute-platforms">Compute Platforms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#storage-formats">Storage Formats</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="setup_guides/index.html">Deployment Setup Guides</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="setup_guides/index.html#setting-up-pangeo-on-hpc-systems">Setting up Pangeo on HPC Systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="setup_guides/index.html#setting-up-pangeo-on-cloud-systems">Setting up Pangeo on Cloud Systems</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Pangeo Cloud</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#getting-support">Getting Support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sign-up">Sign Up</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#clusters">Clusters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#software-environment">Software Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hardware-environment">Hardware Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#your-home-directory">Your Home Directory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ssh-keys">SSH Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cloud-object-storage">Cloud Object Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dask">Dask</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="data.html">Pangeo and Data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="data.html#data-on-hpc">Data on HPC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html#data-in-the-cloud">Data in the Cloud</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="catalog.html">Pangeo Data Catalog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="collaborators.html">Funders and Collaborators</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="collaborators.html#funding-agencies">Funding Agencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="collaborators.html#institutions">Institutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="collaborators.html#people">People</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="publications.html">Publications</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="publications.html#self-reported">Self-Reported</a></li>
+<li class="toctree-l2"><a class="reference internal" href="publications.html#reporting-form">Reporting Form</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="meeting-notes.html">Meeting Schedule and Notes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="meeting-notes.html#weekly-community-meeting">Weekly Community Meeting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meeting-notes.html#working-group-meetings">Working Group Meetings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meeting-notes.html#meeting-calendar">Meeting Calendar</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="meetings/index.html">Pangeo Conferences</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="meetings/index.html#past-meetings">Past Meetings</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="contact.html">Contact Pangeo</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="contact.html#discourse">Discourse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contact.html#github">Github</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contact.html#other-media">Other Media</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Pangeo Cloud</a><ul>
+<li><a class="reference internal" href="#getting-support">Getting Support</a></li>
+<li><a class="reference internal" href="#sign-up">Sign Up</a></li>
+<li><a class="reference internal" href="#clusters">Clusters</a></li>
+<li><a class="reference internal" href="#software-environment">Software Environment</a></li>
+<li><a class="reference internal" href="#hardware-environment">Hardware Environment</a></li>
+<li><a class="reference internal" href="#your-home-directory">Your Home Directory</a></li>
+<li><a class="reference internal" href="#ssh-keys">SSH Keys</a></li>
+<li><a class="reference internal" href="#cloud-object-storage">Cloud Object Storage</a><ul>
+<li><a class="reference internal" href="#reading-data">Reading Data</a></li>
+<li><a class="reference internal" href="#writing-data">Writing Data</a></li>
+<li><a class="reference internal" href="#scratch-bucket">Scratch Bucket</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#dask">Dask</a><ul>
+<li><a class="reference internal" href="#guidelines-for-using-dask">Guidelines for using Dask</a></li>
+<li><a class="reference internal" href="#dask-gateway">Dask Gateway</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="setup_guides/azure.html" title="Previous Chapter: Installing Pangeo on Azure"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Installing Pa...</span>
+    </a>
+  </li>
+  <li>
+    <a href="data.html" title="Next Chapter: Pangeo and Data"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Pangeo and Data &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+          </ul>
+
+          
+            
+            
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li><a class="reference internal" href="#">Pangeo Cloud</a><ul>
+<li><a class="reference internal" href="#getting-support">Getting Support</a></li>
+<li><a class="reference internal" href="#sign-up">Sign Up</a></li>
+<li><a class="reference internal" href="#clusters">Clusters</a></li>
+<li><a class="reference internal" href="#software-environment">Software Environment</a></li>
+<li><a class="reference internal" href="#hardware-environment">Hardware Environment</a></li>
+<li><a class="reference internal" href="#your-home-directory">Your Home Directory</a></li>
+<li><a class="reference internal" href="#ssh-keys">SSH Keys</a></li>
+<li><a class="reference internal" href="#cloud-object-storage">Cloud Object Storage</a><ul>
+<li><a class="reference internal" href="#reading-data">Reading Data</a></li>
+<li><a class="reference internal" href="#writing-data">Writing Data</a></li>
+<li><a class="reference internal" href="#scratch-bucket">Scratch Bucket</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#dask">Dask</a><ul>
+<li><a class="reference internal" href="#guidelines-for-using-dask">Guidelines for using Dask</a></li>
+<li><a class="reference internal" href="#dask-gateway">Dask Gateway</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+<div class="widget navlinks">
+  <ul class="this-page-menu">
+    <li><a href="https://github.com/pangeo-data/pangeo/blob/master/docs/cloud.rst"
+            rel="nofollow"
+            target="_blank"><span class="fa-stack fa-md"><i class="fa fa-github fa-stack-1x"></i></span> Edit on GitHub</a></li>
+  </ul>
+</div>
+        </div>
+      </div>
+    <div class="col-md-9 content ">
+      
+  <div class="section" id="pangeo-cloud">
+<span id="cloud"></span><h1>Pangeo Cloud<a class="headerlink" href="#pangeo-cloud" title="Permalink to this headline">¶</a></h1>
+<p>Pangeo Cloud is an experimental service providing cloud-based data-science
+environments.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">We currently have no long-term funding to support Pangeo Cloud.
+At present, we’ve cobbled together funding from various grants from funding
+agencies and cloud providers.
+All users must understand that Pangeo Cloud environments could disappear
+at any time.</p>
+</div>
+<div class="section" id="getting-support">
+<h2>Getting Support<a class="headerlink" href="#getting-support" title="Permalink to this headline">¶</a></h2>
+<p>We would like for Pangeo Cloud to one day be a full-featured, professional
+service. <strong>But it’s not yet!</strong>
+It is an experiment, run by scientists and hackers who devote
+their nights and weekends to this project.
+Professional level support (a service-level agreement, a 24-hour helpdesk) is non-existent.</p>
+<p>With those caveats, support requests for Pangeo Cloud can be made on our Discourse forum</p>
+<ul class="simple">
+<li><a class="reference external" href="https://discourse.pangeo.io/c/Cloud/Tech-support-forum-for-Pangeo-Cloud/17">https://discourse.pangeo.io/c/Cloud/Tech-support-forum-for-Pangeo-Cloud/17</a></li>
+</ul>
+<p>We use this forum to track technical support requests for Pangeo Cloud.
+Someone will do their best to respond to you as quickly as possible given the circumstances.
+This is not a place for general support requests about scientific python.
+This forum is specific to issues related to Pangeo Cloud such as:</p>
+<ul class="simple">
+<li>login problems</li>
+<li>environment configuration</li>
+<li>reading / writing cloud data</li>
+<li>Dask Gateway on Pangeo Cloud</li>
+</ul>
+<p>In making a support request, please provide the following information:</p>
+<ul class="simple">
+<li>Which cluster are you using (e.g. <code class="docutils literal"><span class="pre">us-central1-b.gcp.pangeo.io</span></code>)</li>
+<li>A concise summary of your problem</li>
+<li>If your problem involves code, please do your best to include a
+<a class="reference external" href="https://matthewrocklin.com/blog/work/2018/02/28/minimal-bug-reports">minimum reproducible example</a></li>
+</ul>
+</div>
+<div class="section" id="sign-up">
+<h2>Sign Up<a class="headerlink" href="#sign-up" title="Permalink to this headline">¶</a></h2>
+<p>Pangeo Cloud is available to researchers across the world engaged in
+data-intensive Earth and Environmental Science.
+Prospective users must apply using the following form:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://forms.gle/J3hVVBgobwpYVWHF8">Pangeo Cloud Application</a></li>
+</ul>
+<p>Access will be granted based on a review of the proposed research project
+and its technical suitability for Pangeo Cloud.</p>
+<p>If your application is approved, you will receive an invitation to join
+a GitHub Team in the <code class="docutils literal"><span class="pre">pangeo-data</span></code> organization.
+You must accept this invitation to gain access to Pangeo Cloud resources.</p>
+</div>
+<div class="section" id="clusters">
+<h2>Clusters<a class="headerlink" href="#clusters" title="Permalink to this headline">¶</a></h2>
+<p>Pangeo Cloud currently comprises two different computing clusters:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://us-central1-b.gcp.pangeo.io/">us-central1-b.gcp.pangeo.io</a>: A cluster in
+Google Cloud Platform.</li>
+<li><a class="reference external" href="https://aws-uswest2.pangeo.io">aws-uswest2.pangeo.io</a>: A cluster in AWS.</li>
+</ul>
+<p>We recommend choosing a cluster based on which data you want to access.
+E.g. if your data live primarily in AWS, choose <code class="docutils literal"><span class="pre">aws-uswest2</span></code>.</p>
+<p>Once your application is approved, you will be able to log in to the resources
+you requested.</p>
+</div>
+<div class="section" id="software-environment">
+<h2>Software Environment<a class="headerlink" href="#software-environment" title="Permalink to this headline">¶</a></h2>
+<p>Each cluster contains a customized data-science software environment.
+The environments are built by <a class="reference external" href="https://github.com/jupyter/repo2docker">repo2docker</a>
+and configured at the following locations:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">us-central1-b.gcp.pangeo.io</span></code>: <a class="reference external" href="https://github.com/pangeo-data/pangeo-cloud-federation/tree/staging/deployments/gcp-uscentral1b/image/binder">binder config</a></li>
+<li><code class="docutils literal"><span class="pre">uswest2.pangeo.io</span></code>: <a class="reference external" href="https://github.com/pangeo-data/pangeo-cloud-federation/tree/staging/deployments/icesat2/image/binder">binder config</a></li>
+</ul>
+<p>Users can propose changes to the environment via issues and pull-requests to
+this repository.</p>
+<p>Users may use <code class="docutils literal"><span class="pre">pip</span></code> and <code class="docutils literal"><span class="pre">conda</span></code> to install new packages in their own
+environments, but this approach currently has some limitations</p>
+<ul class="simple">
+<li>The environment will be reset back to the base environment every time the
+user logs out of the cluster.</li>
+<li>Changes in environment cannot be propagated to Dask workers.</li>
+</ul>
+</div>
+<div class="section" id="hardware-environment">
+<h2>Hardware Environment<a class="headerlink" href="#hardware-environment" title="Permalink to this headline">¶</a></h2>
+<p>Pangeo Cloud clusters offer different amounts of RAM and CPU to the user
+notebook upon login.
+Please choose the least resource-intensive option for the work you need to do.
+Larger virtual machines cost us more money.</p>
+</div>
+<div class="section" id="your-home-directory">
+<h2>Your Home Directory<a class="headerlink" href="#your-home-directory" title="Permalink to this headline">¶</a></h2>
+<p>The cloud environment differs from what many UNIX users are used to.
+Your are not on a shared server; you are on your own private server.
+Your username is <code class="docutils literal"><span class="pre">jovyan</span></code>, and your home directory is <code class="docutils literal"><span class="pre">/home/jovyan</span></code>.
+This is the same for all users.</p>
+<p><strong>You have a 10 GB limit on the size of your home directory.</strong>
+Your home directory is intended only for notebooks, analysis scripts,
+and small datasets.
+It is not an appropriate place to store large datasets.
+No one else can see or access the files your home directory.</p>
+<p>The easiest way to move files in and out of your home directory is via the JupyterLab web interface.
+Drag a file into the file browser to upload, and right-click to download back out.
+You can also open a terminal via the JupyterLab launcher and use this to ssh / scp / ftp to remote systems.
+However, you can’t ssh in!</p>
+<p>The recommended way to move code in and out is via git.
+You should clone your project repo from the terminal and use git pull / git push to update and push changes.</p>
+</div>
+<div class="section" id="ssh-keys">
+<h2>SSH Keys<a class="headerlink" href="#ssh-keys" title="Permalink to this headline">¶</a></h2>
+<p>If you have two-factor authentication enabled on your GitHub account,
+you will probably want to place an SSH key in your home directory to facilitate easy pushes.
+(Read  <a class="reference external" href="https://help.github.com/en/articles/connecting-to-github-with-ssh">Connecting to GitHub with SSH</a>
+for more info.)
+We recommend creating a new key just for this purpose and using a password.
+You then add this key to your github profile at <a class="reference external" href="https://github.com/settings/keys">https://github.com/settings/keys</a>.</p>
+<p>To get the key to work on the cluster, place it in the /home/jovyan/.ssh/ directory. Then run:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ ssh-agent bash
+$ ssh-add ~/.ssh/&lt;name_of_rsa_key&gt;
+</pre></div>
+</div>
+</div>
+<div class="section" id="cloud-object-storage">
+<h2>Cloud Object Storage<a class="headerlink" href="#cloud-object-storage" title="Permalink to this headline">¶</a></h2>
+<p>The preferred way to store data in the cloud is using cloud object storage, such as Amazon S3 or Google Cloud Storage.
+Cloud object storage is essentially a key/value storage system.
+They keys are strings, and the values are bytes of data.
+Data is read and written using HTTP calls.
+The performance of object storage is very different from file storage.
+On one hand, each individual read / write to object storage has a high overhead (10-100 ms), since it has to go over the network.
+On the other hand, object storage “scales out” nearly infinitely, meaning that we can make hundreds, thousands, or millions of concurrent reads / writes.
+This makes object storage well suited for distributed data analytics.
+However, the software architecture of a data analysis system must be adapted to take advantage of these properties.
+All large datasets (&gt; 1 GB) in Pangeo Cloud should be stored in Cloud Object Storage.</p>
+<div class="section" id="reading-data">
+<h3>Reading Data<a class="headerlink" href="#reading-data" title="Permalink to this headline">¶</a></h3>
+<p>Many pre-existing datasets are browseable at <a class="reference external" href="http://catalog.pangeo.io/">catalog.pangeo.io</a>.
+This catalog is pre-configured to make it easy to open the datasets.
+In most cases, it’s as simple as:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">intake</span> <span class="kn">import</span> <span class="n">open_catalog</span>
+<span class="n">cat</span> <span class="o">=</span> <span class="n">open_catalog</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/pangeo-data/pangeo-datastore/master/intake-catalogs/atmosphere.yaml&quot;</span><span class="p">)</span>
+<span class="n">ds</span>  <span class="o">=</span> <span class="n">cat</span><span class="p">[</span><span class="s2">&quot;gmet_v1&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">to_dask</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>To open datasets that are not part of an intake catalog, we recommend using
+the <a class="reference external" href="https://filesystem-spec.readthedocs.io/en/latest/">filesystem-spec</a> package
+and its related packages <a class="reference external" href="https://gcsfs.readthedocs.io/en/latest/">gcsfs</a>
+(for Google Cloud Storage)
+and <a class="reference external" href="https://s3fs.readthedocs.io/en/latest/">s3fs</a>
+(for Amazon S3 and all S3-compatible object stores).</p>
+<p>For example, to open a public file from Google Cloud Storage, you would do:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">fsspec</span>
+<span class="n">path</span> <span class="o">=</span> <span class="s1">&#39;gs://cmip6/cmip6-zarr-consolidated-stores.csv&#39;</span>
+<span class="k">with</span> <span class="n">fsspec</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Zarr stores can be opened using <code class="docutils literal"><span class="pre">.get_mapper</span></code> methods from fsspec, gscsfs, and s3fs.
+For examples, see</p>
+<ul class="simple">
+<li><a class="reference external" href="https://zarr.readthedocs.io/en/stable/tutorial.html?highlight=s3fs#distributed-cloud-storage">Zarr Docs on Distributed Cloud Storage</a></li>
+<li><a class="reference external" href="http://xarray.pydata.org/en/stable/io.html#cloud-storage-buckets">Xarray Docs on Cloud Storage</a></li>
+</ul>
+</div>
+<div class="section" id="writing-data">
+<h3>Writing Data<a class="headerlink" href="#writing-data" title="Permalink to this headline">¶</a></h3>
+<p>Writing data (and reading private data) requires credentials for authentication.
+Pangeo Cloud does not provide credentials to individual users.
+Instead you must sign up for your own account with the cloud provider and manage your own storage.
+(Most cloud providers offer several hundred dollars worth of free credits for new accounts.)</p>
+<p>On S3-type storage, you will have a client key and client secret associated with you account.
+The following code creates a writeable filesystem:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">fs</span> <span class="o">=</span> <span class="n">s3fs</span><span class="o">.</span><span class="n">S3FileSystem</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="s1">&#39;&lt;YOUR_CLIENT_KEY&gt;&#39;</span><span class="p">,</span> <span class="n">secret</span><span class="o">=</span><span class="s1">&#39;&lt;YOUR_CLIENT_SECRET&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Non-AWS S3 services (e.g. Wasabi Cloud) can be configured by passing an argument
+such as <code class="docutils literal"><span class="pre">client_kwargs={'endpoint_url':</span> <span class="pre">'https://s3.us-east-2.wasabisys.com'}</span></code>
+to <code class="docutils literal"><span class="pre">S3FileSystem</span></code>.</p>
+<p>For Google Cloud Storage, the best practice is to create a
+<a class="reference external" href="https://cloud.google.com/iam/docs/service-accounts">service account</a> with
+appropriate permissions to read / write your private bucket.
+You upload your service account key (a .json file) to your Pangeo Cloud
+home directory and then use it as follows:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">gcsfs</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;&lt;your_token_file&gt;.json&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">token_file</span><span class="p">:</span>
+    <span class="n">token</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">token_file</span><span class="p">)</span>
+<span class="n">gcs</span> <span class="o">=</span> <span class="n">gcsfs</span><span class="o">.</span><span class="n">GCSFileSystem</span><span class="p">(</span><span class="n">token</span><span class="o">=</span><span class="n">token</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>You can then read / write private files with the <code class="docutils literal"><span class="pre">gcs</span></code> object.</p>
+</div>
+<div class="section" id="scratch-bucket">
+<h3>Scratch Bucket<a class="headerlink" href="#scratch-bucket" title="Permalink to this headline">¶</a></h3>
+<p>Pangeo Cloud environments are configured with a “scratch bucket,” which
+allows you to temporarily store data. Credentials to write to the scratch
+bucket are pre-loaded into your Pangeo Cloud environment.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Any data in scratch buckets will be deleted once it is 7 days old.
+Do not use scratch buckets to store data permanently.</p>
+</div>
+<p>The location of your scratch bucket is contained in the environment variable <code class="docutils literal"><span class="pre">PANGEO_SCRATCH</span></code>.
+To create mutable mapping that can write to your scratch bucket with zarr,
+the following code should work:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="n">PANGEO_SCRATCH</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;PANGEO_SCRATCH&#39;</span><span class="p">]</span>
+<span class="c1"># -&gt; gs://pangeo-scratch/&lt;username&gt;</span>
+<span class="kn">import</span> <span class="nn">fsspec</span>
+<span class="n">mapper</span> <span class="o">=</span> <span class="n">fsspec</span><span class="o">.</span><span class="n">get_mapper</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;PANGEO_SCRATCH/sub/path&#39;</span><span class="p">)</span>
+<span class="c1"># mapper can now be to read / write zarr stores</span>
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">A common set of credentials is currently used for accessing scratch buckets.
+This means users can read, and potentially remove / overwrite, each others’
+data. You can avoid this problem by always using <code class="docutils literal"><span class="pre">PANGEO_SCRATCH</span></code> as a prefix.
+Still, you should not store any sensitive or mission-critical data in
+the scratch bucket.</p>
+</div>
+</div>
+</div>
+<div class="section" id="dask">
+<h2>Dask<a class="headerlink" href="#dask" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="http://dask.pydata.org/">Dask</a> is an important component of Pangeo Cloud and can be used to help parallelize large calculations.
+All environments support the standard multi-threaded dask scheduler, and by default,
+zarr-backed cloud data datasets will open in Xarray as collections of Dask arrays.</p>
+<div class="section" id="guidelines-for-using-dask">
+<h3>Guidelines for using Dask<a class="headerlink" href="#guidelines-for-using-dask" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Familiarize yourself with <a class="reference external" href="https://docs.dask.org/en/latest/array-best-practices.html">Dask best practices</a>.</li>
+<li>Don’t use Dask! Or more specifically, only use a distributed cluster if you really need it, i.e. if your calculations are running out of memory or are taking an unacceptably long time to complete.</li>
+<li>Start small; work on a small subset of your problem to debug before scaling up to a very large dataset.</li>
+<li>If you use a distributed cluster, use <a class="reference external" href="https://jobqueue.dask.org/en/latest/index.html#adaptivity">adapative mode</a> rather than a fixed size cluster; this will help share resources more effectively.</li>
+<li>Use the Dask dashboard heavily to monitor the activity of your cluster.</li>
+</ul>
+</div>
+<div class="section" id="dask-gateway">
+<h3>Dask Gateway<a class="headerlink" href="#dask-gateway" title="Permalink to this headline">¶</a></h3>
+<p>Pangeo cloud environments are configured to work with
+<a class="reference external" href="https://gateway.dask.org/">Dask Gateway</a>.
+Dask gateway gives you the power to create a distributed cluster using many
+cloud compute nodes. <em>Please use this power carefully!</em></p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Avoid large, long-running, idle clusters, which are a waste of Pangeo’s limited cloud computing budget.
+Only use a cluster while you need</p>
+</div>
+<p>To create a cluster first connect to the gateway, create the cluster, and then connect to it:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">dask.distributed</span> <span class="kn">import</span> <span class="n">Client</span>
+<span class="kn">from</span> <span class="nn">dask_gateway</span> <span class="kn">import</span> <span class="n">Gateway</span>
+<span class="n">gateway</span> <span class="o">=</span> <span class="n">Gateway</span><span class="p">()</span>  <span class="c1"># connect to Gateway</span>
+<span class="n">cluster</span> <span class="o">=</span> <span class="n">gateway</span><span class="o">.</span><span class="n">new_cluster</span><span class="p">()</span>  <span class="c1"># create cluster</span>
+<span class="n">cluster</span><span class="o">.</span><span class="n">adapt</span><span class="p">(</span><span class="n">minimum</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">maximum</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span> <span class="c1"># adaptive mode</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="n">cluster</span><span class="p">)</span>  <span class="c1"># connect Client to Cluster</span>
+<span class="c1"># Dask computations are now automatically routed through the cluster</span>
+<span class="c1"># When you&#39;re done computing:</span>
+<span class="n">client</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="n">cluster</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>You can specify custom options for your cluster as follows:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">dask_gateway</span>
+<span class="n">gateway</span> <span class="o">=</span> <span class="n">dask_gateway</span><span class="o">.</span><span class="n">Gateway</span><span class="p">()</span>
+<span class="n">options</span> <span class="o">=</span> <span class="n">gateway</span><span class="o">.</span><span class="n">cluster_options</span><span class="p">()</span>
+<span class="n">options</span><span class="o">.</span><span class="n">worker_memory</span> <span class="o">=</span> <span class="mi">10</span> <span class="c1"># each worker will have 10 GB of memory</span>
+<span class="n">cluster</span> <span class="o">=</span> <span class="n">gateway</span><span class="o">.</span><span class="n">new_cluster</span><span class="p">(</span><span class="n">options</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2018-2020, Pangeo Team.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.<br/>
+    </p>
+  </div>
+</footer>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-120544092-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-120544092-1');
+</script>
+  </body>
+</html>

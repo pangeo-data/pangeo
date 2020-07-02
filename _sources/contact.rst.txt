@@ -1,25 +1,24 @@
 Contact Pangeo
 ==============
 
-The Pangeo project is a GitHub_-native organization.
-A great general-audience introduction to the power and popularity of GitHub
-can be found in the Wired article
-`The GitHub Revolution: Why We're All in Open Source Now <https://www.wired.com/2013/03/github/>`_
-by Mikeal Rogers.
-We prefer to conduct all project-related correspondence via our GitHub
-repositories.
+Discourse
+----------
+Our primary forum for communication is our
+`Discourse Forum <https://discourse.pangeo.io/>`_.
+This is the best place to ask general questions about the project or get
+involved in community activities.
 
-For a general inquiry about the project, please open an issue on the main
-`Pangeo GitHub issue tracker`_.
+Github
+------
 
-For more specific inquiries, visit one of the following repositories:
+We try to conduct all technical communication via GitHub.
+The repo `pangeo-data/pangeo <https://github.com/pangeo-data/pangeo>`_ is a
+general place to discuss technical issues.
+The `pangeo-data <https://github.com/pangeo-data>`_ GitHub org contains dozens
+of other inter-related projects.
 
-- `pangeo-data/pangeo <https://github.com/pangeo-data/pangeo>`_: A place to
-  discuss and track general issues related to the Pangeo project
-- `pangeo-data/helm-chart <https://github.com/pangeo-data/helm-chart>`_: Helm
-  charts, Docker images, and everything related to cloud / Kubernetes
-- `pangeo-data/branding <https://github.com/pangeo-data/branding>`_: Pangeo
-  stylistic elements
+Other Media
+-----------
 
 Pangeo's online presence also includes a:
 
@@ -35,4 +34,3 @@ Pangeo collaborators:
   `jhamman@ucar.edu <mailto:rpa@jhamman@ucar.edu>`_
 
 .. _GitHub: https://github.org/
-.. _Pangeo GitHub issue tracker: https://github.com/pangeo-data/pangeo/issues

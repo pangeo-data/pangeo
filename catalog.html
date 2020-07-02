@@ -6,7 +6,6 @@
     <title>Pangeo Data Catalog &#8212; Pangeo  documentation</title>
     <link rel="stylesheet" href="_static/pangeo-style.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/example_gallery_styles.css" type="text/css" />
     <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
     <link rel="stylesheet" href="_static/example_gallery_styles_patched.css" type="text/css" />
     <link rel="stylesheet" href="_static/pangeo-main-site-custom.css" type="text/css" />
@@ -26,7 +25,6 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
     <script type="text/javascript" src="_static/copybutton.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
     <script type="text/javascript" src="_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
@@ -35,8 +33,8 @@
     <link rel="author" title="About these documents" href="about.html" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Collaborators" href="collaborators.html" />
-    <link rel="prev" title="Installing Pangeo on Azure" href="setup_guides/azure.html" />
+    <link rel="next" title="Funders and Collaborators" href="collaborators.html" />
+    <link rel="prev" title="Pangeo and Data" href="data.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -87,7 +85,7 @@
 <li class="toctree-l1"><a class="reference internal" href="quickstart.html">Guide for Scientists</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="quickstart.html#learn-about-pangeo-software">Learn About Pangeo Software</a></li>
 <li class="toctree-l2"><a class="reference internal" href="quickstart.html#explore-the-use-cases">Explore the Use Cases</a></li>
-<li class="toctree-l2"><a class="reference internal" href="quickstart.html#try-out-a-pangeo-deployment">Try Out a Pangeo Deployment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#try-out-a-pangeo-environment">Try Out a Pangeo Environment</a></li>
 <li class="toctree-l2"><a class="reference internal" href="quickstart.html#give-feedback">Give Feedback</a></li>
 <li class="toctree-l2"><a class="reference internal" href="quickstart.html#contribute-a-use-case">Contribute a Use Case</a></li>
 <li class="toctree-l2"><a class="reference internal" href="quickstart.html#contribute-data">Contribute Data</a></li>
@@ -100,12 +98,7 @@
 <li class="toctree-l2"><a class="reference internal" href="packages.html#guidelines-for-new-packages">Guidelines for New Packages</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="use_cases/index.html">Geoscience Use Cases</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="use_cases/physical-oceanography/index.html">Physical Oceanography</a></li>
-<li class="toctree-l2"><a class="reference internal" href="use_cases/climate-modeling/index.html">Climate modeling</a></li>
-<li class="toctree-l2"><a class="reference internal" href="use_cases/meteorology/index.html">Meteorology</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="gallery.html">Pangeo Gallery</a></li>
 <li class="toctree-l1"><a class="reference internal" href="architecture.html">Technical Architecture</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="architecture.html#where-we-began">Where we began</a></li>
 <li class="toctree-l2"><a class="reference internal" href="architecture.html#interoperability-in-pangeo">Interoperability in Pangeo</a></li>
@@ -119,10 +112,16 @@
 <li class="toctree-l2"><a class="reference internal" href="setup_guides/index.html#setting-up-pangeo-on-cloud-systems">Setting up Pangeo on Cloud Systems</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="deployments.html">Deployments</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="deployments.html#pangeo-provided-cloud-deployments">Pangeo provided Cloud Deployments</a></li>
-<li class="toctree-l2"><a class="reference internal" href="deployments.html#other-cloud-deployments">Other Cloud deployments</a></li>
-<li class="toctree-l2"><a class="reference internal" href="deployments.html#high-performance-computing-deployments">High Performance Computing Deployments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cloud.html">Pangeo Cloud</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cloud.html#getting-support">Getting Support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud.html#sign-up">Sign Up</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud.html#clusters">Clusters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud.html#software-environment">Software Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud.html#hardware-environment">Hardware Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud.html#your-home-directory">Your Home Directory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud.html#ssh-keys">SSH Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud.html#cloud-object-storage">Cloud Object Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud.html#dask">Dask</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="data.html">Pangeo and Data</a><ul>
@@ -131,7 +130,7 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Pangeo Data Catalog</a></li>
-<li class="toctree-l1"><a class="reference internal" href="collaborators.html">Collaborators</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="collaborators.html">Funders and Collaborators</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="collaborators.html#funding-agencies">Funding Agencies</a></li>
 <li class="toctree-l2"><a class="reference internal" href="collaborators.html#institutions">Institutions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="collaborators.html#people">People</a></li>
@@ -152,7 +151,12 @@
 <li class="toctree-l2"><a class="reference internal" href="meetings/index.html#past-meetings">Past Meetings</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="contact.html">Contact Pangeo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contact.html">Contact Pangeo</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="contact.html#discourse">Discourse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contact.html#github">Github</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contact.html#other-media">Other Media</a></li>
+</ul>
+</li>
 </ul>
 </ul>
 </li>
@@ -176,11 +180,11 @@
               
                 
   <li>
-    <a href="setup_guides/azure.html" title="Previous Chapter: Installing Pangeo on Azure"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Installing Pa...</span>
+    <a href="data.html" title="Previous Chapter: Pangeo and Data"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Pangeo and Data</span>
     </a>
   </li>
   <li>
-    <a href="collaborators.html" title="Next Chapter: Collaborators"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Collaborators &raquo;</span>
+    <a href="collaborators.html" title="Next Chapter: Funders and Collaborators"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Funders and C... &raquo;</span>
     </a>
   </li>
               
@@ -218,12 +222,21 @@
       
   <div class="section" id="pangeo-data-catalog">
 <span id="catalog"></span><h1>Pangeo Data Catalog<a class="headerlink" href="#pangeo-data-catalog" title="Permalink to this headline">¶</a></h1>
-<p>Pangeo data catalog now lives
-<a class="reference external" href="https://pangeo-data.github.io/pangeo-datastore/">here</a>.</p>
+<p>Pangeo maintains an experimental catalog of analysis-ready cloud-based data at
+<a class="reference external" href="https://catalog.pangeo.io/">catalog.pangeo.io</a>.</p>
+<p>Our project is actively researching different approaches to storing and
+cataloging data in the cloud. Some important technologies currently in use
+include</p>
+<ul class="simple">
+<li><a class="reference external" href="https://stacspec.org/">Spatiotemporal Asset Catalog</a>: A common language
+to describe a range of geospatial information, so it can more easily be
+indexed and discovered.</li>
+<li><a class="reference external" href="https://intake.readthedocs.io/en/latest/">Intake</a>: A python package for
+finding, investigating, loading and disseminating data.</li>
+</ul>
 </div>
 
 
-      
     </div>
       
   </div>
@@ -235,7 +248,7 @@
       
     </p>
     <p>
-        &copy; Copyright 2018, Pangeo Team.<br/>
+        &copy; Copyright 2018-2020, Pangeo Team.<br/>
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.<br/>
     </p>
   </div>

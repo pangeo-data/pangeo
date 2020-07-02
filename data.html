@@ -6,7 +6,6 @@
     <title>Pangeo and Data &#8212; Pangeo  documentation</title>
     <link rel="stylesheet" href="_static/pangeo-style.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/example_gallery_styles.css" type="text/css" />
     <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
     <link rel="stylesheet" href="_static/example_gallery_styles_patched.css" type="text/css" />
     <link rel="stylesheet" href="_static/pangeo-main-site-custom.css" type="text/css" />
@@ -26,7 +25,6 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
     <script type="text/javascript" src="_static/copybutton.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
     <script type="text/javascript" src="_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
@@ -35,8 +33,8 @@
     <link rel="author" title="About these documents" href="about.html" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Technical Architecture" href="architecture.html" />
-    <link rel="prev" title="Deployments" href="deployments.html" />
+    <link rel="next" title="Pangeo Data Catalog" href="catalog.html" />
+    <link rel="prev" title="Pangeo Cloud" href="cloud.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -84,13 +82,13 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="quickstart.html">Guide for Scientists</a><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Guide for Scientists</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="quickstart.html#learn-about-pangeo-software">Learn About Pangeo Software</a></li>
 <li class="toctree-l2"><a class="reference internal" href="quickstart.html#explore-the-use-cases">Explore the Use Cases</a></li>
-<li class="toctree-l2"><a class="reference internal" href="quickstart.html#try-out-a-pangeo-deployment">Try Out a Pangeo Deployment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#try-out-a-pangeo-environment">Try Out a Pangeo Environment</a></li>
 <li class="toctree-l2"><a class="reference internal" href="quickstart.html#give-feedback">Give Feedback</a></li>
 <li class="toctree-l2"><a class="reference internal" href="quickstart.html#contribute-a-use-case">Contribute a Use Case</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="quickstart.html#contribute-data">Contribute Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#contribute-data">Contribute Data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="quickstart.html#become-an-open-source-contributor">Become an Open Source Contributor</a></li>
 </ul>
 </li>
@@ -100,12 +98,7 @@
 <li class="toctree-l2"><a class="reference internal" href="packages.html#guidelines-for-new-packages">Guidelines for New Packages</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="use_cases/index.html">Geoscience Use Cases</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="use_cases/physical-oceanography/index.html">Physical Oceanography</a></li>
-<li class="toctree-l2"><a class="reference internal" href="use_cases/climate-modeling/index.html">Climate modeling</a></li>
-<li class="toctree-l2"><a class="reference internal" href="use_cases/meteorology/index.html">Meteorology</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="gallery.html">Pangeo Gallery</a></li>
 <li class="toctree-l1"><a class="reference internal" href="architecture.html">Technical Architecture</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="architecture.html#where-we-began">Where we began</a></li>
 <li class="toctree-l2"><a class="reference internal" href="architecture.html#interoperability-in-pangeo">Interoperability in Pangeo</a></li>
@@ -119,10 +112,16 @@
 <li class="toctree-l2"><a class="reference internal" href="setup_guides/index.html#setting-up-pangeo-on-cloud-systems">Setting up Pangeo on Cloud Systems</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="deployments.html">Deployments</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="deployments.html#pangeo-provided-cloud-deployments">Pangeo provided Cloud Deployments</a></li>
-<li class="toctree-l2"><a class="reference internal" href="deployments.html#other-cloud-deployments">Other Cloud deployments</a></li>
-<li class="toctree-l2"><a class="reference internal" href="deployments.html#high-performance-computing-deployments">High Performance Computing Deployments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cloud.html">Pangeo Cloud</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cloud.html#getting-support">Getting Support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud.html#sign-up">Sign Up</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud.html#clusters">Clusters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud.html#software-environment">Software Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud.html#hardware-environment">Hardware Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud.html#your-home-directory">Your Home Directory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud.html#ssh-keys">SSH Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud.html#cloud-object-storage">Cloud Object Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud.html#dask">Dask</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Pangeo and Data</a><ul>
@@ -131,7 +130,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="catalog.html">Pangeo Data Catalog</a></li>
-<li class="toctree-l1"><a class="reference internal" href="collaborators.html">Collaborators</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="collaborators.html">Funders and Collaborators</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="collaborators.html#funding-agencies">Funding Agencies</a></li>
 <li class="toctree-l2"><a class="reference internal" href="collaborators.html#institutions">Institutions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="collaborators.html#people">People</a></li>
@@ -152,7 +151,12 @@
 <li class="toctree-l2"><a class="reference internal" href="meetings/index.html#past-meetings">Past Meetings</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="contact.html">Contact Pangeo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contact.html">Contact Pangeo</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="contact.html#discourse">Discourse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contact.html#github">Github</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contact.html#other-media">Other Media</a></li>
+</ul>
+</li>
 </ul>
 </ul>
 </li>
@@ -184,11 +188,11 @@
               
                 
   <li>
-    <a href="deployments.html" title="Previous Chapter: Deployments"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Deployments</span>
+    <a href="cloud.html" title="Previous Chapter: Pangeo Cloud"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Pangeo Cloud</span>
     </a>
   </li>
   <li>
-    <a href="architecture.html" title="Next Chapter: Technical Architecture"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Technical Arc... &raquo;</span>
+    <a href="catalog.html" title="Next Chapter: Pangeo Data Catalog"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Pangeo Data Catalog &raquo;</span>
     </a>
   </li>
               
@@ -344,7 +348,7 @@ preparing and uploading.</p>
 <ol class="arabic">
 <li><p class="first"><strong>Open your Entire Dataset in Xarray</strong>.</p>
 <p>Xarray is designed to
-load many netCDF files into a single <a class="reference external" href="http://xarray.pydata.org/en/latest/generated/xarray.Dataset.html#xarray.Dataset" title="(in xarray v0.14.1)"><code class="xref py py-class docutils literal"><span class="pre">xarray.Dataset</span></code></a> object.
+load many netCDF files into a single <a class="reference external" href="http://xarray.pydata.org/en/latest/generated/xarray.Dataset.html#xarray.Dataset" title="(in xarray v0.15.1)"><code class="xref py py-class docutils literal"><span class="pre">xarray.Dataset</span></code></a> object.
 The easiest way to accomplish this is using the <code class="xref py py-meth docutils literal"><span class="pre">xarray.open_mfdataset()</span></code>
 function. Suppose you have a directory full of netCDF files that comprise
 a single dataset stored in the directory <code class="docutils literal"><span class="pre">/path/to/mydataset</span></code>. If the files
@@ -398,7 +402,7 @@ perform adequately for most purposes.</p>
 its contents to cloud storage. In order to do this step, you will need
 the command line utilities from your cloud provider installed on your system.
 In this example, we use Google Cloud Platform, which requires installing the
-<a class="reference internal" href="setup_guides/cloud.html#google-cloud-sdk"><span class="std std-ref">Google Cloud SDK</span></a>.</p>
+<span class="xref std std-ref">google-cloud-sdk</span>.</p>
 <p>First you must authenticate to obtain credentials to perform the upload:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">gcloud</span> <span class="n">auth</span> <span class="n">login</span>
 </pre></div>
@@ -439,7 +443,6 @@ the underlying zarr chunks.</p>
 </div>
 
 
-      
     </div>
       
   </div>
@@ -451,7 +454,7 @@ the underlying zarr chunks.</p>
       
     </p>
     <p>
-        &copy; Copyright 2018, Pangeo Team.<br/>
+        &copy; Copyright 2018-2020, Pangeo Team.<br/>
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.<br/>
     </p>
   </div>

@@ -80,20 +80,27 @@ Our Goals
 #. Improve scalability of these tools to handle petabyte-scale datasets on
    HPC and cloud platforms.
 
+Pangeo Gallery
+^^^^^^^^^^^^^^
+
+Science applications and detailed tutorial for using Pangeo can be found in
+`Pangeo Gallery <http://gallery.pangeo.io>`_.
+
+
 Contents
 ^^^^^^^^
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    about
    faq
    quickstart
    packages
-   use_cases/index
+   gallery
    architecture
    setup_guides/index
-   deployments
+   cloud
    data
    catalog
    collaborators
@@ -101,11 +108,3 @@ Contents
    meeting-notes
    meetings/index
    contact
-
-Examples
-^^^^^^^^
-See our :ref:`use-cases` section.
-
-.. linkgalleries::
-
-    Pangeo
