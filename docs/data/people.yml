@@ -805,3 +805,17 @@
       - climate
       - visualization
       - decadal prediction
+      
+- first_name: Tina Erica
+  last_name: Odaka
+  institution: LOPS, Laboratory for Ocean Physics and Satellite remote sensing, IFREMER
+  email: tina.odaka@ifremer.fr
+  github: tinaok
+  orcid: 0000-0002-1500-0156
+  tags:
+    - distributed computing 
+    - HPC
+    - modeling
+    - optimisation
+    - IT architecture for scientific computing
+    - Data science & machine learning in Oceanography

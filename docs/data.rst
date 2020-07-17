@@ -97,11 +97,11 @@ Google Cloud Storage Data Catalog
 Thanks to our :ref:`NSF Award <earthcube>`, Pangeo has a substantial allocation
 on Google Cloud Platform which we are currently using to host several large
 datasets.
-These datasets are directly accessible from the Google Cloud Pangeo deployment:
-`pangeo.pydata.org <http://pangeo.pydata.org>`_.
+These datasets are directly accessible from any Google Cloud Pangeo deployment,
+e.g. `ocean.pangeo.io <http://ocean.pangeo.io>`_.
 
 See the list of available data sets in the
-`data catalog <https://pangeo-data.github.io/pangeo-datastore/>`_.
+`data catalog <http://catalog.pangeo.io/>`_.
 
 .. _cloud-data-guide:
 
@@ -164,7 +164,7 @@ These recommendations may change as cloud storage technology evolves.
 
    .. code-block:: python
 
-      ds.to_zarr('/path/to/output/mydataset')
+      ds.to_zarr('/path/to/output/mydataset', consolidated=True)
 
    If ``/path/to/output/mydataset`` does not exist yet, it will be created.
    (It's best if it does not exist, as conflicts with existing files could cause
@@ -224,8 +224,9 @@ These recommendations may change as cloud storage technology evolves.
    .. code-block:: python
 
       import xarray as xr
-      import gcsfs
-      ds = xr.open_zarr(gcsfs.GCSMap('pangeo-data/mydataset'))
+      import fsspec
+      ds = xr.open_zarr(fsspec.get_mapper('gcs://pangeo-data/mydataset'),
+                        consolidated=True)
 
    You should see all the variables and metadata from your original dataset in
    step 1. The dataset will automatically be created with Dask chunks matching
