@@ -224,8 +224,9 @@ These recommendations may change as cloud storage technology evolves.
    .. code-block:: python
 
       import xarray as xr
-      import fsspec
-      ds = xr.open_zarr(fsspec.get_mapper('gcs://pangeo-data/mydataset'),
+      import gcsfs
+      gcs = gcsfs.GCSFileSystem(requester_pays=True)
+      ds = xr.open_zarr(gcs.get_mapper('gs://pangeo-data/mydataset'),
                         consolidated=True)
 
    You should see all the variables and metadata from your original dataset in
