@@ -93,11 +93,28 @@ Users can propose changes to the environment via issues and pull-requests to
 this repository.
 
 Users may use ``pip`` and ``conda`` to install new packages in their own
-environments, but this approach currently has some limitations
+environments, but this approach currently has some limitations note below.
+To install into your personal environment, it's crucial that you include the
+``--user`` flag to pip. This installs the package in ``~/.local/lib/PYTHON/site-packages/``.
+Since it's in your home directory, it will persist across jupyterlab sessions.
 
-- The environment will be reset back to the base environment every time the
-  user logs out of the cluster.
-- Changes in environment cannot be propagated to Dask workers.
+.. code-block: console
+
+   # Running on a Pangeo Jupyterhub
+   (notebook) jovyan@jupyter-tomaugspurger:~$ pip install --user cf-xarray
+   Collecting cf-xarray
+     Downloading cf_xarray-0.2.0-py3-none-any.whl (20 kB)
+     ...
+   Installing collected packages: cf-xarray
+   Successfully installed cf-xarray-0.2.0
+   (notebook) jovyan@jupyter-tomaugspurger:~$ ls ~/.local/lib/python3.7/site-packages/
+   cf_xarray  cf_xarray-0.2.0.dist-info
+
+- Changes in the environment are not propagated to Dask workers.
+- Installing additional packages with pip into an existing conda environment
+  risks breaking the environment if doesn't see packages installed by conda and
+  vice versa. You shouldn't install / update packages that are already in
+  the environment.
 
 
 Hardware Environment

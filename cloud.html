@@ -340,11 +340,16 @@ and configured at the following locations:</p>
 <p>Users can propose changes to the environment via issues and pull-requests to
 this repository.</p>
 <p>Users may use <code class="docutils literal"><span class="pre">pip</span></code> and <code class="docutils literal"><span class="pre">conda</span></code> to install new packages in their own
-environments, but this approach currently has some limitations</p>
+environments, but this approach currently has some limitations note below.
+To install into your personal environment, it’s crucial that you include the
+<code class="docutils literal"><span class="pre">--user</span></code> flag to pip. This installs the package in <code class="docutils literal"><span class="pre">~/.local/lib/PYTHON/site-packages/</span></code>.
+Since it’s in your home directory, it will persist across jupyterlab sessions.</p>
 <ul class="simple">
-<li>The environment will be reset back to the base environment every time the
-user logs out of the cluster.</li>
-<li>Changes in environment cannot be propagated to Dask workers.</li>
+<li>Changes in the environment are not propagated to Dask workers.</li>
+<li>Installing additional packages with pip into an existing conda environment
+risks breaking the environment if doesn’t see packages installed by conda and
+vice versa. You shouldn’t install / update packages that are already in
+the environment.</li>
 </ul>
 </div>
 <div class="section" id="hardware-environment">
