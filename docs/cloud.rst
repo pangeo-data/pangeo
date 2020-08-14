@@ -299,23 +299,61 @@ cloud compute nodes. *Please use this power carefully!*
     Avoid large, long-running, idle clusters, which are a waste of Pangeo's limited cloud computing budget.
     Only use a cluster while you need
 
-To create a cluster first connect to the gateway, create the cluster, and then connect to it::
+To do scalable computations with Dask you need to create a cluster with Dask Gateway
+and connect to it
 
-    from dask.distributed import Client
-    from dask_gateway import Gateway
-    gateway = Gateway()  # connect to Gateway
-    cluster = gateway.new_cluster()  # create cluster
-    cluster.adapt(minimum=2, maximum=10) # adaptive mode
-    client = Client(cluster)  # connect Client to Cluster
-    # Dask computations are now automatically routed through the cluster
-    # When you're done computing:
-    client.close()
-    cluster.close()
+.. code-block:: python
 
-You can specify custom options for your cluster as follows::
+   from dask_gateway import GatewayCluster
 
-    import dask_gateway
-    gateway = dask_gateway.Gateway()
-    options = gateway.cluster_options()
-    options.worker_memory = 10 # each worker will have 10 GB of memory
-    cluster = gateway.new_cluster(options)
+   cluster = GatewayCluster()
+   cluster.adapt(minimum=2, maximum=10)  # or cluster.scale(n) to a fixed size.
+   client = cluster.get_client()
+
+That will create a Dask cluster with the default settings we've configured for
+you. From that point, any computations using Dask will be done on the cluster.
+The ``cluster`` and ``client`` reprs will have a link to your Dask Dashboard.
+
+When you're done with your computation, you can close the cluster explicitly
+
+.. code-block:: python
+
+   cluster.close()
+
+Or restart the notebook kernel, or stop your JupyterHub server. Finally, as
+a safeguard, Pangeo will automatically close your Dask cluster if it's idle
+for 60 minutes (but we prefer that you close it yourself if possible, to avoid
+paying for unnecessary compute).
+
+If you need to customize things, you'll need to connect to the Gateway.
+
+.. code-block:: python
+
+   from dask_gateway import Gateway
+   gateway = Gateway()
+   options = gateway.cluster_options()
+
+   # set the options programatically, or through their HTML repr
+   options.owrker_memory = 10  # 10 GB of memory per worker.
+
+   # Create a cluster with those options
+   cluster = gateway.new_cluster(options)
+   cluster.scale(...)
+   client = cluster.get_client()
+
+Dask Gateway can optionally keep clusters running past the lifetime of your notebook.
+This happens if you explicitly request it when creating the cluster (with ``shutdown_on_close=True``)
+or it can happen if your notebook kernel does not exit cleanly (because of a crash, say).
+If you need to reconnect to an *already running* cluster, to continue a computation
+or shut it down, use the `gateway` object.
+
+.. code-block:: python
+
+   >>> gateway = Gateway()
+   >>> gateway.list_clusters()
+   [ClusterReport<name=prod.c288c65c429049e788f41d8308823ca8, status=RUNNING>]
+
+   # connect to the cluster
+   cluster = g.connect(g.list_clusters()[0].name)
+   # shut it down
+   cluster.close()
