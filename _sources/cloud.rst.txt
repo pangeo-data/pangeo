@@ -82,15 +82,21 @@ you requested.
 Software Environment
 --------------------
 
-Each cluster contains a customized data-science software environment.
-The environments are built by `repo2docker <https://github.com/jupyter/repo2docker>`_
-and configured at the following locations:
+Each cluster contains a customized data-science software environment based
+off the docker images built in https://github.com/pangeo-data/pangeo-docker-images.
+These are the steps for adding a package to the environment:
 
-- ``us-central1-b.gcp.pangeo.io``: `binder config <https://github.com/pangeo-data/pangeo-cloud-federation/tree/staging/deployments/gcp-uscentral1b/image/binder>`_
-- ``uswest2.pangeo.io``: `binder config <https://github.com/pangeo-data/pangeo-cloud-federation/tree/staging/deployments/icesat2/image/binder>`_
-
-Users can propose changes to the environment via issues and pull-requests to
-this repository.
+1. Make a pull request to https://github.com/pangeo-data/pangeo-docker-images
+   updating the `environment.yml` file for the `pangeo-notebook` docker image
+   at https://github.com/pangeo-data/pangeo-docker-images/blob/master/pangeo-notebook/environment.yml.
+2. When that pull request is merged, the Pangeo maintainers will push a tag
+   with today's date, triggering a release of new docker images.
+3. A bot will submit a pull request to `pangeo-cloud-federation` updating the
+   images (https://github.com/pangeo-data/pangeo-cloud-federation/pull/733).
+   When this is merged, you can test your changes in the staging environment
+   (at either https://staging.us-central1-b.gcp.pangeo.io or https://staging.aws-uswest2.pangeo.io)
+4. If things look good, the pangeo maintainers can trigger a deploy to production,
+   making the package avaiable to everyone.
 
 Users may use ``pip`` and ``conda`` to install new packages in their own
 environments, but this approach currently has some limitations note below.

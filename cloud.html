@@ -330,15 +330,22 @@ you requested.</p>
 </div>
 <div class="section" id="software-environment">
 <h2>Software Environment<a class="headerlink" href="#software-environment" title="Permalink to this headline">¶</a></h2>
-<p>Each cluster contains a customized data-science software environment.
-The environments are built by <a class="reference external" href="https://github.com/jupyter/repo2docker">repo2docker</a>
-and configured at the following locations:</p>
-<ul class="simple">
-<li><code class="docutils literal"><span class="pre">us-central1-b.gcp.pangeo.io</span></code>: <a class="reference external" href="https://github.com/pangeo-data/pangeo-cloud-federation/tree/staging/deployments/gcp-uscentral1b/image/binder">binder config</a></li>
-<li><code class="docutils literal"><span class="pre">uswest2.pangeo.io</span></code>: <a class="reference external" href="https://github.com/pangeo-data/pangeo-cloud-federation/tree/staging/deployments/icesat2/image/binder">binder config</a></li>
-</ul>
-<p>Users can propose changes to the environment via issues and pull-requests to
-this repository.</p>
+<p>Each cluster contains a customized data-science software environment based
+off the docker images built in <a class="reference external" href="https://github.com/pangeo-data/pangeo-docker-images">https://github.com/pangeo-data/pangeo-docker-images</a>.
+These are the steps for adding a package to the environment:</p>
+<ol class="arabic simple">
+<li>Make a pull request to <a class="reference external" href="https://github.com/pangeo-data/pangeo-docker-images">https://github.com/pangeo-data/pangeo-docker-images</a>
+updating the <cite>environment.yml</cite> file for the <cite>pangeo-notebook</cite> docker image
+at <a class="reference external" href="https://github.com/pangeo-data/pangeo-docker-images/blob/master/pangeo-notebook/environment.yml">https://github.com/pangeo-data/pangeo-docker-images/blob/master/pangeo-notebook/environment.yml</a>.</li>
+<li>When that pull request is merged, the Pangeo maintainers will push a tag
+with today’s date, triggering a release of new docker images.</li>
+<li>A bot will submit a pull request to <cite>pangeo-cloud-federation</cite> updating the
+images (<a class="reference external" href="https://github.com/pangeo-data/pangeo-cloud-federation/pull/733">https://github.com/pangeo-data/pangeo-cloud-federation/pull/733</a>).
+When this is merged, you can test your changes in the staging environment
+(at either <a class="reference external" href="https://staging.us-central1-b.gcp.pangeo.io">https://staging.us-central1-b.gcp.pangeo.io</a> or <a class="reference external" href="https://staging.aws-uswest2.pangeo.io">https://staging.aws-uswest2.pangeo.io</a>)</li>
+<li>If things look good, the pangeo maintainers can trigger a deploy to production,
+making the package avaiable to everyone.</li>
+</ol>
 <p>Users may use <code class="docutils literal"><span class="pre">pip</span></code> and <code class="docutils literal"><span class="pre">conda</span></code> to install new packages in their own
 environments, but this approach currently has some limitations note below.
 To install into your personal environment, it’s crucial that you include the
