@@ -293,6 +293,8 @@ Guidelines for using Dask
 - If you use a distributed cluster, use `adapative mode <https://jobqueue.dask.org/en/latest/index.html#adaptivity>`_ rather than a fixed size cluster; this will help share resources more effectively.
 - Use the Dask dashboard heavily to monitor the activity of your cluster.
 
+.. _dask_gateway:
+
 Dask Gateway
 ^^^^^^^^^^^^
 
@@ -340,7 +342,7 @@ If you need to customize things, you'll need to connect to the Gateway.
    options = gateway.cluster_options()
 
    # set the options programatically, or through their HTML repr
-   options.owrker_memory = 10  # 10 GB of memory per worker.
+   options.worker_memory = 10  # 10 GB of memory per worker.
 
    # Create a cluster with those options
    cluster = gateway.new_cluster(options)
@@ -363,3 +365,44 @@ or shut it down, use the `gateway` object.
    cluster = g.connect(g.list_clusters()[0].name)
    # shut it down
    cluster.close()
+
+
+Environment variables on the cluster
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Some scalable computations running on the cluster depend on environment variables
+set on remote processes. In general, environment variables set on your local
+Jupyter session will not propagate to the Dask scheduler and workers.
+
+To set environment variables on the scheduler and workers, you must use the
+``environment`` option.
+
+.. code-block:: python
+
+   from dask_gateway import Gateway
+   gateway = Gateway()
+   options = gateway.cluster_options()
+   options
+
+As described in :ref:`dask_gateway` these options can be set programmatically
+or through the HTML widget. For example, to set the environment variable
+``MY_VARIABLE`` on our scheduler and workers:
+
+.. code-block:: python
+
+   options.environment = {"MY_VARIABLE": "1"}
+
+Which can be verified with:
+
+.. code-block:: python
+
+   >>> cluster = gateway.new_cluster(options)
+   >>> cluster.scale(1)
+   >>> client = cluster.get_client()
+
+   >>> def check():
+   ...     import os
+   ...     return os.environ["MY_VARIABLE"]
+
+   >>> client.run(check)
+   {'tls://10.36.248.180:33361': '1'}
