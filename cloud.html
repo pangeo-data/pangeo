@@ -187,6 +187,7 @@
 <li><a class="reference internal" href="#dask">Dask</a><ul>
 <li><a class="reference internal" href="#guidelines-for-using-dask">Guidelines for using Dask</a></li>
 <li><a class="reference internal" href="#dask-gateway">Dask Gateway</a></li>
+<li><a class="reference internal" href="#environment-variables-on-the-cluster">Environment variables on the cluster</a></li>
 </ul>
 </li>
 </ul>
@@ -243,6 +244,7 @@
 <li><a class="reference internal" href="#dask">Dask</a><ul>
 <li><a class="reference internal" href="#guidelines-for-using-dask">Guidelines for using Dask</a></li>
 <li><a class="reference internal" href="#dask-gateway">Dask Gateway</a></li>
+<li><a class="reference internal" href="#environment-variables-on-the-cluster">Environment variables on the cluster</a></li>
 </ul>
 </li>
 </ul>
@@ -516,7 +518,7 @@ zarr-backed cloud data datasets will open in Xarray as collections of Dask array
 </ul>
 </div>
 <div class="section" id="dask-gateway">
-<h3>Dask Gateway<a class="headerlink" href="#dask-gateway" title="Permalink to this headline">¶</a></h3>
+<span id="id2"></span><h3>Dask Gateway<a class="headerlink" href="#dask-gateway" title="Permalink to this headline">¶</a></h3>
 <p>Pangeo cloud environments are configured to work with
 <a class="reference external" href="https://gateway.dask.org/">Dask Gateway</a>.
 Dask gateway gives you the power to create a distributed cluster using many
@@ -552,7 +554,7 @@ paying for unnecessary compute).</p>
 <span class="n">options</span> <span class="o">=</span> <span class="n">gateway</span><span class="o">.</span><span class="n">cluster_options</span><span class="p">()</span>
 
 <span class="c1"># set the options programatically, or through their HTML repr</span>
-<span class="n">options</span><span class="o">.</span><span class="n">owrker_memory</span> <span class="o">=</span> <span class="mi">10</span>  <span class="c1"># 10 GB of memory per worker.</span>
+<span class="n">options</span><span class="o">.</span><span class="n">worker_memory</span> <span class="o">=</span> <span class="mi">10</span>  <span class="c1"># 10 GB of memory per worker.</span>
 
 <span class="c1"># Create a cluster with those options</span>
 <span class="n">cluster</span> <span class="o">=</span> <span class="n">gateway</span><span class="o">.</span><span class="n">new_cluster</span><span class="p">(</span><span class="n">options</span><span class="p">)</span>
@@ -573,6 +575,39 @@ or shut it down, use the <cite>gateway</cite> object.</p>
 <span class="go">cluster = g.connect(g.list_clusters()[0].name)</span>
 <span class="go"># shut it down</span>
 <span class="go">cluster.close()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="environment-variables-on-the-cluster">
+<h3>Environment variables on the cluster<a class="headerlink" href="#environment-variables-on-the-cluster" title="Permalink to this headline">¶</a></h3>
+<p>Some scalable computations running on the cluster depend on environment variables
+set on remote processes. In general, environment variables set on your local
+Jupyter session will not propagate to the Dask scheduler and workers.</p>
+<p>To set environment variables on the scheduler and workers, you must use the
+<code class="docutils literal"><span class="pre">environment</span></code> option.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">dask_gateway</span> <span class="kn">import</span> <span class="n">Gateway</span>
+<span class="n">gateway</span> <span class="o">=</span> <span class="n">Gateway</span><span class="p">()</span>
+<span class="n">options</span> <span class="o">=</span> <span class="n">gateway</span><span class="o">.</span><span class="n">cluster_options</span><span class="p">()</span>
+<span class="n">options</span>
+</pre></div>
+</div>
+<p>As described in <a class="reference internal" href="#dask-gateway"><span class="std std-ref">Dask Gateway</span></a> these options can be set programmatically
+or through the HTML widget. For example, to set the environment variable
+<code class="docutils literal"><span class="pre">MY_VARIABLE</span></code> on our scheduler and workers:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">options</span><span class="o">.</span><span class="n">environment</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;MY_VARIABLE&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Which can be verified with:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cluster</span> <span class="o">=</span> <span class="n">gateway</span><span class="o">.</span><span class="n">new_cluster</span><span class="p">(</span><span class="n">options</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cluster</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">client</span> <span class="o">=</span> <span class="n">cluster</span><span class="o">.</span><span class="n">get_client</span><span class="p">()</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">check</span><span class="p">():</span>
+<span class="gp">... </span>    <span class="kn">import</span> <span class="nn">os</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;MY_VARIABLE&quot;</span><span class="p">]</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">client</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">check</span><span class="p">)</span>
+<span class="go">{&#39;tls://10.36.248.180:33361&#39;: &#39;1&#39;}</span>
 </pre></div>
 </div>
 </div>
