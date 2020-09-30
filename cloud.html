@@ -585,16 +585,15 @@ set on remote processes. In general, environment variables set on your local
 Jupyter session will not propagate to the Dask scheduler and workers.</p>
 <p>To set environment variables on the scheduler and workers, you must use the
 <code class="docutils literal"><span class="pre">environment</span></code> option.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">dask_gateway</span> <span class="kn">import</span> <span class="n">Gateway</span>
-<span class="n">gateway</span> <span class="o">=</span> <span class="n">Gateway</span><span class="p">()</span>
-<span class="n">options</span> <span class="o">=</span> <span class="n">gateway</span><span class="o">.</span><span class="n">cluster_options</span><span class="p">()</span>
-<span class="n">options</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">dask_gateway</span> <span class="kn">import</span> <span class="n">Gateway</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">gateway</span> <span class="o">=</span> <span class="n">Gateway</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">options</span> <span class="o">=</span> <span class="n">gateway</span><span class="o">.</span><span class="n">cluster_options</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>As described in <a class="reference internal" href="#dask-gateway"><span class="std std-ref">Dask Gateway</span></a> these options can be set programmatically
 or through the HTML widget. For example, to set the environment variable
 <code class="docutils literal"><span class="pre">MY_VARIABLE</span></code> on our scheduler and workers:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">options</span><span class="o">.</span><span class="n">environment</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;MY_VARIABLE&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">}</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">options</span><span class="o">.</span><span class="n">environment</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;MY_VARIABLE&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">}</span>
 </pre></div>
 </div>
 <p>Which can be verified with:</p>
@@ -608,6 +607,16 @@ or through the HTML widget. For example, to set the environment variable
 
 <span class="gp">&gt;&gt;&gt; </span><span class="n">client</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">check</span><span class="p">)</span>
 <span class="go">{&#39;tls://10.36.248.180:33361&#39;: &#39;1&#39;}</span>
+</pre></div>
+</div>
+<p>This can be combined with <a class="reference external" href="https://docs.dask.org/en/latest/configuration.html">Dask’s configuration system</a>
+to the Dask scheduler and workers. For example,</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">env</span> <span class="o">=</span> <span class="p">{</span>
+<span class="gp">... </span>    <span class="s2">&quot;DASK_DISTRIBUTED__SCHEDULER__WORK_STEALING&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="s2">&quot;DASK_DISTRIBUTED__SCHEDULER__ALLOWED_FAILURES&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+<span class="gp">... </span><span class="p">}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">options</span><span class="o">.</span><span class="n">environment</span> <span class="o">=</span> <span class="n">env</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cluster</span> <span class="o">=</span> <span class="n">gateway</span><span class="o">.</span><span class="n">new_cluster</span><span class="p">(</span><span class="n">options</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
