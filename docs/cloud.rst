@@ -379,10 +379,9 @@ To set environment variables on the scheduler and workers, you must use the
 
 .. code-block:: python
 
-   from dask_gateway import Gateway
-   gateway = Gateway()
-   options = gateway.cluster_options()
-   options
+   >>> from dask_gateway import Gateway
+   >>> gateway = Gateway()
+   >>> options = gateway.cluster_options()
 
 As described in :ref:`dask_gateway` these options can be set programmatically
 or through the HTML widget. For example, to set the environment variable
@@ -390,7 +389,7 @@ or through the HTML widget. For example, to set the environment variable
 
 .. code-block:: python
 
-   options.environment = {"MY_VARIABLE": "1"}
+   >>> options.environment = {"MY_VARIABLE": "1"}
 
 Which can be verified with:
 
@@ -406,3 +405,15 @@ Which can be verified with:
 
    >>> client.run(check)
    {'tls://10.36.248.180:33361': '1'}
+
+This can be combined with `Dask's configuration system <https://docs.dask.org/en/latest/configuration.html>`_
+to the Dask scheduler and workers. For example,
+
+.. code-block:: python
+
+   >>> env = {
+   ...     "DASK_DISTRIBUTED__SCHEDULER__WORK_STEALING": False,
+   ...     "DASK_DISTRIBUTED__SCHEDULER__ALLOWED_FAILURES": 5,
+   ... }
+   >>> options.environment = env
+   >>> cluster = gateway.new_cluster(options)
