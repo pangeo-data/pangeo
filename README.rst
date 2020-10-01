@@ -1,3 +1,5 @@
+an amazing project but plz make index page of resources
+
 .. image:: docs/_static/pangeo_simple_logo.svg
    :width: 175 px
    :alt: Pangeo
