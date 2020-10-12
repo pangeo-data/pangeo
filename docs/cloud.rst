@@ -13,6 +13,16 @@ environments.
     All users must understand that Pangeo Cloud environments could disappear
     at any time.
 
+Quickstart
+----------
+
+.. raw:: html
+
+    <embed>
+      <a href="https://us-central1-b.gcp.pangeo.io" class="btn btn-primary btn-lg btn-block" >Google Cloud Deployment</a>
+      <a href="https://aws-uswest2.pangeo.io" class="btn btn-primary btn-lg btn-block" >AWS Deployment</a>
+    </embed>
+
 Getting Support
 ----------------
 
