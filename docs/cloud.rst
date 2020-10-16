@@ -89,6 +89,8 @@ Once your application is approved, you will be able to log in to the resources
 you requested.
 
 
+.. _cloud.software_environment:
+
 Software Environment
 --------------------
 
@@ -109,7 +111,7 @@ These are the steps for adding a package to the environment:
    making the package avaiable to everyone.
 
 Users may use ``pip`` and ``conda`` to install new packages in their own
-environments, but this approach currently has some limitations note below.
+environments, but this approach currently has some limitations noted below.
 To install into your personal environment, it's crucial that you include the
 ``--user`` flag to pip. This installs the package in ``~/.local/lib/PYTHON/site-packages/``.
 Since it's in your home directory, it will persist across jupyterlab sessions.
@@ -126,12 +128,87 @@ Since it's in your home directory, it will persist across jupyterlab sessions.
    (notebook) jovyan@jupyter-tomaugspurger:~$ ls ~/.local/lib/python3.7/site-packages/
    cf_xarray  cf_xarray-0.2.0.dist-info
 
-- Changes in the environment are not propagated to Dask workers.
+- Changes in the environment are not propagated to Dask workers (though see
+  below for a way to include packages on the workers too).
 - Installing additional packages with pip into an existing conda environment
   risks breaking the environment if doesn't see packages installed by conda and
   vice versa. You shouldn't install / update packages that are already in
   the environment.
 
+Dask Software Environment
+-------------------------
+
+The default image used on Dask Clusters (the scheduler and workers) matches
+the image used for JupyterHub. It won't, however, have changes you've made
+in your "local" environment in your home directory on the hub.
+
+Long-term, the best way to add packages to the environemnt is by updating the
+Docker images, as described in :ref:`cloud.software_environment`_. But for quickly
+prototyping something on the Dask cluster you can use a
+`Dask WorkerPlugin <https://distributed.dask.org/en/latest/plugins.html#distributed.diagnostics.plugin.WorkerPlugin>`_.
+This lets you inject a bit of code that's run when the worker starts up. This
+plugin uses pip install install a configurable list of packages
+
+
+.. code-block:: python
+
+   import subprocess
+   import logging
+   from distributed import WorkerPlugin
+
+   class PipPlugin(WorkerPlugin):
+       """
+       Install packages on a worker as it starts up.
+
+       Parameters
+       ----------
+       packages : List[str]
+           A list of packages to install with pip on startup.
+       """
+       def __init__(self, packages):
+           self.packages = packages
+
+       def setup(self, worker):
+           logger = logging.getLogger("distributed.worker")
+           subprocess.call(['python', '-m', 'pip', 'install', '--upgrade'] + self.packages)
+           logger.info("Installed %s", self.packages)
+
+To use that you'd create a cluster normally and add the plugin
+
+.. code-block:: python
+
+   >>> from dask_gateway import GatewayCluster
+   >>> cluster = GatewayCluster()  # create the cluster nomrally
+   >>> client = cluster.get_client()
+   >>> # Now create and register the plugin. We'll install 'bulwark'
+   >>> plugin = PipPlugin(['bulwark'])
+   >>> client.register_worker_plugin(plugin)
+
+We can verify that the package is now present.
+
+
+.. code-block:: python
+
+   >>> def check():
+   ...     import bulwark
+   ...     return bulwark.__version__
+   >>> cluster.scale(2)
+   >>> client.wait_for_workers(2)
+   >>> client.run(check)
+   {'tls://10.36.248.117:40785': '0.6.1', 'tls://10.37.142.70:43031': '0.6.1'}
+
+
+A few caveats are in order:
+
+1. You should register the plugin before scaling to ensure that your packages
+   are installed on all the workers.
+2. You should take care with dependencies. Pip doesn't always respect packages
+   that have been installed with conda.
+3. If you need to *upgrade existing* packages, take special care. You may need
+   to ``client.restart()`` the cluster to ensure that the new packages are
+   used.
+4. This will slow down the startup time of your workers, especially if the
+   package takes a while to install.
 
 Hardware Environment
 --------------------
