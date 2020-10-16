@@ -118,6 +118,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#sign-up">Sign Up</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#clusters">Clusters</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#software-environment">Software Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dask-software-environment">Dask Software Environment</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#hardware-environment">Hardware Environment</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#your-home-directory">Your Home Directory</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#ssh-keys">SSH Keys</a></li>
@@ -177,6 +178,7 @@
 <li><a class="reference internal" href="#sign-up">Sign Up</a></li>
 <li><a class="reference internal" href="#clusters">Clusters</a></li>
 <li><a class="reference internal" href="#software-environment">Software Environment</a></li>
+<li><a class="reference internal" href="#dask-software-environment">Dask Software Environment</a></li>
 <li><a class="reference internal" href="#hardware-environment">Hardware Environment</a></li>
 <li><a class="reference internal" href="#your-home-directory">Your Home Directory</a></li>
 <li><a class="reference internal" href="#ssh-keys">SSH Keys</a></li>
@@ -235,6 +237,7 @@
 <li><a class="reference internal" href="#sign-up">Sign Up</a></li>
 <li><a class="reference internal" href="#clusters">Clusters</a></li>
 <li><a class="reference internal" href="#software-environment">Software Environment</a></li>
+<li><a class="reference internal" href="#dask-software-environment">Dask Software Environment</a></li>
 <li><a class="reference internal" href="#hardware-environment">Hardware Environment</a></li>
 <li><a class="reference internal" href="#your-home-directory">Your Home Directory</a></li>
 <li><a class="reference internal" href="#ssh-keys">SSH Keys</a></li>
@@ -340,7 +343,7 @@ E.g. if your data live primarily in AWS, choose <code class="docutils literal"><
 you requested.</p>
 </div>
 <div class="section" id="software-environment">
-<h2>Software Environment<a class="headerlink" href="#software-environment" title="Permalink to this headline">¶</a></h2>
+<span id="cloud-software-environment"></span><h2>Software Environment<a class="headerlink" href="#software-environment" title="Permalink to this headline">¶</a></h2>
 <p>Each cluster contains a customized data-science software environment based
 off the docker images built in <a class="reference external" href="https://github.com/pangeo-data/pangeo-docker-images">https://github.com/pangeo-data/pangeo-docker-images</a>.
 These are the steps for adding a package to the environment:</p>
@@ -358,17 +361,83 @@ When this is merged, you can test your changes in the staging environment
 making the package avaiable to everyone.</li>
 </ol>
 <p>Users may use <code class="docutils literal"><span class="pre">pip</span></code> and <code class="docutils literal"><span class="pre">conda</span></code> to install new packages in their own
-environments, but this approach currently has some limitations note below.
+environments, but this approach currently has some limitations noted below.
 To install into your personal environment, it’s crucial that you include the
 <code class="docutils literal"><span class="pre">--user</span></code> flag to pip. This installs the package in <code class="docutils literal"><span class="pre">~/.local/lib/PYTHON/site-packages/</span></code>.
 Since it’s in your home directory, it will persist across jupyterlab sessions.</p>
 <ul class="simple">
-<li>Changes in the environment are not propagated to Dask workers.</li>
+<li>Changes in the environment are not propagated to Dask workers (though see
+below for a way to include packages on the workers too).</li>
 <li>Installing additional packages with pip into an existing conda environment
 risks breaking the environment if doesn’t see packages installed by conda and
 vice versa. You shouldn’t install / update packages that are already in
 the environment.</li>
 </ul>
+</div>
+<div class="section" id="dask-software-environment">
+<h2>Dask Software Environment<a class="headerlink" href="#dask-software-environment" title="Permalink to this headline">¶</a></h2>
+<p>The default image used on Dask Clusters (the scheduler and workers) matches
+the image used for JupyterHub. It won’t, however, have changes you’ve made
+in your “local” environment in your home directory on the hub.</p>
+<p>Long-term, the best way to add packages to the environemnt is by updating the
+Docker images, as described in <a href="#id1"><span class="problematic" id="id2">:ref:`cloud.software_environment`_</span></a>. But for quickly
+prototyping something on the Dask cluster you can use a
+<a class="reference external" href="https://distributed.dask.org/en/latest/plugins.html#distributed.diagnostics.plugin.WorkerPlugin">Dask WorkerPlugin</a>.
+This lets you inject a bit of code that’s run when the worker starts up. This
+plugin uses pip install install a configurable list of packages</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">subprocess</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">from</span> <span class="nn">distributed</span> <span class="kn">import</span> <span class="n">WorkerPlugin</span>
+
+<span class="k">class</span> <span class="nc">PipPlugin</span><span class="p">(</span><span class="n">WorkerPlugin</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Install packages on a worker as it starts up.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    packages : List[str]</span>
+<span class="sd">        A list of packages to install with pip on startup.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">packages</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">packages</span> <span class="o">=</span> <span class="n">packages</span>
+
+    <span class="k">def</span> <span class="nf">setup</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">worker</span><span class="p">):</span>
+        <span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s2">&quot;distributed.worker&quot;</span><span class="p">)</span>
+        <span class="n">subprocess</span><span class="o">.</span><span class="n">call</span><span class="p">([</span><span class="s1">&#39;python&#39;</span><span class="p">,</span> <span class="s1">&#39;-m&#39;</span><span class="p">,</span> <span class="s1">&#39;pip&#39;</span><span class="p">,</span> <span class="s1">&#39;install&#39;</span><span class="p">,</span> <span class="s1">&#39;--upgrade&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">packages</span><span class="p">)</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Installed </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">packages</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>To use that you’d create a cluster normally and add the plugin</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">dask_gateway</span> <span class="kn">import</span> <span class="n">GatewayCluster</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cluster</span> <span class="o">=</span> <span class="n">GatewayCluster</span><span class="p">()</span>  <span class="c1"># create the cluster nomrally</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">client</span> <span class="o">=</span> <span class="n">cluster</span><span class="o">.</span><span class="n">get_client</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Now create and register the plugin. We&#39;ll install &#39;bulwark&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">plugin</span> <span class="o">=</span> <span class="n">PipPlugin</span><span class="p">([</span><span class="s1">&#39;bulwark&#39;</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">client</span><span class="o">.</span><span class="n">register_worker_plugin</span><span class="p">(</span><span class="n">plugin</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>We can verify that the package is now present.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">check</span><span class="p">():</span>
+<span class="gp">... </span>    <span class="kn">import</span> <span class="nn">bulwark</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">bulwark</span><span class="o">.</span><span class="n">__version__</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cluster</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">client</span><span class="o">.</span><span class="n">wait_for_workers</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">client</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">check</span><span class="p">)</span>
+<span class="go">{&#39;tls://10.36.248.117:40785&#39;: &#39;0.6.1&#39;, &#39;tls://10.37.142.70:43031&#39;: &#39;0.6.1&#39;}</span>
+</pre></div>
+</div>
+<p>A few caveats are in order:</p>
+<ol class="arabic simple">
+<li>You should register the plugin before scaling to ensure that your packages
+are installed on all the workers.</li>
+<li>You should take care with dependencies. Pip doesn’t always respect packages
+that have been installed with conda.</li>
+<li>If you need to <em>upgrade existing</em> packages, take special care. You may need
+to <code class="docutils literal"><span class="pre">client.restart()</span></code> the cluster to ensure that the new packages are
+used.</li>
+<li>This will slow down the startup time of your workers, especially if the
+package takes a while to install.</li>
+</ol>
 </div>
 <div class="section" id="hardware-environment">
 <h2>Hardware Environment<a class="headerlink" href="#hardware-environment" title="Permalink to this headline">¶</a></h2>
@@ -527,7 +596,7 @@ zarr-backed cloud data datasets will open in Xarray as collections of Dask array
 </ul>
 </div>
 <div class="section" id="dask-gateway">
-<span id="id2"></span><h3>Dask Gateway<a class="headerlink" href="#dask-gateway" title="Permalink to this headline">¶</a></h3>
+<span id="id4"></span><h3>Dask Gateway<a class="headerlink" href="#dask-gateway" title="Permalink to this headline">¶</a></h3>
 <p>Pangeo cloud environments are configured to work with
 <a class="reference external" href="https://gateway.dask.org/">Dask Gateway</a>.
 Dask gateway gives you the power to create a distributed cluster using many
