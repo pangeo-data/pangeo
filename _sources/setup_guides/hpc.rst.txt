@@ -59,21 +59,25 @@ Create a new conda environment for our pangeo work:
 ::
 
     conda create -n pangeo -c conda-forge \
-        python=3.6 xarray \
-        jupyterlab nbserverproxy \
-        dask distributed mpi4py dask-jobqueue
+        python=3.7* pangeo-notebook dask-jobqueue mpi4py \
+        xarray zarr numcodecs hvplot geoviews datashader  \
+        nbserverproxy widgetsnbextension
 
 .. note::
 
    Depending on your application, you may choose to add additional conda
    packages to this list.
 
-Activate this environment
+Activate this environment and add extensions
 
 ::
 
     conda activate pangeo
-
+    jupyter labextension install @pyviz/jupyterlab_pyviz
+    jupyter labextension install @jupyter-widgets/jupyterlab-manager
+    jupyter labextension install dask-labextension
+    jupyter serverextension enable dask_labextension
+    
 Your prompt should now look something like this (note the pangeo environment name):
 
 ::

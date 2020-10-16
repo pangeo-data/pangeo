@@ -297,9 +297,9 @@ directory with this setting the first time you run it.</p>
 </div>
 <p>Create a new conda environment for our pangeo work:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">create</span> <span class="o">-</span><span class="n">n</span> <span class="n">pangeo</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> \
-    <span class="n">python</span><span class="o">=</span><span class="mf">3.6</span> <span class="n">xarray</span> \
-    <span class="n">jupyterlab</span> <span class="n">nbserverproxy</span> \
-    <span class="n">dask</span> <span class="n">distributed</span> <span class="n">mpi4py</span> <span class="n">dask</span><span class="o">-</span><span class="n">jobqueue</span>
+    <span class="n">python</span><span class="o">=</span><span class="mf">3.7</span><span class="o">*</span> <span class="n">pangeo</span><span class="o">-</span><span class="n">notebook</span> <span class="n">dask</span><span class="o">-</span><span class="n">jobqueue</span> <span class="n">mpi4py</span> \
+    <span class="n">xarray</span> <span class="n">zarr</span> <span class="n">numcodecs</span> <span class="n">hvplot</span> <span class="n">geoviews</span> <span class="n">datashader</span>  \
+    <span class="n">nbserverproxy</span> <span class="n">widgetsnbextension</span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -307,8 +307,12 @@ directory with this setting the first time you run it.</p>
 <p class="last">Depending on your application, you may choose to add additional conda
 packages to this list.</p>
 </div>
-<p>Activate this environment</p>
+<p>Activate this environment and add extensions</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">activate</span> <span class="n">pangeo</span>
+<span class="n">jupyter</span> <span class="n">labextension</span> <span class="n">install</span> <span class="nd">@pyviz</span><span class="o">/</span><span class="n">jupyterlab_pyviz</span>
+<span class="n">jupyter</span> <span class="n">labextension</span> <span class="n">install</span> <span class="nd">@jupyter</span><span class="o">-</span><span class="n">widgets</span><span class="o">/</span><span class="n">jupyterlab</span><span class="o">-</span><span class="n">manager</span>
+<span class="n">jupyter</span> <span class="n">labextension</span> <span class="n">install</span> <span class="n">dask</span><span class="o">-</span><span class="n">labextension</span>
+<span class="n">jupyter</span> <span class="n">serverextension</span> <span class="n">enable</span> <span class="n">dask_labextension</span>
 </pre></div>
 </div>
 <p>Your prompt should now look something like this (note the pangeo environment name):</p>
