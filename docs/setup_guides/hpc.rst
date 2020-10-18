@@ -61,22 +61,18 @@ Create a new conda environment for our pangeo work:
     conda create -n pangeo -c conda-forge \
         python=3.7* pangeo-notebook dask-jobqueue mpi4py \
         xarray zarr numcodecs hvplot geoviews datashader  \
-        nbserverproxy widgetsnbextension
+        nbserverproxy widgetsnbextension dask-labextension
 
 .. note::
 
    Depending on your application, you may choose to add additional conda
    packages to this list.
 
-Activate this environment and add extensions
+Activate this environment 
 
 ::
 
     conda activate pangeo
-    jupyter labextension install @pyviz/jupyterlab_pyviz
-    jupyter labextension install @jupyter-widgets/jupyterlab-manager
-    jupyter labextension install dask-labextension
-    jupyter serverextension enable dask_labextension
     
 Your prompt should now look something like this (note the pangeo environment name):
 
@@ -98,57 +94,27 @@ Configure Jupyter
 (If you don't plan to use Jupyter notebooks then you can safely skip
 this section.)
 
-.. note::
+First we install some useful JupyterLab extensions:
 
-   When using recent Jupyter iteration the following section can be replaced by simply invoking the command::
-   
-      jupyter notebook --generate-config
-      jupyter notebook password
+::
 
-   And entering desired password.
+    jupyter labextension install @pyviz/jupyterlab_pyviz @jupyter-widgets/jupyterlab-manager dask-labextension
 
 Jupyter notebook servers include a password for security. We're going to
 setup a password for ourselves. First we generate the Jupyter config
-file and install a notebook proxy service:
+file:
 
 ::
 
-    jupyter notebook --generate-config
-    jupyter serverextension enable --py nbserverproxy
+      jupyter notebook --generate-config
 
-This created a file in ``~/.jupyter/jupyter_notebook_config.py``. If you
-open that file and search for "password", you'll see a line like the
-following:
+This created a file in ``~/.jupyter/jupyter_notebook_config.py``. 
 
-::
-
-    #c.NotebookApp.password = u''
-
-The instructions in the comments of the config file tell you to generate
-a hashed password by entering the following commands:
+Now we set the password: 
 
 ::
 
-    $ ipython
-
-.. code:: python
-
-    In [1]: from notebook.auth import passwd; passwd()
-    Enter password:
-
-You can enter a password of your choice, and it will return to you a
-encoded password. I entered "password" (do not do this) and go the following
-output:
-
-.. code:: python
-
-    Out[1]: 'sha1:69a76df803b9:99ca27341563cd85ba4e78684128e1f4ad2d8d0d'
-
-Copy that string into your ``jupyter_notebook_config.py`` config file
-
-::
-
-    c.NotebookApp.password = u'sha1:69a76df803b9:99ca27341563cd85ba4e78684128e1f4ad2d8d0d'
+      jupyter notebook password
 
 For security reasons, we recommend making sure your ``jupyter_notebook_config.py``
 is readable only by you. For more information on and other methods for
