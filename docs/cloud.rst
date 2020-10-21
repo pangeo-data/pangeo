@@ -100,7 +100,7 @@ These are the steps for adding a package to the environment:
 
 1. Make a pull request to https://github.com/pangeo-data/pangeo-docker-images
    updating the `environment.yml` file for the `pangeo-notebook` docker image
-   at https://github.com/pangeo-data/pangeo-docker-images/blob/master/pangeo-notebook/environment.yml.
+   at https://github.com/pangeo-data/pangeo-docker-images/blob/master/pangeo-notebook/environment.yml. If you do not want to add a new package, but update the version of an existing package, please raise an `issue <https://github.com/pangeo-data/pangeo-docker-images/issues>`_ so the next step can be triggered manually.
 2. When that pull request is merged, the Pangeo maintainers will push a tag
    with today's date, triggering a release of new docker images.
 3. A bot will submit a pull request to `pangeo-cloud-federation` updating the
