@@ -454,6 +454,29 @@ or shut it down, use the `gateway` object.
    cluster.close()
 
 
+Choosing Cluster Options
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+Your workload might constrain the choice of how much memory your workers need.
+For example, if some stage of your computation requires loading in 5 arrays of
+3GB each, then you'd need *at least* 15GB of memory on your worker nodes.
+
+That said, certain values for the cores / memory per worker will work better for
+pangeo's Kubernetes cluster than others.
+
+At the end of the day, pangeo is launching Dask worker *pods* on our Kubernetes cluster.
+Each of these worker pods is scheduled on a Kubernetes *node*: a physical machine
+with some CPU and memory capacity. Depending on your per-worker CPU and memory requests,
+we maybe be able to pack more than one Dask worker *pod* on each *node*, leading
+to better cluster utilization (and potentially more total workers for you).
+
+At the moment, our nodes have 4 CPUs and 26124 Mi of memory. So you want to
+avoid requesting something like 3CPUs or anywhere from ~13GB-26GB.
+If you're performing a large computation and *if your workload allows for it*
+make sure to request less than half of the physical machine's memory per worker
+(in practice, make it less than 11GB of memory per worker, to allow for some
+other kubernetes pods to be scheduled on the node too).
+
 Environment variables on the cluster
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
