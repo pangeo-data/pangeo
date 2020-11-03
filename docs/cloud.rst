@@ -504,3 +504,102 @@ to the Dask scheduler and workers. For example,
    ... }
    >>> options.environment = env
    >>> cluster = gateway.new_cluster(options)
+
+
+Batch Workflows
+---------------
+
+Pangeo includes some support for batch-style, or non-interactive, workflows.
+
+.. note::
+
+   This feature is currently limited to the https://us-central1-b.gcp.pangeo.io/
+   deployment.
+
+Pangeo's batch workflows build on https://mlflow.org/docs/latest/index.html,
+a machine-learning lifecycle platform. MLFlow provides
+
+1. A directory structure for organizing projects, and a command-line-interface for executing them. See https://www.mlflow.org/docs/latest/projects.html
+2. A Python API for logging things (parameters, metrics, output files, models).
+3. A graphical user interface for viewing the logged output and artifacts.
+
+Notebook Execution Example
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+In this example, we'll execute a "parametrized notebook". The example usese
+
+1. mlflow to kick off the jobs with different parameters
+2. papermill to expose notebook parameters and to execute the notebook
+3. papermill-mlflow-handler to write the results to our storage bucket
+
+On the pangeo deployment, we'll create a new MLFlow experiement for this example
+
+.. code-block:: console
+
+   (notebook)$ mlflow experiments create --experiment-name=papermill
+   Created experiment 'papermill' with id 1
+
+And we'll run an experiement
+
+.. code-block:: console
+
+   (notebook)$ mlflow run --no-conda \
+        https://github.com/TomAugspurger/papermill-mlflow-example \
+        --version=main \
+        --experiment-name=papermill \
+        -P a=1 -P b=2 -P c=3
+   2020/11/03 15:47:08 INFO mlflow.projects.utils: === Fetching project from https://github.com/TomAugspurger/papermill-mlflow-example into /tmp/tmpuwcwbv7b ===
+   2020/11/03 15:47:09 INFO mlflow.projects.utils: === Created directory /tmp/tmps4ydrd9l for downloading remote URIs passed to arguments of type 'path' ===
+   2020/11/03 15:47:09 INFO mlflow.projects.backend.local: === Running command 'papermill -p a 1 -p b 2 -p c 3 sin.ipynb mlflow://out.ipynb' in run with ID 'f447862b375e4ce5bd52025a84259d0d' === 
+   Input Notebook:  sin.ipynb
+   Output Notebook: mlflow://out.ipynb
+   Executing notebook with kernel: python3
+   Executing: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 4/4 [00:04<00:00,  1.04s/cell]
+   2020/11/03 15:47:17 INFO mlflow.projects: === Run (ID 'f447862b375e4ce5bd52025a84259d0d') succeeded ===
+
+Our run as been logged by MLFlow under the "papermill" experiement.
+
+.. image:: _static/papermill-experiment.png
+
+And the outputs (the executed notebook) are available as an artifact.
+
+.. image:: _static/papermill-artifact.png
+
+Downloading that, we can see the executed notebook.
+
+.. image:: _static/papermill-output.png
+
+**Understanding the example**
+
+The ``papermill-mlflow-example`` directory is structured to support this workflow.
+
+The notebook ``sin.ipynb`` includes a papermill parameters cell, a cell that's
+been tagged with "parameters". See https://papermill.readthedocs.io/en/latest/usage-parameterize.html.
+
+.. image:: _static/papermill-parameters.png
+
+Next, the ``MLproject`` YAML file, for MLFlow, contains two important pieces:
+
+.. code-block:: yaml
+
+   name: mlflow-papermill-example
+
+   entry_points:
+     main:
+       parameters:
+         a: float
+         b: float
+         c: float
+       command: "papermill -p a {a} -p b {b} -p c {c} sin.ipynb mlflow://out.ipynb"
+
+1. The ``parameters`` section exposes the parameters from the notebook to MLFlow.
+   This lets us view the parameters in the MLFlow UI, and ovverride them when calling
+   ``mlflow run``.
+2. The output file passed to ``papermill`` starts with the protocol ``mlflow://``.
+   We've registered a custom writer with papermill that writes the executed
+   notebook to our MLFlow artifact store.
+
+There are many limitations
+
+1. All MLFlow logs and artifacts are public and visible to all users of the hub.
+2. ...
