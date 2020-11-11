@@ -9,14 +9,14 @@ together facilitate scalable data analysis on a wide range of computing platform
 deployed).
 
 This is a growing collection of information that will help you setup your own
-Pangeo deployment, whether it be on an `HPC`_ system or on a public `cloud`_.
+Pangeo deployment, whether it be on an :ref:`HPC` system or on a public :ref:`cloud-setup`.
 
 If you have tips or deployments that you would like to share, or if you see
 anything that is incorrect, or have any questions, feel free to reach out at
 the `issues page`_.
 
-We have broken our setup guides into two distinct tracks, one for `HPC`_ systems,
-and another for `cloud`_ systems:
+We have broken our setup guides into two distinct tracks, one for :ref:`HPC` systems,
+and another for :ref:`cloud-setup` systems:
 
 Setting up Pangeo on HPC Systems
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -44,8 +44,6 @@ will also find the `zero-to-jupyterhub`_ documentation quite useful.
   azure
 
 
-.. _HPC: hpc.rst
-.. _cloud: cloud.rst
 .. _issues page: https://github.com/pangeo-data/pangeo/issues
 .. _zero-to-jupyterhub: http://zero-to-jupyterhub.readthedocs.io
 .. _Kubernetes: https://kubernetes.io/
