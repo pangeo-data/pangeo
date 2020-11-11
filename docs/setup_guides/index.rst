@@ -9,7 +9,7 @@ together facilitate scalable data analysis on a wide range of computing platform
 deployed).
 
 This is a growing collection of information that will help you setup your own
-Pangeo deployment, whether it be on an :ref:`HPC` system or on a public :ref:`cloud-setup`.
+Pangeo deployment, whether it be on an :ref:`HPC` system or on a public :ref:`cloud`.
 
 If you have tips or deployments that you would like to share, or if you see
 anything that is incorrect, or have any questions, feel free to reach out at
