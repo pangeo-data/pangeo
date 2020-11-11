@@ -302,7 +302,7 @@ cluster. MPI is **NOT** used for communication by dask.
 
    The following scripts and procedures have been packed into a convenient wrapper
    script ``launch-dask.sh``. It and its supporting utilities can be found in the
-   `pangeo Github reposository <https://github.com/pangeo-data/pangeo/tree/master/utilities/cheyenne>`__.
+   `pangeo Github repository <https://github.com/pangeo-data/pangeo/tree/master/utilities/cheyenne>`__.
 
    The usage of this script is quite simple:
 
