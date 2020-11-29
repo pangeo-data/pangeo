@@ -1,0 +1,130 @@
+# file: config.yaml 
+# This file should not be stored in version control unless it's encrypted.
+# Sensitive values are marked a comment "# Sensitive".
+# You should update the following fields:
+# - [ ] jupyterhub.proxy.secretToken
+# - [ ] jupyterhub.proxy.https.hosts
+# - [ ] jupyterhub.proxy.https.letsencrypt.contactEmail
+# - [ ] jupyterhub.proxy.service.annotations.service.beta.kubernetes.io.azure-dns-label-name
+# - [ ] jupyterhub.hub.config.AzureAdOauthenticator.oauth_callback_url
+# - [ ] jupyterhub.hub.config.AzureAdOauthenticator.client_id
+# - [ ] jupyterhub.hub.config.AzureAdOauthenticator.client_secret
+# - [ ] jupyterhub.hub.config.AzureAdOauthenticator.tenant_id
+# - [ ] jupyterhub.hub.services.dask-gateway.apiToken
+# - [ ] dask-gateway.gateway.auth.jupyterhub.apiToken
+
+jupyterhub:
+  proxy:
+    # output from openssl rand -hex 32
+    secretToken: "<token-1>"  # Sensitive
+    https:
+      enabled: true
+      hosts:
+        # Update this with your hub's name.
+        # If using AKS to get a DNS name, the first section of this hostname must match the value of
+        # service.beta.kubernetes.io/azure-dns-label-name.
+        - "<hub-name>.<azure-region>.cloudapp.azure.com"
+      letsencrypt:
+        contactEmail: "<your-email>"
+    service:
+      annotations:
+        # Update this with your hub's name.
+        service.beta.kubernetes.io/azure-dns-label-name: "<hub-name>"
+
+  hub:
+    # Disable hub network Policy, so that the dask gateway server API can reach the hub directly
+    # Not required for dask-gateway>0.9.0
+    # https://github.com/dask/helm-chart/issues/142
+    networkPolicy:
+      enabled: false
+
+    services:
+      dask-gateway:
+        # output from openssl rand -hex 32. Must match dask-gateway.gateway.auth.jupyterhub.apiToken
+        apiToken: "<token-2>"  # Sensitive
+
+    config:
+      # Use our Azure AD App Registration for authentication
+      # https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app
+      JupyterHub:
+        authenticator_class: azuread
+      AzureAdOAuthenticator:
+        # Update this with the URL for your hub with /oauth_callback.
+        # If you're using Azure to obtain the DNS name from AKS, this must match the
+        oauth_callback_url: "https://<hub-name>.<hub-region>.cloudapp.azure.com/hub/oauth_callback"
+        # Update these with the values for your Azure AD app registration.
+        client_id: "<adapp-client-id>"
+        client_secret: "<adapp-client-secret>"  # Sensitive
+        tenant_id: "<adapp-tenant-id>"
+
+  singleuser:
+    extraEnv:
+      DASK_GATEWAY__CLUSTER__OPTIONS__IMAGE: '{JUPYTER_IMAGE_SPEC}'
+      DASK_DISTRIBUTED__DASHBOARD_LINK: '/user/{JUPYTERHUB_USER}/proxy/{port}/status'
+      DASK_LABEXTENSION__FACTORY__MODULE: 'dask_gateway'
+      DASK_LABEXTENSION__FACTORY__CLASS: 'GatewayCluster'
+
+dask-gateway:
+  gateway:
+    auth:
+      jupyterhub:
+        # output from openssl rand -hex 32. Must match jupyterhub.services.dask-gateway.apiToken
+        apiToken: "<token-2>"  # Sensitive
+
+    backend:
+      worker:
+        # Ensure workers are scheduled on the worker pool
+        extraPodConfig:
+          affinity:
+            nodeAffinity:
+              requiredDuringSchedulingIgnoredDuringExecution:
+                nodeSelectorTerms:
+                - matchExpressions:
+                  - key: "k8s.dask.org/dedicated"
+                    operator: "In"
+                    values:
+                      - "worker"
+
+          tolerations:
+            # allow workers to be scheduled on the worker pool, which has preemptible nodes.
+            - key: "k8s.dask.org/dedicated"
+              operator: "Equal"
+              value: "worker"
+              effect: "NoSchedule"
+            - key: "k8s.dask.org_dedicated"
+              operator: "Equal"
+              value: "worker"
+              effect: "NoSchedule"
+            - key: "kubernetes.azure.com/scalesetpriority"
+              operator: "Equal"
+              value: "spot"
+              effect: "NoSchedule"
+              
+    extraConfig:
+      01-optionHandler: |
+          # Configure options to
+          # 1. Have the default worker image match the singleuser image
+          # 2. Place bounds on worker CPU and Memory requests
+          # 3. Accept a mapping of environment variables to pass to workers.
+          from dask_gateway_server.options import Options, Float, String, Mapping
+          def cluster_options(user):
+              def option_handler(options):
+                  if ":" not in options.image:
+                      raise ValueError("When specifying an image you must also provide a tag")
+
+                  return {
+                      "worker_cores": 0.88 * min(options.worker_cores / 2, 1),
+                      "worker_cores_limit": options.worker_cores,
+                      "worker_memory": "%fG" % (0.95 * options.worker_memory),
+                      "worker_memory_limit": "%fG" % options.worker_memory,
+                      "image": options.image,
+                      "environment": options.environment,
+                  }
+              return Options(
+                  Float("worker_cores", 1, min=1, max=16, label="Worker Cores"),
+                  Float("worker_memory", 2, min=1, max=32, label="Worker Memory (GiB)"),
+                  String("image", default="pangeo/pangeo-notebook:latest", label="Image"),
+                  Mapping("environment", {}, label="Environment Variables"),
+                  handler=option_handler,
+              )
+          c.Backend.cluster_options = cluster_options
