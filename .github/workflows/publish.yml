@@ -2,7 +2,7 @@ name: Build and publish Sphinx site
 
 on:
   push:
-    branches: [ 'switch-to-gha' ]
+    branches: [ master ]
     paths: [ 'docs/**' ]
 
 jobs:
@@ -31,6 +31,6 @@ jobs:
     - name: Push documentation changes to gh-pages
       uses: ad-m/github-push-action@master
       with:
-        branch: gh-pages-test
+        branch: gh-pages
         directory: gh-pages
         github_token: ${{ secrets.GITHUB_TOKEN }}
