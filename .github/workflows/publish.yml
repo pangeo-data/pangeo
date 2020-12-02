@@ -1,0 +1,36 @@
+name: Build and publish Sphinx site
+
+on:
+  push:
+    branches: [ master ]
+    paths: [ 'docs/**' ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Build Sphinx documentation
+      uses: ammaraskar/sphinx-action@master
+      with:
+        docs-folder: "docs/"
+        
+    - name: Commit documentation changes
+      run: |
+        git clone https://github.com/pangeo-data/pangeo.git --branch gh-pages --single-branch gh-pages
+        cp -r docs/_build/html/* gh-pages/
+        cd gh-pages
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add .
+        git commit -m "Update documentation" -a || true
+        
+    - name: Push documentation changes to gh-pages
+      uses: ad-m/github-push-action@master
+      with:
+        branch: gh-pages
+        directory: gh-pages
+        github_token: ${{ secrets.GITHUB_TOKEN }}
