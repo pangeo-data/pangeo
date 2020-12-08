@@ -2,8 +2,8 @@ name: Build and publish Sphinx site
 
 on:
   push:
-    branches: [ master ]
     paths: [ 'docs/**' ]
+    branches: [ master ]
 
 jobs:
   build:
