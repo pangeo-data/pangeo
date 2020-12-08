@@ -2,33 +2,24 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>Installing Pangeo on Azure &#8212; Pangeo  documentation</title>
     <link rel="stylesheet" href="../_static/pangeo-style.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/example_gallery_styles_patched.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pangeo-main-site-custom.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../',
-        VERSION:     '',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
-    <script type="text/javascript" src="../_static/copybutton.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/example_gallery_styles_patched.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pangeo-main-site-custom.css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script src="../_static/js/jquery-fix.js"></script>
+    <script src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="../_static/bootstrap-sphinx.js"></script>
     <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="author" title="About these documents" href="../about.html" />
     <link rel="index" title="Index" href="../genindex.html" />
@@ -40,8 +31,7 @@
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
 <meta name="apple-mobile-web-app-capable" content="yes">
 
-  </head>
-  <body>
+  </head><body>
 
   <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
     <div class="container">
@@ -275,8 +265,8 @@ We’ll make use of Azure’s Kubernetes as a Service offering, called AKS (Azur
 for installing Pangeo on Azure.
 Documentation on AKS can be found here: <a class="reference external" href="https://docs.microsoft.com/en-gb/azure/aks/">https://docs.microsoft.com/en-gb/azure/aks/</a>.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">This guide lays out only the fundamental steps required to install Pangeo on Azure AKS.
+<p class="admonition-title">Note</p>
+<p>This guide lays out only the fundamental steps required to install Pangeo on Azure AKS.
 Further work, for example to secure your cluster, is highly advised but not directly
 covered here.</p>
 </div>
@@ -312,8 +302,8 @@ link above and also be using an Azure region where nodes are supported.</p>
 service. In the Scale tab, ensure that both the Virtual Nodes and VM scale sets selectors are
 set to ‘Enabled’.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">You cannot create a Kubernetes service with traditional cluster autoscaling using the
+<p class="admonition-title">Note</p>
+<p>You cannot create a Kubernetes service with traditional cluster autoscaling using the
 web interface. See the next section for details on using the Azure CLI to create a
 Kubernetes service with tradtional cluster autoscaling.</p>
 </div>
@@ -323,9 +313,9 @@ Kubernetes service with tradtional cluster autoscaling.</p>
 <h3>Using the Azure CLI<a class="headerlink" href="#using-the-azure-cli" title="Permalink to this headline">¶</a></h3>
 <p>Instructions for downloading and installing the Azure CLI on major Operating Systems
 can be found at: <a class="reference external" href="https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest">https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest</a>.
-All interactions with the Azure CLI are via the <code class="docutils literal"><span class="pre">az</span></code> command.</p>
+All interactions with the Azure CLI are via the <code class="docutils literal notranslate"><span class="pre">az</span></code> command.</p>
 <p>To create a basic Kubernetes service using the Azure CLI:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>az aks create <span class="se">\</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>az aks create <span class="se">\</span>
   --resource-group <span class="nv">$RESOURCE_GROUP_NAME</span> <span class="se">\</span>
   --name <span class="nv">$AKS_RESOURCE_NAME</span> <span class="se">\</span>
   --kubernetes-version <span class="m">1</span>.12.6 <span class="se">\</span>
@@ -333,23 +323,23 @@ All interactions with the Azure CLI are via the <code class="docutils literal"><
   --node-vm-size Standard_B8ms
 </pre></div>
 </div>
-<p>You’ll need to specify a name for your Kubernetes service (as <code class="docutils literal"><span class="pre">$AKS_RESOURCE_NAME</span></code>) and a
-name for an (existing) resource group (as <code class="docutils literal"><span class="pre">$RESOURCE_GROUP_NAME</span></code>). Note that here
-we’ve also asked for a medium-sized VM (that is, <code class="docutils literal"><span class="pre">Standard_B8ms</span></code>) to host the node
+<p>You’ll need to specify a name for your Kubernetes service (as <code class="docutils literal notranslate"><span class="pre">$AKS_RESOURCE_NAME</span></code>) and a
+name for an (existing) resource group (as <code class="docutils literal notranslate"><span class="pre">$RESOURCE_GROUP_NAME</span></code>). Note that here
+we’ve also asked for a medium-sized VM (that is, <code class="docutils literal notranslate"><span class="pre">Standard_B8ms</span></code>) to host the node
 rather than the default. We found that the default node was too small to host all
 the pods necessary for the basic Pangeo install created by following this guide.
 You can, however, specify any VM size name listed in the links from this page as the value to this key:
 <a class="reference external" href="https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes">https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes</a>.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">RBAC (Role-Based Access Control) is enabled by default on Kubernetes services set up using
+<p class="admonition-title">Note</p>
+<p>RBAC (Role-Based Access Control) is enabled by default on Kubernetes services set up using
 the Azure CLI. If you need to change this default behaviour, you can specify the
-<code class="docutils literal"><span class="pre">--disable-rbac</span></code> flag when creating your Kubernetes cluster.</p>
+<code class="docutils literal notranslate"><span class="pre">--disable-rbac</span></code> flag when creating your Kubernetes cluster.</p>
 </div>
-<p>The <code class="docutils literal"><span class="pre">az</span> <span class="pre">aks</span> <span class="pre">create</span></code> command above assumes that you have already set up a resource group
+<p>The <code class="docutils literal notranslate"><span class="pre">az</span> <span class="pre">aks</span> <span class="pre">create</span></code> command above assumes that you have already set up a resource group
 to deploy your Kubernetes service into. If you have not already set up a resource group,
 run this command <em>before</em> creating your Kubernetes service:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>az group create <span class="se">\</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>az group create <span class="se">\</span>
   --name <span class="nv">$RESOURCE_GROUP_NAME</span> <span class="se">\</span>
   --location <span class="nv">$RESOURCE_REGION</span> <span class="se">\</span>
 </pre></div>
@@ -357,14 +347,14 @@ run this command <em>before</em> creating your Kubernetes service:</p>
 <p>The location of the resource group needs to be specified as a single word
 programmatic name for an Azure region. A list of available locations can be found
 by running the following:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>az account list-locations <span class="p">|</span> grep name
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>az account list-locations <span class="p">|</span> grep name
 </pre></div>
 </div>
 <div class="section" id="id1">
 <h4>Autoscaling<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
 <p>To create a Kubernetes service with autoscaling enabled you can add extra keys
-to the previous <code class="docutils literal"><span class="pre">az</span> <span class="pre">aks</span> <span class="pre">create</span></code> command:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>az aks create <span class="se">\</span>
+to the previous <code class="docutils literal notranslate"><span class="pre">az</span> <span class="pre">aks</span> <span class="pre">create</span></code> command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>az aks create <span class="se">\</span>
   --resource-group <span class="nv">$RESOURCE_GROUP_NAME</span> <span class="se">\</span>
   --name <span class="nv">$AKS_RESOURCE_NAME</span> <span class="se">\</span>
   --kubernetes-version <span class="m">1</span>.12.6 <span class="se">\</span>
@@ -377,7 +367,7 @@ to the previous <code class="docutils literal"><span class="pre">az</span> <span
 </pre></div>
 </div>
 <p>You can also update an existing Kubernetes service to add autoscaling:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>az aks update <span class="se">\</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>az aks update <span class="se">\</span>
 --resource-group <span class="nv">$RESOURCE_GROUP_NAME</span> <span class="se">\</span>
 --name <span class="nv">$AKS_RESOURCE_NAME</span> <span class="se">\</span>
 --enable-cluster-autoscaler <span class="se">\</span>
@@ -398,32 +388,32 @@ customisations (such as authentication) can also be added at this stage.
 The customisations need to be performed using the Azure CLI. If you don’t have the Azure CLI available,
 you can either:</p>
 <ul class="simple">
-<li>follow the steps at the link above to install the Azure CLI locally, or</li>
-<li>use the cloud shell built into the web interface
-(click the <code class="docutils literal"><span class="pre">&gt;_</span></code> logo at the right of the blue bar at the top of the web interface).
-The cloud shell includes the Azure CLI and a basic implementation of Visual Studio Code editor.</li>
+<li><p>follow the steps at the link above to install the Azure CLI locally, or</p></li>
+<li><p>use the cloud shell built into the web interface
+(click the <code class="docutils literal notranslate"><span class="pre">&gt;_</span></code> logo at the right of the blue bar at the top of the web interface).
+The cloud shell includes the Azure CLI and a basic implementation of Visual Studio Code editor.</p></li>
 </ul>
 <div class="section" id="kubernetes-credentials">
 <h3>Kubernetes credentials<a class="headerlink" href="#kubernetes-credentials" title="Permalink to this headline">¶</a></h3>
 <p>Before we can progress we need to acquire kubernetes credentials for our newly-created
 AKS resource:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>az aks get-credentials -g <span class="nv">$RESOURCE_GROUP_NAME</span> -n <span class="nv">$AKS_RESOURCE_NAME</span> --overwrite-existing
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>az aks get-credentials -g <span class="nv">$RESOURCE_GROUP_NAME</span> -n <span class="nv">$AKS_RESOURCE_NAME</span> --overwrite-existing
 </pre></div>
 </div>
-<p>You will need to provide the name of the AKS resource that you just created (as <code class="docutils literal"><span class="pre">$AKS_RESOURCE_NAME</span></code>)
-and the group within which the resource was created (as <code class="docutils literal"><span class="pre">$RESOURCE_GROUP_NAME</span></code>).</p>
+<p>You will need to provide the name of the AKS resource that you just created (as <code class="docutils literal notranslate"><span class="pre">$AKS_RESOURCE_NAME</span></code>)
+and the group within which the resource was created (as <code class="docutils literal notranslate"><span class="pre">$RESOURCE_GROUP_NAME</span></code>).</p>
 </div>
 <div class="section" id="helm-and-tiller">
 <h3>Helm and tiller<a class="headerlink" href="#helm-and-tiller" title="Permalink to this headline">¶</a></h3>
 <p>Installing helm and tiller allows us to customise our Kubernetes service by applying
 helm charts to it. We need to ensure that helm and tiller will work correctly with
 RBAC, which is enabled by default on Azure Kubernetes services.</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>kubectl apply -f helm_rbac.yaml
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl apply -f helm_rbac.yaml
 helm init --upgrade --service-account tiller --wait
 </pre></div>
 </div>
-<p>The contents of <code class="docutils literal"><span class="pre">helm_rbac.yaml</span></code> are as follows:</p>
-<div class="highlight-yaml"><div class="highlight"><pre><span></span><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">v1</span>
+<p>The contents of <code class="docutils literal notranslate"><span class="pre">helm_rbac.yaml</span></code> are as follows:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">v1</span>
 <span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ServiceAccount</span>
 <span class="nt">metadata</span><span class="p">:</span>
   <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">tiller</span>
@@ -449,12 +439,12 @@ helm init --upgrade --service-account tiller --wait
 <h2>Step 3: Install Pangeo<a class="headerlink" href="#step-3-install-pangeo" title="Permalink to this headline">¶</a></h2>
 <p>Now we can move onto installing Pangeo on our Kubernetes service. This can be done
 as follows:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>helm repo add pangeo https://pangeo-data.github.io/helm-chart/
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>helm repo add pangeo https://pangeo-data.github.io/helm-chart/
 helm repo update
 helm upgrade --install --namespace pangeo pangeo pangeo/pangeo -f pangeo.yaml
 </pre></div>
 </div>
-<p>The helm chart <code class="docutils literal"><span class="pre">pangeo.yaml</span></code> is the
+<p>The helm chart <code class="docutils literal notranslate"><span class="pre">pangeo.yaml</span></code> is the
 <a class="reference external" href="https://pangeo-data.github.io/helm-chart/">Pangeo helm chart</a>. The customizations
 we made to it are documented in the
 <a class="reference external" href="https://zero-to-jupyterhub.readthedocs.io/en/latest/setup-jupyterhub.html">Zero to Jupyterhub</a>
@@ -463,13 +453,13 @@ guide.</p>
 <h3>Test install<a class="headerlink" href="#test-install" title="Permalink to this headline">¶</a></h3>
 <p>To test that Pangeo has installed successfully on your Kubernetes service, find
 the IP address of the Pangeo proxy:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>kubectl get service proxy-public --namespace<span class="o">=</span>pangeo
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl get service proxy-public --namespace<span class="o">=</span>pangeo
 </pre></div>
 </div>
 <p>Note that this service can take a long time to start up, so you may need to wait
 a while for the IP address of the Pangeo proxy to be displayed. The output of the
-above command will read <code class="docutils literal"><span class="pre">&lt;pending&gt;</span></code> while the service is starting up.</p>
-<p>Once the service has started up, navigate to the <code class="docutils literal"><span class="pre">EXTERNAL-IP</span></code> address listed
+above command will read <code class="docutils literal notranslate"><span class="pre">&lt;pending&gt;</span></code> while the service is starting up.</p>
+<p>Once the service has started up, navigate to the <code class="docutils literal notranslate"><span class="pre">EXTERNAL-IP</span></code> address listed
 in the output of the above command in your web browser.
 If JupyterHub loads then you have successfully installed Pangeo on your Azure Kubernetes service!</p>
 </div>
@@ -478,9 +468,9 @@ If JupyterHub loads then you have successfully installed Pangeo on your Azure Ku
 <p>If you set up your autoscaling Kubernetes service using the cluster autoscaler then autoscaling
 should work with no further customisation neeeded. If instead you set up autoscaling using
 virtual nodes and VM scale sets then a little more work is needed. In particular we need to
-modify the Pangeo <code class="docutils literal"><span class="pre">worker-template.yaml</span></code> file to add two more key groups to the <code class="docutils literal"><span class="pre">spec</span></code> section
+modify the Pangeo <code class="docutils literal notranslate"><span class="pre">worker-template.yaml</span></code> file to add two more key groups to the <code class="docutils literal notranslate"><span class="pre">spec</span></code> section
 of the yaml:</p>
-<div class="highlight-yaml"><div class="highlight"><pre><span></span><span class="nt">nodeSelector</span><span class="p">:</span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">nodeSelector</span><span class="p">:</span>
   <span class="nt">kubernetes.io/role</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">agent</span>
   <span class="nt">beta.kubernetes.io/os</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">linux</span>
   <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">virtual-kubelet</span>
@@ -508,7 +498,7 @@ of the yaml:</p>
     </p>
     <p>
         &copy; Copyright 2018-2020, Pangeo Team.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.4.<br/>
     </p>
   </div>
 </footer>

@@ -2,33 +2,24 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>Pangeo and Data &#8212; Pangeo  documentation</title>
     <link rel="stylesheet" href="_static/pangeo-style.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
-    <link rel="stylesheet" href="_static/example_gallery_styles_patched.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pangeo-main-site-custom.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    './',
-        VERSION:     '',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
-    <script type="text/javascript" src="_static/copybutton.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/example_gallery_styles_patched.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pangeo-main-site-custom.css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/js/jquery-1.11.0.min.js"></script>
+    <script src="_static/js/jquery-fix.js"></script>
+    <script src="_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="_static/bootstrap-sphinx.js"></script>
     <link rel="shortcut icon" href="_static/favicon.png"/>
     <link rel="author" title="About these documents" href="about.html" />
     <link rel="index" title="Index" href="genindex.html" />
@@ -40,8 +31,7 @@
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
 <meta name="apple-mobile-web-app-capable" content="yes">
 
-  </head>
-  <body>
+  </head><body>
 
   <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
     <div class="container">
@@ -262,13 +252,13 @@ scalable computing; this will likely require the large-scale migration to the
 cloud.
 We aren’t there yet, but Pangeo is working towards this goal.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
+<p class="admonition-title">Note</p>
 <p>The capability to read data in pangeo is dependent on the underlying
 <a class="reference internal" href="packages.html#packages"><span class="std std-ref">Packages</span></a>. The file formats and options are largely determined by:</p>
-<ul class="last simple">
-<li><a class="reference external" href="http://xarray.pydata.org/en/latest/io.html">Xarray’s I/O options</a></li>
-<li><a class="reference external" href="https://scitools.org.uk/iris/docs/latest/userguide/loading_iris_cubes.html">Iris’s I/O options</a></li>
-<li><a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/io.html">Pandas’s I/O options</a></li>
+<ul class="simple">
+<li><p><a class="reference external" href="http://xarray.pydata.org/en/latest/io.html">Xarray’s I/O options</a></p></li>
+<li><p><a class="reference external" href="https://scitools.org.uk/iris/docs/latest/userguide/loading_iris_cubes.html">Iris’s I/O options</a></p></li>
+<li><p><a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/io.html">Pandas’s I/O options</a></p></li>
 </ul>
 </div>
 <div class="section" id="data-on-hpc">
@@ -287,8 +277,8 @@ from those clusters via the GLADE file systems.
 All of those datasets are accessible to Pangeo now via the Cheyenne deployment.</p>
 <p>Specific use case examples which load data from HPC platforms include:</p>
 <ul class="simple">
-<li>Sean’s thing</li>
-<li>What else?</li>
+<li><p>Sean’s thing</p></li>
+<li><p>What else?</p></li>
 </ul>
 </div>
 <div class="section" id="data-in-the-cloud">
@@ -302,7 +292,7 @@ cloud environment.
 For an overview of these challenges, we recommend Matt Rocklin’s excellent
 blog post:</p>
 <ul class="simple">
-<li><a class="reference external" href="http://matthewrocklin.com/blog/work/2018/02/06/hdf-in-the-cloud">HDF in the Cloud: challenges and solutions for scientific data</a></li>
+<li><p><a class="reference external" href="http://matthewrocklin.com/blog/work/2018/02/06/hdf-in-the-cloud">HDF in the Cloud: challenges and solutions for scientific data</a></p></li>
 </ul>
 <p>The Pangeo community is actively engaged in defining what constitutes
 “analysis ready geoscience data” on the cloud.
@@ -317,7 +307,7 @@ specification, makes large datasets easily accessible to distributed computing.
 In Zarr datasets, the arrays are divided into chunks and compressed.
 These individual chunks can be stored as files on a filesystem or as objects
 in a cloud storage bucket.
-The metadata are stored in lightweight <code class="docutils literal"><span class="pre">.json</span></code> files.
+The metadata are stored in lightweight <code class="docutils literal notranslate"><span class="pre">.json</span></code> files.
 Zarr works well on both local filesystems and cloud-based object stores.
 Existing datasets can easily be converted to zarr via
 <a class="reference external" href="http://xarray.pydata.org/en/latest/io.html#zarr">xarray’s zarr functions</a>.</p>
@@ -339,8 +329,8 @@ This guide outlines our current practices for converting netCDF data to
 <a class="reference external" href="http://zarr.readthedocs.io/en/stable/">Zarr</a> and placing it on the cloud.
 These recommendations may change as cloud storage technology evolves.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">One important difference between local data storage and cloud data storage is
+<p class="admonition-title">Note</p>
+<p>One important difference between local data storage and cloud data storage is
 that local storage is based on <em>individual files</em> while <a class="reference external" href="http://zarr.readthedocs.io/en/stable/">Zarr</a> is based on
 <em>entire datasets</em> (which may be derived from many individual files, a.k.a.
 “granules”). When preparing data for cloud storage, you should ask
@@ -348,40 +338,40 @@ that local storage is based on <em>individual files</em> while <a class="referen
 preparing and uploading.</p>
 </div>
 <ol class="arabic">
-<li><p class="first"><strong>Open your Entire Dataset in Xarray</strong>.</p>
+<li><p><strong>Open your Entire Dataset in Xarray</strong>.</p>
 <p>Xarray is designed to
-load many netCDF files into a single <a class="reference external" href="http://xarray.pydata.org/en/latest/generated/xarray.Dataset.html#xarray.Dataset" title="(in xarray v0.16.2.dev58)"><code class="xref py py-class docutils literal"><span class="pre">xarray.Dataset</span></code></a> object.
-The easiest way to accomplish this is using the <code class="xref py py-meth docutils literal"><span class="pre">xarray.open_mfdataset()</span></code>
+load many netCDF files into a single <a class="reference external" href="http://xarray.pydata.org/en/latest/generated/xarray.Dataset.html#xarray.Dataset" title="(in xarray v0.16.3.dev12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">xarray.Dataset</span></code></a> object.
+The easiest way to accomplish this is using the <code class="xref py py-meth docutils literal notranslate"><span class="pre">xarray.open_mfdataset()</span></code>
 function. Suppose you have a directory full of netCDF files that comprise
-a single dataset stored in the directory <code class="docutils literal"><span class="pre">/path/to/mydataset</span></code>. If the files
+a single dataset stored in the directory <code class="docutils literal notranslate"><span class="pre">/path/to/mydataset</span></code>. If the files
 are properly formatted and sufficiently homogeneous, you can open them with
 a single line of xarray code.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
 <span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_mfdataset</span><span class="p">(</span><span class="s1">&#39;/path/to/mydataset/*.nc&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>More complicated datasets can be constructed manually by using
-<code class="xref py py-meth docutils literal"><span class="pre">xarray.concat()</span></code> and <code class="xref py py-meth docutils literal"><span class="pre">xarray.merge()</span></code> to combine individual
+<code class="xref py py-meth docutils literal notranslate"><span class="pre">xarray.concat()</span></code> and <code class="xref py py-meth docutils literal notranslate"><span class="pre">xarray.merge()</span></code> to combine individual
 files or sub-datasets into a single object.</p>
 <p>In creating your dataset, you should pay particular attention to the
 Dask chunk size. Consult
 <a class="reference external" href="http://xarray.pydata.org/en/latest/dask.html#chunking-and-performance">xarray’s documentation on chunking and performance</a>
 for guidance on choosing appropriately sized chunks. You may wish to manually
-specify the <code class="docutils literal"><span class="pre">chunks</span></code> argument when calling <code class="docutils literal"><span class="pre">xarray.open_dataset</span></code>
-and <code class="docutils literal"><span class="pre">xarray.open_mfdataset</span></code>.</p>
+specify the <code class="docutils literal notranslate"><span class="pre">chunks</span></code> argument when calling <code class="docutils literal notranslate"><span class="pre">xarray.open_dataset</span></code>
+and <code class="docutils literal notranslate"><span class="pre">xarray.open_mfdataset</span></code>.</p>
 <p>Inspect the representation of your dataset by printing its representation
-(i.e. <code class="docutils literal"><span class="pre">print(ds)</span></code>) and examining its full metadata (<code class="docutils literal"><span class="pre">ds.info()</span></code>).
+(i.e. <code class="docutils literal notranslate"><span class="pre">print(ds)</span></code>) and examining its full metadata (<code class="docutils literal notranslate"><span class="pre">ds.info()</span></code>).
 Make sure all the expected variables and metadata are present and have the
 correct shape / chunk structure.</p>
 </li>
-<li><p class="first"><strong>Export to Zarr Format</strong></p>
-<p>The next step is to export your <code class="docutils literal"><span class="pre">xarray.Dataset</span></code> to a
-<code class="xref py py-class docutils literal"><span class="pre">zarr</span> <span class="pre">Directory</span> <span class="pre">Store</span></code>. This is
+<li><p><strong>Export to Zarr Format</strong></p>
+<p>The next step is to export your <code class="docutils literal notranslate"><span class="pre">xarray.Dataset</span></code> to a
+<code class="xref py py-class docutils literal notranslate"><span class="pre">zarr</span> <span class="pre">Directory</span> <span class="pre">Store</span></code>. This is
 done as follows</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">ds</span><span class="o">.</span><span class="n">to_zarr</span><span class="p">(</span><span class="s1">&#39;/path/to/output/mydataset&#39;</span><span class="p">,</span> <span class="n">consolidated</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ds</span><span class="o">.</span><span class="n">to_zarr</span><span class="p">(</span><span class="s1">&#39;/path/to/output/mydataset&#39;</span><span class="p">,</span> <span class="n">consolidated</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>If <code class="docutils literal"><span class="pre">/path/to/output/mydataset</span></code> does not exist yet, it will be created.
+<p>If <code class="docutils literal notranslate"><span class="pre">/path/to/output/mydataset</span></code> does not exist yet, it will be created.
 (It’s best if it does not exist, as conflicts with existing files could cause
 problems.)</p>
 <p>If your dataset is very large, this can take a very long time.
@@ -390,7 +380,7 @@ from the storage device where the original files are located. If you are
 on a high-performance cluster, you might consider using <a class="reference external" href="https://distributed.dask.org/en/latest">Dask.distributed</a>
 to parallelize the operation across multiple nodes.</p>
 <p>Xarray and Zarr have many different options for encoding and compression of
-the datasets. This can be passed to <code class="docutils literal"><span class="pre">to_zarr</span></code> via the <code class="docutils literal"><span class="pre">encoding</span></code> keyword
+the datasets. This can be passed to <code class="docutils literal notranslate"><span class="pre">to_zarr</span></code> via the <code class="docutils literal notranslate"><span class="pre">encoding</span></code> keyword
 argument. Consult the relevant
 <a class="reference external" href="http://xarray.pydata.org/en/latest/io.html#zarr-compressors-and-filters">xarray documentation</a>
 and
@@ -399,37 +389,37 @@ for more detail.
 In our somewhat limited experience, the default encoding and compression
 perform adequately for most purposes.</p>
 </li>
-<li><p class="first"><strong>Upload to Cloud Storage</strong></p>
+<li><p><strong>Upload to Cloud Storage</strong></p>
 <p>Once the export to zarr is complete, you now upload the directory and all
 its contents to cloud storage. In order to do this step, you will need
 the command line utilities from your cloud provider installed on your system.
 In this example, we use Google Cloud Platform, which requires installing the
 <span class="xref std std-ref">google-cloud-sdk</span>.</p>
 <p>First you must authenticate to obtain credentials to perform the upload:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">gcloud</span> <span class="n">auth</span> <span class="n">login</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gcloud</span> <span class="n">auth</span> <span class="n">login</span>
 </pre></div>
 </div>
 <p>Now you can upload the dataset to the cloud-storage bucket of your choice.
-In this example, we upload to the <code class="docutils literal"><span class="pre">pangeo-data</span></code> bucket on Google Cloud
+In this example, we upload to the <code class="docutils literal notranslate"><span class="pre">pangeo-data</span></code> bucket on Google Cloud
 Storage:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">gsutil</span> <span class="o">-</span><span class="n">m</span> <span class="n">cp</span> <span class="o">-</span><span class="n">r</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">output</span><span class="o">/</span><span class="n">mydataset</span> <span class="n">gs</span><span class="p">:</span><span class="o">//</span><span class="n">pangeo</span><span class="o">-</span><span class="n">data</span><span class="o">/</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gsutil</span> <span class="o">-</span><span class="n">m</span> <span class="n">cp</span> <span class="o">-</span><span class="n">r</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">output</span><span class="o">/</span><span class="n">mydataset</span> <span class="n">gs</span><span class="p">:</span><span class="o">//</span><span class="n">pangeo</span><span class="o">-</span><span class="n">data</span><span class="o">/</span>
 </pre></div>
 </div>
 <p>This command can also take a long time to execute, depending on the size of
 your dataset and the bandwidth of your internet connection. The dataset will
-be available at the <code class="docutils literal"><span class="pre">pangeo-data/mydataset</span></code> path.</p>
+be available at the <code class="docutils literal notranslate"><span class="pre">pangeo-data/mydataset</span></code> path.</p>
 </li>
-<li><p class="first"><strong>Verify Dataset from a Pangeo Cloud Deployment</strong></p>
+<li><p><strong>Verify Dataset from a Pangeo Cloud Deployment</strong></p>
 <p>The data you uploaded should be read from a Pangeo deployment in the same
 cloud and the same region as the bucket in which it resides.
 Otherwise, you may suffer from diminished performance and accrue extra
 charges for data transfers.
-The <code class="docutils literal"><span class="pre">pangeo-data</span></code> bucket is in Google Cloud Storage in the <code class="docutils literal"><span class="pre">US-CENTRAL1</span></code>
+The <code class="docutils literal notranslate"><span class="pre">pangeo-data</span></code> bucket is in Google Cloud Storage in the <code class="docutils literal notranslate"><span class="pre">US-CENTRAL1</span></code>
 region. It can therefore be accessed by the flagship
 <a class="reference external" href="http://pangeo.pydata.org">pangeo.pydata.org</a> deployment.</p>
 <p>To open the dataset we just uploaded from within a notebook or script in
 pangeo.pydata.org, do the following:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
 <span class="kn">import</span> <span class="nn">gcsfs</span>
 <span class="n">gcs</span> <span class="o">=</span> <span class="n">gcsfs</span><span class="o">.</span><span class="n">GCSFileSystem</span><span class="p">(</span><span class="n">requester_pays</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_zarr</span><span class="p">(</span><span class="n">gcs</span><span class="o">.</span><span class="n">get_mapper</span><span class="p">(</span><span class="s1">&#39;gs://pangeo-data/mydataset&#39;</span><span class="p">),</span>
@@ -458,7 +448,7 @@ the underlying zarr chunks.</p>
     </p>
     <p>
         &copy; Copyright 2018-2020, Pangeo Team.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.4.<br/>
     </p>
   </div>
 </footer>

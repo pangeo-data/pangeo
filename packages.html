@@ -2,33 +2,24 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>Packages &#8212; Pangeo  documentation</title>
     <link rel="stylesheet" href="_static/pangeo-style.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
-    <link rel="stylesheet" href="_static/example_gallery_styles_patched.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pangeo-main-site-custom.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    './',
-        VERSION:     '',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
-    <script type="text/javascript" src="_static/copybutton.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/example_gallery_styles_patched.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pangeo-main-site-custom.css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/js/jquery-1.11.0.min.js"></script>
+    <script src="_static/js/jquery-fix.js"></script>
+    <script src="_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="_static/bootstrap-sphinx.js"></script>
     <link rel="shortcut icon" href="_static/favicon.png"/>
     <link rel="author" title="About these documents" href="about.html" />
     <link rel="index" title="Index" href="genindex.html" />
@@ -40,8 +31,7 @@
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
 <meta name="apple-mobile-web-app-capable" content="yes">
 
-  </head>
-  <body>
+  </head><body>
 
   <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
     <div class="container">
@@ -260,8 +250,8 @@
 A Pangeo environment is made of up of many different open-source software packages.
 Each of these packages has its own repository, documentation, and development team.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Many people and organizations were involved in the development of the
+<p class="admonition-title">Note</p>
+<p>Many people and organizations were involved in the development of the
 software described on this page. Most of them have nothing to do with Pangeo.
 By listing software packages on this website, we are in no way claiming
 credit for their hard work. Full information about the developers
@@ -276,14 +266,14 @@ packages are considered essential to the project.</p>
 <h3>Xarray<a class="headerlink" href="#xarray" title="Permalink to this headline">¶</a></h3>
 <img alt="https://github.com/pydata/xarray/raw/master/doc/_static/dataset-diagram-logo.png" src="https://github.com/pydata/xarray/raw/master/doc/_static/dataset-diagram-logo.png" style="width: 300px;" />
 <ul class="simple">
-<li>Website: <a class="reference external" href="http://xarray.pydata.org/en/latest">http://xarray.pydata.org/en/latest</a></li>
-<li>GitHub: <a class="reference external" href="https://github.com/pydata/xarray">https://github.com/pydata/xarray</a></li>
+<li><p>Website: <a class="reference external" href="http://xarray.pydata.org/en/latest">http://xarray.pydata.org/en/latest</a></p></li>
+<li><p>GitHub: <a class="reference external" href="https://github.com/pydata/xarray">https://github.com/pydata/xarray</a></p></li>
 </ul>
 <p>Xarray is an open source project and Python package
 that provides a toolkit for working with labeled multi-dimensional arrays of
 data. Xarray adopts the <a class="reference external" href="http://www.unidata.ucar.edu/software/thredds/current/netcdf-java/CDM">Common Data Model</a> for self-
 describing scientific data in widespread use in the Earth sciences:
-<code class="docutils literal"><span class="pre">xarray.Dataset</span></code> is an in-memory representation of a <a class="reference external" href="http://www.unidata.ucar.edu/software/netcdf">netCDF</a> file.
+<code class="docutils literal notranslate"><span class="pre">xarray.Dataset</span></code> is an in-memory representation of a <a class="reference external" href="http://www.unidata.ucar.edu/software/netcdf">netCDF</a> file.
 Xarray provides the basic data structures used by many other Pangeo packages,
 as well as powerful tools for computation and visualization.</p>
 </div>
@@ -291,16 +281,16 @@ as well as powerful tools for computation and visualization.</p>
 <h3>Iris<a class="headerlink" href="#iris" title="Permalink to this headline">¶</a></h3>
 <img alt="_images/Iris_logo_banner.png" src="_images/Iris_logo_banner.png" />
 <ul class="simple">
-<li>Website: <a class="reference external" href="https://scitools.org.uk/iris/docs/latest/">https://scitools.org.uk/iris/docs/latest/</a></li>
-<li>GitHub: <a class="reference external" href="https://github.com/SciTools/iris">https://github.com/SciTools/iris</a></li>
+<li><p>Website: <a class="reference external" href="https://scitools.org.uk/iris/docs/latest/">https://scitools.org.uk/iris/docs/latest/</a></p></li>
+<li><p>GitHub: <a class="reference external" href="https://github.com/SciTools/iris">https://github.com/SciTools/iris</a></p></li>
 </ul>
 <p>Iris seeks to provide a powerful, easy to use, and community-driven Python
 library for analysing and visualising meteorological and oceanographic data sets.</p>
 <p>With Iris you can:</p>
 <ul class="simple">
-<li>Use a single API to work on your data, irrespective of its original format.</li>
-<li>Read and write (CF-)netCDF, GRIB, and PP files.</li>
-<li>Easily produce graphs and maps via integration with matplotlib and cartopy.</li>
+<li><p>Use a single API to work on your data, irrespective of its original format.</p></li>
+<li><p>Read and write (CF-)netCDF, GRIB, and PP files.</p></li>
+<li><p>Easily produce graphs and maps via integration with matplotlib and cartopy.</p></li>
 </ul>
 <p>Iris is an alternative to Xarray. Iris is developed primarily by the
 UK <a class="reference external" href="http://www.metoffice.gov.uk/">Met Office</a> Analysis, Visualisation and Data team (AVD).</p>
@@ -308,8 +298,8 @@ UK <a class="reference external" href="http://www.metoffice.gov.uk/">Met Office<
 <div class="section" id="dask">
 <h3>Dask<a class="headerlink" href="#dask" title="Permalink to this headline">¶</a></h3>
 <img alt="_images/dask_horizontal_no_pad.svg" src="_images/dask_horizontal_no_pad.svg" width="300px" /><ul class="simple">
-<li>Website: <a class="reference external" href="http://dask.readthedocs.io/en/latest/">http://dask.readthedocs.io/en/latest/</a></li>
-<li>GitHub: <a class="reference external" href="https://github.com/dask/dask">https://github.com/dask/dask</a></li>
+<li><p>Website: <a class="reference external" href="http://dask.readthedocs.io/en/latest/">http://dask.readthedocs.io/en/latest/</a></p></li>
+<li><p>GitHub: <a class="reference external" href="https://github.com/dask/dask">https://github.com/dask/dask</a></p></li>
 </ul>
 <p>Dask is a flexible parallel computing library for analytics.
 Dask is the key to the scalability of the Pangeo platform; its data structures are
@@ -320,8 +310,8 @@ computing clusters to efficiently parallelize computations across many nodes.</p
 <div class="section" id="jupyter">
 <h3>Jupyter<a class="headerlink" href="#jupyter" title="Permalink to this headline">¶</a></h3>
 <img alt="_images/jupyter-logo.svg" height="160px" src="_images/jupyter-logo.svg" /><ul class="simple">
-<li>Website: <a class="reference external" href="http://jupyter.org/">http://jupyter.org/</a></li>
-<li>GitHub: <a class="reference external" href="https://github.com/jupyter">https://github.com/jupyter</a></li>
+<li><p>Website: <a class="reference external" href="http://jupyter.org/">http://jupyter.org/</a></p></li>
+<li><p>GitHub: <a class="reference external" href="https://github.com/jupyter">https://github.com/jupyter</a></p></li>
 </ul>
 <p>Project Jupyter exists to develop open-source software, open-standards, and
 services for interactive computing across dozens of programming languages.
@@ -347,17 +337,17 @@ community.</p>
 <div class="section" id="general-best-practices-for-open-source">
 <h3>General Best Practices for Open Source<a class="headerlink" href="#general-best-practices-for-open-source" title="Permalink to this headline">¶</a></h3>
 <ol class="arabic simple">
-<li>Use an open-source license. See <a class="reference external" href="http://www.astrobetter.com/blog/2014/03/10/the-whys-and-hows-of-licensing-scientific-code/">Jake VanderPlas’ article on
+<li><p>Use an open-source license. See <a class="reference external" href="http://www.astrobetter.com/blog/2014/03/10/the-whys-and-hows-of-licensing-scientific-code/">Jake VanderPlas’ article on
 licensing scientific
 code</a>
-or <a class="reference external" href="https://choosealicense.com/">these more general guidelines</a></li>
-<li>Use version control for source code (for example, on
-<a class="reference external" href="http://github.org">github</a>)</li>
-<li>Provide thorough test coverage and continuous integration of testing</li>
-<li>Maintain comprehensive Documentation</li>
-<li>Establish a <a class="reference external" href="https://opensource.guide/code-of-conduct/">code of
+or <a class="reference external" href="https://choosealicense.com/">these more general guidelines</a></p></li>
+<li><p>Use version control for source code (for example, on
+<a class="reference external" href="http://github.org">github</a>)</p></li>
+<li><p>Provide thorough test coverage and continuous integration of testing</p></li>
+<li><p>Maintain comprehensive Documentation</p></li>
+<li><p>Establish a <a class="reference external" href="https://opensource.guide/code-of-conduct/">code of
 conduct</a> for
-contributors</li>
+contributors</p></li>
 </ol>
 <p>The <a class="reference external" href="https://opensource.guide/">open-source guide</a> provides some
 great advice on building and maintaining open-source projects.</p>
@@ -367,21 +357,21 @@ great advice on building and maintaining open-source projects.</p>
 <p>To address the needs of geoscience researchers, we have developed some
 additional recommendations.</p>
 <ol class="arabic simple">
-<li><em>Solve a general problem:</em> packages should solve a general problem
-that is encountered by a relatively broad groups of researchers.</li>
-<li><em>Clearly defined scope:</em> packages should have a clear and relatively
+<li><p><em>Solve a general problem:</em> packages should solve a general problem
+that is encountered by a relatively broad groups of researchers.</p></li>
+<li><p><em>Clearly defined scope:</em> packages should have a clear and relatively
 narrow scope, solving the specific problem[s] identified in the point
 above (rather than attempting to cover every possible aspect of
-geoscience research computing).</li>
-<li><em>No duplication:</em> developers should try to leverage existing packages
+geoscience research computing).</p></li>
+<li><p><em>No duplication:</em> developers should try to leverage existing packages
 as much as possible to avoid duplication of effort. (In early-stage
 development and experimentation, however, some duplication will be
 inevitable as developers try implementing different solutions to the
-same general problems.)</li>
-<li><em>Consume and Produce Xarray Objects:</em> Xarray data structures
-facilitate mutual interoperability between packages.</li>
-<li><em>Operate Lazily:</em> whenever possible, packages should avoid explicitly
-triggering computation on Dask objects.</li>
+same general problems.)</p></li>
+<li><p><em>Consume and Produce Xarray Objects:</em> Xarray data structures
+facilitate mutual interoperability between packages.</p></li>
+<li><p><em>Operate Lazily:</em> whenever possible, packages should avoid explicitly
+triggering computation on Dask objects.</p></li>
 </ol>
 </div>
 <div class="section" id="why-xarray-and-dask">
@@ -446,7 +436,7 @@ effectively on large computer clusters.</p>
     </p>
     <p>
         &copy; Copyright 2018-2020, Pangeo Team.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.4.<br/>
     </p>
   </div>
 </footer>
