@@ -14,8 +14,8 @@ the `meeting notes here <https://docs.google.com/document/d/e/2PACX-1vRerhoxG-wO
 
 **Schedule**
 
-* Early Weeks: 4p GMT
-* Late Weeks: 8p GMT
+* Early Weeks: 12pm US Eastern Time
+* Late Weeks: 4pm US Eastern Time
 
 
 Working Group Meetings
