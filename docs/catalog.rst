@@ -3,7 +3,7 @@
 Pangeo Data Catalog
 ===================
 
-Pangeo maintains an experimental catalog of analysis-ready cloud-based data at
+Pangeo maintained an experimental catalog of analysis-ready cloud-based data at
 `catalog.pangeo.io <https://catalog.pangeo.io/>`_.
 
 
