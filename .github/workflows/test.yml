@@ -1,0 +1,19 @@
+name: Test Sphinx site
+
+on:
+  pull_request:
+    branches: [ master ]
+    paths: [ 'docs/**' ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Build Sphinx documentation
+      uses: ammaraskar/sphinx-action@master
+      with:
+        docs-folder: "docs/"
