@@ -2,7 +2,7 @@ name: Test Sphinx site
 
 on:
   pull_request:
-    branches: [ master ]
+    branches: [ 'better-pr-workflow' ]
     paths: [ 'docs/**' ]
 
 jobs:
@@ -17,3 +17,21 @@ jobs:
       uses: ammaraskar/sphinx-action@master
       with:
         docs-folder: "docs/"
+        
+    - name: Commit documentation changes to preview branch
+      run: |
+        git clone https://github.com/pangeo-data/pangeo.git --branch gh-pages --single-branch gh-pages
+        cd gh-pages
+        git checkout -b $GITHUB_REF-preview
+        cp -r ../docs/_build/html/* .
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add .
+        git commit -m "Create preview documentation" -a || true
+        
+    - name: Push documentation changes to preview branch
+      uses: ad-m/github-push-action@master
+      with:
+        branch: ${{ github.head_ref }}-preview
+        directory: gh-pages
+        github_token: ${{ secrets.GITHUB_TOKEN }}
