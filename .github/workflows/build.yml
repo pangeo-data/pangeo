@@ -18,14 +18,20 @@ jobs:
       with:
         docs-folder: "docs/"
         
+    - name: Create new preview branch
+      uses: peterjgrainger/action-create-branch@v2.0.1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        branch: ${{ github.head_ref }}-preview
+        
     - name: Commit documentation changes to preview branch
       run: |
-        git clone https://github.com/pangeo-data/pangeo.git --branch gh-pages --single-branch gh-pages
-        cd gh-pages
-        git checkout -B $GITHUB_REF-preview
-        cp -r ../docs/_build/html/* .
+        git clone https://github.com/pangeo-data/pangeo.git --branch $GITHUB_REF-preview --single-branch gh-pages
+        cp -r docs/_build/html/* gh-pages/
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
+        cd gh-pages
         git add .
         git commit -m "Create preview documentation" -a || true
         
