@@ -9,7 +9,7 @@ Each of these packages has its own repository, documentation, and development te
 
 .. note::
 
-  Many people and organizations were involved in the development of the
+  Many persons and organizations were involved in the development of the
   software described on this page. Most of them have nothing to do with Pangeo.
   By listing software packages on this website, we are in no way claiming
   credit for their hard work. Full information about the developers
