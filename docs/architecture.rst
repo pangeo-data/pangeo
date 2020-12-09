@@ -3,7 +3,7 @@
 Technical Architecture
 ======================
 
-Interoperability, extensibility, and portability are core concepts defining
+Interoperability, extensibility, and portability are key concepts defining
 the Pangeo technical architecture. Rather than designing and creating a single
 monolithic application, our vision is an ecosystem of tools that can be used
 together. We want you to be able to easily build your own Pangeo, whatever that
