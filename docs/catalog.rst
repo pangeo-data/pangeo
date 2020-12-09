@@ -12,7 +12,7 @@ cataloging data in the cloud. Some important technologies currently in use
 include
 
 - `Spatiotemporal Asset Catalog <https://stacspec.org/>`_: A common language
-  to describe a range of geospatial information, so it can more easily be
+  to describe a range of geospatial information, so it can moe easily be
   indexed and discovered.
 - `Intake <https://intake.readthedocs.io/en/latest/>`_: A python package for
   finding, investigating, loading and disseminating data.
