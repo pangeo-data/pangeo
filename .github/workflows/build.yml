@@ -22,7 +22,7 @@ jobs:
       run: |
         git clone https://github.com/pangeo-data/pangeo.git --branch gh-pages --single-branch gh-pages
         cd gh-pages
-        git checkout -b $GITHUB_REF-preview
+        git checkout -B $GITHUB_REF-preview
         cp -r ../docs/_build/html/* .
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
