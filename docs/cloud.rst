@@ -7,7 +7,7 @@ Pangeo Cloud is an experimental service providing cloud-based data-science
 environments.
 
 .. warning::
-    We currently have no long-term funding to support Pangeo Cloud.
+    We currently have noo long-term funding to support Pangeo Cloud.
     At present, we've cobbled together funding from various grants from funding
     agencies and cloud providers.
     All users must understand that Pangeo Cloud environments could disappear
