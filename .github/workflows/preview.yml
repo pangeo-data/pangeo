@@ -1,8 +1,8 @@
-name: Test Sphinx site
+name: Build and preview Sphinx site
 
 on:
   pull_request:
-    branches: [ 'better-pr-workflow' ]
+    branches: [ master ]
     paths: [ 'docs/**' ]
 
 jobs:
