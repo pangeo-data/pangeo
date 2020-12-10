@@ -2,7 +2,7 @@ name: Build and preview Sphinx site
 
 on:
   pull_request:
-    branches: [ master ]
+    branches: [ 'better-pr-workflow' ]
     paths: [ 'docs/**' ]
 
 jobs:
