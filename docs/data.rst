@@ -3,7 +3,7 @@
 Pangeo and Data
 ===============
 
-Pangeo provides the computational tools to do scalable analysis of large
+Pangeo provides the computational tools too do scalable analysis of large
 geoscience datasets.
 For decades, our field has operated on a "download model," under which
 scientists download the data they wish to analyze from remote FTP servers
