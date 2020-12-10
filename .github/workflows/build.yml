@@ -18,26 +18,39 @@ jobs:
       with:
         docs-folder: "docs/"
         
-    - name: Create new preview branch
-      uses: peterjgrainger/action-create-branch@v2.0.1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        branch: ${{ github.head_ref }}-preview
-        
     - name: Commit documentation changes to preview branch
       run: |
-        git clone https://github.com/pangeo-data/pangeo.git --branch $GITHUB_REF-preview --single-branch gh-pages
-        cp -r docs/_build/html/* gh-pages/
+        if git clone https://github.com/pangeo-data/pangeo.git --branch ${{ github.head_ref }}-preview --single-branch gh-pages ; then
+          cd gh-pages
+          echo "COMMENT_ON_PR=false" >> $GITHUB_ENV
+        else
+          git clone https://github.com/pangeo-data/pangeo.git --branch gh-pages --single-branch gh-pages
+          cd gh-pages
+          git checkout -b ${{ github.head_ref }}-preview
+          echo "COMMENT_ON_PR=true" >> $GITHUB_ENV
+        fi
+        cp -r ../docs/_build/html/* .
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        cd gh-pages
         git add .
-        git commit -m "Create preview documentation" -a || true
-        
+        git commit -m "Update documentation" -a || true
+ 
     - name: Push documentation changes to preview branch
       uses: ad-m/github-push-action@master
       with:
         branch: ${{ github.head_ref }}-preview
         directory: gh-pages
         github_token: ${{ secrets.GITHUB_TOKEN }}
+        
+    - name: Leave comment on pull request
+      if: env.COMMENT_ON_PR == 'true'
+      uses: actions/github-script@v3
+      with:
+        github-token: ${{secrets.GITHUB_TOKEN}}
+        script: |
+          github.issues.createComment({
+            issue_number: context.issue.number,
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            body: 'Thank you for your contributions!\n\nA preview of your changes can be viewed at:\n- https://raw.githack.com/pangeo-data/pangeo/${{ github.head_ref }}-preview/index.html'
+            })
