@@ -1,4 +1,4 @@
-name: Test Sphinx site
+name: Build Sphinx site
 
 on:
   pull_request:
@@ -7,8 +7,8 @@ on:
 
 jobs:
   build:
+    if: github.event.pull_request.head.repo.full_name != github.repository
     runs-on: ubuntu-latest
-
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2

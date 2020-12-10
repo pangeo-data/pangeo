@@ -1,0 +1,56 @@
+name: Build and preview Sphinx site
+
+on:
+  pull_request:
+    branches: [ master ]
+    paths: [ 'docs/**' ]
+
+jobs:
+  build:
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Build Sphinx documentation
+      uses: ammaraskar/sphinx-action@master
+      with:
+        docs-folder: "docs/"
+        
+    - name: Commit documentation changes to preview branch
+      run: |
+        if git clone https://github.com/pangeo-data/pangeo.git --branch ${{ github.head_ref }}-preview --single-branch gh-pages ; then
+          cd gh-pages
+          echo "COMMENT_ON_PR=false" >> $GITHUB_ENV
+        else
+          git clone https://github.com/pangeo-data/pangeo.git --branch gh-pages --single-branch gh-pages
+          cd gh-pages
+          git checkout -b ${{ github.head_ref }}-preview
+          echo "COMMENT_ON_PR=true" >> $GITHUB_ENV
+        fi
+        cp -r ../docs/_build/html/* .
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add .
+        git commit -m "Update documentation" -a || true
+ 
+    - name: Push documentation changes to preview branch
+      uses: ad-m/github-push-action@master
+      with:
+        branch: ${{ github.head_ref }}-preview
+        directory: gh-pages
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        
+    - name: Leave comment on pull request
+      if: env.COMMENT_ON_PR == 'true'
+      uses: actions/github-script@v3
+      with:
+        github-token: ${{secrets.GITHUB_TOKEN}}
+        script: |
+          github.issues.createComment({
+            issue_number: context.issue.number,
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            body: 'Thank you for your contributions!\n\nA preview of your changes can be viewed at:\n- https://raw.githack.com/pangeo-data/pangeo/${{ github.head_ref }}-preview/index.html'
+            })
