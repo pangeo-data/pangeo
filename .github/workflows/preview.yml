@@ -6,7 +6,7 @@ on:
     paths: [ 'docs/**' ]
 
 jobs:
-  build:
+  build_and_preview:
     if: github.event.pull_request.head.repo.full_name == github.repository
     runs-on: ubuntu-latest
     steps:
@@ -54,3 +54,14 @@ jobs:
             repo: context.repo.repo,
             body: 'Thank you for your contributions!\n\nA preview of your changes can be viewed at:\n- https://raw.githack.com/pangeo-data/pangeo/${{ github.head_ref }}-preview/index.html'
             })
+  build:
+    if: github.event.pull_request.head.repo.full_name != github.repository
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Build Sphinx documentation
+      uses: ammaraskar/sphinx-action@master
+      with:
+        docs-folder: "docs/"
