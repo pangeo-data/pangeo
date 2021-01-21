@@ -29,19 +29,20 @@ Working Group Meetings
     * Schedule: First Monday of the month at 4p GMT
     * Conferencing:  `Google Hangouts <https://meet.google.com/ubc-tgak-ugg>`_
     * Notes: `link <https://paper.dropbox.com/doc/Meeting-notes-Machine-Learning-WG--AmU~wZXwdbpTZi8rQsJQH9_sAg-9UUgyywF9jmIMXXbmZTyJ>`__
-3. Education Working Group 
-    * Schedule: (Schedule TBD)
-    * Conferencing: `whereby.com/pangeo <https://whereby.com/pangeo>`_
-    * Notes: `GitHub <https://github.com/pangeo-data/education-material>`__
-4. Cloud Operations Working Group
+3. Cloud Operations Working Group
     * Schedule: Second Monday of the month at 4:30p GMT
     * Conferencing: `whereby.com/pangeo <https://whereby.com/pangeo>`_
     * Notes: `link <https://docs.google.com/document/d/1I-2VNNHoAjjeYvlCezQhFLmiu2OevqGDS5nUAP-6Hfw/edit?usp=sharing>`__
-    
+4. `Project Pythia <https://projectpythia.org>`_ (formerly the Education Working Group)
+    * Schedule: Thursdays at 1p US Eastern Time (alternating between Project Pythia Education and Infrastructure Working Groups)
+    * Conferencing: `Zoom <https://ucar-edu.zoom.us/j/91375487587>`_ (consult the `Pythia Calendar <https://calendar.google.com/calendar/u/0?cid=Y180cXB2ZjMxNmFmZDltdjBjaTdkMnVpYWZvZ0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t>`_ for how to join)
+    * Infrastructure Working Group Notes: `link <https://docs.google.com/document/d/e/2PACX-1vQN5YFkZtCZPKVk2Rte2xoHuiqJuYz1KpynsSKmeCLwP-4glUsGuCPJbITwB4OJc8dOhUpHAMacdx59/pub>`__
+    * Education Working Group Notes: `link <https://docs.google.com/document/d/e/2PACX-1vTHJKdeWfQBbkrGt8RsSVKJHy5uAQumD40_hRXhRKDGpLO-4ACBlMdQNyR-ap-Q19Zwdq2m5yUk_mZk/pub>`__
+
 Meeting Calendar
 ----------------
 
-A google calendar has been setup with these reoccurring times [GCAL_, ICAL_].
+A Google Calendar has been setup with these reoccurring times [GCAL_, ICAL_].
 
 .. _GCAL: https://calendar.google.com/calendar/embed?src=ucar.edu_c23ln4014khs3f65o93vqv5kqc%40group.calendar.google.com&ctz=America%2FLos_Angeles
 .. _ICAL: https://calendar.google.com/calendar/ical/ucar.edu_c23ln4014khs3f65o93vqv5kqc%40group.calendar.google.com/public/basic.ics
