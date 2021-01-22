@@ -51,7 +51,7 @@ in more detail in the :ref:`packages` section.
 Python
 ~~~~~~
 
-The Python programming is quickly becoming the standard language in the
+Python is quickly becoming the standard programming language in the
 open-source data science world. The core packages in the Pangeo stack are all
 built using Python.
 
