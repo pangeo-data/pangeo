@@ -108,7 +108,7 @@ These are the steps for adding a package to the environment:
    When this is merged, you can test your changes in the staging environment
    (at either https://staging.us-central1-b.gcp.pangeo.io or https://staging.aws-uswest2.pangeo.io)
 4. If things look good, the pangeo maintainers can trigger a deploy to production,
-   making the package avaiable to everyone.
+   making the package available to everyone.
 
 Users may use ``pip`` and ``conda`` to install new packages in their own
 environments, but this approach currently has some limitations noted below.
