@@ -61,7 +61,7 @@ Create a new conda environment for our pangeo work:
     conda create -n pangeo -c conda-forge \
         python dask jupyterlab>=3.0 dask-jobqueue \
         xarray zarr numcodecs hvplot geoviews datashader  \
-        nbserverproxy widgetsnbextension dask-labextension
+        jupyter-server-proxy widgetsnbextension dask-labextension
 
 .. note::
 
