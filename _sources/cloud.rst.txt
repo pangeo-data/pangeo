@@ -353,7 +353,7 @@ the following code should work::
    PANGEO_SCRATCH = os.environ['PANGEO_SCRATCH']
    # -> gs://pangeo-scratch/<username>
    import fsspec
-   mapper = fsspec.get_mapper(f'PANGEO_SCRATCH/sub/path')
+   mapper = fsspec.get_mapper(f'{PANGEO_SCRATCH}/sub/path')
    # mapper can now be to read / write zarr stores
 
 .. warning::

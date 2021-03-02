@@ -556,7 +556,7 @@ the following code should work:</p>
 <span class="n">PANGEO_SCRATCH</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;PANGEO_SCRATCH&#39;</span><span class="p">]</span>
 <span class="c1"># -&gt; gs://pangeo-scratch/&lt;username&gt;</span>
 <span class="kn">import</span> <span class="nn">fsspec</span>
-<span class="n">mapper</span> <span class="o">=</span> <span class="n">fsspec</span><span class="o">.</span><span class="n">get_mapper</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;PANGEO_SCRATCH/sub/path&#39;</span><span class="p">)</span>
+<span class="n">mapper</span> <span class="o">=</span> <span class="n">fsspec</span><span class="o">.</span><span class="n">get_mapper</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{PANGEO_SCRATCH}</span><span class="s1">/sub/path&#39;</span><span class="p">)</span>
 <span class="c1"># mapper can now be to read / write zarr stores</span>
 </pre></div>
 </div>
