@@ -126,13 +126,15 @@ with a commented out version. You can create this file and do this first import 
 In this ``.config/dask/distributed.yaml`` file, set:
 
 .. code:: python
-
-  #   ###################
-  #   # Bokeh dashboard #
-  #   ###################
-  #   dashboard:
-      link: "/proxy/{port}/status"
       
+  distributed:
+    version: 2
+    ###################
+    # Bokeh dashboard #
+    ###################
+    dashboard:
+      link: "/proxy/8787/status"
+
 
 ------------
 
@@ -271,10 +273,10 @@ cluster. MPI is **NOT** used for communication by dask.
    .. code:: bash
 
        Run the following command from your local machine:
-       ssh -N -L 8888:r7i3n13:8888 -L 8787:r7i3n13:8787 username@cheyenne.ucar.edu
+       ssh -N -L 8888:r7i3n13:8888  username@cheyenne.ucar.edu
        Then open the following URLs:
            Jupyter lab: http://localhost:8888
-           Dask dashboard: http://localhost:8787
+           Dask dashboard: http://localhost:8888/proxy/8787
 
    It may be necessary to modify the included scripts to use different PBS
    project number, conda environment, or notebook directory.
@@ -375,13 +377,13 @@ From your same session on the login node, run the following code:
 
     client.run_on_scheduler(start_jlab)
 
-    print("ssh -N -L 8888:%s:8888  -L 8787:%s:8787 cheyenne.ucar.edu" % (host, host))
+    print("ssh -N -L 8888:%s:8888 cheyenne.ucar.edu" % (host))
 
 This should print out a statement like the following:
 
 ::
 
-    ssh -N -L 8787:r13i2n1:8787 -L 8888:r13i2n1:8888 -l username cheyenne.ucar.edu
+    ssh -N -L 8888:r13i2n1:8888 -l username cheyenne.ucar.edu
 
 You can run this command from your personal computer (not the terminal
 logged into Cheyenne) to set up SSH-tunnels that will allow you to log
@@ -389,7 +391,7 @@ into web servers running on your allocation. Afterwards, you should be
 able to open the following links in your web browser on your computer:
 
 -  Jupyter Lab: http://localhost:8888
--  Dask dashboard: http://localhost:8787/status
+-  Dask dashboard: http://localhost:8888/proxy/8787/status
 
 The SSH tunnels will route these into the correct machine in your
 cluster allocation.

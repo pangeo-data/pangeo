@@ -340,11 +340,13 @@ with a commented out version. You can create this file and do this first import 
 </pre></div>
 </div>
 <p>In this <code class="docutils literal notranslate"><span class="pre">.config/dask/distributed.yaml</span></code> file, set:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#   ###################</span>
-<span class="c1">#   # Bokeh dashboard #</span>
-<span class="c1">#   ###################</span>
-<span class="c1">#   dashboard:</span>
-    <span class="n">link</span><span class="p">:</span> <span class="s2">&quot;/proxy/</span><span class="si">{port}</span><span class="s2">/status&quot;</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">distributed</span><span class="p">:</span>
+  <span class="n">version</span><span class="p">:</span> <span class="mi">2</span>
+  <span class="c1">###################</span>
+  <span class="c1"># Bokeh dashboard #</span>
+  <span class="c1">###################</span>
+  <span class="n">dashboard</span><span class="p">:</span>
+    <span class="n">link</span><span class="p">:</span> <span class="s2">&quot;/proxy/8787/status&quot;</span>
 </pre></div>
 </div>
 <hr class="docutils" />
@@ -456,10 +458,10 @@ beyond the one that is automatically added for the scheduler. Once this command
 has been run, and after a moment for the jobs to work their way through the queue,
 it will print something like:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Run the following <span class="nb">command</span> from your <span class="nb">local</span> machine:
-ssh -N -L <span class="m">8888</span>:r7i3n13:8888 -L <span class="m">8787</span>:r7i3n13:8787 username@cheyenne.ucar.edu
+ssh -N -L <span class="m">8888</span>:r7i3n13:8888  username@cheyenne.ucar.edu
 Then open the following URLs:
     Jupyter lab: http://localhost:8888
-    Dask dashboard: http://localhost:8787
+    Dask dashboard: http://localhost:8888/proxy/8787
 </pre></div>
 </div>
 <p>It may be necessary to modify the included scripts to use different PBS
@@ -544,11 +546,11 @@ on your allocation.</p>
 
 <span class="n">client</span><span class="o">.</span><span class="n">run_on_scheduler</span><span class="p">(</span><span class="n">start_jlab</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ssh -N -L 8888:</span><span class="si">%s</span><span class="s2">:8888  -L 8787:</span><span class="si">%s</span><span class="s2">:8787 cheyenne.ucar.edu&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="n">host</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ssh -N -L 8888:</span><span class="si">%s</span><span class="s2">:8888 cheyenne.ucar.edu&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">host</span><span class="p">))</span>
 </pre></div>
 </div>
 <p>This should print out a statement like the following:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ssh</span> <span class="o">-</span><span class="n">N</span> <span class="o">-</span><span class="n">L</span> <span class="mi">8787</span><span class="p">:</span><span class="n">r13i2n1</span><span class="p">:</span><span class="mi">8787</span> <span class="o">-</span><span class="n">L</span> <span class="mi">8888</span><span class="p">:</span><span class="n">r13i2n1</span><span class="p">:</span><span class="mi">8888</span> <span class="o">-</span><span class="n">l</span> <span class="n">username</span> <span class="n">cheyenne</span><span class="o">.</span><span class="n">ucar</span><span class="o">.</span><span class="n">edu</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ssh</span> <span class="o">-</span><span class="n">N</span> <span class="o">-</span><span class="n">L</span> <span class="mi">8888</span><span class="p">:</span><span class="n">r13i2n1</span><span class="p">:</span><span class="mi">8888</span> <span class="o">-</span><span class="n">l</span> <span class="n">username</span> <span class="n">cheyenne</span><span class="o">.</span><span class="n">ucar</span><span class="o">.</span><span class="n">edu</span>
 </pre></div>
 </div>
 <p>You can run this command from your personal computer (not the terminal
@@ -557,7 +559,7 @@ into web servers running on your allocation. Afterwards, you should be
 able to open the following links in your web browser on your computer:</p>
 <ul class="simple">
 <li><p>Jupyter Lab: <a class="reference external" href="http://localhost:8888">http://localhost:8888</a></p></li>
-<li><p>Dask dashboard: <a class="reference external" href="http://localhost:8787/status">http://localhost:8787/status</a></p></li>
+<li><p>Dask dashboard: <a class="reference external" href="http://localhost:8888/proxy/8787/status">http://localhost:8888/proxy/8787/status</a></p></li>
 </ul>
 <p>The SSH tunnels will route these into the correct machine in your
 cluster allocation.</p>
