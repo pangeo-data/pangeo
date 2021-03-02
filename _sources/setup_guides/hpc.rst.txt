@@ -59,24 +59,20 @@ Create a new conda environment for our pangeo work:
 ::
 
     conda create -n pangeo -c conda-forge \
-        python=3.7* pangeo-notebook dask-jobqueue mpi4py \
+        python dask jupyterlab>=3.0 dask-jobqueue \
         xarray zarr numcodecs hvplot geoviews datashader  \
-        nbserverproxy widgetsnbextension
+        jupyter-server-proxy widgetsnbextension dask-labextension
 
 .. note::
 
    Depending on your application, you may choose to add additional conda
    packages to this list.
 
-Activate this environment and add extensions
+Activate this environment (and note that with Jupyterlab version 3, extensions no longer need to be added after environment creation):
 
 ::
 
     conda activate pangeo
-    jupyter labextension install @pyviz/jupyterlab_pyviz
-    jupyter labextension install @jupyter-widgets/jupyterlab-manager
-    jupyter labextension install dask-labextension
-    jupyter serverextension enable dask_labextension
     
 Your prompt should now look something like this (note the pangeo environment name):
 
@@ -98,67 +94,24 @@ Configure Jupyter
 (If you don't plan to use Jupyter notebooks then you can safely skip
 this section.)
 
-.. note::
-
-   When using recent Jupyter iteration the following section can be replaced by simply invoking the command::
-   
-      jupyter notebook --generate-config
-      jupyter notebook password
-
-   And entering desired password.
-
-Jupyter notebook servers include a password for security. We're going to
-setup a password for ourselves. First we generate the Jupyter config
-file and install a notebook proxy service:
+Jupyter notebook servers include a password for security. First we generate the Jupyter config
+file then set a password:
 
 ::
 
-    jupyter notebook --generate-config
-    jupyter serverextension enable --py nbserverproxy
+      jupyter server --generate-config
+      jupyter server password
 
-This created a file in ``~/.jupyter/jupyter_notebook_config.py``. If you
-open that file and search for "password", you'll see a line like the
-following:
-
-::
-
-    #c.NotebookApp.password = u''
-
-The instructions in the comments of the config file tell you to generate
-a hashed password by entering the following commands:
-
-::
-
-    $ ipython
-
-.. code:: python
-
-    In [1]: from notebook.auth import passwd; passwd()
-    Enter password:
-
-You can enter a password of your choice, and it will return to you a
-encoded password. I entered "password" (do not do this) and go the following
-output:
-
-.. code:: python
-
-    Out[1]: 'sha1:69a76df803b9:99ca27341563cd85ba4e78684128e1f4ad2d8d0d'
-
-Copy that string into your ``jupyter_notebook_config.py`` config file
-
-::
-
-    c.NotebookApp.password = u'sha1:69a76df803b9:99ca27341563cd85ba4e78684128e1f4ad2d8d0d'
-
-For security reasons, we recommend making sure your ``jupyter_notebook_config.py``
-is readable only by you. For more information on and other methods for
+This created a file in ``~/.jupyter/jupyter_server_config.py``. 
+For security reasons, we recommend making sure your ``jupyter_server_config.py``
+is readable only by you. For more information on this and other methods for
 securing Jupyter, check out
 `Securing a notebook server <http://jupyter-notebook.readthedocs.io/en/stable/public_server.html#securing-a-notebook-server>`__
 in the Jupyter documentation.
 
 ::
 
-    chmod 400 ~/.jupyter/jupyter_notebook_config.py
+    chmod 400 ~/.jupyter/jupyter_server_config.py
 
 Finally, we may want to configure dask's dashboard to forward through Jupyter.
 This can be done by editing the dask distributed config file, e.g.:
@@ -173,13 +126,15 @@ with a commented out version. You can create this file and do this first import 
 In this ``.config/dask/distributed.yaml`` file, set:
 
 .. code:: python
-
-  #   ###################
-  #   # Bokeh dashboard #
-  #   ###################
-  #   dashboard:
-      link: "/proxy/{port}/status"
       
+  distributed:
+    version: 2
+    ###################
+    # Bokeh dashboard #
+    ###################
+    dashboard:
+      link: "/proxy/8787/status"
+
 
 ------------
 
@@ -318,10 +273,10 @@ cluster. MPI is **NOT** used for communication by dask.
    .. code:: bash
 
        Run the following command from your local machine:
-       ssh -N -L 8888:r7i3n13:8888 -L 8787:r7i3n13:8787 username@cheyenne.ucar.edu
+       ssh -N -L 8888:r7i3n13:8888  username@cheyenne.ucar.edu
        Then open the following URLs:
            Jupyter lab: http://localhost:8888
-           Dask dashboard: http://localhost:8787
+           Dask dashboard: http://localhost:8888/proxy/8787
 
    It may be necessary to modify the included scripts to use different PBS
    project number, conda environment, or notebook directory.
@@ -422,13 +377,13 @@ From your same session on the login node, run the following code:
 
     client.run_on_scheduler(start_jlab)
 
-    print("ssh -N -L 8888:%s:8888  -L 8787:%s:8787 cheyenne.ucar.edu" % (host, host))
+    print("ssh -N -L 8888:%s:8888 cheyenne.ucar.edu" % (host))
 
 This should print out a statement like the following:
 
 ::
 
-    ssh -N -L 8787:r13i2n1:8787 -L 8888:r13i2n1:8888 -l username cheyenne.ucar.edu
+    ssh -N -L 8888:r13i2n1:8888 -l username cheyenne.ucar.edu
 
 You can run this command from your personal computer (not the terminal
 logged into Cheyenne) to set up SSH-tunnels that will allow you to log
@@ -436,7 +391,7 @@ into web servers running on your allocation. Afterwards, you should be
 able to open the following links in your web browser on your computer:
 
 -  Jupyter Lab: http://localhost:8888
--  Dask dashboard: http://localhost:8787/status
+-  Dask dashboard: http://localhost:8888/proxy/8787/status
 
 The SSH tunnels will route these into the correct machine in your
 cluster allocation.

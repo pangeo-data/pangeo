@@ -287,9 +287,9 @@ directory with this setting the first time you run it.</p>
 </div>
 <p>Create a new conda environment for our pangeo work:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">create</span> <span class="o">-</span><span class="n">n</span> <span class="n">pangeo</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> \
-    <span class="n">python</span><span class="o">=</span><span class="mf">3.7</span><span class="o">*</span> <span class="n">pangeo</span><span class="o">-</span><span class="n">notebook</span> <span class="n">dask</span><span class="o">-</span><span class="n">jobqueue</span> <span class="n">mpi4py</span> \
+    <span class="n">python</span> <span class="n">dask</span> <span class="n">jupyterlab</span><span class="o">&gt;=</span><span class="mf">3.0</span> <span class="n">dask</span><span class="o">-</span><span class="n">jobqueue</span> \
     <span class="n">xarray</span> <span class="n">zarr</span> <span class="n">numcodecs</span> <span class="n">hvplot</span> <span class="n">geoviews</span> <span class="n">datashader</span>  \
-    <span class="n">nbserverproxy</span> <span class="n">widgetsnbextension</span>
+    <span class="n">jupyter</span><span class="o">-</span><span class="n">server</span><span class="o">-</span><span class="n">proxy</span> <span class="n">widgetsnbextension</span> <span class="n">dask</span><span class="o">-</span><span class="n">labextension</span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -297,12 +297,8 @@ directory with this setting the first time you run it.</p>
 <p>Depending on your application, you may choose to add additional conda
 packages to this list.</p>
 </div>
-<p>Activate this environment and add extensions</p>
+<p>Activate this environment (and note that with Jupyterlab version 3, extensions no longer need to be added after environment creation):</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">activate</span> <span class="n">pangeo</span>
-<span class="n">jupyter</span> <span class="n">labextension</span> <span class="n">install</span> <span class="nd">@pyviz</span><span class="o">/</span><span class="n">jupyterlab_pyviz</span>
-<span class="n">jupyter</span> <span class="n">labextension</span> <span class="n">install</span> <span class="nd">@jupyter</span><span class="o">-</span><span class="n">widgets</span><span class="o">/</span><span class="n">jupyterlab</span><span class="o">-</span><span class="n">manager</span>
-<span class="n">jupyter</span> <span class="n">labextension</span> <span class="n">install</span> <span class="n">dask</span><span class="o">-</span><span class="n">labextension</span>
-<span class="n">jupyter</span> <span class="n">serverextension</span> <span class="n">enable</span> <span class="n">dask_labextension</span>
 </pre></div>
 </div>
 <p>Your prompt should now look something like this (note the pangeo environment name):</p>
@@ -320,53 +316,19 @@ somewhere in your home directory:</p>
 <h2>Configure Jupyter<a class="headerlink" href="#configure-jupyter" title="Permalink to this headline">¶</a></h2>
 <p>(If you don’t plan to use Jupyter notebooks then you can safely skip
 this section.)</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>When using recent Jupyter iteration the following section can be replaced by simply invoking the command:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jupyter</span> <span class="n">notebook</span> <span class="o">--</span><span class="n">generate</span><span class="o">-</span><span class="n">config</span>
-<span class="n">jupyter</span> <span class="n">notebook</span> <span class="n">password</span>
+<p>Jupyter notebook servers include a password for security. First we generate the Jupyter config
+file then set a password:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jupyter</span> <span class="n">server</span> <span class="o">--</span><span class="n">generate</span><span class="o">-</span><span class="n">config</span>
+<span class="n">jupyter</span> <span class="n">server</span> <span class="n">password</span>
 </pre></div>
 </div>
-<p>And entering desired password.</p>
-</div>
-<p>Jupyter notebook servers include a password for security. We’re going to
-setup a password for ourselves. First we generate the Jupyter config
-file and install a notebook proxy service:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jupyter</span> <span class="n">notebook</span> <span class="o">--</span><span class="n">generate</span><span class="o">-</span><span class="n">config</span>
-<span class="n">jupyter</span> <span class="n">serverextension</span> <span class="n">enable</span> <span class="o">--</span><span class="n">py</span> <span class="n">nbserverproxy</span>
-</pre></div>
-</div>
-<p>This created a file in <code class="docutils literal notranslate"><span class="pre">~/.jupyter/jupyter_notebook_config.py</span></code>. If you
-open that file and search for “password”, you’ll see a line like the
-following:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#c.NotebookApp.password = u&#39;&#39;</span>
-</pre></div>
-</div>
-<p>The instructions in the comments of the config file tell you to generate
-a hashed password by entering the following commands:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ipython
-</pre></div>
-</div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="kn">from</span> <span class="nn">notebook.auth</span> <span class="kn">import</span> <span class="n">passwd</span><span class="p">;</span> <span class="n">passwd</span><span class="p">()</span>
-<span class="n">Enter</span> <span class="n">password</span><span class="p">:</span>
-</pre></div>
-</div>
-<p>You can enter a password of your choice, and it will return to you a
-encoded password. I entered “password” (do not do this) and go the following
-output:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Out</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="s1">&#39;sha1:69a76df803b9:99ca27341563cd85ba4e78684128e1f4ad2d8d0d&#39;</span>
-</pre></div>
-</div>
-<p>Copy that string into your <code class="docutils literal notranslate"><span class="pre">jupyter_notebook_config.py</span></code> config file</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">c</span><span class="o">.</span><span class="n">NotebookApp</span><span class="o">.</span><span class="n">password</span> <span class="o">=</span> <span class="sa">u</span><span class="s1">&#39;sha1:69a76df803b9:99ca27341563cd85ba4e78684128e1f4ad2d8d0d&#39;</span>
-</pre></div>
-</div>
-<p>For security reasons, we recommend making sure your <code class="docutils literal notranslate"><span class="pre">jupyter_notebook_config.py</span></code>
-is readable only by you. For more information on and other methods for
+<p>This created a file in <code class="docutils literal notranslate"><span class="pre">~/.jupyter/jupyter_server_config.py</span></code>.
+For security reasons, we recommend making sure your <code class="docutils literal notranslate"><span class="pre">jupyter_server_config.py</span></code>
+is readable only by you. For more information on this and other methods for
 securing Jupyter, check out
 <a class="reference external" href="http://jupyter-notebook.readthedocs.io/en/stable/public_server.html#securing-a-notebook-server">Securing a notebook server</a>
 in the Jupyter documentation.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">chmod</span> <span class="mi">400</span> <span class="o">~/.</span><span class="n">jupyter</span><span class="o">/</span><span class="n">jupyter_notebook_config</span><span class="o">.</span><span class="n">py</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">chmod</span> <span class="mi">400</span> <span class="o">~/.</span><span class="n">jupyter</span><span class="o">/</span><span class="n">jupyter_server_config</span><span class="o">.</span><span class="n">py</span>
 </pre></div>
 </div>
 <p>Finally, we may want to configure dask’s dashboard to forward through Jupyter.
@@ -378,11 +340,13 @@ with a commented out version. You can create this file and do this first import 
 </pre></div>
 </div>
 <p>In this <code class="docutils literal notranslate"><span class="pre">.config/dask/distributed.yaml</span></code> file, set:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#   ###################</span>
-<span class="c1">#   # Bokeh dashboard #</span>
-<span class="c1">#   ###################</span>
-<span class="c1">#   dashboard:</span>
-    <span class="n">link</span><span class="p">:</span> <span class="s2">&quot;/proxy/</span><span class="si">{port}</span><span class="s2">/status&quot;</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">distributed</span><span class="p">:</span>
+  <span class="n">version</span><span class="p">:</span> <span class="mi">2</span>
+  <span class="c1">###################</span>
+  <span class="c1"># Bokeh dashboard #</span>
+  <span class="c1">###################</span>
+  <span class="n">dashboard</span><span class="p">:</span>
+    <span class="n">link</span><span class="p">:</span> <span class="s2">&quot;/proxy/8787/status&quot;</span>
 </pre></div>
 </div>
 <hr class="docutils" />
@@ -494,10 +458,10 @@ beyond the one that is automatically added for the scheduler. Once this command
 has been run, and after a moment for the jobs to work their way through the queue,
 it will print something like:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Run the following <span class="nb">command</span> from your <span class="nb">local</span> machine:
-ssh -N -L <span class="m">8888</span>:r7i3n13:8888 -L <span class="m">8787</span>:r7i3n13:8787 username@cheyenne.ucar.edu
+ssh -N -L <span class="m">8888</span>:r7i3n13:8888  username@cheyenne.ucar.edu
 Then open the following URLs:
     Jupyter lab: http://localhost:8888
-    Dask dashboard: http://localhost:8787
+    Dask dashboard: http://localhost:8888/proxy/8787
 </pre></div>
 </div>
 <p>It may be necessary to modify the included scripts to use different PBS
@@ -582,11 +546,11 @@ on your allocation.</p>
 
 <span class="n">client</span><span class="o">.</span><span class="n">run_on_scheduler</span><span class="p">(</span><span class="n">start_jlab</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ssh -N -L 8888:</span><span class="si">%s</span><span class="s2">:8888  -L 8787:</span><span class="si">%s</span><span class="s2">:8787 cheyenne.ucar.edu&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="n">host</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ssh -N -L 8888:</span><span class="si">%s</span><span class="s2">:8888 cheyenne.ucar.edu&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">host</span><span class="p">))</span>
 </pre></div>
 </div>
 <p>This should print out a statement like the following:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ssh</span> <span class="o">-</span><span class="n">N</span> <span class="o">-</span><span class="n">L</span> <span class="mi">8787</span><span class="p">:</span><span class="n">r13i2n1</span><span class="p">:</span><span class="mi">8787</span> <span class="o">-</span><span class="n">L</span> <span class="mi">8888</span><span class="p">:</span><span class="n">r13i2n1</span><span class="p">:</span><span class="mi">8888</span> <span class="o">-</span><span class="n">l</span> <span class="n">username</span> <span class="n">cheyenne</span><span class="o">.</span><span class="n">ucar</span><span class="o">.</span><span class="n">edu</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ssh</span> <span class="o">-</span><span class="n">N</span> <span class="o">-</span><span class="n">L</span> <span class="mi">8888</span><span class="p">:</span><span class="n">r13i2n1</span><span class="p">:</span><span class="mi">8888</span> <span class="o">-</span><span class="n">l</span> <span class="n">username</span> <span class="n">cheyenne</span><span class="o">.</span><span class="n">ucar</span><span class="o">.</span><span class="n">edu</span>
 </pre></div>
 </div>
 <p>You can run this command from your personal computer (not the terminal
@@ -595,7 +559,7 @@ into web servers running on your allocation. Afterwards, you should be
 able to open the following links in your web browser on your computer:</p>
 <ul class="simple">
 <li><p>Jupyter Lab: <a class="reference external" href="http://localhost:8888">http://localhost:8888</a></p></li>
-<li><p>Dask dashboard: <a class="reference external" href="http://localhost:8787/status">http://localhost:8787/status</a></p></li>
+<li><p>Dask dashboard: <a class="reference external" href="http://localhost:8888/proxy/8787/status">http://localhost:8888/proxy/8787/status</a></p></li>
 </ul>
 <p>The SSH tunnels will route these into the correct machine in your
 cluster allocation.</p>
