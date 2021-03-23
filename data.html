@@ -133,10 +133,14 @@
 <li class="toctree-l2"><a class="reference internal" href="publications.html#reporting-form">Reporting Form</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="pangeo-showcase.html">Pangeo Showcase</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pangeo-showcase.html#recorded-and-upcoming-presentations">Recorded and Upcoming Presentations</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="meeting-notes.html">Meeting Schedule and Notes</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="meeting-notes.html#weekly-community-meeting">Weekly Community Meeting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meeting-notes.html#community-meeting">Community Meeting</a></li>
 <li class="toctree-l2"><a class="reference internal" href="meeting-notes.html#working-group-meetings">Working Group Meetings</a></li>
-<li class="toctree-l2"><a class="reference internal" href="meeting-notes.html#meeting-calendar">Meeting Calendar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meeting-notes.html#meetings-calendar">Meetings Calendar</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="meetings/index.html">Pangeo Conferences</a><ul>
@@ -317,7 +321,7 @@ Existing datasets can easily be converted to zarr via
 on Google Cloud Platform which we are currently using to host several large
 datasets.
 These datasets are directly accessible from any Google Cloud Pangeo deployment,
-e.g. <a class="reference external" href="http://ocean.pangeo.io">ocean.pangeo.io</a>.</p>
+e.g. <a class="reference internal" href="cloud.html#cloud"><span class="std std-ref">Pangeo Cloud</span></a>.</p>
 <p>See the list of available data sets in the
 <a class="reference external" href="http://catalog.pangeo.io/">data catalog</a>.</p>
 </div>
@@ -340,7 +344,7 @@ preparing and uploading.</p>
 <ol class="arabic">
 <li><p><strong>Open your Entire Dataset in Xarray</strong>.</p>
 <p>Xarray is designed to
-load many netCDF files into a single <a class="reference external" href="http://xarray.pydata.org/en/latest/generated/xarray.Dataset.html#xarray.Dataset" title="(in xarray v0.17.1.dev18)"><code class="xref py py-class docutils literal notranslate"><span class="pre">xarray.Dataset</span></code></a> object.
+load many netCDF files into a single <a class="reference external" href="http://xarray.pydata.org/en/latest/generated/xarray.Dataset.html#xarray.Dataset" title="(in xarray v0.17.1.dev33)"><code class="xref py py-class docutils literal notranslate"><span class="pre">xarray.Dataset</span></code></a> object.
 The easiest way to accomplish this is using the <code class="xref py py-meth docutils literal notranslate"><span class="pre">xarray.open_mfdataset()</span></code>
 function. Suppose you have a directory full of netCDF files that comprise
 a single dataset stored in the directory <code class="docutils literal notranslate"><span class="pre">/path/to/mydataset</span></code>. If the files
@@ -394,7 +398,7 @@ perform adequately for most purposes.</p>
 its contents to cloud storage. In order to do this step, you will need
 the command line utilities from your cloud provider installed on your system.
 In this example, we use Google Cloud Platform, which requires installing the
-<span class="xref std std-ref">google-cloud-sdk</span>.</p>
+<a class="reference external" href="https://cloud.google.com/sdk">Google Cloud SDK</a>.</p>
 <p>First you must authenticate to obtain credentials to perform the upload:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gcloud</span> <span class="n">auth</span> <span class="n">login</span>
 </pre></div>

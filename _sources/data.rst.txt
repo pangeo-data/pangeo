@@ -98,7 +98,7 @@ Thanks to our :ref:`NSF Award <earthcube>`, Pangeo has a substantial allocation
 on Google Cloud Platform which we are currently using to host several large
 datasets.
 These datasets are directly accessible from any Google Cloud Pangeo deployment,
-e.g. `ocean.pangeo.io <http://ocean.pangeo.io>`_.
+e.g. :ref:`cloud`.
 
 See the list of available data sets in the
 `data catalog <http://catalog.pangeo.io/>`_.
@@ -192,7 +192,7 @@ These recommendations may change as cloud storage technology evolves.
    its contents to cloud storage. In order to do this step, you will need
    the command line utilities from your cloud provider installed on your system.
    In this example, we use Google Cloud Platform, which requires installing the
-   :ref:`google-cloud-sdk`.
+   `Google Cloud SDK`_.
 
    First you must authenticate to obtain credentials to perform the upload::
 
@@ -239,3 +239,4 @@ These recommendations may change as cloud storage technology evolves.
 .. _HDF: https://www.hdfgroup.org/
 .. _Research Data Archive: https://rda.ucar.edu/
 .. _Zarr: http://zarr.readthedocs.io/en/stable/
+.. _Google Cloud SDK: https://cloud.google.com/sdk

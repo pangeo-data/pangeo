@@ -93,7 +93,7 @@ scalable, flexible, and configurable cloud deployments.
 Detailed information about deploying Pangeo on the cloud can be found at
 `https://github.com/pangeo-data/pangeo-cloud-federation/ <https://github.com/pangeo-data/pangeo-cloud-federation/>`_.
 
-Pangeo currently operates an experimental service called :ref:`Pangeo Cloud`.
+Pangeo currently operates an experimental service called :ref:`cloud`.
 
 Storage Formats
 ---------------
