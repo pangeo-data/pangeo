@@ -4,14 +4,14 @@ Meeting Schedule and Notes
 ==========================
 
 Community Meeting
-------------------------
+-----------------
 
-Pangeo holds weekly community meetings every Wednesday, open to anyone who wishes to participate. 
-The meetings alternate between :ref:`Pangeo-Showcase` talks and informal check-ins.  
-The :ref:`Pangeo-Showcase` talks are 15 minutes, recorded and receive a DOI.  
-The check-ins are an opportunity for anyone to meet other members of the Pangeo community and let them know what 
-you are working on with short, one minute updates, and group discussion topics can be raised as agenda items.  
-Every other check-in (once every four weeks) will be held at 4pm ET to be more friendly to participants in other time zones.  
+Pangeo holds weekly community meetings every Wednesday, open to anyone who wishes to participate.
+The meetings alternate between :ref:`Pangeo-Showcase` talks and informal check-ins.
+The :ref:`Pangeo-Showcase` talks are 15 minutes, recorded and receive a DOI.
+The check-ins are an opportunity for anyone to meet other members of the Pangeo community and let them know what
+you are working on with short, one minute updates, and group discussion topics can be raised as agenda items.
+Every other check-in (once every four weeks) will be held at 4pm ET to be more friendly to participants in other time zones.
 
 * Schedule: Every Wednesday, three weeks at 12pm ET, fourth week at 4pm ET
 * Conferencing: `Zoom <https://columbiauniversity.zoom.us/j/953527251>`_
@@ -20,25 +20,20 @@ Every other check-in (once every four weeks) will be held at 4pm ET to be more f
 Working Group Meetings
 ----------------------
 
-1. Data Working Group
-    * Schedule: Every other Wednesday at 6p GMT
-    * Conferencing: `Zoom <https://zoom.us/j/5944845886>`_
-    * Notes: `Google Doc <https://docs.google.com/document/d/e/2PACX-1vTP1iV4YJcHznwcfUwlLoEDVPdgtD9iAXql73vn4uAotOQMVh9R8vTIKxPHnvnrijX1C24T5aJJZ95x/pub>`_
-2. Machine Learning Working Group
+1. Machine Learning Working Group
     * Schedule: First Monday of the month at 4p GMT
     * Conferencing:  `Google Hangouts <https://meet.google.com/ubc-tgak-ugg>`_
     * Notes: `Dropbox doc <https://paper.dropbox.com/doc/Meeting-notes-Machine-Learning-WG--AmU~wZXwdbpTZi8rQsJQH9_sAg-9UUgyywF9jmIMXXbmZTyJ>`__
-3. Education Working Group 
-    * Schedule: (Schedule TBD)
-    * Conferencing: `whereby.com/pangeo <https://whereby.com/pangeo>`_
-    * Notes: `GitHub <https://github.com/pangeo-data/education-material>`__
-4. Cloud Operations Working Group
+2. Cloud Operations Working Group
     * Schedule: Second Monday of the month at 4:30p GMT
     * Conferencing: `whereby.com/pangeo <https://whereby.com/pangeo>`_
     * Notes: `Google Doc <https://docs.google.com/document/d/1I-2VNNHoAjjeYvlCezQhFLmiu2OevqGDS5nUAP-6Hfw/edit?usp=sharing>`__
-    
+
+Past working groups include the `Data Working Group <https://docs.google.com/document/d/e/2PACX-1vTP1iV4YJcHznwcfUwlLoEDVPdgtD9iAXql73vn4uAotOQMVh9R8vTIKxPHnvnrijX1C24T5aJJZ95x/pub>`_
+and the `Education Working Group <https://github.com/pangeo-data/education-material>`_.
+
 Meetings Calendar
-----------------
+-----------------
 
 A google calendar has been setup with these reoccurring times [GCAL_, ICAL_].
 
