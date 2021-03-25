@@ -6,14 +6,17 @@ Meeting Schedule and Notes
 Community Meeting
 -----------------
 
-Pangeo holds weekly community meetings every Wednesday, open to anyone who wishes to participate.
-The meetings alternate between :ref:`Pangeo-Showcase` talks and informal check-ins.
+Pangeo holds weekly community meetings every Wednesday.  The meetings alternate between 12PM and 4PM US Eastern Time to encourage 
+participants from a wider range of time zones.  Anyone may attend!
+
+Starting April 7, 2021, the community meetings will have a new format: They will begin with a :ref:`Pangeo-Showcase` talk, 
+followed by discussion, optional check-ins, and any agenda items. 
+
 The :ref:`Pangeo-Showcase` talks are 15 minutes, recorded and receive a DOI.
 The check-ins are an opportunity for anyone to meet other members of the Pangeo community and let them know what
-you are working on with short, one minute updates, and group discussion topics can be raised as agenda items.
-Every other check-in (once every four weeks) will be held at 4pm ET to be more friendly to participants in other time zones.
+you are working on with short, one minute updates, and agenda items are anything people feel would benefit from group discussion.
 
-* Schedule: Every Wednesday, three weeks at 12pm ET, fourth week at 4pm ET
+* Schedule: Every Wednesday, alternating between 12pm ET and 4pm ET (See the Calendar at the bottom of this page!) 
 * Conferencing: `Zoom <https://columbiauniversity.zoom.us/j/953527251>`_
 * Notes:  `Google Doc <https://docs.google.com/document/d/e/2PACX-1vRerhoxG-wOvh-wQTj7F8HPYve75l8pAtL-tgtzY_3YLqVUsaMSEgE4K70HgMt5S91FMwSu8EIizewy/pub>`_
 
