@@ -27,12 +27,21 @@ Recorded and Upcoming Presentations
    * - 2021-04-07
      - Seth McGinnis, NCAR
      - **Parallel Analysis Using Pangeo vs the Command-Line**
+   * - 2021-04-14
+     - Lais Carvalho, QuanSight
+     - **The New Qhub 0.3: An easy way to deploy/maintain JupyterHub with Dask Gateway**
    * - 2021-04-21
      - Benoît Bovy, GFZ-Potsdam, Freelance
      - **Build, customize and run models with Xarray-Simlab**
+   * - 2021-04-28
+     - David Huard, Ouranos
+     - **FAIR Climate Services using the Xarray ecosystem and OGC Standards**
    * - 2021-05-05
      - Philip Austin, University of British Columbia
      - **OCESE: Open Source Computing for Earth Science Education**
+   * - 2021-05-19
+     - Chelle Gentemann, Farallon Institute
+     - **Sea Surface Temperature Datasets on the Cloud**
    * - 2021-06-02
      - TBD
      - TBD
