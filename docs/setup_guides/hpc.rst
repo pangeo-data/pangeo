@@ -207,14 +207,13 @@ the default client port if you are running Jupyter locally.  We can also change 
     jupyter lab --no-browser --ip=`hostname` --port=$JPORT
 
 Now we can launch the Jupyter server:
-
 ::
 
     (pangeo) $ ~/bin/start_jupyter
     
-    To connect to this server, paste this line into a terminal on your client (your local machine)
-    after you see the line "Jupyter Server ... is running... ":
-    ssh -N -L 8889:pn009:8537 username@poseidon.whoi.edu
+    Step 1:...
+    Step 2:...
+    Step 3:...
     ...
     
     [I 2021-04-06 06:33:57.962 ServerApp] Jupyter Server 1.5.1 is running at:
@@ -222,18 +221,7 @@ Now we can launch the Jupyter server:
     [I 2021-04-06 06:33:57.963 ServerApp]  or http://127.0.0.1:8537/lab
     [I 2021-04-06 06:33:57.963 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
 
-Now, connect to the server using an ssh tunnel from your local machine by pasting the ssh line printed 
-(this could be your laptop or desktop).
-
-::
-
-    $     ssh -N -L 8889:pn009:8537 username@poseidon.whoi.edu
-
-
-You'll want to change the details in the command above but the basic idea is
-that we're passing a specified random port from the compute node `pn009` to our
-local system. Now open http://localhost:8889 on your local machine, you should
-find a jupyter server running!   The dask dashboard will be accessible at http://localhost:8889/proxy/8787. 
+Just follow the Steps 1,2,3 printed out by the script to get connected.
 
 Launch Dask with dask-jobqueue
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
