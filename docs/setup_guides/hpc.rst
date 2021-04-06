@@ -34,12 +34,19 @@ After you have logged into your HPC system, download and install Miniconda:
 This contains a self-contained Python environment that we can manipulate
 safely without requiring the involvement of IT. It also allows you to
 create isolated software environments so that we can experiment in the
-future safely. Before creating your environment, we recommend you update
-your conda package manager with
+future safely. 
+
+Before creating your environment, update your conda package manager with packages 
+from the conda-forge channel instead of the default channel and install Mamba, 
+which works like conda but is written in C++ and therefore creates environments faster. 
 
 ::
     
-    conda update conda
+    conda config --add channels conda-forge --force
+    conda config --remove channels defaults --force 
+    conda install mamba -y 
+    mamba update --all
+    
     
 .. note:: 
 
@@ -58,8 +65,8 @@ Create a new conda environment for our pangeo work:
 
 ::
 
-    conda create -n pangeo -c conda-forge \
-        python dask jupyterlab>=3.0 dask-jobqueue \
+    mamba create -n pangeo -c conda-forge \
+        python dask jupyterlab dask-jobqueue ipywidgets \
         xarray zarr numcodecs hvplot geoviews datashader  \
         jupyter-server-proxy widgetsnbextension dask-labextension
 
@@ -128,7 +135,6 @@ In this ``.config/dask/distributed.yaml`` file, set:
 .. code:: python
       
   distributed:
-    version: 2
     ###################
     # Bokeh dashboard #
     ###################
