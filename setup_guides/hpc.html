@@ -414,9 +414,9 @@ jupyter lab --no-browser --ip=`hostname` --port=$JPORT
 <p>Now we can launch the Jupyter server:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>(pangeo) $ ~/bin/start_jupyter
 
-To connect to this server, paste this line into a terminal on your client (your local machine)
-after you see the line &quot;Jupyter Server ... is running... &quot;:
-ssh -N -L 8889:pn009:8537 username@poseidon.whoi.edu
+Step 1:...
+Step 2:...
+Step 3:...
 ...
 
 [I 2021-04-06 06:33:57.962 ServerApp] Jupyter Server 1.5.1 is running at:
@@ -425,15 +425,7 @@ ssh -N -L 8889:pn009:8537 username@poseidon.whoi.edu
 [I 2021-04-06 06:33:57.963 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
 </pre></div>
 </div>
-<p>Now, connect to the server using an ssh tunnel from your local machine by pasting the ssh line printed
-(this could be your laptop or desktop).</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$     ssh -N -L 8889:pn009:8537 username@poseidon.whoi.edu
-</pre></div>
-</div>
-<p>You’ll want to change the details in the command above but the basic idea is
-that we’re passing a specified random port from the compute node <cite>pn009</cite> to our
-local system. Now open <a class="reference external" href="http://localhost:8889">http://localhost:8889</a> on your local machine, you should
-find a jupyter server running!   The dask dashboard will be accessible at <a class="reference external" href="http://localhost:8889/proxy/8787">http://localhost:8889/proxy/8787</a>.</p>
+<p>Just follow the Steps 1,2,3 printed out by the script to get connected.</p>
 </div>
 <div class="section" id="launch-dask-with-dask-jobqueue">
 <h3>Launch Dask with dask-jobqueue<a class="headerlink" href="#launch-dask-with-dask-jobqueue" title="Permalink to this headline">¶</a></h3>
