@@ -143,7 +143,7 @@ the image used for JupyterHub. It won't, however, have changes you've made
 in your "local" environment in your home directory on the hub.
 
 Long-term, the best way to add packages to the environemnt is by updating the
-Docker images, as described in :ref:`cloud.software_environment`_. But for quickly
+Docker images, as described in :ref:`cloud.software_environment`. But for quickly
 prototyping something on the Dask cluster you can use a
 `Dask WorkerPlugin <https://distributed.dask.org/en/latest/plugins.html#distributed.diagnostics.plugin.WorkerPlugin>`_.
 This lets you inject a bit of code that's run when the worker starts up. This
@@ -353,7 +353,7 @@ the following code should work::
    PANGEO_SCRATCH = os.environ['PANGEO_SCRATCH']
    # -> gs://pangeo-scratch/<username>
    import fsspec
-   mapper = fsspec.get_mapper(f'PANGEO_SCRATCH/sub/path')
+   mapper = fsspec.get_mapper(f'{PANGEO_SCRATCH}/sub/path')
    # mapper can now be to read / write zarr stores
 
 .. warning::

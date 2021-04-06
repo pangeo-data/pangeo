@@ -133,10 +133,14 @@
 <li class="toctree-l2"><a class="reference internal" href="publications.html#reporting-form">Reporting Form</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="pangeo-showcase.html">Pangeo Showcase</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pangeo-showcase.html#recorded-and-upcoming-presentations">Recorded and Upcoming Presentations</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="meeting-notes.html">Meeting Schedule and Notes</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="meeting-notes.html#weekly-community-meeting">Weekly Community Meeting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meeting-notes.html#community-meeting">Community Meeting</a></li>
 <li class="toctree-l2"><a class="reference internal" href="meeting-notes.html#working-group-meetings">Working Group Meetings</a></li>
-<li class="toctree-l2"><a class="reference internal" href="meeting-notes.html#meeting-calendar">Meeting Calendar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meeting-notes.html#meetings-calendar">Meetings Calendar</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="meetings/index.html">Pangeo Conferences</a><ul>
@@ -370,7 +374,7 @@ the environment.</p></li>
 the image used for JupyterHub. It won’t, however, have changes you’ve made
 in your “local” environment in your home directory on the hub.</p>
 <p>Long-term, the best way to add packages to the environemnt is by updating the
-Docker images, as described in <a href="#id1"><span class="problematic" id="id2">:ref:`cloud.software_environment`_</span></a>. But for quickly
+Docker images, as described in <a class="reference internal" href="#cloud-software-environment"><span class="std std-ref">Software Environment</span></a>. But for quickly
 prototyping something on the Dask cluster you can use a
 <a class="reference external" href="https://distributed.dask.org/en/latest/plugins.html#distributed.diagnostics.plugin.WorkerPlugin">Dask WorkerPlugin</a>.
 This lets you inject a bit of code that’s run when the worker starts up. This
@@ -556,7 +560,7 @@ the following code should work:</p>
 <span class="n">PANGEO_SCRATCH</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;PANGEO_SCRATCH&#39;</span><span class="p">]</span>
 <span class="c1"># -&gt; gs://pangeo-scratch/&lt;username&gt;</span>
 <span class="kn">import</span> <span class="nn">fsspec</span>
-<span class="n">mapper</span> <span class="o">=</span> <span class="n">fsspec</span><span class="o">.</span><span class="n">get_mapper</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;PANGEO_SCRATCH/sub/path&#39;</span><span class="p">)</span>
+<span class="n">mapper</span> <span class="o">=</span> <span class="n">fsspec</span><span class="o">.</span><span class="n">get_mapper</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{PANGEO_SCRATCH}</span><span class="s1">/sub/path&#39;</span><span class="p">)</span>
 <span class="c1"># mapper can now be to read / write zarr stores</span>
 </pre></div>
 </div>
@@ -586,7 +590,7 @@ zarr-backed cloud data datasets will open in Xarray as collections of Dask array
 </ul>
 </div>
 <div class="section" id="dask-gateway">
-<span id="id4"></span><h3>Dask Gateway<a class="headerlink" href="#dask-gateway" title="Permalink to this headline">¶</a></h3>
+<span id="id2"></span><h3>Dask Gateway<a class="headerlink" href="#dask-gateway" title="Permalink to this headline">¶</a></h3>
 <p>Pangeo cloud environments are configured to work with
 <a class="reference external" href="https://gateway.dask.org/">Dask Gateway</a>.
 Dask gateway gives you the power to create a distributed cluster using many

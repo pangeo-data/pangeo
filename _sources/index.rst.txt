@@ -105,6 +105,7 @@ Contents
    catalog
    collaborators
    publications
+   pangeo-showcase
    meeting-notes
    meetings/index
    contact
