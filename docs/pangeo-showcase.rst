@@ -28,7 +28,7 @@ Recorded and Upcoming Presentations
      - Title
    * - 2021-04-07 12PM EDT
      - Seth McGinnis, NCAR
-     - **`Parallel Analysis Using Pangeo vs the Command-Line <https://youtu.be/OPej-TTOO0I>`_**
+     - **Parallel Analysis Using Pangeo vs the Command-Line (https://youtu.be/OPej-TTOO0I)**
    * - 2021-04-14 4pm EDT
      - Lais Carvalho, QuanSight
      - **The New Qhub 0.3: An easy way to deploy/maintain JupyterHub with Dask Gateway**
