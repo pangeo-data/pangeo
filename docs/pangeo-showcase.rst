@@ -7,7 +7,7 @@ The Pangeo Showcase Webinar Series is part of the Pangeo Weekly Community Meetin
 See the :ref:`Meeting-Notes` for more information on Pangeo community meetings. 
 
 With the speaker’s consent, the 15 minute talks are recorded, given a DOI, and made 
-available on the Pangeo YouTube Channel. If you are interested in giving a talk,
+available on the `Pangeo YouTube Channel <https://www.youtube.com/channel/UCiLv03l4bM5TKVJtSCHKb9Q>`_. If you are interested in giving a talk,
 `fill out this short form <https://forms.gle/QwxKusVvrvDakSNs8>`_.
 
 * **Schedule**: Every Wednesday, alternating between 12pm and 4pm US East Local Time (EST or EDT) to 
