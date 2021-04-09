@@ -48,8 +48,8 @@ Recorded and Upcoming Presentations
      - Chelle Gentemann, Farallon Institute
      - **Sea Surface Temperature Datasets on the Cloud**
    * - 2021-05-26 4pm EDT 
-     - TBD
-     - TBD
+     - Taher Chegini, University of Houston, Texas
+     - **Accessing Hydrology and Climatology database using web services through Python**
    * - 2021-06-02 12pm EDT
-     - TBD
-     - TBD
+     - Matthew Rocklin, Coiled
+     - **Coiled: Dask as a Service**
