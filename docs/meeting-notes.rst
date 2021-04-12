@@ -24,11 +24,11 @@ Working Group Meetings
 ----------------------
 
 1. Machine Learning Working Group
-    * Schedule: First Monday of the month at 4p GMT
+    * Schedule: First Monday of the month at 12p ET
     * Conferencing:  `Google Hangouts <https://meet.google.com/ubc-tgak-ugg>`_
     * Notes: `Dropbox doc <https://paper.dropbox.com/doc/Meeting-notes-Machine-Learning-WG--AmU~wZXwdbpTZi8rQsJQH9_sAg-9UUgyywF9jmIMXXbmZTyJ>`__
 2. Cloud Operations Working Group
-    * Schedule: Second Monday of the month at 4:30p GMT
+    * Schedule: Second Monday of the month at 11:30a ET
     * Conferencing: `whereby.com/pangeo <https://whereby.com/pangeo>`_
     * Notes: `Google Doc <https://docs.google.com/document/d/1I-2VNNHoAjjeYvlCezQhFLmiu2OevqGDS5nUAP-6Hfw/edit?usp=sharing>`__
 3. `Project Pythia <https://projectpythia.org>`_ (formerly the Education Working Group)
