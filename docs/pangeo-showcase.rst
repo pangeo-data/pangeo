@@ -31,7 +31,7 @@ Recorded and Upcoming Presentations
      - `Parallel Analysis Using Pangeo vs the Command-Line <https://youtu.be/OPej-TTOO0I>`_
    * - 2021-04-14 4pm EDT
      - Lais Carvalho, QuanSight
-     - **The New Qhub 0.3: An easy way to deploy/maintain JupyterHub with Dask Gateway**
+     - `The New Qhub 0.3: An easy way to deploy/maintain JupyterHub with Dask Gateway <https://youtu.be/8tmZiT8WpTg>`_ 
    * - 2021-04-21 12PM EDT
      - Benoît Bovy, GFZ-Potsdam, Freelance
      - **Build, customize and run models with Xarray-Simlab**
