@@ -28,12 +28,10 @@ Recorded and Upcoming Presentations
      - Title
    * - 2021-04-07 12PM EDT
      - Seth McGinnis, NCAR
-     - * `Parallel Analysis Using Pangeo vs the Command-Line <https://youtu.be/OPej-TTOO0I>`_ 
-       * |McGinnis DOI Badge|
+     - `"Parallel Analysis Using Pangeo vs the Command-Line" <https://youtu.be/OPej-TTOO0I>`_ |McGinnis DOI Badge|
    * - 2021-04-14 4pm EDT
      - Lais Carvalho, QuanSight
-     - * `The New Qhub 0.3: An easy way to deploy/maintain JupyterHub with Dask Gateway <https://youtu.be/8tmZiT8WpTg>`_  
-       * |Carvalho DOI Badge|
+     - `"The New Qhub 0.3: An easy way to deploy/maintain JupyterHub with Dask Gateway" <https://youtu.be/8tmZiT8WpTg>`_ |Carvalho DOI Badge|
    * - 2021-04-21 12PM EDT
      - Benoît Bovy, GFZ-Potsdam, Freelance
      - **Build, customize and run models with Xarray-Simlab**
