@@ -53,6 +53,9 @@ Recorded and Upcoming Presentations
    * - 2021-06-02 12pm EDT
      - Matthew Rocklin, Coiled
      - **Coiled: Dask as a Service**
+   * - 2021-06-09 4pm EDT
+     - Eduardo Blancas Reyes, Ploomber
+     - **Streamline your Data Science projects with Ploomber**
 
 .. |McGinnis DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.4670458.svg
    :target: https://doi.org/10.5281/zenodo.4670458
