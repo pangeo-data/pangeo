@@ -28,10 +28,10 @@ Recorded and Upcoming Presentations
      - Title
    * - 2021-04-07 12PM EDT
      - Seth McGinnis, NCAR
-     - `Parallel Analysis Using Pangeo vs the Command-Line <https://youtu.be/OPej-TTOO0I>`_
+     - `"Parallel Analysis Using Pangeo vs the Command-Line" <https://youtu.be/OPej-TTOO0I>`_ |McGinnis DOI Badge|
    * - 2021-04-14 4pm EDT
      - Lais Carvalho, QuanSight
-     - **The New Qhub 0.3: An easy way to deploy/maintain JupyterHub with Dask Gateway**
+     - `"The New Qhub 0.3: An easy way to deploy/maintain JupyterHub with Dask Gateway" <https://youtu.be/8tmZiT8WpTg>`_ |Carvalho DOI Badge|
    * - 2021-04-21 12PM EDT
      - Benoît Bovy, GFZ-Potsdam, Freelance
      - **Build, customize and run models with Xarray-Simlab**
@@ -53,3 +53,9 @@ Recorded and Upcoming Presentations
    * - 2021-06-02 12pm EDT
      - Matthew Rocklin, Coiled
      - **Coiled: Dask as a Service**
+
+.. |McGinnis DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.4670458.svg
+   :target: https://doi.org/10.5281/zenodo.4670458
+   
+.. |Carvalho DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.4697095.svg
+   :target: https://doi.org/10.5281/zenodo.4697095       
