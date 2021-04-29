@@ -37,7 +37,7 @@ Recorded and Upcoming Presentations
      - `Build, customize and run models with Xarray-Simlab <https://discourse.pangeo.io/t/april-21-2021-build-customize-and-run-models-with-xarray-simlab/1417>`_ |Bovy DOI Badge|
    * - 2021-04-28 4pm EDT
      - David Huard, Ouranos
-     - `FAIR Climate Services using the Xarray ecosystem and OGC Standards <https://discourse.pangeo.io/t/april-28-2021-fair-climate-services-using-the-xarray-ecosystem-and-ogc-standards/1431>` |Huard DOI Badge|
+     - `FAIR Climate Services using the Xarray ecosystem and OGC Standards <https://discourse.pangeo.io/t/april-28-2021-fair-climate-services-using-the-xarray-ecosystem-and-ogc-standards/1431>`_ |Huard DOI Badge|
    * - 2021-05-05 12pm EDT
      - Philip Austin, University of British Columbia
      - **OCESE: Open Source Computing for Earth Science Education**
