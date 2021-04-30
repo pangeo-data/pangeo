@@ -142,36 +142,13 @@ The default image used on Dask Clusters (the scheduler and workers) matches
 the image used for JupyterHub. It won't, however, have changes you've made
 in your "local" environment in your home directory on the hub.
 
-Long-term, the best way to add packages to the environemnt is by updating the
+Long-term, the best way to add packages to the environment is by updating the
 Docker images, as described in :ref:`cloud.software_environment`. But for quickly
 prototyping something on the Dask cluster you can use a
-`Dask WorkerPlugin <https://distributed.dask.org/en/latest/plugins.html#distributed.diagnostics.plugin.WorkerPlugin>`_.
+`Dask's PipInstall worker plugin
+<https://distributed.dask.org/en/latest/plugins.html#distributed.diagnostics.plugin.PipInstall>`_.
 This lets you inject a bit of code that's run when the worker starts up. This
-plugin uses pip install install a configurable list of packages
-
-
-.. code-block:: python
-
-   import subprocess
-   import logging
-   from distributed import WorkerPlugin
-
-   class PipPlugin(WorkerPlugin):
-       """
-       Install packages on a worker as it starts up.
-
-       Parameters
-       ----------
-       packages : List[str]
-           A list of packages to install with pip on startup.
-       """
-       def __init__(self, packages):
-           self.packages = packages
-
-       def setup(self, worker):
-           logger = logging.getLogger("distributed.worker")
-           subprocess.call(['python', '-m', 'pip', 'install', '--upgrade'] + self.packages)
-           logger.info("Installed %s", self.packages)
+plugin uses ``pip`` to install a configurable list of packages.
 
 To use that you'd create a cluster normally and add the plugin
 
@@ -181,7 +158,8 @@ To use that you'd create a cluster normally and add the plugin
    >>> cluster = GatewayCluster()  # create the cluster nomrally
    >>> client = cluster.get_client()
    >>> # Now create and register the plugin. We'll install 'bulwark'
-   >>> plugin = PipPlugin(['bulwark'])
+   >>> from dask.distributed import PipInstall
+   >>> plugin = PipInstall(["bulwark"], pip_options=["--upgrade"])
    >>> client.register_worker_plugin(plugin)
 
 We can verify that the package is now present.
@@ -200,14 +178,12 @@ We can verify that the package is now present.
 
 A few caveats are in order:
 
-1. You should register the plugin before scaling to ensure that your packages
-   are installed on all the workers.
-2. You should take care with dependencies. Pip doesn't always respect packages
+1. You should take care with dependencies. Pip doesn't always respect packages
    that have been installed with conda.
-3. If you need to *upgrade existing* packages, take special care. You may need
+2. If you need to *upgrade existing* packages, take special care. You may need
    to ``client.restart()`` the cluster to ensure that the new packages are
    used.
-4. This will slow down the startup time of your workers, especially if the
+3. This will slow down the startup time of your workers, especially if the
    package takes a while to install.
 
 Hardware Environment
