@@ -42,7 +42,7 @@ Recorded and Upcoming Presentations
      - Philip Austin, University of British Columbia
      - **OCESE: Open Source Computing for Earth Science Education**
    * - 2021-05-12 4pm EDT
-     - Josef Kellndorder, Earth Big Data 
+     - Josef Kellndorfer, Earth Big Data 
      - **The new era of SAR time series: Tackling big EO data analysis and visualization with Pangeo tools**   
    * - 2021-05-19 12pm EDT
      - Chelle Gentemann, Farallon Institute
