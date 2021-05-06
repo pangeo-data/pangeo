@@ -28,21 +28,21 @@ Recorded and Upcoming Presentations
      - Title
    * - 2021-04-07 12PM EDT
      - Seth McGinnis, NCAR
-     - `"Parallel Analysis Using Pangeo vs the Command-Line" <https://youtu.be/OPej-TTOO0I>`_ |McGinnis DOI Badge|
+     - `Parallel Analysis Using Pangeo vs the Command-Line <https://discourse.pangeo.io/t/april-7-2021-parallel-analysis-using-pangeo-vs-the-command-line/1373>`_ |McGinnis DOI Badge|
    * - 2021-04-14 4pm EDT
      - Lais Carvalho, QuanSight
-     - `"The New Qhub 0.3: An easy way to deploy/maintain JupyterHub with Dask Gateway" <https://youtu.be/8tmZiT8WpTg>`_ |Carvalho DOI Badge|
+     - `The New Qhub 0.3: An easy way to deploy/maintain JupyterHub with Dask Gateway <https://discourse.pangeo.io/t/april-14-2021-the-new-qhub-0-3-an-easy-way-to-deploy-maintain-jupyterhub-with-dask-gateway/1399>`_ |Carvalho DOI Badge|
    * - 2021-04-21 12PM EDT
      - Benoît Bovy, GFZ-Potsdam, Freelance
-     - `"Build, customize and run models with Xarray-Simlab" <https://www.youtube.com/watch?v=33r3bYR9nvw>`_ |Bovy DOI Badge|
+     - `Build, customize and run models with Xarray-Simlab <https://discourse.pangeo.io/t/april-21-2021-build-customize-and-run-models-with-xarray-simlab/1417>`_ |Bovy DOI Badge|
    * - 2021-04-28 4pm EDT
      - David Huard, Ouranos
-     - **FAIR Climate Services using the Xarray ecosystem and OGC Standards**
+     - `FAIR Climate Services using the Xarray ecosystem and OGC Standards <https://discourse.pangeo.io/t/april-28-2021-fair-climate-services-using-the-xarray-ecosystem-and-ogc-standards/1431>`_ |Huard DOI Badge|
    * - 2021-05-05 12pm EDT
      - Philip Austin, University of British Columbia
      - **OCESE: Open Source Computing for Earth Science Education**
    * - 2021-05-12 4pm EDT
-     - Josef Kellndorder, Earth Big Data 
+     - Josef Kellndorfer, Earth Big Data 
      - **The new era of SAR time series: Tackling big EO data analysis and visualization with Pangeo tools**   
    * - 2021-05-19 12pm EDT
      - Chelle Gentemann, Farallon Institute
@@ -65,3 +65,6 @@ Recorded and Upcoming Presentations
 
 .. |Bovy DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.4712336.svg 
    :target: https://doi.org/10.5281/zenodo.4712336
+   
+.. |Huard DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.4727950.svg
+   :target: https://doi.org/10.5281/zenodo.4727950
