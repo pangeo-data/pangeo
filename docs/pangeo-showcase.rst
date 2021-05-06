@@ -40,7 +40,7 @@ Recorded and Upcoming Presentations
      - `FAIR Climate Services using the Xarray ecosystem and OGC Standards <https://discourse.pangeo.io/t/april-28-2021-fair-climate-services-using-the-xarray-ecosystem-and-ogc-standards/1431>`_ |Huard DOI Badge|
    * - 2021-05-05 12pm EDT
      - Philip Austin, University of British Columbia
-     - **OCESE: Open Source Computing for Earth Science Education**
+     - `OCESE: Open Source Computing for Earth Science Education <https://discourse.pangeo.io/t/may-5-2021-ocese-open-source-computing-for-earth-science-education/1443>`_ |Austin DOI Badge|
    * - 2021-05-12 4pm EDT
      - Josef Kellndorfer, Earth Big Data 
      - **The new era of SAR time series: Tackling big EO data analysis and visualization with Pangeo tools**   
@@ -68,3 +68,6 @@ Recorded and Upcoming Presentations
    
 .. |Huard DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.4727950.svg
    :target: https://doi.org/10.5281/zenodo.4727950
+
+.. |Austin DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.4739726.svg
+   :target: https://doi.org/10.5281/zenodo.4739726
