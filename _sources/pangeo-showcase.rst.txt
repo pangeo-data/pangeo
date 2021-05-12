@@ -13,7 +13,7 @@ available on the `Pangeo YouTube Channel <https://www.youtube.com/channel/UCiLv0
 * **Schedule**: Every Wednesday, alternating between 12pm and 4pm US East Local Time (EST or EDT) to 
   to encourage attendance from a wide range of time zones.
 
-* **Conferencing**:   `Zoom <https://columbiauniversity.zoom.us/j/953527251>`_
+* **Conferencing**:  `Please join us on Zoom <https://columbiauniversity.zoom.us/j/953527251>`_ or see `Dial up and other ways to connect <https://docs.google.com/document/d/1vyLx7BFPnPmjviBV1ucJT3_gNaixWaWhR2u2BI_7Bj4/edit?usp=sharing>`_
 
 Recorded and Upcoming Presentations
 -----------------------------------
