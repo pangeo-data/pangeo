@@ -32,7 +32,7 @@ Recorded and Upcoming Presentations
    * - 2021-04-14 4pm EDT
      - Lais Carvalho, QuanSight
      - `The New Qhub 0.3: An easy way to deploy/maintain JupyterHub with Dask Gateway <https://discourse.pangeo.io/t/april-14-2021-the-new-qhub-0-3-an-easy-way-to-deploy-maintain-jupyterhub-with-dask-gateway/1399>`_ |Carvalho DOI Badge|
-   * - 2021-04-21 12PM EDT
+   * - 2021-04-21 12pm EDT
      - Benoît Bovy, GFZ-Potsdam, Freelance
      - `Build, customize and run models with Xarray-Simlab <https://discourse.pangeo.io/t/april-21-2021-build-customize-and-run-models-with-xarray-simlab/1417>`_ |Bovy DOI Badge|
    * - 2021-04-28 4pm EDT
@@ -43,7 +43,7 @@ Recorded and Upcoming Presentations
      - `OCESE: Open Source Computing for Earth Science Education <https://discourse.pangeo.io/t/may-5-2021-ocese-open-source-computing-for-earth-science-education/1443>`_ |Austin DOI Badge|
    * - 2021-05-12 4pm EDT
      - Josef Kellndorfer, Earth Big Data 
-     - **The new era of SAR time series: Tackling big EO data analysis and visualization with Pangeo tools**   
+     - `The new era of SAR time series: Tackling big EO data analysis and visualization with Pangeo tools <https://discourse.pangeo.io/t/may-12-2021-the-new-era-of-sar-time-series-tackling-big-eo-data-analysis-and-visualization-with-pangeo-tools/1475>`_ |Kellndorfer DOI Badge|  
    * - 2021-05-19 12pm EDT
      - Chelle Gentemann, Farallon Institute
      - **Sea Surface Temperature Datasets on the Cloud**
@@ -68,6 +68,9 @@ Recorded and Upcoming Presentations
    
 .. |Huard DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.4727950.svg
    :target: https://doi.org/10.5281/zenodo.4727950
+ 
+.. |Kellndorfer DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.4756696.svg
+   :target: https://doi.org/10.5281/zenodo.4756696
 
 .. |Austin DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.4739726.svg
    :target: https://doi.org/10.5281/zenodo.4739726
