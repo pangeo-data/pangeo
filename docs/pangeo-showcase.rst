@@ -46,7 +46,7 @@ Recorded and Upcoming Presentations
      - `The new era of SAR time series: Tackling big EO data analysis and visualization with Pangeo tools <https://discourse.pangeo.io/t/may-12-2021-the-new-era-of-sar-time-series-tackling-big-eo-data-analysis-and-visualization-with-pangeo-tools/1475>`_ |Kellndorfer DOI Badge|  
    * - 2021-05-19 12pm EDT
      - Chelle Gentemann, Farallon Institute
-     - **Sea Surface Temperature Datasets on the Cloud**
+     - `Accessing Sea Surface Temperature Cata on the Cloud <https://discourse.pangeo.io/t/may-19-2021-accessing-sea-surface-temperature-data-on-the-cloud/1503>`_ |Gentemann DOI Badge| 
    * - 2021-05-26 4pm EDT 
      - Taher Chegini, University of Houston, Texas
      - **Accessing Hydrology and Climatology database using web services through Python**
@@ -57,6 +57,9 @@ Recorded and Upcoming Presentations
      - Eduardo Blancas Reyes, Ploomber
      - **Streamline your Data Science projects with Ploomber**
 
+.. |Gentemann DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.4783039.svg
+   :target: https://doi.org/10.5281/zenodo.4783039
+   
 .. |McGinnis DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.4670458.svg
    :target: https://doi.org/10.5281/zenodo.4670458
    
