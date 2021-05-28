@@ -49,7 +49,7 @@ Recorded and Upcoming Presentations
      - `Accessing Sea Surface Temperature Cata on the Cloud <https://discourse.pangeo.io/t/may-19-2021-accessing-sea-surface-temperature-data-on-the-cloud/1503>`_ |Gentemann DOI Badge| 
    * - 2021-05-26 4pm EDT 
      - Taher Chegini, University of Houston, Texas
-     - **Accessing Hydrology and Climatology database using web services through Python**
+     - `Accessing Hydrology and Climatology database using web services through Python <https://discourse.pangeo.io/t/may-26-2021-accessing-hydrology-and-climatology-database-using-web-services-through-python/1521>`_ |Chegini DOI Badge| 
    * - 2021-06-02 12pm EDT
      - Matthew Rocklin, Coiled
      - **Coiled: Dask as a Service**
@@ -57,6 +57,9 @@ Recorded and Upcoming Presentations
      - Eduardo Blancas Reyes, Ploomber
      - **Streamline your Data Science projects with Ploomber**
 
+.. |Chegini DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.4837330.svg
+   :target: https://doi.org/10.5281/zenodo.4837330
+   
 .. |Gentemann DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.4783039.svg
    :target: https://doi.org/10.5281/zenodo.4783039
    
