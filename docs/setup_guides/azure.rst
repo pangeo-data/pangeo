@@ -214,8 +214,8 @@ Just like before, we'll create the Azure Resources first, and deploy `daskhub` s
 Name                       value
 ========================== =============
 Resource group             pangeo
+Location                   westeurope
 Cluster name               pangeoCluster
-Azure AD Application Name  pangeo-app
 Hub Name                   pangeo-hub
 ========================== =============
 
