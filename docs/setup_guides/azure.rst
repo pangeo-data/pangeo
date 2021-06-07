@@ -8,10 +8,11 @@ We'll use
 * `Azure Kubernetes Service <https://docs.microsoft.com/en-us/azure/aks/intro-kubernetes>`__ (AKS), Azure's managed Kubernetes service
 * The `daskhub Helm Chart <https://github.com/dask/helm-chart/tree/main/daskhub>`__, an easy way to install JupyterHub and Dask-Gateway
 
-We describe two deployments, a :ref:`simple` and a :ref:`recommended`. If you're new to Azure, Kubernetes, or JupyterHub, then you should try the simple deployment to verify that the basics work, before moving on to the more advanced recommend deployment.
+We describe two deployment scenarios, a :ref:`simple` and a :ref:`recommended`. If you're new to Azure, Kubernetes, or JupyterHub, then you should try the simple deployment to verify that the basics work, before moving on to the more advanced recommend deployment.
 
 This guide uses the Azure CLI to create the Azure Resources.
-At the end, we provide a ``Makefile`` with targets for the AKS cluster and an updated deployment. If you're just looking to deploy a Hub, feel free to use and adapt the Makefiles. If you're looking to build understanding, read through the guide.
+Both deployment scenarios include a ``Makefile`` with targets for the AKS cluster and Hub deployment. If you're just looking to deploy a Hub, feel free to use and adapt the Makefiles. If you're looking to build understanding, read through the guide.
+
 As an alternative to this guide, you might use `Qhub <https://docs.qhub.dev/en/latest/>`_, which provides a higher-level tool to obtain a JupyterHub and Dask deployment on Kubernetes (or HPC).
 
 .. note::
@@ -36,15 +37,15 @@ We'll assume that you've completed the `prerequisites <https://docs.microsoft.co
 Simple deployment
 -----------------
 
-This section walks through the simplest possible deployment, but lacks basic features like authentication, HTTPS, and a hostname. We recommend trying this deployment to ensure that the tools work, before deleting things and moving on to the advanced deployment.
+This section walks through the simplest possible deployment, but lacks basic features like authentication, HTTPS, and a user-friendly DNS name. We recommend trying this deployment to ensure that the tools work, before deleting things and moving on to the advanced deployment.
 You can download the :download:`Makefile <simple/Makefile>` and :download:`Helm config <simple/secrets.yaml>` for this deployment.
 
 Kubernetes Cluster
 ^^^^^^^^^^^^^^^^^^
 
-Following the guide at https://docs.microsoft.com/en-us/azure/aks/kubernetes-walkthrough, we'll use the Azure CLI to create an AKS cluster.
+Following the `Kubernetes walkthrough <https://docs.microsoft.com/en-us/azure/aks/kubernetes-walkthrough>`__, we'll use the Azure CLI to create an AKS cluster.
 
-For ease of reading we'll repeat the steps here, but visit the guide to build understanding about what each command does.  For ease of cleanup, we recommend creating
+For ease of reading we'll repeat the steps here, but visit the `<guide https://docs.microsoft.com/en-us/azure/aks/kubernetes-walkthrough>`__ to build understanding about what each command does.  For ease of cleanup, we recommend creating
 a brand-new resource group.
 
 .. code-block:: console
@@ -185,7 +186,7 @@ When you log in and start a notebook sever, you should be able to connect to the
    >>> client = cluster.get_client()
    >>> cluster.scale(1)
 
-You should be a Dask Cluster with a scheduler and a single worker.
+After a moment, the Dask Scheduler and Worker pods should start up. Check the pods with ``kubectl -n dhub get pods``.
 
 Cleanup
 ^^^^^^^
@@ -218,7 +219,11 @@ Azure AD Application Name  pangeo-app
 Hub Name                   pangeo-hub
 ========================== =============
 
+Azure Resources
+^^^^^^^^^^^^^^^
+
 1. Create a Resource Group
+""""""""""""""""""""""""""
 
 .. code-block:: console
 
@@ -235,7 +240,8 @@ Hub Name                   pangeo-hub
      "tags": null,
    }
 
-2. Create an Azure Active Directory App Registration
+2. Create an App Registration
+"""""""""""""""""""""""""""""
 
 To authenticate users, we'll create an Azure AD App registration following `the instructions <https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app>`__.
 In this example, the *sign-in audience* will be **Accounts in this organizational directory only**. This is appropriate when your administering a Hub for other users within your Azure AD tenant.
@@ -243,7 +249,7 @@ In this example, the *sign-in audience* will be **Accounts in this organizationa
 The redirect URI should match where your users will access the Hub. If your organization already has a DNS provider, use that.
 Otherwise, you can have Azure handle the DNS for your Hub service automatically, which is what we'll use in this guide.
 We're calling our cluster ``pangeo-hub`` and deploying it in West Europe, so the callback URL is ``https://pangeo-hub.westeurope.cloudapp.azure.com/hub/oauth_callback``.
-In general, follows the pattern ``https://<hub-name>.<azure-region>.cloudapp.azure.com/hub/oauth_callback``.
+In general the pattern is ``https://<hub-name>.<azure-region>.cloudapp.azure.com/hub/oauth_callback``.
 
 Finally, create a Client Secret to pass to JupyterHub: Under the *Manage* section, select *Certificates and Secrets* then *New client secret*. We'll use the ``Value`` later on.
 You will also need the App Registration's ``Client ID`` and ``Tenant ID``, which are available on its main page, under *Essentials*.
@@ -258,6 +264,7 @@ To summarize, we now have our app registration's
 For more on authentication see `Authentication and Authorization <https://zero-to-jupyterhub.readthedocs.io/en/latest/administrator/authentication.html>`__, in particular the section on `Azure AD <https://zero-to-jupyterhub.readthedocs.io/en/latest/administrator/authentication.html#azure-active-directory>`__.
 
 3. Create a Kubernetes Cluster
+""""""""""""""""""""""""""""""
 
 Now we'll create a Kubernetes cluster. Compared to last time, we'll have three node pools: A "core" pool for JupyterHub pods (the Hub, etc.) and Kubernetes itself, a "user" pool for user pods and Dask schedulers, and a "worker" pool for Dask workers.
 
@@ -353,7 +360,7 @@ This configuration file is used to customize the deployment with Helm. You can s
 4. Install ``daskhub``
 """"""""""""""""""""""
 
- We'll install it into a new ``dhub`` namespace, but you can use whatever namespace you like.
+We'll install it into a new ``dhub`` namespace, but you can use whatever namespace you like.
 
 .. code-block:: console
 
@@ -400,6 +407,9 @@ When you log in and start a notebook sever, you should be able to connect to the
    >>> cluster = gateway.new_cluster()
    >>> client = cluster.get_client()
    >>> cluster.scale(1)
+
+After a moment, the Dask Scheduler and Worker pods should start up. Check the pods with ``kubectl -n dhub get pods``.
+
 
 Cleanup
 ^^^^^^^
