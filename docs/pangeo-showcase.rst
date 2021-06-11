@@ -56,6 +56,15 @@ Recorded and Upcoming Presentations
    * - 2021-06-09 4pm EDT
      - Eduardo Blancas Reyes, Ploomber
      - **Streamline your Data Science projects with Ploomber**
+   * - 2021-06-16 12pm EDT
+     - Sam Partee, Hewlett Packard Enterprise
+     - **SmartSim: Online Analytics and Machine Learning for HPC Simulations**
+   * - 2021-06-23 4pm EDT
+     - Speaker TBD
+     - **Title TBD**
+   * - 2021-06-30 12pm EDT
+     - Julia Lowndes and Erin Robinson, Openscapes
+     - **Title TBD**
 
 .. |Chegini DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.4837330.svg
    :target: https://doi.org/10.5281/zenodo.4837330
