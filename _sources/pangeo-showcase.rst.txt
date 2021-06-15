@@ -55,7 +55,7 @@ Recorded and Upcoming Presentations
      - **Coiled: Dask as a Service**
    * - 2021-06-09 4pm EDT
      - Eduardo Blancas Reyes, Ploomber
-     - **Streamline your Data Science projects with Ploomber**
+     - `Streamline your Data Science projects with Ploomber <https://discourse.pangeo.io/t/june-9-2021-streamline-data-science-projects-with-ploomber/1546>`_ |Blancas Reyes DOI Badge|
    * - 2021-06-16 12pm EDT
      - Sam Partee, Hewlett Packard Enterprise
      - **SmartSim: Online Analytics and Machine Learning for HPC Simulations**
@@ -66,6 +66,9 @@ Recorded and Upcoming Presentations
      - Julia Lowndes and Erin Robinson, Openscapes
      - **Title TBD**
 
+.. |Blancas Reyes DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.4939972.svg
+   :target: https://doi.org/10.5281/zenodo.4939972
+   
 .. |Chegini DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.4837330.svg
    :target: https://doi.org/10.5281/zenodo.4837330
    
