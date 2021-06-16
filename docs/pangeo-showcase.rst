@@ -7,7 +7,7 @@ The Pangeo Showcase Webinar Series is part of the Pangeo Weekly Community Meetin
 See the :ref:`Meeting-Notes` for more information on Pangeo community meetings. 
 
 With the speaker’s consent, the 15 minute talks are recorded, given a DOI, and made 
-available on the `Pangeo YouTube Channel <https://www.youtube.com/channel/UCiLv03l4bM5TKVJtSCHKb9Q>`_. If you are interested in giving a talk,
+available on the `Pangeo YouTube Channel <https://youtube.com/playlist?list=PLuQQBBQFfpgq0OvjKbjcYgTDzDxTqtwua>`_. If you are interested in giving a talk,
 `fill out this short form <https://forms.gle/QwxKusVvrvDakSNs8>`_.
 
 * **Schedule**: Every Wednesday, alternating between 12pm and 4pm US East Local Time (EST or EDT) to 
@@ -52,7 +52,7 @@ Recorded and Upcoming Presentations
      - `Accessing Hydrology and Climatology database using web services through Python <https://discourse.pangeo.io/t/may-26-2021-accessing-hydrology-and-climatology-database-using-web-services-through-python/1521>`_ |Chegini DOI Badge| 
    * - 2021-06-02 12pm EDT
      - Matthew Rocklin, Coiled
-     - **Coiled: Dask as a Service**
+     - `Coiled: Dask as a Service <https://discourse.pangeo.io/t/jun3-2-2021-coiled-dask-as-a-service/1557>`_ |Rocklin DOI Badge|
    * - 2021-06-09 4pm EDT
      - Eduardo Blancas Reyes, Ploomber
      - `Streamline your Data Science projects with Ploomber <https://discourse.pangeo.io/t/june-9-2021-streamline-data-science-projects-with-ploomber/1546>`_ |Blancas Reyes DOI Badge|
@@ -65,6 +65,11 @@ Recorded and Upcoming Presentations
    * - 2021-06-30 12pm EDT
      - Julia Lowndes and Erin Robinson, Openscapes
      - **Title TBD**
+**The Showcase is going on a summer break and will be back in September!**
+The `sign up sheet <https://forms.gle/QwxKusVvrvDakSNs8>`_ will remain open, however. Please let us know if you would like to give a talk this fall. 
+
+.. |Rocklin DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.4964489.svg
+   :target: https://doi.org/10.5281/zenodo.4964489
 
 .. |Blancas Reyes DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.4939972.svg
    :target: https://doi.org/10.5281/zenodo.4939972
