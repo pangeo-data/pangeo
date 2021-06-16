@@ -52,7 +52,7 @@ Recorded and Upcoming Presentations
      - `Accessing Hydrology and Climatology database using web services through Python <https://discourse.pangeo.io/t/may-26-2021-accessing-hydrology-and-climatology-database-using-web-services-through-python/1521>`_ |Chegini DOI Badge| 
    * - 2021-06-02 12pm EDT
      - Matthew Rocklin, Coiled
-     - `Coiled: Dask as a Service <https://discourse.pangeo.io/t/jun3-2-2021-coiled-dask-as-a-service/1557>`_ |Rocklin DOI Badge|
+     - `Coiled: Dask as a Service <https://discourse.pangeo.io/t/june-2-2021-coiled-dask-as-a-service/1557>`_ |Rocklin DOI Badge|
    * - 2021-06-09 4pm EDT
      - Eduardo Blancas Reyes, Ploomber
      - `Streamline your Data Science projects with Ploomber <https://discourse.pangeo.io/t/june-9-2021-streamline-data-science-projects-with-ploomber/1546>`_ |Blancas Reyes DOI Badge|
@@ -65,6 +65,7 @@ Recorded and Upcoming Presentations
    * - 2021-06-30 12pm EDT
      - Julia Lowndes and Erin Robinson, Openscapes
      - **Title TBD**
+
 **The Showcase is going on a summer break and will be back in September!**
 The `sign up sheet <https://forms.gle/QwxKusVvrvDakSNs8>`_ will remain open, however. Please let us know if you would like to give a talk this fall. 
 
