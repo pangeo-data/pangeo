@@ -58,17 +58,20 @@ Recorded and Upcoming Presentations
      - `Streamline your Data Science projects with Ploomber <https://discourse.pangeo.io/t/june-9-2021-streamline-data-science-projects-with-ploomber/1546>`_ |Blancas Reyes DOI Badge|
    * - 2021-06-16 12pm EDT
      - Sam Partee, Hewlett Packard Enterprise
-     - **SmartSim: Online Analytics and Machine Learning for HPC Simulations**
+     - `SmartSim: Online Analytics and Machine Learning for HPC Simulations <https://discourse.pangeo.io/t/june-16-2021-smartsim-online-analytics-and-machine-learning-for-hpc-simulations/1583>`_ |Partee DOI Badge|
    * - 2021-06-23 4pm EDT
-     - Speaker TBD
-     - **Title TBD**
+     - Brian Rose, University at Albany
+     - **Project Pythia: a community learning resource for Python-based computing in the geosciences**
    * - 2021-06-30 12pm EDT
      - Julia Lowndes and Erin Robinson, Openscapes
-     - **Title TBD**
+     - **The NASA-Openscapes Framework**
 
 **The Showcase is going on a summer break and will be back in September!**
 The `sign up sheet <https://forms.gle/QwxKusVvrvDakSNs8>`_ will remain open, however. Please let us know if you would like to give a talk this fall. 
 
+.. |Partee DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.4986182.svg
+   :target: https://doi.org/10.5281/zenodo.4986182
+   
 .. |Rocklin DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.4964489.svg
    :target: https://doi.org/10.5281/zenodo.4964489
 
