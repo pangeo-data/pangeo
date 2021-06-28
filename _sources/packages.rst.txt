@@ -25,7 +25,7 @@ packages are considered essential to the project.
 Xarray
 ~~~~~~
 
-.. image:: https://github.com/pydata/xarray/raw/master/doc/_static/dataset-diagram-logo.png
+.. image:: https://github.com/pydata/xarray/raw/main/doc/_static/dataset-diagram-logo.png
    :width: 300 px
 
 - Website: http://xarray.pydata.org/en/latest
