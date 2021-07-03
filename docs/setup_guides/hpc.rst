@@ -34,12 +34,19 @@ After you have logged into your HPC system, download and install Miniconda:
 This contains a self-contained Python environment that we can manipulate
 safely without requiring the involvement of IT. It also allows you to
 create isolated software environments so that we can experiment in the
-future safely. Before creating your environment, we recommend you update
-your conda package manager with
+future safely. 
+
+Before creating your environment, update your conda package manager with packages 
+from the conda-forge channel instead of the default channel and install Mamba, 
+which works like conda but is written in C++ and therefore creates environments faster. 
 
 ::
     
-    conda update conda
+    conda config --add channels conda-forge --force
+    conda config --remove channels defaults --force 
+    conda install mamba -y 
+    mamba update --all
+    
     
 .. note:: 
 
@@ -58,8 +65,8 @@ Create a new conda environment for our pangeo work:
 
 ::
 
-    conda create -n pangeo -c conda-forge \
-        python dask jupyterlab>=3.0 dask-jobqueue \
+    mamba create -n pangeo -c conda-forge \
+        python dask jupyterlab dask-jobqueue ipywidgets \
         xarray zarr numcodecs hvplot geoviews datashader  \
         jupyter-server-proxy widgetsnbextension dask-labextension
 
@@ -128,7 +135,6 @@ In this ``.config/dask/distributed.yaml`` file, set:
 .. code:: python
       
   distributed:
-    version: 2
     ###################
     # Bokeh dashboard #
     ###################
@@ -175,37 +181,47 @@ From here, we can start jupyter. The Cheyenne computer administrators have
 developed a `start-notebook <https://www2.cisl.ucar.edu/resources/computational-systems/cheyenne/software/jupyter-and-ipython#notebook>`__
 utility that wraps the following steps into a single execution. You should
 check with your system administrators to see if they have something similar.
-If not, you'll need to take the following steps:
-
-Copy this line into your terminal. It will echo a command you'll want to use
-later.
-
-::
-
-    (pangeo) $ echo "ssh -N -L 8888:`hostname`:8888 $USER@cheyenne.ucar.edu"
-    ssh -N -L 8888:r8i4n0:8888 username@cheyenne.ucar.edu
-
-Now we can launch the notebook server:
+If not, you can easily create your own start_jupyter script.  In the script below, we choose a random port
+on the server (to reduce the chance of conflict with another user), but we use port 8889 on the client, as port 8888 is 
+the default client port if you are running Jupyter locally.  We can also change to a starting directory:
 
 ::
 
-    (pangeo) $ jupyter lab --no-browser --ip=`hostname` --port=8888
+    (pangeo) $ more ~/bin/start_jupyter 
+    cd /home/data/username
+    JPORT=$(shuf -i 8400-9400 -n 1)
+    echo ""
+    echo ""
+    echo "Step 1: Wait until this script says the Jupyter server"
+    echo "        has started. "
+    echo ""
+    echo "Step 2: Copy this ssh command into a terminal on your"
+    echo "        local computer:"
+    echo ""
+    echo "        ssh -N -L 8889:`hostname`:$JPORT $USER@poseidon.whoi.edu"
+    echo ""
+    echo "Step 3: Browse to https://localhost:8889 on your local computer"
+    echo ""
+    echo ""
+    sleep 2
+    jupyter lab --no-browser --ip=`hostname` --port=$JPORT
+
+Now we can launch the Jupyter server:
+::
+
+    (pangeo) $ ~/bin/start_jupyter
+    
+    Step 1:...
+    Step 2:...
+    Step 3:...
     ...
-    [I 13:36:52.321 LabApp] The Jupyter Notebook is running at:
-    [I 13:36:52.321 LabApp] http://r8i4n0:8888/
-    [I 13:36:52.321 LabApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+    
+    [I 2021-04-06 06:33:57.962 ServerApp] Jupyter Server 1.5.1 is running at:
+    [I 2021-04-06 06:33:57.962 ServerApp] http://pn009:8537/lab     
+    [I 2021-04-06 06:33:57.963 ServerApp]  or http://127.0.0.1:8537/lab
+    [I 2021-04-06 06:33:57.963 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
 
-Now, connect to the server using an ssh tunnel from your local machine
-(this could be your laptop or desktop).
-
-::
-
-    $ ssh -N -L 8888:r8i4n0:8888 username@cheyenne.ucar.edu
-
-You'll want to change the details in the command above but the basic idea is
-that we're passing the port 8888 from the compute node `r8i4n0` to our
-local system. Now open http://localhost:8888 on your local machine, you should
-find a jupyter server running!
+Just follow the Steps 1,2,3 printed out by the script to get connected.
 
 Launch Dask with dask-jobqueue
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
