@@ -272,9 +272,14 @@ system administrators to properly configure these tools for your machine.</p>
 <p>This contains a self-contained Python environment that we can manipulate
 safely without requiring the involvement of IT. It also allows you to
 create isolated software environments so that we can experiment in the
-future safely. Before creating your environment, we recommend you update
-your conda package manager with</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">update</span> <span class="n">conda</span>
+future safely.</p>
+<p>Before creating your environment, update your conda package manager with packages
+from the conda-forge channel instead of the default channel and install Mamba,
+which works like conda but is written in C++ and therefore creates environments faster.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">config</span> <span class="o">--</span><span class="n">add</span> <span class="n">channels</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="o">--</span><span class="n">force</span>
+<span class="n">conda</span> <span class="n">config</span> <span class="o">--</span><span class="n">remove</span> <span class="n">channels</span> <span class="n">defaults</span> <span class="o">--</span><span class="n">force</span>
+<span class="n">conda</span> <span class="n">install</span> <span class="n">mamba</span> <span class="o">-</span><span class="n">y</span>
+<span class="n">mamba</span> <span class="n">update</span> <span class="o">--</span><span class="nb">all</span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -290,8 +295,8 @@ from activating the <code class="docutils literal notranslate"><span class="pre"
 directory with this setting the first time you run it.</p>
 </div>
 <p>Create a new conda environment for our pangeo work:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">create</span> <span class="o">-</span><span class="n">n</span> <span class="n">pangeo</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> \
-    <span class="n">python</span> <span class="n">dask</span> <span class="n">jupyterlab</span><span class="o">&gt;=</span><span class="mf">3.0</span> <span class="n">dask</span><span class="o">-</span><span class="n">jobqueue</span> \
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mamba</span> <span class="n">create</span> <span class="o">-</span><span class="n">n</span> <span class="n">pangeo</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> \
+    <span class="n">python</span> <span class="n">dask</span> <span class="n">jupyterlab</span> <span class="n">dask</span><span class="o">-</span><span class="n">jobqueue</span> <span class="n">ipywidgets</span> \
     <span class="n">xarray</span> <span class="n">zarr</span> <span class="n">numcodecs</span> <span class="n">hvplot</span> <span class="n">geoviews</span> <span class="n">datashader</span>  \
     <span class="n">jupyter</span><span class="o">-</span><span class="n">server</span><span class="o">-</span><span class="n">proxy</span> <span class="n">widgetsnbextension</span> <span class="n">dask</span><span class="o">-</span><span class="n">labextension</span>
 </pre></div>
@@ -345,7 +350,6 @@ with a commented out version. You can create this file and do this first import 
 </div>
 <p>In this <code class="docutils literal notranslate"><span class="pre">.config/dask/distributed.yaml</span></code> file, set:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">distributed</span><span class="p">:</span>
-  <span class="n">version</span><span class="p">:</span> <span class="mi">2</span>
   <span class="c1">###################</span>
   <span class="c1"># Bokeh dashboard #</span>
   <span class="c1">###################</span>
@@ -384,30 +388,44 @@ will want to reactivate it.</p>
 developed a <a class="reference external" href="https://www2.cisl.ucar.edu/resources/computational-systems/cheyenne/software/jupyter-and-ipython#notebook">start-notebook</a>
 utility that wraps the following steps into a single execution. You should
 check with your system administrators to see if they have something similar.
-If not, you’ll need to take the following steps:</p>
-<p>Copy this line into your terminal. It will echo a command you’ll want to use
-later.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>(pangeo) $ echo &quot;ssh -N -L 8888:`hostname`:8888 $USER@cheyenne.ucar.edu&quot;
-ssh -N -L 8888:r8i4n0:8888 username@cheyenne.ucar.edu
+If not, you can easily create your own start_jupyter script.  In the script below, we choose a random port
+on the server (to reduce the chance of conflict with another user), but we use port 8889 on the client, as port 8888 is
+the default client port if you are running Jupyter locally.  We can also change to a starting directory:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>(pangeo) $ more ~/bin/start_jupyter
+cd /home/data/username
+JPORT=$(shuf -i 8400-9400 -n 1)
+echo &quot;&quot;
+echo &quot;&quot;
+echo &quot;Step 1: Wait until this script says the Jupyter server&quot;
+echo &quot;        has started. &quot;
+echo &quot;&quot;
+echo &quot;Step 2: Copy this ssh command into a terminal on your&quot;
+echo &quot;        local computer:&quot;
+echo &quot;&quot;
+echo &quot;        ssh -N -L 8889:`hostname`:$JPORT $USER@poseidon.whoi.edu&quot;
+echo &quot;&quot;
+echo &quot;Step 3: Browse to https://localhost:8889 on your local computer&quot;
+echo &quot;&quot;
+echo &quot;&quot;
+sleep 2
+jupyter lab --no-browser --ip=`hostname` --port=$JPORT
 </pre></div>
 </div>
-<p>Now we can launch the notebook server:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>(pangeo) $ jupyter lab --no-browser --ip=`hostname` --port=8888
+<p>Now we can launch the Jupyter server:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>(pangeo) $ ~/bin/start_jupyter
+
+Step 1:...
+Step 2:...
+Step 3:...
 ...
-[I 13:36:52.321 LabApp] The Jupyter Notebook is running at:
-[I 13:36:52.321 LabApp] http://r8i4n0:8888/
-[I 13:36:52.321 LabApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+
+[I 2021-04-06 06:33:57.962 ServerApp] Jupyter Server 1.5.1 is running at:
+[I 2021-04-06 06:33:57.962 ServerApp] http://pn009:8537/lab
+[I 2021-04-06 06:33:57.963 ServerApp]  or http://127.0.0.1:8537/lab
+[I 2021-04-06 06:33:57.963 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
 </pre></div>
 </div>
-<p>Now, connect to the server using an ssh tunnel from your local machine
-(this could be your laptop or desktop).</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ssh -N -L 8888:r8i4n0:8888 username@cheyenne.ucar.edu
-</pre></div>
-</div>
-<p>You’ll want to change the details in the command above but the basic idea is
-that we’re passing the port 8888 from the compute node <cite>r8i4n0</cite> to our
-local system. Now open <a class="reference external" href="http://localhost:8888">http://localhost:8888</a> on your local machine, you should
-find a jupyter server running!</p>
+<p>Just follow the Steps 1,2,3 printed out by the script to get connected.</p>
 </div>
 <div class="section" id="launch-dask-with-dask-jobqueue">
 <h3>Launch Dask with dask-jobqueue<a class="headerlink" href="#launch-dask-with-dask-jobqueue" title="Permalink to this headline">¶</a></h3>
