@@ -21,7 +21,7 @@ you are working on with short, one minute updates, and agenda items are anything
 * Notes:  `Google Doc <https://docs.google.com/document/d/e/2PACX-1vRerhoxG-wOvh-wQTj7F8HPYve75l8pAtL-tgtzY_3YLqVUsaMSEgE4K70HgMt5S91FMwSu8EIizewy/pub>`_
 
 Continental Community Meetings
------------------
+------------------------------
 
 To adress different time zones among the globe continental meetings have been organized.
 
