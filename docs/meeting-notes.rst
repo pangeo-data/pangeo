@@ -60,6 +60,9 @@ Working Group Meetings
     * Schedule: Every other Monday at 2pm ET
     * Conferencing: `whereby.com/pangeo <https://whereby.com/pangeo>`_
     * Notes: `Google Doc <https://docs.google.com/document/d/14FpI9vaM6TeFtmM7LP9o_d5DZaYKgQVTTzT7tFRt-Nw/edit#heading=h.rdvtuxpqyxy>`_
+5. Pangeo European Coffee
+    * Schedule: Every Tuesday at 10am CET
+    * Conferencing: `Zoom <https://cnrs.zoom.us/j/95432814658>`_ Password: Pangeo2EU
 
 
 Past working groups include the `Data Working Group <https://docs.google.com/document/d/e/2PACX-1vTP1iV4YJcHznwcfUwlLoEDVPdgtD9iAXql73vn4uAotOQMVh9R8vTIKxPHnvnrijX1C24T5aJJZ95x/pub>`_
