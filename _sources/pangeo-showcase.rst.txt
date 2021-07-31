@@ -64,11 +64,14 @@ Recorded and Upcoming Presentations
      - `Project Pythia: a community learning resource for Python-based computing in the geosciences <https://discourse.pangeo.io/t/june-23-2021-project-pythia-a-community-learning-resource-for-python-based-computing-in-the-geosciences/1601>`_ |Rose DOI Badge|
    * - 2021-06-30 12pm EDT
      - Julia Lowndes and Erin Robinson, Openscapes
-     - **The NASA-Openscapes Framework**
+     -  `The NASA-Openscapes Framework <https://discourse.pangeo.io/t/june-30-2021-the-nasa-openscapes-framework/1631>`_ |Lowndes DOI Badge|
 
 **The Showcase is going on a summer break and will be back in September!**
 The `sign up sheet <https://forms.gle/QwxKusVvrvDakSNs8>`_ will remain open, however. Please let us know if you would like to give a talk this fall. 
 
+.. |Lowndes DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.5090115.svg
+   :target: https://doi.org/10.5281/zenodo.5090115
+   
 .. |Rose DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.5037185.svg
    :target: https://doi.org/10.5281/zenodo.5037185
    
