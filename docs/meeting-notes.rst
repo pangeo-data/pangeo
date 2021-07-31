@@ -20,6 +20,26 @@ you are working on with short, one minute updates, and agenda items are anything
 * Conferencing: `Zoom <https://columbiauniversity.zoom.us/j/953527251>`_
 * Notes:  `Google Doc <https://docs.google.com/document/d/e/2PACX-1vRerhoxG-wOvh-wQTj7F8HPYve75l8pAtL-tgtzY_3YLqVUsaMSEgE4K70HgMt5S91FMwSu8EIizewy/pub>`_
 
+Continental Community Meetings
+------------------------------
+
+To adress different time zones among the globe continental meetings have been organized.
+
+1. Europe & Africa
+
+   Gitter: `Pangeo Europe <https://gitter.im/pangeo-data/Europe>`__ 
+
+   - Cofee table; an uninformal meeting with open discussions:   
+      * Schedule: Every week on Tusday at 10a CET
+      * Conferencing: `Zoom <https://cnrs.zoom.us/j/95432814658>`_  password: Pangeo2EU
+      * Notes: `Google Doc <https://docs.google.com/document/d/1Vq1ljPRQYWF_u0Ku1eEhQyYreijAJ2QW6FELdIsiYDs/edit?usp=sharing>`__
+   - Monthly meeting: 
+      * Schedule: (to be scheduled)  
+      * Conferencing: 
+      * Notes: `Google Doc <https://docs.google.com/document/d/12P5vAvh7l5ohZwZiJ3z-HMitnKHt8dYLXPGCeWRsJ7Y/edit?usp=sharing>`__
+
+2. Oceania
+
 Working Group Meetings
 ----------------------
 
