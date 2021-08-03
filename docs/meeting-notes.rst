@@ -31,7 +31,7 @@ To adress different time zones among the globe continental meetings have been or
 
    - Cofee table; an uninformal meeting with open discussions:   
       * Schedule: Every week on Tusday at 10a CET
-      * Conferencing: `Zoom <https://cnrs.zoom.us/j/95432814658>`_  password: Pangeo2EU
+      * Conferencing: Conferencing: `whereby.com/pangeo-europe <https://whereby.com/pangeo-europe>`_
       * Notes: `Google Doc <https://docs.google.com/document/d/1Vq1ljPRQYWF_u0Ku1eEhQyYreijAJ2QW6FELdIsiYDs/edit?usp=sharing>`__
    - Monthly meeting: 
       * Schedule: (to be scheduled)  
