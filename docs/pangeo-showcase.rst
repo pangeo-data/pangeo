@@ -27,8 +27,8 @@ Fall 2021 Showcase Recorded and Upcoming Presentations
      - Speaker
      - Title
    * - 2021-09-15 4PM EDT
-     - Steve Olson and Shane Mill, NOAA
-     - TBD
+     - Steve Olson and Shane Mill, NOAA - National Weather Service
+     - The NWS Implementation of the OGC API - Environmental Data Retrieval
    * - 2021-09-22 12PM EDT
      - Alejandro Flores, Boise State University
      - TBD
