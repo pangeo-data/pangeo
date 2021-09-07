@@ -27,8 +27,8 @@ Fall 2021 Showcase Recorded and Upcoming Presentations
      - Speaker
      - Title
    * - 2021-09-15 4PM EDT
-     - Ryan Abernathey, Lamont Doherty Earth Observatory
-     - OpenOceanCloud: Leveraging Pangeo to Accelerate the UN Ocean Decade
+     - Steve Olson and Shane Mill, NOAA
+     - TBD
    * - 2021-09-22 12PM EDT
      - Alejandro Flores, Boise State University
      - TBD
