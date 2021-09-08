@@ -15,7 +15,29 @@ available on the `Pangeo YouTube Channel <https://youtube.com/playlist?list=PLuQ
 
 * **Conferencing**:   `Zoom <https://columbiauniversity.zoom.us/j/953527251>`_
 
-Recorded and Upcoming Presentations
+Fall 2021 Showcase Recorded and Upcoming Presentations
+-----------------------------------
+
+.. list-table::
+   :widths: 15 25 60
+   :header-rows: 1
+   :align: left
+
+   * - Date
+     - Speaker
+     - Title
+   * - 2021-09-15 4PM EDT
+     - Steve Olson and Shane Mill, NOAA - National Weather Service
+     - The NWS Implementation of the OGC API - Environmental Data Retrieval
+   * - 2021-09-22 12PM EDT
+     - Alejandro Flores, Boise State University
+     - TBD
+   * - 2021-09-29 4PM EDT
+     - Daniel Gilford, Cliamte Central
+     - TBD
+ 
+
+Spring 2021 Showcase Archive
 -----------------------------------
 
 .. list-table::
@@ -66,8 +88,6 @@ Recorded and Upcoming Presentations
      - Julia Lowndes and Erin Robinson, Openscapes
      -  `The NASA-Openscapes Framework <https://discourse.pangeo.io/t/june-30-2021-the-nasa-openscapes-framework/1631>`_ |Lowndes DOI Badge|
 
-**The Showcase is going on a summer break and will be back in September!**
-The `sign up sheet <https://forms.gle/QwxKusVvrvDakSNs8>`_ will remain open, however. Please let us know if you would like to give a talk this fall. 
 
 .. |Lowndes DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.5090115.svg
    :target: https://doi.org/10.5281/zenodo.5090115
