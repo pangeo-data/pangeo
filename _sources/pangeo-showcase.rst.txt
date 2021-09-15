@@ -13,7 +13,7 @@ available on the `Pangeo YouTube Channel <https://youtube.com/playlist?list=PLuQ
 * **Schedule**: Every Wednesday, alternating between 12pm and 4pm US East Local Time (EST or EDT) to 
   to encourage attendance from a wide range of time zones.
 
-* **Conferencing**:   `Zoom <https://columbiauniversity.zoom.us/j/953527251>`_
+* **Conferencing**:   `Zoom <https://columbiauniversity.zoom.us/j/94877958106?pwd=UkE0UHF1U0x3VTVUNEJTam9mTXVHZz09>`_
 
 Fall 2021 Showcase Recorded and Upcoming Presentations
 -----------------------------------
