@@ -33,7 +33,7 @@ Fall 2021 Showcase Recorded and Upcoming Presentations
      - Alejandro Flores, Boise State University
      - TBD
    * - 2021-09-29 4PM EDT
-     - Daniel Gilford, Cliamte Central
+     - Daniel Gilford, Climate Central
      - TBD
  
 
