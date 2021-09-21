@@ -31,10 +31,10 @@ Fall 2021 Showcase Recorded and Upcoming Presentations
      - The NWS Implementation of the OGC API - Environmental Data Retrieval
    * - 2021-09-22 12PM EDT
      - Alejandro Flores, Boise State University
-     - TBD
+     - Navigating the Clouds on the Horizon: A Vision for Reproducible Hydrologic Modeling in the Cloud
    * - 2021-09-29 4PM EDT
      - Daniel Gilford, Climate Central
-     - TBD
+     - Introducing pyPI: Tropical Cyclone Potential Intensity Calculations in Python
  
 
 Spring 2021 Showcase Archive
