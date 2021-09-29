@@ -27,14 +27,17 @@ Fall 2021 Showcase Recorded and Upcoming Presentations
      - Speaker
      - Title
    * - 2021-09-15 4PM EDT
-     - Steve Olson and Shane Mill, NOAA - National Weather Service
-     - The NWS Implementation of the OGC API - Environmental Data Retrieval
+     - Shane Mill and Steve Olson, NOAA - National Weather Service
+     - `The NWS Implementation of the OGC API - Environmental Data Retrieval <https://discourse.pangeo.io/t/september-15-2021-the-nws-implementation-of-the-ogc-api-environmental-data-retrieval/1808>`_ |Mill DOI Badge|
    * - 2021-09-22 12PM EDT
      - Alejandro Flores, Boise State University
-     - Navigating the Clouds on the Horizon: A Vision for Reproducible Hydrologic Modeling in the Cloud
+     - `Navigating the Clouds on the Horizon: A Vision for Reproducible Hydrologic Modeling in the Cloud <https://discourse.pangeo.io/t/september-22-2021-navigating-the-clouds-on-the-horizon-a-vision-for-reproducible-hydrologic-modeling-in-the-cloud/1809>`_ |Flores DOI Badge|
    * - 2021-09-29 4PM EDT
      - Daniel Gilford, Climate Central
      - Introducing pyPI: Tropical Cyclone Potential Intensity Calculations in Python
+   * - 2021-10-06 12PM EDT
+     - Ted Habermann, Metadata Game Changers
+     - Earthquakes and Moving Plates in the Cloud
  
 
 Spring 2021 Showcase Archive
@@ -89,6 +92,12 @@ Spring 2021 Showcase Archive
      -  `The NASA-Openscapes Framework <https://discourse.pangeo.io/t/june-30-2021-the-nasa-openscapes-framework/1631>`_ |Lowndes DOI Badge|
 
 
+.. |Flores DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.5535595.svg
+   :target: https://doi.org/10.5281/zenodo.5535595
+   
+.. |Mill DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.5535519.svg
+   :target: https://doi.org/10.5281/zenodo.5535519
+   
 .. |Lowndes DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.5090115.svg
    :target: https://doi.org/10.5281/zenodo.5090115
    
