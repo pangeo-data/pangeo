@@ -38,7 +38,13 @@ Fall 2021 Showcase Recorded and Upcoming Presentations
    * - 2021-10-06 12PM EDT
      - Ted Habermann, Metadata Game Changers
      - Earthquakes and Moving Plates in the Cloud
- 
+   * - 2021-10-13 4PM EDT
+     - TBD
+     - TBD
+   * - 2021-10-20 12PM EDT
+     - Tom Augspurger, Microsoft
+     - Scalable sustainability with the Planetary Computer
+     
 
 Spring 2021 Showcase Archive
 -----------------------------------
