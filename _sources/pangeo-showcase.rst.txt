@@ -34,10 +34,22 @@ Fall 2021 Showcase Recorded and Upcoming Presentations
      - `Navigating the Clouds on the Horizon: A Vision for Reproducible Hydrologic Modeling in the Cloud <https://discourse.pangeo.io/t/september-22-2021-navigating-the-clouds-on-the-horizon-a-vision-for-reproducible-hydrologic-modeling-in-the-cloud/1809>`_ |Flores DOI Badge|
    * - 2021-09-29 4PM EDT
      - Daniel Gilford, Climate Central
-     - Introducing pyPI: Tropical Cyclone Potential Intensity Calculations in Python
+     - `Introducing pyPI: Tropical Cyclone Potential Intensity Calculations in Python <https://discourse.pangeo.io/t/september-29-2021-introducing-pypi-tropical-cyclone-potential-intensity-calculations-in-python/1822>`_ |Gilford DOI Badge|
    * - 2021-10-06 12PM EDT
      - Ted Habermann, Metadata Game Changers
      - Earthquakes and Moving Plates in the Cloud
+   * - 2021-10-13 4PM EDT
+     - TBD
+     - TBD
+   * - 2021-10-20 12PM EDT
+     - Tom Augspurger, Dan Morris, Rob Emanuele, Matt McFarland, and Bruno Sanchez-Andrade Nuno, Microsoft
+     - Scalable Sustainability with the Planetary Computer
+   * - 2021-10-27 4PM EDT
+     - TBD
+     - TBD
+   * - 2021-11-03 12PM EDT
+     - Gunnar Brandt, Brockmann Consult GmbH
+     - TBD
  
 
 Spring 2021 Showcase Archive
@@ -92,6 +104,9 @@ Spring 2021 Showcase Archive
      -  `The NASA-Openscapes Framework <https://discourse.pangeo.io/t/june-30-2021-the-nasa-openscapes-framework/1631>`_ |Lowndes DOI Badge|
 
 
+.. |Gilford DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.5547337.svg
+   :target: https://doi.org/10.5281/zenodo.5547337
+   
 .. |Flores DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.5535595.svg
    :target: https://doi.org/10.5281/zenodo.5535595
    
