@@ -50,7 +50,6 @@ Fall 2021 Showcase Recorded and Upcoming Presentations
    * - 2021-11-03 12PM EDT
      - Gunnar Brandt, Brockmann Consult GmbH
      - TBD
- 
 
 Spring 2021 Showcase Archive
 -----------------------------------
