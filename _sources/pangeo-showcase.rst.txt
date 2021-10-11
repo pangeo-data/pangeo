@@ -39,16 +39,22 @@ Fall 2021 Showcase Recorded and Upcoming Presentations
      - Ted Habermann, Metadata Game Changers
      - Earthquakes and Moving Plates in the Cloud
    * - 2021-10-13 4PM EDT
-     - TBD
+     - Keith Maull and Matt Mayernik, NCAR
      - TBD
    * - 2021-10-20 12PM EDT
      - Tom Augspurger, Dan Morris, Rob Emanuele, Matt McFarland, and Bruno Sanchez-Andrade Nuno, Microsoft
      - Scalable Sustainability with the Planetary Computer
    * - 2021-10-27 4PM EDT
-     - TBD
-     - TBD
+     - Kata Martin, Joe Hamman, and Jeremy Freeman, CarbonPlan
+     - A New Toolkit for Visualizing Zarr Data in Web Maps
    * - 2021-11-03 12PM EDT
      - Gunnar Brandt, Brockmann Consult GmbH
+     - TBD
+   * - 2021-11-10 4PM EDT
+     - John Clyne, NCAR
+     - Introducing Project Raijin, Community Geoscience Analysis Tools for Unstructured Mesh Data
+   * - 2021-11-17 12PM EDT
+     - Deepak Cherian, UCAR
      - TBD
 
 Spring 2021 Showcase Archive
