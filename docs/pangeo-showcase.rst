@@ -37,7 +37,7 @@ Fall 2021 Showcase Recorded and Upcoming Presentations
      - `Introducing pyPI: Tropical Cyclone Potential Intensity Calculations in Python <https://discourse.pangeo.io/t/september-29-2021-introducing-pypi-tropical-cyclone-potential-intensity-calculations-in-python/1822>`_ |Gilford DOI Badge|
    * - 2021-10-06 12PM EDT
      - Ted Habermann, Metadata Game Changers
-     - Earthquakes and Moving Plates in the Cloud
+     - `Earthquakes and Moving Plates in the Cloud <https://discourse.pangeo.io/t/october-6-2021-earthquakes-and-moving-plates-in-the-cloud/1836>`_ |Habermann DOI Badge|
    * - 2021-10-13 4PM EDT
      - Keith Maull and Matt Mayernik, NCAR
      - TBD
@@ -109,6 +109,9 @@ Spring 2021 Showcase Archive
      -  `The NASA-Openscapes Framework <https://discourse.pangeo.io/t/june-30-2021-the-nasa-openscapes-framework/1631>`_ |Lowndes DOI Badge|
 
 
+.. |Habermann DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.5562672.svg
+   :target: https://doi.org/10.5281/zenodo.5562672
+   
 .. |Gilford DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.5547337.svg
    :target: https://doi.org/10.5281/zenodo.5547337
    
