@@ -40,7 +40,7 @@ Fall 2021 Showcase Recorded and Upcoming Presentations
      - Earthquakes and Moving Plates in the Cloud
    * - 2021-10-13 4PM EDT
      - Keith Maull and Matt Mayernik, NCAR
-     - TBD
+     - Software Citation Guidance for Geoscience Communities
    * - 2021-10-20 12PM EDT
      - Tom Augspurger, Dan Morris, Rob Emanuele, Matt McFarland, and Bruno Sanchez-Andrade Nuno, Microsoft
      - Scalable Sustainability with the Planetary Computer
