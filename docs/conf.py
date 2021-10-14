@@ -58,7 +58,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'Pangeo'
-copyright = '2018-2020, Pangeo Team'
+copyright = '2018-2021, Pangeo Team'
 author = 'Pangeo Team'
 
 # The version info for the project you're documenting, acts as replacement for
