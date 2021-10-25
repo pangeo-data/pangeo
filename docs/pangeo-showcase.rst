@@ -37,10 +37,10 @@ Fall 2021 Showcase Recorded and Upcoming Presentations
      - `Introducing pyPI: Tropical Cyclone Potential Intensity Calculations in Python <https://discourse.pangeo.io/t/september-29-2021-introducing-pypi-tropical-cyclone-potential-intensity-calculations-in-python/1822>`_ |Gilford DOI Badge|
    * - 2021-10-06 12PM EDT
      - Ted Habermann, Metadata Game Changers
-     - Earthquakes and Moving Plates in the Cloud
+     - `Earthquakes and Moving Plates in the Clouds <https://discourse.pangeo.io/t/october-6-2021-earthquakes-and-moving-plates-in-the-cloud/1836>`_ |Habermann DOI Badge|
    * - 2021-10-13 4PM EDT
      - Keith Maull and Matt Mayernik, NCAR
-     - Software Citation Guidance for Geoscience Communities
+     - `Software Citation Guidance for Geoscience Communities <https://discourse.pangeo.io/t/october-13-2021-software-citation-guidance-for-geoscience-communities/1873>`_ |Maull DOI Badge|
    * - 2021-10-20 12PM EDT
      - Tom Augspurger, Dan Morris, Rob Emanuele, Matt McFarland, and Bruno Sanchez-Andrade Nuno, Microsoft
      - Scalable Sustainability with the Planetary Computer
@@ -108,6 +108,12 @@ Spring 2021 Showcase Archive
      - Julia Lowndes and Erin Robinson, Openscapes
      -  `The NASA-Openscapes Framework <https://discourse.pangeo.io/t/june-30-2021-the-nasa-openscapes-framework/1631>`_ |Lowndes DOI Badge|
 
+
+.. |Maull DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.5596053.svg
+   :target: https://doi.org/10.5281/zenodo.5596053
+   
+.. |Habermann DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.5562672.svg
+   :target: https://doi.org/10.5281/zenodo.5562672
 
 .. |Gilford DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.5547337.svg
    :target: https://doi.org/10.5281/zenodo.5547337
