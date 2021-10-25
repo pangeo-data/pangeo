@@ -43,7 +43,7 @@ Fall 2021 Showcase Recorded and Upcoming Presentations
      - `Software Citation Guidance for Geoscience Communities <https://discourse.pangeo.io/t/october-13-2021-software-citation-guidance-for-geoscience-communities/1873>`_ |Maull DOI Badge|
    * - 2021-10-20 12PM EDT
      - Tom Augspurger, Dan Morris, Rob Emanuele, Matt McFarland, and Bruno Sanchez-Andrade Nuno, Microsoft
-     - Scalable Sustainability with the Planetary Computer
+     - `Scalable Sustainability with the Planetary Computer <https://discourse.pangeo.io/t/october-20-2021-scalable-sustainability-with-the-planetary-computer/1874>`_ |Augspurger DOI Badge|
    * - 2021-10-27 4PM EDT
      - Kata Martin, Joe Hamman, and Jeremy Freeman, CarbonPlan
      - A New Toolkit for Visualizing Zarr Data in Web Maps
@@ -109,6 +109,9 @@ Spring 2021 Showcase Archive
      -  `The NASA-Openscapes Framework <https://discourse.pangeo.io/t/june-30-2021-the-nasa-openscapes-framework/1631>`_ |Lowndes DOI Badge|
 
 
+.. |Augspurger DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.5596894.svg
+   :target: https://doi.org/10.5281/zenodo.5596894
+   
 .. |Maull DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.5596053.svg
    :target: https://doi.org/10.5281/zenodo.5596053
    
