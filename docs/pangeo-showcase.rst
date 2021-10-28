@@ -49,7 +49,7 @@ Fall 2021 Showcase Recorded and Upcoming Presentations
      - A New Toolkit for Visualizing Zarr Data in Web Maps
    * - 2021-11-03 12PM EDT
      - Gunnar Brandt, Brockmann Consult GmbH
-     - TBD
+     - xcube - Python package for Earth Observation data cubes
    * - 2021-11-10 4PM EDT
      - John Clyne, NCAR
      - Introducing Project Raijin, Community Geoscience Analysis Tools for Unstructured Mesh Data
