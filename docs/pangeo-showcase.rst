@@ -48,7 +48,7 @@ Fall 2021 Showcase Recorded and Upcoming Presentations
      - Kata Martin, Joe Hamman, and Jeremy Freeman, CarbonPlan
      - `A New Toolkit for Visualizing Zarr Data in Web Maps <https://discourse.pangeo.io/t/october-27-2021-a-new-toolkit-for-visualizing-zarr-data-in-web-maps/1891>`_ |Martin DOI Badge|
    * - 2021-11-03 12PM EDT
-     - Gunnar Brandt, Brockmann Consult GmbH
+     - Gunnar Brandt and  Norman Fomferra, Brockmann Consult GmbH
      - xcube - Python package for Earth Observation data cubes
    * - 2021-11-10 4PM EDT
      - John Clyne, NCAR
