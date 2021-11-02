@@ -46,7 +46,7 @@ Fall 2021 Showcase Recorded and Upcoming Presentations
      - `Scalable Sustainability with the Planetary Computer <https://discourse.pangeo.io/t/october-20-2021-scalable-sustainability-with-the-planetary-computer/1874>`_ |Augspurger DOI Badge|
    * - 2021-10-27 4PM EDT
      - Kata Martin, Joe Hamman, and Jeremy Freeman, CarbonPlan
-     - A New Toolkit for Visualizing Zarr Data in Web Maps
+     - `A New Toolkit for Visualizing Zarr Data in Web Maps <https://discourse.pangeo.io/t/october-27-2021-a-new-toolkit-for-visualizing-zarr-data-in-web-maps/1891>`_ |Martin DOI Badge|
    * - 2021-11-03 12PM EDT
      - Gunnar Brandt, Brockmann Consult GmbH
      - xcube - Python package for Earth Observation data cubes
@@ -112,6 +112,9 @@ Spring 2021 Showcase Archive
      -  `The NASA-Openscapes Framework <https://discourse.pangeo.io/t/june-30-2021-the-nasa-openscapes-framework/1631>`_ |Lowndes DOI Badge|
 
 
+.. |Martin DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.5638862.svg
+   :target: https://doi.org/10.5281/zenodo.5638862
+   
 .. |Augspurger DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.5596894.svg
    :target: https://doi.org/10.5281/zenodo.5596894
    
