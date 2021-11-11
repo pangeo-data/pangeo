@@ -49,7 +49,7 @@ Fall 2021 Showcase Recorded and Upcoming Presentations
      - `A New Toolkit for Visualizing Zarr Data in Web Maps <https://discourse.pangeo.io/t/october-27-2021-a-new-toolkit-for-visualizing-zarr-data-in-web-maps/1891>`_ |Martin DOI Badge|
    * - 2021-11-03 12PM EDT
      - Gunnar Brandt and  Norman Fomferra, Brockmann Consult GmbH
-     - `xcube - Python package for Earth Observation data cubes <https://discourse.pangeo.io/t/november-3-2021-xcube-python-package-for-earth-observation-data-cubes/1903>`_ 
+     - `xcube - Python package for Earth Observation data cubes <https://discourse.pangeo.io/t/november-3-2021-xcube-python-package-for-earth-observation-data-cubes/1903>`_ |Brandt DOI Badge|
    * - 2021-11-10 4PM EDT
      - John Clyne, NCAR
      - Introducing Project Raijin, Community Geoscience Analysis Tools for Unstructured Mesh Data
@@ -112,6 +112,9 @@ Spring 2021 Showcase Archive
      -  `The NASA-Openscapes Framework <https://discourse.pangeo.io/t/june-30-2021-the-nasa-openscapes-framework/1631>`_ |Lowndes DOI Badge|
 
 
+.. |Brandt DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.5675969.svg
+   :target: https://doi.org/10.5281/zenodo.5675969
+   
 .. |Martin DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.5638862.svg
    :target: https://doi.org/10.5281/zenodo.5638862
    
