@@ -55,7 +55,7 @@ Fall 2021 Showcase Recorded and Upcoming Presentations
      - Introducing Project Raijin, Community Geoscience Analysis Tools for Unstructured Mesh Data
    * - 2021-11-17 12PM EDT
      - Deepak Cherian, UCAR
-     - TBD
+     - dask_groupby: Fast & furious GroupBy reductions with Dask at Pangeo-scale
      
 Please note that the Pangeo Showcase will go on Winter Break after the talk on Nov. 17th. We will resume Showcase presentations in January 2022. If you are intersted in presenting this Spring, please makes sure to `fill out this short form <https://forms.gle/QwxKusVvrvDakSNs8>`_.
 
