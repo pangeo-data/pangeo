@@ -54,8 +54,8 @@ Fall 2021 Showcase Recorded and Upcoming Presentations
      - John Clyne, NCAR
      - `Introducing Project Raijin, Community Geoscience Analysis Tools for Unstructured Mesh Data <https://discourse.pangeo.io/t/november-10-2021-introducing-project-raijin-community-geoscience-analysis-tools-for-unstructured-mesh-data/1923>`_ |Clyne DOI Badge|
    * - 2021-11-17 12PM EDT
-     - Deepak Cherian, UCAR
-     - dask_groupby: Fast & furious GroupBy reductions with Dask at Pangeo-scale
+     - Deepak Cherian, NCAR
+     - flox: Fast & furious GroupBy reductions with Dask at Pangeo-scale
      
 Please note that the Pangeo Showcase will go on Winter Break after the talk on Nov. 17th. We will resume Showcase presentations in January 2022. If you are intersted in presenting this Spring, please makes sure to `fill out this short form <https://forms.gle/QwxKusVvrvDakSNs8>`_.
 
