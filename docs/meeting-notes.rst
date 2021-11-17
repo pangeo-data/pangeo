@@ -40,6 +40,11 @@ To adress different time zones among the globe continental meetings have been or
 
 2. Oceania
 
+   - Monthly meeting: 
+      * Schedule: 3rd Friday of every month at 1pm Australian Eastern Time  
+      * Conferencing: `Zoom <https://anu.zoom.us/j/82147791120?pwd=Q2U2Q1N1UWkwdWlnTGdTSVdrck04QT09>`_
+      * Notes: `Google Doc <https://bit.ly/Pangeo-Oceania-minutes>`__
+
 Working Group Meetings
 ----------------------
 
