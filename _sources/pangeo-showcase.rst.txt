@@ -55,7 +55,7 @@ Fall 2021 Showcase Recorded and Upcoming Presentations
      - `Introducing Project Raijin, Community Geoscience Analysis Tools for Unstructured Mesh Data <https://discourse.pangeo.io/t/november-10-2021-introducing-project-raijin-community-geoscience-analysis-tools-for-unstructured-mesh-data/1923>`_ |Clyne DOI Badge|
    * - 2021-11-17 12PM EDT
      - Deepak Cherian, NCAR
-     - flox: Fast & furious GroupBy reductions with Dask at Pangeo-scale
+     - `flox: Fast & furious GroupBy reductions with Dask at Pangeo-scale <https://discourse.pangeo.io/t/november-17-2021-flox-fast-furious-groupby-reductions-with-dask-at-pangeo-scale/2016>`_ |Cherian DOI Badge|
      
 Please note that the Pangeo Showcase will go on Winter Break after the talk on Nov. 17th. We will resume Showcase presentations in January 2022. If you are intersted in presenting this Spring, please makes sure to `fill out this short form <https://forms.gle/QwxKusVvrvDakSNs8>`_.
 
@@ -111,6 +111,9 @@ Spring 2021 Showcase Archive
      - Julia Lowndes and Erin Robinson, Openscapes
      -  `The NASA-Openscapes Framework <https://discourse.pangeo.io/t/june-30-2021-the-nasa-openscapes-framework/1631>`_ |Lowndes DOI Badge|
 
+
+.. |Cherian DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.5772165.svg
+   :target: https://doi.org/10.5281/zenodo.5772165
 
 .. |Clyne DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.5700525.svg
    :target: https://doi.org/10.5281/zenodo.5700525
