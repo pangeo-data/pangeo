@@ -13,9 +13,54 @@ available on the `Pangeo YouTube Channel <https://youtube.com/playlist?list=PLuQ
 * **Schedule**: Every Wednesday, alternating between 12pm and 4pm US East Local Time (EST or EDT) to 
   to encourage attendance from a wide range of time zones.
 
-* **Conferencing**:   `Zoom <https://columbiauniversity.zoom.us/j/953527251>`_
+* **Conferencing**:   `Zoom <https://columbiauniversity.zoom.us/j/94877958106?pwd=UkE0UHF1U0x3VTVUNEJTam9mTXVHZz09>`_
 
-Recorded and Upcoming Presentations
+Fall 2021 Showcase Recorded and Upcoming Presentations
+-----------------------------------
+
+.. list-table::
+   :widths: 15 25 60
+   :header-rows: 1
+   :align: left
+
+   * - Date
+     - Speaker
+     - Title
+   * - 2021-09-15 4PM EDT
+     - Shane Mill and Steve Olson, NOAA - National Weather Service
+     - `The NWS Implementation of the OGC API - Environmental Data Retrieval <https://discourse.pangeo.io/t/september-15-2021-the-nws-implementation-of-the-ogc-api-environmental-data-retrieval/1808>`_ |Mill DOI Badge|
+   * - 2021-09-22 12PM EDT
+     - Alejandro Flores, Boise State University
+     - `Navigating the Clouds on the Horizon: A Vision for Reproducible Hydrologic Modeling in the Cloud <https://discourse.pangeo.io/t/september-22-2021-navigating-the-clouds-on-the-horizon-a-vision-for-reproducible-hydrologic-modeling-in-the-cloud/1809>`_ |Flores DOI Badge|
+   * - 2021-09-29 4PM EDT
+     - Daniel Gilford, Climate Central
+     - `Introducing pyPI: Tropical Cyclone Potential Intensity Calculations in Python <https://discourse.pangeo.io/t/september-29-2021-introducing-pypi-tropical-cyclone-potential-intensity-calculations-in-python/1822>`_ |Gilford DOI Badge|
+   * - 2021-10-06 12PM EDT
+     - Ted Habermann, Metadata Game Changers
+     - `Earthquakes and Moving Plates in the Clouds <https://discourse.pangeo.io/t/october-6-2021-earthquakes-and-moving-plates-in-the-cloud/1836>`_ |Habermann DOI Badge|
+   * - 2021-10-13 4PM EDT
+     - Keith Maull and Matt Mayernik, NCAR
+     - `Software Citation Guidance for Geoscience Communities <https://discourse.pangeo.io/t/october-13-2021-software-citation-guidance-for-geoscience-communities/1873>`_ |Maull DOI Badge|
+   * - 2021-10-20 12PM EDT
+     - Tom Augspurger, Dan Morris, Rob Emanuele, Matt McFarland, and Bruno Sanchez-Andrade Nuno, Microsoft
+     - `Scalable Sustainability with the Planetary Computer <https://discourse.pangeo.io/t/october-20-2021-scalable-sustainability-with-the-planetary-computer/1874>`_ |Augspurger DOI Badge|
+   * - 2021-10-27 4PM EDT
+     - Kata Martin, Joe Hamman, and Jeremy Freeman, CarbonPlan
+     - `A New Toolkit for Visualizing Zarr Data in Web Maps <https://discourse.pangeo.io/t/october-27-2021-a-new-toolkit-for-visualizing-zarr-data-in-web-maps/1891>`_ |Martin DOI Badge|
+   * - 2021-11-03 12PM EDT
+     - Gunnar Brandt and  Norman Fomferra, Brockmann Consult GmbH
+     - `xcube - Python package for Earth Observation data cubes <https://discourse.pangeo.io/t/november-3-2021-xcube-python-package-for-earth-observation-data-cubes/1903>`_ |Brandt DOI Badge|
+   * - 2021-11-10 4PM EDT
+     - John Clyne, NCAR
+     - `Introducing Project Raijin, Community Geoscience Analysis Tools for Unstructured Mesh Data <https://discourse.pangeo.io/t/november-10-2021-introducing-project-raijin-community-geoscience-analysis-tools-for-unstructured-mesh-data/1923>`_ |Clyne DOI Badge|
+   * - 2021-11-17 12PM EDT
+     - Deepak Cherian, NCAR
+     - `flox: Fast & furious GroupBy reductions with Dask at Pangeo-scale <https://discourse.pangeo.io/t/november-17-2021-flox-fast-furious-groupby-reductions-with-dask-at-pangeo-scale/2016>`_ |Cherian DOI Badge|
+     
+Please note that the Pangeo Showcase will go on Winter Break after the talk on Nov. 17th. We will resume Showcase presentations in January 2022. If you are intersted in presenting this Spring, please makes sure to `fill out this short form <https://forms.gle/QwxKusVvrvDakSNs8>`_.
+
+
+Spring 2021 Showcase Archive
 -----------------------------------
 
 .. list-table::
@@ -46,7 +91,7 @@ Recorded and Upcoming Presentations
      - `The new era of SAR time series: Tackling big EO data analysis and visualization with Pangeo tools <https://discourse.pangeo.io/t/may-12-2021-the-new-era-of-sar-time-series-tackling-big-eo-data-analysis-and-visualization-with-pangeo-tools/1475>`_ |Kellndorfer DOI Badge|  
    * - 2021-05-19 12pm EDT
      - Chelle Gentemann, Farallon Institute
-     - `Accessing Sea Surface Temperature Cata on the Cloud <https://discourse.pangeo.io/t/may-19-2021-accessing-sea-surface-temperature-data-on-the-cloud/1503>`_ |Gentemann DOI Badge| 
+     - `Accessing Sea Surface Temperature Data on the Cloud <https://discourse.pangeo.io/t/may-19-2021-accessing-sea-surface-temperature-data-on-the-cloud/1503>`_ |Gentemann DOI Badge| 
    * - 2021-05-26 4pm EDT 
      - Taher Chegini, University of Houston, Texas
      - `Accessing Hydrology and Climatology database using web services through Python <https://discourse.pangeo.io/t/may-26-2021-accessing-hydrology-and-climatology-database-using-web-services-through-python/1521>`_ |Chegini DOI Badge| 
@@ -66,9 +111,37 @@ Recorded and Upcoming Presentations
      - Julia Lowndes and Erin Robinson, Openscapes
      -  `The NASA-Openscapes Framework <https://discourse.pangeo.io/t/june-30-2021-the-nasa-openscapes-framework/1631>`_ |Lowndes DOI Badge|
 
-**The Showcase is going on a summer break and will be back in September!**
-The `sign up sheet <https://forms.gle/QwxKusVvrvDakSNs8>`_ will remain open, however. Please let us know if you would like to give a talk this fall. 
 
+.. |Cherian DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.5772165.svg
+   :target: https://doi.org/10.5281/zenodo.5772165
+
+.. |Clyne DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.5700525.svg
+   :target: https://doi.org/10.5281/zenodo.5700525
+   
+.. |Brandt DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.5675969.svg
+   :target: https://doi.org/10.5281/zenodo.5675969
+   
+.. |Martin DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.5638862.svg
+   :target: https://doi.org/10.5281/zenodo.5638862
+   
+.. |Augspurger DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.5596894.svg
+   :target: https://doi.org/10.5281/zenodo.5596894
+   
+.. |Maull DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.5596053.svg
+   :target: https://doi.org/10.5281/zenodo.5596053
+   
+.. |Habermann DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.5562672.svg
+   :target: https://doi.org/10.5281/zenodo.5562672
+
+.. |Gilford DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.5547337.svg
+   :target: https://doi.org/10.5281/zenodo.5547337
+   
+.. |Flores DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.5535595.svg
+   :target: https://doi.org/10.5281/zenodo.5535595
+   
+.. |Mill DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.5535519.svg
+   :target: https://doi.org/10.5281/zenodo.5535519
+   
 .. |Lowndes DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.5090115.svg
    :target: https://doi.org/10.5281/zenodo.5090115
    

@@ -17,7 +17,7 @@ The check-ins are an opportunity for anyone to meet other members of the Pangeo 
 you are working on with short, one minute updates, and agenda items are anything people feel would benefit from group discussion.
 
 * Schedule: Every Wednesday, alternating between 12pm ET and 4pm ET (See the Calendar at the bottom of this page!) 
-* Conferencing: `Zoom <https://columbiauniversity.zoom.us/j/953527251>`_
+* Conferencing: `Zoom <https://columbiauniversity.zoom.us/j/94877958106?pwd=UkE0UHF1U0x3VTVUNEJTam9mTXVHZz09>`_
 * Notes:  `Google Doc <https://docs.google.com/document/d/e/2PACX-1vRerhoxG-wOvh-wQTj7F8HPYve75l8pAtL-tgtzY_3YLqVUsaMSEgE4K70HgMt5S91FMwSu8EIizewy/pub>`_
 
 Continental Community Meetings
@@ -39,6 +39,11 @@ To adress different time zones among the globe continental meetings have been or
       * Notes: `Google Doc <https://docs.google.com/document/d/12P5vAvh7l5ohZwZiJ3z-HMitnKHt8dYLXPGCeWRsJ7Y/edit?usp=sharing>`__
 
 2. Oceania
+
+   - Monthly meeting: 
+      * Schedule: 3rd Friday of every month at 1pm Australian Eastern Time  
+      * Conferencing: `Zoom <https://anu.zoom.us/j/82147791120?pwd=Q2U2Q1N1UWkwdWlnTGdTSVdrck04QT09>`_
+      * Notes: `Google Doc <https://bit.ly/Pangeo-Oceania-minutes>`__
 
 Working Group Meetings
 ----------------------
@@ -63,7 +68,10 @@ Working Group Meetings
 5. Pangeo European Coffee
     * Schedule: Every Tuesday at 10am CET
     * Conferencing: `Zoom <https://cnrs.zoom.us/j/95432814658>`_ Password: Pangeo2EU
-
+6. Open Science Meeting - discussions to coordinate open science activities 
+    * Schedule: First Friday of each month at 5pm CET
+    * Conferencing: `whereby.com/pangeo <https://whereby.com/pangeo>`_
+    * Notes: `Google Doc <https://docs.google.com/document/d/1mMDlFblBOeEmHnhaZZfgaMJvuzpw28ro3uyJngeY_jk/edit>`_
 
 Past working groups include the `Data Working Group <https://docs.google.com/document/d/e/2PACX-1vTP1iV4YJcHznwcfUwlLoEDVPdgtD9iAXql73vn4uAotOQMVh9R8vTIKxPHnvnrijX1C24T5aJJZ95x/pub>`_
 and the `Education Working Group <https://github.com/pangeo-data/education-material>`_.
