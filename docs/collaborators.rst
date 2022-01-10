@@ -3,7 +3,7 @@
 Funders and Collaborators
 =========================
 
-A range of funding agencies, academic institutions, companies, and individuals
+A range of funding agencies, academic institutions, companies and individuals
 contribute to Pangeo in different ways.
 
 Funding Agencies
