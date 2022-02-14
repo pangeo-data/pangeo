@@ -265,12 +265,14 @@ system administrators to properly configure these tools for your machine.</p>
 <p>You should log into your HPC system now.</p>
 <div class="section" id="installing-a-software-environment">
 <h2>Installing a software environment<a class="headerlink" href="#installing-a-software-environment" title="Permalink to this headline">¶</a></h2>
-<p>After you have logged into your HPC system, download and install Miniconda:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">wget</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">repo</span><span class="o">.</span><span class="n">continuum</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">miniconda</span><span class="o">/</span><span class="n">Miniconda3</span><span class="o">-</span><span class="n">latest</span><span class="o">-</span><span class="n">Linux</span><span class="o">-</span><span class="n">x86_64</span><span class="o">.</span><span class="n">sh</span>
-<span class="n">chmod</span> <span class="o">+</span><span class="n">x</span> <span class="n">Miniconda3</span><span class="o">-</span><span class="n">latest</span><span class="o">-</span><span class="n">Linux</span><span class="o">-</span><span class="n">x86_64</span><span class="o">.</span><span class="n">sh</span>
-<span class="o">./</span><span class="n">Miniconda3</span><span class="o">-</span><span class="n">latest</span><span class="o">-</span><span class="n">Linux</span><span class="o">-</span><span class="n">x86_64</span><span class="o">.</span><span class="n">sh</span>
-</pre></div>
-</div>
+<p>After you have logged into your HPC system, download and install Miniforge:</p>
+<dl class="simple">
+<dt>::</dt><dd><p>url=https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh
+curl $url -o Miniforge.sh
+sh Miniforge.sh
+export PATH=$HOME/Miniforge3/bin:$PATH</p>
+</dd>
+</dl>
 <p>This contains a self-contained Python environment that we can manipulate
 safely without requiring the involvement of IT. It also allows you to
 create isolated software environments so that we can experiment in the
@@ -286,7 +288,7 @@ which works like conda but is written in C++ and therefore creates environments 
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Depending if you chose to initialize Miniconda in your <code class="docutils literal notranslate"><span class="pre">~/.bashrc</span></code>
+<p>Depending if you chose to initialize Miniforge in your <code class="docutils literal notranslate"><span class="pre">~/.bashrc</span></code>
 at the end of the installation, this new conda update will activate
 a <code class="docutils literal notranslate"><span class="pre">(base)</span></code> environment by default. If you wish to prevent conda
 from activating the <code class="docutils literal notranslate"><span class="pre">(base)</span></code> environment at shell initialization:</p>
@@ -319,7 +321,7 @@ packages to this list.</p>
 <p>And if you ask where your Python command lives, it should direct you to
 somewhere in your home directory:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>(pangeo) $ which python
-/home/username/miniconda3/envs/pangeo/bin/python
+$HOME/Miniforge3/envs/pangeo/bin/python
 </pre></div>
 </div>
 </div>

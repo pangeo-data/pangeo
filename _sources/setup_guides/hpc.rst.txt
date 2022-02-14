@@ -23,13 +23,13 @@ You should log into your HPC system now.
 Installing a software environment
 ---------------------------------
 
-After you have logged into your HPC system, download and install Miniconda:
+After you have logged into your HPC system, download and install Miniforge:
 
 ::
-
-    wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
-    chmod +x Miniconda3-latest-Linux-x86_64.sh
-    ./Miniconda3-latest-Linux-x86_64.sh
+    url=https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh  
+    curl $url -o Miniforge.sh
+    sh Miniforge.sh
+    export PATH=$HOME/Miniforge3/bin:$PATH
 
 This contains a self-contained Python environment that we can manipulate
 safely without requiring the involvement of IT. It also allows you to
@@ -50,7 +50,7 @@ which works like conda but is written in C++ and therefore creates environments 
     
 .. note:: 
 
-    Depending if you chose to initialize Miniconda in your ``~/.bashrc``
+    Depending if you chose to initialize Miniforge in your ``~/.bashrc``
     at the end of the installation, this new conda update will activate
     a ``(base)`` environment by default. If you wish to prevent conda
     from activating the ``(base)`` environment at shell initialization:
@@ -93,7 +93,7 @@ somewhere in your home directory:
 ::
 
     (pangeo) $ which python
-    /home/username/miniconda3/envs/pangeo/bin/python
+    $HOME/Miniforge3/envs/pangeo/bin/python
 
 Configure Jupyter
 -----------------
