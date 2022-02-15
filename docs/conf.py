@@ -222,6 +222,6 @@ def rstjinja(app, docname, source):
 
 # https://pypi.python.org/pypi/sphinx-bootstrap-theme/
 def setup(app):
-    app.add_stylesheet("example_gallery_styles_patched.css")
-    app.add_stylesheet("pangeo-main-site-custom.css")
+    app.add_css_file("example_gallery_styles_patched.css")
+    app.add_css_file("pangeo-main-site-custom.css")
     app.connect("source-read", rstjinja)
