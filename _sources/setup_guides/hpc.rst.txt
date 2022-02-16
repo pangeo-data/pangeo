@@ -121,14 +121,8 @@ in the Jupyter documentation.
     chmod 400 ~/.jupyter/jupyter_server_config.py
 
 Finally, we may want to configure dask's dashboard to forward through Jupyter.
-This can be done by editing the dask distributed config file, e.g.:
-``.config/dask/distributed.yaml``. By default, when ``dask.distributed`` or
-``dask-jobqueue`` is first imported, it places a file at ``~/.config/dask/distributed.yaml``
-with a commented out version. You can create this file and do this first import by simply 
-
-::
-
-    python -c 'from dask.distributed import Client'
+This can be done by creating or editing the dask distributed config file at
+``.config/dask/distributed.yaml``. 
 
 In this ``.config/dask/distributed.yaml`` file, set:
 
@@ -181,6 +175,7 @@ From here, we can start jupyter. The Cheyenne computer administrators have
 developed a `start-notebook <https://www2.cisl.ucar.edu/resources/computational-systems/cheyenne/software/jupyter-and-ipython#notebook>`__
 utility that wraps the following steps into a single execution. You should
 check with your system administrators to see if they have something similar.
+
 If not, you can easily create your own start_jupyter script.  In the script below, we choose a random port
 on the server (to reduce the chance of conflict with another user), but we use port 8889 on the client, as port 8888 is 
 the default client port if you are running Jupyter locally.  We can also change to a starting directory:
@@ -198,9 +193,9 @@ the default client port if you are running Jupyter locally.  We can also change 
     echo "Step 2: Copy this ssh command into a terminal on your"
     echo "        local computer:"
     echo ""
-    echo "        ssh -N -L 8889:`hostname`:$JPORT $USER@poseidon.whoi.edu"
+    echo "        ssh -N -L 8889:`hostname`:$JPORT $USER@my-hpc-cluster.edu"
     echo ""
-    echo "Step 3: Browse to https://localhost:8889 on your local computer"
+    echo "Step 3: Browse to http://localhost:8889 on your local computer"
     echo ""
     echo ""
     sleep 2

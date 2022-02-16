@@ -345,13 +345,8 @@ in the Jupyter documentation.</p>
 </pre></div>
 </div>
 <p>Finally, we may want to configure dask’s dashboard to forward through Jupyter.
-This can be done by editing the dask distributed config file, e.g.:
-<code class="docutils literal notranslate"><span class="pre">.config/dask/distributed.yaml</span></code>. By default, when <code class="docutils literal notranslate"><span class="pre">dask.distributed</span></code> or
-<code class="docutils literal notranslate"><span class="pre">dask-jobqueue</span></code> is first imported, it places a file at <code class="docutils literal notranslate"><span class="pre">~/.config/dask/distributed.yaml</span></code>
-with a commented out version. You can create this file and do this first import by simply</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">c</span> <span class="s1">&#39;from dask.distributed import Client&#39;</span>
-</pre></div>
-</div>
+This can be done by creating or editing the dask distributed config file at
+<code class="docutils literal notranslate"><span class="pre">.config/dask/distributed.yaml</span></code>.</p>
 <p>In this <code class="docutils literal notranslate"><span class="pre">.config/dask/distributed.yaml</span></code> file, set:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">distributed</span><span class="p">:</span>
   <span class="c1">###################</span>
@@ -391,8 +386,8 @@ will want to reactivate it.</p>
 <p>From here, we can start jupyter. The Cheyenne computer administrators have
 developed a <a class="reference external" href="https://www2.cisl.ucar.edu/resources/computational-systems/cheyenne/software/jupyter-and-ipython#notebook">start-notebook</a>
 utility that wraps the following steps into a single execution. You should
-check with your system administrators to see if they have something similar.
-If not, you can easily create your own start_jupyter script.  In the script below, we choose a random port
+check with your system administrators to see if they have something similar.</p>
+<p>If not, you can easily create your own start_jupyter script.  In the script below, we choose a random port
 on the server (to reduce the chance of conflict with another user), but we use port 8889 on the client, as port 8888 is
 the default client port if you are running Jupyter locally.  We can also change to a starting directory:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>(pangeo) $ more ~/bin/start_jupyter
@@ -406,9 +401,9 @@ echo &quot;&quot;
 echo &quot;Step 2: Copy this ssh command into a terminal on your&quot;
 echo &quot;        local computer:&quot;
 echo &quot;&quot;
-echo &quot;        ssh -N -L 8889:`hostname`:$JPORT $USER@poseidon.whoi.edu&quot;
+echo &quot;        ssh -N -L 8889:`hostname`:$JPORT $USER@my-hpc-cluster.edu&quot;
 echo &quot;&quot;
-echo &quot;Step 3: Browse to https://localhost:8889 on your local computer&quot;
+echo &quot;Step 3: Browse to http://localhost:8889 on your local computer&quot;
 echo &quot;&quot;
 echo &quot;&quot;
 sleep 2
