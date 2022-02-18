@@ -3,3 +3,4 @@ sphinx-copybutton==0.3.1
 sphinxcontrib-srclinks==0.2.4
 # we need to eventually upgrade sphinx in order to unpin
 sphinxcontrib-bibtex==1.0.0
+myst_parser
