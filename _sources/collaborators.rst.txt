@@ -32,7 +32,7 @@ Anaconda is funded via a subaward through Columbia.
 We were awarded $1.2M over a three year period (Oct. 2017 - Sept. 2020).
 
 The specific solicitation we responded to is
-`here <https://www.nsf.gov/pubs/2016/nsf16514/nsf16514.htm>`_.
+`here <https://www.nsf.gov/pubs/2016/nsf16514/nsf16514.htm>`__.
 Our project is technically called an “EarthCube integration.” This type of project requires a close link to “Geoscience Use Cases,” i.e. actual science applications.
 The need to closely intertwine the technical development and the scientific applications determined the structure of our proposal and the makeup of the team.
 
