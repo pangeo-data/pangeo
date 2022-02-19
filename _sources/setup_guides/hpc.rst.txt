@@ -121,20 +121,11 @@ in the Jupyter documentation.
     chmod 400 ~/.jupyter/jupyter_server_config.py
 
 Finally, we may want to configure dask's dashboard to forward through Jupyter.
-This can be done by creating or editing the dask distributed config file at
-``.config/dask/distributed.yaml``. 
 
-In this ``.config/dask/distributed.yaml`` file, set:
+Add this to your ``~/.bashrc`` file: 
+::
 
-.. code:: python
-      
-  distributed:
-    ###################
-    # Bokeh dashboard #
-    ###################
-    dashboard:
-      link: "/proxy/8787/status"
-
+export DASK_DISTRIBUTED__DASHBOARD__LINK="/proxy/8787/status"
 
 ------------
 

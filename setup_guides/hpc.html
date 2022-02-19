@@ -344,18 +344,9 @@ in the Jupyter documentation.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">chmod</span> <span class="mi">400</span> <span class="o">~/.</span><span class="n">jupyter</span><span class="o">/</span><span class="n">jupyter_server_config</span><span class="o">.</span><span class="n">py</span>
 </pre></div>
 </div>
-<p>Finally, we may want to configure dask’s dashboard to forward through Jupyter.
-This can be done by creating or editing the dask distributed config file at
-<code class="docutils literal notranslate"><span class="pre">.config/dask/distributed.yaml</span></code>.</p>
-<p>In this <code class="docutils literal notranslate"><span class="pre">.config/dask/distributed.yaml</span></code> file, set:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">distributed</span><span class="p">:</span>
-  <span class="c1">###################</span>
-  <span class="c1"># Bokeh dashboard #</span>
-  <span class="c1">###################</span>
-  <span class="n">dashboard</span><span class="p">:</span>
-    <span class="n">link</span><span class="p">:</span> <span class="s2">&quot;/proxy/8787/status&quot;</span>
-</pre></div>
-</div>
+<p>Finally, we may want to configure dask’s dashboard to forward through Jupyter.</p>
+<p>Add this to your <code class="docutils literal notranslate"><span class="pre">~/.bashrc</span></code> file:</p>
+<p>export DASK_DISTRIBUTED__DASHBOARD__LINK=”/proxy/8787/status”</p>
 <hr class="docutils" />
 <p>From here, we have two options. Option 1 will start a Jupyter Notebook server
 and manage dask using the <a class="reference external" href="http://dask-jobqueue.readthedocs.io">dask-jobqueue</a> package. Option 2 will start a dask
