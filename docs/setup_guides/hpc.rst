@@ -51,11 +51,12 @@ which works like conda but is written in C++ and therefore creates environments 
     
 .. note:: 
 
-    Depending if you chose to initialize Miniforge in your ``~/.bashrc``
-    at the end of the installation, this new conda update will activate
-    a ``(base)`` environment by default. If you wish to prevent conda
-    from activating the ``(base)`` environment at shell initialization:
-    ::
+   Depending if you chose to initialize Miniforge in your ``~/.bashrc``
+   at the end of the installation, this new conda update will activate
+   a ``(base)`` environment by default. If you wish to prevent conda
+   from activating the ``(base)`` environment at shell initialization:
+   
+   ::
     
             conda config --set auto_activate_base false
     
