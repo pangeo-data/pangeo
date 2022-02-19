@@ -26,6 +26,7 @@ Installing a software environment
 After you have logged into your HPC system, download and install Miniforge:
 
 ::
+
     url=https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh  
     curl $url -o Miniforge.sh
     sh Miniforge.sh
@@ -123,9 +124,10 @@ in the Jupyter documentation.
 Finally, we may want to configure dask's dashboard to forward through Jupyter.
 
 Add this to your ``~/.bashrc`` file: 
+
 ::
 
-export DASK_DISTRIBUTED__DASHBOARD__LINK="/proxy/8787/status"
+    export DASK_DISTRIBUTED__DASHBOARD__LINK="/proxy/8787/status"
 
 ------------
 

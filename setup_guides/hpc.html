@@ -266,13 +266,12 @@ system administrators to properly configure these tools for your machine.</p>
 <div class="section" id="installing-a-software-environment">
 <h2>Installing a software environment<a class="headerlink" href="#installing-a-software-environment" title="Permalink to this headline">¶</a></h2>
 <p>After you have logged into your HPC system, download and install Miniforge:</p>
-<dl class="simple">
-<dt>::</dt><dd><p>url=https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>url=https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh
 curl $url -o Miniforge.sh
 sh Miniforge.sh
-export PATH=$HOME/Miniforge3/bin:$PATH</p>
-</dd>
-</dl>
+export PATH=$HOME/Miniforge3/bin:$PATH
+</pre></div>
+</div>
 <p>This contains a self-contained Python environment that we can manipulate
 safely without requiring the involvement of IT. It also allows you to
 create isolated software environments so that we can experiment in the
@@ -346,7 +345,9 @@ in the Jupyter documentation.</p>
 </div>
 <p>Finally, we may want to configure dask’s dashboard to forward through Jupyter.</p>
 <p>Add this to your <code class="docutils literal notranslate"><span class="pre">~/.bashrc</span></code> file:</p>
-<p>export DASK_DISTRIBUTED__DASHBOARD__LINK=”/proxy/8787/status”</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">export</span> <span class="n">DASK_DISTRIBUTED__DASHBOARD__LINK</span><span class="o">=</span><span class="s2">&quot;/proxy/8787/status&quot;</span>
+</pre></div>
+</div>
 <hr class="docutils" />
 <p>From here, we have two options. Option 1 will start a Jupyter Notebook server
 and manage dask using the <a class="reference external" href="http://dask-jobqueue.readthedocs.io">dask-jobqueue</a> package. Option 2 will start a dask
