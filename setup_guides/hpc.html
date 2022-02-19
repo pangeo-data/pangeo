@@ -291,11 +291,12 @@ which works like conda but is written in C++ and therefore creates environments 
 at the end of the installation, this new conda update will activate
 a <code class="docutils literal notranslate"><span class="pre">(base)</span></code> environment by default. If you wish to prevent conda
 from activating the <code class="docutils literal notranslate"><span class="pre">(base)</span></code> environment at shell initialization:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">config</span> <span class="o">--</span><span class="nb">set</span> <span class="n">auto_activate_base</span> <span class="n">false</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>        conda config --set auto_activate_base false
+
+This will create a ``./condarc`` in your home
+directory with this setting the first time you run it.
 </pre></div>
 </div>
-<p>This will create a <code class="docutils literal notranslate"><span class="pre">./condarc</span></code> in your home
-directory with this setting the first time you run it.</p>
 </div>
 <p>Create a new conda environment for our pangeo work:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mamba</span> <span class="n">create</span> <span class="o">-</span><span class="n">n</span> <span class="n">pangeo</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> \
