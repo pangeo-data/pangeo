@@ -285,8 +285,6 @@ which works like conda but is written in C++ and therefore creates environments 
 <span class="n">mamba</span> <span class="n">update</span> <span class="o">--</span><span class="nb">all</span>
 </pre></div>
 </div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
 <p>Depending if you chose to initialize Miniforge in your <code class="docutils literal notranslate"><span class="pre">~/.bashrc</span></code>
 at the end of the installation, this new conda update will activate
 a <code class="docutils literal notranslate"><span class="pre">(base)</span></code> environment by default. If you wish to prevent conda
@@ -297,7 +295,6 @@ from activating the <code class="docutils literal notranslate"><span class="pre"
 </dl>
 <p>This will create a <code class="docutils literal notranslate"><span class="pre">./condarc</span></code> in your home
 directory with this setting the first time you run it.</p>
-</div>
 <p>Create a new conda environment for our pangeo work:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mamba</span> <span class="n">create</span> <span class="o">-</span><span class="n">n</span> <span class="n">pangeo</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> \
     <span class="n">python</span> <span class="n">dask</span> <span class="n">jupyterlab</span> <span class="n">dask</span><span class="o">-</span><span class="n">jobqueue</span> <span class="n">ipywidgets</span> \
