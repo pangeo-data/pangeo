@@ -265,10 +265,11 @@ system administrators to properly configure these tools for your machine.</p>
 <p>You should log into your HPC system now.</p>
 <div class="section" id="installing-a-software-environment">
 <h2>Installing a software environment<a class="headerlink" href="#installing-a-software-environment" title="Permalink to this headline">¶</a></h2>
-<p>After you have logged into your HPC system, download and install Miniconda:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">wget</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">repo</span><span class="o">.</span><span class="n">continuum</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">miniconda</span><span class="o">/</span><span class="n">Miniconda3</span><span class="o">-</span><span class="n">latest</span><span class="o">-</span><span class="n">Linux</span><span class="o">-</span><span class="n">x86_64</span><span class="o">.</span><span class="n">sh</span>
-<span class="n">chmod</span> <span class="o">+</span><span class="n">x</span> <span class="n">Miniconda3</span><span class="o">-</span><span class="n">latest</span><span class="o">-</span><span class="n">Linux</span><span class="o">-</span><span class="n">x86_64</span><span class="o">.</span><span class="n">sh</span>
-<span class="o">./</span><span class="n">Miniconda3</span><span class="o">-</span><span class="n">latest</span><span class="o">-</span><span class="n">Linux</span><span class="o">-</span><span class="n">x86_64</span><span class="o">.</span><span class="n">sh</span>
+<p>After you have logged into your HPC system, download and install Miniforge:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>url=https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh
+curl $url -o Miniforge.sh
+sh Miniforge.sh
+export PATH=$HOME/Miniforge3/bin:$PATH
 </pre></div>
 </div>
 <p>This contains a self-contained Python environment that we can manipulate
@@ -284,9 +285,7 @@ which works like conda but is written in C++ and therefore creates environments 
 <span class="n">mamba</span> <span class="n">update</span> <span class="o">--</span><span class="nb">all</span>
 </pre></div>
 </div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Depending if you chose to initialize Miniconda in your <code class="docutils literal notranslate"><span class="pre">~/.bashrc</span></code>
+<p>Depending if you chose to initialize Miniforge in your <code class="docutils literal notranslate"><span class="pre">~/.bashrc</span></code>
 at the end of the installation, this new conda update will activate
 a <code class="docutils literal notranslate"><span class="pre">(base)</span></code> environment by default. If you wish to prevent conda
 from activating the <code class="docutils literal notranslate"><span class="pre">(base)</span></code> environment at shell initialization:</p>
@@ -295,7 +294,6 @@ from activating the <code class="docutils literal notranslate"><span class="pre"
 </div>
 <p>This will create a <code class="docutils literal notranslate"><span class="pre">./condarc</span></code> in your home
 directory with this setting the first time you run it.</p>
-</div>
 <p>Create a new conda environment for our pangeo work:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mamba</span> <span class="n">create</span> <span class="o">-</span><span class="n">n</span> <span class="n">pangeo</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> \
     <span class="n">python</span> <span class="n">dask</span> <span class="n">jupyterlab</span> <span class="n">dask</span><span class="o">-</span><span class="n">jobqueue</span> <span class="n">ipywidgets</span> \
@@ -319,7 +317,7 @@ packages to this list.</p>
 <p>And if you ask where your Python command lives, it should direct you to
 somewhere in your home directory:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>(pangeo) $ which python
-/home/username/miniconda3/envs/pangeo/bin/python
+$HOME/Miniforge3/envs/pangeo/bin/python
 </pre></div>
 </div>
 </div>
@@ -342,21 +340,9 @@ in the Jupyter documentation.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">chmod</span> <span class="mi">400</span> <span class="o">~/.</span><span class="n">jupyter</span><span class="o">/</span><span class="n">jupyter_server_config</span><span class="o">.</span><span class="n">py</span>
 </pre></div>
 </div>
-<p>Finally, we may want to configure dask’s dashboard to forward through Jupyter.
-This can be done by editing the dask distributed config file, e.g.:
-<code class="docutils literal notranslate"><span class="pre">.config/dask/distributed.yaml</span></code>. By default, when <code class="docutils literal notranslate"><span class="pre">dask.distributed</span></code> or
-<code class="docutils literal notranslate"><span class="pre">dask-jobqueue</span></code> is first imported, it places a file at <code class="docutils literal notranslate"><span class="pre">~/.config/dask/distributed.yaml</span></code>
-with a commented out version. You can create this file and do this first import by simply</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">c</span> <span class="s1">&#39;from dask.distributed import Client&#39;</span>
-</pre></div>
-</div>
-<p>In this <code class="docutils literal notranslate"><span class="pre">.config/dask/distributed.yaml</span></code> file, set:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">distributed</span><span class="p">:</span>
-  <span class="c1">###################</span>
-  <span class="c1"># Bokeh dashboard #</span>
-  <span class="c1">###################</span>
-  <span class="n">dashboard</span><span class="p">:</span>
-    <span class="n">link</span><span class="p">:</span> <span class="s2">&quot;/proxy/8787/status&quot;</span>
+<p>Finally, we may want to configure dask’s dashboard to forward through Jupyter.</p>
+<p>Add this to your <code class="docutils literal notranslate"><span class="pre">~/.bashrc</span></code> file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">export</span> <span class="n">DASK_DISTRIBUTED__DASHBOARD__LINK</span><span class="o">=</span><span class="s2">&quot;/proxy/8787/status&quot;</span>
 </pre></div>
 </div>
 <hr class="docutils" />
@@ -389,8 +375,8 @@ will want to reactivate it.</p>
 <p>From here, we can start jupyter. The Cheyenne computer administrators have
 developed a <a class="reference external" href="https://www2.cisl.ucar.edu/resources/computational-systems/cheyenne/software/jupyter-and-ipython#notebook">start-notebook</a>
 utility that wraps the following steps into a single execution. You should
-check with your system administrators to see if they have something similar.
-If not, you can easily create your own start_jupyter script.  In the script below, we choose a random port
+check with your system administrators to see if they have something similar.</p>
+<p>If not, you can easily create your own start_jupyter script.  In the script below, we choose a random port
 on the server (to reduce the chance of conflict with another user), but we use port 8889 on the client, as port 8888 is
 the default client port if you are running Jupyter locally.  We can also change to a starting directory:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>(pangeo) $ more ~/bin/start_jupyter
@@ -404,9 +390,9 @@ echo &quot;&quot;
 echo &quot;Step 2: Copy this ssh command into a terminal on your&quot;
 echo &quot;        local computer:&quot;
 echo &quot;&quot;
-echo &quot;        ssh -N -L 8889:`hostname`:$JPORT $USER@poseidon.whoi.edu&quot;
+echo &quot;        ssh -N -L 8889:`hostname`:$JPORT $USER@my-hpc-cluster.edu&quot;
 echo &quot;&quot;
-echo &quot;Step 3: Browse to https://localhost:8889 on your local computer&quot;
+echo &quot;Step 3: Browse to http://localhost:8889 on your local computer&quot;
 echo &quot;&quot;
 echo &quot;&quot;
 sleep 2

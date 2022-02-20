@@ -23,13 +23,14 @@ You should log into your HPC system now.
 Installing a software environment
 ---------------------------------
 
-After you have logged into your HPC system, download and install Miniconda:
+After you have logged into your HPC system, download and install Miniforge:
 
 ::
 
-    wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
-    chmod +x Miniconda3-latest-Linux-x86_64.sh
-    ./Miniconda3-latest-Linux-x86_64.sh
+    url=https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh  
+    curl $url -o Miniforge.sh
+    sh Miniforge.sh
+    export PATH=$HOME/Miniforge3/bin:$PATH
 
 This contains a self-contained Python environment that we can manipulate
 safely without requiring the involvement of IT. It also allows you to
@@ -41,25 +42,23 @@ from the conda-forge channel instead of the default channel and install Mamba,
 which works like conda but is written in C++ and therefore creates environments faster. 
 
 ::
-    
+
     conda config --add channels conda-forge --force
     conda config --remove channels defaults --force 
     conda install mamba -y 
     mamba update --all
     
-    
-.. note:: 
+Depending if you chose to initialize Miniforge in your ``~/.bashrc``
+at the end of the installation, this new conda update will activate
+a ``(base)`` environment by default. If you wish to prevent conda
+from activating the ``(base)`` environment at shell initialization:
+   
+:: 
 
-    Depending if you chose to initialize Miniconda in your ``~/.bashrc``
-    at the end of the installation, this new conda update will activate
-    a ``(base)`` environment by default. If you wish to prevent conda
-    from activating the ``(base)`` environment at shell initialization:
-    ::
+    conda config --set auto_activate_base false
     
-            conda config --set auto_activate_base false
-    
-    This will create a ``./condarc`` in your home
-    directory with this setting the first time you run it. 
+This will create a ``./condarc`` in your home
+directory with this setting the first time you run it. 
 
 Create a new conda environment for our pangeo work:
 
@@ -93,7 +92,7 @@ somewhere in your home directory:
 ::
 
     (pangeo) $ which python
-    /home/username/miniconda3/envs/pangeo/bin/python
+    $HOME/Miniforge3/envs/pangeo/bin/python
 
 Configure Jupyter
 -----------------
@@ -121,26 +120,12 @@ in the Jupyter documentation.
     chmod 400 ~/.jupyter/jupyter_server_config.py
 
 Finally, we may want to configure dask's dashboard to forward through Jupyter.
-This can be done by editing the dask distributed config file, e.g.:
-``.config/dask/distributed.yaml``. By default, when ``dask.distributed`` or
-``dask-jobqueue`` is first imported, it places a file at ``~/.config/dask/distributed.yaml``
-with a commented out version. You can create this file and do this first import by simply 
+
+Add this to your ``~/.bashrc`` file: 
 
 ::
 
-    python -c 'from dask.distributed import Client'
-
-In this ``.config/dask/distributed.yaml`` file, set:
-
-.. code:: python
-      
-  distributed:
-    ###################
-    # Bokeh dashboard #
-    ###################
-    dashboard:
-      link: "/proxy/8787/status"
-
+    export DASK_DISTRIBUTED__DASHBOARD__LINK="/proxy/8787/status"
 
 ------------
 
@@ -181,6 +166,7 @@ From here, we can start jupyter. The Cheyenne computer administrators have
 developed a `start-notebook <https://www2.cisl.ucar.edu/resources/computational-systems/cheyenne/software/jupyter-and-ipython#notebook>`__
 utility that wraps the following steps into a single execution. You should
 check with your system administrators to see if they have something similar.
+
 If not, you can easily create your own start_jupyter script.  In the script below, we choose a random port
 on the server (to reduce the chance of conflict with another user), but we use port 8889 on the client, as port 8888 is 
 the default client port if you are running Jupyter locally.  We can also change to a starting directory:
@@ -198,9 +184,9 @@ the default client port if you are running Jupyter locally.  We can also change 
     echo "Step 2: Copy this ssh command into a terminal on your"
     echo "        local computer:"
     echo ""
-    echo "        ssh -N -L 8889:`hostname`:$JPORT $USER@poseidon.whoi.edu"
+    echo "        ssh -N -L 8889:`hostname`:$JPORT $USER@my-hpc-cluster.edu"
     echo ""
-    echo "Step 3: Browse to https://localhost:8889 on your local computer"
+    echo "Step 3: Browse to http://localhost:8889 on your local computer"
     echo ""
     echo ""
     sleep 2
