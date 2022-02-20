@@ -57,11 +57,10 @@ which works like conda but is written in C++ and therefore creates environments 
    from activating the ``(base)`` environment at shell initialization:
    
    ::
+      conda config --set auto_activate_base false
     
-            conda config --set auto_activate_base false
-    
-    This will create a ``./condarc`` in your home
-    directory with this setting the first time you run it. 
+   This will create a ``./condarc`` in your home
+   directory with this setting the first time you run it. 
 
 Create a new conda environment for our pangeo work:
 
