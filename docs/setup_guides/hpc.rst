@@ -41,7 +41,7 @@ Before creating your environment, update your conda package manager with package
 from the conda-forge channel instead of the default channel and install Mamba, 
 which works like conda but is written in C++ and therefore creates environments faster. 
 
-    ::
+::
     
     conda config --add channels conda-forge --force
     conda config --remove channels defaults --force 
