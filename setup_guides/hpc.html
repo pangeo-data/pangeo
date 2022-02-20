@@ -279,12 +279,12 @@ future safely.</p>
 <p>Before creating your environment, update your conda package manager with packages
 from the conda-forge channel instead of the default channel and install Mamba,
 which works like conda but is written in C++ and therefore creates environments faster.</p>
-<blockquote>
-<div><p>conda config –add channels conda-forge –force
-conda config –remove channels defaults –force
-conda install mamba -y
-mamba update –all</p>
-</div></blockquote>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">config</span> <span class="o">--</span><span class="n">add</span> <span class="n">channels</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="o">--</span><span class="n">force</span>
+<span class="n">conda</span> <span class="n">config</span> <span class="o">--</span><span class="n">remove</span> <span class="n">channels</span> <span class="n">defaults</span> <span class="o">--</span><span class="n">force</span>
+<span class="n">conda</span> <span class="n">install</span> <span class="n">mamba</span> <span class="o">-</span><span class="n">y</span>
+<span class="n">mamba</span> <span class="n">update</span> <span class="o">--</span><span class="nb">all</span>
+</pre></div>
+</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Depending if you chose to initialize Miniforge in your <code class="docutils literal notranslate"><span class="pre">~/.bashrc</span></code>
