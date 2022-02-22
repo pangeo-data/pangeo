@@ -51,7 +51,7 @@ therefore creates environments faster.
  conda install mamba -y 
  mamba update --all
 ```
-::: note
+```{note}
 
 Depending if you chose to initialize Miniforge in your `~/.bashrc` at
 the end of the installation, this new conda update will activate a
@@ -63,8 +63,7 @@ conda config --set auto_activate_base false
 This will create a ``./condarc`` in your home
 directory with this setting the first time you run it. 
 
-:::
-
+```
 Create a new conda environment for our pangeo work:
 ```bash
 mamba create -n pangeo -c conda-forge \
