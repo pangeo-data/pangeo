@@ -29,7 +29,7 @@ To adress different time zones among the globe continental meetings have been or
 
    Gitter: `Pangeo Europe <https://gitter.im/pangeo-data/Europe>`__ 
 
-   - Cofee table; an uninformal meeting with open discussions:   
+   - Pangeo European Coffee ; an uninformal meeting with open discussions:   
       * Schedule: Every week on Tusday at 10a CET
       * Conferencing: Conferencing: `meet.jit.si/pangeo-europe <https://meet.jit.si/pangeo-europe>`_
       * Notes: `Google Doc <https://docs.google.com/document/d/1Vq1ljPRQYWF_u0Ku1eEhQyYreijAJ2QW6FELdIsiYDs/edit?usp=sharing>`__
