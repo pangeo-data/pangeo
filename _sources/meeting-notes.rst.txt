@@ -29,9 +29,9 @@ To adress different time zones among the globe continental meetings have been or
 
    Gitter: `Pangeo Europe <https://gitter.im/pangeo-data/Europe>`__ 
 
-   - Cofee table; an uninformal meeting with open discussions:   
-      * Schedule: Every week on Tusday at 10a CET
-      * Conferencing: Conferencing: `whereby.com/pangeo-europe <https://whereby.com/pangeo-europe>`_
+   - Pangeo European Coffee ; an informal meeting with open discussions:   
+      * Schedule: Every week on Tuesday at 10am CET
+      * Conferencing: Conferencing: `meet.jit.si/pangeo-europe <https://meet.jit.si/pangeo-europe>`_
       * Notes: `Google Doc <https://docs.google.com/document/d/1Vq1ljPRQYWF_u0Ku1eEhQyYreijAJ2QW6FELdIsiYDs/edit?usp=sharing>`__
    - Monthly meeting: 
       * Schedule: (to be scheduled)  
@@ -65,10 +65,7 @@ Working Group Meetings
     * Schedule: Every other Monday at 2pm ET
     * Conferencing: `whereby.com/pangeo <https://whereby.com/pangeo>`_
     * Notes: `Google Doc <https://docs.google.com/document/d/14FpI9vaM6TeFtmM7LP9o_d5DZaYKgQVTTzT7tFRt-Nw/edit#heading=h.rdvtuxpqyxy>`__
-5. Pangeo European Coffee
-    * Schedule: Every Tuesday at 10am CET
-    * Conferencing: `Zoom <https://cnrs.zoom.us/j/95432814658>`__ Password: Pangeo2EU
-6. Open Science Meeting - discussions to coordinate open science activities 
+5. Open Science Meeting - discussions to coordinate open science activities 
     * Schedule: First Friday of each month at 5pm CET
     * Conferencing: `whereby.com/pangeo <https://whereby.com/pangeo>`_
     * Notes: `Google Doc <https://docs.google.com/document/d/1mMDlFblBOeEmHnhaZZfgaMJvuzpw28ro3uyJngeY_jk/edit>`__
