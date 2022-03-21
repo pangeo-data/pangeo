@@ -17,7 +17,7 @@ The check-ins are an opportunity for anyone to meet other members of the Pangeo 
 you are working on with short, one minute updates, and agenda items are anything people feel would benefit from group discussion.
 
 * Schedule: Every Wednesday, alternating between 12pm ET and 4pm ET (See the Calendar at the bottom of this page!) 
-* Conferencing: `Zoom <https://columbiauniversity.zoom.us/j/94877958106?pwd=UkE0UHF1U0x3VTVUNEJTam9mTXVHZz09>`_
+* Conferencing: `Zoom <https://columbiauniversity.zoom.us/j/94877958106?pwd=UkE0UHF1U0x3VTVUNEJTam9mTXVHZz09>`__
 * Notes:  `Google Doc <https://docs.google.com/document/d/e/2PACX-1vRerhoxG-wOvh-wQTj7F8HPYve75l8pAtL-tgtzY_3YLqVUsaMSEgE4K70HgMt5S91FMwSu8EIizewy/pub>`_
 
 Continental Community Meetings
@@ -29,9 +29,9 @@ To adress different time zones among the globe continental meetings have been or
 
    Gitter: `Pangeo Europe <https://gitter.im/pangeo-data/Europe>`__ 
 
-   - Cofee table; an uninformal meeting with open discussions:   
-      * Schedule: Every week on Tusday at 10a CET
-      * Conferencing: Conferencing: `whereby.com/pangeo-europe <https://whereby.com/pangeo-europe>`_
+   - Pangeo European Coffee ; an informal meeting with open discussions:   
+      * Schedule: Every week on Tuesday at 10am CET
+      * Conferencing: Conferencing: `meet.jit.si/pangeo-europe <https://meet.jit.si/pangeo-europe>`_
       * Notes: `Google Doc <https://docs.google.com/document/d/1Vq1ljPRQYWF_u0Ku1eEhQyYreijAJ2QW6FELdIsiYDs/edit?usp=sharing>`__
    - Monthly meeting: 
       * Schedule: (to be scheduled)  
@@ -42,7 +42,7 @@ To adress different time zones among the globe continental meetings have been or
 
    - Monthly meeting: 
       * Schedule: 3rd Friday of every month at 1pm Australian Eastern Time  
-      * Conferencing: `Zoom <https://anu.zoom.us/j/82147791120?pwd=Q2U2Q1N1UWkwdWlnTGdTSVdrck04QT09>`_
+      * Conferencing: `Zoom <https://anu.zoom.us/j/82147791120?pwd=Q2U2Q1N1UWkwdWlnTGdTSVdrck04QT09>`__
       * Notes: `Google Doc <https://bit.ly/Pangeo-Oceania-minutes>`__
 
 Working Group Meetings
@@ -50,7 +50,7 @@ Working Group Meetings
 
 1. Machine Learning Working Group
     * Schedule: First Monday of the month at 12p ET
-    * Conferencing:  `Zoom <https://us02web.zoom.us/j/89838681369?pwd=MWJWSWVqMU5pVklZZU9oWWxlRGZZZz09>`_
+    * Conferencing:  `Zoom <https://us02web.zoom.us/j/89838681369?pwd=MWJWSWVqMU5pVklZZU9oWWxlRGZZZz09>`__
     * Notes: `Dropbox doc <https://paper.dropbox.com/doc/Meeting-notes-Machine-Learning-WG--AmU~wZXwdbpTZi8rQsJQH9_sAg-9UUgyywF9jmIMXXbmZTyJ>`__
 2. Cloud Operations Working Group
     * Schedule: Second Monday of the month at 11:30a ET
@@ -58,20 +58,17 @@ Working Group Meetings
     * Notes: `Google Doc <https://docs.google.com/document/d/1I-2VNNHoAjjeYvlCezQhFLmiu2OevqGDS5nUAP-6Hfw/edit?usp=sharing>`__
 3. `Project Pythia <https://projectpythia.org>`_ (formerly the Education Working Group)
     * Schedule: Thursdays at 1p US Eastern Time (alternating between Project Pythia Education and Infrastructure Working Groups)
-    * Conferencing: `Zoom <https://ucar-edu.zoom.us/j/91375487587>`_ (consult the `Pythia Calendar <https://calendar.google.com/calendar/u/0?cid=Y180cXB2ZjMxNmFmZDltdjBjaTdkMnVpYWZvZ0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t>`_ for how to join)
+    * Conferencing: `Zoom <https://ucar-edu.zoom.us/j/91375487587>`__ (consult the `Pythia Calendar <https://calendar.google.com/calendar/u/0?cid=Y180cXB2ZjMxNmFmZDltdjBjaTdkMnVpYWZvZ0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t>`_ for how to join)
     * Notes: `link <https://docs.google.com/document/d/e/2PACX-1vQN5YFkZtCZPKVk2Rte2xoHuiqJuYz1KpynsSKmeCLwP-4glUsGuCPJbITwB4OJc8dOhUpHAMacdx59/pub>`__
 4. Pangeo Forge (Cloud Data Platform)
     * `Project Roadmap <https://github.com/pangeo-forge/roadmap>`_
     * Schedule: Every other Monday at 2pm ET
     * Conferencing: `whereby.com/pangeo <https://whereby.com/pangeo>`_
-    * Notes: `Google Doc <https://docs.google.com/document/d/14FpI9vaM6TeFtmM7LP9o_d5DZaYKgQVTTzT7tFRt-Nw/edit#heading=h.rdvtuxpqyxy>`_
-5. Pangeo European Coffee
-    * Schedule: Every Tuesday at 10am CET
-    * Conferencing: `Zoom <https://cnrs.zoom.us/j/95432814658>`_ Password: Pangeo2EU
-6. Open Science Meeting - discussions to coordinate open science activities 
+    * Notes: `Google Doc <https://docs.google.com/document/d/14FpI9vaM6TeFtmM7LP9o_d5DZaYKgQVTTzT7tFRt-Nw/edit#heading=h.rdvtuxpqyxy>`__
+5. Open Science Meeting - discussions to coordinate open science activities 
     * Schedule: First Friday of each month at 5pm CET
     * Conferencing: `whereby.com/pangeo <https://whereby.com/pangeo>`_
-    * Notes: `Google Doc <https://docs.google.com/document/d/1mMDlFblBOeEmHnhaZZfgaMJvuzpw28ro3uyJngeY_jk/edit>`_
+    * Notes: `Google Doc <https://docs.google.com/document/d/1mMDlFblBOeEmHnhaZZfgaMJvuzpw28ro3uyJngeY_jk/edit>`__
 
 Past working groups include the `Data Working Group <https://docs.google.com/document/d/e/2PACX-1vTP1iV4YJcHznwcfUwlLoEDVPdgtD9iAXql73vn4uAotOQMVh9R8vTIKxPHnvnrijX1C24T5aJJZ95x/pub>`_
 and the `Education Working Group <https://github.com/pangeo-data/education-material>`_.

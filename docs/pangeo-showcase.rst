@@ -1,7 +1,7 @@
 .. _pangeo-showcase:
 
 Pangeo Showcase
-==========================
+===============
 
 The Pangeo Showcase Webinar Series is part of the Pangeo Weekly Community Meeting. 
 See the :ref:`Meeting-Notes` for more information on Pangeo community meetings. 
@@ -16,7 +16,7 @@ available on the `Pangeo YouTube Channel <https://youtube.com/playlist?list=PLuQ
 * **Conferencing**:   `Zoom <https://columbiauniversity.zoom.us/j/94877958106?pwd=UkE0UHF1U0x3VTVUNEJTam9mTXVHZz09>`_
 
 Fall 2021 Showcase Recorded and Upcoming Presentations
------------------------------------
+------------------------------------------------------
 
 .. list-table::
    :widths: 15 25 60
