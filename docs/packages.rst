@@ -184,7 +184,7 @@ This is a key difference between software built on Xarray and numerous
 other tools designed to process netCDF data (e.g. nco, cdo, etc. etc.):
 *Xarray data can be passed directly between python libraries (or over a
 network) without ever touching a disk drive.* This "in-memory"
-capability is a key ingredient to the Big-Data scalability of Pangeo
+capability is a key ingredient to the big data scalability of Pangeo
 packages. Very frequently the bottleneck in data processing pipelines is
 reading and writing files.
 
