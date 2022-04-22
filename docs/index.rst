@@ -97,7 +97,7 @@ Contents
    faq
    quickstart
    packages
-   gallery
+   `Pangeo Gallery <http://gallery.pangeo.io>`_
    architecture
    setup_guides/index
    cloud
