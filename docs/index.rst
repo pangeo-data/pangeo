@@ -84,7 +84,7 @@ Pangeo Gallery
 ^^^^^^^^^^^^^^
 
 Science applications and detailed tutorial for using Pangeo can be found in
-`Pangeo Gallery <http://gallery.pangeo.io/>`_.
+`Pangeo Gallery <http://gallery.pangeo.io>`_.
 
 
 Contents
@@ -97,7 +97,7 @@ Contents
    faq
    quickstart
    packages
-   `Pangeo Gallery <http://gallery.pangeo.io>`_
+   gallery
    architecture
    setup_guides/index
    cloud
