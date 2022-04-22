@@ -125,7 +125,7 @@ General Best Practices for Open Source
 2. Use version control for source code (for example, on
    `github <http://github.org>`__)
 3. Provide thorough test coverage and continuous integration of testing
-4. Maintain comprehensive Documentation
+4. Maintain comprehensive documentation
 5. Establish a `code of
    conduct <https://opensource.guide/code-of-conduct/>`__ for
    contributors
