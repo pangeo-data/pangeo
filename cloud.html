@@ -404,10 +404,7 @@ uses pip to install a configurable list of packages.</p>
 </pre></div>
 </div>
 <p>To install packages in dask workers (the example below installs <a class="reference external" href="https://pypi.org/project/bulwark/">bulwark</a>), you’d create a cluster normally and add the plugin:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">code</span><span class="o">-</span><span class="n">block</span><span class="p">::</span> <span class="n">python</span>
-</pre></div>
-</div>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">dask_gateway</span> <span class="kn">import</span> <span class="n">GatewayCluster</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">dask_gateway</span> <span class="kn">import</span> <span class="n">GatewayCluster</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">cluster</span> <span class="o">=</span> <span class="n">GatewayCluster</span><span class="p">()</span>  <span class="c1"># create the cluster nomrally</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">client</span> <span class="o">=</span> <span class="n">cluster</span><span class="o">.</span><span class="n">get_client</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="c1"># Now create and register the plugin. We&#39;ll install &#39;bulwark&#39;</span>
@@ -497,11 +494,11 @@ All large datasets (&gt; 1 GB) in Pangeo Cloud should be stored in Cloud Object 
 <p>Many pre-existing datasets are browseable at <a class="reference external" href="http://catalog.pangeo.io/">catalog.pangeo.io</a>.
 This catalog is pre-configured to make it easy to open the datasets.
 In most cases, it’s as simple as:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">intake</span> <span class="kn">import</span> <span class="n">open_catalog</span>
-<span class="n">cat</span> <span class="o">=</span> <span class="n">open_catalog</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/pangeo-data/pangeo-datastore/master/intake-catalogs/atmosphere.yaml&quot;</span><span class="p">)</span>
-<span class="n">ds</span>  <span class="o">=</span> <span class="n">cat</span><span class="p">[</span><span class="s2">&quot;gmet_v1&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">to_dask</span><span class="p">()</span>
-</pre></div>
-</div>
+<blockquote>
+<div><p>from intake import open_catalog
+cat = open_catalog(“<a class="reference external" href="https://raw.githubusercontent.com/pangeo-data/pangeo-datastore/master/intake-catalogs/atmosphere.yaml">https://raw.githubusercontent.com/pangeo-data/pangeo-datastore/master/intake-catalogs/atmosphere.yaml</a>”)
+ds  = cat[“gmet_v1”].to_dask()</p>
+</div></blockquote>
 <p>To open datasets that are not part of an intake catalog, we recommend using
 the <a class="reference external" href="https://filesystem-spec.readthedocs.io/en/latest/">filesystem-spec</a> package
 and its related packages <a class="reference external" href="https://gcsfs.readthedocs.io/en/latest/">gcsfs</a>
@@ -564,14 +561,14 @@ Do not use scratch buckets to store data permanently.</p>
 <p>The location of your scratch bucket is contained in the environment variable <code class="docutils literal notranslate"><span class="pre">PANGEO_SCRATCH</span></code>.
 To create mutable mapping that can write to your scratch bucket with zarr,
 the following code should work:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
-<span class="n">PANGEO_SCRATCH</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;PANGEO_SCRATCH&#39;</span><span class="p">]</span>
-<span class="c1"># -&gt; gs://pangeo-scratch/&lt;username&gt;</span>
-<span class="kn">import</span> <span class="nn">fsspec</span>
-<span class="n">mapper</span> <span class="o">=</span> <span class="n">fsspec</span><span class="o">.</span><span class="n">get_mapper</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{PANGEO_SCRATCH}</span><span class="s1">/sub/path&#39;</span><span class="p">)</span>
-<span class="c1"># mapper can now be to read / write zarr stores</span>
-</pre></div>
-</div>
+<blockquote>
+<div><p>import os
+PANGEO_SCRATCH = os.environ[‘PANGEO_SCRATCH’]
+# -&gt; gs://pangeo-scratch/&lt;username&gt;
+import fsspec
+mapper = fsspec.get_mapper(f’{PANGEO_SCRATCH}/sub/path’)
+# mapper can now be to read / write zarr stores</p>
+</div></blockquote>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>A common set of credentials is currently used for accessing scratch buckets.
