@@ -173,7 +173,7 @@ uses pip to install a configurable list of packages.
            subprocess.call(['python', '-m', 'pip', 'install', '--upgrade'] + self.packages)
            logger.info("Installed %s", self.packages)
 
-To use install packages in dask workers (below, we install `bulwark <https://pypi.org/project/bulwark/>`_), you'd create a cluster normally and add the plugin::
+To install packages in dask workers (the example below installs `bulwark <https://pypi.org/project/bulwark/>`_), you'd create a cluster normally and add the plugin::
 
 .. code-block:: python
 
