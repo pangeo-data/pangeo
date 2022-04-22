@@ -137,7 +137,7 @@ Best Practices for Pangeo Projects
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To address the needs of geoscience researchers, we have developed some
-additional recommendations.
+additional recommendations:
 
 1. *Solve a general problem:* packages should solve a general problem
    that is encountered by a relatively broad groups of researchers.
