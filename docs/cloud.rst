@@ -173,7 +173,7 @@ uses pip to install a configurable list of packages.
            subprocess.call(['python', '-m', 'pip', 'install', '--upgrade'] + self.packages)
            logger.info("Installed %s", self.packages)
 
-To install packages in dask workers (the example below installs `bulwark <https://pypi.org/project/bulwark/>`_), you'd create a cluster normally and add the plugin::
+To install packages in dask workers (the example below installs `bulwark <https://pypi.org/project/bulwark/>`_), you'd create a cluster normally and add the plugin:
 
 .. code-block:: python
 
@@ -274,7 +274,7 @@ Reading Data
 
 Many pre-existing datasets are browseable at `catalog.pangeo.io <http://catalog.pangeo.io/>`_.
 This catalog is pre-configured to make it easy to open the datasets.
-In most cases, it's as simple as::
+In most cases, it's as simple as:
 
    from intake import open_catalog
    cat = open_catalog("https://raw.githubusercontent.com/pangeo-data/pangeo-datastore/master/intake-catalogs/atmosphere.yaml")
@@ -346,7 +346,7 @@ bucket are pre-loaded into your Pangeo Cloud environment.
 
 The location of your scratch bucket is contained in the environment variable ``PANGEO_SCRATCH``.
 To create mutable mapping that can write to your scratch bucket with zarr,
-the following code should work::
+the following code should work:
 
    import os
    PANGEO_SCRATCH = os.environ['PANGEO_SCRATCH']
