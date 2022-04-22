@@ -107,7 +107,7 @@ These are the steps for adding a package to the environment:
    images (https://github.com/pangeo-data/pangeo-cloud-federation/pull/733).
    When this is merged, you can test your changes in the staging environment
    (at either https://staging.us-central1-b.gcp.pangeo.io or https://staging.aws-uswest2.pangeo.io)
-4. If things look good, the pangeo maintainers can trigger a deploy to production,
+4. If things look good, the Pangeo maintainers can trigger a deploy to production,
    making the package avaiable to everyone.
 
 Users may use ``pip`` and ``conda`` to install new packages in their own
@@ -146,8 +146,8 @@ Long-term, the best way to add packages to the environemnt is by updating the
 Docker images, as described in :ref:`cloud.software_environment`. But for quickly
 prototyping something on the Dask cluster you can use a
 `Dask WorkerPlugin <https://distributed.dask.org/en/latest/plugins.html#distributed.diagnostics.plugin.WorkerPlugin>`_.
-This lets you inject a bit of code that's run when the worker starts up. This
-plugin uses pip install install a configurable list of packages
+This lets you inject a bit of code that's run when the worker starts up. The `PipPlugin` below
+uses pip to install a configurable list of packages.
 
 
 .. code-block:: python
@@ -173,7 +173,7 @@ plugin uses pip install install a configurable list of packages
            subprocess.call(['python', '-m', 'pip', 'install', '--upgrade'] + self.packages)
            logger.info("Installed %s", self.packages)
 
-To use that you'd create a cluster normally and add the plugin
+To install packages in dask workers (the example below installs `bulwark <https://pypi.org/project/bulwark/>`_), you'd create a cluster normally and add the plugin::
 
 .. code-block:: python
 
@@ -184,8 +184,7 @@ To use that you'd create a cluster normally and add the plugin
    >>> plugin = PipPlugin(['bulwark'])
    >>> client.register_worker_plugin(plugin)
 
-We can verify that the package is now present.
-
+We can verify the package is now present::
 
 .. code-block:: python
 
@@ -261,7 +260,7 @@ Cloud Object Storage
 
 The preferred way to store data in the cloud is using cloud object storage, such as Amazon S3 or Google Cloud Storage.
 Cloud object storage is essentially a key/value storage system.
-They keys are strings, and the values are bytes of data.
+The keys are strings, and the values are bytes of data.
 Data is read and written using HTTP calls.
 The performance of object storage is very different from file storage.
 On one hand, each individual read / write to object storage has a high overhead (10-100 ms), since it has to go over the network.
@@ -436,9 +435,8 @@ If you need to customize things, you'll need to connect to the Gateway.
    cluster.scale(...)
    client = cluster.get_client()
 
-Dask Gateway can optionally keep clusters running past the lifetime of your notebook.
-This happens if you explicitly request it when creating the cluster (with ``shutdown_on_close=True``)
-or it can happen if your notebook kernel does not exit cleanly (because of a crash, say).
+Dask Gateway can optionally keep clusters running past the lifetime of your notebook. You can set the cluster shutdown behavior using  the `shutdown_on_close <https://gateway.dask.org/api-client.html?highlight=shutdown_on_close#gatewaycluster/>`_ parameter. Note the default setting for the `shutdown_on_close` parameter is different for different API calls.
+
 If you need to reconnect to an *already running* cluster, to continue a computation
 or shut it down, use the `gateway` object.
 

@@ -8,8 +8,7 @@ geoscience datasets.
 For decades, our field has operated on a "download model," under which
 scientists download the data they wish to analyze from remote FTP servers
 to their personal computers.
-Pangeo operates on a different philosophy; instead of bringing the data to the
-computer, we bring the computer to the data.
+Pangeo operates on a different philosophy: we bring the computer to the data.
 The Pangeo :ref:`deployments` provide high-performance computing clusters in
 close proximity to high-performance storage.
 Many widely used datasets are already stored on these systems.
@@ -64,7 +63,7 @@ Data in the Cloud
 The Pangeo community is very excited about the opportunities presented by the
 cloud for scientific research in terms of scalability, reproducibility, and
 efficiency.
-However, the cloud presents new challenges; the data formats that work well
+However, the cloud presents new challenges: the data formats that work well
 on personal computers and HPC systems don't necessarily translate well to the
 cloud environment.
 For an overview of these challenges, we recommend Matt Rocklin's excellent
