@@ -241,8 +241,7 @@ geoscience datasets.
 For decades, our field has operated on a “download model,” under which
 scientists download the data they wish to analyze from remote FTP servers
 to their personal computers.
-Pangeo operates on a different philosophy; instead of bringing the data to the
-computer, we bring the computer to the data.
+Pangeo operates on a different philosophy: we bring the computer to the data.
 The Pangeo <a class="reference internal" href="deployments.html#deployments"><span class="std std-ref">Deployments</span></a> provide high-performance computing clusters in
 close proximity to high-performance storage.
 Many widely used datasets are already stored on these systems.</p>
@@ -292,7 +291,7 @@ All of those datasets are accessible to Pangeo now via the Cheyenne deployment.<
 <p>The Pangeo community is very excited about the opportunities presented by the
 cloud for scientific research in terms of scalability, reproducibility, and
 efficiency.
-However, the cloud presents new challenges; the data formats that work well
+However, the cloud presents new challenges: the data formats that work well
 on personal computers and HPC systems don’t necessarily translate well to the
 cloud environment.
 For an overview of these challenges, we recommend Matt Rocklin’s excellent
@@ -346,7 +345,7 @@ preparing and uploading.</p>
 <ol class="arabic">
 <li><p><strong>Open your Entire Dataset in Xarray</strong>.</p>
 <p>Xarray is designed to
-load many netCDF files into a single <a class="reference external" href="https://xarray.pydata.org/en/latest/generated/xarray.Dataset.html#xarray.Dataset" title="(in xarray v2022.3.1.dev23)"><code class="xref py py-class docutils literal notranslate"><span class="pre">xarray.Dataset</span></code></a> object.
+load many netCDF files into a single <a class="reference external" href="https://xarray.pydata.org/en/latest/generated/xarray.Dataset.html#xarray.Dataset" title="(in xarray v2022.3.1.dev112)"><code class="xref py py-class docutils literal notranslate"><span class="pre">xarray.Dataset</span></code></a> object.
 The easiest way to accomplish this is using the <code class="xref py py-meth docutils literal notranslate"><span class="pre">xarray.open_mfdataset()</span></code>
 function. Suppose you have a directory full of netCDF files that comprise
 a single dataset stored in the directory <code class="docutils literal notranslate"><span class="pre">/path/to/mydataset</span></code>. If the files

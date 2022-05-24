@@ -9,7 +9,7 @@ Pangeo maintains an experimental catalog of analysis-ready cloud-based data at
 
 Our project is actively researching different approaches to storing and
 cataloging data in the cloud. Some important technologies currently in use
-include
+include:
 
 - `Spatiotemporal Asset Catalog <https://stacspec.org/>`_: A common language
   to describe a range of geospatial information, so it can more easily be

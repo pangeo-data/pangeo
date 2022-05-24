@@ -353,7 +353,7 @@ with today’s date, triggering a release of new docker images.</p></li>
 images (<a class="reference external" href="https://github.com/pangeo-data/pangeo-cloud-federation/pull/733">https://github.com/pangeo-data/pangeo-cloud-federation/pull/733</a>).
 When this is merged, you can test your changes in the staging environment
 (at either <a class="reference external" href="https://staging.us-central1-b.gcp.pangeo.io">https://staging.us-central1-b.gcp.pangeo.io</a> or <a class="reference external" href="https://staging.aws-uswest2.pangeo.io">https://staging.aws-uswest2.pangeo.io</a>)</p></li>
-<li><p>If things look good, the pangeo maintainers can trigger a deploy to production,
+<li><p>If things look good, the Pangeo maintainers can trigger a deploy to production,
 making the package avaiable to everyone.</p></li>
 </ol>
 <p>Users may use <code class="docutils literal notranslate"><span class="pre">pip</span></code> and <code class="docutils literal notranslate"><span class="pre">conda</span></code> to install new packages in their own
@@ -379,8 +379,8 @@ in your “local” environment in your home directory on the hub.</p>
 Docker images, as described in <a class="reference internal" href="#cloud-software-environment"><span class="std std-ref">Software Environment</span></a>. But for quickly
 prototyping something on the Dask cluster you can use a
 <a class="reference external" href="https://distributed.dask.org/en/latest/plugins.html#distributed.diagnostics.plugin.WorkerPlugin">Dask WorkerPlugin</a>.
-This lets you inject a bit of code that’s run when the worker starts up. This
-plugin uses pip install install a configurable list of packages</p>
+This lets you inject a bit of code that’s run when the worker starts up. The <cite>PipPlugin</cite> below
+uses pip to install a configurable list of packages.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">subprocess</span>
 <span class="kn">import</span> <span class="nn">logging</span>
 <span class="kn">from</span> <span class="nn">distributed</span> <span class="kn">import</span> <span class="n">WorkerPlugin</span>
@@ -403,7 +403,7 @@ plugin uses pip install install a configurable list of packages</p>
         <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Installed </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">packages</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>To use that you’d create a cluster normally and add the plugin</p>
+<p>To install packages in dask workers (the example below installs <a class="reference external" href="https://pypi.org/project/bulwark/">bulwark</a>), you’d create a cluster normally and add the plugin:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">dask_gateway</span> <span class="kn">import</span> <span class="n">GatewayCluster</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">cluster</span> <span class="o">=</span> <span class="n">GatewayCluster</span><span class="p">()</span>  <span class="c1"># create the cluster nomrally</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">client</span> <span class="o">=</span> <span class="n">cluster</span><span class="o">.</span><span class="n">get_client</span><span class="p">()</span>
@@ -412,8 +412,11 @@ plugin uses pip install install a configurable list of packages</p>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">client</span><span class="o">.</span><span class="n">register_worker_plugin</span><span class="p">(</span><span class="n">plugin</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>We can verify that the package is now present.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">check</span><span class="p">():</span>
+<p>We can verify the package is now present:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">code</span><span class="o">-</span><span class="n">block</span><span class="p">::</span> <span class="n">python</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">check</span><span class="p">():</span>
 <span class="gp">... </span>    <span class="kn">import</span> <span class="nn">bulwark</span>
 <span class="gp">... </span>    <span class="k">return</span> <span class="n">bulwark</span><span class="o">.</span><span class="n">__version__</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">cluster</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
@@ -478,7 +481,7 @@ $ ssh-add ~/.ssh/&lt;name_of_rsa_key&gt;
 <h2>Cloud Object Storage<a class="headerlink" href="#cloud-object-storage" title="Permalink to this headline">¶</a></h2>
 <p>The preferred way to store data in the cloud is using cloud object storage, such as Amazon S3 or Google Cloud Storage.
 Cloud object storage is essentially a key/value storage system.
-They keys are strings, and the values are bytes of data.
+The keys are strings, and the values are bytes of data.
 Data is read and written using HTTP calls.
 The performance of object storage is very different from file storage.
 On one hand, each individual read / write to object storage has a high overhead (10-100 ms), since it has to go over the network.
@@ -491,11 +494,11 @@ All large datasets (&gt; 1 GB) in Pangeo Cloud should be stored in Cloud Object 
 <p>Many pre-existing datasets are browseable at <a class="reference external" href="http://catalog.pangeo.io/">catalog.pangeo.io</a>.
 This catalog is pre-configured to make it easy to open the datasets.
 In most cases, it’s as simple as:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">intake</span> <span class="kn">import</span> <span class="n">open_catalog</span>
-<span class="n">cat</span> <span class="o">=</span> <span class="n">open_catalog</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/pangeo-data/pangeo-datastore/master/intake-catalogs/atmosphere.yaml&quot;</span><span class="p">)</span>
-<span class="n">ds</span>  <span class="o">=</span> <span class="n">cat</span><span class="p">[</span><span class="s2">&quot;gmet_v1&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">to_dask</span><span class="p">()</span>
-</pre></div>
-</div>
+<blockquote>
+<div><p>from intake import open_catalog
+cat = open_catalog(“<a class="reference external" href="https://raw.githubusercontent.com/pangeo-data/pangeo-datastore/master/intake-catalogs/atmosphere.yaml">https://raw.githubusercontent.com/pangeo-data/pangeo-datastore/master/intake-catalogs/atmosphere.yaml</a>”)
+ds  = cat[“gmet_v1”].to_dask()</p>
+</div></blockquote>
 <p>To open datasets that are not part of an intake catalog, we recommend using
 the <a class="reference external" href="https://filesystem-spec.readthedocs.io/en/latest/">filesystem-spec</a> package
 and its related packages <a class="reference external" href="https://gcsfs.readthedocs.io/en/latest/">gcsfs</a>
@@ -558,14 +561,14 @@ Do not use scratch buckets to store data permanently.</p>
 <p>The location of your scratch bucket is contained in the environment variable <code class="docutils literal notranslate"><span class="pre">PANGEO_SCRATCH</span></code>.
 To create mutable mapping that can write to your scratch bucket with zarr,
 the following code should work:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
-<span class="n">PANGEO_SCRATCH</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;PANGEO_SCRATCH&#39;</span><span class="p">]</span>
-<span class="c1"># -&gt; gs://pangeo-scratch/&lt;username&gt;</span>
-<span class="kn">import</span> <span class="nn">fsspec</span>
-<span class="n">mapper</span> <span class="o">=</span> <span class="n">fsspec</span><span class="o">.</span><span class="n">get_mapper</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{PANGEO_SCRATCH}</span><span class="s1">/sub/path&#39;</span><span class="p">)</span>
-<span class="c1"># mapper can now be to read / write zarr stores</span>
-</pre></div>
-</div>
+<blockquote>
+<div><p>import os
+PANGEO_SCRATCH = os.environ[‘PANGEO_SCRATCH’]
+# -&gt; gs://pangeo-scratch/&lt;username&gt;
+import fsspec
+mapper = fsspec.get_mapper(f’{PANGEO_SCRATCH}/sub/path’)
+# mapper can now be to read / write zarr stores</p>
+</div></blockquote>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>A common set of credentials is currently used for accessing scratch buckets.
@@ -636,10 +639,8 @@ paying for unnecessary compute).</p>
 <span class="n">client</span> <span class="o">=</span> <span class="n">cluster</span><span class="o">.</span><span class="n">get_client</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>Dask Gateway can optionally keep clusters running past the lifetime of your notebook.
-This happens if you explicitly request it when creating the cluster (with <code class="docutils literal notranslate"><span class="pre">shutdown_on_close=True</span></code>)
-or it can happen if your notebook kernel does not exit cleanly (because of a crash, say).
-If you need to reconnect to an <em>already running</em> cluster, to continue a computation
+<p>Dask Gateway can optionally keep clusters running past the lifetime of your notebook. You can set the cluster shutdown behavior using  the <a class="reference external" href="https://gateway.dask.org/api-client.html?highlight=shutdown_on_close#gatewaycluster/">shutdown_on_close</a> parameter. Note the default setting for the <cite>shutdown_on_close</cite> parameter is different for different API calls.</p>
+<p>If you need to reconnect to an <em>already running</em> cluster, to continue a computation
 or shut it down, use the <cite>gateway</cite> object.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">gateway</span> <span class="o">=</span> <span class="n">Gateway</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">gateway</span><span class="o">.</span><span class="n">list_clusters</span><span class="p">()</span>

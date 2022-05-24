@@ -258,7 +258,7 @@ Each of these packages has its own repository, documentation, and development te
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Many people and organizations were involved in the development of the
-software described on this page. Most of them have nothing to do with Pangeo.
+software described on this page. Most of them have no formal affiliation with Pangeo.
 By listing software packages on this website, we are in no way claiming
 credit for their hard work. Full information about the developers
 responsible for creating these tools can be found by following the links
@@ -277,8 +277,7 @@ packages are considered essential to the project.</p>
 </ul>
 <p>Xarray is an open source project and Python package
 that provides a toolkit for working with labeled multi-dimensional arrays of
-data. Xarray adopts the <a class="reference external" href="http://www.unidata.ucar.edu/software/thredds/current/netcdf-java/CDM">Common Data Model</a> for self-
-describing scientific data in widespread use in the Earth sciences:
+data. Xarray adopts the <a class="reference external" href="http://www.unidata.ucar.edu/software/thredds/current/netcdf-java/CDM">Common Data Model</a> for self-describing scientific data in widespread use in the Earth sciences. An
 <code class="docutils literal notranslate"><span class="pre">xarray.Dataset</span></code> is an in-memory representation of a <a class="reference external" href="http://www.unidata.ucar.edu/software/netcdf">netCDF</a> file.
 Xarray provides the basic data structures used by many other Pangeo packages,
 as well as powerful tools for computation and visualization.</p>
@@ -350,7 +349,7 @@ or <a class="reference external" href="https://choosealicense.com/">these more g
 <li><p>Use version control for source code (for example, on
 <a class="reference external" href="http://github.org">github</a>)</p></li>
 <li><p>Provide thorough test coverage and continuous integration of testing</p></li>
-<li><p>Maintain comprehensive Documentation</p></li>
+<li><p>Maintain comprehensive documentation</p></li>
 <li><p>Establish a <a class="reference external" href="https://opensource.guide/code-of-conduct/">code of
 conduct</a> for
 contributors</p></li>
@@ -361,7 +360,7 @@ great advice on building and maintaining open-source projects.</p>
 <div class="section" id="best-practices-for-pangeo-projects">
 <h3>Best Practices for Pangeo Projects<a class="headerlink" href="#best-practices-for-pangeo-projects" title="Permalink to this headline">¶</a></h3>
 <p>To address the needs of geoscience researchers, we have developed some
-additional recommendations.</p>
+additional recommendations:</p>
 <ol class="arabic simple">
 <li><p><em>Solve a general problem:</em> packages should solve a general problem
 that is encountered by a relatively broad groups of researchers.</p></li>
@@ -406,7 +405,7 @@ This is a key difference between software built on Xarray and numerous
 other tools designed to process netCDF data (e.g. nco, cdo, etc. etc.):
 <em>Xarray data can be passed directly between python libraries (or over a
 network) without ever touching a disk drive.</em> This “in-memory”
-capability is a key ingredient to the Big-Data scalability of Pangeo
+capability is a key ingredient to the big data scalability of Pangeo
 packages. Very frequently the bottleneck in data processing pipelines is
 reading and writing files.</p>
 <p>Another important aspect of scalability is the use of Dask for parallel
@@ -414,12 +413,11 @@ and out-of-core computations. The raw data underlying Xarray objects can
 be either standard in-memory <a class="reference external" href="http://www.numpy.org/">numpy arrays</a> or
 <a class="reference external" href="http://dask.pydata.org/en/latest/array.html">Dask arrays</a>. Dask
 arrays behave nearly identically to numpy arrays (they support the same
-API), but instead of storing raw data directly, they store a symbolic
-computational graph of operations (e.g. reading data from disk or
-network, performing transformations or mathematical calculations, etc.)
-that must be executed in order to obtain the data. No operations are
+API), but instead of storing raw data, they store a symbolic
+computational graph of operations. An example computational graph would start by reading data from disk or
+network and then preform transformations or mathematical calculations. No operations are
 actually executed until actual numerical values are required, such as
-for making a figure. (This is called <em>lazy execution</em>.) Dask figures out
+for making a figure. This is called <em>lazy execution</em>. Dask figures out
 how to execute these computational graphs efficiently on different
 computer architectures using sophisticated techniques. By chaining
 operations on dask arrays together, researchers can symbolically

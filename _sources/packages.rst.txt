@@ -10,7 +10,7 @@ Each of these packages has its own repository, documentation, and development te
 .. note::
 
   Many people and organizations were involved in the development of the
-  software described on this page. Most of them have nothing to do with Pangeo.
+  software described on this page. Most of them have no formal affiliation with Pangeo.
   By listing software packages on this website, we are in no way claiming
   credit for their hard work. Full information about the developers
   responsible for creating these tools can be found by following the links
@@ -33,8 +33,7 @@ Xarray
 
 Xarray is an open source project and Python package
 that provides a toolkit for working with labeled multi-dimensional arrays of
-data. Xarray adopts the `Common Data Model`_ for self-
-describing scientific data in widespread use in the Earth sciences:
+data. Xarray adopts the `Common Data Model`_ for self-describing scientific data in widespread use in the Earth sciences. An
 ``xarray.Dataset`` is an in-memory representation of a netCDF_ file.
 Xarray provides the basic data structures used by many other Pangeo packages,
 as well as powerful tools for computation and visualization.
@@ -125,7 +124,7 @@ General Best Practices for Open Source
 2. Use version control for source code (for example, on
    `github <http://github.org>`__)
 3. Provide thorough test coverage and continuous integration of testing
-4. Maintain comprehensive Documentation
+4. Maintain comprehensive documentation
 5. Establish a `code of
    conduct <https://opensource.guide/code-of-conduct/>`__ for
    contributors
@@ -137,7 +136,7 @@ Best Practices for Pangeo Projects
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To address the needs of geoscience researchers, we have developed some
-additional recommendations.
+additional recommendations:
 
 1. *Solve a general problem:* packages should solve a general problem
    that is encountered by a relatively broad groups of researchers.
@@ -184,7 +183,7 @@ This is a key difference between software built on Xarray and numerous
 other tools designed to process netCDF data (e.g. nco, cdo, etc. etc.):
 *Xarray data can be passed directly between python libraries (or over a
 network) without ever touching a disk drive.* This "in-memory"
-capability is a key ingredient to the Big-Data scalability of Pangeo
+capability is a key ingredient to the big data scalability of Pangeo
 packages. Very frequently the bottleneck in data processing pipelines is
 reading and writing files.
 
@@ -193,12 +192,11 @@ and out-of-core computations. The raw data underlying Xarray objects can
 be either standard in-memory `numpy arrays <http://www.numpy.org/>`__ or
 `Dask arrays <http://dask.pydata.org/en/latest/array.html>`__. Dask
 arrays behave nearly identically to numpy arrays (they support the same
-API), but instead of storing raw data directly, they store a symbolic
-computational graph of operations (e.g. reading data from disk or
-network, performing transformations or mathematical calculations, etc.)
-that must be executed in order to obtain the data. No operations are
+API), but instead of storing raw data, they store a symbolic
+computational graph of operations. An example computational graph would start by reading data from disk or
+network and then preform transformations or mathematical calculations. No operations are
 actually executed until actual numerical values are required, such as
-for making a figure. (This is called *lazy execution*.) Dask figures out
+for making a figure. This is called *lazy execution*. Dask figures out
 how to execute these computational graphs efficiently on different
 computer architectures using sophisticated techniques. By chaining
 operations on dask arrays together, researchers can symbolically
