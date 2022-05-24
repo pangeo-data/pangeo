@@ -84,9 +84,9 @@ Frequently Asked Questions
    Because Pangeo uses Jupyter to provide interactive computing, this is
    already possible today; Jupyter can be configured to run Kernels in many
    different languages (see
-   `Jupyter docs on Kernels <http://jupyter.readthedocs.io/en/latest/projects/kernels.html>`_).
+   `Jupyter docs on kernels <http://jupyter.readthedocs.io/en/latest/projects/kernels.html>`_).
    These kernels can be configured to run on any of the
-   Pangeo :ref:`Deployments`. However, the higher-level features of the Pangeo
+   Pangeo :ref:`deployments`. However, the higher-level features of the Pangeo
    platform, in particular, parallel execution with Dask, are limited to
    Python at the moment. If you would like to work on enabling multi-language
    support, please engage with us via the `Pangeo GitHub issue tracker`_.
