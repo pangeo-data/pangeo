@@ -819,3 +819,20 @@
     - optimisation
     - IT architecture for scientific computing
     - Data science & machine learning in Oceanography
+
+- first_name: Viet
+  last_name: Nguyen
+  institution: University of Tasmania
+  website: https://portal.aodn.org.au/
+  email: vh.nguyen@utas.edu.au
+  github: vietnguyengit
+  orcid: 0000-0001-8994-4558
+  tags:
+      - distributed computing
+      - scientific computing
+      - machine learning
+      - oceanography
+      - cloud computing
+      - IT infrastructure
+      - software engineering
+      - data visualisation
