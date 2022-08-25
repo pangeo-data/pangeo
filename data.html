@@ -103,16 +103,14 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="cloud.html">Pangeo Cloud</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cloud.html#operated-by-2i2c">Operated by 2i2c</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cloud.html#quickstart">Quickstart</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cloud.html#getting-support">Getting Support</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cloud.html#sign-up">Sign Up</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cloud.html#clusters">Clusters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud.html#hubs">Hubs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cloud.html#software-environment">Software Environment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cloud.html#dask-software-environment">Dask Software Environment</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cloud.html#hardware-environment">Hardware Environment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cloud.html#your-home-directory">Your Home Directory</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cloud.html#ssh-keys">SSH Keys</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cloud.html#cloud-object-storage">Cloud Object Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud.html#files-and-data-in-the-clouds">Files and Data in the Clouds</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cloud.html#dask">Dask</a></li>
 </ul>
 </li>
@@ -345,7 +343,7 @@ preparing and uploading.</p>
 <ol class="arabic">
 <li><p><strong>Open your Entire Dataset in Xarray</strong>.</p>
 <p>Xarray is designed to
-load many netCDF files into a single <a class="reference external" href="https://xarray.pydata.org/en/latest/generated/xarray.Dataset.html#xarray.Dataset" title="(in xarray v2022.3.1.dev112)"><code class="xref py py-class docutils literal notranslate"><span class="pre">xarray.Dataset</span></code></a> object.
+load many netCDF files into a single <a class="reference external" href="https://docs.xarray.dev/en/latest/generated/xarray.Dataset.html#xarray.Dataset" title="(in xarray v2022.6.1.dev38)"><code class="xref py py-class docutils literal notranslate"><span class="pre">xarray.Dataset</span></code></a> object.
 The easiest way to accomplish this is using the <code class="xref py py-meth docutils literal notranslate"><span class="pre">xarray.open_mfdataset()</span></code>
 function. Suppose you have a directory full of netCDF files that comprise
 a single dataset stored in the directory <code class="docutils literal notranslate"><span class="pre">/path/to/mydataset</span></code>. If the files

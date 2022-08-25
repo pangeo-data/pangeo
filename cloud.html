@@ -103,16 +103,14 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Pangeo Cloud</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#operated-by-2i2c">Operated by 2i2c</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#quickstart">Quickstart</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#getting-support">Getting Support</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#sign-up">Sign Up</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#clusters">Clusters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hubs">Hubs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#software-environment">Software Environment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#dask-software-environment">Dask Software Environment</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#hardware-environment">Hardware Environment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#your-home-directory">Your Home Directory</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#ssh-keys">SSH Keys</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#cloud-object-storage">Cloud Object Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#files-and-data-in-the-clouds">Files and Data in the Clouds</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#dask">Dask</a></li>
 </ul>
 </li>
@@ -169,25 +167,19 @@
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
 <li><a class="reference internal" href="#">Pangeo Cloud</a><ul>
+<li><a class="reference internal" href="#operated-by-2i2c">Operated by 2i2c</a></li>
 <li><a class="reference internal" href="#quickstart">Quickstart</a></li>
 <li><a class="reference internal" href="#getting-support">Getting Support</a></li>
 <li><a class="reference internal" href="#sign-up">Sign Up</a></li>
-<li><a class="reference internal" href="#clusters">Clusters</a></li>
+<li><a class="reference internal" href="#hubs">Hubs</a></li>
 <li><a class="reference internal" href="#software-environment">Software Environment</a></li>
-<li><a class="reference internal" href="#dask-software-environment">Dask Software Environment</a></li>
 <li><a class="reference internal" href="#hardware-environment">Hardware Environment</a></li>
-<li><a class="reference internal" href="#your-home-directory">Your Home Directory</a></li>
-<li><a class="reference internal" href="#ssh-keys">SSH Keys</a></li>
-<li><a class="reference internal" href="#cloud-object-storage">Cloud Object Storage</a><ul>
-<li><a class="reference internal" href="#reading-data">Reading Data</a></li>
-<li><a class="reference internal" href="#writing-data">Writing Data</a></li>
-<li><a class="reference internal" href="#scratch-bucket">Scratch Bucket</a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#files-and-data-in-the-clouds">Files and Data in the Clouds</a></li>
 <li><a class="reference internal" href="#dask">Dask</a><ul>
 <li><a class="reference internal" href="#guidelines-for-using-dask">Guidelines for using Dask</a></li>
 <li><a class="reference internal" href="#dask-gateway">Dask Gateway</a></li>
 <li><a class="reference internal" href="#environment-variables-on-the-cluster">Environment variables on the cluster</a></li>
+<li><a class="reference internal" href="#dask-software-environment">Dask Software Environment</a></li>
 </ul>
 </li>
 </ul>
@@ -228,25 +220,19 @@
       <div class="col-md-3">
         <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
 <li><a class="reference internal" href="#">Pangeo Cloud</a><ul>
+<li><a class="reference internal" href="#operated-by-2i2c">Operated by 2i2c</a></li>
 <li><a class="reference internal" href="#quickstart">Quickstart</a></li>
 <li><a class="reference internal" href="#getting-support">Getting Support</a></li>
 <li><a class="reference internal" href="#sign-up">Sign Up</a></li>
-<li><a class="reference internal" href="#clusters">Clusters</a></li>
+<li><a class="reference internal" href="#hubs">Hubs</a></li>
 <li><a class="reference internal" href="#software-environment">Software Environment</a></li>
-<li><a class="reference internal" href="#dask-software-environment">Dask Software Environment</a></li>
 <li><a class="reference internal" href="#hardware-environment">Hardware Environment</a></li>
-<li><a class="reference internal" href="#your-home-directory">Your Home Directory</a></li>
-<li><a class="reference internal" href="#ssh-keys">SSH Keys</a></li>
-<li><a class="reference internal" href="#cloud-object-storage">Cloud Object Storage</a><ul>
-<li><a class="reference internal" href="#reading-data">Reading Data</a></li>
-<li><a class="reference internal" href="#writing-data">Writing Data</a></li>
-<li><a class="reference internal" href="#scratch-bucket">Scratch Bucket</a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#files-and-data-in-the-clouds">Files and Data in the Clouds</a></li>
 <li><a class="reference internal" href="#dask">Dask</a><ul>
 <li><a class="reference internal" href="#guidelines-for-using-dask">Guidelines for using Dask</a></li>
 <li><a class="reference internal" href="#dask-gateway">Dask Gateway</a></li>
 <li><a class="reference internal" href="#environment-variables-on-the-cluster">Environment variables on the cluster</a></li>
+<li><a class="reference internal" href="#dask-software-environment">Dask Software Environment</a></li>
 </ul>
 </li>
 </ul>
@@ -266,15 +252,14 @@
       
   <div class="section" id="pangeo-cloud">
 <span id="cloud"></span><h1>Pangeo Cloud<a class="headerlink" href="#pangeo-cloud" title="Permalink to this headline">¶</a></h1>
-<p>Pangeo Cloud is an experimental service providing cloud-based data-science
-environments.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>We currently have no long-term funding to support Pangeo Cloud.
-At present, we’ve cobbled together funding from various grants from funding
-agencies and cloud providers.
-All users must understand that Pangeo Cloud environments could disappear
-at any time.</p>
+<p>Pangeo Cloud is an experimental service providing cloud-based data-science environments.
+Pangeo Cloud is currently supported by the NSF EarthCube program <a class="reference external" href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2026932">award 2026932</a>,
+which also supports <a class="reference external" href="https://pangeo-forge.readthedocs.io/">Pangeo Forge</a>.
+Funding is in place through the end of 2023. After that, we can make no firm committments about the longevity of the platform.</p>
+<div class="section" id="operated-by-2i2c">
+<h2>Operated by 2i2c<a class="headerlink" href="#operated-by-2i2c" title="Permalink to this headline">¶</a></h2>
+<p>Pangeo Cloud is operated by <a class="reference external" href="https://2i2c.org">2i2c</a>.
+You can see the deployment configuration here: <a class="reference external" href="https://github.com/2i2c-org/infrastructure/tree/master/config/clusters/pangeo-hubs">https://github.com/2i2c-org/infrastructure/tree/master/config/clusters/pangeo-hubs</a></p>
 </div>
 <div class="section" id="quickstart">
 <h2>Quickstart<a class="headerlink" href="#quickstart" title="Permalink to this headline">¶</a></h2>
@@ -325,22 +310,22 @@ and its technical suitability for Pangeo Cloud.</p>
 a GitHub Team in the <code class="docutils literal notranslate"><span class="pre">pangeo-data</span></code> organization.
 You must accept this invitation to gain access to Pangeo Cloud resources.</p>
 </div>
-<div class="section" id="clusters">
-<h2>Clusters<a class="headerlink" href="#clusters" title="Permalink to this headline">¶</a></h2>
-<p>Pangeo Cloud currently comprises two different computing clusters:</p>
+<div class="section" id="hubs">
+<h2>Hubs<a class="headerlink" href="#hubs" title="Permalink to this headline">¶</a></h2>
+<p>Pangeo Cloud currently comprises two different JupyterHubs:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://us-central1-b.gcp.pangeo.io/">us-central1-b.gcp.pangeo.io</a>: A cluster in
+<li><p><a class="reference external" href="https://us-central1-b.gcp.pangeo.io/">us-central1-b.gcp.pangeo.io</a>: A hub in
 Google Cloud Platform.</p></li>
-<li><p><a class="reference external" href="https://aws-uswest2.pangeo.io">aws-uswest2.pangeo.io</a>: A cluster in AWS.</p></li>
+<li><p><a class="reference external" href="https://aws-uswest2.pangeo.io">aws-uswest2.pangeo.io</a>: A hub in AWS.</p></li>
 </ul>
-<p>We recommend choosing a cluster based on which data you want to access.
+<p>We recommend choosing a hub based on which data you want to access.
 E.g. if your data live primarily in AWS, choose <code class="docutils literal notranslate"><span class="pre">aws-uswest2</span></code>.</p>
 <p>Once your application is approved, you will be able to log in to the resources
 you requested.</p>
 </div>
 <div class="section" id="software-environment">
 <span id="cloud-software-environment"></span><h2>Software Environment<a class="headerlink" href="#software-environment" title="Permalink to this headline">¶</a></h2>
-<p>Each cluster contains a customized data-science software environment based
+<p>Each hub contains a customized data-science software environment based
 off the docker images built in <a class="reference external" href="https://github.com/pangeo-data/pangeo-docker-images">https://github.com/pangeo-data/pangeo-docker-images</a>.
 These are the steps for adding a package to the environment:</p>
 <ol class="arabic simple">
@@ -370,74 +355,6 @@ vice versa. You shouldn’t install / update packages that are already in
 the environment.</p></li>
 </ul>
 </div>
-<div class="section" id="dask-software-environment">
-<h2>Dask Software Environment<a class="headerlink" href="#dask-software-environment" title="Permalink to this headline">¶</a></h2>
-<p>The default image used on Dask Clusters (the scheduler and workers) matches
-the image used for JupyterHub. It won’t, however, have changes you’ve made
-in your “local” environment in your home directory on the hub.</p>
-<p>Long-term, the best way to add packages to the environemnt is by updating the
-Docker images, as described in <a class="reference internal" href="#cloud-software-environment"><span class="std std-ref">Software Environment</span></a>. But for quickly
-prototyping something on the Dask cluster you can use a
-<a class="reference external" href="https://distributed.dask.org/en/latest/plugins.html#distributed.diagnostics.plugin.WorkerPlugin">Dask WorkerPlugin</a>.
-This lets you inject a bit of code that’s run when the worker starts up. The <cite>PipPlugin</cite> below
-uses pip to install a configurable list of packages.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">subprocess</span>
-<span class="kn">import</span> <span class="nn">logging</span>
-<span class="kn">from</span> <span class="nn">distributed</span> <span class="kn">import</span> <span class="n">WorkerPlugin</span>
-
-<span class="k">class</span> <span class="nc">PipPlugin</span><span class="p">(</span><span class="n">WorkerPlugin</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Install packages on a worker as it starts up.</span>
-
-<span class="sd">    Parameters</span>
-<span class="sd">    ----------</span>
-<span class="sd">    packages : List[str]</span>
-<span class="sd">        A list of packages to install with pip on startup.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">packages</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">packages</span> <span class="o">=</span> <span class="n">packages</span>
-
-    <span class="k">def</span> <span class="nf">setup</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">worker</span><span class="p">):</span>
-        <span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s2">&quot;distributed.worker&quot;</span><span class="p">)</span>
-        <span class="n">subprocess</span><span class="o">.</span><span class="n">call</span><span class="p">([</span><span class="s1">&#39;python&#39;</span><span class="p">,</span> <span class="s1">&#39;-m&#39;</span><span class="p">,</span> <span class="s1">&#39;pip&#39;</span><span class="p">,</span> <span class="s1">&#39;install&#39;</span><span class="p">,</span> <span class="s1">&#39;--upgrade&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">packages</span><span class="p">)</span>
-        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Installed </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">packages</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>To install packages in dask workers (the example below installs <a class="reference external" href="https://pypi.org/project/bulwark/">bulwark</a>), you’d create a cluster normally and add the plugin:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">dask_gateway</span> <span class="kn">import</span> <span class="n">GatewayCluster</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">cluster</span> <span class="o">=</span> <span class="n">GatewayCluster</span><span class="p">()</span>  <span class="c1"># create the cluster nomrally</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">client</span> <span class="o">=</span> <span class="n">cluster</span><span class="o">.</span><span class="n">get_client</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Now create and register the plugin. We&#39;ll install &#39;bulwark&#39;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">plugin</span> <span class="o">=</span> <span class="n">PipPlugin</span><span class="p">([</span><span class="s1">&#39;bulwark&#39;</span><span class="p">])</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">client</span><span class="o">.</span><span class="n">register_worker_plugin</span><span class="p">(</span><span class="n">plugin</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>We can verify the package is now present:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">code</span><span class="o">-</span><span class="n">block</span><span class="p">::</span> <span class="n">python</span>
-</pre></div>
-</div>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">check</span><span class="p">():</span>
-<span class="gp">... </span>    <span class="kn">import</span> <span class="nn">bulwark</span>
-<span class="gp">... </span>    <span class="k">return</span> <span class="n">bulwark</span><span class="o">.</span><span class="n">__version__</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">cluster</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">client</span><span class="o">.</span><span class="n">wait_for_workers</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">client</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">check</span><span class="p">)</span>
-<span class="go">{&#39;tls://10.36.248.117:40785&#39;: &#39;0.6.1&#39;, &#39;tls://10.37.142.70:43031&#39;: &#39;0.6.1&#39;}</span>
-</pre></div>
-</div>
-<p>A few caveats are in order:</p>
-<ol class="arabic simple">
-<li><p>You should register the plugin before scaling to ensure that your packages
-are installed on all the workers.</p></li>
-<li><p>You should take care with dependencies. Pip doesn’t always respect packages
-that have been installed with conda.</p></li>
-<li><p>If you need to <em>upgrade existing</em> packages, take special care. You may need
-to <code class="docutils literal notranslate"><span class="pre">client.restart()</span></code> the cluster to ensure that the new packages are
-used.</p></li>
-<li><p>This will slow down the startup time of your workers, especially if the
-package takes a while to install.</p></li>
-</ol>
-</div>
 <div class="section" id="hardware-environment">
 <h2>Hardware Environment<a class="headerlink" href="#hardware-environment" title="Permalink to this headline">¶</a></h2>
 <p>Pangeo Cloud clusters offer different amounts of RAM and CPU to the user
@@ -445,139 +362,9 @@ notebook upon login.
 Please choose the least resource-intensive option for the work you need to do.
 Larger virtual machines cost us more money.</p>
 </div>
-<div class="section" id="your-home-directory">
-<h2>Your Home Directory<a class="headerlink" href="#your-home-directory" title="Permalink to this headline">¶</a></h2>
-<p>The cloud environment differs from what many UNIX users are used to.
-Your are not on a shared server; you are on your own private server.
-Your username is <code class="docutils literal notranslate"><span class="pre">jovyan</span></code>, and your home directory is <code class="docutils literal notranslate"><span class="pre">/home/jovyan</span></code>.
-This is the same for all users.</p>
-<p><strong>You have a 10 GB limit on the size of your home directory.</strong>
-Your home directory is intended only for notebooks, analysis scripts,
-and small datasets.
-It is not an appropriate place to store large datasets.
-No one else can see or access the files your home directory.</p>
-<p>The easiest way to move files in and out of your home directory is via the JupyterLab web interface.
-Drag a file into the file browser to upload, and right-click to download back out.
-You can also open a terminal via the JupyterLab launcher and use this to ssh / scp / ftp to remote systems.
-However, you can’t ssh in!</p>
-<p>The recommended way to move code in and out is via git.
-You should clone your project repo from the terminal and use git pull / git push to update and push changes.</p>
-</div>
-<div class="section" id="ssh-keys">
-<h2>SSH Keys<a class="headerlink" href="#ssh-keys" title="Permalink to this headline">¶</a></h2>
-<p>If you have two-factor authentication enabled on your GitHub account,
-you will probably want to place an SSH key in your home directory to facilitate easy pushes.
-(Read  <a class="reference external" href="https://help.github.com/en/articles/connecting-to-github-with-ssh">Connecting to GitHub with SSH</a>
-for more info.)
-We recommend creating a new key just for this purpose and using a password.
-You then add this key to your github profile at <a class="reference external" href="https://github.com/settings/keys">https://github.com/settings/keys</a>.</p>
-<p>To get the key to work on the cluster, place it in the /home/jovyan/.ssh/ directory. Then run:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ssh-agent bash
-$ ssh-add ~/.ssh/&lt;name_of_rsa_key&gt;
-</pre></div>
-</div>
-</div>
-<div class="section" id="cloud-object-storage">
-<h2>Cloud Object Storage<a class="headerlink" href="#cloud-object-storage" title="Permalink to this headline">¶</a></h2>
-<p>The preferred way to store data in the cloud is using cloud object storage, such as Amazon S3 or Google Cloud Storage.
-Cloud object storage is essentially a key/value storage system.
-The keys are strings, and the values are bytes of data.
-Data is read and written using HTTP calls.
-The performance of object storage is very different from file storage.
-On one hand, each individual read / write to object storage has a high overhead (10-100 ms), since it has to go over the network.
-On the other hand, object storage “scales out” nearly infinitely, meaning that we can make hundreds, thousands, or millions of concurrent reads / writes.
-This makes object storage well suited for distributed data analytics.
-However, the software architecture of a data analysis system must be adapted to take advantage of these properties.
-All large datasets (&gt; 1 GB) in Pangeo Cloud should be stored in Cloud Object Storage.</p>
-<div class="section" id="reading-data">
-<h3>Reading Data<a class="headerlink" href="#reading-data" title="Permalink to this headline">¶</a></h3>
-<p>Many pre-existing datasets are browseable at <a class="reference external" href="http://catalog.pangeo.io/">catalog.pangeo.io</a>.
-This catalog is pre-configured to make it easy to open the datasets.
-In most cases, it’s as simple as:</p>
-<blockquote>
-<div><p>from intake import open_catalog
-cat = open_catalog(“<a class="reference external" href="https://raw.githubusercontent.com/pangeo-data/pangeo-datastore/master/intake-catalogs/atmosphere.yaml">https://raw.githubusercontent.com/pangeo-data/pangeo-datastore/master/intake-catalogs/atmosphere.yaml</a>”)
-ds  = cat[“gmet_v1”].to_dask()</p>
-</div></blockquote>
-<p>To open datasets that are not part of an intake catalog, we recommend using
-the <a class="reference external" href="https://filesystem-spec.readthedocs.io/en/latest/">filesystem-spec</a> package
-and its related packages <a class="reference external" href="https://gcsfs.readthedocs.io/en/latest/">gcsfs</a>
-(for Google Cloud Storage)
-and <a class="reference external" href="https://s3fs.readthedocs.io/en/latest/">s3fs</a>
-(for Amazon S3 and all S3-compatible object stores).</p>
-<p>For example, to open a public file from Google Cloud Storage, you would do:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">fsspec</span>
-<span class="n">path</span> <span class="o">=</span> <span class="s1">&#39;gs://cmip6/cmip6-zarr-consolidated-stores.csv&#39;</span>
-<span class="k">with</span> <span class="n">fsspec</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>Zarr stores can be opened using <code class="docutils literal notranslate"><span class="pre">.get_mapper</span></code> methods from fsspec, gscsfs, and s3fs.
-For examples, see</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://zarr.readthedocs.io/en/stable/tutorial.html?highlight=s3fs#distributed-cloud-storage">Zarr Docs on Distributed Cloud Storage</a></p></li>
-<li><p><a class="reference external" href="http://xarray.pydata.org/en/stable/io.html#cloud-storage-buckets">Xarray Docs on Cloud Storage</a></p></li>
-</ul>
-</div>
-<div class="section" id="writing-data">
-<h3>Writing Data<a class="headerlink" href="#writing-data" title="Permalink to this headline">¶</a></h3>
-<p>Writing data (and reading private data) requires credentials for authentication.
-Pangeo Cloud does not provide credentials to individual users.
-Instead you must sign up for your own account with the cloud provider and manage your own storage.
-(Most cloud providers offer several hundred dollars worth of free credits for new accounts.)</p>
-<p>On S3-type storage, you will have a client key and client secret associated with you account.
-The following code creates a writeable filesystem:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fs</span> <span class="o">=</span> <span class="n">s3fs</span><span class="o">.</span><span class="n">S3FileSystem</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="s1">&#39;&lt;YOUR_CLIENT_KEY&gt;&#39;</span><span class="p">,</span> <span class="n">secret</span><span class="o">=</span><span class="s1">&#39;&lt;YOUR_CLIENT_SECRET&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>Non-AWS S3 services (e.g. Wasabi Cloud) can be configured by passing an argument
-such as <code class="docutils literal notranslate"><span class="pre">client_kwargs={'endpoint_url':</span> <span class="pre">'https://s3.us-east-2.wasabisys.com'}</span></code>
-to <code class="docutils literal notranslate"><span class="pre">S3FileSystem</span></code>.</p>
-<p>For Google Cloud Storage, the best practice is to create a
-<a class="reference external" href="https://cloud.google.com/iam/docs/service-accounts">service account</a> with
-appropriate permissions to read / write your private bucket.
-You upload your service account key (a .json file) to your Pangeo Cloud
-home directory and then use it as follows:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
-<span class="kn">import</span> <span class="nn">gcsfs</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;&lt;your_token_file&gt;.json&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">token_file</span><span class="p">:</span>
-    <span class="n">token</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">token_file</span><span class="p">)</span>
-<span class="n">gcs</span> <span class="o">=</span> <span class="n">gcsfs</span><span class="o">.</span><span class="n">GCSFileSystem</span><span class="p">(</span><span class="n">token</span><span class="o">=</span><span class="n">token</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>You can then read / write private files with the <code class="docutils literal notranslate"><span class="pre">gcs</span></code> object.</p>
-</div>
-<div class="section" id="scratch-bucket">
-<h3>Scratch Bucket<a class="headerlink" href="#scratch-bucket" title="Permalink to this headline">¶</a></h3>
-<p>Pangeo Cloud environments are configured with a “scratch bucket,” which
-allows you to temporarily store data. Credentials to write to the scratch
-bucket are pre-loaded into your Pangeo Cloud environment.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Any data in scratch buckets will be deleted once it is 7 days old.
-Do not use scratch buckets to store data permanently.</p>
-</div>
-<p>The location of your scratch bucket is contained in the environment variable <code class="docutils literal notranslate"><span class="pre">PANGEO_SCRATCH</span></code>.
-To create mutable mapping that can write to your scratch bucket with zarr,
-the following code should work:</p>
-<blockquote>
-<div><p>import os
-PANGEO_SCRATCH = os.environ[‘PANGEO_SCRATCH’]
-# -&gt; gs://pangeo-scratch/&lt;username&gt;
-import fsspec
-mapper = fsspec.get_mapper(f’{PANGEO_SCRATCH}/sub/path’)
-# mapper can now be to read / write zarr stores</p>
-</div></blockquote>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>A common set of credentials is currently used for accessing scratch buckets.
-This means users can read, and potentially remove / overwrite, each others’
-data. You can avoid this problem by always using <code class="docutils literal notranslate"><span class="pre">PANGEO_SCRATCH</span></code> as a prefix.
-Still, you should not store any sensitive or mission-critical data in
-the scratch bucket.</p>
-</div>
-</div>
+<div class="section" id="files-and-data-in-the-clouds">
+<h2>Files and Data in the Clouds<a class="headerlink" href="#files-and-data-in-the-clouds" title="Permalink to this headline">¶</a></h2>
+<p>Please see the 2i2c documentation on [Files and Data in the Cloud](<a class="reference external" href="https://docs.2i2c.org/en/latest/user/storage.html">https://docs.2i2c.org/en/latest/user/storage.html</a>).</p>
 </div>
 <div class="section" id="dask">
 <h2>Dask<a class="headerlink" href="#dask" title="Permalink to this headline">¶</a></h2>
@@ -694,6 +481,74 @@ to the Dask scheduler and workers. For example,</p>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">cluster</span> <span class="o">=</span> <span class="n">gateway</span><span class="o">.</span><span class="n">new_cluster</span><span class="p">(</span><span class="n">options</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+<div class="section" id="dask-software-environment">
+<h3>Dask Software Environment<a class="headerlink" href="#dask-software-environment" title="Permalink to this headline">¶</a></h3>
+<p>The default image used on Dask Clusters (the scheduler and workers) matches
+the image used for JupyterHub. It won’t, however, have changes you’ve made
+in your “local” environment in your home directory on the hub.</p>
+<p>Long-term, the best way to add packages to the environemnt is by updating the
+Docker images, as described in <a class="reference internal" href="#cloud-software-environment"><span class="std std-ref">Software Environment</span></a>. But for quickly
+prototyping something on the Dask cluster you can use a
+<a class="reference external" href="https://distributed.dask.org/en/latest/plugins.html#distributed.diagnostics.plugin.WorkerPlugin">Dask WorkerPlugin</a>.
+This lets you inject a bit of code that’s run when the worker starts up. The <cite>PipPlugin</cite> below
+uses pip to install a configurable list of packages.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">subprocess</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">from</span> <span class="nn">distributed</span> <span class="kn">import</span> <span class="n">WorkerPlugin</span>
+
+<span class="k">class</span> <span class="nc">PipPlugin</span><span class="p">(</span><span class="n">WorkerPlugin</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Install packages on a worker as it starts up.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    packages : List[str]</span>
+<span class="sd">        A list of packages to install with pip on startup.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">packages</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">packages</span> <span class="o">=</span> <span class="n">packages</span>
+
+    <span class="k">def</span> <span class="nf">setup</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">worker</span><span class="p">):</span>
+        <span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s2">&quot;distributed.worker&quot;</span><span class="p">)</span>
+        <span class="n">subprocess</span><span class="o">.</span><span class="n">call</span><span class="p">([</span><span class="s1">&#39;python&#39;</span><span class="p">,</span> <span class="s1">&#39;-m&#39;</span><span class="p">,</span> <span class="s1">&#39;pip&#39;</span><span class="p">,</span> <span class="s1">&#39;install&#39;</span><span class="p">,</span> <span class="s1">&#39;--upgrade&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">packages</span><span class="p">)</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Installed </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">packages</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>To install packages in dask workers (the example below installs <a class="reference external" href="https://pypi.org/project/bulwark/">bulwark</a>), you’d create a cluster normally and add the plugin:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">dask_gateway</span> <span class="kn">import</span> <span class="n">GatewayCluster</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cluster</span> <span class="o">=</span> <span class="n">GatewayCluster</span><span class="p">()</span>  <span class="c1"># create the cluster nomrally</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">client</span> <span class="o">=</span> <span class="n">cluster</span><span class="o">.</span><span class="n">get_client</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Now create and register the plugin. We&#39;ll install &#39;bulwark&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">plugin</span> <span class="o">=</span> <span class="n">PipPlugin</span><span class="p">([</span><span class="s1">&#39;bulwark&#39;</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">client</span><span class="o">.</span><span class="n">register_worker_plugin</span><span class="p">(</span><span class="n">plugin</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>We can verify the package is now present:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">code</span><span class="o">-</span><span class="n">block</span><span class="p">::</span> <span class="n">python</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">check</span><span class="p">():</span>
+<span class="gp">... </span>    <span class="kn">import</span> <span class="nn">bulwark</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">bulwark</span><span class="o">.</span><span class="n">__version__</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cluster</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">client</span><span class="o">.</span><span class="n">wait_for_workers</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">client</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">check</span><span class="p">)</span>
+<span class="go">{&#39;tls://10.36.248.117:40785&#39;: &#39;0.6.1&#39;, &#39;tls://10.37.142.70:43031&#39;: &#39;0.6.1&#39;}</span>
+</pre></div>
+</div>
+<p>A few caveats are in order:</p>
+<ol class="arabic simple">
+<li><p>You should register the plugin before scaling to ensure that your packages
+are installed on all the workers.</p></li>
+<li><p>You should take care with dependencies. Pip doesn’t always respect packages
+that have been installed with conda.</p></li>
+<li><p>If you need to <em>upgrade existing</em> packages, take special care. You may need
+to <code class="docutils literal notranslate"><span class="pre">client.restart()</span></code> the cluster to ensure that the new packages are
+used.</p></li>
+<li><p>This will slow down the startup time of your workers, especially if the
+package takes a while to install.</p></li>
+</ol>
 </div>
 </div>
 </div>
