@@ -148,7 +148,7 @@ Larger virtual machines cost us more money.
 Files and Data in the Clouds
 ----------------------------
 
-Please see the 2i2c documentation on [Files and Data in the Cloud](https://docs.2i2c.org/en/latest/user/storage.html).
+Please see the 2i2c documentation on `Files and Data in the Cloud <https://docs.2i2c.org/en/latest/user/storage.html>`_.
 
 Dask
 ----
