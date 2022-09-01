@@ -147,8 +147,8 @@ notebook upon login.
 Please choose the least resource-intensive option for the work you need to do.
 Larger virtual machines cost us more money.
 
-Files and Data in the Clouds
-----------------------------
+Files and Data in the Cloud
+---------------------------
 
 Please see the 2i2c documentation on `Files and Data in the Cloud <https://docs.2i2c.org/en/latest/user/storage.html>`_.
 
