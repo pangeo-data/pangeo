@@ -83,8 +83,10 @@ Pangeo Cloud currently comprises two different JupyterHubs:
   Google Cloud Platform.
 - `aws-uswest2.pangeo.io <https://aws-uswest2.pangeo.io>`_: A hub in AWS.
 
-We recommend choosing a hub based on which data you want to access.
-E.g. if your data live primarily in AWS, choose ``aws-uswest2``.
+We recommend choosing a hub based on what data you want to access.
+E.g. if your data of interest live primarily in AWS, choose ``aws-uswest2``.
+(See `AWS Public Datasets <https://registry.opendata.aws/>`_ and
+`Google Cloud Datasets <https://cloud.google.com/datasets>`_.)
 
 Once your application is approved, you will be able to log in to the resources
 you requested.
@@ -129,7 +131,7 @@ Since it's in your home directory, it will persist across jupyterlab sessions.
    (notebook) jovyan@jupyter-tomaugspurger:~$ ls ~/.local/lib/python3.7/site-packages/
    cf_xarray  cf_xarray-0.2.0.dist-info
 
-- Changes in the environment are not propagated to Dask workers (though see
+- Changes in the environment are not propagated to Dask ps (though see
   below for a way to include packages on the workers too).
 - Installing additional packages with pip into an existing conda environment
   risks breaking the environment if doesn't see packages installed by conda and
@@ -299,44 +301,20 @@ in your "local" environment in your home directory on the hub.
 
 Long-term, the best way to add packages to the environemnt is by updating the
 Docker images, as described in :ref:`cloud.software_environment`. But for quickly
-prototyping something on the Dask cluster you can use a
+prototyping something on the Dask cluster you can use a the 
+`Dask PipInstall plugin <https://distributed.dask.org/en/stable/plugins.html#built-in-worker-plugins>`_.
 `Dask WorkerPlugin <https://distributed.dask.org/en/latest/plugins.html#distributed.diagnostics.plugin.WorkerPlugin>`_.
-This lets you inject a bit of code that's run when the worker starts up. The `PipPlugin` below
-uses pip to install a configurable list of packages.
-
-
-.. code-block:: python
-
-   import subprocess
-   import logging
-   from distributed import WorkerPlugin
-
-   class PipPlugin(WorkerPlugin):
-       """
-       Install packages on a worker as it starts up.
-
-       Parameters
-       ----------
-       packages : List[str]
-           A list of packages to install with pip on startup.
-       """
-       def __init__(self, packages):
-           self.packages = packages
-
-       def setup(self, worker):
-           logger = logging.getLogger("distributed.worker")
-           subprocess.call(['python', '-m', 'pip', 'install', '--upgrade'] + self.packages)
-           logger.info("Installed %s", self.packages)
-
-To install packages in dask workers (the example below installs `bulwark <https://pypi.org/project/bulwark/>`_), you'd create a cluster normally and add the plugin:
+To install packages in dask workers (the example below installs `bulwark <https://pypi.org/project/bulwark/>`_),
+you'd create a cluster normally and add the plugin, specifying which packages to intall:
 
 .. code-block:: python
 
+   >>> from dask.distributed import PipInstall
    >>> from dask_gateway import GatewayCluster
    >>> cluster = GatewayCluster()  # create the cluster nomrally
    >>> client = cluster.get_client()
    >>> # Now create and register the plugin. We'll install 'bulwark'
-   >>> plugin = PipPlugin(['bulwark'])
+   >>> plugin = PipInstall(packages=['bulwark'])
    >>> client.register_worker_plugin(plugin)
 
 We can verify the package is now present::

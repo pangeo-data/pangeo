@@ -318,8 +318,10 @@ You must accept this invitation to gain access to Pangeo Cloud resources.</p>
 Google Cloud Platform.</p></li>
 <li><p><a class="reference external" href="https://aws-uswest2.pangeo.io">aws-uswest2.pangeo.io</a>: A hub in AWS.</p></li>
 </ul>
-<p>We recommend choosing a hub based on which data you want to access.
-E.g. if your data live primarily in AWS, choose <code class="docutils literal notranslate"><span class="pre">aws-uswest2</span></code>.</p>
+<p>We recommend choosing a hub based on what data you want to access.
+E.g. if your data of interest live primarily in AWS, choose <code class="docutils literal notranslate"><span class="pre">aws-uswest2</span></code>.
+(See <a class="reference external" href="https://registry.opendata.aws/">AWS Public Datasets</a> and
+<a class="reference external" href="https://cloud.google.com/datasets">Google Cloud Datasets</a>.)</p>
 <p>Once your application is approved, you will be able to log in to the resources
 you requested.</p>
 </div>
@@ -347,7 +349,7 @@ To install into your personal environment, it’s crucial that you include the
 <code class="docutils literal notranslate"><span class="pre">--user</span></code> flag to pip. This installs the package in <code class="docutils literal notranslate"><span class="pre">~/.local/lib/PYTHON/site-packages/</span></code>.
 Since it’s in your home directory, it will persist across jupyterlab sessions.</p>
 <ul class="simple">
-<li><p>Changes in the environment are not propagated to Dask workers (though see
+<li><p>Changes in the environment are not propagated to Dask ps (though see
 below for a way to include packages on the workers too).</p></li>
 <li><p>Installing additional packages with pip into an existing conda environment
 risks breaking the environment if doesn’t see packages installed by conda and
@@ -489,38 +491,17 @@ the image used for JupyterHub. It won’t, however, have changes you’ve made
 in your “local” environment in your home directory on the hub.</p>
 <p>Long-term, the best way to add packages to the environemnt is by updating the
 Docker images, as described in <a class="reference internal" href="#cloud-software-environment"><span class="std std-ref">Software Environment</span></a>. But for quickly
-prototyping something on the Dask cluster you can use a
+prototyping something on the Dask cluster you can use a the
+<a class="reference external" href="https://distributed.dask.org/en/stable/plugins.html#built-in-worker-plugins">Dask PipInstall plugin</a>.
 <a class="reference external" href="https://distributed.dask.org/en/latest/plugins.html#distributed.diagnostics.plugin.WorkerPlugin">Dask WorkerPlugin</a>.
-This lets you inject a bit of code that’s run when the worker starts up. The <cite>PipPlugin</cite> below
-uses pip to install a configurable list of packages.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">subprocess</span>
-<span class="kn">import</span> <span class="nn">logging</span>
-<span class="kn">from</span> <span class="nn">distributed</span> <span class="kn">import</span> <span class="n">WorkerPlugin</span>
-
-<span class="k">class</span> <span class="nc">PipPlugin</span><span class="p">(</span><span class="n">WorkerPlugin</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Install packages on a worker as it starts up.</span>
-
-<span class="sd">    Parameters</span>
-<span class="sd">    ----------</span>
-<span class="sd">    packages : List[str]</span>
-<span class="sd">        A list of packages to install with pip on startup.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">packages</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">packages</span> <span class="o">=</span> <span class="n">packages</span>
-
-    <span class="k">def</span> <span class="nf">setup</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">worker</span><span class="p">):</span>
-        <span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s2">&quot;distributed.worker&quot;</span><span class="p">)</span>
-        <span class="n">subprocess</span><span class="o">.</span><span class="n">call</span><span class="p">([</span><span class="s1">&#39;python&#39;</span><span class="p">,</span> <span class="s1">&#39;-m&#39;</span><span class="p">,</span> <span class="s1">&#39;pip&#39;</span><span class="p">,</span> <span class="s1">&#39;install&#39;</span><span class="p">,</span> <span class="s1">&#39;--upgrade&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">packages</span><span class="p">)</span>
-        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Installed </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">packages</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>To install packages in dask workers (the example below installs <a class="reference external" href="https://pypi.org/project/bulwark/">bulwark</a>), you’d create a cluster normally and add the plugin:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">dask_gateway</span> <span class="kn">import</span> <span class="n">GatewayCluster</span>
+To install packages in dask workers (the example below installs <a class="reference external" href="https://pypi.org/project/bulwark/">bulwark</a>),
+you’d create a cluster normally and add the plugin, specifying which packages to intall:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">dask.distributed</span> <span class="kn">import</span> <span class="n">PipInstall</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">dask_gateway</span> <span class="kn">import</span> <span class="n">GatewayCluster</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">cluster</span> <span class="o">=</span> <span class="n">GatewayCluster</span><span class="p">()</span>  <span class="c1"># create the cluster nomrally</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">client</span> <span class="o">=</span> <span class="n">cluster</span><span class="o">.</span><span class="n">get_client</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="c1"># Now create and register the plugin. We&#39;ll install &#39;bulwark&#39;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">plugin</span> <span class="o">=</span> <span class="n">PipPlugin</span><span class="p">([</span><span class="s1">&#39;bulwark&#39;</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">plugin</span> <span class="o">=</span> <span class="n">PipInstall</span><span class="p">(</span><span class="n">packages</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;bulwark&#39;</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">client</span><span class="o">.</span><span class="n">register_worker_plugin</span><span class="p">(</span><span class="n">plugin</span><span class="p">)</span>
 </pre></div>
 </div>
