@@ -9,29 +9,21 @@ Pangeo
 .. image:: _static/pangeo_simple_logo.svg
    :width: 175 px
 
-A community platform for Big Data geoscience
+A community for Big Data geoscience
 ============================================
 
-.. image:: https://img.shields.io/github/contributors/pangeo-data/pangeo?logo=github&style=flat-square
-   :target: https://github.com/pangeo-data/pangeo
-   :alt: GitHub contributors
-.. image::  https://img.shields.io/discourse/users?server=https%3A%2F%2Fdiscourse.pangeo.io%2F&style=flat-square&logo=discourse
-   :target: https://discourse.pangeo.io/
-   :alt: Discourse Forum
-.. image:: https://img.shields.io/gitter/room/pangeo-data/lobby?color=blue&logo=gitter&style=flat-square
-   :target: https://gitter.im/pangeo-data/Lobby
-   :alt: Gitter
-.. image:: https://img.shields.io/twitter/follow/pangeo_data?logo=twitter&style=flat-square
-   :target: https://twitter.com/pangeo_data
-   :alt: Twitter
+❓ **Have questions about Python software?** Search for answers or ask your own question on the `Pangeo Discourse Forum <https://discourse.pangeo.io/>`_!
 
-This website contains general information about the Pangeo project.
-For news and updates about Pangeo, check out our
-`Medium blog <https://medium.com/pangeo>`_ and our
-`Twitter feed <https://twitter.com/pangeo_data>`_.
-To engage with the Pangeo community, head over to our
-`Discourse forum <https://discourse.pangeo.io/>`_
-or browse our `GitHub repos <https://github.com/pangeo-data/>`_.
+🤩 **Want to hear about new updates to Pangeo software or infrastructure?** Check out our `Medium blog <https://medium.com/pangeo>`_ and our
+`Twitter feed <https://twitter.com/pangeo_data>`_!
+
+😃 **Wondering how you can get involved in the Pangeo community?** Post or answer questions in the `Pangeo Discourse Forum <https://discourse.pangeo.io/>`_, attend a `community meeting <https://pangeo.io/meeting-notes.html>`_, 
+or start issues/create pull requests on our `GitHub repos <https://github.com/pangeo-data/>`_!
+
+☁️ **Interested in getting access to Pangeo Cloud?** Fill out the application form available on the `Pangeo Cloud site <https://pangeo.io/cloud.html>`_.
+
+🧐 **Just curious to learn more about Pangeo?** Read about us on the `About Pangeo page <https://pangeo.io/about.html>`_.
+
 
 
 .. raw:: html
@@ -83,7 +75,7 @@ Our Goals
 Pangeo Gallery
 ^^^^^^^^^^^^^^
 
-Science applications and detailed tutorial for using Pangeo can be found in
+Science applications and detailed tutorials for using Pangeo can be found in
 `Pangeo Gallery <http://gallery.pangeo.io>`_.
 
 
@@ -109,3 +101,16 @@ Contents
    meeting-notes
    meetings/index
    contact
+
+   .. image:: https://img.shields.io/github/contributors/pangeo-data/pangeo?logo=github&style=flat-square
+   :target: https://github.com/pangeo-data/pangeo
+   :alt: GitHub contributors
+.. image::  https://img.shields.io/discourse/users?server=https%3A%2F%2Fdiscourse.pangeo.io%2F&style=flat-square&logo=discourse
+   :target: https://discourse.pangeo.io/
+   :alt: Discourse Forum
+.. image:: https://img.shields.io/gitter/room/pangeo-data/lobby?color=blue&logo=gitter&style=flat-square
+   :target: https://gitter.im/pangeo-data/Lobby
+   :alt: Gitter
+.. image:: https://img.shields.io/twitter/follow/pangeo_data?logo=twitter&style=flat-square
+   :target: https://twitter.com/pangeo_data
+   :alt: Twitter
