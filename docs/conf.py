@@ -40,7 +40,11 @@ extensions = [
     'sphinx.ext.mathjax',
     'sphinx_copybutton',
     'sphinxcontrib.bibtex',
-    'sphinxcontrib.srclinks']
+    'sphinxcontrib.srclinks',
+    'sphinx.ext.graphviz']
+
+# -- GraphViz configuration ----------------------------------
+graphviz_output_format = 'svg'
 
 copybutton_prompt_text = r">>> |\.\.\. |\$ |In \[\d*\]: | {2,5}\.\.\.: | {5,8}: "
 copybutton_prompt_is_regexp = True
@@ -59,7 +63,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'Pangeo'
-copyright = '2018-2021, Pangeo Team'
+copyright = '2018-2022, Pangeo Team'
 author = 'Pangeo Team'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -115,7 +119,7 @@ html_theme_options = {
     # an arbitrary url.
     'navbar_links': [
         ("Blog", "https://medium.com/pangeo", True),
-        ("Forum", "https://discourse.pangeo.io", True),
+        ("Discourse Forum", "https://discourse.pangeo.io", True),
     ],
 }
 
