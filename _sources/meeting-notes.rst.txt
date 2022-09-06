@@ -57,7 +57,7 @@ Working Group Meetings
     * Conferencing: `whereby.com/pangeo <https://whereby.com/pangeo>`_
     * Notes: `Google Doc <https://docs.google.com/document/d/1I-2VNNHoAjjeYvlCezQhFLmiu2OevqGDS5nUAP-6Hfw/edit?usp=sharing>`__
 3. `Project Pythia <https://projectpythia.org>`_ (formerly the Education Working Group)
-    * Schedule: Thursdays at 1p US Eastern Time (alternating between Project Pythia Education and Infrastructure Working Groups)
+    * Schedule: Mondays at 3p US Eastern Time (alternating between Project Pythia Education and Infrastructure Working Groups)
     * Conferencing: `Zoom <https://ucar-edu.zoom.us/j/91375487587>`__ (consult the `Pythia Calendar <https://calendar.google.com/calendar/u/0?cid=Y180cXB2ZjMxNmFmZDltdjBjaTdkMnVpYWZvZ0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t>`_ for how to join)
     * Notes: `link <https://docs.google.com/document/d/e/2PACX-1vQN5YFkZtCZPKVk2Rte2xoHuiqJuYz1KpynsSKmeCLwP-4glUsGuCPJbITwB4OJc8dOhUpHAMacdx59/pub>`__
 4. Pangeo Forge (Cloud Data Platform)
