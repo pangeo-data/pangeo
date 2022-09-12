@@ -39,7 +39,7 @@ Fall 2022 Showcase
      - TBD
      - `TBD <https://discourse.pangeo.io/>`_ |name DOI Badge|
    * - 2022-10-26 4PM EDT
-     - TBD
+     - Hauke Schulz
      - `TBD <https://discourse.pangeo.io/>`_ |name DOI Badge|
    * - 2022-10-19 12PM EDT
      - TBD
@@ -54,17 +54,10 @@ Fall 2022 Showcase
      - TBD
      - `TBD <https://discourse.pangeo.io/>`_ |name DOI Badge|
    * - 2022-09-21 12PM EDT
-     - TBD
-     - `TBD <https://discourse.pangeo.io/>`_ |name DOI Badge|
-   * - 2022-09-21 12PM EDT
-     - TBD
-     - `TBD <https://discourse.pangeo.io/>`_ |name DOI Badge|
-   * - 2022-09-14 4PM EDT
      - Peter Marsh
      - `Accessing NetCDF and GRIB file collections as cloud-native virtual datasets using Kerchunk <https://discourse.pangeo.io/>`_ |name DOI Badge|
      
-Please note that the Pangeo Showcase will go on Winter Break after the talk on Nov. 17th. We will resume Showcase presentations in January 2022. If you are intersted in presenting this Spring, please makes sure to `fill out this short form <https://forms.gle/QwxKusVvrvDakSNs8>`_.
-
+Please note that the Pangeo Showcase will go on Winter Break after the talk on Nov. 17th. We will resume Showcase presentations in January 2023. If you are intersted in presenting, please makes sure to `fill out this short form <https://forms.gle/QwxKusVvrvDakSNs8>`_.
 
 Showcase Archive
 -----------------------------------
