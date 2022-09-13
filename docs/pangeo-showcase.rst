@@ -26,37 +26,34 @@ Fall 2022 Showcase
    * - Date
      - Speaker
      - Title
-   * - Date
-     - Speaker
-     - Title
-   * - 2022-11-16 12PM EST
-     - TBD
-     - `TBD <https://discourse.pangeo.io/>`_ |name DOI Badge|
-   * - 2022-11-09 4PM EST
-     - TBD
-     - `TBD <https://discourse.pangeo.io/>`_ |name DOI Badge|
-   * - 2022-11-02 12PM EDT
-     - TBD
-     - `TBD <https://discourse.pangeo.io/>`_ |name DOI Badge|
-   * - 2022-10-26 4PM EDT
-     - Hauke Schulz
-     - `TBD <https://discourse.pangeo.io/>`_ |name DOI Badge|
-   * - 2022-10-19 12PM EDT
-     - TBD
-     - `TBD <https://discourse.pangeo.io/>`_ |name DOI Badge|
-   * - 2022-10-12 4PM EDT
-     - TBD
-     - `TBD <https://discourse.pangeo.io/>`_ |name DOI Badge|
-   * - 2022-10-05 12PM EDT
-     - TBD
-     - `TBD <https://discourse.pangeo.io/>`_ |name DOI Badge|
-   * - 2022-09-28 4PM EDT
-     - TBD
-     - `TBD <https://discourse.pangeo.io/>`_ |name DOI Badge|
    * - 2022-09-21 12PM EDT
      - Peter Marsh
      - `Accessing NetCDF and GRIB file collections as cloud-native virtual datasets using Kerchunk <https://discourse.pangeo.io/>`_ |name DOI Badge|
-     
+   * - 2022-09-28 4PM EDT
+     - TBD
+     - `TBD <https://discourse.pangeo.io/>`_ |name DOI Badge|     
+   * - 2022-10-05 12PM EDT
+     - TBD
+     - `TBD <https://discourse.pangeo.io/>`_ |name DOI Badge|     
+   * - 2022-10-12 4PM EDT
+     - TBD
+     - `TBD <https://discourse.pangeo.io/>`_ |name DOI Badge|
+   * - 2022-10-19 12PM EDT
+     - TBD
+     - `TBD <https://discourse.pangeo.io/>`_ |name DOI Badge|     
+   * - 2022-10-26 4PM EDT
+     - Hauke Schulz
+     - `Xbitinfo: Compress datasets based on their information content <https://discourse.pangeo.io/>`_ |name DOI Badge|     
+   * - 2022-11-02 12PM EDT
+     - TBD
+     - `TBD <https://discourse.pangeo.io/>`_ |name DOI Badge|     
+   * - 2022-11-09 4PM EST
+     - TBD
+     - `TBD <https://discourse.pangeo.io/>`_ |name DOI Badge|
+   * - 2022-11-16 12PM EST
+     - TBD
+     - `TBD <https://discourse.pangeo.io/>`_ |name DOI Badge|
+
 Please note that the Pangeo Showcase will go on Winter Break after the talk on Nov. 17th. We will resume Showcase presentations in January 2023. If you are intersted in presenting, please makes sure to `fill out this short form <https://forms.gle/QwxKusVvrvDakSNs8>`_.
 
 Showcase Archive
