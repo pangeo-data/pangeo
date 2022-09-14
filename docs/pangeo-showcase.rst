@@ -30,17 +30,17 @@ Fall 2022 Showcase
      - Peter Marsh
      - `Accessing NetCDF and GRIB file collections as cloud-native virtual datasets using Kerchunk <https://discourse.pangeo.io/>`_ |name DOI Badge|
    * - 2022-09-28 4PM EDT
-     - TBD
-     - `TBD <https://discourse.pangeo.io/>`_ |name DOI Badge|     
+     - Rich Signel
+     - `My ERA5 Journey: From API-to-ARCO" <https://discourse.pangeo.io/>`_ |name DOI Badge|     
    * - 2022-10-05 12PM EDT
-     - TBD
+     - Leah Wasser
      - `TBD <https://discourse.pangeo.io/>`_ |name DOI Badge|     
    * - 2022-10-12 4PM EDT
      - TBD
      - `TBD <https://discourse.pangeo.io/>`_ |name DOI Badge|
    * - 2022-10-19 12PM EDT
-     - TBD
-     - `TBD <https://discourse.pangeo.io/>`_ |name DOI Badge|     
+     - Matthias Moh
+     - `openEO: What it is and how it relates to Pangeo <https://discourse.pangeo.io/>`_ |name DOI Badge|     
    * - 2022-10-26 4PM EDT
      - Hauke Schulz
      - `Xbitinfo: Compress datasets based on their information content <https://discourse.pangeo.io/>`_ |name DOI Badge|     
