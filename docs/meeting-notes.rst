@@ -69,6 +69,10 @@ Working Group Meetings
     * Schedule: First Friday of each month at 5pm CET
     * Conferencing: `whereby.com/pangeo <https://whereby.com/pangeo>`_
     * Notes: `Google Doc <https://docs.google.com/document/d/1mMDlFblBOeEmHnhaZZfgaMJvuzpw28ro3uyJngeY_jk/edit>`__
+6. Distributed Array Computing Working Group
+    * Schedule: Every Other Monday at 1pm ET
+    * Conferencing: `Zoom <https://columbiauniversity.zoom.us/j/99521529645?pwd=YzhIbDlhZUE1dUNvR2R4SzV5VVBhQT09>`_
+    * `Forum Post <https://discourse.pangeo.io/t/new-working-group-for-distributed-array-computing/2734>`_
 
 Past working groups include the `Data Working Group <https://docs.google.com/document/d/e/2PACX-1vTP1iV4YJcHznwcfUwlLoEDVPdgtD9iAXql73vn4uAotOQMVh9R8vTIKxPHnvnrijX1C24T5aJJZ95x/pub>`_
 and the `Education Working Group <https://github.com/pangeo-data/education-material>`_.
