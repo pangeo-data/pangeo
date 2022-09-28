@@ -28,16 +28,13 @@ Fall 2022 Showcase
      - Title
    * - 2022-09-21 12PM EDT
      - Peter Marsh
-     - `Accessing NetCDF and GRIB file collections as cloud-native virtual datasets using Kerchunk <https://discourse.pangeo.io/t/september-21th-2022-accessing-netcdf-and-grib-file-collections-as-cloud-native-virtual-datasets-using-kerchunk/2749>`_ 
-   * - 2022-09-28 4PM EDT
-     - Rich Signell
-     - `My ERA5 Journey: From API-to-ARCO <https://discourse.pangeo.io/c/meta/pangeo-showcase/19>`_      
+     - `Accessing NetCDF and GRIB file collections as cloud-native virtual datasets using Kerchunk <https://discourse.pangeo.io/t/september-21th-2022-accessing-netcdf-and-grib-file-collections-as-cloud-native-virtual-datasets-using-kerchunk/2749>`_ |Marsh DOI Badge|
    * - 2022-10-05 12PM EDT
      - Leah Wasser
      - `PyOpenSci <https://discourse.pangeo.io/c/meta/pangeo-showcase/19>`_      
    * - 2022-10-12 4PM EDT
-     - TBD
-     - `TBD <https://discourse.pangeo.io/c/meta/pangeo-showcase/19>`_ 
+     - Rich Signell
+     - `My ERA5 Journey: From API-to-ARCO <https://discourse.pangeo.io/c/meta/pangeo-showcase/19>`_      
    * - 2022-10-19 12PM EDT
      - Matthias Mohr
      - `openEO: What it is and how it relates to Pangeo <https://discourse.pangeo.io/c/meta/pangeo-showcase/19>`_      
@@ -45,7 +42,7 @@ Fall 2022 Showcase
      - Hauke Schulz
      - `Xbitinfo: Compress datasets based on their information content <https://discourse.pangeo.io/c/meta/pangeo-showcase/19>`_      
    * - 2022-11-02 12PM EDT
-     - TBD
+     - Emma Marshall
      - `TBD <https://discourse.pangeo.io/c/meta/pangeo-showcase/19>`_    
    * - 2022-11-09 4PM EST
      - TBD
@@ -138,6 +135,9 @@ Showcase Archive
      - `Parallel Analysis Using Pangeo vs the Command-Line <https://discourse.pangeo.io/t/april-7-2021-parallel-analysis-using-pangeo-vs-the-command-line/1373>`_ |McGinnis DOI Badge|
 
 
+
+.. |Marsh DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.7120422.svg
+   :target: https://doi.org/10.5281/zenodo.7120422
 
 .. |Cherian DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.5772165.svg
    :target: https://doi.org/10.5281/zenodo.5772165
