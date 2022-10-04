@@ -31,7 +31,7 @@ Fall 2022 Showcase
      - `Accessing NetCDF and GRIB file collections as cloud-native virtual datasets using Kerchunk <https://discourse.pangeo.io/t/september-21th-2022-accessing-netcdf-and-grib-file-collections-as-cloud-native-virtual-datasets-using-kerchunk/2749>`_ |Marsh DOI Badge|
    * - 2022-10-05 12PM EDT
      - Leah Wasser
-     - `PyOpenSci <https://discourse.pangeo.io/c/meta/pangeo-showcase/19>`_      
+     - `PyOpenSci <https://discourse.pangeo.io/t/wednesday-october-5th-2022-pyopensci-a-diverse-community-that-supports-open-tools-that-drive-open-science/2783>`_      
    * - 2022-10-12 4PM EDT
      - Rich Signell
      - `My ERA5 Journey: From API-to-ARCO <https://discourse.pangeo.io/c/meta/pangeo-showcase/19>`_      
@@ -43,7 +43,7 @@ Fall 2022 Showcase
      - `Xbitinfo: Compress datasets based on their information content <https://discourse.pangeo.io/c/meta/pangeo-showcase/19>`_      
    * - 2022-11-02 12PM EDT
      - Emma Marshall
-     - `TBD <https://discourse.pangeo.io/c/meta/pangeo-showcase/19>`_    
+     - `Jupyter book tutorials demonstrating xarray-based workflows for cloud-hosted remote sensing data <https://discourse.pangeo.io/c/meta/pangeo-showcase/19>`_    
    * - 2022-11-09 4PM EST
      - TBD
      - `TBD <https://discourse.pangeo.io/c/meta/pangeo-showcase/19>`_ 
@@ -136,8 +136,6 @@ Showcase Archive
 
 
 
-.. |Marsh DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.7120422.svg
-   :target: https://doi.org/10.5281/zenodo.7120422
 
 .. |Cherian DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.5772165.svg
    :target: https://doi.org/10.5281/zenodo.5772165
@@ -166,6 +164,9 @@ Showcase Archive
 .. |Flores DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.5535595.svg
    :target: https://doi.org/10.5281/zenodo.5535595
    
+.. |Marsh DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.7140825.svg
+   :target: https://doi.org/10.5281/zenodo.7140825
+
 .. |Mill DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.5535519.svg
    :target: https://doi.org/10.5281/zenodo.5535519
    
