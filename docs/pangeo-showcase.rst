@@ -31,10 +31,10 @@ Fall 2022 Showcase
      - `Accessing NetCDF and GRIB file collections as cloud-native virtual datasets using Kerchunk <https://discourse.pangeo.io/t/september-21th-2022-accessing-netcdf-and-grib-file-collections-as-cloud-native-virtual-datasets-using-kerchunk/2749>`_ |Marsh DOI Badge|
    * - 2022-10-05 12PM EDT
      - Leah Wasser
-     - `PyOpenSci <https://discourse.pangeo.io/t/wednesday-october-5th-2022-pyopensci-a-diverse-community-that-supports-open-tools-that-drive-open-science/2783>`_      
+     - `PyOpenSci <https://discourse.pangeo.io/t/wednesday-october-5th-2022-pyopensci-a-diverse-community-that-supports-open-tools-that-drive-open-science/2783>`_ |Wasser DOI Badge|
    * - 2022-10-12 4PM EDT
      - Rich Signell
-     - `My ERA5 Journey: From API-to-ARCO <https://discourse.pangeo.io/c/meta/pangeo-showcase/19>`_      
+     - `My ERA5 Journey: From API-to-ARCO <https://discourse.pangeo.io/t/wednesday-october-12th-2022-my-era5-journey-from-api-to-arco/2814>`_      
    * - 2022-10-19 12PM EDT
      - Matthias Mohr
      - `openEO: What it is and how it relates to Pangeo <https://discourse.pangeo.io/c/meta/pangeo-showcase/19>`_      
@@ -208,3 +208,6 @@ Showcase Archive
 
 .. |Austin DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.4739726.svg
    :target: https://doi.org/10.5281/zenodo.4739726
+
+.. |Wasser DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.7158586.svg
+   :target: https://doi.org/10.5281/zenodo.7158585
