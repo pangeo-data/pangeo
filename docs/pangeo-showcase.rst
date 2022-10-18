@@ -27,23 +27,23 @@ Fall 2022 Showcase
      - Speaker
      - Title
    * - 2022-09-21 12PM EDT
-     - Peter Marsh
+     - Peter Marsh, University of Cape Town 
      - `Accessing NetCDF and GRIB file collections as cloud-native virtual datasets using Kerchunk <https://discourse.pangeo.io/t/september-21th-2022-accessing-netcdf-and-grib-file-collections-as-cloud-native-virtual-datasets-using-kerchunk/2749>`_ |Marsh DOI Badge|
    * - 2022-10-05 12PM EDT
-     - Leah Wasser
+     - Leah Wasser, pyOpenSci
      - `PyOpenSci <https://discourse.pangeo.io/t/wednesday-october-5th-2022-pyopensci-a-diverse-community-that-supports-open-tools-that-drive-open-science/2783>`_ |Wasser DOI Badge|
    * - 2022-10-12 4PM EDT
-     - Rich Signell
+     - Rich Signell, USGS
      - `My ERA5 Journey: From API-to-ARCO <https://discourse.pangeo.io/t/wednesday-october-12th-2022-my-era5-journey-from-api-to-arco/2814>`_      
    * - 2022-10-19 12PM EDT
-     - Matthias Mohr
-     - `openEO: What it is and how it relates to Pangeo <https://discourse.pangeo.io/c/meta/pangeo-showcase/19>`_      
+     - Matthias Mohr, openEO
+     - `openEO: What it is and how it relates to Pangeo <https://discourse.pangeo.io/t/wednesday-october-19th-2022-openeo-what-it-is-and-how-it-relates-to-pangeo/2826>`_      
    * - 2022-10-26 4PM EDT
-     - Hauke Schulz
-     - `Xbitinfo: Compress datasets based on their information content <https://discourse.pangeo.io/c/meta/pangeo-showcase/19>`_      
+     - Hauke Schulz, CICOES/University of Washington
+     - `Xbitinfo: Compress datasets based on their information content <https://discourse.pangeo.io/t/wednesday-october-26th-2022-xbitinfo-compress-datasets-based-on-their-information/2830>`_      
    * - 2022-11-02 12PM EDT
-     - Emma Marshall
-     - `Jupyter book tutorials demonstrating xarray-based workflows for cloud-hosted remote sensing data <https://discourse.pangeo.io/c/meta/pangeo-showcase/19>`_    
+     - Emma Marshall, University of Utah
+     - `Jupyter book tutorials demonstrating xarray-based workflows for cloud-hosted remote sensing data <https://discourse.pangeo.io/t/wednesday-november-2nd-2022-jupyter-book-tutorials-demonstrating-xarray-based-workflows-for-cloud-hosted-remote-sensing-data/2834>`_    
    * - 2022-11-09 4PM EST
      - TBD
      - `TBD <https://discourse.pangeo.io/c/meta/pangeo-showcase/19>`_ 
