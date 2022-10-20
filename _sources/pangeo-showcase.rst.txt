@@ -34,10 +34,10 @@ Fall 2022 Showcase
      - `PyOpenSci <https://discourse.pangeo.io/t/wednesday-october-5th-2022-pyopensci-a-diverse-community-that-supports-open-tools-that-drive-open-science/2783>`_ |Wasser DOI Badge|
    * - 2022-10-12 4PM EDT
      - Rich Signell, USGS
-     - `My ERA5 Journey: From API-to-ARCO <https://discourse.pangeo.io/t/wednesday-october-12th-2022-my-era5-journey-from-api-to-arco/2814>`_      
+     - `My ERA5 Journey: From API-to-ARCO <https://discourse.pangeo.io/t/wednesday-october-12th-2022-my-era5-journey-from-api-to-arco/2814>`_ |Signell DOI Badge|      
    * - 2022-10-19 12PM EDT
      - Matthias Mohr, openEO
-     - `openEO: What it is and how it relates to Pangeo <https://discourse.pangeo.io/t/wednesday-october-19th-2022-openeo-what-it-is-and-how-it-relates-to-pangeo/2826>`_      
+     - `openEO: What it is and how it relates to Pangeo <https://discourse.pangeo.io/t/wednesday-october-19th-2022-openeo-what-it-is-and-how-it-relates-to-pangeo/2826>`_ |Jacob DOI Badge|      
    * - 2022-10-26 4PM EDT
      - Hauke Schulz, CICOES/University of Washington
      - `Xbitinfo: Compress datasets based on their information content <https://discourse.pangeo.io/t/wednesday-october-26th-2022-xbitinfo-compress-datasets-based-on-their-information/2830>`_      
@@ -211,3 +211,9 @@ Showcase Archive
 
 .. |Wasser DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.7158586.svg
    :target: https://doi.org/10.5281/zenodo.7158585
+
+.. |Signell DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.7226344.svg
+   :target: https://doi.org/10.5281/zenodo.7226344
+
+.. |Jacob DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.7229398.svg
+   :target: https://doi.org/10.5281/zenodo.7229397
