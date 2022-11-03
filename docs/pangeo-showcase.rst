@@ -40,16 +40,16 @@ Fall 2022 Showcase
      - `openEO: What it is and how it relates to Pangeo <https://discourse.pangeo.io/t/wednesday-october-19th-2022-openeo-what-it-is-and-how-it-relates-to-pangeo/2826>`_ |Jacob DOI Badge|      
    * - 2022-10-26 4PM EDT
      - Hauke Schulz, CICOES/University of Washington
-     - `Xbitinfo: Compress datasets based on their information content <https://discourse.pangeo.io/t/wednesday-october-26th-2022-xbitinfo-compress-datasets-based-on-their-information/2830>`_      
+     - `Xbitinfo: Compress datasets based on their information content <https://discourse.pangeo.io/t/wednesday-october-26th-2022-xbitinfo-compress-datasets-based-on-their-information/2830>`_ |Hauke DOI Badge|      
    * - 2022-11-02 12PM EDT
      - Emma Marshall, University of Utah
      - `Jupyter book tutorials demonstrating xarray-based workflows for cloud-hosted remote sensing data <https://discourse.pangeo.io/t/wednesday-november-2nd-2022-jupyter-book-tutorials-demonstrating-xarray-based-workflows-for-cloud-hosted-remote-sensing-data/2834>`_    
    * - 2022-11-09 4PM EST
-     - TBD
-     - `TBD <https://discourse.pangeo.io/c/meta/pangeo-showcase/19>`_ 
+     - Joris Van den Bossche, GeoPandas / Voltron Data
+     - `GeoPandas: Easy, fast and scalable geospatial analysis in Python <https://discourse.pangeo.io/t/wednesday-november-9th-2022-geopandas-easy-fast-and-scalable-geospatial-analysis-in-python/2895>`_ 
    * - 2022-11-16 12PM EST
-     - TBD
-     - `TBD <https://discourse.pangeo.io/c/meta/pangeo-showcase/19>`_ 
+     - James A. Bednar, Anaconda
+     - `Major advances in HoloViz: GUI explorer to build plots, interactive pipelines, and publish in-browser apps <https://discourse.pangeo.io/t/wednesday-november-16th-2022-major-advances-in-holoviz-for-pangeo-gui-explorer-to-build-plots-easy-interactive-pipelines-and-publishing-in-browser-apps/2876>`_ 
 
 Please note that the Pangeo Showcase will go on Winter Break after the talk on Nov. 17th. We will resume Showcase presentations in January 2023. If you are intersted in presenting, please make sure to `fill out this short form <https://forms.gle/QwxKusVvrvDakSNs8>`_.
 
@@ -157,6 +157,9 @@ Showcase Archive
    
 .. |Habermann DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.5562672.svg
    :target: https://doi.org/10.5281/zenodo.5562672
+
+.. |Hauke DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.7259092.svg
+   :target: https://doi.org/10.5281/zenodo.7259092
 
 .. |Gilford DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.5547337.svg
    :target: https://doi.org/10.5281/zenodo.5547337
