@@ -43,13 +43,13 @@ Fall 2022 Showcase
      - `Xbitinfo: Compress datasets based on their information content <https://discourse.pangeo.io/t/wednesday-october-26th-2022-xbitinfo-compress-datasets-based-on-their-information/2830>`_ |Hauke DOI Badge|      
    * - 2022-11-02 12PM EDT
      - Emma Marshall, University of Utah
-     - `Jupyter book tutorials demonstrating xarray-based workflows for cloud-hosted remote sensing data <https://discourse.pangeo.io/t/wednesday-november-2nd-2022-jupyter-book-tutorials-demonstrating-xarray-based-workflows-for-cloud-hosted-remote-sensing-data/2834>`_    
+     - `Jupyter book tutorials demonstrating xarray-based workflows for cloud-hosted remote sensing data <https://discourse.pangeo.io/t/wednesday-november-2nd-2022-jupyter-book-tutorials-demonstrating-xarray-based-workflows-for-cloud-hosted-remote-sensing-data/2834>`_ |Marshall DOI Badge|
    * - 2022-11-09 4PM EST
      - Joris Van den Bossche, GeoPandas / Voltron Data
-     - `GeoPandas: Easy, fast and scalable geospatial analysis in Python <https://discourse.pangeo.io/t/wednesday-november-9th-2022-geopandas-easy-fast-and-scalable-geospatial-analysis-in-python/2895>`_ 
+     - `GeoPandas: Easy, fast and scalable geospatial analysis in Python <https://discourse.pangeo.io/t/wednesday-november-9th-2022-geopandas-easy-fast-and-scalable-geospatial-analysis-in-python/2895>`_ |Bossche DOI Badge|
    * - 2022-11-16 12PM EST
      - James A. Bednar, Anaconda
-     - `Major advances in HoloViz: GUI explorer to build plots, interactive pipelines, and publish in-browser apps <https://discourse.pangeo.io/t/wednesday-november-16th-2022-major-advances-in-holoviz-for-pangeo-gui-explorer-to-build-plots-easy-interactive-pipelines-and-publishing-in-browser-apps/2876>`_ 
+     - `Major advances in HoloViz: GUI explorer to build plots, interactive pipelines, and publish in-browser apps <https://discourse.pangeo.io/t/wednesday-november-16th-2022-major-advances-in-holoviz-for-pangeo-gui-explorer-to-build-plots-easy-interactive-pipelines-and-publishing-in-browser-apps/2876>`_ |Bednar DOI Badge|
 
 Please note that the Pangeo Showcase will go on Winter Break after the talk on Nov. 17th. We will resume Showcase presentations in January 2023. If you are intersted in presenting, please make sure to `fill out this short form <https://forms.gle/QwxKusVvrvDakSNs8>`_.
 
@@ -136,24 +136,47 @@ Showcase Archive
 
 
 
+.. |Augspurger DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.5596894.svg
+   :target: https://doi.org/10.5281/zenodo.5596894
+
+.. |Austin DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.4739726.svg
+   :target: https://doi.org/10.5281/zenodo.4739726
+   
+.. |Bednar DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.7342703.svg
+   :target: https://doi.org/10.5281/zenodo.7342703
+
+.. |Blancas Reyes DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.4939972.svg
+   :target: https://doi.org/10.5281/zenodo.4939972
+
+.. |Bossche DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.7320003.svg
+   :target: https://doi.org/10.5281/zenodo.7320003
+
+.. |Bovy DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.4712336.svg 
+   :target: https://doi.org/10.5281/zenodo.4712336
+
+.. |Brandt DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.5675969.svg
+   :target: https://doi.org/10.5281/zenodo.5675969
+
+.. |Carvalho DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.4697095.svg
+   :target: https://doi.org/10.5281/zenodo.4697095       
+
+.. |Chegini DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.4837330.svg
+   :target: https://doi.org/10.5281/zenodo.4837330
 
 .. |Cherian DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.5772165.svg
    :target: https://doi.org/10.5281/zenodo.5772165
 
 .. |Clyne DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.5700525.svg
    :target: https://doi.org/10.5281/zenodo.5700525
-   
-.. |Brandt DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.5675969.svg
-   :target: https://doi.org/10.5281/zenodo.5675969
-   
-.. |Martin DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.5638862.svg
-   :target: https://doi.org/10.5281/zenodo.5638862
-   
-.. |Augspurger DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.5596894.svg
-   :target: https://doi.org/10.5281/zenodo.5596894
-   
-.. |Maull DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.5596053.svg
-   :target: https://doi.org/10.5281/zenodo.5596053
+
+.. |Flores DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.5535595.svg
+   :target: https://doi.org/10.5281/zenodo.5535595
+
+.. |Gentemann DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.4783039.svg
+   :target: https://doi.org/10.5281/zenodo.4783039
+
+.. |Gilford DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.5547337.svg
+   :target: https://doi.org/10.5281/zenodo.5547337
    
 .. |Habermann DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.5562672.svg
    :target: https://doi.org/10.5281/zenodo.5562672
@@ -161,62 +184,47 @@ Showcase Archive
 .. |Hauke DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.7259092.svg
    :target: https://doi.org/10.5281/zenodo.7259092
 
-.. |Gilford DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.5547337.svg
-   :target: https://doi.org/10.5281/zenodo.5547337
-   
-.. |Flores DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.5535595.svg
-   :target: https://doi.org/10.5281/zenodo.5535595
-   
+.. |Huard DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.4727950.svg
+   :target: https://doi.org/10.5281/zenodo.4727950
+
+.. |Jacob DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.7229398.svg
+   :target: https://doi.org/10.5281/zenodo.7229397
+
+.. |Kellndorfer DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.4756696.svg
+   :target: https://doi.org/10.5281/zenodo.4756696
+
+.. |Lowndes DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.5090115.svg
+   :target: https://doi.org/10.5281/zenodo.5090115
+
 .. |Marsh DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.7140825.svg
    :target: https://doi.org/10.5281/zenodo.7140825
+
+.. |Marshall DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.7310114.svg
+   :target: https://doi.org/10.5281/zenodo.7310114
+   
+.. |Martin DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.5638862.svg
+   :target: https://doi.org/10.5281/zenodo.5638862
+   
+.. |Maull DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.5596053.svg
+   :target: https://doi.org/10.5281/zenodo.5596053
+
+.. |McGinnis DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.4670458.svg
+   :target: https://doi.org/10.5281/zenodo.4670458
 
 .. |Mill DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.5535519.svg
    :target: https://doi.org/10.5281/zenodo.5535519
    
-.. |Lowndes DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.5090115.svg
-   :target: https://doi.org/10.5281/zenodo.5090115
-   
-.. |Rose DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.5037185.svg
-   :target: https://doi.org/10.5281/zenodo.5037185
-   
 .. |Partee DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.4986182.svg
-   :target: https://doi.org/10.5281/zenodo.4986182
-   
+   :target: https://doi.org/10.5281/zenodo.4986182   
+
 .. |Rocklin DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.4964489.svg
    :target: https://doi.org/10.5281/zenodo.4964489
 
-.. |Blancas Reyes DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.4939972.svg
-   :target: https://doi.org/10.5281/zenodo.4939972
-   
-.. |Chegini DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.4837330.svg
-   :target: https://doi.org/10.5281/zenodo.4837330
-   
-.. |Gentemann DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.4783039.svg
-   :target: https://doi.org/10.5281/zenodo.4783039
-   
-.. |McGinnis DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.4670458.svg
-   :target: https://doi.org/10.5281/zenodo.4670458
-   
-.. |Carvalho DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.4697095.svg
-   :target: https://doi.org/10.5281/zenodo.4697095       
-
-.. |Bovy DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.4712336.svg 
-   :target: https://doi.org/10.5281/zenodo.4712336
-   
-.. |Huard DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.4727950.svg
-   :target: https://doi.org/10.5281/zenodo.4727950
- 
-.. |Kellndorfer DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.4756696.svg
-   :target: https://doi.org/10.5281/zenodo.4756696
-
-.. |Austin DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.4739726.svg
-   :target: https://doi.org/10.5281/zenodo.4739726
-
-.. |Wasser DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.7158586.svg
-   :target: https://doi.org/10.5281/zenodo.7158585
+.. |Rose DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.5037185.svg
+   :target: https://doi.org/10.5281/zenodo.5037185
 
 .. |Signell DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.7226344.svg
    :target: https://doi.org/10.5281/zenodo.7226344
 
-.. |Jacob DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.7229398.svg
-   :target: https://doi.org/10.5281/zenodo.7229397
+.. |Wasser DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.7158586.svg
+   :target: https://doi.org/10.5281/zenodo.7158585
