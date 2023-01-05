@@ -15,4 +15,4 @@ jobs:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
         exempt-issue-labels: 'pinned,security'
         days-before-close: -1
-        stale-issue-message: 'This issue has been automatically marked as stale because it has not had recent activity. It will be closed if no further activity occurs. Thank you for your contributions.'
+        stale-issue-message: 'This issue has been automatically marked as stale because it has not had recent activity. Thank you for your contributions.'
