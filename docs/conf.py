@@ -76,7 +76,7 @@ author = 'Pangeo Team'
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = None
+language = "en"
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
@@ -225,3 +225,7 @@ def setup(app):
     app.add_css_file("example_gallery_styles_patched.css")
     app.add_css_file("pangeo-main-site-custom.css")
     app.connect("source-read", rstjinja)
+
+# -- Options for sphinxcontrib.bibtex -------------------------------------
+
+bibtex_bibfiles = ['pangeo_publications.bib']
