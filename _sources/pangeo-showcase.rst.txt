@@ -15,8 +15,42 @@ available on the `Pangeo YouTube Channel <https://youtube.com/playlist?list=PLuQ
 
 * **Conferencing**:   `Zoom <https://columbiauniversity.zoom.us/j/94877958106?pwd=UkE0UHF1U0x3VTVUNEJTam9mTXVHZz09>`_
 
-Fall 2022 Showcase
+Spring 2023 Showcase
 ------------------------------------------------------
+
+.. list-table::
+   :widths: 15 25 60
+   :header-rows: 1
+   :align: left
+
+   * - Date
+     - Speaker
+     - Title
+   * - 2023-02-01 4PM EST
+     - Tom Nicholas, Columbia University 
+     - Xarray-Datatree: Hierarchical Data Structures for Multi-Model Science
+   * - 2023-02-08 12PM EST
+     - Alex Kerney, Gulf of Maine Research Institute 
+     - Mental Health for Geoscientists
+   * - 2023-02-15 4PM EST
+     - Tim Crone, Columbia University
+     - *TBD*
+   * - 2023-02-22 12PM EST
+     - Ramon Ramirez-Linan, Navteca
+     - D'explorer Explore cloud datasets from your notebooks (Replacement to S3 Explorer from IBM)
+   * - 2023-03-01 4PM EST
+     - *TBD*
+     - *TBD*
+   * - 2023-03-08 12PM EST
+     - Isa Elegbede, Lagos State University
+     - Data inclusivity and user needs for the global south
+   
+
+**We still have slots available from March 15 through June** - if you are intersted in presenting, please `fill out this short form <https://forms.gle/QwxKusVvrvDakSNs8>`_.
+After June, the Pangeo Showcase will go on summer break and will resume in September 2023. 
+
+Showcase Archive
+-----------------------------------
 
 .. list-table::
    :widths: 15 25 60
@@ -50,17 +84,6 @@ Fall 2022 Showcase
    * - 2022-11-16 12PM EST
      - James A. Bednar, Anaconda
      - `Major advances in HoloViz: GUI explorer to build plots, interactive pipelines, and publish in-browser apps <https://discourse.pangeo.io/t/wednesday-november-16th-2022-major-advances-in-holoviz-for-pangeo-gui-explorer-to-build-plots-easy-interactive-pipelines-and-publishing-in-browser-apps/2876>`_ |Bednar DOI Badge|
-
-Please note that the Pangeo Showcase will go on Winter Break after the talk on Nov. 17th. We will resume Showcase presentations in January 2023. If you are intersted in presenting, please make sure to `fill out this short form <https://forms.gle/QwxKusVvrvDakSNs8>`_.
-
-Showcase Archive
------------------------------------
-
-.. list-table::
-   :widths: 15 25 60
-   :header-rows: 1
-   :align: left
-
    * - Date
      - Speaker
      - Title
