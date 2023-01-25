@@ -39,8 +39,8 @@ Spring 2023 Showcase
      - Ramon Ramirez-Linan, Navteca
      - D'explorer Explore cloud datasets from your notebooks (Replacement to S3 Explorer from IBM)
    * - 2023-03-01 4PM EST
-     - *TBD*
-     - *TBD*
+     - Tasha Snow, Colorado School of Mines
+     - CryoCloud: Accelerating discovery for NASA Cryosphere communities with open cloud infrastructure
    * - 2023-03-08 12PM EST
      - Isa Elegbede, Lagos State University
      - Data inclusivity and user needs for the global south
@@ -48,6 +48,7 @@ Spring 2023 Showcase
 
 **We still have slots available from March 15 through June** - if you are intersted in presenting, please `fill out this short form <https://forms.gle/QwxKusVvrvDakSNs8>`_.
 After June, the Pangeo Showcase will go on summer break and will resume in September 2023. 
+
 
 Showcase Archive
 -----------------------------------
@@ -60,33 +61,30 @@ Showcase Archive
    * - Date
      - Speaker
      - Title
-   * - 2022-09-21 12PM EDT
-     - Peter Marsh, University of Cape Town 
-     - `Accessing NetCDF and GRIB file collections as cloud-native virtual datasets using Kerchunk <https://discourse.pangeo.io/t/september-21th-2022-accessing-netcdf-and-grib-file-collections-as-cloud-native-virtual-datasets-using-kerchunk/2749>`_ |Marsh DOI Badge|
-   * - 2022-10-05 12PM EDT
-     - Leah Wasser, pyOpenSci
-     - `PyOpenSci <https://discourse.pangeo.io/t/wednesday-october-5th-2022-pyopensci-a-diverse-community-that-supports-open-tools-that-drive-open-science/2783>`_ |Wasser DOI Badge|
-   * - 2022-10-12 4PM EDT
-     - Rich Signell, USGS
-     - `My ERA5 Journey: From API-to-ARCO <https://discourse.pangeo.io/t/wednesday-october-12th-2022-my-era5-journey-from-api-to-arco/2814>`_ |Signell DOI Badge|      
+   * - 2022-11-16 12PM EST
+     - James A. Bednar, Anaconda
+     - `Major advances in HoloViz: GUI explorer to build plots, interactive pipelines, and publish in-browser apps <https://discourse.pangeo.io/t/wednesday-november-16th-2022-major-advances-in-holoviz-for-pangeo-gui-explorer-to-build-plots-easy-interactive-pipelines-and-publishing-in-browser-apps/2876>`_ |Bednar DOI Badge|
+   * - 2022-11-09 4PM EST
+     - Joris Van den Bossche, GeoPandas / Voltron Data
+     - `GeoPandas: Easy, fast and scalable geospatial analysis in Python <https://discourse.pangeo.io/t/wednesday-november-9th-2022-geopandas-easy-fast-and-scalable-geospatial-analysis-in-python/2895>`_ |Bossche DOI Badge|
+   * - 2022-11-02 12PM EDT
+     - Emma Marshall, University of Utah
+     - `Jupyter book tutorials demonstrating xarray-based workflows for cloud-hosted remote sensing data <https://discourse.pangeo.io/t/wednesday-november-2nd-2022-jupyter-book-tutorials-demonstrating-xarray-based-workflows-for-cloud-hosted-remote-sensing-data/2834>`_ |Marshall DOI Badge|
    * - 2022-10-19 12PM EDT
      - Matthias Mohr, openEO
      - `openEO: What it is and how it relates to Pangeo <https://discourse.pangeo.io/t/wednesday-october-19th-2022-openeo-what-it-is-and-how-it-relates-to-pangeo/2826>`_ |Jacob DOI Badge|      
    * - 2022-10-26 4PM EDT
      - Hauke Schulz, CICOES/University of Washington
      - `Xbitinfo: Compress datasets based on their information content <https://discourse.pangeo.io/t/wednesday-october-26th-2022-xbitinfo-compress-datasets-based-on-their-information/2830>`_ |Hauke DOI Badge|      
-   * - 2022-11-02 12PM EDT
-     - Emma Marshall, University of Utah
-     - `Jupyter book tutorials demonstrating xarray-based workflows for cloud-hosted remote sensing data <https://discourse.pangeo.io/t/wednesday-november-2nd-2022-jupyter-book-tutorials-demonstrating-xarray-based-workflows-for-cloud-hosted-remote-sensing-data/2834>`_ |Marshall DOI Badge|
-   * - 2022-11-09 4PM EST
-     - Joris Van den Bossche, GeoPandas / Voltron Data
-     - `GeoPandas: Easy, fast and scalable geospatial analysis in Python <https://discourse.pangeo.io/t/wednesday-november-9th-2022-geopandas-easy-fast-and-scalable-geospatial-analysis-in-python/2895>`_ |Bossche DOI Badge|
-   * - 2022-11-16 12PM EST
-     - James A. Bednar, Anaconda
-     - `Major advances in HoloViz: GUI explorer to build plots, interactive pipelines, and publish in-browser apps <https://discourse.pangeo.io/t/wednesday-november-16th-2022-major-advances-in-holoviz-for-pangeo-gui-explorer-to-build-plots-easy-interactive-pipelines-and-publishing-in-browser-apps/2876>`_ |Bednar DOI Badge|
-   * - Date
-     - Speaker
-     - Title
+   * - 2022-10-12 4PM EDT
+     - Rich Signell, USGS
+     - `My ERA5 Journey: From API-to-ARCO <https://discourse.pangeo.io/t/wednesday-october-12th-2022-my-era5-journey-from-api-to-arco/2814>`_ |Signell DOI Badge|      
+   * - 2022-10-05 12PM EDT
+     - Leah Wasser, pyOpenSci
+     - `PyOpenSci <https://discourse.pangeo.io/t/wednesday-october-5th-2022-pyopensci-a-diverse-community-that-supports-open-tools-that-drive-open-science/2783>`_ |Wasser DOI Badge|
+   * - 2022-09-21 12PM EDT
+     - Peter Marsh, University of Cape Town 
+     - `Accessing NetCDF and GRIB file collections as cloud-native virtual datasets using Kerchunk <https://discourse.pangeo.io/t/september-21th-2022-accessing-netcdf-and-grib-file-collections-as-cloud-native-virtual-datasets-using-kerchunk/2749>`_ |Marsh DOI Badge|
    * - 2021-11-17 12PM EDT
      - Deepak Cherian, NCAR
      - `flox: Fast & furious GroupBy reductions with Dask at Pangeo-scale <https://discourse.pangeo.io/t/november-17-2021-flox-fast-furious-groupby-reductions-with-dask-at-pangeo-scale/2016>`_ |Cherian DOI Badge|
@@ -113,10 +111,10 @@ Showcase Archive
      - `Introducing pyPI: Tropical Cyclone Potential Intensity Calculations in Python <https://discourse.pangeo.io/t/september-29-2021-introducing-pypi-tropical-cyclone-potential-intensity-calculations-in-python/1822>`_ |Gilford DOI Badge|
    * - 2021-09-22 12PM EDT
      - Alejandro Flores, Boise State University
-     - `Navigating the Clouds on the Horizon: A Vision for Reproducible Hydrologic Modeling in the Cloud <https://discourse.pangeo.io/t/september-22-2021-navigating-the-clouds-on-the-horizon-a-vision-for-reproducible-hydrologic-modeling-in-the-cloud/1809>`_ |Flores DOI Badge|	 
+     - `Navigating the Clouds on the Horizon: A Vision for Reproducible Hydrologic Modeling in the Cloud <https://discourse.pangeo.io/t/september-22-2021-navigating-the-clouds-on-the-horizon-a-vision-for-reproducible-hydrologic-modeling-in-the-cloud/1809>`_ |Flores DOI Badge|   
    * - 2021-09-15 4PM EDT
      - Shane Mill and Steve Olson, NOAA - National Weather Service
-     - `The NWS Implementation of the OGC API - Environmental Data Retrieval <https://discourse.pangeo.io/t/september-15-2021-the-nws-implementation-of-the-ogc-api-environmental-data-retrieval/1808>`_ |Mill DOI Badge|	  
+     - `The NWS Implementation of the OGC API - Environmental Data Retrieval <https://discourse.pangeo.io/t/september-15-2021-the-nws-implementation-of-the-ogc-api-environmental-data-retrieval/1808>`_ |Mill DOI Badge|   
    * - 2021-06-30 12pm EDT
      - Julia Lowndes and Erin Robinson, Openscapes
      -  `The NASA-Openscapes Framework <https://discourse.pangeo.io/t/june-30-2021-the-nasa-openscapes-framework/1631>`_ |Lowndes DOI Badge|
