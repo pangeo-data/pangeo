@@ -34,7 +34,7 @@ Spring 2023 Showcase
      - Mental Health for Geoscientists
    * - 2023-02-15 4PM EST
      - Tim Crone, Columbia University
-     - *TBD*
+     - Lessons learned teaching Pangeo in the classroom
    * - 2023-02-22 12PM EST
      - Ramon Ramirez-Linan, Navteca
      - D'explorer Explore cloud datasets from your notebooks (Replacement to S3 Explorer from IBM)
