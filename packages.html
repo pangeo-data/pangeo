@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta charset="utf-8" />
     <title>Packages &#8212; Pangeo  documentation</title>
@@ -250,9 +250,15 @@
       
   <div class="section" id="packages">
 <span id="id1"></span><h1>Packages<a class="headerlink" href="#packages" title="Permalink to this headline">¶</a></h1>
-<p>Pangeo is not one specific software package.
-A Pangeo environment is made of up of many different open-source software packages.
-Each of these packages has its own repository, documentation, and development team.</p>
+<p>Pangeo is not one specific software package. It’s a community built around open
+science. Members of the pangeo community have integrated many different
+open-source software packages, each of which has its own source repository,
+documentation, and development team.</p>
+<p>This page discusses some of the core packages used within Pangeo, and some
+best practices libraries should follow to work well with other packages in the
+pangeo ecosystem.</p>
+<p>If you’re interested in learning how to use these packages, consult either the
+project’s documentation or the <a class="reference external" href="https://projectpythia.org/">Project Pythia</a> site.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Many people and organizations were involved in the development of the
@@ -339,42 +345,51 @@ These practices are well established across the scientific python
 community.</p>
 <div class="section" id="general-best-practices-for-open-source">
 <h3>General Best Practices for Open Source<a class="headerlink" href="#general-best-practices-for-open-source" title="Permalink to this headline">¶</a></h3>
-<ol class="arabic simple">
-<li><p>Use an open-source license. See <a class="reference external" href="http://www.astrobetter.com/blog/2014/03/10/the-whys-and-hows-of-licensing-scientific-code/">Jake VanderPlas’ article on
-licensing scientific
-code</a>
-or <a class="reference external" href="https://choosealicense.com/">these more general guidelines</a></p></li>
-<li><p>Use version control for source code (for example, on
-<a class="reference external" href="http://github.org">github</a>)</p></li>
-<li><p>Provide thorough test coverage and continuous integration of testing</p></li>
-<li><p>Maintain comprehensive documentation</p></li>
-<li><p>Establish a <a class="reference external" href="https://opensource.guide/code-of-conduct/">code of
-conduct</a> for
-contributors</p></li>
-</ol>
-<p>The <a class="reference external" href="https://opensource.guide/">open-source guide</a> provides some
-great advice on building and maintaining open-source projects.</p>
+<p>How to develop and maintain an open-source project is a large topic that extends beyond pangeo.
+The <a class="reference external" href="https://www.pyopensci.org/python-package-guide/">pyOpenSci Package Development Guide</a> provides a comprehensive guide.</p>
+<p>Projects can submit their package for peer review from pyOpenSci.</p>
 </div>
 <div class="section" id="best-practices-for-pangeo-projects">
 <h3>Best Practices for Pangeo Projects<a class="headerlink" href="#best-practices-for-pangeo-projects" title="Permalink to this headline">¶</a></h3>
-<p>To address the needs of geoscience researchers, we have developed some
-additional recommendations:</p>
-<ol class="arabic simple">
-<li><p><em>Solve a general problem:</em> packages should solve a general problem
-that is encountered by a relatively broad groups of researchers.</p></li>
-<li><p><em>Clearly defined scope:</em> packages should have a clear and relatively
-narrow scope, solving the specific problem[s] identified in the point
-above (rather than attempting to cover every possible aspect of
-geoscience research computing).</p></li>
-<li><p><em>No duplication:</em> developers should try to leverage existing packages
-as much as possible to avoid duplication of effort. (In early-stage
-development and experimentation, however, some duplication will be
-inevitable as developers try implementing different solutions to the
-same general problems.)</p></li>
-<li><p><em>Consume and Produce Xarray Objects:</em> Xarray data structures
-facilitate mutual interoperability between packages.</p></li>
-<li><p><em>Operate Lazily:</em> whenever possible, packages should avoid explicitly
-triggering computation on Dask objects.</p></li>
+<p>In addition to general software best practices, there are some additional
+best-practices packages to work well with the pangeo ecosystem.</p>
+<ol class="arabic">
+<li><p><em>Solve a general problem</em></p>
+<p>Packages should solve a general problem that is encountered by a relatively
+broad groups of users.</p>
+</li>
+<li><p><em>Clearly define a scope</em></p>
+<p>Packages should have a clear and relatively narrow scope, solving the
+specific problem[s] identified in the point above (rather than attempting to
+cover every possible aspect of geoscience research computing). By consuming
+and producing standard data containers (see below) packages can compose
+together to solve large problems.</p>
+</li>
+<li><p><em>Avoid duplication</em></p>
+<p>Developers should try to leverage existing packages as much as possible to
+avoid duplication of effort. (In early-stage development and experimentation,
+however, some duplication will be inevitable as developers try implementing
+different solutions to the same general problems.)</p>
+</li>
+<li><p><em>Consume and produce standard data container</em></p>
+<p>Packages should consume and produce standard data containers like
+<code class="docutils literal notranslate"><span class="pre">xarray.Dataset</span></code> and <code class="docutils literal notranslate"><span class="pre">geopandas.GeoDataFrame</span></code>. This facilitate
+interoperability between packages in the ecosystem.</p>
+</li>
+<li><p><em>Avoid data I/O where possible</em></p>
+<p>Unless the package is specifically focused on reading or writing data, it
+should not include its own custom code for reading and writing data.
+Instead, it should produce and consume standard data containers.</p>
+<p>Where data I/O is required, package should use existing libraries (e.g. Zarr
+via Xarray, geoparquet via geopandas, etc.). This ensures that the data
+reading and writing works with a large variety of file systems.</p>
+</li>
+<li><p><em>Operate Lazily</em></p>
+<p>Whenever possible, packages should avoid explicitly triggering computation on
+Dask objects. Instead, they should return standard data containers that can
+be backed by lazy Dask objects. This allows users to control when computation
+actually occurs.</p>
+</li>
 </ol>
 </div>
 <div class="section" id="why-xarray-and-dask">
