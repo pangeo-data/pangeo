@@ -165,7 +165,7 @@ best-practices packages to work well with the pangeo ecosystem.
 5. *Avoid data I/O where possible*
 
    Unless the package is specifically focused on reading or writing data, it
-   should probably not include its own custom code for reading and writing data.
+   should not include its own custom code for reading and writing data.
    Instead, it should produce and consume standard data containers.
 
    Where data I/O is required, package should use existing libraries (e.g. Zarr
