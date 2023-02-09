@@ -44,6 +44,12 @@ Spring 2023 Showcase
    * - 2023-03-08 12PM EST
      - Isa Elegbede, Lagos State University
      - Data inclusivity and user needs for the global south
+   * - *2023-03-15 to 2023-05-10*
+     - *Open time slots!*
+     - *Open time slots!*
+   * - 2023-05-17 12PM EST
+     - Campbell Watson, IBM
+     - The Geospatial Discovery Network: Accelerating geospatial science in the multicloud future
    
 
 **We still have slots available from March 15 through June** - if you are intersted in presenting, please `fill out this short form <https://forms.gle/QwxKusVvrvDakSNs8>`_.
