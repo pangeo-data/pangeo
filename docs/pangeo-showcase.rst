@@ -44,7 +44,13 @@ Spring 2023 Showcase
    * - 2023-03-08 12PM EST
      - Isa Elegbede, Lagos State University
      - Data inclusivity and user needs for the global south
-   * - *2023-03-15 to 2023-05-10*
+   * - *2023-03-15 to 2023-04-05*
+     - *Open time slots!*
+     - *Open time slots!*
+   * - 2023-04-12
+     - Abigail Bodner, NYU/ClimateMatch Academy
+     - Climatematch Academy: using Pangeo tools to educate the world on climate
+   * - *2023-04-19 to 2023-05-10*
      - *Open time slots!*
      - *Open time slots!*
    * - 2023-05-17 12PM EST
