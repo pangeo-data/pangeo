@@ -30,13 +30,13 @@ Spring 2023 Showcase
      - Tom Nicholas, Columbia University 
      - `Xarray-Datatree: Hierarchical Data Structures for Multi-Model Science <https://discourse.pangeo.io/t/wednesday-february-1st-xarray-datatree-hierarchical-data-structures-for-multi-model-science/3207>`_ |Nicholas DOI Badge|
    * - 2023-02-08 12PM EST
-     - `Alex Kerney, Gulf of Maine Research Institute <https://youtu.be/XfzOxpHRDnw>`_
+     - `Alex Kerney, Gulf of Maine Research Institute <https://discourse.pangeo.io/t/wednesday-february-8th-mental-health-in-the-geosciences/3211>`_ |Kerney DOI Badge|
      - Mental Health for Geoscientists
    * - 2023-02-15 4PM EST
      - Tim Crone, Columbia University
      - `Lessons learned teaching Pangeo in the classroom <https://discourse.pangeo.io/t/wednesday-february-15th-lessons-learned-teaching-pangeo-in-the-classroom/3208>`_ |Crone DOI Badge|
    * - 2023-02-22 12PM EST
-     - `Ramon Ramirez-Linan, Navteca <https://youtu.be/AknQEtyoc6U>`_
+     - `Ramon Ramirez-Linan, Navteca <https://discourse.pangeo.io/t/wednesday-february-22nd-2023-d-explorer-explore-cloud-datasets-from-your-notebooks/3210>`_ |Ramirez DOI Badge|
      - D'explorer Explore cloud datasets from your notebooks (Replacement to S3 Explorer from IBM)
    * - 2023-03-01 4PM EST
      - Tasha Snow, Colorado School of Mines
@@ -229,6 +229,9 @@ Showcase Archive
 .. |Kellndorfer DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.4756696.svg
    :target: https://doi.org/10.5281/zenodo.4756696
 
+.. |Kerney DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.7679821.svg
+   :target: https://doi.org/10.5281/zenodo.7679821
+
 .. |Lowndes DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.5090115.svg
    :target: https://doi.org/10.5281/zenodo.5090115
 
@@ -255,6 +258,9 @@ Showcase Archive
   
 .. |Partee DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.4986182.svg
    :target: https://doi.org/10.5281/zenodo.4986182   
+
+.. |Ramirez DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.7680210.svg
+   :target: https://doi.org/10.5281/zenodo.7680210
 
 .. |Rocklin DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.4964489.svg
    :target: https://doi.org/10.5281/zenodo.4964489
