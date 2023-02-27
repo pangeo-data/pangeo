@@ -28,32 +28,32 @@ Spring 2023 Showcase
      - Title
    * - 2023-02-01 4PM EST
      - Tom Nicholas, Columbia University 
-     - Xarray-Datatree: Hierarchical Data Structures for Multi-Model Science
+     - `Xarray-Datatree: Hierarchical Data Structures for Multi-Model Science <https://discourse.pangeo.io/t/wednesday-february-1st-xarray-datatree-hierarchical-data-structures-for-multi-model-science/3207>`_ |Nicholas DOI Badge|
    * - 2023-02-08 12PM EST
-     - Alex Kerney, Gulf of Maine Research Institute 
+     - `Alex Kerney, Gulf of Maine Research Institute <https://youtu.be/XfzOxpHRDnw>`_
      - Mental Health for Geoscientists
    * - 2023-02-15 4PM EST
      - Tim Crone, Columbia University
-     - Lessons learned teaching Pangeo in the classroom
+     - `Lessons learned teaching Pangeo in the classroom <https://discourse.pangeo.io/t/wednesday-february-15th-lessons-learned-teaching-pangeo-in-the-classroom/3208>`_ |Crone DOI Badge|
    * - 2023-02-22 12PM EST
-     - Ramon Ramirez-Linan, Navteca
+     - `Ramon Ramirez-Linan, Navteca <https://youtu.be/AknQEtyoc6U>`_
      - D'explorer Explore cloud datasets from your notebooks (Replacement to S3 Explorer from IBM)
    * - 2023-03-01 4PM EST
      - Tasha Snow, Colorado School of Mines
-     - CryoCloud: Accelerating discovery for NASA Cryosphere communities with open cloud infrastructure
+     - `CryoCloud: Accelerating discovery for NASA Cryosphere communities with open cloud infrastructure <https://discourse.pangeo.io/t/match-1st-showcase-announcement/3209>`_
    * - 2023-03-08 12PM EST
      - Isa Elegbede, Lagos State University
      - Data inclusivity and user needs for the global south
    * - *2023-03-15 to 2023-04-05*
      - *Open time slots!*
      - *Open time slots!*
-   * - 2023-04-12
+   * - 2023-04-12 4PM EST
      - Abigail Bodner, NYU/ClimateMatch Academy
      - Climatematch Academy: using Pangeo tools to educate the world on climate
    * - *2023-04-19 to 2023-05-10*
      - *Open time slots!*
      - *Open time slots!*
-   * - 2023-05-17 12PM EST
+   * - 2023-05-17 12PM EDT
      - Campbell Watson, IBM
      - The Geospatial Discovery Network: Accelerating geospatial science in the multicloud future
    
@@ -202,6 +202,9 @@ Showcase Archive
 .. |Clyne DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.5700525.svg
    :target: https://doi.org/10.5281/zenodo.5700525
 
+.. |Crone DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.7680128.svg
+   :target: https://doi.org/10.5281/zenodo.7680128
+
 .. |Flores DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.5535595.svg
    :target: https://doi.org/10.5281/zenodo.5535595
 
@@ -246,7 +249,10 @@ Showcase Archive
 
 .. |Mill DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.5535519.svg
    :target: https://doi.org/10.5281/zenodo.5535519
-   
+
+.. |Nicholas DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.7679730.svg
+   :target: https://doi.org/10.5281/zenodo.7679729
+  
 .. |Partee DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.4986182.svg
    :target: https://doi.org/10.5281/zenodo.4986182   
 
