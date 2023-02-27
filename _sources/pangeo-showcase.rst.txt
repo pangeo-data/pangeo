@@ -30,14 +30,14 @@ Spring 2023 Showcase
      - Tom Nicholas, Columbia University 
      - `Xarray-Datatree: Hierarchical Data Structures for Multi-Model Science <https://discourse.pangeo.io/t/wednesday-february-1st-xarray-datatree-hierarchical-data-structures-for-multi-model-science/3207>`_ |Nicholas DOI Badge|
    * - 2023-02-08 12PM EST
-     - `Alex Kerney, Gulf of Maine Research Institute <https://discourse.pangeo.io/t/wednesday-february-8th-mental-health-in-the-geosciences/3211>`_ |Kerney DOI Badge|
-     - Mental Health for Geoscientists
+     - Alex Kerney, Gulf of Maine Research Institute
+     - `Mental Health for Geoscientists <https://discourse.pangeo.io/t/wednesday-february-8th-mental-health-in-the-geosciences/3211>`_ |Kerney DOI Badge|
    * - 2023-02-15 4PM EST
      - Tim Crone, Columbia University
      - `Lessons learned teaching Pangeo in the classroom <https://discourse.pangeo.io/t/wednesday-february-15th-lessons-learned-teaching-pangeo-in-the-classroom/3208>`_ |Crone DOI Badge|
    * - 2023-02-22 12PM EST
-     - `Ramon Ramirez-Linan, Navteca <https://discourse.pangeo.io/t/wednesday-february-22nd-2023-d-explorer-explore-cloud-datasets-from-your-notebooks/3210>`_ |Ramirez DOI Badge|
-     - D'explorer Explore cloud datasets from your notebooks (Replacement to S3 Explorer from IBM)
+     - Ramon Ramirez-Linan, Navteca
+     - `D'explorer Explore cloud datasets from your notebooks (Replacement to S3 Explorer from IBM) <https://discourse.pangeo.io/t/wednesday-february-22nd-2023-d-explorer-explore-cloud-datasets-from-your-notebooks/3210>`_ |Ramirez DOI Badge|
    * - 2023-03-01 4PM EST
      - Tasha Snow, Colorado School of Mines
      - `CryoCloud: Accelerating discovery for NASA Cryosphere communities with open cloud infrastructure <https://discourse.pangeo.io/t/match-1st-showcase-announcement/3209>`_
@@ -47,7 +47,7 @@ Spring 2023 Showcase
    * - *2023-03-15 to 2023-04-05*
      - *Open time slots!*
      - *Open time slots!*
-   * - 2023-04-12 4PM EST
+   * - 2023-04-12 4PM EDT
      - Abigail Bodner, NYU/ClimateMatch Academy
      - Climatematch Academy: using Pangeo tools to educate the world on climate
    * - *2023-04-19 to 2023-05-10*
