@@ -44,13 +44,25 @@ Spring 2023 Showcase
    * - 2023-03-08 12PM EST
      - Isa Elegbede, Lagos State University
      - Data inclusivity and user needs for the global south
-   * - *2023-03-15 to 2023-04-05*
+   * - 2023-03-22 12PM EDT
+     - James A. Bednar, Anaconda Inc. 
+     - SOSA: The Scalable Open-Source Analysis Stack <https://discourse.pangeo.io/t/wednesday-march-22nd-sosa-the-scalable-open-source-analysis-stack/3252>`_
+   * - *2023-03-29 to 2023-04-05*
      - *Open time slots!*
      - *Open time slots!*
    * - 2023-04-12 4PM EDT
      - Abigail Bodner, NYU/ClimateMatch Academy
      - Climatematch Academy: using Pangeo tools to educate the world on climate
-   * - *2023-04-19 to 2023-05-10*
+   * - *2023-04-19  2023-05-10*
+     - *Open time slots!*
+     - *Open time slots!*
+   * - 2023-04-26 4PM EDT
+     - Michael Barletta, University at Albany
+     - Creating Interactive Plots to Display Weather Data Using the Holoviz/Geoviews Libraries in Python
+   * - *2023-05-03 12PM EDT
+     - *Open time slots!*
+     - *Open time slots!*
+   * - 2023-05-10 4PM EDT
      - *Open time slots!*
      - *Open time slots!*
    * - 2023-05-17 12PM EDT
