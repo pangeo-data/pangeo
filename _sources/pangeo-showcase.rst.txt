@@ -59,7 +59,7 @@ Spring 2023 Showcase
    * - 2023-04-26 4PM EDT
      - Michael Barletta, University at Albany
      - Creating Interactive Plots to Display Weather Data Using the Holoviz/Geoviews Libraries in Python
-   * - *2023-05-03 12PM EDT
+   * - 2023-05-03 12PM EDT
      - *Open time slots!*
      - *Open time slots!*
    * - 2023-05-10 4PM EDT
