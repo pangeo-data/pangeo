@@ -49,7 +49,7 @@ Working Group Meetings
 ----------------------
 
 1. Machine Learning Working Group
-    * Schedule: First Tuesday of the month at 4p ET
+    * Schedule: First Tuesday of the month at 3p ET
     * Conferencing:  `Zoom <https://us02web.zoom.us/j/89838681369?pwd=MWJWSWVqMU5pVklZZU9oWWxlRGZZZz09>`__
     * Notes: `Dropbox doc <https://paper.dropbox.com/doc/Meeting-notes-Machine-Learning-WG--AmU~wZXwdbpTZi8rQsJQH9_sAg-9UUgyywF9jmIMXXbmZTyJ>`__
 2. Cloud Operations Working Group
