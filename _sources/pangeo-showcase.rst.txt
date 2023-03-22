@@ -46,7 +46,7 @@ Spring 2023 Showcase
      - Data inclusivity and user needs for the global south
    * - 2023-03-22 12PM EDT
      - James A. Bednar, Anaconda Inc. 
-     - SOSA: The Scalable Open-Source Analysis Stack <https://discourse.pangeo.io/t/wednesday-march-22nd-sosa-the-scalable-open-source-analysis-stack/3252>`_
+     - `SOSA: The Scalable Open-Source Analysis Stack <https://discourse.pangeo.io/t/wednesday-march-22nd-sosa-the-scalable-open-source-analysis-stack/3252>`_
    * - *2023-03-29 to 2023-04-05*
      - *Open time slots!*
      - *Open time slots!*
