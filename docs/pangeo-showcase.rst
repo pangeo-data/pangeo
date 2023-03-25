@@ -63,8 +63,8 @@ Spring 2023 Showcase
      - *Open time slots!*
      - *Open time slots!*
    * - 2023-05-10 4PM EDT
-     - *Open time slots!*
-     - *Open time slots!*
+     - Navid Constantinou, Australian National University
+     - Open-source and reproducibility workflow within the Consortium for Ocean-Sea Ice Modelling in Australia (=COSIMA)
    * - 2023-05-17 12PM EDT
      - Campbell Watson, IBM
      - The Geospatial Discovery Network: Accelerating geospatial science in the multicloud future
