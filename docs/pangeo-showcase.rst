@@ -43,22 +43,22 @@ Spring 2023 Showcase
      - `CryoCloud: Accelerating discovery for NASA Cryosphere communities with open cloud infrastructure <https://discourse.pangeo.io/t/match-1st-showcase-announcement/3209>`_
    * - 2023-03-08 12PM EST
      - Isa Elegbede, Lagos State University
-     - Data inclusivity and user needs for the global south
+     - `Data inclusivity and user needs for the global south <https://discourse.pangeo.io/t/wednesday-march-8th-2023-data-inclusivity-and-user-needs-for-the-global-south/3222>`_
    * - 2023-03-22 12PM EDT
      - James A. Bednar, Anaconda Inc. 
      - `SOSA: The Scalable Open-Source Analysis Stack <https://discourse.pangeo.io/t/wednesday-march-22nd-sosa-the-scalable-open-source-analysis-stack/3252>`_
-   * - *2023-03-29 to 2023-04-05*
-     - *Open time slots!*
-     - *Open time slots!*
+   * - 2023-04-05 12PM EST
+     - Alejandro Coca-Castro, The Alan Turing Institute
+     - `Environmental Data Science Book: a computational notebook community showcasing open and reproducible environmental science <https://discourse.pangeo.io/t/wednesday-april-5th-environmental-data-science-book-a-computational-notebook-community-showcasing-open-and-reproducible-environmental-science/3319>`_
    * - 2023-04-12 4PM EDT
      - Abigail Bodner, NYU/ClimateMatch Academy
-     - Climatematch Academy: using Pangeo tools to educate the world on climate
-   * - *2023-04-19  2023-05-10*
-     - *Open time slots!*
-     - *Open time slots!*
+     - `Climatematch Academy: using Pangeo tools to educate the world on climate <https://discourse.pangeo.io/t/wednesday-april-12th-climatematch-academy-from-data-to-action/3298>`_ 
+   * - *2023-04-19*
+     - *Open time slot!*
+     - *Open time slot!*
    * - 2023-04-26 4PM EDT
      - Michael Barletta, University at Albany
-     - Creating Interactive Plots to Display Weather Data Using the Holoviz/Geoviews Libraries in Python
+     - `Creating Interactive Plots to Display Weather Data Using the Holoviz/Geoviews Libraries in Python <https://discourse.pangeo.io/t/wednesday-april-26th-creating-interactive-plots-to-display-weather-data-using-the-holoviz-geoviews-libraries-in-python/3320>`_ 
    * - 2023-05-03 12PM EDT
      - *Open time slots!*
      - *Open time slots!*
