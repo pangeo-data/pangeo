@@ -21,7 +21,6 @@ Quickstart
 
     <embed>
       <a href="https://us-central1-b.gcp.pangeo.io" class="btn btn-primary btn-lg btn-block" >Google Cloud Deployment</a>
-      <a href="https://aws-uswest2.pangeo.io" class="btn btn-primary btn-lg btn-block" >AWS Deployment</a>
     </embed>
 
 Getting Support
@@ -77,15 +76,12 @@ You must accept this invitation to gain access to Pangeo Cloud resources.
 Hubs
 ----
 
-Pangeo Cloud currently comprises two different JupyterHubs:
+Currently active Pangeo JupyterHubs depend on grant funding:
 
 - `us-central1-b.gcp.pangeo.io <https://us-central1-b.gcp.pangeo.io/>`_: A hub in
   Google Cloud Platform.
-- `aws-uswest2.pangeo.io <https://aws-uswest2.pangeo.io>`_: A hub in AWS.
 
-We recommend choosing a hub based on what data you want to access.
-E.g. if your data of interest live primarily in AWS, choose ``aws-uswest2``.
-(See `AWS Public Datasets <https://registry.opendata.aws/>`_ and
+We recommend choosing a hub based on what data you want to access. See for example
 `Google Cloud Datasets <https://cloud.google.com/datasets>`_.)
 
 Once your application is approved, you will be able to log in to the resources
@@ -97,7 +93,7 @@ you requested.
 Software Environment
 --------------------
 
-Each hub contains a customized data-science software environment based
+JupyterHubs contains a customized data-science software environment based
 off the docker images built in https://github.com/pangeo-data/pangeo-docker-images.
 These are the steps for adding a package to the environment:
 
