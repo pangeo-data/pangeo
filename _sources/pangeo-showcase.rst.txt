@@ -216,6 +216,9 @@ Showcase Archive
 
 .. |Clyne DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.5700525.svg
    :target: https://doi.org/10.5281/zenodo.5700525
+   
+.. |Coca_Castro DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.7857378.svg
+   :target: https://doi.org/10.5281/zenodo.7857378
 
 .. |Crone DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.7680128.svg
    :target: https://doi.org/10.5281/zenodo.7680128
