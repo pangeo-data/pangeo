@@ -40,16 +40,16 @@ Spring 2023 Showcase
      - `D'explorer Explore cloud datasets from your notebooks (Replacement to S3 Explorer from IBM) <https://discourse.pangeo.io/t/wednesday-february-22nd-2023-d-explorer-explore-cloud-datasets-from-your-notebooks/3210>`_ |Ramirez DOI Badge|
    * - 2023-03-01 4PM EST
      - Tasha Snow, Colorado School of Mines
-     - `CryoCloud: Accelerating discovery for NASA Cryosphere communities with open cloud infrastructure <https://discourse.pangeo.io/t/match-1st-showcase-announcement/3209>`_
+     - `CryoCloud: Accelerating discovery for NASA Cryosphere communities with open cloud infrastructure <https://discourse.pangeo.io/t/match-1st-showcase-announcement/3209>`_  |Snow DOI Badge|
    * - 2023-03-08 12PM EST
      - Isa Elegbede, Lagos State University
-     - `Data inclusivity and user needs for the global south <https://discourse.pangeo.io/t/wednesday-march-8th-2023-data-inclusivity-and-user-needs-for-the-global-south/3222>`_
+     - `Data inclusivity and user needs for the global south <https://discourse.pangeo.io/t/wednesday-march-8th-2023-data-inclusivity-and-user-needs-for-the-global-south/3222>`_  |Elegbede DOI Badge|
    * - 2023-03-22 12PM EDT
      - James A. Bednar, Anaconda Inc. 
-     - `SOSA: The Scalable Open-Source Analysis Stack <https://discourse.pangeo.io/t/wednesday-march-22nd-sosa-the-scalable-open-source-analysis-stack/3252>`_
+     - `SOSA: The Scalable Open-Source Analysis Stack <https://discourse.pangeo.io/t/wednesday-march-22nd-sosa-the-scalable-open-source-analysis-stack/3252>`_  |Bednar.B DOI Badge|
    * - 2023-04-05 12PM EST
      - Alejandro Coca-Castro, The Alan Turing Institute
-     - `Environmental Data Science Book: a computational notebook community showcasing open and reproducible environmental science <https://discourse.pangeo.io/t/wednesday-april-5th-environmental-data-science-book-a-computational-notebook-community-showcasing-open-and-reproducible-environmental-science/3319>`_
+     - `Environmental Data Science Book: a computational notebook community showcasing open and reproducible environmental science <https://discourse.pangeo.io/t/wednesday-april-5th-environmental-data-science-book-a-computational-notebook-community-showcasing-open-and-reproducible-environmental-science/3319>`_  |Coca_Castro DOI Badge|
    * - 2023-04-12 4PM EDT
      - Abigail Bodner, NYU/ClimateMatch Academy
      - `Climatematch Academy: using Pangeo tools to educate the world on climate <https://discourse.pangeo.io/t/wednesday-april-12th-climatematch-academy-from-data-to-action/3298>`_ 
@@ -64,10 +64,10 @@ Spring 2023 Showcase
      - *Open time slots!*
    * - 2023-05-10 4PM EDT
      - Navid Constantinou, Australian National University
-     - Open-source and reproducibility workflow within the Consortium for Ocean-Sea Ice Modelling in Australia (=COSIMA)
+     - `Open-source and reproducibility workflow within the Consortium for Ocean-Sea Ice Modelling in Australia (COSIMA) <https://pangeo.io/pangeo-showcase.html>`_ 
    * - 2023-05-17 12PM EDT
      - Campbell Watson, IBM
-     - The Geospatial Discovery Network: Accelerating geospatial science in the multicloud future
+     - `The Geospatial Discovery Network: Accelerating geospatial science in the multicloud future <https://pangeo.io/pangeo-showcase.html>`_ 
    
 
 **We still have slots available from March 15 through June** - if you are intersted in presenting, please `fill out this short form <https://forms.gle/QwxKusVvrvDakSNs8>`_.
@@ -87,7 +87,7 @@ Showcase Archive
      - Title
    * - 2022-11-16 12PM EST
      - James A. Bednar, Anaconda
-     - `Major advances in HoloViz: GUI explorer to build plots, interactive pipelines, and publish in-browser apps <https://discourse.pangeo.io/t/wednesday-november-16th-2022-major-advances-in-holoviz-for-pangeo-gui-explorer-to-build-plots-easy-interactive-pipelines-and-publishing-in-browser-apps/2876>`_ |Bednar DOI Badge|
+     - `Major advances in HoloViz: GUI explorer to build plots, interactive pipelines, and publish in-browser apps <https://discourse.pangeo.io/t/wednesday-november-16th-2022-major-advances-in-holoviz-for-pangeo-gui-explorer-to-build-plots-easy-interactive-pipelines-and-publishing-in-browser-apps/2876>`_ |Bednar.A DOI Badge|
    * - 2022-11-09 4PM EST
      - Joris Van den Bossche, GeoPandas / Voltron Data
      - `GeoPandas: Easy, fast and scalable geospatial analysis in Python <https://discourse.pangeo.io/t/wednesday-november-9th-2022-geopandas-easy-fast-and-scalable-geospatial-analysis-in-python/2895>`_ |Bossche DOI Badge|
@@ -187,8 +187,11 @@ Showcase Archive
 .. |Austin DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.4739726.svg
    :target: https://doi.org/10.5281/zenodo.4739726
    
-.. |Bednar DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.7342703.svg
+.. |Bednar.A DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.7342703.svg
    :target: https://doi.org/10.5281/zenodo.7342703
+
+.. |Bednar.B DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.7857369.svg
+   :target: https://doi.org/10.5281/zenodo.7857369
 
 .. |Blancas Reyes DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.4939972.svg
    :target: https://doi.org/10.5281/zenodo.4939972
@@ -213,9 +216,15 @@ Showcase Archive
 
 .. |Clyne DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.5700525.svg
    :target: https://doi.org/10.5281/zenodo.5700525
+   
+.. |Coca_Castro DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.7857378.svg
+   :target: https://doi.org/10.5281/zenodo.7857378
 
 .. |Crone DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.7680128.svg
    :target: https://doi.org/10.5281/zenodo.7680128
+
+.. |Elegbede DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.7857353.svg
+   :target: https://doi.org/10.5281/zenodo.7857353
 
 .. |Flores DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.5535595.svg
    :target: https://doi.org/10.5281/zenodo.5535595
@@ -282,6 +291,9 @@ Showcase Archive
 
 .. |Signell DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.7226344.svg
    :target: https://doi.org/10.5281/zenodo.7226344
+
+.. |Snow DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.7857296.svg
+   :target: https://doi.org/10.5281/zenodo.7857296
 
 .. |Wasser DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.7158586.svg
    :target: https://doi.org/10.5281/zenodo.7158585
