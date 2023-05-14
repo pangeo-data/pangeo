@@ -67,7 +67,7 @@ Spring 2023 Showcase
      - `Open-source and reproducibility workflow within the Consortium for Ocean-Sea Ice Modelling in Australia (COSIMA) <https://discourse.pangeo.io/t/open-source-and-reproducibility-workflow-within-the-consortium-for-ocean-sea-ice-modelling-in-australia-cosima/3405>`_ 
    * - 2023-05-17 12PM EDT
      - Campbell Watson, IBM
-     - The Geospatial Discovery Network: Accelerating geospatial science in the multicloud future 
+     - `The Geospatial Discovery Network: Accelerating geospatial science in the multicloud future <https://discourse.pangeo.io/t/searching-beyond-pixels-and-tiles-showcase/3440>`_ 
    
 
 **We still have slots available from March 15 through June** - if you are intersted in presenting, please `fill out this short form <https://forms.gle/QwxKusVvrvDakSNs8>`_.
