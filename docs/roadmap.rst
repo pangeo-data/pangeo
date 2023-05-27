@@ -1,7 +1,7 @@
 .. _roadmap:
 
 Pangeo Roadmap (June 2023)
-============
+==============================
 
 This document outlines the Pangeo roadmap for the next 2 years.
 
@@ -12,20 +12,22 @@ The Pangeo roadmap is organized into 2 sections:
 1. **Supporting the Pangeo Community**: Ongoing activities to support the Pangeo community in adopting best practices and open source software.
 2. **Supporting the Evoloution of the Geoscience Software Stack**: Ongoing and dedicated activitites to deliver software for large-scale geoscience.
 
-## Supporting the Pangeo Community
+Supporting the Pangeo Community
+--------------------------------
 
 The Pangeo Steering Committee is committed to maintaining the following community forums:
 
-1. [Pangeo Discourse](https://discourse.pangeo.io)
-2. [Pangeo Showcase](https://pangeo.io/pangeo-showcase.html)
-3. [Pangeo Twitter](https://twitter.com/pangeo_data)
+1. `Pangeo Discourse <https://discourse.pangeo.io>`_
+2. `Pangeo Showcase <https://pangeo.io/pangeo-showcase.html>`_
+3. `Pangeo Twitter <https://twitter.com/pangeo_data>`_
 4. Community events at conferences
 
 Pangeo is looking to hire a part- or full-time communications manager who help with those forums as well as **creating a monthly newsletter**.
 
 This communications manager will also help define a strategy for attending and presenting at conferences attendance and organizing Pangeo-dedicated events. This communications manager will help define what, where and how we communicate about Pangeo. This communications manager will also help revamp the website.
 
-## Supporting the Evoloution of the Geoscience Software Stack
+Supporting the Evoloution of the Geoscience Software Stack
+----------------------------------------------------------
 
 The Pangeo Steering Committee will drive the evolution of the Geoscience Software Stack. This will include:
 
