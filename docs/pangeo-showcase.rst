@@ -15,64 +15,7 @@ available on the `Pangeo YouTube Channel <https://youtube.com/playlist?list=PLuQ
 
 * **Conferencing**:   `Zoom <https://columbiauniversity.zoom.us/j/94877958106?pwd=UkE0UHF1U0x3VTVUNEJTam9mTXVHZz09>`_
 
-Spring 2023 Showcase
-------------------------------------------------------
-
-.. list-table::
-   :widths: 15 25 60
-   :header-rows: 1
-   :align: left
-
-   * - Date
-     - Speaker
-     - Title
-   * - 2023-02-01 4PM EST
-     - Tom Nicholas, Columbia University 
-     - `Xarray-Datatree: Hierarchical Data Structures for Multi-Model Science <https://discourse.pangeo.io/t/wednesday-february-1st-xarray-datatree-hierarchical-data-structures-for-multi-model-science/3207>`_ |Nicholas DOI Badge|
-   * - 2023-02-08 12PM EST
-     - Alex Kerney, Gulf of Maine Research Institute
-     - `Mental Health for Geoscientists <https://discourse.pangeo.io/t/wednesday-february-8th-mental-health-in-the-geosciences/3211>`_ |Kerney DOI Badge|
-   * - 2023-02-15 4PM EST
-     - Tim Crone, Columbia University
-     - `Lessons learned teaching Pangeo in the classroom <https://discourse.pangeo.io/t/wednesday-february-15th-lessons-learned-teaching-pangeo-in-the-classroom/3208>`_ |Crone DOI Badge|
-   * - 2023-02-22 12PM EST
-     - Ramon Ramirez-Linan, Navteca
-     - `D'explorer Explore cloud datasets from your notebooks (Replacement to S3 Explorer from IBM) <https://discourse.pangeo.io/t/wednesday-february-22nd-2023-d-explorer-explore-cloud-datasets-from-your-notebooks/3210>`_ |Ramirez DOI Badge|
-   * - 2023-03-01 4PM EST
-     - Tasha Snow, Colorado School of Mines
-     - `CryoCloud: Accelerating discovery for NASA Cryosphere communities with open cloud infrastructure <https://discourse.pangeo.io/t/match-1st-showcase-announcement/3209>`_  |Snow DOI Badge|
-   * - 2023-03-08 12PM EST
-     - Isa Elegbede, Lagos State University
-     - `Data inclusivity and user needs for the global south <https://discourse.pangeo.io/t/wednesday-march-8th-2023-data-inclusivity-and-user-needs-for-the-global-south/3222>`_  |Elegbede DOI Badge|
-   * - 2023-03-22 12PM EDT
-     - James A. Bednar, Anaconda Inc. 
-     - `SOSA: The Scalable Open-Source Analysis Stack <https://discourse.pangeo.io/t/wednesday-march-22nd-sosa-the-scalable-open-source-analysis-stack/3252>`_  |Bednar.B DOI Badge|
-   * - 2023-04-05 12PM EST
-     - Alejandro Coca-Castro, The Alan Turing Institute
-     - `Environmental Data Science Book: a computational notebook community showcasing open and reproducible environmental science <https://discourse.pangeo.io/t/wednesday-april-5th-environmental-data-science-book-a-computational-notebook-community-showcasing-open-and-reproducible-environmental-science/3319>`_  |Coca_Castro DOI Badge|
-   * - 2023-04-12 4PM EDT
-     - Abigail Bodner, NYU/ClimateMatch Academy
-     - `Climatematch Academy: using Pangeo tools to educate the world on climate <https://discourse.pangeo.io/t/wednesday-april-12th-climatematch-academy-from-data-to-action/3298>`_ 
-   * - *2023-04-19*
-     - *Open time slot!*
-     - *Open time slot!*
-   * - 2023-04-26 4PM EDT
-     - Michael Barletta, University at Albany
-     - `Creating Interactive Plots to Display Weather Data Using the Holoviz/Geoviews Libraries in Python <https://discourse.pangeo.io/t/wednesday-april-26th-creating-interactive-plots-to-display-weather-data-using-the-holoviz-geoviews-libraries-in-python/3320>`_ 
-   * - 2023-05-03 12PM EDT
-     - *Open time slots!*
-     - *Open time slots!*
-   * - 2023-05-10 4PM EDT
-     - Navid Constantinou, Australian National University
-     - `Open-source and reproducibility workflow within the Consortium for Ocean-Sea Ice Modelling in Australia (COSIMA) <https://discourse.pangeo.io/t/open-source-and-reproducibility-workflow-within-the-consortium-for-ocean-sea-ice-modelling-in-australia-cosima/3405>`_ 
-   * - 2023-05-17 12PM EDT
-     - Campbell Watson, IBM
-     - `The Geospatial Discovery Network: Accelerating geospatial science in the multicloud future <https://discourse.pangeo.io/t/searching-beyond-pixels-and-tiles-showcase/3440>`_ 
-   
-
-**We still have slots available from March 15 through June** - if you are intersted in presenting, please `fill out this short form <https://forms.gle/QwxKusVvrvDakSNs8>`_.
-After June, the Pangeo Showcase will go on summer break and will resume in September 2023. 
-
+**The Pangeo Showcase is on summer break and will resume in September 2023.** - if you are intersted in presenting, please `fill out this short form <https://forms.gle/QwxKusVvrvDakSNs8>`_.
 
 Showcase Archive
 -----------------------------------
@@ -85,6 +28,42 @@ Showcase Archive
    * - Date
      - Speaker
      - Title
+   * - 2023-05-17 12PM EDT
+     - Campbell Watson, IBM
+     - `The Geospatial Discovery Network: Accelerating geospatial science in the multicloud future <https://discourse.pangeo.io/t/wednesday-may-17th-searching-beyond-pixels-and-tiles/3558>`_ |Campbell DOI Badge|
+   * - 2023-05-10 4PM EDT
+     - Navid Constantinou, Australian National University
+     - `Open-source and reproducibility workflow within the Consortium for Ocean-Sea Ice Modelling in Australia (COSIMA) <Wednesday May 10th: Open-source and reproducibility workflow within the Consortium for Ocean-Sea Ice Modelling in Australia (COSIMA)>`_ |Constantinou DOI Badge|
+   * - 2023-04-26 4PM EDT
+     - Michael Barletta, University at Albany
+     - `Creating Interactive Plots to Display Weather Data Using the Holoviz/Geoviews Libraries in Python <https://discourse.pangeo.io/t/wednesday-april-26th-creating-interactive-plots-to-display-weather-data-using-the-holoviz-geoviews-libraries/3556>`_ |Barletta DOI Badge|
+   * - 2023-04-12 4PM EDT
+     - Abigail Bodner, NYU/ClimateMatch Academy
+     - `Climatematch Academy: using Pangeo tools to educate the world on climate <https://discourse.pangeo.io/t/wednesday-april-12th-climatematch-academy-from-data-to-action/3298>`_ 
+   * - 2023-04-05 12PM EST
+     - Alejandro Coca-Castro, The Alan Turing Institute
+     - `Environmental Data Science Book: a computational notebook community showcasing open and reproducible environmental science <https://discourse.pangeo.io/t/wednesday-april-5th-environmental-data-science-book-a-computational-notebook-community-showcasing-open-and-reproducible-environmental-science/3319>`_ |Coca_Castro DOI Badge|
+   * - 2023-03-22 12PM EDT
+     - James A. Bednar, Anaconda Inc. 
+     - `SOSA: The Scalable Open-Source Analysis Stack <https://discourse.pangeo.io/t/wednesday-march-22nd-sosa-the-scalable-open-source-analysis-stack/3252>`_ |Bednar.B DOI Badge|
+   * - 2023-03-08 12PM EST
+     - Isa Elegbede, Lagos State University
+     - `Data inclusivity and user needs for the global south <https://discourse.pangeo.io/t/wednesday-march-8th-2023-data-inclusivity-and-user-needs-for-the-global-south/3222>`_ |Elegbede DOI Badge|
+   * - 2023-03-01 4PM EST
+     - Tasha Snow, Colorado School of Mines
+     - `CryoCloud: Accelerating discovery for NASA Cryosphere communities with open cloud infrastructure <https://discourse.pangeo.io/t/match-1st-showcase-announcement/3209>`_ |Snow DOI Badge|
+   * - 2023-02-22 12PM EST
+     - Ramon Ramirez-Linan, Navteca
+     - `D'explorer Explore cloud datasets from your notebooks (Replacement to S3 Explorer from IBM) <https://discourse.pangeo.io/t/wednesday-february-22nd-2023-d-explorer-explore-cloud-datasets-from-your-notebooks/3210>`_ |Ramirez DOI Badge|
+   * - 2023-02-15 4PM EST
+     - Tim Crone, Columbia University
+     - `Lessons learned teaching Pangeo in the classroom <https://discourse.pangeo.io/t/wednesday-february-15th-lessons-learned-teaching-pangeo-in-the-classroom/3208>`_ |Crone DOI Badge|
+   * - 2023-02-08 12PM EST
+     - Alex Kerney, Gulf of Maine Research Institute
+     - `Mental Health for Geoscientists <https://discourse.pangeo.io/t/wednesday-february-8th-mental-health-in-the-geosciences/3211>`_ |Kerney DOI Badge|
+   * - 2023-02-01 4PM EST
+     - Tom Nicholas, Columbia University 
+     - `Xarray-Datatree: Hierarchical Data Structures for Multi-Model Science <https://discourse.pangeo.io/t/wednesday-february-1st-xarray-datatree-hierarchical-data-structures-for-multi-model-science/3207>`_ |Nicholas DOI Badge|
    * - 2022-11-16 12PM EST
      - James A. Bednar, Anaconda
      - `Major advances in HoloViz: GUI explorer to build plots, interactive pipelines, and publish in-browser apps <https://discourse.pangeo.io/t/wednesday-november-16th-2022-major-advances-in-holoviz-for-pangeo-gui-explorer-to-build-plots-easy-interactive-pipelines-and-publishing-in-browser-apps/2876>`_ |Bednar.A DOI Badge|
@@ -187,6 +166,9 @@ Showcase Archive
 .. |Austin DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.4739726.svg
    :target: https://doi.org/10.5281/zenodo.4739726
    
+.. |Barletta DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.8108931.svg
+   :target: https://doi.org/10.5281/zenodo.8108931
+
 .. |Bednar.A DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.7342703.svg
    :target: https://doi.org/10.5281/zenodo.7342703
 
@@ -205,6 +187,9 @@ Showcase Archive
 .. |Brandt DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.5675969.svg
    :target: https://doi.org/10.5281/zenodo.5675969
 
+.. |Campbell DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.8109136.svg
+   :target: https://doi.org/10.5281/zenodo.8109136 
+
 .. |Carvalho DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.4697095.svg
    :target: https://doi.org/10.5281/zenodo.4697095       
 
@@ -219,6 +204,9 @@ Showcase Archive
    
 .. |Coca_Castro DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.7857378.svg
    :target: https://doi.org/10.5281/zenodo.7857378
+
+.. |Constantinou DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.8109042.svg
+   :target: https://doi.org/10.5281/zenodo.8109042
 
 .. |Crone DOI Badge| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.7680128.svg
    :target: https://doi.org/10.5281/zenodo.7680128
