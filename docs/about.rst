@@ -53,9 +53,13 @@ To accomplish this mission, we have identified three specific goals.
 Get Involved
 ------------
 
-The pangeo project is completely open to involvement from anyone with interest.
+The Pangeo community is completely open to involvement from anyone with interest.
 There are many ways to get involved:
 
+- *Anyone*: join a :ref:`community meeting <meeting-notes>`, join discussions or ask/answer a 
+  question on the :ref:`Pangeo Discourse <https://discourse.pangeo.io>`, sign up to give
+  a :ref:`Pangeo Showcase talk <pangeo-showcase>`, or follow us on 
+  :ref:`Twitter <https://twitter.com/pangeo_data>`.
 - *Science users*: read the :ref:`quickstart`, browse the :ref:`use-cases`,
   read about the :ref:`packages`, or visit a :ref:`deployment <deployments>`.
 - *Developers / system administrators*: learn about the
