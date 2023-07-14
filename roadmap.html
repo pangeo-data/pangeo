@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Pangeo Roadmap &#8212; Pangeo  documentation</title>
+    <link rel="stylesheet" href="_static/pangeo-style.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/example_gallery_styles_patched.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pangeo-main-site-custom.css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/js/jquery-1.11.0.min.js"></script>
+    <script src="_static/js/jquery-fix.js"></script>
+    <script src="_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.png"/>
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+            <span><img src="_static/small_e_reversed_24px.png"></span>
+          Pangeo</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="https://medium.com/pangeo">Blog</a></li>
+                <li><a href="https://discourse.pangeo.io">Forum</a></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="about.html">About Pangeo</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="about.html#motivation">Motivation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="about.html#mission-statement">Mission Statement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="about.html#goals">Goals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="about.html#get-involved">Get Involved</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Guide for Scientists</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#learn-about-pangeo-software">Learn About Pangeo Software</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#explore-the-use-cases">Explore the Use Cases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#try-out-a-pangeo-environment">Try Out a Pangeo Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#give-feedback">Give Feedback</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#contribute-a-use-case">Contribute a Use Case</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#contribute-data">Contribute Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#become-an-open-source-contributor">Become an Open Source Contributor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="packages.html">Packages</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="packages.html#pangeo-core-packages">Pangeo Core Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="packages.html#pangeo-affiliated-packages">Pangeo Affiliated Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="packages.html#guidelines-for-new-packages">Guidelines for New Packages</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="gallery.html">Pangeo Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="architecture.html">Technical Architecture</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#where-we-began">Where we began</a></li>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#interoperability-in-pangeo">Interoperability in Pangeo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#software">Software</a></li>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#compute-platforms">Compute Platforms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#storage-formats">Storage Formats</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="setup_guides/index.html">Deployment Setup Guides</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="setup_guides/index.html#setting-up-pangeo-on-hpc-systems">Setting up Pangeo on HPC Systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="setup_guides/index.html#setting-up-pangeo-on-cloud-systems">Setting up Pangeo on Cloud Systems</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cloud.html">Pangeo Cloud</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cloud.html#operated-by-2i2c">Operated by 2i2c</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud.html#quickstart">Quickstart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud.html#getting-support">Getting Support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud.html#sign-up">Sign Up</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud.html#hubs">Hubs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud.html#software-environment">Software Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud.html#hardware-environment">Hardware Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud.html#files-and-data-in-the-cloud">Files and Data in the Cloud</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud.html#dask">Dask</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="data.html">Pangeo and Data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="data.html#data-on-hpc">Data on HPC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html#data-in-the-cloud">Data in the Cloud</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="catalog.html">Pangeo Data Catalog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="collaborators.html">Funders and Collaborators</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="collaborators.html#funding-agencies">Funding Agencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="collaborators.html#institutions">Institutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="collaborators.html#people">People</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="publications.html">Publications</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="publications.html#self-reported">Self-Reported</a></li>
+<li class="toctree-l2"><a class="reference internal" href="publications.html#reporting-form">Reporting Form</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pangeo-showcase.html">Pangeo Showcase</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pangeo-showcase.html#spring-2023-showcase">Spring 2023 Showcase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pangeo-showcase.html#showcase-archive">Showcase Archive</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="meeting-notes.html">Meeting Schedule and Notes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="meeting-notes.html#community-meeting">Community Meeting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meeting-notes.html#continental-community-meetings">Continental Community Meetings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meeting-notes.html#working-group-meetings">Working Group Meetings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meeting-notes.html#meetings-calendar">Meetings Calendar</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="meetings/index.html">Pangeo Conferences</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="meetings/index.html#past-meetings">Past Meetings</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="contact.html">Contact Pangeo</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="contact.html#discourse">Discourse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contact.html#github">Github</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contact.html#other-media">Other Media</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Pangeo Roadmap</a><ul>
+<li><a class="reference internal" href="#supporting-the-pangeo-community">Supporting the Pangeo Community</a></li>
+<li><a class="reference internal" href="#supporting-the-evoloution-of-the-geoscience-software-stack">Supporting the Evoloution of the Geoscience Software Stack</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+              
+            
+            
+            
+            
+          </ul>
+
+          
+            
+            
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li><a class="reference internal" href="#">Pangeo Roadmap</a><ul>
+<li><a class="reference internal" href="#supporting-the-pangeo-community">Supporting the Pangeo Community</a></li>
+<li><a class="reference internal" href="#supporting-the-evoloution-of-the-geoscience-software-stack">Supporting the Evoloution of the Geoscience Software Stack</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="widget navlinks">
+  <ul class="this-page-menu">
+    <li><a href="https://github.com/pangeo-data/pangeo/blob/master/docs/roadmap.rst"
+            rel="nofollow"
+            target="_blank"><span class="fa-stack fa-md"><i class="fa fa-github fa-stack-1x"></i></span> Edit on GitHub</a></li>
+  </ul>
+</div>
+        </div>
+      </div>
+    <div class="col-md-9 content ">
+      
+  <div class="section" id="pangeo-roadmap">
+<span id="roadmap"></span><h1>Pangeo Roadmap<a class="headerlink" href="#pangeo-roadmap" title="Permalink to this headline">¶</a></h1>
+<p>Drafted: June 2023</p>
+<p>This document outlines the Pangeo roadmap for the next 2 years.</p>
+<p>The Pangeo project is a community effort. We present this roadmap to indicate our goals moving forward and to present our plan to maintain a relevant and healthy community for all members. We intend to adapt our roadmap as the community evolves and new opportunities arise.</p>
+<p>The Pangeo roadmap is organized into 2 sections:</p>
+<ol class="arabic simple">
+<li><p><strong>Supporting the Pangeo Community</strong>: Ongoing efforts to support discussion, collaboration, and community gatherings.</p></li>
+<li><p><strong>Supporting the Evoloution of the Geoscience Software Stack</strong>: Ongoing and dedicated activitites to deliver software for large-scale geoscience.</p></li>
+</ol>
+<div class="section" id="supporting-the-pangeo-community">
+<h2>Supporting the Pangeo Community<a class="headerlink" href="#supporting-the-pangeo-community" title="Permalink to this headline">¶</a></h2>
+<p>The Pangeo Steering Council is committed to maintaining the following community forums:</p>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="https://discourse.pangeo.io">Pangeo Discourse</a></p></li>
+<li><p><a class="reference external" href="https://pangeo.io/pangeo-showcase.html">Pangeo Showcase</a></p></li>
+<li><p><a class="reference external" href="https://twitter.com/pangeo_data">Pangeo Twitter</a></p></li>
+<li><p>Community events at conferences</p></li>
+</ol>
+<p>The Pangeo Steering Council plans to apply for funding to hire a part- or full-time community manager who will help with these forums and also create and curate a monthly newsletter.</p>
+<p>The community manager will assist the Steering Council to define a strategy for attending and presenting at conferences and organizing Pangeo-dedicated events. The community manager will help define what, where and how we communicate about Pangeo, which will include updating and maintaining the website.</p>
+</div>
+<div class="section" id="supporting-the-evoloution-of-the-geoscience-software-stack">
+<h2>Supporting the Evoloution of the Geoscience Software Stack<a class="headerlink" href="#supporting-the-evoloution-of-the-geoscience-software-stack" title="Permalink to this headline">¶</a></h2>
+<p>The Pangeo community will continue to drive the development and evolution of software tools that facilitate geoscience research (sometimes called the Pangeo Software Stack). Many of the tools used by the Pangeo community have their own communities and are sponsored by NumFocus (e.g. Zarr and Xarray). With regards to software support, the goal of Pangeo is to provide a space for software developers and geoscience researchers to engage in discussion and collaboration to ensure the usefulness and relevance of the software tools to their scientific use cases.</p>
+<p>Pangeo will support the geoscience software stack in three ways:</p>
+<ol class="arabic simple">
+<li><p>_Advocate for new directions and best practices in the development of new tools, maintenance of existing tools, and the use of these tools in a geoscience <a href="#id1"><span class="problematic" id="id2">context_</span></a>: Advocacy will be driven by community input via community forums (e.g. Pangeo meetings or Discourse). We believe that establishing and communicating community-accepted conventions and best-practices is necessary for cross-platform collaboration as the landscape of resources continuously evolves. A current example is the Pangeo advocacy for the use of STAC to facilitate access to datasets.</p></li>
+<li><p>_Continue developing geoscience software and <a href="#id3"><span class="problematic" id="id4">platforms_</span></a>: For example, the Pangeo community is actively engaged in the evolution of the Zarr specification and the Xarray package.</p></li>
+<li><p>_Identify new and exciting developments in the open-source software <a href="#id5"><span class="problematic" id="id6">community_</span></a>: Encourage these developments via GitHub, community meetings, the Pangeo Discourse, and tutorials. If the interest and impact is deemed large enough, Pangeo will support these developments to become their own entities, as demonstrated by previous cases including [2i2c](<a class="reference external" href="https://2i2c.org">https://2i2c.org</a>), [Pangeo Forge](<a class="reference external" href="https://pangeo-forge.org">https://pangeo-forge.org</a>), and [Project Pythia](<a class="reference external" href="https://projectpythia.org">https://projectpythia.org</a>).</p></li>
+</ol>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2018-2023, Pangeo Team.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.4.<br/>
+    </p>
+  </div>
+</footer>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-120544092-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-120544092-1');
+</script>
+  </body>
+</html>
