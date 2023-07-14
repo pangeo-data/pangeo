@@ -1,6 +1,6 @@
 .. _roadmap:
 
-Pangeo Roadmap (June 2023)
+Pangeo Roadmap
 ==============================
 
 This document outlines the Pangeo roadmap for the next 2 years.
