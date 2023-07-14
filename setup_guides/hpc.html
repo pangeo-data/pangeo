@@ -265,7 +265,7 @@ system administrators to properly configure these tools for your machine.</p>
 <h2>Installing a software environment<a class="headerlink" href="#installing-a-software-environment" title="Permalink to this headline">¶</a></h2>
 <p>After you have logged into your HPC system, download and install Miniforge:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>url=https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh
-curl $url -o Miniforge.sh
+curl -k -L $url -o Miniforge.sh
 sh Miniforge.sh
 export PATH=$HOME/Miniforge3/bin:$PATH
 </pre></div>

@@ -28,7 +28,7 @@ After you have logged into your HPC system, download and install Miniforge:
 ::
 
     url=https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh  
-    curl $url -o Miniforge.sh
+    curl -k -L $url -o Miniforge.sh
     sh Miniforge.sh
     export PATH=$HOME/Miniforge3/bin:$PATH
 
