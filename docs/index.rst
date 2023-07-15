@@ -108,4 +108,5 @@ Contents
    pangeo-showcase
    meeting-notes
    meetings/index
+   roadmap
    contact
