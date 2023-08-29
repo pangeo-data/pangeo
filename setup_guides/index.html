@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>Deployment Setup Guides &#8212; Pangeo  documentation</title>
-    <link rel="stylesheet" href="../_static/pangeo-style.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/example_gallery_styles_patched.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/pangeo-main-site-custom.css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/pangeo-style.css?v=0dbad12f" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/example_gallery_styles_patched.css?v=417c3662" />
+    <link rel="stylesheet" type="text/css" href="../_static/pangeo-main-site-custom.css?v=91edfa83" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=b3ba4146"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=30646c52"></script>
     <script src="../_static/js/jquery-1.11.0.min.js"></script>
     <script src="../_static/js/jquery-fix.js"></script>
     <script src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
     <script src="../_static/bootstrap-sphinx.js"></script>
-    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="icon" href="../_static/favicon.png"/>
     <link rel="author" title="About these documents" href="../about.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -69,6 +69,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../about.html#mission-statement">Mission Statement</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../about.html#goals">Goals</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../about.html#get-involved">Get Involved</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about.html#governance">Governance</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../faq.html">Frequently Asked Questions</a></li>
@@ -132,7 +133,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../pangeo-showcase.html">Pangeo Showcase</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../pangeo-showcase.html#spring-2023-showcase">Spring 2023 Showcase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pangeo-showcase.html#fall-2023-showcase">Fall 2023 Showcase</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../pangeo-showcase.html#showcase-archive">Showcase Archive</a></li>
 </ul>
 </li>
@@ -229,8 +230,8 @@
       </div>
     <div class="col-md-9 content ">
       
-  <div class="section" id="deployment-setup-guides">
-<span id="setup-guides"></span><h1>Deployment Setup Guides<a class="headerlink" href="#deployment-setup-guides" title="Permalink to this headline">¶</a></h1>
+  <section id="deployment-setup-guides">
+<span id="setup-guides"></span><h1>Deployment Setup Guides<a class="headerlink" href="#deployment-setup-guides" title="Permalink to this heading">¶</a></h1>
 <p>The Pangeo software stack is an collection of <a class="reference internal" href="../packages.html#packages"><span class="std std-ref">Packages</span></a> that when used
 together facilitate scalable data analysis on a wide range of computing platforms
 (see <a class="reference internal" href="../deployments.html#deployments"><span class="std std-ref">Deployments</span></a> for a list of examples where Pangeo concepts have been
@@ -242,8 +243,8 @@ anything that is incorrect, or have any questions, feel free to reach out at
 the <a class="reference external" href="https://github.com/pangeo-data/pangeo/issues">issues page</a>.</p>
 <p>We have broken our setup guides into two distinct tracks, one for <a class="reference internal" href="hpc.html#hpc"><span class="std std-ref">Getting Started with Pangeo on HPC</span></a> systems,
 and another for <a class="reference internal" href="cloud.html#cloud-setup"><span class="std std-ref">Deploying Pangeo in the Cloud</span></a> systems:</p>
-<div class="section" id="setting-up-pangeo-on-hpc-systems">
-<h2>Setting up Pangeo on HPC Systems<a class="headerlink" href="#setting-up-pangeo-on-hpc-systems" title="Permalink to this headline">¶</a></h2>
+<section id="setting-up-pangeo-on-hpc-systems">
+<h2>Setting up Pangeo on HPC Systems<a class="headerlink" href="#setting-up-pangeo-on-hpc-systems" title="Permalink to this heading">¶</a></h2>
 <p>This tutorial assumes you have access to a HPC system and that you have some
 basic Unix skills. We’ll walk you through some common steps for getting Pangeo
 running on a typical HPC system.</p>
@@ -259,9 +260,9 @@ running on a typical HPC system.</p>
 </li>
 </ul>
 </div>
-</div>
-<div class="section" id="setting-up-pangeo-on-cloud-systems">
-<h2>Setting up Pangeo on Cloud Systems<a class="headerlink" href="#setting-up-pangeo-on-cloud-systems" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="setting-up-pangeo-on-cloud-systems">
+<h2>Setting up Pangeo on Cloud Systems<a class="headerlink" href="#setting-up-pangeo-on-cloud-systems" title="Permalink to this heading">¶</a></h2>
 <p>These tutorials describe how to deploy Pangeo using <a class="reference external" href="https://kubernetes.io/">Kubernetes</a>. Most users
 will also find the <a class="reference external" href="http://zero-to-jupyterhub.readthedocs.io">zero-to-jupyterhub</a> documentation quite useful.</p>
 <div class="toctree-wrapper compound">
@@ -275,8 +276,8 @@ will also find the <a class="reference external" href="http://zero-to-jupyterhub
 </li>
 </ul>
 </div>
-</div>
-</div>
+</section>
+</section>
 
 
     </div>
@@ -291,7 +292,7 @@ will also find the <a class="reference external" href="http://zero-to-jupyterhub
     </p>
     <p>
         &copy; Copyright 2018-2023, Pangeo Team.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.4.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 7.1.2.<br/>
     </p>
   </div>
 </footer>

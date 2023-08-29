@@ -15,8 +15,24 @@ available on the `Pangeo YouTube Channel <https://youtube.com/playlist?list=PLuQ
 
 * **Conferencing**:   `Zoom <https://columbiauniversity.zoom.us/j/94877958106?pwd=UkE0UHF1U0x3VTVUNEJTam9mTXVHZz09>`_
 
-Spring 2023 Showcase
+Fall 2023 Showcase
 ------------------------------------------------------
+
+.. list-table::
+   :widths: 15 25 60
+   :header-rows: 1
+   :align: left
+
+   * - Date
+     - Speaker
+     - Title
+
+   
+
+**We still have slots available ** - if you are intersted in presenting, please `fill out this short form <https://forms.gle/QwxKusVvrvDakSNs8>`_.
+
+Showcase Archive
+-----------------------------------
 
 .. list-table::
    :widths: 15 25 60
@@ -68,23 +84,6 @@ Spring 2023 Showcase
    * - 2023-05-17 12PM EDT
      - Campbell Watson, IBM
      - `The Geospatial Discovery Network: Accelerating geospatial science in the multicloud future <https://discourse.pangeo.io/t/searching-beyond-pixels-and-tiles-showcase/3440>`_ 
-   
-
-**We still have slots available from March 15 through June** - if you are intersted in presenting, please `fill out this short form <https://forms.gle/QwxKusVvrvDakSNs8>`_.
-After June, the Pangeo Showcase will go on summer break and will resume in September 2023. 
-
-
-Showcase Archive
------------------------------------
-
-.. list-table::
-   :widths: 15 25 60
-   :header-rows: 1
-   :align: left
-
-   * - Date
-     - Speaker
-     - Title
    * - 2022-11-16 12PM EST
      - James A. Bednar, Anaconda
      - `Major advances in HoloViz: GUI explorer to build plots, interactive pipelines, and publish in-browser apps <https://discourse.pangeo.io/t/wednesday-november-16th-2022-major-advances-in-holoviz-for-pangeo-gui-explorer-to-build-plots-easy-interactive-pipelines-and-publishing-in-browser-apps/2876>`_ |Bednar.A DOI Badge|

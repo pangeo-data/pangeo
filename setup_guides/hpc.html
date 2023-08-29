@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>Getting Started with Pangeo on HPC &#8212; Pangeo  documentation</title>
-    <link rel="stylesheet" href="../_static/pangeo-style.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/example_gallery_styles_patched.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/pangeo-main-site-custom.css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/pangeo-style.css?v=0dbad12f" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/example_gallery_styles_patched.css?v=417c3662" />
+    <link rel="stylesheet" type="text/css" href="../_static/pangeo-main-site-custom.css?v=91edfa83" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=b3ba4146"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=30646c52"></script>
     <script src="../_static/js/jquery-1.11.0.min.js"></script>
     <script src="../_static/js/jquery-fix.js"></script>
     <script src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
     <script src="../_static/bootstrap-sphinx.js"></script>
-    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="icon" href="../_static/favicon.png"/>
     <link rel="author" title="About these documents" href="../about.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -69,6 +69,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../about.html#mission-statement">Mission Statement</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../about.html#goals">Goals</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../about.html#get-involved">Get Involved</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about.html#governance">Governance</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../faq.html">Frequently Asked Questions</a></li>
@@ -132,7 +133,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../pangeo-showcase.html">Pangeo Showcase</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../pangeo-showcase.html#spring-2023-showcase">Spring 2023 Showcase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pangeo-showcase.html#fall-2023-showcase">Fall 2023 Showcase</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../pangeo-showcase.html#showcase-archive">Showcase Archive</a></li>
 </ul>
 </li>
@@ -249,8 +250,8 @@
       </div>
     <div class="col-md-9 content ">
       
-  <div class="section" id="getting-started-with-pangeo-on-hpc">
-<span id="hpc"></span><h1>Getting Started with Pangeo on HPC<a class="headerlink" href="#getting-started-with-pangeo-on-hpc" title="Permalink to this headline">¶</a></h1>
+  <section id="getting-started-with-pangeo-on-hpc">
+<span id="hpc"></span><h1>Getting Started with Pangeo on HPC<a class="headerlink" href="#getting-started-with-pangeo-on-hpc" title="Permalink to this heading">¶</a></h1>
 <p>This tutorial covers how to set up an environment to run Pangeo on High
 Performance Computing (HPC) systems. In particular it covers the following:</p>
 <ol class="arabic simple">
@@ -266,8 +267,8 @@ This document assumes that you already have an access to an HPC like Cheyenne,
 and are comfortable using the command line. It may be necessary to work with your
 system administrators to properly configure these tools for your machine.</p>
 <p>You should log into your HPC system now.</p>
-<div class="section" id="installing-a-software-environment">
-<h2>Installing a software environment<a class="headerlink" href="#installing-a-software-environment" title="Permalink to this headline">¶</a></h2>
+<section id="installing-a-software-environment">
+<h2>Installing a software environment<a class="headerlink" href="#installing-a-software-environment" title="Permalink to this heading">¶</a></h2>
 <p>After you have logged into your HPC system, download and install Miniforge:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>url=https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh
 curl -k -L $url -o Miniforge.sh
@@ -323,9 +324,9 @@ somewhere in your home directory:</p>
 $HOME/Miniforge3/envs/pangeo/bin/python
 </pre></div>
 </div>
-</div>
-<div class="section" id="configure-jupyter">
-<h2>Configure Jupyter<a class="headerlink" href="#configure-jupyter" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="configure-jupyter">
+<h2>Configure Jupyter<a class="headerlink" href="#configure-jupyter" title="Permalink to this heading">¶</a></h2>
 <p>(If you don’t plan to use Jupyter notebooks then you can safely skip
 this section.)</p>
 <p>Jupyter notebook servers include a password for security. First we generate the Jupyter config
@@ -356,11 +357,11 @@ We generally recommend starting with Option 1, especially if you will be working
 interactively, unless you have a reason for managing the job submission scripts
 on your own. Users that will be using dask in batch-style workflows may prefer
 Option 2.</p>
-</div>
-<div class="section" id="deploy-option-1-jupyter-dask-jobqueue">
-<h2>Deploy Option 1: Jupyter + dask-jobqueue<a class="headerlink" href="#deploy-option-1-jupyter-dask-jobqueue" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="start-a-jupyter-notebook-server">
-<h3>Start a Jupyter Notebook Server<a class="headerlink" href="#start-a-jupyter-notebook-server" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="deploy-option-1-jupyter-dask-jobqueue">
+<h2>Deploy Option 1: Jupyter + dask-jobqueue<a class="headerlink" href="#deploy-option-1-jupyter-dask-jobqueue" title="Permalink to this heading">¶</a></h2>
+<section id="start-a-jupyter-notebook-server">
+<h3>Start a Jupyter Notebook Server<a class="headerlink" href="#start-a-jupyter-notebook-server" title="Permalink to this heading">¶</a></h3>
 <p>Now that we have Jupyter configured, we can start a notebook server. In many
 cases, your system administrators will want you to run this notebook server in
 an interactive session on a compute node. This is not universal rule, but it is
@@ -417,9 +418,9 @@ Step 3:...
 </pre></div>
 </div>
 <p>Just follow the Steps 1,2,3 printed out by the script to get connected.</p>
-</div>
-<div class="section" id="launch-dask-with-dask-jobqueue">
-<h3>Launch Dask with dask-jobqueue<a class="headerlink" href="#launch-dask-with-dask-jobqueue" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="launch-dask-with-dask-jobqueue">
+<h3>Launch Dask with dask-jobqueue<a class="headerlink" href="#launch-dask-with-dask-jobqueue" title="Permalink to this heading">¶</a></h3>
 <p>Most HPC systems use a job-scheduling system to manage job submissions and
 executions among many users. The <a class="reference external" href="http://dask-jobqueue.readthedocs.io">dask-jobqueue</a> package is designed to help
 dask interface with these job queuing systems. Usage is quite simple and can be
@@ -449,10 +450,10 @@ the status of your cluster from inside your Jupyter session:</p>
 <p>For more examples of how to use
 <a class="reference external" href="http://dask-jobqueue.readthedocs.io">dask-jobqueue</a>, refer to the
 <a class="reference external" href="http://dask-jobqueue.readthedocs.io">package documentation</a>.</p>
-</div>
-</div>
-<div class="section" id="deploy-option-2-jupyter-dask-mpi">
-<h2>Deploy Option 2: Jupyter + dask-mpi<a class="headerlink" href="#deploy-option-2-jupyter-dask-mpi" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="deploy-option-2-jupyter-dask-mpi">
+<h2>Deploy Option 2: Jupyter + dask-mpi<a class="headerlink" href="#deploy-option-2-jupyter-dask-mpi" title="Permalink to this heading">¶</a></h2>
 <p>This approach allows you to deploy dask directly using batch jobs on your HPC
 machine.</p>
 <p>The MPI library is only used to distribute the dask-workers across the
@@ -463,18 +464,18 @@ cluster. MPI is <strong>NOT</strong> used for communication by dask.</p>
 script <code class="docutils literal notranslate"><span class="pre">launch-dask.sh</span></code>. It and its supporting utilities can be found in the
 <a class="reference external" href="https://github.com/pangeo-data/pangeo/tree/master/utilities/cheyenne">pangeo Github repository</a>.</p>
 <p>The usage of this script is quite simple:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./launch-dask.sh <span class="si">${</span><span class="nv">N_WORK_NODES</span><span class="si">}</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./launch-dask.sh<span class="w"> </span><span class="si">${</span><span class="nv">N_WORK_NODES</span><span class="si">}</span>
 </pre></div>
 </div>
 <p>where <code class="docutils literal notranslate"><span class="pre">N_WORK_NODES</span></code> is the number of nodes you want to add to the cluster
 beyond the one that is automatically added for the scheduler. Once this command
 has been run, and after a moment for the jobs to work their way through the queue,
 it will print something like:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Run the following <span class="nb">command</span> from your <span class="nb">local</span> machine:
-ssh -N -L <span class="m">8888</span>:r7i3n13:8888  username@cheyenne.ucar.edu
-Then open the following URLs:
-    Jupyter lab: http://localhost:8888
-    Dask dashboard: http://localhost:8888/proxy/8787
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Run<span class="w"> </span>the<span class="w"> </span>following<span class="w"> </span><span class="nb">command</span><span class="w"> </span>from<span class="w"> </span>your<span class="w"> </span><span class="nb">local</span><span class="w"> </span>machine:
+ssh<span class="w"> </span>-N<span class="w"> </span>-L<span class="w"> </span><span class="m">8888</span>:r7i3n13:8888<span class="w">  </span>username@cheyenne.ucar.edu
+Then<span class="w"> </span>open<span class="w"> </span>the<span class="w"> </span>following<span class="w"> </span>URLs:
+<span class="w">    </span>Jupyter<span class="w"> </span>lab:<span class="w"> </span>http://localhost:8888
+<span class="w">    </span>Dask<span class="w"> </span>dashboard:<span class="w"> </span>http://localhost:8888/proxy/8787
 </pre></div>
 </div>
 <p>It may be necessary to modify the included scripts to use different PBS
@@ -501,11 +502,11 @@ the ``launch-dask.sh`` script should be enough to get started.</em></p>
 <span class="c1"># &gt;&gt;&gt; from dask.distributed import Client</span>
 <span class="c1"># &gt;&gt;&gt; client = Client(scheduler_file=&#39;~/scheduler.json&#39;)</span>
 
-rm -f scheduler.json
-mpirun --np <span class="m">12</span> dask-mpi <span class="se">\</span>
-    --nthreads <span class="m">6</span> <span class="se">\</span>
-    --memory-limit 24e9 <span class="se">\</span>
-    --interface ib0
+rm<span class="w"> </span>-f<span class="w"> </span>scheduler.json
+mpirun<span class="w"> </span>--np<span class="w"> </span><span class="m">12</span><span class="w"> </span>dask-mpi<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--nthreads<span class="w"> </span><span class="m">6</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--memory-limit<span class="w"> </span>24e9<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--interface<span class="w"> </span>ib0
 </pre></div>
 </div>
 <p>This script asks for two nodes with 36 cores each. It breaks up each
@@ -543,8 +544,8 @@ on your allocation.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Out</span><span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="o">&lt;</span><span class="n">Client</span><span class="p">:</span> <span class="n">scheduler</span><span class="o">=</span><span class="s1">&#39;tcp://10.148.0.92:8786&#39;</span> <span class="n">processes</span><span class="o">=</span><span class="mi">11</span> <span class="n">cores</span><span class="o">=</span><span class="mi">66</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-<div class="section" id="launch-and-connect-to-jupyter">
-<h3>Launch and connect to Jupyter<a class="headerlink" href="#launch-and-connect-to-jupyter" title="Permalink to this headline">¶</a></h3>
+<section id="launch-and-connect-to-jupyter">
+<h3>Launch and connect to Jupyter<a class="headerlink" href="#launch-and-connect-to-jupyter" title="Permalink to this heading">¶</a></h3>
 <p>From your same session on the login node, run the following code:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">dask.distributed</span> <span class="kn">import</span> <span class="n">Client</span>
 <span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="n">scheduler_file</span><span class="o">=</span><span class="s1">&#39;scheduler.json&#39;</span><span class="p">)</span>
@@ -646,10 +647,10 @@ mpirun --np 6 dask-mpi --nthreads 6 \
 <p>You can run this more times during your session to increase your
 allocation dynamically. You can also kill these jobs independently to
 contract your allocation dynamically and save compute time.</p>
-</div>
-</div>
-<div class="section" id="further-reading">
-<h2>Further Reading<a class="headerlink" href="#further-reading" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="further-reading">
+<h2>Further Reading<a class="headerlink" href="#further-reading" title="Permalink to this heading">¶</a></h2>
 <p>We have not attempted to provide a comprehensive tutorial on how to use Pangeo,
 Dask, or Jupyter on HPC systems. This is because each HPC system is uniquely
 configured. Instead we have provided two generalizable workflows for deploying
@@ -661,8 +662,8 @@ customization of these tools.</p>
 <li><p><a class="reference external" href="http://jupyter-notebook.readthedocs.io/en/stable/index.html">Configuring and Deploying Jupyter Servers</a></p></li>
 </ul>
 </div></blockquote>
-</div>
-</div>
+</section>
+</section>
 
 
     </div>
@@ -677,7 +678,7 @@ customization of these tools.</p>
     </p>
     <p>
         &copy; Copyright 2018-2023, Pangeo Team.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.4.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 7.1.2.<br/>
     </p>
   </div>
 </footer>
