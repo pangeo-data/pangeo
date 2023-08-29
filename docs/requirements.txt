@@ -1,6 +1,7 @@
+sphinx>=3.5
 sphinx_pangeo_theme
 sphinx-copybutton
 sphinxcontrib-srclinks
-# we need to eventually upgrade sphinx in order to unpin
+
 sphinxcontrib-bibtex
 myst_parser
