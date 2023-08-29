@@ -27,9 +27,46 @@ Fall 2023 Showcase
      - Speaker
      - Title
 
-   
-
-**We still have slots available ** - if you are intersted in presenting, please `fill out this short form <https://forms.gle/QwxKusVvrvDakSNs8>`_.
+   * - 2023-09-20 12PM EDT
+     - Erik A Bolch, USGS
+     - Interactive Exploration of EMIT Mission data
+   * - 2023-09-27 4PM EDT
+     - Martin Durant, Anaconda
+     - Intake 2.0: The Future
+   * - 2023-10-04 12PM EDT
+     - Ryan Abernathy and Joe Hamman, EarthMover
+     - EarthMover
+   * - 2023-10-11 4PM EDT
+     - Matt Iannucci, RPS
+     - Distributed access to NOAA model data aggregations
+   * - 2023-10-18 12PM EDT
+     - Julius Busecke, Columbia University
+     - CMIP6 data ingestion with Pangeo Forge
+   * - 2023-10-25 4PM EDT
+     - Tom Nicholas, Columbia University
+     - Cubed
+   * - 2023-11-01 12PM EDT
+     - Ayoub Fatihi, ECMWF 
+     - Compression of Geospatial Data with Varying Information Density
+   * - 2023-11-08 4PM EST
+     - Available
+     - Available
+   * - 2023-11-15 12PM EST
+     - Available
+     - Available
+   * - 2023-11-22 4PM EST
+     - Available
+     - Available
+   * - 2023-11-29 12PM EST
+     - Available
+     - Available
+   * - 2023-12-06 4PM EST
+     - Available
+     - Available
+   * - 2023-12-13 12PM EST
+     - Available
+     - Available
+**If you are intersted in presenting, please `fill out this short form <https://forms.gle/QwxKusVvrvDakSNs8>`_.
 
 Showcase Archive
 -----------------------------------
