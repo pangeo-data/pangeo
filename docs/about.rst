@@ -67,6 +67,6 @@ There are many ways to get involved:
 
 Governance
 ------------
-For information about the governance of the Pangeo community, view our :ref:`governance repository <https://github.com/pangeo-data/governance>`, which includes our :ref:`governance document <https://github.com/pangeo-data/governance/blob/master/governance.md>` and :ref:`list of Steering Council membership <https://github.com/pangeo-data/governance/blob/master/steering_council_membership.md>`.
+For information about the governance of the Pangeo community, view our `governance repository <https://github.com/pangeo-data/governance>`_, which includes our `governance document <https://github.com/pangeo-data/governance/blob/master/governance.md>`_ and `list of Steering Council members <https://github.com/pangeo-data/governance/blob/master/steering_council_membership.md>`_.
 
 For more information, consult the :ref:`FAQ`.
