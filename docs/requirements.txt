@@ -2,6 +2,5 @@ sphinx>=3.5
 sphinx_pangeo_theme
 sphinx-copybutton
 sphinxcontrib-srclinks
-
 sphinxcontrib-bibtex
-myst_parser
+myst-parser
