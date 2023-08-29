@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>Packages &#8212; Pangeo  documentation</title>
-    <link rel="stylesheet" href="_static/pangeo-style.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/example_gallery_styles_patched.css" />
-    <link rel="stylesheet" type="text/css" href="_static/pangeo-main-site-custom.css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
-    <script src="_static/clipboard.min.js"></script>
-    <script src="_static/copybutton.js"></script>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/pangeo-style.css?v=0dbad12f" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/example_gallery_styles_patched.css?v=417c3662" />
+    <link rel="stylesheet" type="text/css" href="_static/pangeo-main-site-custom.css?v=91edfa83" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=b3ba4146"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=30646c52"></script>
     <script src="_static/js/jquery-1.11.0.min.js"></script>
     <script src="_static/js/jquery-fix.js"></script>
     <script src="_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
     <script src="_static/bootstrap-sphinx.js"></script>
-    <link rel="shortcut icon" href="_static/favicon.png"/>
+    <link rel="icon" href="_static/favicon.png"/>
     <link rel="author" title="About these documents" href="about.html" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -69,6 +69,7 @@
 <li class="toctree-l2"><a class="reference internal" href="about.html#mission-statement">Mission Statement</a></li>
 <li class="toctree-l2"><a class="reference internal" href="about.html#goals">Goals</a></li>
 <li class="toctree-l2"><a class="reference internal" href="about.html#get-involved">Get Involved</a></li>
+<li class="toctree-l2"><a class="reference internal" href="about.html#governance">Governance</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions</a></li>
@@ -132,7 +133,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="pangeo-showcase.html">Pangeo Showcase</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="pangeo-showcase.html#spring-2023-showcase">Spring 2023 Showcase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pangeo-showcase.html#fall-2023-showcase">Fall 2023 Showcase</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pangeo-showcase.html#showcase-archive">Showcase Archive</a></li>
 </ul>
 </li>
@@ -253,8 +254,8 @@
       </div>
     <div class="col-md-9 content ">
       
-  <div class="section" id="packages">
-<span id="id1"></span><h1>Packages<a class="headerlink" href="#packages" title="Permalink to this headline">¶</a></h1>
+  <section id="packages">
+<span id="id1"></span><h1>Packages<a class="headerlink" href="#packages" title="Permalink to this heading">¶</a></h1>
 <p>Pangeo is not one specific software package. It’s a community built around open
 science. Members of the pangeo community have integrated many different
 open-source software packages, each of which has its own source repository,
@@ -273,12 +274,12 @@ credit for their hard work. Full information about the developers
 responsible for creating these tools can be found by following the links
 below.</p>
 </div>
-<div class="section" id="pangeo-core-packages">
-<h2>Pangeo Core Packages<a class="headerlink" href="#pangeo-core-packages" title="Permalink to this headline">¶</a></h2>
+<section id="pangeo-core-packages">
+<h2>Pangeo Core Packages<a class="headerlink" href="#pangeo-core-packages" title="Permalink to this heading">¶</a></h2>
 <p>Because of the <a class="reference internal" href="architecture.html#architecture"><span class="std std-ref">Technical Architecture</span></a> of Pangeo environments, these core
 packages are considered essential to the project.</p>
-<div class="section" id="xarray">
-<h3>Xarray<a class="headerlink" href="#xarray" title="Permalink to this headline">¶</a></h3>
+<section id="xarray">
+<h3>Xarray<a class="headerlink" href="#xarray" title="Permalink to this heading">¶</a></h3>
 <img alt="https://github.com/pydata/xarray/raw/main/doc/_static/dataset-diagram-logo.png" src="https://github.com/pydata/xarray/raw/main/doc/_static/dataset-diagram-logo.png" style="width: 300px;" />
 <ul class="simple">
 <li><p>Website: <a class="reference external" href="http://xarray.pydata.org/en/latest">http://xarray.pydata.org/en/latest</a></p></li>
@@ -290,9 +291,9 @@ data. Xarray adopts the <a class="reference external" href="http://www.unidata.u
 <code class="docutils literal notranslate"><span class="pre">xarray.Dataset</span></code> is an in-memory representation of a <a class="reference external" href="http://www.unidata.ucar.edu/software/netcdf">netCDF</a> file.
 Xarray provides the basic data structures used by many other Pangeo packages,
 as well as powerful tools for computation and visualization.</p>
-</div>
-<div class="section" id="iris">
-<h3>Iris<a class="headerlink" href="#iris" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="iris">
+<h3>Iris<a class="headerlink" href="#iris" title="Permalink to this heading">¶</a></h3>
 <img alt="_images/Iris_logo_banner.png" src="_images/Iris_logo_banner.png" />
 <ul class="simple">
 <li><p>Website: <a class="reference external" href="https://scitools.org.uk/iris/docs/latest/">https://scitools.org.uk/iris/docs/latest/</a></p></li>
@@ -308,9 +309,9 @@ library for analysing and visualising meteorological and oceanographic data sets
 </ul>
 <p>Iris is an alternative to Xarray. Iris is developed primarily by the
 UK <a class="reference external" href="http://www.metoffice.gov.uk/">Met Office</a> Analysis, Visualisation and Data team (AVD).</p>
-</div>
-<div class="section" id="dask">
-<h3>Dask<a class="headerlink" href="#dask" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="dask">
+<h3>Dask<a class="headerlink" href="#dask" title="Permalink to this heading">¶</a></h3>
 <img alt="_images/dask_horizontal_no_pad.svg" src="_images/dask_horizontal_no_pad.svg" width="300px" /><ul class="simple">
 <li><p>Website: <a class="reference external" href="http://dask.readthedocs.io/en/latest/">http://dask.readthedocs.io/en/latest/</a></p></li>
 <li><p>GitHub: <a class="reference external" href="https://github.com/dask/dask">https://github.com/dask/dask</a></p></li>
@@ -320,9 +321,9 @@ Dask is the key to the scalability of the Pangeo platform; its data structures a
 capable of representing extremely large datasets without actually loading them
 in memory, and its distributed schedulers permit supercomputers and cloud
 computing clusters to efficiently parallelize computations across many nodes.</p>
-</div>
-<div class="section" id="jupyter">
-<h3>Jupyter<a class="headerlink" href="#jupyter" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="jupyter">
+<h3>Jupyter<a class="headerlink" href="#jupyter" title="Permalink to this heading">¶</a></h3>
 <img alt="_images/jupyter-logo.svg" height="160px" src="_images/jupyter-logo.svg" /><ul class="simple">
 <li><p>Website: <a class="reference external" href="http://jupyter.org/">http://jupyter.org/</a></p></li>
 <li><p>GitHub: <a class="reference external" href="https://github.com/jupyter">https://github.com/jupyter</a></p></li>
@@ -332,30 +333,30 @@ services for interactive computing across dozens of programming languages.
 Jupyter provides the interactive layer to the Pangeo platform, allowing
 scientists to interact with remote systems where data and computing resources
 live.</p>
-</div>
-</div>
-<div class="section" id="pangeo-affiliated-packages">
-<h2>Pangeo Affiliated Packages<a class="headerlink" href="#pangeo-affiliated-packages" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="pangeo-affiliated-packages">
+<h2>Pangeo Affiliated Packages<a class="headerlink" href="#pangeo-affiliated-packages" title="Permalink to this heading">¶</a></h2>
 <p>There are many other python packages that can work with the core packages
 to provide additional functionality.
 We plan to eventually catalog these packages here on the Pangeo website.
 For now, please refer to the
 <a class="reference external" href="http://xarray.pydata.org/en/latest/faq.html#what-other-projects-leverage-xarray">Xarray list of related projects</a>.</p>
-</div>
-<div class="section" id="guidelines-for-new-packages">
-<h2>Guidelines for New Packages<a class="headerlink" href="#guidelines-for-new-packages" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="guidelines-for-new-packages">
+<h2>Guidelines for New Packages<a class="headerlink" href="#guidelines-for-new-packages" title="Permalink to this heading">¶</a></h2>
 <p>Our vision for the Pangeo project is an ecosystem of mutually compatible
 Geoscience python packages which follow open-source best practices.
 These practices are well established across the scientific python
 community.</p>
-<div class="section" id="general-best-practices-for-open-source">
-<h3>General Best Practices for Open Source<a class="headerlink" href="#general-best-practices-for-open-source" title="Permalink to this headline">¶</a></h3>
+<section id="general-best-practices-for-open-source">
+<h3>General Best Practices for Open Source<a class="headerlink" href="#general-best-practices-for-open-source" title="Permalink to this heading">¶</a></h3>
 <p>How to develop and maintain an open-source project is a large topic that extends beyond pangeo.
 The <a class="reference external" href="https://www.pyopensci.org/python-package-guide/">pyOpenSci Package Development Guide</a> provides a comprehensive guide.</p>
 <p>Projects can submit their package for peer review from pyOpenSci.</p>
-</div>
-<div class="section" id="best-practices-for-pangeo-projects">
-<h3>Best Practices for Pangeo Projects<a class="headerlink" href="#best-practices-for-pangeo-projects" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="best-practices-for-pangeo-projects">
+<h3>Best Practices for Pangeo Projects<a class="headerlink" href="#best-practices-for-pangeo-projects" title="Permalink to this heading">¶</a></h3>
 <p>In addition to general software best practices, there are some additional
 best-practices packages to work well with the pangeo ecosystem.</p>
 <ol class="arabic">
@@ -396,9 +397,9 @@ be backed by lazy Dask objects. This allows users to control when computation
 actually occurs.</p>
 </li>
 </ol>
-</div>
-<div class="section" id="why-xarray-and-dask">
-<h3>Why Xarray and Dask?<a class="headerlink" href="#why-xarray-and-dask" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="why-xarray-and-dask">
+<h3>Why Xarray and Dask?<a class="headerlink" href="#why-xarray-and-dask" title="Permalink to this heading">¶</a></h3>
 <p>The Pangeo project strongly encourages the use of Xarray data structures
 wherever possible. Xarray Dataset and DataArrays contain
 multidimensional numeric array data and also the metadata describing the
@@ -441,9 +442,9 @@ computer architectures using sophisticated techniques. By chaining
 operations on dask arrays together, researchers can symbolically
 represent large and complex data analysis pipelines and then deploy them
 effectively on large computer clusters.</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
     </div>
@@ -458,7 +459,7 @@ effectively on large computer clusters.</p>
     </p>
     <p>
         &copy; Copyright 2018-2023, Pangeo Team.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.4.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 7.1.2.<br/>
     </p>
   </div>
 </footer>

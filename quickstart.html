@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>Guide for Scientists &#8212; Pangeo  documentation</title>
-    <link rel="stylesheet" href="_static/pangeo-style.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/example_gallery_styles_patched.css" />
-    <link rel="stylesheet" type="text/css" href="_static/pangeo-main-site-custom.css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
-    <script src="_static/clipboard.min.js"></script>
-    <script src="_static/copybutton.js"></script>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/pangeo-style.css?v=0dbad12f" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/example_gallery_styles_patched.css?v=417c3662" />
+    <link rel="stylesheet" type="text/css" href="_static/pangeo-main-site-custom.css?v=91edfa83" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=b3ba4146"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=30646c52"></script>
     <script src="_static/js/jquery-1.11.0.min.js"></script>
     <script src="_static/js/jquery-fix.js"></script>
     <script src="_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
     <script src="_static/bootstrap-sphinx.js"></script>
-    <link rel="shortcut icon" href="_static/favicon.png"/>
+    <link rel="icon" href="_static/favicon.png"/>
     <link rel="author" title="About these documents" href="about.html" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -69,6 +69,7 @@
 <li class="toctree-l2"><a class="reference internal" href="about.html#mission-statement">Mission Statement</a></li>
 <li class="toctree-l2"><a class="reference internal" href="about.html#goals">Goals</a></li>
 <li class="toctree-l2"><a class="reference internal" href="about.html#get-involved">Get Involved</a></li>
+<li class="toctree-l2"><a class="reference internal" href="about.html#governance">Governance</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions</a></li>
@@ -132,7 +133,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="pangeo-showcase.html">Pangeo Showcase</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="pangeo-showcase.html#spring-2023-showcase">Spring 2023 Showcase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pangeo-showcase.html#fall-2023-showcase">Fall 2023 Showcase</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pangeo-showcase.html#showcase-archive">Showcase Archive</a></li>
 </ul>
 </li>
@@ -239,8 +240,8 @@
       </div>
     <div class="col-md-9 content ">
       
-  <div class="section" id="guide-for-scientists">
-<span id="quickstart"></span><h1>Guide for Scientists<a class="headerlink" href="#guide-for-scientists" title="Permalink to this headline">¶</a></h1>
+  <section id="guide-for-scientists">
+<span id="quickstart"></span><h1>Guide for Scientists<a class="headerlink" href="#guide-for-scientists" title="Permalink to this heading">¶</a></h1>
 <p>The goal of Pangeo is to make it quicker and easier to go from raw data to
 scientific insights.
 We want to spend less time writing boilerplate code and be able to perform
@@ -252,8 +253,8 @@ scientific python and are looking for ways to make their analysis workflow more
 efficient, scalable, and pleasant.
 If you are completely new to scientific python, you should first familiarize
 yourself with the basics before moving forward with this guide.</p>
-<div class="section" id="learn-about-pangeo-software">
-<h2>Learn About Pangeo Software<a class="headerlink" href="#learn-about-pangeo-software" title="Permalink to this headline">¶</a></h2>
+<section id="learn-about-pangeo-software">
+<h2>Learn About Pangeo Software<a class="headerlink" href="#learn-about-pangeo-software" title="Permalink to this heading">¶</a></h2>
 <p>Pangeo is not a specific software package.
 A Pangeo environment is made of up of many different open-source software packages.
 Each of these packages has its own repository, documentation, and development team.
@@ -282,9 +283,9 @@ This loose collection of packages is often referred to as the <em>Pangeo stack</
 </div>
 <p>For more information about how these packages relate to each other, consult the
 <a class="reference internal" href="architecture.html#architecture"><span class="std std-ref">Technical Architecture</span></a> page.</p>
-</div>
-<div class="section" id="explore-the-use-cases">
-<h2>Explore the Use Cases<a class="headerlink" href="#explore-the-use-cases" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="explore-the-use-cases">
+<h2>Explore the Use Cases<a class="headerlink" href="#explore-the-use-cases" title="Permalink to this heading">¶</a></h2>
 <p><a class="reference external" href="http://gallery.pangeo.io/">Pangeo Gallery</a> showcases real-world science applications of the
 Pangeo stack. The use cases are formatted as <a class="reference external" href="https://jupyter-notebook.readthedocs.io/en/stable/notebook.html">Jupyter Notebooks</a>, a
 self-describing computational document including text, code, and figures.
@@ -292,43 +293,43 @@ A great way to get started is to find a use case that is similar to the
 analysis you want to do and modify it to suit your needs.</p>
 <p>A great way for novices to learn how to use Pangeo is to start from one of these
 use cases and modify it for your needs.</p>
-</div>
-<div class="section" id="try-out-a-pangeo-environment">
-<h2>Try Out a Pangeo Environment<a class="headerlink" href="#try-out-a-pangeo-environment" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="try-out-a-pangeo-environment">
+<h2>Try Out a Pangeo Environment<a class="headerlink" href="#try-out-a-pangeo-environment" title="Permalink to this heading">¶</a></h2>
 <p>The best way to try out Pangeo is to explore one of the interactive
 Binders in <a class="reference external" href="http://gallery.pangeo.io/">Pangeo Gallery</a>.
 If you’re interested in working in a cloud based environment, you can sign
 up for <a class="reference internal" href="cloud.html#cloud"><span class="std std-ref">Pangeo Cloud</span></a>.
 If none of these meets your needs, you can create your own deployment on HPC
 or cloud by following the <a class="reference internal" href="setup_guides/index.html#setup-guides"><span class="std std-ref">Deployment Setup Guides</span></a>.</p>
-</div>
-<div class="section" id="give-feedback">
-<h2>Give Feedback<a class="headerlink" href="#give-feedback" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="give-feedback">
+<h2>Give Feedback<a class="headerlink" href="#give-feedback" title="Permalink to this heading">¶</a></h2>
 <p>Pangeo is a work in progress. We need engagement from scientists like you
 to realize the goals of the project. Currently, the best way to provide your
 feedback and interact with the Pangeo community is via the
 <a class="reference external" href="https://github.com/pangeo-data/pangeo/issues">Pangeo GitHub issue tracker</a>. We use this a forum to discuss all details
 of the project. Please drop in and share what you are working on, including
 any challenges your have encountered along the way.</p>
-</div>
-<div class="section" id="contribute-a-use-case">
-<h2>Contribute a Use Case<a class="headerlink" href="#contribute-a-use-case" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="contribute-a-use-case">
+<h2>Contribute a Use Case<a class="headerlink" href="#contribute-a-use-case" title="Permalink to this heading">¶</a></h2>
 <p>If you are using Pangeo for your research, we would love to include an example
 in the <a class="reference external" href="http://gallery.pangeo.io/">Pangeo Gallery</a>. It’s easy to add a new gallery!
 Feel free to raise an issue on the <a class="reference external" href="https://discourse.pangeo.io/c/science/5">Pangeo Discourse Forum</a> to propose your
 use case.</p>
-</div>
-<div class="section" id="contribute-data">
-<h2>Contribute Data<a class="headerlink" href="#contribute-data" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="contribute-data">
+<h2>Contribute Data<a class="headerlink" href="#contribute-data" title="Permalink to this heading">¶</a></h2>
 <p>Datasets are central to Pangeo. Our goal is to bring the computing to the data,
 rather than the other way around.
 If you have data you would like to make accessible to Pangeo, your best bet is
 to place it on a large shared HPC cluster or in cloud storage.
 You can then add your dataset to <a class="reference external" href="https://catalog.pangeo.io">catalog.pangeo.io</a>.
 via the GitHub repo <a class="reference external" href="https://github.com/pangeo-data/pangeo-datastore">https://github.com/pangeo-data/pangeo-datastore</a>.</p>
-</div>
-<div class="section" id="become-an-open-source-contributor">
-<h2>Become an Open Source Contributor<a class="headerlink" href="#become-an-open-source-contributor" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="become-an-open-source-contributor">
+<h2>Become an Open Source Contributor<a class="headerlink" href="#become-an-open-source-contributor" title="Permalink to this heading">¶</a></h2>
 <p>The success of the Pangeo project depends on the sustainable development of
 the underlying <a class="reference internal" href="packages.html#packages"><span class="std std-ref">Packages</span></a>. A great way to contribute to Pangeo is to
 contribute to those packages. Some ways to do this include:</p>
@@ -338,8 +339,8 @@ contribute to those packages. Some ways to do this include:</p>
 missing features</p></li>
 <li><p>fixing bugs or implementing new features yourself</p></li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
 
     </div>
@@ -354,7 +355,7 @@ missing features</p></li>
     </p>
     <p>
         &copy; Copyright 2018-2023, Pangeo Team.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.4.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 7.1.2.<br/>
     </p>
   </div>
 </footer>

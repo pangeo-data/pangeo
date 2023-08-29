@@ -65,4 +65,8 @@ There are many ways to get involved:
 - *Developers / system administrators*: learn about the
   :ref:`architecture` or read the :ref:`setup-guides`.
 
+Governance
+------------
+For information about the governance of the Pangeo community, view our `governance repository <https://github.com/pangeo-data/governance>`_, which includes our `governance document <https://github.com/pangeo-data/governance/blob/master/governance.md>`_ and `list of Steering Council members <https://github.com/pangeo-data/governance/blob/master/steering_council_membership.md>`_.
+
 For more information, consult the :ref:`FAQ`.
