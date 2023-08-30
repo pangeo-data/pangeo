@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" data-content_root="./">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -11,9 +11,9 @@
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="_static/example_gallery_styles_patched.css?v=417c3662" />
     <link rel="stylesheet" type="text/css" href="_static/pangeo-main-site-custom.css?v=91edfa83" />
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=b3ba4146"></script>
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
     <script src="_static/doctools.js?v=888ff710"></script>
-    <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="_static/copybutton.js?v=30646c52"></script>
     <script src="_static/js/jquery-1.11.0.min.js"></script>
@@ -239,7 +239,7 @@
     <div class="col-md-9 content ">
       
   <section id="pangeo-and-data">
-<span id="data"></span><h1>Pangeo and Data<a class="headerlink" href="#pangeo-and-data" title="Permalink to this heading">¶</a></h1>
+<span id="data"></span><h1>Pangeo and Data<a class="headerlink" href="#pangeo-and-data" title="Link to this heading">¶</a></h1>
 <p>Pangeo provides the computational tools to do scalable analysis of large
 geoscience datasets.
 For decades, our field has operated on a “download model,” under which
@@ -271,7 +271,7 @@ We aren’t there yet, but Pangeo is working towards this goal.</p>
 </ul>
 </div>
 <section id="data-on-hpc">
-<h2>Data on HPC<a class="headerlink" href="#data-on-hpc" title="Permalink to this heading">¶</a></h2>
+<h2>Data on HPC<a class="headerlink" href="#data-on-hpc" title="Link to this heading">¶</a></h2>
 <p>Many high-performance computing clusters serve as de-facto data repositories,
 particularly for the model simulations that run on those systems. Pangeo
 provides a way to leverage those same systems for data analysis.
@@ -291,7 +291,7 @@ All of those datasets are accessible to Pangeo now via the Cheyenne deployment.<
 </ul>
 </section>
 <section id="data-in-the-cloud">
-<h2>Data in the Cloud<a class="headerlink" href="#data-in-the-cloud" title="Permalink to this heading">¶</a></h2>
+<h2>Data in the Cloud<a class="headerlink" href="#data-in-the-cloud" title="Link to this heading">¶</a></h2>
 <p>The Pangeo community is very excited about the opportunities presented by the
 cloud for scientific research in terms of scalability, reproducibility, and
 efficiency.
@@ -321,7 +321,7 @@ Zarr works well on both local filesystems and cloud-based object stores.
 Existing datasets can easily be converted to zarr via
 <a class="reference external" href="http://xarray.pydata.org/en/latest/io.html#zarr">xarray’s zarr functions</a>.</p>
 <section id="google-cloud-storage-data-catalog">
-<h3>Google Cloud Storage Data Catalog<a class="headerlink" href="#google-cloud-storage-data-catalog" title="Permalink to this heading">¶</a></h3>
+<h3>Google Cloud Storage Data Catalog<a class="headerlink" href="#google-cloud-storage-data-catalog" title="Link to this heading">¶</a></h3>
 <p>Thanks to our <a class="reference internal" href="collaborators.html#earthcube"><span class="std std-ref">NSF Award</span></a>, Pangeo has a substantial allocation
 on Google Cloud Platform which we are currently using to host several large
 datasets.
@@ -331,7 +331,7 @@ e.g. <a class="reference internal" href="cloud.html#cloud"><span class="std std-
 <a class="reference external" href="http://catalog.pangeo.io/">data catalog</a>.</p>
 </section>
 <section id="guide-to-preparing-cloud-optimized-data">
-<span id="cloud-data-guide"></span><h3>Guide to Preparing Cloud-Optimized Data<a class="headerlink" href="#guide-to-preparing-cloud-optimized-data" title="Permalink to this heading">¶</a></h3>
+<span id="cloud-data-guide"></span><h3>Guide to Preparing Cloud-Optimized Data<a class="headerlink" href="#guide-to-preparing-cloud-optimized-data" title="Link to this heading">¶</a></h3>
 <p>How do you get data into the cloud in a format that is optimized for pangeo
 to read?
 This guide outlines our current practices for converting netCDF data to
@@ -349,7 +349,7 @@ preparing and uploading.</p>
 <ol class="arabic">
 <li><p><strong>Open your Entire Dataset in Xarray</strong>.</p>
 <p>Xarray is designed to
-load many netCDF files into a single <a class="reference external" href="https://docs.xarray.dev/en/latest/generated/xarray.Dataset.html#xarray.Dataset" title="(in xarray v2023.8.1.dev1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">xarray.Dataset</span></code></a> object.
+load many netCDF files into a single <a class="reference external" href="https://docs.xarray.dev/en/latest/generated/xarray.Dataset.html#xarray.Dataset" title="(in xarray v2023.8.1.dev4)"><code class="xref py py-class docutils literal notranslate"><span class="pre">xarray.Dataset</span></code></a> object.
 The easiest way to accomplish this is using the <code class="xref py py-meth docutils literal notranslate"><span class="pre">xarray.open_mfdataset()</span></code>
 function. Suppose you have a directory full of netCDF files that comprise
 a single dataset stored in the directory <code class="docutils literal notranslate"><span class="pre">/path/to/mydataset</span></code>. If the files
@@ -457,7 +457,7 @@ the underlying zarr chunks.</p>
     </p>
     <p>
         &copy; Copyright 2018-2023, Pangeo Team.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 7.1.2.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 7.2.4.<br/>
     </p>
   </div>
 </footer>

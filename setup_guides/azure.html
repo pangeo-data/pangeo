@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" data-content_root="../">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -11,9 +11,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/example_gallery_styles_patched.css?v=417c3662" />
     <link rel="stylesheet" type="text/css" href="../_static/pangeo-main-site-custom.css?v=91edfa83" />
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=b3ba4146"></script>
+    <script src="../_static/documentation_options.js?v=5929fcd5"></script>
     <script src="../_static/doctools.js?v=888ff710"></script>
-    <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../_static/copybutton.js?v=30646c52"></script>
     <script src="../_static/js/jquery-1.11.0.min.js"></script>
@@ -269,7 +269,7 @@
     <div class="col-md-9 content ">
       
   <section id="installing-pangeo-on-azure">
-<h1>Installing Pangeo on Azure<a class="headerlink" href="#installing-pangeo-on-azure" title="Permalink to this heading">¶</a></h1>
+<h1>Installing Pangeo on Azure<a class="headerlink" href="#installing-pangeo-on-azure" title="Link to this heading">¶</a></h1>
 <p>This guide takes you through the steps necessary to install Pangeo on Microsoft’s Azure Cloud Platform.
 We’ll make use of Azure’s Kubernetes as a Service offering, called AKS (Azure Kubernetes Service),
 for installing Pangeo on Azure.
@@ -281,13 +281,13 @@ Further work, for example to secure your cluster, is highly advised but not dire
 covered here.</p>
 </div>
 <section id="step-one-build-kubernetes-service">
-<h2>Step One: Build Kubernetes service<a class="headerlink" href="#step-one-build-kubernetes-service" title="Permalink to this heading">¶</a></h2>
+<h2>Step One: Build Kubernetes service<a class="headerlink" href="#step-one-build-kubernetes-service" title="Link to this heading">¶</a></h2>
 <p>The first step to installing Pangeo on Azure is to set up a Kubernetes service
 that can be used to run Pangeo. This can be done either by using the web interface
 or by using the Azure commandline interface (CLI). These are both practical options,
 so we’ll cover each one in turn.</p>
 <section id="using-the-web-interface">
-<h3>Using the web interface<a class="headerlink" href="#using-the-web-interface" title="Permalink to this heading">¶</a></h3>
+<h3>Using the web interface<a class="headerlink" href="#using-the-web-interface" title="Link to this heading">¶</a></h3>
 <p>To use the Azure web interface you must first have a Microsoft account that you
 can use to log into the Azure web interface. If you have an existing Microsoft
 account (for example, a hotmail.com or outlook.com email address) then you can use
@@ -302,7 +302,7 @@ the cluster is created a validation process is run, ensuring that any customizat
 made will produce a working cluster. At this step you can also download a
 template file to make reproducing or automating cluster creation simpler in the future.</p>
 <section id="autoscaling">
-<h4>Autoscaling<a class="headerlink" href="#autoscaling" title="Permalink to this heading">¶</a></h4>
+<h4>Autoscaling<a class="headerlink" href="#autoscaling" title="Link to this heading">¶</a></h4>
 <p>One benefit of the web interface is that we can easily create an AKS resource that implements
 autoscaling via virtual nodes (see <a class="reference external" href="https://docs.microsoft.com/en-us/azure/aks/virtual-nodes-portal">https://docs.microsoft.com/en-us/azure/aks/virtual-nodes-portal</a>
 for further details on this concept). Virtual nodes are still a preview feature in Azure, so some
@@ -320,7 +320,7 @@ Kubernetes service with tradtional cluster autoscaling.</p>
 </section>
 </section>
 <section id="using-the-azure-cli">
-<h3>Using the Azure CLI<a class="headerlink" href="#using-the-azure-cli" title="Permalink to this heading">¶</a></h3>
+<h3>Using the Azure CLI<a class="headerlink" href="#using-the-azure-cli" title="Link to this heading">¶</a></h3>
 <p>Instructions for downloading and installing the Azure CLI on major Operating Systems
 can be found at: <a class="reference external" href="https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest">https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest</a>.
 All interactions with the Azure CLI are via the <code class="docutils literal notranslate"><span class="pre">az</span></code> command.</p>
@@ -361,7 +361,7 @@ by running the following:</p>
 </pre></div>
 </div>
 <section id="id1">
-<h4>Autoscaling<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h4>
+<h4>Autoscaling<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h4>
 <p>To create a Kubernetes service with autoscaling enabled you can add extra keys
 to the previous <code class="docutils literal notranslate"><span class="pre">az</span> <span class="pre">aks</span> <span class="pre">create</span></code> command:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>az<span class="w"> </span>aks<span class="w"> </span>create<span class="w"> </span><span class="se">\</span>
@@ -391,7 +391,7 @@ to the previous <code class="docutils literal notranslate"><span class="pre">az<
 </section>
 </section>
 <section id="step-two-customise-cluster">
-<h2>Step Two: Customise cluster<a class="headerlink" href="#step-two-customise-cluster" title="Permalink to this heading">¶</a></h2>
+<h2>Step Two: Customise cluster<a class="headerlink" href="#step-two-customise-cluster" title="Link to this heading">¶</a></h2>
 <p>With a working Kubernetes service now built we can customise it in readiness for installing Pangeo
 on the cluster. At its most basic, this means installing helm and tiller, but other
 customisations (such as authentication) can also be added at this stage.
@@ -404,7 +404,7 @@ you can either:</p>
 The cloud shell includes the Azure CLI and a basic implementation of Visual Studio Code editor.</p></li>
 </ul>
 <section id="kubernetes-credentials">
-<h3>Kubernetes credentials<a class="headerlink" href="#kubernetes-credentials" title="Permalink to this heading">¶</a></h3>
+<h3>Kubernetes credentials<a class="headerlink" href="#kubernetes-credentials" title="Link to this heading">¶</a></h3>
 <p>Before we can progress we need to acquire kubernetes credentials for our newly-created
 AKS resource:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>az<span class="w"> </span>aks<span class="w"> </span>get-credentials<span class="w"> </span>-g<span class="w"> </span><span class="nv">$RESOURCE_GROUP_NAME</span><span class="w"> </span>-n<span class="w"> </span><span class="nv">$AKS_RESOURCE_NAME</span><span class="w"> </span>--overwrite-existing
@@ -414,7 +414,7 @@ AKS resource:</p>
 and the group within which the resource was created (as <code class="docutils literal notranslate"><span class="pre">$RESOURCE_GROUP_NAME</span></code>).</p>
 </section>
 <section id="helm-and-tiller">
-<h3>Helm and tiller<a class="headerlink" href="#helm-and-tiller" title="Permalink to this heading">¶</a></h3>
+<h3>Helm and tiller<a class="headerlink" href="#helm-and-tiller" title="Link to this heading">¶</a></h3>
 <p>Installing helm and tiller allows us to customise our Kubernetes service by applying
 helm charts to it. We need to ensure that helm and tiller will work correctly with
 RBAC, which is enabled by default on Azure Kubernetes services.</p>
@@ -446,7 +446,7 @@ helm<span class="w"> </span>init<span class="w"> </span>--upgrade<span class="w"
 </section>
 </section>
 <section id="step-3-install-pangeo">
-<h2>Step 3: Install Pangeo<a class="headerlink" href="#step-3-install-pangeo" title="Permalink to this heading">¶</a></h2>
+<h2>Step 3: Install Pangeo<a class="headerlink" href="#step-3-install-pangeo" title="Link to this heading">¶</a></h2>
 <p>Now we can move onto installing Pangeo on our Kubernetes service. This can be done
 as follows:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>helm<span class="w"> </span>repo<span class="w"> </span>add<span class="w"> </span>pangeo<span class="w"> </span>https://pangeo-data.github.io/helm-chart/
@@ -460,7 +460,7 @@ we made to it are documented in the
 <a class="reference external" href="https://zero-to-jupyterhub.readthedocs.io/en/latest/setup-jupyterhub.html">Zero to Jupyterhub</a>
 guide.</p>
 <section id="test-install">
-<h3>Test install<a class="headerlink" href="#test-install" title="Permalink to this heading">¶</a></h3>
+<h3>Test install<a class="headerlink" href="#test-install" title="Link to this heading">¶</a></h3>
 <p>To test that Pangeo has installed successfully on your Kubernetes service, find
 the IP address of the Pangeo proxy:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl<span class="w"> </span>get<span class="w"> </span>service<span class="w"> </span>proxy-public<span class="w"> </span>--namespace<span class="o">=</span>pangeo
@@ -474,7 +474,7 @@ in the output of the above command in your web browser.
 If JupyterHub loads then you have successfully installed Pangeo on your Azure Kubernetes service!</p>
 </section>
 <section id="id2">
-<h3>Autoscaling<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h3>
+<h3>Autoscaling<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h3>
 <p>If you set up your autoscaling Kubernetes service using the cluster autoscaler then autoscaling
 should work with no further customisation neeeded. If instead you set up autoscaling using
 virtual nodes and VM scale sets then a little more work is needed. In particular we need to
@@ -508,7 +508,7 @@ of the yaml:</p>
     </p>
     <p>
         &copy; Copyright 2018-2023, Pangeo Team.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 7.1.2.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 7.2.4.<br/>
     </p>
   </div>
 </footer>
