@@ -49,8 +49,8 @@ Fall 2023 Showcase
      - Ayoub Fatihi, ECMWF 
      - Compression of Geospatial Data with Varying Information Density
    * - 2023-11-08 4PM EST
-     - Available
-     - Available
+     - Tim Bonnemann, Open Source Science
+     - The Open Source Science Project 
    * - 2023-11-15 12PM EST
      - Available
      - Available
