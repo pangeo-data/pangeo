@@ -35,7 +35,7 @@ Fall 2023 Showcase
      - Intake 2.0: The Future
    * - 2023-10-04 12PM EDT
      - Ryan Abernathy and Joe Hamman, EarthMover
-     - EarthMover
+     - ArrayLake
    * - 2023-10-11 4PM EDT
      - Matt Iannucci, RPS
      - Distributed access to NOAA model data aggregations
@@ -43,8 +43,8 @@ Fall 2023 Showcase
      - Julius Busecke, Columbia University
      - CMIP6 data ingestion with Pangeo Forge
    * - 2023-10-25 4PM EDT
-     - Tom Nicholas, Columbia University
-     - Cubed
+     - Amelia Snyder, USGS
+     - The Hydro-Terrestrial Earth System Testbed (HyTEST) 
    * - 2023-11-01 12PM EDT
      - Ayoub Fatihi, ECMWF 
      - Compression of Geospatial Data with Varying Information Density
