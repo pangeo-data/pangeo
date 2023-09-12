@@ -55,8 +55,8 @@ Fall 2023 Showcase
      - Available
      - Available
    * - 2023-11-22 4PM EST
-     - Available
-     - Available
+     - Thankgiving Break 
+     - Thanksgiving Break 
    * - 2023-11-29 12PM EST
      - Available
      - Available
