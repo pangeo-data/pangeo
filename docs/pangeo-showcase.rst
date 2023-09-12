@@ -52,10 +52,10 @@ Fall 2023 Showcase
      - Tim Bonnemann, Open Source Science
      - The Open Source Science Project 
    * - 2023-11-15 12PM EST
-     - Available
-     - Available
+     - Tom Nicholas, Columbia University
+     - Cubed: Bounded-memory serverless array processing in xarray
    * - 2023-11-22 4PM EST
-     - Thankgiving Break 
+     - Thanksgiving Break 
      - Thanksgiving Break 
    * - 2023-11-29 12PM EST
      - Available
