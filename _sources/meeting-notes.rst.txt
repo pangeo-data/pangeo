@@ -17,7 +17,7 @@ The check-ins are an opportunity for anyone to meet other members of the Pangeo 
 you are working on with short, one minute updates, and agenda items are anything people feel would benefit from group discussion.
 
 * Schedule: Every Wednesday, alternating between 12pm ET and 4pm ET (See the Calendar at the bottom of this page!) 
-* Conferencing: `Zoom <https://columbiauniversity.zoom.us/j/94877958106?pwd=UkE0UHF1U0x3VTVUNEJTam9mTXVHZz09>`__
+* Conferencing: `Zoom <https://numfocus-org.zoom.us/j/83234473026?pwd=mgM3uAuru1AE1aFPlRjW2dAAAyo8IY.1>`__
 * Notes:  `Google Doc <https://docs.google.com/document/d/e/2PACX-1vRerhoxG-wOvh-wQTj7F8HPYve75l8pAtL-tgtzY_3YLqVUsaMSEgE4K70HgMt5S91FMwSu8EIizewy/pub>`_
 
 Continental Community Meetings
