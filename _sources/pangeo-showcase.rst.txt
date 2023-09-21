@@ -29,7 +29,7 @@ Fall 2023 Showcase
 
    * - 2023-09-20 12PM EDT
      - Erik A Bolch, KBR (Contractor to USGS)
-     - `Interactive Exploration of EMIT Mission data <https://discourse.pangeo.io/t/pangeo-showcase-interactive-exploration-of-emit-mission-data/3682>`_
+     - `Interactive Exploration of EMIT Mission data <https://discourse.pangeo.io/t/interactive-exploration-of-emit-mission-data/3692>`_
    * - 2023-09-27 4PM EDT
      - Martin Durant, Anaconda
      - Intake 2.0: The Future
