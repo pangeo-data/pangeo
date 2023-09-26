@@ -35,7 +35,7 @@ Fall 2023 Showcase
      - `Intake 2.0: The Future <https://discourse.pangeo.io/t/pangeo-showcase-intake-v2-the-future-martin-durant-anaconda/3694>`_
    * - 2023-10-04 12PM EDT
      - Ryan Abernathy and Joe Hamman, EarthMover
-     - ArrayLake
+     - `Arraylake: A Cloud-Native Data Lake Platform for Earth System Science <https://discourse.pangeo.io/t/pangeo-showcase-arraylake-a-cloud-native-data-lake-platform-for-earth-system-science/3701>`_
    * - 2023-10-11 4PM EDT
      - Matt Iannucci, RPS
      - Distributed access to NOAA model data aggregations
