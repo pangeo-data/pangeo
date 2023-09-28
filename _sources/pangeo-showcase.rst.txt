@@ -32,7 +32,7 @@ Fall 2023 Showcase
      - `Interactive Exploration of EMIT Mission data <https://discourse.pangeo.io/t/interactive-exploration-of-emit-mission-data/3692>`_
    * - 2023-09-27 4PM EDT
      - Martin Durant, Anaconda
-     - `Intake 2.0: The Future <https://discourse.pangeo.io/t/pangeo-showcase-intake-v2-the-future-martin-durant-anaconda/3694>`_
+     - `Intake 2.0: The Future <https://discourse.pangeo.io/t/sep-27-2023-intake-2-the-future-martin-durant/3706>`_
    * - 2023-10-04 12PM EDT
      - Ryan Abernathy and Joe Hamman, EarthMover
      - `Arraylake: A Cloud-Native Data Lake Platform for Earth System Science <https://discourse.pangeo.io/t/pangeo-showcase-arraylake-a-cloud-native-data-lake-platform-for-earth-system-science/3701>`_
