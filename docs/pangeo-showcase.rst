@@ -38,7 +38,7 @@ Fall 2023 Showcase
      - `Arraylake: A Cloud-Native Data Lake Platform for Earth System Science <https://discourse.pangeo.io/t/pangeo-showcase-arraylake-a-cloud-native-data-lake-platform-for-earth-system-science/3701>`_
    * - 2023-10-11 4PM EDT
      - Matt Iannucci, RPS
-     - Distributed access to NOAA model data aggregations
+     - `Improving Access to NOAA National Ocean Service Model Data with Kerchunk and XPublish <https://discourse.pangeo.io/t/pangeo-showcase-improving-access-to-noaa-national-ocean-service-model-data-with-kerchunk-and-xpublish/3725>`_
    * - 2023-10-18 12PM EDT
      - Julius Busecke, Columbia University
      - CMIP6 data ingestion with Pangeo Forge
