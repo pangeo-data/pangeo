@@ -40,8 +40,8 @@ Fall 2023 Showcase
      - Matt Iannucci and Jonathan Joyce, RPS
      - `Improving Access to NOAA National Ocean Service Model Data with Kerchunk and XPublish <https://discourse.pangeo.io/t/pangeo-showcase-improving-access-to-noaa-national-ocean-service-model-data-with-kerchunk-and-xpublish/3725>`_
    * - 2023-10-18 12PM EDT
-     - Julius Busecke, Columbia University
-     - CMIP6 data ingestion with Pangeo Forge
+     - Available
+     - Available
    * - 2023-10-25 4PM EDT
      - Amelia Snyder, USGS
      - The Hydro-Terrestrial Earth System Testbed (HyTEST) 
@@ -58,8 +58,8 @@ Fall 2023 Showcase
      - Thanksgiving Break 
      - Thanksgiving Break 
    * - 2023-11-29 12PM EST
-     - Available
-     - Available
+     - Julius Busecke, Columbia University
+     - CMIP6 data ingestion with Pangeo Forge
    * - 2023-12-06 4PM EST
      - Available
      - Available
