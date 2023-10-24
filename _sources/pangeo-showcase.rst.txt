@@ -44,7 +44,7 @@ Fall 2023 Showcase
      - Available
    * - 2023-10-25 4PM EDT
      - Amelia Snyder, USGS
-     - The Hydro-Terrestrial Earth System Testbed (HyTEST) 
+     - `The Hydro-Terrestrial Earth System Testbed (HyTEST) <https://discourse.pangeo.io/t/pangeo-showcase-the-hydro-terrestrial-earth-system-testbed-hytest/3780>`_ 
    * - 2023-11-01 12PM EDT
      - Ayoub Fatihi, ECMWF 
      - Compression of Geospatial Data with Varying Information Density
