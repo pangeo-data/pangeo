@@ -40,14 +40,14 @@ Fall 2023 Showcase
      - Matt Iannucci and Jonathan Joyce, RPS
      - `Improving Access to NOAA National Ocean Service Model Data with Kerchunk and XPublish <https://discourse.pangeo.io/t/pangeo-showcase-improving-access-to-noaa-national-ocean-service-model-data-with-kerchunk-and-xpublish/3725>`_
    * - 2023-10-18 12PM EDT
-     - Available
-     - Available
+     - No Showcase Talk
+     - No Showcase Talk
    * - 2023-10-25 4PM EDT
      - Amelia Snyder, USGS
      - `The Hydro-Terrestrial Earth System Testbed (HyTEST) <https://discourse.pangeo.io/t/pangeo-showcase-the-hydro-terrestrial-earth-system-testbed-hytest/3780>`_ 
    * - 2023-11-01 12PM EDT
      - Ayoub Fatihi, ECMWF 
-     - Compression of Geospatial Data with Varying Information Density
+     - `Compression of Geospatial Data with Varying Information Density <https://discourse.pangeo.io/t/pangeo-showcase-compression-of-geospatial-data-with-varying-information-density/3797>`_
    * - 2023-11-08 4PM EST
      - Tim Bonnemann, Open Source Science
      - The Open Source Science Project 
@@ -64,8 +64,8 @@ Fall 2023 Showcase
      - Available
      - Available
    * - 2023-12-13 12PM EST
-     - Available
-     - Available
+     - Anthony Aufdenkampe (LimnoTech)
+     - Delivering EDR and OpenDAP services with Xpublish and pyGeoAPI
 **If you are intersted in presenting, please `fill out this short form <https://forms.gle/QwxKusVvrvDakSNs8>`_.
 
 Showcase Archive
