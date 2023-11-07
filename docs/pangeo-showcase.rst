@@ -50,7 +50,7 @@ Fall 2023 Showcase
      - `Compression of Geospatial Data with Varying Information Density <https://discourse.pangeo.io/t/pangeo-showcase-compression-of-geospatial-data-with-varying-information-density/3797>`_
    * - 2023-11-08 4PM EST
      - Tim Bonnemann, Open Source Science
-     - The Open Source Science Project 
+     - `Accelerating Science with Open Source – An Introduction to Open-Source Science (OSSci) <https://discourse.pangeo.io/t/pangeo-showcase-accelerating-science-with-open-source-an-introduction-to-open-source-science-ossci/3822>`_
    * - 2023-11-15 12PM EST
      - Tom Nicholas, Columbia University
      - Cubed: Bounded-memory serverless array processing in xarray
