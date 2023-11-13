@@ -52,7 +52,7 @@ Fall 2023 Showcase
      - Tim Bonnemann, Open Source Science
      - `Accelerating Science with Open Source – An Introduction to Open-Source Science (OSSci) <https://discourse.pangeo.io/t/pangeo-showcase-accelerating-science-with-open-source-an-introduction-to-open-source-science-ossci/3822>`_
    * - 2023-11-15 12PM EST
-     - Tom Nicholas, Columbia University
+     - Tom Nicholas, [C]Worthy, and Tom White, tom-e-white.com
      - `Cubed: Bounded-memory serverless array processing in xarray <https://discourse.pangeo.io/t/pangeo-showcase-cubed-bounded-memory-serverless-array-processing-in-xarray/3836>`_
    * - 2023-11-22 4PM EST
      - Thanksgiving Break 
