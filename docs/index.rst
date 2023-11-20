@@ -18,9 +18,8 @@ A community platform for Big Data geoscience
 .. image::  https://img.shields.io/discourse/users?server=https%3A%2F%2Fdiscourse.pangeo.io%2F&style=flat-square&logo=discourse
    :target: https://discourse.pangeo.io/
    :alt: Discourse Forum
-.. image:: https://img.shields.io/gitter/room/pangeo-data/lobby?color=blue&logo=gitter&style=flat-square
-   :target: https://gitter.im/pangeo-data/Lobby
-   :alt: Gitter
+.. image:: https://img.shields.io/discord/1172496930002190416?style=flat-square&logo=discord&label=Discord
+   :alt: Discord
 .. image:: https://img.shields.io/twitter/follow/pangeo_data?logo=twitter&style=flat-square
    :target: https://twitter.com/pangeo_data
    :alt: Twitter
