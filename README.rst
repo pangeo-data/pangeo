@@ -12,6 +12,7 @@ A Community Platform for Big Data Geoscience
    :target: https://discourse.pangeo.io/
    :alt: Discourse Forum
 .. image:: https://img.shields.io/discord/1172496930002190416?style=flat-square&logo=discord&label=Discord
+   :target: https://discord.com/invite/ex5qqEyyTz
    :alt: Discord
 .. image:: https://img.shields.io/twitter/follow/pangeo_data?logo=twitter&style=flat-square
    :target: https://twitter.com/pangeo_data
