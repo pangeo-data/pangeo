@@ -59,7 +59,7 @@ Fall 2023 Showcase
      - Thanksgiving Break 
    * - 2023-11-29 12PM EST
      - Julius Busecke, Columbia University
-     - CMIP6 data ingestion with Pangeo Forge
+     - `How to transform thousands of CMIP6 datasets to Zarr with Pangeo Forge (and why we should never do this again!) <https://discourse.pangeo.io/t/pangeo-showcase-how-to-transform-thousands-of-cmip6-datasets-to-zarr-with-pangeo-forge-and-why-we-should-never-do-this-again/3856>`_
    * - 2023-12-06 4PM EST
      - Available
      - Available
