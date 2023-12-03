@@ -27,16 +27,12 @@ To adress different time zones among the globe continental meetings have been or
 
 1. Europe & Africa
 
-   Gitter: `Pangeo Europe <https://gitter.im/pangeo-data/Europe>`__ 
+   Discord: `Invite to join <https://discord.gg/ex5qqEyyTz>`__ 
 
    - Pangeo European Coffee ; an informal meeting with open discussions:   
       * Schedule: Every week on Tuesday at 9:30am CET
-      * Conferencing: Conferencing: `meet.jit.si/pangeo-europe <https://meet.jit.si/pangeo-europe>`_
+      * Conferencing: https://numfocus-org.zoom.us/j/81977735338?pwd=pVM3UvnSAJORc2p4Oad39TESPvBzV5.1
       * Notes: `Google Doc <https://docs.google.com/document/d/1Vq1ljPRQYWF_u0Ku1eEhQyYreijAJ2QW6FELdIsiYDs/edit?usp=sharing>`__
-   - Monthly meeting: 
-      * Schedule: (to be scheduled)  
-      * Conferencing: 
-      * Notes: `Google Doc <https://docs.google.com/document/d/12P5vAvh7l5ohZwZiJ3z-HMitnKHt8dYLXPGCeWRsJ7Y/edit?usp=sharing>`__
 
 2. Oceania
 
