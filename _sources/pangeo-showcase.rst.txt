@@ -61,11 +61,12 @@ Fall 2023 Showcase
      - Julius Busecke, Columbia University
      - `How to transform thousands of CMIP6 datasets to Zarr with Pangeo Forge (and why we should never do this again!) <https://discourse.pangeo.io/t/pangeo-showcase-how-to-transform-thousands-of-cmip6-datasets-to-zarr-with-pangeo-forge-and-why-we-should-never-do-this-again/3856>`_
    * - 2023-12-06 4PM EST
-     - Available
-     - Available
+     - Tom Nicholas & the Pangeo Community
+     - `What's next for Pangeo? <https://discourse.pangeo.io/t/pangeo-showcase-whats-next-for-pangeo/3870>`_
    * - 2023-12-13 12PM EST
-     - Anthony Aufdenkampe (LimnoTech)
-     - Delivering EDR and OpenDAP services with Xpublish and pyGeoAPI
+     - Anthony Aufdenkampe, Sarah Jordan, Xavier Nogueira and Paul Tomasula (LimnoTech)
+     - `Delivering OGC Processing API, OGC EDR, and OPeNDAP services with pyGeoAPI and Catalog-to-Xpublish <https://discourse.pangeo.io/t/pangeo-showcase-delivering-ogc-processing-api-ogc-edr-and-opendap-services-with-pygeoapi-and-catalog-to-xpublish/3905>`_
+
 **If you are intersted in presenting, please `fill out this short form <https://forms.gle/QwxKusVvrvDakSNs8>`_.
 
 Showcase Archive
