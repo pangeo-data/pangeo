@@ -54,7 +54,7 @@ jobs:
         
     - name: Leave comment on pull request
       if: env.COMMENT_ON_PR == 'true'
-      uses: actions/github-script@v3
+      uses: actions/github-script@v7
       with:
         github-token: ${{secrets.GITHUB_TOKEN}}
         script: |
