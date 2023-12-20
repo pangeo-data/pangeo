@@ -65,7 +65,7 @@ Fall 2023 Showcase
      - `What's next for Pangeo? <https://discourse.pangeo.io/t/pangeo-showcase-whats-next-for-pangeo/3870>`_
    * - 2023-12-13 12PM EST
      - Anthony Aufdenkampe, Sarah Jordan, Xavier Nogueira and Paul Tomasula (LimnoTech)
-     - `Delivering OGC Processing API, OGC EDR, and OPeNDAP services with pyGeoAPI and Catalog-to-Xpublish <https://discourse.pangeo.io/t/pangeo-showcase-delivering-ogc-processing-api-ogc-edr-and-opendap-services-with-pygeoapi-and-catalog-to-xpublish/3905>`_
+     - `Delivering OGC Processing API, OGC EDR, and OPeNDAP services with pygeoapi and Catalog-to-Xpublish <https://discourse.pangeo.io/t/pangeo-showcase-delivering-ogc-processing-api-ogc-edr-and-opendap-services-with-pygeoapi-and-catalog-to-xpublish/3905>`_
    * - 2023-12-20 4PM EST
      - Pangeo Showcase Winter Break begins
      - Pangeo weekly meeting will still take place!
