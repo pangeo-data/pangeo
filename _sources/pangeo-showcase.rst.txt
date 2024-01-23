@@ -15,6 +15,26 @@ available on the `Pangeo YouTube Channel <https://youtube.com/playlist?list=PLuQ
 
 * **Conferencing**:   `Zoom <https://numfocus-org.zoom.us/j/83234473026?pwd=mgM3uAuru1AE1aFPlRjW2dAAAyo8IY.1>`_
 
+Winter/Spring 2024 Showcase
+------------------------------------------------------
+
+.. list-table::
+   :widths: 15 25 60
+   :header-rows: 1
+   :align: left
+
+   * - Date
+     - Speaker
+     - Title
+
+   * - 2024-02-07 12PM EST
+     - Ezequiel Cimadevilla
+     - Virtual Analysis Ready Data for CMIP6 and ESGF
+   * - 2024-02-28 4PM EST
+     - Nihanth Cherukuru
+     - VAPOR Python API - A 3D data visualization Python package for Earth Science datasets
+
+
 Fall 2023 Showcase
 ------------------------------------------------------
 
