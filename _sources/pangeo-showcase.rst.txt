@@ -29,10 +29,10 @@ Winter/Spring 2024 Showcase
 
    * - 2024-02-07 12PM EST
      - Ezequiel Cimadevilla
-     - Virtual Analysis Ready Data for CMIP6 and ESGF
+     - `Virtual Analysis Ready Data for CMIP6 and ESGF <https://discourse.pangeo.io/t/pangeo-showcase-virtual-analysis-ready-data-for-cmip6-and-esgf/4004>`_
    * - 2024-02-14 4PM EST
      - Martin Durant
-     - What's next for Kerchunk
+     - `What's next for Kerchunk <https://discourse.pangeo.io/t/whats-next-for-kerchunk/4005>`_
    * - 2024-02-28 4PM EST
      - Nihanth Cherukuru
      - VAPOR Python API - A 3D data visualization Python package for Earth Science datasets
