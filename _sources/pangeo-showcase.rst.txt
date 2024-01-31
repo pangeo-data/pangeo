@@ -30,6 +30,9 @@ Winter/Spring 2024 Showcase
    * - 2024-02-07 12PM EST
      - Ezequiel Cimadevilla
      - Virtual Analysis Ready Data for CMIP6 and ESGF
+   * - 2024-02-14 4PM EST
+     - Martin Durant
+     - What's next for Kerchunk
    * - 2024-02-28 4PM EST
      - Nihanth Cherukuru
      - VAPOR Python API - A 3D data visualization Python package for Earth Science datasets
