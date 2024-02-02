@@ -36,7 +36,9 @@ Winter/Spring 2024 Showcase
    * - 2024-02-28 4PM EST
      - Nihanth Cherukuru
      - VAPOR Python API - A 3D data visualization Python package for Earth Science datasets
-
+   * - 2024-05-01 12PM EDT
+     - Max Jones
+     - Pangeo ML: Open source tools and pipelines for cloud-optimized machine learning
 
 Fall 2023 Showcase
 ------------------------------------------------------
