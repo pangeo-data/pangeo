@@ -34,11 +34,14 @@ Winter/Spring 2024 Showcase
      - Martin Durant
      - `What's next for Kerchunk <https://discourse.pangeo.io/t/whats-next-for-kerchunk/4005>`_
    * - 2024-02-21 12PM EST
-     - Tim Hodson
-     - Pangeo Forge in the HyTEST Program
+     - Andrew Bennett and Nicoleta Cristea
+     - GeoSMART
    * - 2024-02-28 4PM EST
      - Nihanth Cherukuru
      - VAPOR Python API - A 3D data visualization Python package for Earth Science datasets
+   * - 2024-03-06 12PM EST
+     - Tim Hodson
+     - Pangeo Forge in the HyTEST Program
    * - 2024-05-01 12PM EDT
      - Max Jones
      - Pangeo ML: Open source tools and pipelines for cloud-optimized machine learning
