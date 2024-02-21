@@ -34,11 +34,11 @@ Winter/Spring 2024 Showcase
      - Martin Durant
      - `What's next for Kerchunk <https://discourse.pangeo.io/t/whats-next-for-kerchunk/4005>`_
    * - 2024-02-21 12PM EST
-     - Andrew Bennett and Nicoleta Cristea
-     - GeoSMART
+     - Andrew Bennett 
+     - `Advancing Machine Learning with Open Source Software: A Case Study in Global Climate Projections of Snow <https://discourse.pangeo.io/t/pangeo-showcase-advancing-machine-learning-education-with-open-software-and-data-a-case-study-in-global-climate-projections-of-snow/4041>`_
    * - 2024-02-28 4PM EST
      - Nihanth Cherukuru
-     - VAPOR Python API - A 3D data visualization Python package for Earth Science datasets
+     - `VAPOR Python: A 3D data visualization Python API for Earth Science datasets <https://discourse.pangeo.io/t/pangeo-showcase-vapor-python-a-3d-data-visualization-python-api-for-earth-science-datasets/4048>`_
    * - 2024-03-06 12PM EST
      - Tim Hodson
      - Pangeo Forge in the HyTEST Program
