@@ -41,7 +41,7 @@ Winter/Spring 2024 Showcase
      - `VAPOR Python: A 3D data visualization Python API for Earth Science datasets <https://discourse.pangeo.io/t/pangeo-showcase-vapor-python-a-3d-data-visualization-python-api-for-earth-science-datasets/4048>`_
    * - 2024-03-06 12PM EST
      - Tim Hodson
-     - Pangeo Forge in the HyTEST Program
+     - `What is the future of Pangeo Forge? <https://discourse.pangeo.io/t/pangeo-showcase-what-is-the-future-of-pangeo-forge/4059>`_
    * - 2024-05-01 12PM EDT
      - Max Jones
      - Pangeo ML: Open source tools and pipelines for cloud-optimized machine learning
