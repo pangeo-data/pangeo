@@ -45,6 +45,9 @@ Winter/Spring 2024 Showcase
    * - 2024-03-13 4PM EDT
      - Luis Lopez
      - `HDF at the speed of Zarr <https://discourse.pangeo.io/t/pangeo-showcase-hdf-at-the-speed-of-zarr/4084>`_
+   * - 2024-03-27 4PM EDT
+     - Max Grover
+     - Pangeo meets Radar: xradar and Py-ART 
    * - 2024-05-01 12PM EDT
      - Max Jones
      - Pangeo ML: Open source tools and pipelines for cloud-optimized machine learning
