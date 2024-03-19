@@ -45,12 +45,18 @@ Winter/Spring 2024 Showcase
    * - 2024-03-13 4PM EDT
      - Luis Lopez
      - `HDF at the speed of Zarr <https://discourse.pangeo.io/t/pangeo-showcase-hdf-at-the-speed-of-zarr/4084>`_
+   * - 2024-03-20 12PM EDT
+     - Joe Hamman
+     - `Cloud Native Data Loaders for Machine Learning using Zarr and Xarray <https://discourse.pangeo.io/t/pangeo-showcase-cloud-native-data-loaders-for-machine-learning-using-zarr-and-xarray/4110>`_
    * - 2024-03-27 4PM EDT
      - Max Grover
      - Pangeo meets Radar: xradar and Py-ART 
    * - 2024-05-01 12PM EDT
      - Max Jones
      - Pangeo ML: Open source tools and pipelines for cloud-optimized machine learning
+   * - 2024-05-22 4PM EDT
+     - Joe Hamman
+     - Zarr update
    * - TBD
      - Tim Hodson
      - `What is the future of Pangeo Forge? <https://discourse.pangeo.io/t/pangeo-showcase-what-is-the-future-of-pangeo-forge/4059>`_
