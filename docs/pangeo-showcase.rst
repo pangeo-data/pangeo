@@ -56,7 +56,7 @@ Winter/Spring 2024 Showcase
      - Pangeo ML: Open source tools and pipelines for cloud-optimized machine learning
    * - 2024-05-22 4PM EDT
      - Joe Hamman
-     - Zarr update
+     - `Zarr-Python 3 and why you should be excited! <https://discourse.pangeo.io/t/pangeo-showcase-zarr-python-3-and-why-you-should-be-excited/4111>`_
    * - TBD
      - Tim Hodson
      - `What is the future of Pangeo Forge? <https://discourse.pangeo.io/t/pangeo-showcase-what-is-the-future-of-pangeo-forge/4059>`_
