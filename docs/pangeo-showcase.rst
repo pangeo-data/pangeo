@@ -57,9 +57,6 @@ Winter/Spring 2024 Showcase
    * - 2024-05-22 4PM EDT
      - Joe Hamman
      - `Zarr-Python 3 and why you should be excited! <https://discourse.pangeo.io/t/pangeo-showcase-zarr-python-3-and-why-you-should-be-excited/4111>`_
-   * - TBD
-     - Tim Hodson
-     - `What is the future of Pangeo Forge? <https://discourse.pangeo.io/t/pangeo-showcase-what-is-the-future-of-pangeo-forge/4059>`_
 
 Fall 2023 Showcase
 ------------------------------------------------------
