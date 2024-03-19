@@ -50,7 +50,7 @@ Winter/Spring 2024 Showcase
      - `Cloud Native Data Loaders for Machine Learning using Zarr and Xarray <https://discourse.pangeo.io/t/pangeo-showcase-cloud-native-data-loaders-for-machine-learning-using-zarr-and-xarray/4110>`_
    * - 2024-03-27 4PM EDT
      - Max Grover
-     - Pangeo meets Radar: xradar and Py-ART 
+     - `The Open Radar Stack: Bringing Weather Radar data into Pangeo <https://discourse.pangeo.io/t/pangeo-showcase-the-open-radar-stack-bringing-weather-radar-data-into-pangeo/4112>`_ 
    * - 2024-05-01 12PM EDT
      - Max Jones
      - Pangeo ML: Open source tools and pipelines for cloud-optimized machine learning
