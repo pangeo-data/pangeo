@@ -48,7 +48,7 @@ Winter/Spring 2024 Showcase
    * - 2024-03-20 12PM EDT
      - Joe Hamman
      - `Cloud Native Data Loaders for Machine Learning using Zarr and Xarray <https://discourse.pangeo.io/t/pangeo-showcase-cloud-native-data-loaders-for-machine-learning-using-zarr-and-xarray/4110>`_
-   * - 2024-03-27 4PM EDT
+   * - 2024-04-03 12PM EDT
      - Max Grover
      - `The Open Radar Stack: Bringing Weather Radar data into Pangeo <https://discourse.pangeo.io/t/pangeo-showcase-the-open-radar-stack-bringing-weather-radar-data-into-pangeo/4112>`_ 
    * - 2024-04-24 4PM EDT
