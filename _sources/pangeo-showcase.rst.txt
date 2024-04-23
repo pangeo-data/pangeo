@@ -51,7 +51,7 @@ Winter/Spring 2024 Showcase
    * - 2024-04-03 12PM EDT
      - Max Grover
      - `The Open Radar Stack: Bringing Weather Radar data into Pangeo <https://discourse.pangeo.io/t/pangeo-showcase-the-open-radar-stack-bringing-weather-radar-data-into-pangeo/4112>`_ 
-   * - 2024-04-24 4PM EDT
+   * - 2024-05-15 12PM EDT
      - Tom Nicholas
      - `VirtualiZarr: Create virtual Zarr stores using xarray syntax <https://discourse.pangeo.io/t/pangeo-showcase-virtualizarr-create-virtual-zarr-stores-using-xarray-syntax/4127>`_
    * - 2024-05-01 12PM EDT
