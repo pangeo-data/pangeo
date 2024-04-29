@@ -54,15 +54,15 @@ Winter/Spring 2024 Showcase
    * - 2024-05-15 12PM EDT
      - Tom Nicholas
      - `VirtualiZarr: Create virtual Zarr stores using xarray syntax <https://discourse.pangeo.io/t/pangeo-showcase-virtualizarr-create-virtual-zarr-stores-using-xarray-syntax/4127>`_
-   * - 2024-05-01 12PM EDT
-     - Max Jones
-     - Pangeo ML: Open source tools and pipelines for cloud-optimized machine learning
    * - 2024-05-22 4PM EDT
      - Joe Hamman
      - `Zarr-Python 3 and why you should be excited! <https://discourse.pangeo.io/t/pangeo-showcase-zarr-python-3-and-why-you-should-be-excited/4111>`_
    * - 2024-05-29 12PM EDT
      - Blaec Bejarano
      - CoCalc for Pangeans
+   * - 2024-06-05 4PM EDT
+     - Max Jones
+     - Pangeo ML: Open source tools and pipelines for cloud-optimized machine learning
 
 Fall 2023 Showcase
 ------------------------------------------------------
