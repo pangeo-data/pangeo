@@ -59,10 +59,10 @@ Winter/Spring 2024 Showcase
      - `Zarr-Python 3 and why you should be excited! <https://discourse.pangeo.io/t/pangeo-showcase-zarr-python-3-and-why-you-should-be-excited/4111>`_
    * - 2024-05-29 12PM EDT
      - Blaec Bejarano
-     - CoCalc for Pangeans
+     - `CoCalc for Pangeans <https://discourse.pangeo.io/t/pangeo-showcase-cocalc-for-pangeans/4248>`_
    * - 2024-06-05 4PM EDT
      - Max Jones
-     - Pangeo ML: Open source tools and pipelines for cloud-optimized machine learning
+     - `Pangeo ML: Open source tools and pipelines for scalable machine learning using NASA Earth observation data <https://discourse.pangeo.io/t/pangeo-showcase-pangeo-ml-open-source-tools-and-pipelines-for-scalable-machine-learning-using-nasa-earth-observation-data/4249>`_
 
 Fall 2023 Showcase
 ------------------------------------------------------
