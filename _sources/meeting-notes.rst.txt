@@ -9,10 +9,11 @@ Community Meeting
 Pangeo holds weekly community meetings every Wednesday.  The meetings alternate between 12PM and 4PM US Eastern Time to encourage 
 participants from a wider range of time zones.  Anyone may attend!
 
-Starting April 7, 2021, the community meetings will have a new format: They will begin with a :ref:`Pangeo-Showcase` talk, 
-followed by discussion, optional check-ins, and any agenda items. 
+Most meetings September-June will begin with a  :ref:`Pangeo-Showcase` talk, 
+followed by discussion, optional check-ins, and any agenda items.   In July-August the Showcase Talks take a holiday break, but the Weekly Meeting still takes place! 
 
 The :ref:`Pangeo-Showcase` talks are 15 minutes, recorded and receive a DOI.
+
 The check-ins are an opportunity for anyone to meet other members of the Pangeo community and let them know what
 you are working on with short, one minute updates, and agenda items are anything people feel would benefit from group discussion.
 
