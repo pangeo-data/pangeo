@@ -1,267 +1,426 @@
 Installing Pangeo on Azure
---------------------------
+==========================
 
-This guide takes you through the steps necessary to install Pangeo on Microsoft's Azure Cloud Platform.
-We'll make use of Azure's Kubernetes as a Service offering, called AKS (Azure Kubernetes Service),
-for installing Pangeo on Azure.
-Documentation on AKS can be found here: https://docs.microsoft.com/en-gb/azure/aks/.
+In this guide, you'll deploy a Pangeo-style JupyterHub on Microsoft Azure. This will deploy a multi-user JupyterHub enabled with Dask for scalable computing.
 
-.. Note::
-  This guide lays out only the fundamental steps required to install Pangeo on Azure AKS.
-  Further work, for example to secure your cluster, is highly advised but not directly
-  covered here.
+We'll use
 
+* `Azure Kubernetes Service <https://docs.microsoft.com/en-us/azure/aks/intro-kubernetes>`__ (AKS), Azure's managed Kubernetes service
+* The `daskhub Helm Chart <https://github.com/dask/helm-chart/tree/main/daskhub>`__, an easy way to install JupyterHub and Dask-Gateway
 
-Step One: Build Kubernetes service
-==================================
+We describe two deployment scenarios, a :ref:`simple` and a :ref:`recommended`. If you're new to Azure, Kubernetes, or JupyterHub, then you should try the simple deployment to verify that the basics work, before moving on to the more advanced recommend deployment.
 
-The first step to installing Pangeo on Azure is to set up a Kubernetes service
-that can be used to run Pangeo. This can be done either by using the web interface
-or by using the Azure commandline interface (CLI). These are both practical options,
-so we'll cover each one in turn.
+This guide uses the Azure CLI to create the Azure Resources.
+Both deployment scenarios include a ``Makefile`` with targets for the AKS cluster and Hub deployment. If you're just looking to deploy a Hub, feel free to use and adapt the Makefiles. If you're looking to build understanding, read through the guide.
 
-Using the web interface
-~~~~~~~~~~~~~~~~~~~~~~~
-
-To use the Azure web interface you must first have a Microsoft account that you
-can use to log into the Azure web interface. If you have an existing Microsoft
-account (for example, a hotmail.com or outlook.com email address) then you can use
-that, or you can create a new account.
-
-Once you have logged into the Azure web interface, navigate to Kubernetes services
-and click the blue Add logo in the top left. This will display the Create Kubernetes cluster
-wizard.
-
-Work through the wizard customising the Kubernetes service to be created as you
-see necessary (all defaults are reasonable, so you should only need to edit the name
-of the Kubernetes service to be created). In the last step before
-the cluster is created a validation process is run, ensuring that any customizations you have
-made will produce a working cluster. At this step you can also download a
-template file to make reproducing or automating cluster creation simpler in the future.
-
-Autoscaling
-```````````
-
-One benefit of the web interface is that we can easily create an AKS resource that implements
-autoscaling via virtual nodes (see https://docs.microsoft.com/en-us/azure/aks/virtual-nodes-portal
-for further details on this concept). Virtual nodes are still a preview feature in Azure, so some
-limitations currently apply. To enable virtual nodes you need to have followed the setup steps in the
-link above and also be using an Azure region where nodes are supported.
-
-With both of these requirements met, you can enable virtual nodes for autoscaling your Kubernetes
-service. In the Scale tab, ensure that both the Virtual Nodes and VM scale sets selectors are
-set to 'Enabled'.
+As an alternative to this guide, you might use `Qhub <https://docs.qhub.dev/en/latest/>`_, which provides a higher-level tool to obtain a JupyterHub and Dask deployment on Kubernetes (or HPC).
 
 .. note::
 
-  You cannot create a Kubernetes service with traditional cluster autoscaling using the
-  web interface. See the next section for details on using the Azure CLI to create a
-  Kubernetes service with tradtional cluster autoscaling.
+   These examples create the Azure Resources in the West Europe region. This is a good
+   choice if you wish to access the data from `Microsoft's Planetary Computer <https://planetarycomputer.microsoft.com/catalog>`__.
+   Make sure to deploy your cluster in the same region as the data you'll be accessing.
 
 
-Using the Azure CLI
-~~~~~~~~~~~~~~~~~~~
+Prerequisites
+-------------
 
-Instructions for downloading and installing the Azure CLI on major Operating Systems
-can be found at: https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest.
-All interactions with the Azure CLI are via the ``az`` command.
+We'll assume that you've completed the `prerequisites <https://docs.microsoft.com/en-us/azure/aks/kubernetes-walkthrough#prerequisites>`__ for creating an AKS cluster. This includes
 
-To create a basic Kubernetes service using the Azure CLI:
+* Obtaining an `Azure Subscription <https://docs.microsoft.com/en-us/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing>`_.
+* Installing and configuring the `Azure CLI <https://docs.microsoft.com/en-us/cli/azure/install-azure-cli>`__
+* Installing `kubectl <https://kubernetes.io/docs/tasks/tools/>`__ (``az aks install-cli``)
+* Installing `Helm <https://helm.sh/docs/intro/install/>`__
 
-.. code-block:: bash
+.. _simple:
 
-  az aks create \
-    --resource-group $RESOURCE_GROUP_NAME \
-    --name $AKS_RESOURCE_NAME \
-    --kubernetes-version 1.12.6 \
-    --node-count 1 \
-    --node-vm-size Standard_B8ms
+Simple deployment
+-----------------
 
-You'll need to specify a name for your Kubernetes service (as ``$AKS_RESOURCE_NAME``) and a
-name for an (existing) resource group (as ``$RESOURCE_GROUP_NAME``). Note that here
-we've also asked for a medium-sized VM (that is, ``Standard_B8ms``) to host the node
-rather than the default. We found that the default node was too small to host all
-the pods necessary for the basic Pangeo install created by following this guide.
-You can, however, specify any VM size name listed in the links from this page as the value to this key:
-https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes.
+This section walks through the simplest possible deployment, but lacks basic features like authentication, HTTPS, and a user-friendly DNS name. We recommend trying this deployment to ensure that the tools work, before deleting things and moving on to the advanced deployment.
+You can download the :download:`Makefile <simple/Makefile>` and :download:`Helm config <simple/secrets.yaml>` for this deployment.
+
+Kubernetes Cluster
+^^^^^^^^^^^^^^^^^^
+
+Following the `Kubernetes walkthrough <https://docs.microsoft.com/en-us/azure/aks/kubernetes-walkthrough>`__, we'll use the Azure CLI to create an AKS cluster.
+
+For ease of reading we'll repeat the steps here, but visit the `<guide https://docs.microsoft.com/en-us/azure/aks/kubernetes-walkthrough>`__ to build understanding about what each command does.  For ease of cleanup, we recommend creating
+a brand-new resource group.
+
+.. code-block:: console
+
+   # Create a Resource group
+   $ az group create --name pangeo --location westeurope
+   {
+     "id": "/subscriptions/<guid>/resourceGroups/pangeo",
+     "location": "westeurope",
+     "managedBy": null,
+     "name": "pangeo",
+     "properties": {
+       "provisioningState": "Succeeded"
+     },
+     "tags": null
+   }
+
+   # Create an AKS cluster
+   $ az aks create --resource-group pangeo --name pangeoCluster --generate-ssh-keys \
+     --node-count=1 --enable-cluster-autoscaler --min-count=1 --max-count=5
+
+   # Get credentials for kubectl / helm
+   $ az aks get-credentials  --name pangeoCluster --resource-group pangeo
+
+At this point, you should have a Kubernetes Cluster up and running. Verify that things are are working OK with ``kubectl``
+
+.. code-block:: console
+
+   $ kubectl get node
+   NAME                                STATUS   ROLES  AGE   VERSION
+   aks-nodepool1-26963941-vmss000000   Ready    agent   1m   v1.19.11
+
+JupyterHub and Dask Gateway
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Now we're ready to install JupyterHub and Dask Gateway using the `daskhub <https://helm.dask.org/>`__ helm chart. Visit the documentation at https://github.com/dask/helm-chart/tree/main/daskhub for more background. 
+
+
+1. Download or update the ``daskhub`` helm chart
+
+.. code-block:: console
+
+   $ helm repo add dask https://helm.dask.org
+   $ helm repo update
+
+2. Generate two secret tokens: one for JupyterHub's proxy and one for Dask Gateway to act as a JupyterHub service.
+
+.. code-block:: console
+
+   $ openssl rand -hex 32
+   <secret token - 1>
+
+   $ openssl rand -hex 32
+   <secret token - 2>
+
+3. Create a configuration file with the customizations to the ``daskhub`` helm chart. We'll call ours ``secrets.yaml``. You should replace ``<secret token - 1>`` and ``<secret token - 2>`` with the outputs of the previous commands.
+
+.. code-block:: yaml
+
+   # file: secrets.yaml
+   jupyterhub:
+     proxy:
+       # output from openssl rand -hex 32. Must match dask-gateway.gateway.auth.jupyterhub.apiToken
+       secretToken: "<secret token - 1>"
+   
+     hub:
+       # Disable hub network Policy, so that the dask gateway server can reach the hub directly
+       # https://github.com/dask/helm-chart/issues/142
+       networkPolicy:
+         enabled: false
+   
+       services:
+         dask-gateway:
+           # output from openssl rand -hex 32. Must match dask-gateway.gateway.auth.jupyterhub.apiToken
+           apiToken: "<secret token - 2>"
+   
+   dask-gateway:
+     gateway:
+       auth:
+         jupyterhub:
+           # output from openssl rand -hex 32. Must match jupyterhub.services.dask-gateway.apiToken
+           apiToken: "<secret token - 2>"
+
+4. Install ``daskhub``. We'll install it into a new ``dhub`` namespace, but you can use whatever namespace you like.
+
+.. code-block:: console
+
+   $ helm upgrade --wait --install --create-namespace \
+     dask dask/daskhub \
+     --namespace=dhub \
+     --values=secrets.yaml
+   Release "dask" does not exist. Installing it now.
+   NAME: dask
+   LAST DEPLOYED: Fri Jun  4 14:21:33 2021
+   NAMESPACE: dhub
+   STATUS: deployed
+   REVISION: 1
+   TEST SUITE: None
+   NOTES:
+   DaskHub
+   -------
+   
+   Thank you for installing DaskHub, a multiuser, Dask-enabled JupyterHub!
+   
+   Your release is named dask and installed into the namespace dhub.
+   
+   
+   Jupyter Hub
+   -----------
+   
+   You can find if the hub and proxy is ready by doing:
+   
+    kubectl --namespace=dhub get pod
+   
+   and watching for both those pods to be in status 'Ready'.
+   
+   You can find the public IP of the JupyterHub by doing:
+   
+    kubectl --namespace=dhub get svc proxy-public
+   
+   It might take a few minutes for it to appear!
+
+Now DaskHub is deployed. The instructions printed above demonstrate how to get the IP address of your hub.
+
+.. warning::
+
+   This simple deployment doesn't have any kind of authentication. See :ref:`recommended` for how to create a deployment with authentication.
+
+When you log in and start a notebook sever, you should be able to connect to the Dask Gateway server and create a cluster.
+
+.. code-block:: python
+
+   >>> from dask_gateway import Gateway
+   >>> gateway = Gateway()
+   >>> gateway.list_clusters()
+   []
+   >>> cluster = gateway.new_cluster()
+   >>> client = cluster.get_client()
+   >>> cluster.scale(1)
+
+After a moment, the Dask Scheduler and Worker pods should start up. Check the pods with ``kubectl -n dhub get pods``.
+
+Cleanup
+^^^^^^^
+
+The easiest way to clean up the resources is to delete the resource group
+
+.. code-block:: console
+
+   $ az group delete -n pangeo
+
+
+.. _recommended:
+
+Recommended Deployment
+----------------------
+
+This deployment is a bit more more complicated. Compared to the simple deployment, it 
+
+1. Supports HTTPs and uses a hostname rather than IP Address
+2. Uses multiple node pools, one per type of worker, with spot (preemptible) nodes for Dask workers to save on costs
+
+Just like before, we'll create the Azure Resources first, and deploy `daskhub` second. We'll use the following values
+
+========================== =============
+Name                       value
+========================== =============
+Resource group             pangeo
+Location                   westeurope
+Cluster name               pangeoCluster
+Hub Name                   pangeo-hub
+========================== =============
+
+Azure Resources
+^^^^^^^^^^^^^^^
+
+1. Create a Resource Group
+""""""""""""""""""""""""""
+
+.. code-block:: console
+
+   # Create a Resource group
+   $ az group create --name pangeo --location westeurope
+   {
+     "id": "/subscriptions/<subscriptionId>/resourceGroups/pangeo",
+     "location": "westeurope",
+     "managedBy": null,
+     "name": "pangeo",
+     "properties": {
+       "provisioningState": "Succeeded"
+     },
+     "tags": null,
+   }
+
+2. Create an App Registration
+"""""""""""""""""""""""""""""
+
+To authenticate users, we'll create an Azure AD App registration following `the instructions <https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app>`__.
+In this example, the *sign-in audience* will be **Accounts in this organizational directory only**. This is appropriate when your administering a Hub for other users within your Azure AD tenant.
+
+The redirect URI should match where your users will access the Hub. If your organization already has a DNS provider, use that.
+Otherwise, you can have Azure handle the DNS for your Hub service automatically, which is what we'll use in this guide.
+We're calling our cluster ``pangeo-hub`` and deploying it in West Europe, so the callback URL is ``https://pangeo-hub.westeurope.cloudapp.azure.com/hub/oauth_callback``.
+In general the pattern is ``https://<hub-name>.<azure-region>.cloudapp.azure.com/hub/oauth_callback``.
+
+Finally, create a Client Secret to pass to JupyterHub: Under the *Manage* section, select *Certificates and Secrets* then *New client secret*. We'll use the ``Value`` later on.
+You will also need the App Registration's ``Client ID`` and ``Tenant ID``, which are available on its main page, under *Essentials*.
+
+To summarize, we now have our app registration's
+
+- Client ID
+- Tenant ID
+- Client Secret
+- OAuth callback URL
+
+For more on authentication see `Authentication and Authorization <https://zero-to-jupyterhub.readthedocs.io/en/latest/administrator/authentication.html>`__, in particular the section on `Azure AD <https://zero-to-jupyterhub.readthedocs.io/en/latest/administrator/authentication.html#azure-active-directory>`__.
+
+3. Create a Kubernetes Cluster
+""""""""""""""""""""""""""""""
+
+Now we'll create a Kubernetes cluster. Compared to last time, we'll have three node pools: A "core" pool for JupyterHub pods (the Hub, etc.) and Kubernetes itself, a "user" pool for user pods and Dask schedulers, and a "worker" pool for Dask workers.
+
+.. code-block:: console
+
+   # Create an AKS cluster
+   $ az aks create --resource-group pangeo --name pangeoCluster --generate-ssh-keys \
+     --node-count=1 \
+     --nodepool-name core \
+     --nodepool-labels hub.jupyter.org/node-purpose=core
+
+   # Add a node-pool: one for the users and Dask schedulers
+   $ az aks nodepool add \
+       --name users \
+       --cluster-name pangeoCluster \
+       --resource-group pangeo \
+       --enable-cluster-autoscaler \
+       --node-count 1 \
+       --min-count 0 --max-count 10 \
+       --node-vm-size Standard_D2s_v3 \
+       --labels hub.jupyter.org/node-purpose=user
+
+   # Add a node-pool for Dask workers.
+   $ az aks nodepool add \
+       --name workers \
+       --cluster-name pangeoCluster \
+       --resource-group pangeo \
+       --enable-cluster-autoscaler \
+       --node-count 1 \
+       --min-count 0 --max-count 50 \
+       --node-vm-size Standard_D2s_v3 \
+       --priority Spot \
+       --eviction-policy Delete \
+       --spot-max-price -1 \
+       --labels="k8s.dask.org/dedicated=worker"
+
+At this point, you should have a functioning Kubernetes Cluster with multiple node-pools. For example
+
+.. code-block:: console
+
+   $ az aks get-credentials \
+       --name pangeoCluster \
+       --resource-group pangeo \
+       --output table
+
+   $ kubectl get node
+   NAME                              STATUS   ROLES   AGE     VERSION
+   aks-core-26963941-vmss000000      Ready    agent   15m     v1.19.11
+   aks-users-26963941-vmss000000     Ready    agent   8m19s   v1.19.11
+   aks-workers-26963941-vmss000000   Ready    agent   3m3s    v1.19.11
+
+
+Deploy DaskHub
+^^^^^^^^^^^^^^
+
+1. Get the Helm chart
+"""""""""""""""""""""
+
+Download or update the ``daskhub`` helm chart.
+
+.. code-block:: console
+
+   $ helm repo add dask https://helm.dask.org
+   $ helm repo update
+
+2. Generate secret tokens
+"""""""""""""""""""""""""
+
+We need two secret tokens: one for JupyterHub's proxy and one for Dask Gateway to act as a JupyterHub service.
+
+.. code-block:: console
+
+   $ openssl rand -hex 32
+   <secret token - 1>
+   
+   $ openssl rand -hex 32
+   <secret token - 2>
+
+3. Create a configuration file
+""""""""""""""""""""""""""""""
+
+This configuration file is used to customize the deployment with Helm. You can start with the :download:`reference config file<advanced/config.yaml>`.
+
+.. warning::
+
+   For simplicity, we've included all of the configuration values
+   in a single `config.yaml` file, including sensitive values. We recommend keeping the sensitive values in a separate, encrypted file
+   that's decrypted just when deploying.
+
+.. literalinclude:: advanced/config.yaml
+   :language: yaml
+
+4. Install ``daskhub``
+""""""""""""""""""""""
+
+We'll install it into a new ``dhub`` namespace, but you can use whatever namespace you like.
+
+.. code-block:: console
+
+   $ helm upgrade --wait --install --create-namespace \
+     dask dask/daskhub \
+     --namespace=dhub \
+     --values=config.yaml
+
+Verify that all the pods are running with
+
+.. code-block:: console
+
+   $ kubectl -n dhub get pod
+   NAME                                           READY   STATUS    RESTARTS   AGE
+   api-dask-dask-gateway-947887bf9-f748w          1/1     Running   0          18m
+   autohttps-66bd64d49b-wskqc                     2/2     Running   0          18m
+   continuous-image-puller-nwq4l                  1/1     Running   0          18m
+   controller-dask-dask-gateway-ccf4595c8-lx2h7   1/1     Running   0          18m
+   hub-56d584b5b5-7rxvk                           1/1     Running   0          18m
+   proxy-5b4bb9b8bb-q8r7x                         1/1     Running   0          18m
+   traefik-dask-dask-gateway-d9d4cc45c-whmmw      1/1     Running   0          18m
+   user-scheduler-86c6bc8cd-h6dx2                 1/1     Running   0          18m
+   user-scheduler-86c6bc8cd-hhhbn                 1/1     Running   0          18m
 
 .. note::
-  RBAC (Role-Based Access Control) is enabled by default on Kubernetes services set up using
-  the Azure CLI. If you need to change this default behaviour, you can specify the
-  ``--disable-rbac`` flag when creating your Kubernetes cluster.
 
-The ``az aks create`` command above assumes that you have already set up a resource group
-to deploy your Kubernetes service into. If you have not already set up a resource group,
-run this command *before* creating your Kubernetes service:
+   If you see an HTTPS error accessing the hub, you may need to recreate the ``autohttps`` pod created by JupyterHub.
 
-.. code-block:: bash
+   .. code-block:: console
 
-  az group create \
-    --name $RESOURCE_GROUP_NAME \
-    --location $RESOURCE_REGION \
+      $ kubectl -n dhub delete pod -l app=jupyterhub,component=autohttps
 
-The location of the resource group needs to be specified as a single word
-programmatic name for an Azure region. A list of available locations can be found
-by running the following:
+   This will recreate the ``autohttps`` pod and successfully get a TLS certificate so that the Hub can be accessed
+   over HTTPS.
 
-.. code-block:: bash
+When you log in and start a notebook sever, you should be able to connect to the Dask Gateway server and create a cluster.
 
-  az account list-locations | grep name
+.. code-block:: python
 
-Autoscaling
-```````````
+   >>> from dask_gateway import Gateway
+   >>> gateway = Gateway()
+   >>> gateway.list_clusters()
+   []
+   >>> cluster = gateway.new_cluster()
+   >>> client = cluster.get_client()
+   >>> cluster.scale(1)
 
-To create a Kubernetes service with autoscaling enabled you can add extra keys
-to the previous ``az aks create`` command:
-
-.. code-block:: bash
-
-  az aks create \
-    --resource-group $RESOURCE_GROUP_NAME \
-    --name $AKS_RESOURCE_NAME \
-    --kubernetes-version 1.12.6 \
-    --node-count 1 \
-    --node-vm-size Standard_B8ms \
-    --enable-vmss \
-    --enable-cluster-autoscaler \
-    --min-count 1 \
-    --max-count 10
-
-You can also update an existing Kubernetes service to add autoscaling:
-
-.. code-block:: bash
-
-  az aks update \
-  --resource-group $RESOURCE_GROUP_NAME \
-  --name $AKS_RESOURCE_NAME \
-  --enable-cluster-autoscaler \
-  --min-count 1 \
-  --max-count 3
-
-More information on autoscaling with Azure AKS is available here:
-https://docs.microsoft.com/en-gb/azure/aks/cluster-autoscaler.
+After a moment, the Dask Scheduler and Worker pods should start up. Check the pods with ``kubectl -n dhub get pods``.
 
 
-Step Two: Customise cluster
-===========================
+Cleanup
+^^^^^^^
 
-With a working Kubernetes service now built we can customise it in readiness for installing Pangeo
-on the cluster. At its most basic, this means installing helm and tiller, but other
-customisations (such as authentication) can also be added at this stage.
-The customisations need to be performed using the Azure CLI. If you don't have the Azure CLI available,
-you can either:
+The easiest way to clean up the resources is to delete the resource group
 
-* follow the steps at the link above to install the Azure CLI locally, or
-* use the cloud shell built into the web interface
-  (click the ``>_`` logo at the right of the blue bar at the top of the web interface).
-  The cloud shell includes the Azure CLI and a basic implementation of Visual Studio Code editor.
+.. code-block:: console
 
-Kubernetes credentials
-~~~~~~~~~~~~~~~~~~~~~~
+   az group delete -n pangeo
 
-Before we can progress we need to acquire kubernetes credentials for our newly-created
-AKS resource:
+Next steps
+----------
 
-.. code-block:: bash
-
-  az aks get-credentials -g $RESOURCE_GROUP_NAME -n $AKS_RESOURCE_NAME --overwrite-existing
-
-
-You will need to provide the name of the AKS resource that you just created (as ``$AKS_RESOURCE_NAME``)
-and the group within which the resource was created (as ``$RESOURCE_GROUP_NAME``).
-
-
-Helm and tiller
-~~~~~~~~~~~~~~~
-
-Installing helm and tiller allows us to customise our Kubernetes service by applying
-helm charts to it. We need to ensure that helm and tiller will work correctly with
-RBAC, which is enabled by default on Azure Kubernetes services.
-
-.. code-block:: bash
-
-  kubectl apply -f helm_rbac.yaml
-  helm init --upgrade --service-account tiller --wait
-
-The contents of ``helm_rbac.yaml`` are as follows:
-
-.. code-block:: yaml
-
-  apiVersion: v1
-  kind: ServiceAccount
-  metadata:
-    name: tiller
-    namespace: kube-system
-  ---
-  apiVersion: rbac.authorization.k8s.io/v1
-  kind: ClusterRoleBinding
-  metadata:
-    name: tiller
-  roleRef:
-    apiGroup: rbac.authorization.k8s.io
-    kind: ClusterRole
-    name: cluster-admin
-  subjects:
-    - kind: ServiceAccount
-      name: tiller
-      namespace: kube-system
-
-
-Step 3: Install Pangeo
-======================
-
-Now we can move onto installing Pangeo on our Kubernetes service. This can be done
-as follows:
-
-.. code-block:: bash
-
-  helm repo add pangeo https://pangeo-data.github.io/helm-chart/
-  helm repo update
-  helm upgrade --install --namespace pangeo pangeo pangeo/pangeo -f pangeo.yaml
-
-The helm chart ``pangeo.yaml`` is the
-`Pangeo helm chart <https://pangeo-data.github.io/helm-chart/>`_. The customizations
-we made to it are documented in the
-`Zero to Jupyterhub <https://zero-to-jupyterhub.readthedocs.io/en/latest/setup-jupyterhub.html>`_
-guide.
-
-
-Test install
-~~~~~~~~~~~~
-
-To test that Pangeo has installed successfully on your Kubernetes service, find
-the IP address of the Pangeo proxy:
-
-.. code-block:: bash
-
-  kubectl get service proxy-public --namespace=pangeo
-
-Note that this service can take a long time to start up, so you may need to wait
-a while for the IP address of the Pangeo proxy to be displayed. The output of the
-above command will read ``<pending>`` while the service is starting up.
-
-Once the service has started up, navigate to the ``EXTERNAL-IP`` address listed
-in the output of the above command in your web browser.
-If JupyterHub loads then you have successfully installed Pangeo on your Azure Kubernetes service!
-
-
-Autoscaling
-~~~~~~~~~~~
-
-If you set up your autoscaling Kubernetes service using the cluster autoscaler then autoscaling
-should work with no further customisation neeeded. If instead you set up autoscaling using
-virtual nodes and VM scale sets then a little more work is needed. In particular we need to
-modify the Pangeo ``worker-template.yaml`` file to add two more key groups to the ``spec`` section
-of the yaml:
-
-.. code-block:: yaml
-
-  nodeSelector:
-    kubernetes.io/role: agent
-    beta.kubernetes.io/os: linux
-    type: virtual-kubelet
-  tolerations:
-  - key: virtual-kubelet.io/provider
-    operator: Exists
-  - key: azure.com/aci
-    effect: NoSchedule
+Your AKS cluster and JupyterHub deployments can be customized in various ways. Visit the the `Azure Kubernetes Service overivew <https://docs.microsoft.com/en-us/azure/aks/intro-kubernetes>`__ for more on AKS, `Zero to JupyterHub with Kubernetes <https://zero-to-jupyterhub.readthedocs.io/en/latest/>`__ documentation for more on JupyterHub and the JupyterHub helm chart, and `Dask Gateway <https://gateway.dask.org/>`__ for more on Dask Gateway.
