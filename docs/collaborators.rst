@@ -154,6 +154,21 @@ Element84
 :ref:`nasaaccess` award. Element84 developers are contributing to the development
 of data-discovery tools in the Pangeo ecosystem.
 
+Companies
+------------
+
+These companies have made generous financial and/or in-kind donations to Pangeo.
+
+Coiled
+~~~~~~
+.. image:: _static/coiled-logo.png
+   :height: 75px
+   :target: https://www.coiled.io
+
+Coiled donated the space, time, and materials for the Pangeo booth at the 2023 AGU 
+Fall Meeting and handled all of the booth set up. The booth was shared with Coiled 
+and Earthmover.
+
 People
 ------
 
